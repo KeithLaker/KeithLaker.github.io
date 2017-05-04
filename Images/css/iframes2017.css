@@ -30,8 +30,8 @@
 table.wrapper-layer {
   width: 768px;
   height: 1024px;
-  border-width: 0px;
-  background-color: white;
+  border-width: 1px;
+  background-color: black;
 }
 
 table.map_level1 {
