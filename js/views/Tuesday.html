@@ -6,7 +6,7 @@ background: red;
 }
 </style>
 <div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
-	<div id="c1"><span style="font-size:32px;"> 8:00AM - 9:00AM</span>
+	<div id="c1" data-bind="ojComponent: {component: 'ojCollapsible', expanded:true}"><span style="font-size:32px;"> 8:00AM - 9:00AM</span>
 		<div id="nestedAccordion" data-bind="ojComponent: {component: 'ojAccordion'}" >
 			<div id="ic1">
 				<span style="font-size:26px;"><span class="demo-icon-font demo-education-icon-24" style="color:grey; width:25px;height:25px; background-color:grey; border:0px;"></span><span style="font-size:20px;  margin-left: 10px;"> Identifying Security Risks with the Database Security Assessment Tool</span><br><span class="oj-text-xs oj-text-secondary-color" style="font-size:18px; text-align: right; margin-left: 60px;">Hilton San Francisco Union Square (Lobby Level) - Plaza Room A</span></span>Scott Rotondo, Oracle; Russ Lowenthal, Oracle: Pedro Lopes, EMEA Field Product Manager, Oracle

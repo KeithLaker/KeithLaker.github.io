@@ -5,9 +5,9 @@
 	background: red;
 }
 </style>
-<div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}">
-	<div id="c1"><span style="font-size:32px;"> 8:30AM - 10:30AM	</span>
-		<div id="nestedAccordion" data-bind="ojComponent: {component: 'ojAccordion'}" >
+<div id="accordionPage" data-bind="ojComponent: {component: 'ojAccordion'}"> 
+	<div id="c1" data-bind="ojComponent: {component: 'ojCollapsible', expanded:true}"><span style="font-size:32px;"> 8:30AM - 10:30AM	</span>
+		<div id="nestedAccordion" data-bind="ojComponent: {component: 'ojAccordion'}">
 			<div id="ic0">
 				<span style="font-size:26px;"><span class="demo-icon-font demo-education-icon-24" style="color:orange; width:25px;height:25px; background-color:	orange; border:0px;"></span><span style="font-size:20px;  margin-left: 10px;"> Move Data Between Apache Hadoop and Oracle Database for Customer 360-Degree Analytics </span><br>	<span class="oj-text-xs oj-text-secondary-color" style="font-size:18px; text-align: right; margin-left: 60px;">	Moscone West - Room 2003</span></span>Melliyal Annamalai, Oracle; Krishna Gayatri Kuchimanchi, Oracle
 				<p class="oj-p" style="font-size:20px;"> Customer 360-degree views require data from mobile device feeds, online community logs, social media feeds (often processed with Apache Hadoop), and a wealth of information stored in the database. Tools for data movement between big data platforms and Oracle Database are necessary for machine learning and complex analytics using all this data. In this session, step through using some of these tools with direct path load, SQL, and custom Hive SerDes and understand how they work with big data and database services in Oracle Public Cloud.<br><br>	<a href="https://events.rainfocus.com/catalog/oracle/oow17/catalogjavaone17?search=melli&showEnrolled=false" target="_blank">Click here to view in catalog</a><br>
