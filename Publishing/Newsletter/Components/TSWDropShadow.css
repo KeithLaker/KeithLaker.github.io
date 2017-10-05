@@ -1,0 +1,238 @@
+/* Copyright 2009-2010 Taco Software. All rights reserved.
+ * http://tacosw.com
+ *
+ * This file is part of the Component Library included in Taco HTML Edit.
+ * Licensed users of Taco HTML Edit may modify and use this source code 
+ * for their web development (including commercial projects), as long as 
+ * this copyright notice is retained.
+ *
+ * The contents of this file may not be published in a format intended
+ * for access by other humans, so you may not put code examples on a
+ * web site with all or part of the contents of this file, and you may
+ * not publish the contents of this file in a printed format.
+ */
+
+
+table.tswDropShadow {
+	border-spacing:0px;
+}
+table.tswDropShadow td {
+	margin: 0px;
+	padding: 0px;
+}
+
+tr.tswDropShadowTop td.tswDropShadowLeft {
+	background-position: top right;
+	background-repeat: no-repeat;
+}
+tr.tswDropShadowTop td.tswDropShadowRight {
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+tr.tswDropShadowTop td.tswDropShadowCenter {
+	background-position: top;
+	background-repeat: repeat-x;
+}
+tr.tswDropShadowMiddle td.tswDropShadowLeft {
+	background-position: right;
+	background-repeat: repeat-y;
+}
+tr.tswDropShadowMiddle td.tswDropShadowRight {
+	background-position: left;
+	background-repeat: repeat-y;
+}
+tr.tswDropShadowBottom td.tswDropShadowLeft {
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+tr.tswDropShadowBottom td.tswDropShadowRight {
+	background-position: bottom left;
+	background-repeat: no-repeat;
+}
+tr.tswDropShadowBottom td.tswDropShadowCenter {
+	background-position: top;
+	background-repeat: repeat-x;
+}
+
+div.tswDropShadowMedium, div.tswDropShadowLarge, div.tswDropShadowSmall {
+	
+	/* For IE only */
+	zoom: 1;
+	position: relative;
+}
+
+table.tswDropShadow tbody tr td {
+	/* For IE6 only */
+	*-_behavior: expression(
+		this.tswFilterImage = this.tswFilterImage ? this.tswFilterImage : this.currentStyle.backgroundImage.split('"')[1],
+		this.style.background = "none",
+		this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + this.tswFilterImage + ", sizingMethod='scale')");
+}
+
+/* Large */
+tbody.tswDropShadowLarge tr.tswDropShadowTop {
+	height: 30px;
+}
+tbody.tswDropShadowLarge tr.tswDropShadowTop td.tswDropShadowLeft {
+	background-image: url(Images/TSWDropShadowTopLeft.png);
+	width: 32px;
+}
+tbody.tswDropShadowLarge tr.tswDropShadowTop td.tswDropShadowRight {
+	background-image: url(Images/TSWDropShadowTopRight.png);
+	width: 32px;
+}
+tbody.tswDropShadowLarge tr.tswDropShadowTop td.tswDropShadowCenter {
+	background-image: url(Images/TSWDropShadowTop.png);
+}
+tbody.tswDropShadowLarge tr.tswDropShadowMiddle td.tswDropShadowLeft {
+	background-image: url(Images/TSWDropShadowLeft.png);
+}
+tbody.tswDropShadowLarge tr.tswDropShadowMiddle td.tswDropShadowRight {
+	background-image: url(Images/TSWDropShadowRight.png);
+}
+tbody.tswDropShadowLarge tr.tswDropShadowBottom {
+	height: 30px;
+}
+tbody.tswDropShadowLarge tr.tswDropShadowBottom td.tswDropShadowLeft {
+	background-image: url(Images/TSWDropShadowBottomLeft.png);
+	width: 32px;
+}
+tbody.tswDropShadowLarge tr.tswDropShadowBottom td.tswDropShadowRight {
+	background-image: url(Images/TSWDropShadowBottomRight.png);
+	width: 32px;
+}
+tbody.tswDropShadowLarge tr.tswDropShadowBottom td.tswDropShadowCenter {
+	background-image: url(Images/TSWDropShadowBottom.png);
+}
+tbody.tswDropShadowLarge div.tswDropShadowContent, div.tswDropShadowLarge {
+	margin: -18px -18px -12px -18px;
+	
+	/* For IE only */
+	zoom: 1;
+	position: relative;
+}
+
+/* Small */
+tbody.tswDropShadowSmall tr.tswDropShadowTop {
+	height: 12px;
+}
+tbody.tswDropShadowSmall tr.tswDropShadowTop td.tswDropShadowLeft {
+	background-image: url(Images/TSWDropShadowSmallTopLeft.png);
+	width: 14px;
+}
+tbody.tswDropShadowSmall tr.tswDropShadowTop td.tswDropShadowRight {
+	background-image: url(Images/TSWDropShadowSmallTopRight.png);
+	width: 14px;
+}
+tbody.tswDropShadowSmall tr.tswDropShadowTop td.tswDropShadowCenter {
+	background-image: url(Images/TSWDropShadowSmallTop.png);
+}
+tbody.tswDropShadowSmall tr.tswDropShadowMiddle td.tswDropShadowLeft {
+	background-image: url(Images/TSWDropShadowSmallLeft.png);
+}
+tbody.tswDropShadowSmall tr.tswDropShadowMiddle td.tswDropShadowRight {
+	background-image: url(Images/TSWDropShadowSmallRight.png);
+}
+tbody.tswDropShadowSmall tr.tswDropShadowBottom {
+	height: 14px;
+}
+tbody.tswDropShadowSmall tr.tswDropShadowBottom td.tswDropShadowLeft {
+	background-image: url(Images/TSWDropShadowSmallBottomLeft.png);
+	width: 14px;
+}
+tbody.tswDropShadowSmall tr.tswDropShadowBottom td.tswDropShadowRight {
+	background-image: url(Images/TSWDropShadowSmallBottomRight.png);
+	width: 14px;
+}
+tbody.tswDropShadowSmall tr.tswDropShadowBottom td.tswDropShadowCenter {
+	background-image: url(Images/TSWDropShadowSmallBottom.png);
+}
+tbody.tswDropShadowSmall div.tswDropShadowContent, div.tswDropShadowSmall {
+	margin: -8px -8px -5px -8px;
+	
+	/* For IE only */
+	zoom: 1;
+	position: relative;
+}
+
+/* Medium */
+tbody.tswDropShadowMedium tr.tswDropShadowTop {
+	height: 18px;
+}
+tbody.tswDropShadowMedium tr.tswDropShadowTop td.tswDropShadowLeft {
+	background-image: url(Images/TSWDropShadowMediumTopLeft.png);
+	width: 20px;
+}
+tbody.tswDropShadowMedium tr.tswDropShadowTop td.tswDropShadowRight {
+	background-image: url(Images/TSWDropShadowMediumTopRight.png);
+	width: 20px;
+}
+tbody.tswDropShadowMedium tr.tswDropShadowTop td.tswDropShadowCenter {
+	background-image: url(Images/TSWDropShadowMediumTop.png);
+}
+tbody.tswDropShadowMedium tr.tswDropShadowMiddle td.tswDropShadowLeft {
+	background-image: url(Images/TSWDropShadowMediumLeft.png);
+}
+tbody.tswDropShadowMedium tr.tswDropShadowMiddle td.tswDropShadowRight {
+	background-image: url(Images/TSWDropShadowMediumRight.png);
+}
+tbody.tswDropShadowMedium tr.tswDropShadowBottom {
+	height: 18px;
+}
+tbody.tswDropShadowMedium tr.tswDropShadowBottom td.tswDropShadowLeft {
+	background-image: url(Images/TSWDropShadowMediumBottomLeft.png);
+	width: 20px;
+}
+tbody.tswDropShadowMedium tr.tswDropShadowBottom td.tswDropShadowRight {
+	background-image: url(Images/TSWDropShadowMediumBottomRight.png);
+	width: 20px;
+}
+tbody.tswDropShadowMedium tr.tswDropShadowBottom td.tswDropShadowCenter {
+	background-image: url(Images/TSWDropShadowMediumBottom.png);
+}
+tbody.tswDropShadowMedium div.tswDropShadowContent, div.tswDropShadowMedium {
+	margin: -12px -10px -6px -10px;
+	
+	/* For IE only */
+	zoom: 1;
+	position: relative;
+}
+
+/* Webkit */
+tbody.tswWebkit tr.tswDropShadowTop td.tswDropShadowLeft {
+	background-image: none;
+}
+tbody.tswWebkit tr.tswDropShadowTop td.tswDropShadowRight {
+	background-image: none;
+}
+tbody.tswWebkit tr.tswDropShadowTop td.tswDropShadowCenter {
+	background-image: none;
+}
+tbody.tswWebkit tr.tswDropShadowMiddle td.tswDropShadowLeft {
+	background-image: none;
+}
+tbody.tswWebkit tr.tswDropShadowMiddle td.tswDropShadowRight {
+	background-image: none;
+}
+tbody.tswWebkit tr.tswDropShadowBottom td.tswDropShadowLeft {
+	background-image: none;
+}
+tbody.tswWebkit tr.tswDropShadowBottom td.tswDropShadowRight {
+	background-image: none;
+}
+tbody.tswWebkit tr.tswDropShadowBottom td.tswDropShadowCenter {
+	background-image: none;
+}
+tbody.tswWebkit.tswDropShadowLarge div.tswDropShadowLarge {
+	-webkit-box-shadow: 0px 4px 30px #000;
+}
+tbody.tswWebkit.tswDropShadowSmall div.tswDropShadowSmall {
+	-webkit-box-shadow: 0px 3px 6px #000;
+}
+tbody.tswWebkit.tswDropShadowMedium div.tswDropShadowMedium {
+	-webkit-box-shadow: 0px 4px 10px #000;
+}
+
+/* The checksum below is for internal use by Taco HTML Edit, 
+   to detect if a component file has been modified.
+   TacoHTMLEditChecksum: 9FF00CB0 */

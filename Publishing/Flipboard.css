@@ -1,0 +1,36 @@
+<STYLE type="text/css">
+#product_banner {color:#666666;font-family:arial;font-size:14px}
+
+#newsletter_edition {margin-left: 20px;color:#666666;font-family:arial;font-size:14px;text-align:center;}
+#newsletter_url_10 {color:#0000FF;font-family:arial;font-size:12px;font-weight:bold}
+#newsletter_welcome {color:#666666;font-family:arial;font-size:12px}
+#article_body {margin-left: 80px; margin-right:80px;color:#666666;font-family:arial;font-size:12px}
+#article_body_center {margin-left: 80px; margin-right:80px;color:#666666;font-family:arial;font-size:12px; text-align:center}
+#article_body_small {margin-left: 80px;color:#666666;font-family:arial;font-size:10px; text-align:justify}
+
+#newsletter_welcome_red {color:#FF0000;font-family:arial;font-size:12px;font-weight:bold}
+td.newsletter_border_200 {background-color:#ffffff;width:200px}
+
+table.level_top {
+	width: 600px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	background-color: white;
+}
+
+table.level_1 {text-align:center;border:0;width:100%;background-color:#FFFFFF;color:#000000}
+td.newsletter_border {background-color:#ffffff;width:25px}
+
+table.level_border2 {
+	width: 190px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	background-color: white;
+}
+
+#article_headline {color:#ff0000;font-family:arial;font-size:12px}
+#article_headline_main {color:#ff0000;font-family:arial;font-size:11px;font-weight:bold}
+#article_headline2 {font-style:italic;color:#848484;font-family:arial;font-size:11px}
+</style>

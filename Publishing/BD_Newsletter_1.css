@@ -1,0 +1,85 @@
+<STYLE type="text/css">
+#newsletter_header {color:#666666;font-family:arial;font-size:12px;text-align:center}
+#product_banner {color:#666666;font-family:arial;font-size:14px}
+#newsletter_edition {color:#666666;font-family:arial;font-size:12px}
+#newsletter_know_it_all {text-align:left; color:#ff0000;font-family:arial;font-size:14px}
+#newsletter_url {color:#0000FF;font-family:arial;font-weight:bold}
+#newsletter_url_thanks {color:#0000FF;font-family:arial;font-size:10px;font-weight:bold}
+#newsletter_url_10 {color:#0000FF;font-family:arial;font-size:10px;font-weight:bold}
+#newsletter_url_12 {color:#0000FF;font-family:arial;font-size:12px;font-weight:bold}
+#newsletter_url_13 {color:#0000FF;font-family:arial;font-size:13px;font-weight:bold}
+#newsletter_welcome {color:#666666;font-family:arial;font-size:10px}
+
+table.level_top {width: 773px; border-width: 2px; border-style: solid; border-color: #CCCCCC; background-color: white;}
+
+table.level_border {border-width: 2px; border-style: solid; border-color: #CCCCCC; background-color: white;}
+
+table.level_SM {text-align:center; border:0; padding:2px; border-spacing:2px; background-color:#FFFFFF; color:#000000; width:150px}
+
+table.level_0 {text-align:center; border:0; padding:2px; border-spacing:2px; width:100%; background-color:#FFFFFF; color:#000000}
+td.newsletter_border {background-color:#ffffff;width:50px}
+td.shaded_banner {background-image: url('prtnrem-bodybg2-460220.jpg'); padding:30px; border-right:1px solid #e5e3e3; vertical-align:top; text-align:justify;}
+
+table.level_share {text-align:center; border:0; padding:2px; border-spacing:2px; width:100%; background-color:#FFFFFF; color:#000000}
+td.share {border-left: 1px solid #ffffff; padding: 10px; vertical-align:middle;}
+
+
+table.level_1 {text-align:center; border-width:0; padding:2px; border-spacing:2px; width:100%; background-color:#FFFFFF; color:#000000}
+td.newsletter_border {background-color:#ffffff;width:25px}
+td.newsletter_border_100 {background-color:#ffffff;width:100px}
+td.newsletter_border_150 {background-color:#ffffff;width:150px}
+td.newsletter_border_200 {background-color:#ffffff;width:200px}
+td.tl_100 {text-align:left; vertical-align: top; width:100px}
+td.tc_100 {text-align:center; vertical-align:top; width:100px}
+td.main_banner {background-color:#999999; vertical-align:bottom; width:773px; height:120px; background-image: url('BDN-banner_header.png'); background-repeat:no-repeat;}
+
+table.arrow_banner {background-image: url('Heading_arrow.png'); width:150px; height:50px; background-repeat:no-repeat; vertical-align:top; text-align:left; padding:6px 20px 20px 20px; }
+
+table.level_2 {text-align:center;border-width:0; padding:2px; border-spacing:2px; width:100%; background-color:#FFFFFF; color:#000000}
+td.nav {text-align:left; vertical-align:top; width:50px}
+
+#article_headline {text-align:left; color:#ff0000; font-family:arial; font-size:12px}
+#article_headline2 {text-align:left; font-style:italic;color:#848484; font-family:arial; font-size:11px}
+#article_headline3 {text-align:left; font-style:italic;color:#848484; font-family:arial; font-size:10.5px}
+#article_subheadline {text-align:left; font-style:italic;color:#666666; font-family:arial; font-size:11px}
+#article_subheadline2 {text-align:left; font-style:italic;color:#666666; font-family:arial; font-size:10px}
+
+#article_name {margin-left: 12px;color:#666666;font-family:arial;font-size:9px}
+#article_name_center {text-align:center; margin-left: 12px;color:#666666;font-family:arial;font-size:9px}
+#article_body {text-align:justify; margin-left: 12px;color:#666666;font-family:arial;font-size:10px}
+#article_body_italic {text-align:justify; margin-left: 12px;color:#666666;font-family:arial;font-size:10px; font-style: italic;}
+#article_body_center {text-align:center; margin-left: 12px;color:#666666;font-family:arial;font-size:10px;}
+#article_body_bold {text-align:justify; margin-left: 12px;color:#666666;font-family:arial;font-size:10px; font-weight: bold;}
+#article_thanks {text-align:justify; color:#666666;font-family:arial;font-size:10px}
+#article_highlight {text-align:justify; color:#666666;font-family:arial;font-size:12px}
+#my_signature {color:#666666;font-family:arial;font-size:12px}
+#my_address {color:#666666;font-family:arial;font-size:8px}
+#footer_hardware {color:#000000;font-family:arial;font-size:12px}
+#article_footer_email {margin-left: 12px;color:#666666;font-family:arial;font-size:10px; text-align:center}
+
+
+img.article_image {width: 100px;}
+img.article_image_small {width: 70px;}
+img.article_line {width: 100%; height: 2px;}
+img.community20 {width: 20px; height: 20px;}
+img.community23 {width: 23px; height: 23px;}
+img.community_medium {width: 65px;}
+
+#Button-NoSQL {background-image: url('NoSQL_Database.png'); width:100px; height:100px; background-repeat:no-repeat;}
+#Button-McClary {background-image: url('McClary.png'); width:100px; height:100px; background-repeat:no-repeat;}
+#Button-Laker {background-image: url('klaker.JPG'); width:100px; height:100px; background-repeat:no-repeat;}
+#Button-Sales {background-image: url('BDN_01_Sales.jpg'); width:100px; height:100px; background-repeat:no-repeat;}
+
+#Button-Placeholder {background-image: url('placeholder.jpg'); width:100px; height:100px; background-repeat:no-repeat;}
+#Button-Facebook {background-image: url('BDN_01_Facebook.png'); width:30px; height:30px; background-repeat:no-repeat;}
+#Button-LinkedIn {background-image: url('BDN_01_LinkedIn.png'); width:30px; height:30px; background-repeat:no-repeat;}
+#Button-Blogger {background-image: url('blogger-logo.png'); width:30px; height:30px; background-repeat:no-repeat;}
+#Button-OraBlogger {background-image: url('BDN_01_OraBlog.png'); width:30px; height:30px; background-repeat:no-repeat;}
+#Button-Mix {background-image: url('BDN_01_OraMix.png'); width:30px; height:30px; background-repeat:no-repeat;}
+#Button-Connect {background-image: url('BDN_01_Connect.png'); width:30px; height:30px; background-repeat:no-repeat;}
+#Button-Oratweet {background-image: url('BDN_01_Oratweet.png'); width:30px; height:30px; background-repeat:no-repeat;}
+#Button-Twitter {background-image: url('BDN_01_Twitter.png'); width:30px; height:30px; background-repeat:no-repeat;}
+#Button-I-Love {background-image: url('i_love_big_data.jpg'); width:100px; height:100px; background-repeat:no-repeat;}
+#Button-Arrow {background-image: url('Heading_arrow.jpg'); width:280px; height:70px; background-repeat:no-repeat;}
+
+</style>

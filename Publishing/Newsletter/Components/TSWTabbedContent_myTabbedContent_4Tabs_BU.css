@@ -1,0 +1,139 @@
+
+#myTabbedContent .tswTabBox
+{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 10px;
+}
+#myTabbedContent .tswTabBox li
+{
+	float: left;
+	text-align: center;
+	background-color: #ffffff;
+	margin-right: 10px;
+	background-image: url('http://dl.dropbox.com/u/69436560/Publishing/Newsletter/Components/TSWTab5PxRightUnselected_FFFFFF_333333.png');
+	background-position: top right;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Helvetica;
+	font-size: 26.0px;
+	font-weight: bold;
+}
+#myTabbedContent .tswTabBox li div.tswTabOuterDiv
+{
+	background-image: url('http://dl.dropbox.com/u/69436560/Publishing/Newsletter/Components/TSWTab5PxLeftUnselected_FFFFFF_333333.png');
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+#myTabbedContent .tswTabBox li div div
+{
+	padding: 4px 10px 0px 10px;
+}
+#myTabbedContent .tswTabBox li a
+{
+	display: block;
+}
+#myTabbedContent .tswTabBox li.tswTabSelected
+{
+	background-color: #ff0000;
+	background-image: url('http://dl.dropbox.com/u/69436560/Publishing/Newsletter/Components/TSWTab5PxRightSelected_FFFFFF_FF0000.png');
+	padding-top: 0px;
+	cursor: default;
+	color: #ffffff;
+}
+#myTabbedContent .tswTabBox li.tswTabSelected div.tswTabOuterDiv
+{
+	background-image: url('http://dl.dropbox.com/u/69436560/Publishing/Newsletter/Components/TSWTab5PxLeftSelected_FFFFFF_FF0000.png');
+}
+#myTabbedContent .tswTabBox li.tswTabSelected div div
+{
+	z-index: 5;
+}
+#myTabbedContent .tswTabBox li.tswTabSelected a
+{
+}
+#myTabbedContent .tswTabContent
+{
+	clear: both;
+	text-align: left;
+}
+#myTabbedContent .tswTabContent div.tswTabContentUnselected,
+#myTabbedContent .tswTabContent div.tswTabContentSelected
+{
+	position: absolute;
+	top: 0px;
+	border-width: 0px;
+	background-color: #ffffff;
+	padding: 4px 4px 4px 4px;
+	display: none;
+	visibility: hidden;
+	color: #49413e;
+}
+#myTabbedContent .tswTabContent div.tswTabContentSelected
+{
+	position: static;
+	display: block;
+	visibility: visible;
+	zoom: 1; /*for IE*/
+}
+
+
+#newsletter_header {color:#666666;font-family:arial;font-size:12px;text-align:center}
+#product_banner {color:#666666;font-family:arial;font-size:14px}
+
+#newsletter_edition {margin-left: 20px;color:#666666;font-family:arial;font-size:12px}
+#newsletter_know_it_all {color:#ff0000;font-family:arial;font-size:14px}
+#newsletter_url {color:#0000FF;font-family:arial;font-weight:bold}
+#newsletter_url_thanks {color:#0000FF;font-family:arial;font-size:10px;font-weight:bold}
+#newsletter_url_10 {color:#0000FF;font-family:arial;font-size:10px;font-weight:bold}
+#newsletter_url_13 {color:#0000FF;font-family:arial;font-size:13px;font-weight:bold}
+#newsletter_welcome {color:#666666;font-family:arial;font-size:11px}
+
+table.level_top {
+	width: 1050px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	background-color: white;
+}
+
+table.level_border1 {
+	width: 855px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	background-color: white;
+}
+
+table.level_border2 {
+	width: 190px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	background-color: white;
+}
+
+table.level_0 {text-align:center;border:0;width:100%;background-color:#FFFFFF;color:#000000}
+
+table.level_1 {text-align:center;border:0;width:100%;background-color:#FFFFFF;color:#000000}
+td.newsletter_border {background-color:#ffffff;width:25px}
+
+table.level_2 {text-align:center;border:0;width:100%;background-color:#FFFFFF;color:#000000}
+
+#article_headline {color:#ff0000;font-family:arial;font-size:12px}
+#article_headline_main {color:#ff0000;font-family:arial;font-size:11px;font-weight:bold}
+#article_headline2 {font-style:italic;color:#848484;font-family:arial;font-size:11px}
+#article_headline3 {font-style:italic;color:#848484;font-family:arial;font-size:10.5px}
+#article_subheadline {font-style:italic;color:#666666;font-family:arial;font-size:11px}
+#article_name {margin-left: 12px;color:#666666;font-family:arial;font-size:9px}
+#article_body {margin-left: 12px;color:#666666;font-family:arial;font-size:10px; text-align:justify}
+#article_list {color:#666666;font-family:arial;font-size:10px; text-align:justify}
+#article_footer_email {margin-left: 12px;color:#666666;font-family:arial;font-size:10px; text-align:center}
+#article_thanks {color:#666666;font-family:arial;font-size:9px; text-align:left;}
+#article_highlight {color:#666666;font-family:arial;font-size:12px}
+
+#my_signature {color:#666666;font-family:arial;font-size:12px}
+#my_address {color:#666666;font-family:arial;font-size:8px}
+#footer_hardware {color:#000000;font-family:arial;font-size:12px}

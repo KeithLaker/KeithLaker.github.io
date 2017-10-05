@@ -1,0 +1,79 @@
+#myTabbedContent .tswTabBox
+{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 10px;
+}
+#myTabbedContent .tswTabBox li
+{
+	float: left;
+	text-align: center;
+	background-color: #ffffff;
+	margin-right: 10px;
+	background-image: url('http://dl.dropbox.com/u/69436560/Publishing/Newsletter/Components/TSWTab5PxRightUnselected_FFFFFF_F0F0F0.png');
+	background-position: top right;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	color: #333333;
+	font-family: Helvetica;
+	font-size: 26.0px;
+	font-weight: bold;
+}
+#myTabbedContent .tswTabBox li div.tswTabOuterDiv
+{
+	background-image: url('http://dl.dropbox.com/u/69436560/Publishing/Newsletter/Components/TSWTab5PxLeftUnselected_FFFFFF_F0F0F0.png');
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+#myTabbedContent .tswTabBox li div div
+{
+	padding: 4px 10px 0px 10px;
+}
+#myTabbedContent .tswTabBox li a
+{
+	display: block;
+}
+#myTabbedContent .tswTabBox li.tswTabSelected
+{
+	background-color: #ff0000;
+	background-image: url('http://dl.dropbox.com/u/69436560/Publishing/Newsletter/Components/TSWTab5PxRightSelected_FFFFFF_FF0000.png');
+	padding-top: 0px;
+	cursor: default;
+	color: #ffffff;
+}
+#myTabbedContent .tswTabBox li.tswTabSelected div.tswTabOuterDiv
+{
+	background-image: url('http://dl.dropbox.com/u/69436560/Publishing/Newsletter/Components/TSWTab5PxLeftSelected_FFFFFF_FF0000.png');
+}
+#myTabbedContent .tswTabBox li.tswTabSelected div div
+{
+	z-index: 5;
+}
+#myTabbedContent .tswTabBox li.tswTabSelected a
+{
+}
+#myTabbedContent .tswTabContent
+{
+	clear: both;
+	text-align: left;
+}
+#myTabbedContent .tswTabContent div.tswTabContentUnselected,
+#myTabbedContent .tswTabContent div.tswTabContentSelected
+{
+	position: absolute;
+	top: 0px;
+	border-width: 0px;
+	background-color: #ffffff;
+	padding: 4px 4px 4px 4px;
+	display: none;
+	visibility: hidden;
+	color: #49413e;
+}
+#myTabbedContent .tswTabContent div.tswTabContentSelected
+{
+	position: static;
+	display: block;
+	visibility: visible;
+	zoom: 1; /*for IE*/
+}
