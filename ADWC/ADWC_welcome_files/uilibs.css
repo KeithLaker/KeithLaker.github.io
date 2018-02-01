@@ -1,0 +1,24 @@
+
+.table-emptyText {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.cdTable-emptyText {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 18px;
+    color: #686868;
+    display : inline-block;
+    background-color: #f6f6f6;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    height : 70px;
+    min-height : 70px;
+    vertical-align: middle;
+    line-height: 3.5;
+    text-align: center;
+    padding-left: 30%;
+}
