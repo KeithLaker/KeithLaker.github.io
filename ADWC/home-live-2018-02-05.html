@@ -1,0 +1,719 @@
+<link href='http://www.oracle.com/asset/web/css/compass.css' media="print, screen" rel="Stylesheet" type="text/css"/>
+<style type="text/css">
+
+h1.db-Heading-title{width:100%; font-size:32px !important;line-height:1.75;text-align:left; align: right; color:#707070;font-weight:normal;padding:50px 0;background-size: 540px;  background-image:url(https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/c78ae504-6f73-42eb-a868-64143436b9ae/Image/d11cb67a53a80e23ddf4d8848dbbb3f4/autonomouscloudgraphic35aaml.jpg) !important;background-repeat:no-repeat !important;background-position:100% 50% !important}
+.db-Heading{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;border-bottom:2px solid #E0E0E0;margin-bottom:20px}
+.db-Heading.db-Heading--noBorder{border-bottom:none}
+.db-Heading-img{float:right;margin-right:48px}
+h1.db-Heading-title-12c{width:60%;font-size:32px !important;line-height:1.25;text-align:center;color:#707070;font-weight:normal;padding:50px 0;background-image:url() !important;background-repeat:no-repeat !important;background-position:50% 50% !important}
+.db-Heading-desc{font-size:20px !important;font-weight:normal;color:#707070;line-height:1.5;margin:20px 0}
+.db-Heading-desc.db-Heading-desc--noTop{margin-top:0}.db-Grid{width:auto;margin:24px 0 24px 0;padding:0;overflow:hidden}
+.db-Grid img{max-width:100%}
+.db-Grid-col-50{width:50%;float:left}
+.db-Grid-colWrap{padding-right:10px;padding-left:10px}
+.db-Grid-colWrap--first{padding-left:0}
+.db-Grid-colWrap--last{padding-right:0}
+a.db-ImageLink{display:block;text-decoration:none;color:#1c6fec}
+a.db-ImageLink img{margin-bottom:10px}
+a.db-ImageLink:hover{text-decoration:underline}
+.db-ContentBlock{margin:24px auto;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif}
+h2.db-ContentBlock-title{font-size:24px !important;line-height:1.25;text-align:center;color:#707070;font-weight:200;padding:12px 0 24px 0 !important}
+.db-ContentBlock-desc{font-size:14px;line-height:1.5;color:#404040}.db-ContentBlock-img{text-align:center;margin-top:64px}
+.db-Content{margin:24px auto;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif}
+h2.db-Content-title{font-size:20px !important;line-height:20px;text-align:left;color:#404040;font-weight:400;padding:16px 0 12px 0 !important;border-bottom:2px solid #E0E0E0;margin-bottom:16px}
+.db-Content-desc{font-size:14px;line-height:1.5;color:#404040}
+.db-Content-img{text-align:center;margin-top:64px}
+.db-LearnMore{border-top:2px solid #E0E0E0;margin:48px 0 0 0;padding:24px 0 4px 0;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;text-align:center}
+.db-LearnMore--noBorder{border-top:none}
+a.db-LearnMore-link{text-decoration:none;color:#1c6fec;font-size:16px;line-height:1.25}
+a.db-LearnMore-link:hover{text-decoration:underline}ul.db-ContentList{margin:0;padding:0;list-style:none;display:block}
+ul.db-ContentList--twoCols{overflow:hidden}
+ul.db-ContentList--twoCols li.db-ContentList-item{width:49%;float:left;height:40px}
+li.db-ContentList-item{display:block;margin:0 0 16px 0 !important;padding:0 !important;background:none !important}
+li.db-ContentList-item:last-child{margin-bottom:0}
+li.db-ContentList-item a{display:block;margin-top:4px;font-size:14px;line-height:16px}
+.db-ContentList-icon{display:block;width:32px;height:32px;background-color:#F0F0F0;border-radius:2px}
+.db-ContentList-item .db-MediaBlock-content{min-height:32px}
+.db-Content-image{max-width:100%;display:block;margin:24px 0}
+.db-MediaBlock-graphic{float:left;margin-right:8px}
+.db-MediaBlock-graphic img{display:block}
+.db-MediaBlock-graphic--right{margin-left:8px;float:right}
+.db-MediaBlock-content{overflow:hidden;}
+
+a.listy {
+outline: none;
+text-decoration: none;
+display: inline-block;
+margin-right: 5px;
+text-align: left;
+line-height: 3;
+color: black;
+}
+a.listy:link, a.listy:visited, a.listy:focus {
+background: white;
+}
+a.listy:hover {
+background: lightgrey;
+}
+a.listy:active {
+background: lightgrey;
+color: white;
+}
+a.blocky {
+outline: none;
+text-decoration: none;
+display: inline-block;
+margin-right: 5px;
+text-align: left;
+color: grey;
+}
+a.blocky:link, a.blocky:visited, a.blocky:focus {
+background: white;
+}
+a.blocky:hover {
+background: lightgrey;
+}
+a.blocky:active {
+background: lightgrey;
+color: white;
+}
+a.boxy {
+outline: none;
+text-decoration: none;
+display: inline-block;
+margin-right: 5px;
+text-align: center;
+color: black;
+}
+li:last-child a {
+margin-right: 0;
+}
+a.boxy:link, a.boxy:visited, a.boxy:focus {
+background: white;
+}
+a.boxy:hover {
+background: lightgrey;
+}
+a.boxy:active {
+background: lightgrey;
+color: white;
+}
+</style>
+<table width="535px" style="background: white;">
+	<tr>
+		<td>
+			<div class="db-Content"><a name="topofpage"></a>
+				<h1 style="text-align:left;" class="db-Heading-title">
+					<div style="margin-left:55px">
+						<strong>Data Warehousing<br>and<br>Big Data<br />
+						</strong>
+					</div>
+				</h1>
+				<div class="db-ContentBlock">
+					<h2 class="db-ContentBlock-title"><strong>Autonomous Data Warehouse Cloud</strong></h2>
+					<p class="db-Content-desc" style="line-height: 1.5;"><strong>Autonomous Data Warehouse Cloud</strong> is a fully managed database tuned and optimized for data warehouse workloads with the market-leading performance of Oracle Database.
+					</p>
+					<table width="100%" style="background: white;">
+						<tr>
+							<td width="50%"  valign="top">
+								<a class="boxy" target="_blank" href="https://www.youtube.com/embed/q1tarGiVRqs?autoplay=1">
+									<img width="230px" alt="" src="https://cloud.oracle.com/opc/paas/videos/Oracle-data-warehouse-2.jpg" />
+									<br />
+									<p class="db-Content-desc" style="line-height: 1.5; margin-left:15px; margin-right:15px;">Video:<br />
+										<strong>Oracle Autonomous Data Warehouse Cloud</strong><br> - Data Warehousing for Everybody in the Oracle Cloud
+									</p>
+								</a>
+							</td>
+							<td width="50%" valign="top">
+								<a class="boxy" target="_blank" class="db-ImageLink" href="http://www.oracle.com/technetwork/database/bi-datawarehousing/adwc-ebook-4081945.pdf">
+									<img width="230px" alt="" src="https://www.oracle.com/us/assets/cw58-autonomous-data-warehousing-3942065.jpg" /><br />
+									<p class="db-Content-desc" style="line-height: 1.5; margin-left:15px; margin-right:15px;">
+										Whitepaper:<br />
+										An Overview of Oracle<br />
+										<strong>Autonomous Data Warehouse Cloud</strong>
+									</p>
+								</a>
+							</td>
+						</tr>
+					</table>
+					<br><br>
+				
+		<!-- CH05v1 -->
+					<table width="100%">
+						<tr>
+							<td colspan="2">
+								<p class="db-Content-desc" style="line-height: 1.5; text-align:left;">Autonomous Data Warehouse Cloud uses the same Oracle Database software and technology that runs your existing on-premises marts, data warehouses, and applications, making it compatible with all your existing data warehouse, data integration and BI tools.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center">
+								<a class="boxy" target="_blank" class="db-ImageLink" href="https://cloud.oracle.com/en_US/datawarehouse">
+									<p class="db-Content-desc" style="line-height: 1.5; margin-left:15px; margin-right:15px;  margin-top:15px; "><img src="https://www.oracle.com/a/ocom/img/c82-wsj-ad.jpg">
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td valign="top">
+								<img src="https://www.oracle.com/assets/c75-database-roles-developer-4-2-2286113.png">
+							</td>
+							<td width="95%" valign="top">
+								<a class="blocky" target="_blank" href="https://cloud.oracle.com/en_US/datawarehouse/features">
+									<p class="db-Content-desc" style="line-height: 1.5; margin-left:15px; margin-right:15px;"><strong>FAST</strong><br>
+										Oracle Autnomous Data Warehouse Cloud provides fully automated tuning for your analytical workloads with preconfigured resource profiles for different types of users. <strong>Read more...</strong>
+									</p></a>
+							</td>
+						</tr>
+						<tr>
+							<td valign="top">
+								<img src="https://www.oracle.com/assets/c75-database-roles-itexec-4-2-2285896.png">
+							</td>
+							<td width="95%" valign="top">
+								<a class="blocky"  target="_blank" href="https://cloud.oracle.com/en_US/datawarehouse/features">
+									<p class="db-Content-desc" style="line-height: 1.5; margin-left:15px; margin-right:15px;"><strong>EASY</strong><br>
+										Oracle Autnomous Data Warehouse Cloud provides a fully-managed, fully autonomous solution that delivers automatic provisioning, patching, upgrades and backups whilst your data warehouse is running. <strong>Read more...</strong>
+									</p></a>
+							</td>
+						</tr>
+						<tr>
+							<td text-align="center" valign="top">
+								<img src="https://www.oracle.com/assets/c75-database-roles-dba-4-2-2286095.png">
+							</td>
+							<td width="95%" valign="top">
+								<a class="blocky" target="_blank" href="https://cloud.oracle.com/en_US/datawarehouse/features">
+									<p class="db-Content-desc" style="line-height: 1.5; margin-left:15px; margin-right:15px;"><strong>ELASTIC</strong><br>
+										With Oracle Autnomous Data Warehouse Cloud, you can scale your data warehouse on demand. Independently scale compute or storage and even shut off idle compute to save money.
+										<strong>Read more...</strong>
+									</p></a>
+							</td>
+						</tr>
+					</table>
+					<p class="db-Content-desc" style="line-height: 1.5; margin-left:15px; margin-right:15px;">Welcome to Oracle's premier autonomous cloud service for data warehousing. For more information about how to get started today use the following the link to view the library of data sheets, FAQs, pricing, and additional resources on the <a class="blocky" target="_blank" href="https://cloud.oracle.com/en_US/datawarehouse/features"><strong>Autonomous Data Warehouse Cloud product page.</strong></a> 
+
+
+<!-- /CH05v1 -->
+					<table width="100%">
+						<tbody>
+							<tr>
+								<td style="text-align:right">
+									<div class="db-Content-desc"><a href="#topofpage">Back to top</a></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="db-ContentBlock">
+					<h2 class="db-Content-title"><a name="BDMSs"></a></h2>
+					<h2 class="db-ContentBlock-title"><strong>Overview of Oracle&lsquo;s Big Data Management System</strong></h2>
+					<div class="db-Grid">
+						<div class="db-Grid-col-50">
+							<div class="db-Grid-colWrap db-Grid-colWrap--first"><a class="boxy" target="_blank" href=" https://youtu.be/w6V-Hs5T5nA?list=PLdtXkK5KBY54boHfFxZ9A_7tXbqxqe3v1"> 								<img width="230px" alt="" src="http://www.oracle.com/technetwork/database/gl-12-2-video-3661825.jpg" /> 								<br />
+									<div class="db-Content-desc">Video:<br />
+										Data Warehousing &amp; Big Data:<br />
+										<strong>What's New in Database 18c</strong>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="db-Grid-col-50">
+							<div class="db-Grid-colWrap db-Grid-colWrap--first"><a class="boxy" target="_blank" class="db-ImageLink" href="/technetwork/database/bi-datawarehousing/data-warehousing-wp-12c-1896097.pdf"> 								<img width="230px" alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2266199.png" /><br />
+									<div class="db-Content-desc">White Paper:<br />
+										Data Warehousing and Big Data in<br />
+										<strong>Database 18c</strong>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<br />
+					<br />
+					<p class="db-Content-desc"><span style="line-height: 1.5;">As today's enterprises embrace big data, their information architectures are evolving. The new information architecture in the big data era embraces emerging technologies such as Hadoop, but at the same time leverages the core strengths of previous data warehouse architectures. 						<br />
+							<br />
+							The data warehouse, built upon Oracle Database 18c and Exadata, will continue to be the primary analytic database for storing core transactional data: financial records, customer data, point- of-sale data and so forth (see <a href="#KDWBDT">Key Data Warehousing and Big Data Capabilities</a> for more information). 						<br />
+							<br />
+							However, the data warehouse will be augmented by a big-data system (built upon Oracle Big Data Appliance), which functions as a &lsquo;data reservoir&rsquo;. This will be the repository for the new sources of large volumes of data: machine-generated log files, social-media data, and videos and images -- as well as a repository for more granular transactional data or older transactional data which is not stored in the data warehouse.</span>
+					</p>
+					<br />
+					<br />
+					<table width="100%">
+						<tbody>
+							<tr>
+								<td align="center"><img alt="" class="db-Content-image" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2351615.png" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<br />
+					<p class="db-Content-desc"><span style="line-height: 1.5;">Data flows between the big data system and the data warehouse to create a unified foundation: <strong>the Oracle Big Data Management System</strong>.</span> 					<br />
+						<br />
+						The transition from the Enterprise Data Warehouse centric architecture to the Big Data Management System - both on-premise, on the Cloud, or in hybrid Cloud systems - is going to revolutionize any companies information management architecture. Oracle's Statement of Direction outlines Oracle's vision for delivering innovative new technologies for building the information architecture of tomorrow.
+					</p>
+					<table width="100%">
+						<tbody>
+							<tr>
+								<td width="50px"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2162679.png" />
+								</td>
+								<td><a class="boxy" target="" href="[!--$wcmUrl('link','2516729')--]">
+										<div class="db-Content-desc"><span style="line-height: 1.5;">Statement of Direction for Big Data and Data Warehouse Management Systems</span>
+										</div>
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<br><br>
+					<table width="100%">
+						<tbody>
+							<tr>
+								<td style="text-align:right">
+									<div class="db-Content-desc"><a href="#topofpage">Back to top</a></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="db-ContentBlock">
+					<h2 class="db-Content-title"><a name="DWKDs"></a></h2>
+					<h2 class="db-ContentBlock-title"><strong>Why Oracle?<br>Key Data Warehouse Differentiators</strong></h2>
+					<div class="db-ContentBlock-img"><img width="130" height="130" alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2510300.png" />
+					</div>
+					<div class="db-Grid">
+						<div class="db-Grid-col-50">
+							<div class="db-Grid-colWrap db-Grid-colWrap--first">
+								<a  class="listy" href="#DWT">
+									<div class="db-Content-desc"><strong>1. Leading Database Technology for Data Warehousing</strong> 								<br />
+										- Analysts position Oracle as market leader 								<br />
+										- Leading edge innovations in DW
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="db-Grid-col-50">
+							<div class="db-Grid-colWrap db-Grid-colWrap--first">
+								<a class="listy" href="#DWC">
+									<div class="db-Content-desc"><strong>2. Complete Range of Deployment Options</strong> 								<br />
+										- High performance with Exadata architecture 								<br />
+										- Same technology available on-premise and cloud
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="db-Grid">
+						<div class="db-Grid-col-50">
+							<div class="db-Grid-colWrap db-Grid-colWrap--first">
+								<a class="listy" href="#DWSQL">
+									<div class="db-Content-desc"><strong>3. Power of Oracle SQL across Big DW ecosystem</strong> 								<br />
+										- Query any data across Hadoop, NoSQL, and Oracle Database 								<br />
+										- Faster, simpler, richer SQL
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<br />
+					<br />
+					<div class="db-Content-desc">... and Database 18c delivers over <strong>500 additional improvements.</strong> for enterprise data warehousing
+					</div>
+					<br />
+					<br />
+				</div>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td style="text-align:right">
+								<div class="db-Content-desc"><a href="#topofpage">Back to top</a></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="db-Content">
+					<div class="db-ContentBlock">
+						<h2 class="db-Content-title"><a name="DWT"></a></h2>
+						<h2 class="db-ContentBlock-title"><strong>Leading Data Warehousing Technology</strong></h2>
+						<div class="db-ContentBlock-img"><img height="130px" alt="" src="http://www.oracle.com/technetwork/developer-tools/sql-developer/sqldev-101614-2340766.jpg" />
+						</div>
+						<p class="db-Content-desc"><strong>Oracle Data Management Solutions: Leadership From The Data Center To The Cloud</strong>
+							<table width="100%">
+								<tbody>
+									<tr>
+										<td valign="top">
+											<div class="db-Content-desc">Oracle has delivered four decades of data management and analytics innovation. Leading industry analysts have consistent pointed out how Oracle stands out from the competition by offering a truly unique value proposition to its customers, and by its ability to consistently and efficiently execute on its strategy.
+											</div>
+										</td>
+										<td><img width="100px" alt="" src="http://www.oracle.com/technetwork/database/dw-analyst-reports-3661798.jpg" />
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</p>
+						<p class="db-Content-desc"><strong>Better, faster analytic queries</strong> - <a target="_blank" href="http://www.oracle.com/technetwork/database/in-memory/index.html">Database In-Memory</a> delivers speed-of-thought processing for sophisticated analytic queries. Database In-Memory implements leading-edge columnar data processing to accelerate your data warehouse analytics by orders of magnitude. Answers that used to take minutes to obtain are now available instantly. Questions that you used to dream about are asking can now be quickly and easy answered.
+						</p>
+						<p class="db-Content-desc"><strong>Easier, faster management with new Multitenant enhancements</strong> - <a target="_blank" href="http://www.oracle.com/technetwork/database/multitenant/index.html">Oracle Multitenant</a> is the architecture for the next-generation data warehouse in the cloud. It delivers easier consolidation of data marts and data warehouses by offering complete isolation, agility and economies of scale. Oracle Multitenant offers additional benefits by providing a fast and efficient management framework for delivering sandboxes and data discovery platforms within the overall Oracle Big Data Management System.
+						</p>
+						<p class="db-Content-desc"><strong>Maintaining consistent performance</strong> as data warehouse grows with Oracle <a target="_blank" href="http://www.oracle.com/technetwork/database/options/partitioning/overview/index.html">Partitioning</a> which enhances the manageability, performance, and availability of large data marts and data warehouses. It increases query performance by only working on the data that is relevant, improves availability through individual partition manageability and decreases costs by storing data in the most appropriate manner.
+						</p>
+						<p class="db-Content-desc"><strong>Temperature-based data optimization</strong> is made possible with <a target="_blank" href="http://www.oracle.com/technetwork/topics/index-090321.html">Automatic Data Optimization</a> which allows you to create policies for smart data compression and data movement making it possible to implement storage and compression tiering. ADO works in conjunction with Oracle Partitioning.
+						</p>
+						<p class="db-Content-desc"><strong>Effective use of all hardware resources -</strong> the Oracle Database is able to efficiently leverage all hardware resources - multiple CPUs, multiple IO channels, multiple storage units, multiple nodes in a cluster. The Oracle Optimizer can automatically decide if a query should run in parallel and the degree of parallelism to use based on the resource requirements of the statement.
+						</p>
+					</div>
+				</div>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td style="text-align:right">
+								<div class="db-Content-desc"><a href="#DWKDs">Back to top</a></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="db-Content">
+					<div class="db-ContentBlock">
+						<h2 class="db-Content-title"><a name="DWC"></a></h2>
+						<h2 class="db-ContentBlock-title"><strong>Complete Range of Deployment Options</strong></h2>
+						<div class="db-ContentBlock-img"><img height="130px" alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/webcontent/3225767.png" /><br><br>
+						</div>
+						<p class="db-Content-desc"><strong>Cloud</strong> - Enterprise-proven database cloud service that supports any size of data warehouse and big data workload from dev/test to large scale production deployment as a full-cloud, on-premise private cloud as well as hybrid cloud deployment models. Data Warehousing with <a target="_blank" href="http://cloud.oracle.com/database">Oracle Cloud</a> delivers a multi-layered, in depth security with encryption switched on by default. It's a highly available and scalable service delivering speed, simplicity and flexibility for faster time to value.
+						</p>
+						<p class="db-Content-desc"><strong>On-premise</strong> -  <a target="_blank" href="http://www.oracle.com/technetwork/database/exadata/index.html">Oracle Exadata Machine</a> runs all types of data warehouse workloads including data marts, data warehousing, in-memory analytics and data mart consolidations. Simple and fast to implement, the Exadata Database Machine powers and protects your most important data sets and is the ideal foundation for a consolidated data warehouse cloud.
+						</p>
+					</div>
+				</div>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td style="text-align:right">
+								<div class="db-Content-desc"><a href="#DWKDs">Back to top</a></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="db-Content">
+					<div class="db-ContentBlock">
+						<h2 class="db-Content-title"><a name="DWSQL"></a></h2>
+						<h2 class="db-ContentBlock-title"><strong>Power of SQL across Big DW ecosystem</strong></h2>
+						<div class="db-ContentBlock-img"><img width="430px" alt="" src="https://farm2.staticflickr.com/1701/25836514445_e42f502ec2.jpg" /></div><br>
+						<p class="db-Content-desc"><strong>Query any data across Hadoop, NoSQL, and Oracle Database</strong> - <a target="_blank" href="http://www.oracle.com/technetwork/database/bigdata-appliance/overview/index.html">Oracle Big Data SQL</a> is a unique innovation from Oracle. It is a new architecture for SQL on Hadoop, seamlessly integrates data in Hadoop and NoSQL with data in Oracle Database. Oracle Big Data SQL radically simplifies integrating and operating in the big data domain.
+						</p>
+						<p class="db-Content-desc"><strong>Sophisticated SQL features for Big DW ecosystem</strong> 						<br />
+							Built upon the very latest ANSI SQL standard (2016), Oracle's powerful and extensive library of SQL functions and features provides:
+						</p>
+						<table>
+							<tbody>
+								<tr>
+									<td width="10px">&nbsp;</td>
+									<td>
+										<div class="db-Content-desc">1. Faster analysis for interactive, iterative data exploration using <a target="_blank" href="http://www.oracle.com/technetwork/database/database-technologies/sql-analytics/overview/index.html">Approximate Query Processing</a> and <a target="_blank" href="http://www.oracle.com/technetwork/database/database-technologies/sql-analytics/overview/index.html">pattern matching.</a> 									<br />
+											2. Seamless access to new types of data such as <a target="_blank" href="http://www.oracle.com/technetwork/database/application-development/oracle-document-store/index.html">JSON</a> data and XML. 									<br />
+											3. Smarter views and simpler queries using <a target="_blank" href="https://oracle.rainfocus.com/scripts/catalog/oow16.jsp?search=CON6502&amp;showEnrolled=false&amp;search.event=oracleopenworld">Analytic Views</a> which move business logic into database and simplifies SQL for complex queries. 									<br />
+											4. Richer analytics with <a target="_blank" href="http://www.oracle.com/technetwork/database/options/spatialandgraph/overview/spatialandgraph-1707409.html">in-database graph analytics</a> that discover relationships, recommendations and other key graph patterns. 									<br />
+											5. Deeper analytics with Oracle's <a target="_blank" href="http://www.oracle.com/technetwork/database/options/advanced-analytics/overview/index.html"> Advanced Analytics</a> which delivers predictive analytics, data mining, text mining, statistical analysis, advanced numerical computations inside the database.
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td style="text-align:right">
+								<div class="db-Content-desc"><a href="#DWKDs">Back to top</a></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="db-Content">
+					<div class="db-ContentBlock">
+						<h2 class="db-Content-title"><a name="DWKDs"></a></h2>
+						<a class="boxy" target="_blank" href="http://livesql.oracle.com">
+							<h2 class="db-ContentBlock-title"><strong>Test Drive New DW Features In Database 18c</strong></h2>
+							<img alt="" src="http://www.oracle.com/technetwork/database/oracle-live-sql-3634234.png" /><br><br>
+							<p class="db-Content-desc">Get instant access to a comprehensive collection of community scripts and structured tutorials covering the most important data warehouse features in Oracle Database 18c.
+							</p></a>
+					</div>
+				</div>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td style="text-align:right">
+								<div class="db-Content-desc"><a href="#topofpage">Back to top</a></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="db-Content">
+					<div class="db-ContentBlock">
+						<h2 class="db-Content-title"><a name="DWBDC"></a></h2>
+						<h2 class="db-ContentBlock-title"><strong>Key Data Warehousing and Big Data Capabilities</strong></h2>
+						<ul class="db-ContentList db-ContentList--twoCols">
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2162679.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="http://www.oracle.com/technetwork/database/exadata/index-089737.html">Exadata</a>
+									</div>
+								</div>
+							</li>
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2162679.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="http://www.oracle.com/technetwork/database/in-memory/overview/index.html">Database In-Memory</a>
+									</div>
+								</div>
+							</li>
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2162679.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="http://www.oracle.com/technetwork/database/options/partitioning/overview/index.html">Partitioning</a>
+									</div>
+								</div>
+							</li>
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2162679.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="http://www.oracle.com/technetwork/database/bigdata-appliance/index.html">Big Data Appliance</a>
+									</div>
+								</div>
+							</li>
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2162679.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="http://www.oracle.com/technetwork/database/database-technologies/sql-analytics/overview/index.html">Analytical SQL</a>
+									</div>
+								</div>
+							</li>
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2162679.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="http://www.oracle.com/technetwork/database/options/advanced-analytics/index.html">Advanced Analytics</a>
+									</div>
+								</div>
+							</li>
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2162679.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="http://www.oracle.com/technetwork/database/database-technologies/query-optimization/overview/index.html">Query Optimization</a>
+									</div>
+								</div>
+							</li>
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2162679.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="http://www.oracle.com/technetwork/database/options/olap/index.html">OLAP</a>
+									</div>
+								</div>
+							</li>
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2162679.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="http://www.oracle.com/technetwork/database/bi-datawarehousing/dbbi-tech-info-sca-090608.html">Parallelism and Scalability</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td style="text-align:right">
+								<div class="db-Content-desc"><a href="#topofpage">Back to top</a></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="db-Content">
+					<div class="db-ContentBlock">
+						<h2 class="db-Content-title"><a name="IDM"></a></h2>
+						<h2 class="db-ContentBlock-title"><strong>Industry Data Models</strong></h2>
+						<ul class="db-ContentList db-ContentList--twoCols">
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2138111.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="http://www.oracle.com/technetwork/database/options/airlines-data-model/index.html">Airline Data Model</a>
+									</div>
+								</div>
+							</li>
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2138111.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="http://www.oracle.com/technetwork/database/options/comm-data-model/index-098457.html">Communications Data Model</a>
+									</div>
+								</div>
+							</li>
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2138111.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="http://www.oracle.com/technetwork/database/options/retail-data-model/index-082666.html">Retail Data Model</a>
+									</div>
+								</div>
+							</li>
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2138111.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="http://www.oracle.com/technetwork/database/options/util-data-model/oudmpage-2016928.html">Utilities Data Model</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td style="text-align:right">
+								<div class="db-Content-desc"><a href="#topofpage">Back to top</a></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="db-Content">
+					<div class="db-ContentBlock">
+						<h2 class="db-Content-title"><a name="CCS"></a></h2>
+						<h2 class="db-ContentBlock-title"><strong>Customer Case Studies</strong></h2>
+						<ul class="db-ContentList db-ContentList--twoCols">
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2138112.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="http://medianetwork.oracle.com/video/player/1439324779001">P&amp;G</a></div>
+								</div>
+							</li>
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2138112.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="http://medianetwork.oracle.com/video/player/2940549413001">BAE Systems</a></div>
+								</div>
+							</li>
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2138112.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="http://medianetwork.oracle.com/video/player/2889835899001">dunnhumby</a></div>
+								</div>
+							</li>
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2138112.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="http://www.oracle.com/us/corporate/press/520403?msg=GCP-Exadata1111">Targetbase</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<br><br>
+						<ul class="db-ContentList db-ContentList--twoCols">
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2162679.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="http://www.oracle.com/us/solutions/datawarehousing/datawarehouse-customers-450936.html">More Customer Case Studies &rarr;</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td style="text-align:right">
+								<div class="db-Content-desc"><a href="#topofpage">Back to top</a></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="db-Content">
+					<div class="db-ContentBlock">
+						<h2 class="db-Content-title"><a name="LM"></a></h2>
+						<h2 class="db-ContentBlock-title"><strong>Learn More</strong></h2>
+						<ul class="db-ContentList db-ContentList--twoCols">
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2162679.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a href="https://blogs.oracle.com/datawarehousing/">Data Warehouse Insider Blog</a></div>
+								</div>
+							</li>
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2162679.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="https://blogs.oracle.com/datamining/">Data Mining Blog</a></div>
+								</div>
+							</li>
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2162679.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="https://blogs.oracle.com/oraclespatial/">Spatial and Graph Blog</a></div>
+								</div>
+							</li>
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2162679.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="https://blogs.oracle.com/database/">Oracle Database Insider Blog</a></div>
+								</div>
+							</li>
+							<li class="db-ContentList-item">
+								<div class="db-MediaBlock">
+									<div class="db-MediaBlock-graphic"><img alt="" src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2162679.png" />
+									</div>
+									<div class="db-MediaBlock-content"><a target="_blank" href="https://blogs.oracle.com/optimizer/">Oracle Optimizer Blog</a></div>
+								</div>
+							</li>
+							<br />
+						</ul>
+						<div class="db-ContentBlock-desc">
+							<div class="m-Section m-Section--learnMore"><a target="" class="m-Section-largeLink" href="http://www.oracle.com/technetwork/database/database-technologies/sql-analytics/community/index.html">Go to Community for even more blogs, videos, and more . . .</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td style="text-align:right">
+								<div class="db-Content-desc"><a href="#topofpage">Back to top</a></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="db-Content">
+				<div class="db-ContentBlock">
+					<h2 class="db-Content-title"><a name="Twitter"></a></h2>
+					<h2 class="db-ContentBlock-title"><strong>Twitter Feed</strong></h2>
+					<a class="twitter-timeline" href="https://twitter.com/ASQLBarista" data-widget-id="287205040446377985">Tweets by @ASQLBarista</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</div>
+			</div>
+			<table width="100%">
+				<tbody>
+					<tr>
+						<td style="text-align:right">
+							<div class="db-Content-desc"><a href="#topofpage">Back to top</a></div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<br><br><br>
+		</td>
+	</tr>
+</table>
