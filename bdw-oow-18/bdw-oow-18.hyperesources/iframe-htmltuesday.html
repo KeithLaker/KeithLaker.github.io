@@ -2,7 +2,7 @@
 #header-text {
   display: inline-block;
   font-family:Helvetica,Arial,Sans-Serif; 
-  font-size:52pt; 
+  font-size:36pt; 
   font-weight:bold;
   text-align:center;
   color:white; 
@@ -15,7 +15,7 @@
 #header-box{
   color:white; 
   background:orange;
-  height: 150px; /*sets height of element*/
+  height: 100px; /*sets height of element*/
   width:100%;
   text-align:center;
   padding-left: 0px; /*sets 'padding'*/
@@ -26,15 +26,125 @@
 body {
   margin: 0;
 }
+.topfloat{
+	position:fixed;
+	width:60px;
+	height:60px;
+	top:10px;
+	left:10px;
+	background-color:orange;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+}
 
-</style>
-<table id="header-box">
-	<tr>
-		<td width="100%">
-    		<a id="header-text" href="https://keithlaker.github.io/bdw-oow-18/bdw-oow-18.html#LandingPage">TUESDAY'S SESSIONS</a>
-		</td>
-	</tr>
-</table>
+.float{
+	position:fixed;
+	width:80px;
+	height:80px;
+	bottom:40px;
+	right:40px;
+	background-color:orange;
+	color:#FFF;
+	border-radius:80px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:22px;
+}
+
+.hide {
+   display: none;
+}
+
+
+.hamburger_top {
+  display: inline-block;
+  vertical-align: top;
+  width: 50px;
+  height: 5px;
+  background-color: white;
+  border: solid 1px white;
+  position:relative;
+  top: 0px;
+}
+
+.hamburger_middle {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 5px;
+  background-color: white;
+  border: solid 1px white;
+  position:relative;
+  top: 6px;
+}
+
+.hamburger_bottom {
+  display: inline-block;
+  vertical-align: top;
+  width: 50px;
+  height: 5px;
+  background-color: white;
+  border: solid 1px white;
+  position:relative;
+  top: 12px;
+}
+</style>		
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script>		
+
+$(document).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 5) {
+        $('.TopMenu').fadeOut();
+    } else {
+        $('.TopMenu').fadeIn();
+    }
+
+    if (y > 800) {
+        $('.bottomMenu').fadeIn();
+    } else {
+        $('.bottomMenu').fadeOut();
+    }
+
+});
+</script>
+	<table id="header-box">
+			<tr>
+				<td width="99px">
+					<div class="TopMenu">
+						<a href="https://keithlaker.github.io/bdw-oow-18/bdw-oow-18.html#LandingPage" class="topfloat">
+							<div class="my-float">
+								<div class="hamburger_top"></div>
+								<div class="hamburger_middle"></div>
+								<div class="hamburger_bottom"></div>
+							</div>
+						</a>
+					</div>
+				</td>
+				<td width="100%">
+					<a id="header-text" href="https://keithlaker.github.io/bdw-oow-18/bdw-oow-18.html#LandingPage">
+						<span id="day_text">TUESDAY's SESSIONS</span>
+					</a>
+					<div class="bottomMenu">
+						<a href="https://keithlaker.github.io/bdw-oow-18/bdw-oow-18.html#Tuesday" class="float">
+							<div class="my-float">
+								<div class="hamburger_top"></div>
+								<div class="hamburger_middle"></div>
+								<div class="hamburger_bottom"></div>
+							</div>
+						</a>
+					</div>
+				</td>
+			</tr>
+		</table>
+
 <br>
 <br>
 <br>
