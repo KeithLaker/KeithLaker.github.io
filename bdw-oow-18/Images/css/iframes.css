@@ -1,5 +1,7 @@
 <STYLE type="text/css">
 
+html{position: relative; height 100%; overflow: hidden;}
+
 #FirstStyle {color:#666666;font-family:arial;font-size:12px;}
 #bioText {color:#666666;font-family:arial;font-size:24px;}
 #tweetText {color:#666666;font-family:arial;font-size:14px;font-weight:bold}
