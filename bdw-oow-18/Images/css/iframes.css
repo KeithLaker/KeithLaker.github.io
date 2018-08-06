@@ -32,8 +32,8 @@
 #tab-it { display:inline-block; margin-left: 40px; }
 
 table.wrapper-layer {
-  width: 800px;
-  height: 1200px;
+  width: 768px;
+  height: 1024px;
   border-width: 0px;
   background-color: white;
 }
@@ -127,100 +127,6 @@ td.BD{
 img.article_line {width: 100%; height: 3px;}
 img.article_Timeline {width: 100%; height: 5px;}
 
-
-#header-text {
-  display: inline-block;
-  font-family:Helvetica,Arial,Sans-Serif; 
-  font-size:36pt; 
-  font-weight:bold;
-  text-align:center;
-  color:white; 
-  background:#3399FF;
-  padding-left: 0px; /*sets 'padding'*/
-  padding-right: 0px; /*sets 'padding'*/
-  text-decoration:none  
-}
-
-#header-box{
-  color:white; 
-  background:#3399FF;
-  height: 100px; /*sets height of element*/
-  width:100%;
-  text-align:center;
-  padding-left: 0px; /*sets 'padding'*/
-  padding-right: 0px; /*sets 'padding'*/
-}
-
-
-body {
-  margin: 0;
-}
-.topfloat{
-	position:fixed;
-	width:60px;
-	height:60px;
-	top:10px;
-	left:10px;
-	background-color:#3399FF;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-}
-
-.float{
-	position:fixed;
-	width:80px;
-	height:80px;
-	bottom:40px;
-	right:40px;
-	background-color:#3399FF;
-	color:#FFF;
-	border-radius:80px;
-	text-align:center;
-	box-shadow: 2px 2px 3px #999;
-}
-
-.my-float{
-	margin-top:22px;
-}
-
-.hide {
-   display: none;
-}
-
-
-.hamburger_top {
-  display: inline-block;
-  vertical-align: top;
-  width: 50px;
-  height: 5px;
-  background-color: white;
-  border: solid 1px white;
-  position:relative;
-  top: 0px;
-}
-
-.hamburger_middle {
-  display: inline-block;
-  vertical-align: middle;
-  width: 50px;
-  height: 5px;
-  background-color: white;
-  border: solid 1px white;
-  position:relative;
-  top: 6px;
-}
-
-.hamburger_bottom {
-  display: inline-block;
-  vertical-align: top;
-  width: 50px;
-  height: 5px;
-  background-color: white;
-  border: solid 1px white;
-  position:relative;
-  top: 12px;
-}
 
 
 </style>
