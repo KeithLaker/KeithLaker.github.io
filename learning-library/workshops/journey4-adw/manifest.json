@@ -1,0 +1,74 @@
+{
+    "workshop": {
+        "title": "Oracle Autonomous Data Warehouse: Getting Started Workshop",
+        "description": "This workshop will show you how to get started with Oracle Autonomous Data Warehouse  in the Oracle Public Cloud.",
+        "labs": [
+            {
+                "number": "0",
+                "filename": "README.md",
+                "title": "Read Me First",
+                "description": "ADW Getting Started Workshop Overview"
+            },
+            {
+                "number": "100",
+                "filename": "LabGuide100StartHereNEW.md",
+                "title": "Step 1: Provisioning and Connecting",
+                "description": "Building your first Autonomous Data Warehouse instance and connecting with SQL Developer"
+            },
+            {
+                "number": "200",
+                "filename": "LabGuide200.md",
+                "title": "Step 2: Working with Database Services and Sample Data Sets",
+                "description": "Understanding the different levels of database services and the sample Star Schema Benchmark (SSB) and Sales History (SH) datasets provided with ADWC"
+            },
+            {
+                "number": "300",
+                "filename": "LabGuide300.md",
+                "title": "Step 3: Loading Data",
+                "description": "Instructions to load data from Object Stores using SQL Developer and/or PL/SQL"
+            },
+            {
+                "number": "400",
+                "filename": "LabGuide400.md",
+                "title": "Step 4: Querying An External Data File",
+                "description": "Instructions to define and query external tables based on Object Store datasets"
+            },
+            {
+                "number": "500",
+                "filename": "LabGuide500.md",
+                "title": "Step 5: Managing and Monitoring Your Data Warehouse Instance using the Cloud Console",
+                "description": "Understanding how to use the ADWC Console to monitor, start/stop, and recover your ADWC instance"
+            },
+            {
+                "number": "600",
+                "filename": "LabGuide600.md",
+                "title": "Step 6: Scaling and Performance in Autonomous Data Warehouse",
+                "description": "Understanding how to scale your data warehouse instance and its effect on performance and concurrency"
+            },
+            {
+                "number": "700",
+                "filename": "LabGuide700.md",
+                "title": "Step 7: Using Oracle Machine Learning Notebooks",
+                "description": "Building SQL reports and dashboards using Oracle Machine Learning SQL notebooks"
+            },
+            {
+                "number": "800",
+                "filename": "LabGuide800.md",
+                "title": "Step 8: Simple Introduction to Machine Learning",
+                "description": "Learn to use the machine learning DBMS_PREDICTIVE_ANALYTICS package to build a more sophisticated notebook"
+            },
+            {
+                "number": "900",
+                "filename": "LabGuide900.md",
+                "title": "Step 9: Using Data Visualization Desktop",
+                "description": "Learn to how to connect Data Visualization Desktop to your Autonomous Data Warehouse and build interactive reports"
+            },
+            {
+                "number": "1000",
+                "filename": "LabGuideDIPC.md",
+                "title": "Step 10: Using Oracle Data Integration Platform Cloud with your Autonomous Data Warehouse",
+                "description": "Learn to use Oracle Data Integration Platform Cloud (DIPC) to extract, transform and load data into your Autonomous Data Warehouse"
+            }
+        ]
+    }
+}
