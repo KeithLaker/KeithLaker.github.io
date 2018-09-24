@@ -31,7 +31,7 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 
  
 
-### STEP 1: Create External Tables with DBMS_CLOUD
+#### STEP 1: Create External Tables with DBMS_CLOUD
 
 -   Connected as your user in SQL Developer, copy and paste <a href="./scripts/400/create_external_tables.txt" target="_blank">this code snippet</a> to SQL Developer worksheet.  
 
@@ -46,7 +46,7 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 
     Now you have external tables for the sample data pointing to files in the object store. Any query against the external tables will return the same result as against the original tables.
 
-### STEP 2: Querying External Data
+#### STEP 2: Querying External Data
 
 -   Copy and paste <a href="./scripts/400/query_external_data.txt" target="_blank">this code snippet</a> to SQL Developer worksheet. We only replaced the original table names <TABLE_NAME> with <TABLE_NAME_EXT> in the sample query.  
     ![](images/400/Picture400-4.png)
@@ -54,14 +54,14 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 -   **Run the script**. It will return the same result as against the original tables.
 
 
-### STEP 3: Exploring Oracle Database JSON features
+#### STEP 3: Exploring Oracle Database JSON features
 
 -   Copy and paste <a href="./scripts/400/query_json_data.txt" target="_blank">this code snippet</a> to SQL Developer worksheet.
     ![](images/400/snap0014671.jpg)
 
 -   **Run the script**. It shows an example of querying json data stored on the Object Store using the Oracle Database's JSON features,  Learn more about JSON in the database <a href="https://docs.oracle.com/en/database/oracle/oracle-database/18/adjsn/json-in-oracle-database.html">here</a>.
 
-### STEP 4: Creating an external table using the SQL Developer Import Wizard
+#### STEP 4: Creating an external table using the SQL Developer Import Wizard
 
 -   Click on ‘**Tables**’ in your user schema object tree. Clicking the right mouse button opens the context-sensitive menu in SQL Developer; select ‘**Import Data**’:
 
