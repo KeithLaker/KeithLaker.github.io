@@ -1,8 +1,11 @@
-[![](images/obe_tag.png)](README.md)
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
 
 September 21, 2018
-    
-#Lab 2: Working with Database Services and Sample Data Sets
+</td>
+<td class="td-banner">
+# Lab 2: Working with Database Services and Sample Data Sets
+</td></tr><table>
+
 
 ## Introduction
 

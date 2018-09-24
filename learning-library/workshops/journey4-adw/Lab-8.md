@@ -1,9 +1,11 @@
-[![](images/obe_tag.png)](README.md)
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
 
 September 21, 2018
-
-
+</td>
+<td class="td-banner">
 # Bonus Lab 1: Simple Introduction to Machine Learning Algorithms (DBMS_PREDICTIVE_ANALYTICS)
+</td></tr><table>
+
 
 ## Introduction
 

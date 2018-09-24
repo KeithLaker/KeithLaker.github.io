@@ -1,9 +1,11 @@
-[![](images/obe_tag.png)](README.md)
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
 
 September 21, 2018
-
-
+</td>
+<td class="td-banner">
 # Lab 6: Scaling and Performance in Your Autonomous Data Warehouse
+</td></tr><table>
+    
 
 ## Introduction
 

@@ -413,3 +413,25 @@ img
   height: auto !important;
 }
 
+
+table.tbl-heading
+{
+border-collapse: collapse    !important;
+boder-spacing: 10px    !important;
+border: 1px solid white   !important;
+}
+
+
+td.td-logo
+{
+border: 10px solid white   !important;
+}
+
+td.td-banner
+{
+min-width:100%  !important; 
+border: 10px solid white   !important;
+
+}
+
+

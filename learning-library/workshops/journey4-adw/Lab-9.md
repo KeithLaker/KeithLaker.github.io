@@ -1,8 +1,11 @@
-[![](images/obe_tag.png)](README.md)
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
 
 September 21, 2018
-
+</td>
+<td class="td-banner">
 # Bonus Lab 2: Exploring Your Data Using Data Visualization Desktop
+</td></tr><table>
+
 
 ## Introduction
 

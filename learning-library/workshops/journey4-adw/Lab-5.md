@@ -1,8 +1,11 @@
-[![](images/obe_tag.png)](README.md)
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
 
 September 21, 2018
-
+</td>
+<td class="td-banner">
 # Lab 5: Managing and Monitoring Your Data Warehouse Instance using the Cloud Console
+</td></tr><table>
+    
 
 ## Introduction
 
