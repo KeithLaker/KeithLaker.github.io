@@ -37,7 +37,7 @@ Use these links to get more information about Oracle Autonomous Data Warehouse
 
 ## Step 1: Creating Your new data warehouse
 
-Click here to run [Lab 1](LabGuide100StartHereNEW.md)
+Click here to run [Lab 1](Lab-1.md)
 
 **Objectives**:
 
@@ -48,7 +48,7 @@ Click here to run [Lab 1](LabGuide100StartHereNEW.md)
 
 ## Step 2: Working with Database Services and Sample Data Sets
 
-Click here to run [Lab 2](LabGuide200.md)
+Click here to run [Lab 2](Lab-2.md)
 
 **Objectives**:
 
@@ -59,7 +59,7 @@ Click here to run [Lab 2](LabGuide200.md)
 
 ## Step 3: Loading Data into Your New Autonomous Data Warehouse
 
-Click here to run [Lab 3](LabGuide300.md)
+Click here to run [Lab 3](Lab-3.md)
 
 **Objectives**:
 
@@ -71,7 +71,7 @@ Click here to run [Lab 3](LabGuide300.md)
 
 ## Step 4: Query Data In External Files
 
-Click here to run [Lab 4](LabGuide400.md)
+Click here to run [Lab 4](Lab-4.md)
 
 **Objectives**:
 
@@ -82,7 +82,7 @@ Click here to run [Lab 4](LabGuide400.md)
 
 ## Step 5: Managing and Monitoring Your Data Warehouse Instance using the Cloud Console
 
-Click here to run [Lab 5](LabGuide500.md)
+Click here to run [Lab 5](Lab-5.md)
 
 **Objectives**:
 
@@ -94,7 +94,7 @@ Click here to run [Lab 5](LabGuide500.md)
 
 ## Step 6: Scaling and Performance in Autonomous Data Warehouse
 
-Click here to run [Lab 6](LabGuide600.md)
+Click here to run [Lab 6](Lab-6.md)
 
 **Objectives**:
 
@@ -103,7 +103,7 @@ Click here to run [Lab 6](LabGuide600.md)
 
 ## Step 7:  Using Oracle Machine Learning SQL Notebooks
 
-Click here to run [Lab 7](LabGuide700.md)
+Click here to run [Lab 7](Lab-7.md)
 
 **Objectives**:
 
@@ -112,9 +112,17 @@ Click here to run [Lab 7](LabGuide700.md)
 - Learn how to share notebooks
 - Learn how to create and run SQL scripts
 
-## Step 8:Simple Introduction to Machine Learning Algorithms
 
-Click here to run [Lab 8](LabGuide800.md)
+# Bonus Labs - Slightly More Advanced Labs
+
+The following labs will let you explore some of the more advanced features of your Autonomous Data Warehouse annd 
+
+## Bonus Lab 1: Simple Introduction to Machine Learning Algorithms (DBMS_PREDICTIVE_ANALYTICS)
+
+Click here to run [Bonus Lab 1](Lab-8.md)
+
+
+This lab is aimed at data scientisist who want to explore the in-database data mining and statistical features within their Autonomous Data Warehouse.
 
 **Objectives**:
 
@@ -122,9 +130,11 @@ Click here to run [Lab 8](LabGuide800.md)
 - Learn how to use Oracle ML Gallery
 - Learn how to import notebooks into Oracle ML
 
-## Step 9: Using Data Visualization Desktop with Autonomous Data Warehouse
+## Bonus Lab 2: Exploring Your Data Using Data Visualization Desktop
 
-Click here to run [Lab 9](LabGuide900.md)
+Click here to run [Bonus 2](Lab-9.md)
+
+This lab is aimed at business intelligence report builders and general business users who want to create more advanced data visualizations on top of the data in their Autonomous Data Warehouse.
 
 **Objectives**:
 
@@ -134,9 +144,11 @@ Click here to run [Lab 9](LabGuide900.md)
 - Learn how to access and gain insights from data in the Autonomous Data Warehouse
 
 
-## Step 10: Using Oracle Data Integration Platform Cloud with your Autonomous Data Warehouse
+## Bonus Lab 3: Using Oracle Data Integration Platform Cloud with your Autonomous Data Warehouse
 
-Click here to run [Lab 10](LabGuideDIPC.md)
+Click here to run [Bonus Lab 3](Lab-ETL.md)
+
+This lab is aimed at data warehouse developers who want to integrate extract, load and transformation processing into their Autonomous Data Warehouse projects.
 
 **Objectives**:
 
