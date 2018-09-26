@@ -167,11 +167,11 @@ EXECUTE privilege on the PL/SQL package DBMS_CLOUD
 -   You are now ready to move to the next lab.
 
 
+
 ## Great Work - All Done
 
-[![](images/obe_tag.png)](README.md) 
-
-
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
+</td>
+<td class="td-banner">
 Please click here to return to the [Getting Started Home page](README.md)
-
-
+</td></tr><table>

@@ -74,12 +74,12 @@ Click **Scale Service** after filling in the form, this will take you the Instan
 -   ADWC allows you to dynamically scale your service online when you require more concurrency and performance.
 
 
+
 ## Great Work - All Done
 
-[![](images/obe_tag.png)](README.md) 
-
-
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
+</td>
+<td class="td-banner">
 Please click here to return to the [Getting Started Home page](README.md)
-
-
+</td></tr><table>
 

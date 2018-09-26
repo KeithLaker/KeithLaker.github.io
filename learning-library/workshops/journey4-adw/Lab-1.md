@@ -200,7 +200,8 @@ Start SQL Developer and create a connection for your database using the default 
 
 ## Great Work - All Done
 
-[![](images/obe_tag.png)](README.md) 
-
-
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
+</td>
+<td class="td-banner">
 Please click here to return to the [Getting Started Home page](README.md)
+</td></tr><table>

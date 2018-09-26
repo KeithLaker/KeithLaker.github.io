@@ -353,12 +353,12 @@ In this section we are going to use a script from a SQL pattern matching tutoria
 -   You have completed all of the steps in this lab.
 
 
+
 ## Great Work - All Done
 
-[![](images/obe_tag.png)](README.md) 
-
-
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
+</td>
+<td class="td-banner">
 Please click here to return to the [Getting Started Home page](README.md)
-
-
+</td></tr><table>
 
