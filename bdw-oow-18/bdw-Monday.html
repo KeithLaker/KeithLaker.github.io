@@ -89,6 +89,40 @@
        rel="apple-touch-startup-image">
        
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+        <script data-main="js/main" src="js/libs/require/require.js"></script>
+<link rel="stylesheet" href="css/libs/oj/v2.3.0/alta/oj-alta-min.css" type="text/css"/>
+<link rel="icon" href="css/images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="Images/css/iframes.css" />
+
+
+        <!-- This is the main css file for the default Alta theme -->
+        <!-- injector:theme -->
+<link rel="stylesheet" href="css/libs/oj/v2.3.0/alta/oj-alta-min.css" type="text/css"/>
+        <!-- endinjector
+
+        <!-- This contains icon fonts used by the starter template -->
+<link rel="stylesheet" href="css/demo-alta-site-min.css" type="text/css"/>
+        <!-- This is where you would add any app specific styling -->
+<link rel="stylesheet" href="css/override.css" type="text/css"/>
+         <script src="js/jquery.min.js"></script>
+ 
+<script data-main="js/main" src="js/libs/require/require.js"></script>
+<link rel="stylesheet" href="css/libs/oj/v2.3.0/alta/oj-alta-min.css" type="text/css"/>
+<link rel="icon" href="css/images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="Images/css/iframes.css" />
+
+<!-- This is the main css file for the default Alta theme -->
+<!-- injector:theme -->
+<link rel="stylesheet" href="css/libs/oj/v2.3.0/alta/oj-alta-min.css" type="text/css"/>
+        <!-- endinjector
+
+        <!-- This contains icon fonts used by the starter template -->
+<link rel="stylesheet" href="css/demo-alta-site-min.css" type="text/css"/>
+        <!-- This is where you would add any app specific styling -->
+<link rel="stylesheet" href="css/override.css" type="text/css"/>
 <style>
 #header-text {
   font-family:Helvetica,Arial,Sans-Serif; 
@@ -107,6 +141,79 @@
 }
 
 
+body {
+  margin: 0;
+}
+
+*{padding:0;margin:0;}
+
+
+.topfloat{
+	position:fixed;
+	width:60px;
+	height:60px;
+	top:10px;
+	left:10px;
+	background-color:red;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:red;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:22px;
+}
+
+.hide {
+   display: none;
+}
+
+
+.hamburger_top {
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 1px;
+  background-color: white;
+  border: solid 1px white;
+  position:relative;
+  top: 0px;
+}
+
+.hamburger_middle {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 1px;
+  background-color: white;
+  border: solid 1px white;
+  position:relative;
+  top: 6px;
+}
+
+.hamburger_bottom {
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 1px;
+  background-color: white;
+  border: solid 1px white;
+  position:relative;
+  top: 12px;
+}
 </style>
  
      
@@ -115,11 +222,9 @@
   </head>
   <body>
 	<!-- copy these lines to your document: -->
-	<table class="wrapper-layer">
-			<tr>
-				<td>
+
 	<div id="bdwmonday_hype_container" style="margin:auto;position:relative;width:100%;height:100%;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="bdw-Monday.hyperesources/bdwmonday_hype_generated_script.js?74737"></script>
+		<script type="text/javascript" charset="utf-8" src="bdw-Monday.hyperesources/bdwmonday_hype_generated_script.js?1518"></script>
 	</div>
 
 	<!-- end copy -->
@@ -130,8 +235,8 @@
 
 	<div style="display:none" aria-hidden=true>
 
-		<div>MONDAY</div>
 		<div></div>
+		<div>MONDAY</div>
 		<div>MONDAY
 </div>
 		<div>MONDAY
@@ -140,8 +245,6 @@
 	</div>
 
 	<!-- end text content: -->
-</td>
-</tr>
-</table>
+
   </body>
 </html>
