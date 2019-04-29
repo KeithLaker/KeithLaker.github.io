@@ -1,0 +1,134 @@
+<STYLE type="text/css">
+
+html{position: relative; height 100%; overflow: hidden;}
+
+#FirstStyle {color:#666666;font-family:arial;font-size:12px;}
+#bioText {color:#666666;font-family:arial;font-size:24px;}
+#tweetText {color:#666666;font-family:arial;font-size:14px;font-weight:bold}
+
+#PresenterImage {width: 100px;}
+#SocialMedia{width: 75x; height: 75px;}
+#LP-Image{width: 125x; height: 125px;}
+#glc {color:#FFFFFF;font-family:arial;font-size:20px;font-weight:bold}
+
+#article_body_left {margin-left: 25px;margin-right: 100px;color:#3D3C3A;font-family:arial;font-size:12px; text-align:justify}
+#mapText {color:#666666;font-family:arial;font-size:24px;font-weight:bold}
+#LPTitle {color:#666666;font-family:arial;font-size:20px;font-weight:bold}
+#JobTitle {color:#666666;font-family:arial;font-size:24px;font-weight:bold}
+
+#KeyTextDark {color:Gray;font-family:arial;font-size:18px;font-weight:bold;text-align:center;}
+#KeyTextLight {color:White;font-family:arial;font-size:18px;font-weight:bold;text-align:center;}
+
+#HeaderTitle {color:white;margin-left: 40px; font-family:arial;font-size:24px;font-weight:bold; text-align:left;}
+#HeaderSubTitle {color:white;margin-left: 40px; font-family:arial;font-size:14px;font-weight:bold; text-align:left;}
+#HeaderSubSubTitle {color:white;margin-left: 40px; font-family:arial;font-size:16px;font-weight:bold; text-align:left;}
+
+#SessionTitle {color:#666666;font-family:arial;font-size:24px;font-weight:bold; text-align:left;}
+#SessionSpeaker {color:#666666;font-family:arial;font-size:18px;font-weight:bold}
+#SessionText {color:#666666;font-family:arial;font-size:18px;}
+#SessionTime {color:#666666;font-family:arial;font-size:12px;font-weight:bold}
+#DayTime {color:white;font-family:arial;font-size:20px;font-weight:bold}
+#SessionTimeHeading {color:#666666;font-family:arial;font-size:14px;}
+#SessionLinkDetails {color:#666666;font-family:arial;font-size:14px;}
+#section-heading {color:#848484;font-family:arial;font-size:18px}
+#tab-it { display:inline-block; margin-left: 40px; }
+
+table.wrapper-layer {
+  width: 768px;
+  height: 1100px;
+  border-width: 0px;
+  background-color: white;
+}
+
+table.header-layer {
+  width: 100%;
+  border-width: 0px;
+  background-color: red;
+}
+
+table.map_level1 {
+	width: 95%;
+	height: 90%;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	background-color: white;
+}
+
+table.level2 {
+ 	width: 100%;
+	border-width: 0px;
+	background-color: #FFFFFF;
+}
+
+table.sessions {
+ 	width: 100%;
+	border-width: 0px;
+	background-color: #FFFFFF;
+}
+
+table.glc_sessions {
+ 	width: 100%;
+	border-width: 10px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	background-color: #FFFFFF;
+}
+td.glc {background-color:#424242; width:100%;}
+
+table.level_border1 {
+	width: 100%;
+	border-width: 10px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	background-color: #FFFFFF;
+}
+td.SMImage {width:55px; vertical-align:top;}
+
+td.DayTime{
+    width: 100%;
+	border-width: 2px;
+	border-style: solid;
+	border-color: Gray;
+	background-color: Gray;
+}
+
+td.Analytics{
+    width: 30px;
+ 	border-width: 2px;
+	border-style: solid;
+	border-color: Green;
+	background-color: Green;
+}
+td.DW{
+    width: 30px;
+ 	border-width: 2px;
+	border-style: solid;
+	border-color: Red;
+	background-color: Red;
+}
+
+td.UD{
+    width: 30px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: Purple;
+	background-color: Purple;
+}
+
+td.BD{
+    width: 30px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: Yellow;
+	background-color: Yellow;
+}
+
+
+
+img.article_line {width: 100%; height: 3px;}
+img.article_Timeline {width: 100%; height: 5px;}
+
+
+
+</style>
