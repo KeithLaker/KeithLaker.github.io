@@ -1,0 +1,154 @@
+@media 
+only screen
+ and (min-width: 720px) and (max-width: 989px) {
+
+  .container, .container_header, .container_intro, .container_feature, .container_feature_flow, .container_collateral, .container_gl, .container_blog, .container_links,  .container_sm, .container_footer {
+    width: 730px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+.container_header {
+	height:340px;
+	width:730px;
+	}
+
+  header_icon {
+    float: left;
+    width: 90%;
+    order: 1;
+  }
+  header_section {
+    float: left;
+    width: 90%;
+    order: 2;
+  }
+  banner_section {
+    float: left;
+    width: 90%;
+	margin-left: 10px;
+	margin-right: 10px;
+  }
+  internal_banner {
+    float: left;
+    width: 90%;
+  }
+  intro_section_header {
+    float: left;
+    width: 90%;
+   }
+  intro_section_text {
+    float: left;
+    width: 90%;
+   }
+ feature_icon, livesql_icon {
+    float: left;
+    width: 90%;
+	margin-top: 20px;
+   }
+ feature_text, archive_text {
+    float: left;
+    width: 90%;
+	margin-bottom:10px;
+   }
+
+  collateral_box {
+    float: left;
+    width: 95%;
+	margin-bottom:20px;
+	margin-top:-2px;
+	margin-left:10px;
+	margin-right:10px;
+   }
+
+ collateral_banner {
+    float: left;
+    width: 100%;
+	margin-bottom:5px;
+	margin-top:5px;
+   }
+
+ collateral_text {
+    float: left;
+    width: 95%;
+	margin-left:10px;
+	margin-right:0px;
+	margin-bottom:2px;
+	margin-top:5px;
+   }
+
+  livesql_text {
+    float: left;
+    width: 70%;
+	margin-bottom:10px;
+	margin-top:10px;
+   }
+ 
+ blog_header_icon, archive_header_icon {
+    float: left;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom:20px
+   }
+
+  gl_header_icon {
+    float: left;
+    width: 90%;
+    order: 1;
+  }
+
+  gl_header {
+    float: left;
+    width: 90%;
+    order: 2;
+	margin-top:0px;
+	margin-bottom:50px;	
+  }
+
+ blog_header {
+    float: left;
+    width: 90%;
+   }
+ blog_article {
+    float: left;
+    width: 30%;
+	height:150px;
+   }
+ archive_header {
+    float: left;
+    width: 90%;
+    margin-bottom:10px
+   }
+ archive_text {
+    float: left;
+    width: 90%;
+   }
+ ql_article {
+    float: left;
+    width: 25%;
+	height:150px;
+   } 
+
+footer_email, footer_hardware, my_signature {
+    float: left;
+    width: 100%;
+   }
+sm_header {
+    float: left;
+    width: 90%;
+    margin-bottom:20px
+   }
+ sm_link {
+    float: left;
+    width: 30%;
+   } 
+
+feature_text, livesql_text, gl_text, archive_text {
+	margin-left:30px !important;
+	margin-right:30px !important;
+	}
+
+
+}
+
