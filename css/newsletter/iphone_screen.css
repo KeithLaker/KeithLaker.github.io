@@ -1,6 +1,4 @@
-@media 
-only screen
- and (min-width: 420px) and (max-width: 719px) {
+@media all and (max-width: 419px) {
   .container, .container_header, .container_intro, .container_feature, .container_feature_flow,  .container_collateral, .container_gl, .container_blog, .container_links,  .container_sm, .container_footer {
      max-width: 420px;
      display: grid;
@@ -16,7 +14,7 @@ only screen
 	
 	
 .container_header {
-	height:340px;
+	height:480px;
 	background-repeat: no-repeat;
 	background-size: cover; 
 	}
@@ -41,7 +39,6 @@ only screen
 	margin-left: 10px;
 	margin-right: 10px;
    }
-
   internal_banner{
     float: left;
     width: 90%;
@@ -143,7 +140,10 @@ footer_email, footer_hardware, my_signature {
 
 feature_text, livesql_text, gl_text, archive_text {
 	text-align:left !important;
-	margin-left:20px !important;
+	margin-left:10px !important;
 	}
 
+
 }
+
+	
