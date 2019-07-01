@@ -1,6 +1,6 @@
 @media print {
  .container, .container_header, .container_intro, .container_feature, .container_feature_flow,  .container_collateral, .container_gl, .container_blog, .container_links,  .container_sm, .container_footer {
-     max-width: 420px;
+     max-width: 720px;
      display: grid;
   }
 
@@ -143,5 +143,3 @@ feature_text, livesql_text, gl_text, archive_text {
 	margin-left:10px !important;
 	}
 }
-
-	
