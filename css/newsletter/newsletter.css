@@ -426,3 +426,38 @@ color: white;
 outline: #333 solid 2px;
 }
 
+#ql_sd {
+width:50%; 
+border-top: 2px;
+border-left: 2px;
+border-right: 2px;
+border-bottom: 2px;
+border-style: solid;
+border-color: #154360;
+background-color:#154360;
+color:white;
+font-family:arial;
+font-size:10px;
+text-align:center;
+font-weight:normal;
+line-height: 16px;
+}
+
+#ql {
+width:50%; 
+border-top: 0px;
+border-left: 0px;
+border-right: 0px;
+border-bottom: 0px;
+border-style: solid;
+border-color: white;
+background-color:white;
+color:#515A5A;
+font-family:arial;
+font-size:10px;
+text-align:center;
+font-weight:bold;
+line-height: 10px;
+}
+
+
