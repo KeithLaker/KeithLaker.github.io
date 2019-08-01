@@ -1,0 +1,60 @@
+{"sessionID": "CON-1","externalID":"CON-1","title": "Bluetooth Beacon Tracking on a Budget",  "abstract": "Have you ever wanted to track the location of a physical object and trigger an action based on the proximity of that object? The problem is, how to do this without spending a small fortune?  In this session, Blaine walks through using Raspberry Pi to track a small Bluetooth LE beacon. After a short explanation of BLE beacons, he talks about configuring the Pi and adding the software.  Beacon tracking generates lots of data for analysis which needs a home, ie, a database. Using REST APIs, Blaine safely stores the data in a cloud database and demonstrates using spatial queries to find the location of the beacon.  Attendees will come away from this session with the tools to build their own beacon scanning system that won't break the bank. " ", "type": "Breakout Session",
+"status": "Accepted",
+"length": 45,
+"published": 1,
+"title_sort": ""1",""type_displayorder": 9999,
+"type_displayorder_string": "9999",
+"participants": [
+{
+"speakerId": ""Blaine","userRef": "Blaine","firstName": "Blaine","lastName": "Carter", "bio":Product Manager",  "twitter": " ","globalFirstname": "Blaine","globalLastname": "Carter","globalFullName": "Blaine  Carter",""session": [
+{
+"sessionID": ""CON-1","abbreviation: "Bluetooth Beacon Tracking on a Budget","title": "Bluetooth Beacon Tracking on a Budget",""published": "true",
+"speakerRole": "Speaker",
+"status": "Accepted",
+"times": [
+{"sessionTimeID": "16:20","sessionID": "CON-1","room": "Level 1, Hall E, Room 9","date": "2019-05-21","dayDisplayName": "Tuesday, May 21","time": "16:20","length":45, "dayName": "Tuesday","day": "21"shortMonth": "Oct","longMonth": "October","dayTimeSort": "20190916t1620", "dayTimeHour": "20190916t16","daySort": "20190916","startTime": "16:20", "endTime": "17:05"startTimeMin": 980, "endTimeMin": 1025,"startTimeFormatted": "4:20 p.m.",  "endTimeFormatted": "5:05 p.m.""
+}
+]
+}
+],"
+"published": 1,
+"fullName": "Blaine Carter",
+"es_metadata_id": "1486155275807001AI3S_15415466316590code19",
+"displayorder": 0,
+"roles": "Speaker"
+}
+],
+"times": [
+{
+"sessionTimeID": "1549646639838001yi9J",
+"sessionID": "1548522962824001O5vY",
+"room": "Level 1, Hall E, Room 9",
+"date": "2019-05-21",
+"dayDisplayName": "Tuesday, May 21",
+"time": "16:20",
+"length": 45,
+"capacity": "0",
+"waitlistLimit": "0",
+"dayName": "Tuesday",
+"day": "21",
+"shortMonth": "May",
+"longMonth": "May",
+"dayTimeSort": "20190521t1620",
+"dayTimeHour": "20190521t16",
+"daySort": "20190521",
+"startTime": "16:20",
+"endTime": "17:05",
+"startTimeMin": 980,
+"endTimeMin": 1025,
+"startTimeFormatted": "04:20 PM",
+"endTimeFormatted": "05:05 PM",
+"seatsRemaining": 0,
+"waitlistRemaining": 0,
+"dateFormatted": "Tuesday, May 21"
+}
+]
+}
+]
+}
+]
+}
