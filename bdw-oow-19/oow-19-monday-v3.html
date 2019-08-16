@@ -17,7 +17,6 @@
 		<link data-wsjs data-reqjq href="demo/assets/js/ocom-v1-base.js" rel="preload" as="script">
 
 	<script data-wsjs src="demo/assets/js/jquery-min.js" async onload="$('head link[data-reqjq][rel=preload]').each(function(){var a=document.createElement('script');a.async=false;a.src=$(this).attr('href');this.parentNode.insertBefore(a, this);});$(function(){$('script[data-reqjq][data-src]').each(function(){this.async=true;this.src=$(this).data('src');});});"></script>
-	
 		<style>
 		
  body {
@@ -78,11 +77,14 @@
 
 .footer {
   background-color: rgba(0, 151, 19, 0.7);
+	border-bottom: 20px;
+	border-style: solid;
+	border-color: #00264d;
 }
 
 
 .sidebar {
-  background-color: rgba(0, 151, 19, 0.7);
+  background-color: #00264d;
 }
 
 .content {
@@ -166,6 +168,23 @@ background-color: #254d74 !important; border-color:white !important; border-widt
 background-color: #254d74 !important;
 }
  
+
+.my_signature {
+	color:white;
+	font-family:arial;
+	font-size:10px;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.cw82time-ampm {
+ margin-right:5px !important;
+}
+
+.cw82time-min {
+  margin-right:5px !important;
+}
+
     @media only screen and (min-width: 600px)   {
         .wrapper {
             grid-gap: 1px;
@@ -177,8 +196,6 @@ background-color: #254d74 !important;
             max-width: 100%;
         }
     }
-
-
 		</style>
 	</head>
 	<body>
@@ -191,9 +208,9 @@ background-color: #254d74 !important;
 			<div class="box sidebar">
 				<div class="cw82w3">
 					<h4>
-						<span class="cw82time-hr">03</span>
+						<span class="cw82time-hr" >03</span>
 						<span class="cw82time-delim">:</span>
-						<span class="cw82time-min">50</span>
+						<span class="cw82time-min" style="margin-right:5px">50</span>
 						<span class="cw82time-ampm">PM</span>
 					</h4>
 				</div>
@@ -324,5 +341,18 @@ background-color: #254d74 !important;
 				</div>
 			</div>
 		</div>
+		<div class="wrapper">
+			<div class="box footer">
+				<div class="my_signature">
+					<strong>Oracle Autonomous Database Product Management Team</strong>
+					<br><br>
+					Designed by: Keith Laker<br>
+					Senior Principal Product Manager | Analytic SQL and Autonomous Database<br>
+					Oracle Database Product Management<br>
+					Scotscroft, Towers Business Park, Wilmslow Road, Didsbury. M20 2RY.
+				</div>
+			</div>
+		</div>
+		<br><br>
 	</body>
 </html>
