@@ -1,0 +1,315 @@
+<html>
+	<head>
+		<base href="https://keithlaker.github.io/bdw-oow-19/agenda-widget/">
+	<script>
+		!function(){
+			var d=document.documentElement;d.className=d.className.replace(/no-js/,'js');
+			if(document.location.href.indexOf('betamode=') > -1) document.write('<script src="assets/js/ocom-betamode.js"><\/script>');
+		}();
+	</script>
+		<link data-wscss href="demo/assets/css/ocom-v1-base.css" rel="stylesheet">
+		<link data-wscss href="demo/assets/css/ocom-v1-styles.css" rel="preload" as="style" onload="this.rel='stylesheet'" onerror="this.rel='stylesheet'">
+		<noscript>
+			<link href="demo/assets/css/ocom-v1-styles.css" rel="stylesheet">
+		</noscript>
+		<link data-wsjs data-reqjq href="demo/assets/js/ocom-v1-base.js" rel="preload" as="script">
+		<link data-wsjs data-reqjq href="demo/assets/js/ocom-v1-lib.js" rel="preload" as="script">
+
+	<script data-wsjs src="demo/assets/js/jquery-min.js" async onload="$('head link[data-reqjq][rel=preload]').each(function(){var a=document.createElement('script');a.async=false;a.src=$(this).attr('href');this.parentNode.insertBefore(a, this);});$(function(){$('script[data-reqjq][data-src]').each(function(){this.async=true;this.src=$(this).data('src');});});"></script>
+	
+
+	<!-- FOR WEBSTANDARDS ONLY -->
+		<link href="www.oracle.com/demo/ws-assets/ws-comp.css" media="print, screen" rel="Stylesheet" type="text/css" />
+		<style>
+		
+ body {
+  margin: 20px;
+  background-color:#00264d;
+}
+
+.sidebar {
+        grid-area: sidebar;
+    }
+
+    .content {
+        grid-area: content;
+    }
+
+    .header {
+        grid-area: header;
+     }
+
+    .footer {
+        grid-area: footer;
+    }
+
+    .wrapper {
+        background-color: #00264d;
+        color: #444;
+    }
+
+  .wrapper {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-areas:
+     "header"
+     "sidebar"
+     "content"
+     "footer"
+  }
+
+ 
+    @media only screen and (min-width: 600px)   {
+        .wrapper {
+            grid-gap: 1px;
+            grid-template-columns: 120px auto 10px;
+            grid-template-areas:
+            "header  header "
+            "sidebar content"
+            "footer  footer ";
+            max-width: 100%;
+        }
+    }
+
+
+
+.box {
+  background-color: #00264d;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 150%; 
+}
+
+.header {
+  background-color: #00264d;
+  color: white !important;
+  font-family:Arial, Helvetica, sans-serif !important;
+  text-align:center !important;
+  color:white !important;
+  font-size:1.8rem !important;
+}
+
+.footer {
+  background-color: #00264d;
+}
+
+
+.content {
+       background-color: #254d74;
+
+}
+
+.session_hour {
+ font-size:1.33em; 
+ font-weight: bold;
+ text-align:right;
+ font-family:Arial, Helvetica, sans-serif;
+}
+.session_divider {
+ font-size:1.1em; 
+ font-weight: bold;
+ text-align:right; 
+ font-family:Arial, Helvetica, sans-serif;
+}
+.session_mins {
+ font-size:0.8em; 
+ font-weight: bold;
+ text-align:right; 
+ font-family:Arial, Helvetica, sans-serif;
+}
+.session_pm {
+ font-size:0.8em; 
+ font-weight: bold; 
+ text-align: right; 
+ font-family:Arial, Helvetica, sans-serif;
+}
+.session_location {
+  color: #4d9eb1;
+  font-size:0.6em;
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+  line-height: 2.7em;
+}
+
+.session_title {
+  color: white;
+  font-size:0.8em;
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+  line-height: 1.2em;
+}
+
+.session_speaker {
+  color: #4d9eb1;
+  font-size:0.6em;
+  text-align: center;
+ font-family:Arial, Helvetica, sans-serif;
+  line-height: 1.7em;
+}
+
+.session_time {
+  color: white;
+  font-size:0.6em;
+  text-align: center;
+ font-family:Arial, Helvetica, sans-serif;
+  line-height: 2.7em;
+}
+
+.session_breaker {
+	border-bottom: 1px;
+	border-style: solid;
+	border-color: #254d74;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left: 80px;
+	margin-right: 80px;	
+	
+}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="box header">
+				<header class="cwidth center-text">
+					<h2 class="txtlight">Agenda</h2>
+				</header>
+			</div>
+			<div class="box sidebar">
+				<div class="cw82w3">
+					<h4>
+						<span class="cw82time-hr">03</span>
+						<span class="cw82time-delim">:</span>
+						<span class="cw82time-min">50</span>
+						<span class="cw82time-ampm">PM</span>
+					</h4>
+				</div>
+			</div>
+			<div class="box content">
+				<div class="cw82w4">
+					<div class="cw82session">
+						<div class="cw82session-w1">
+							<a class="cw82session-open icn-plus" href="#1548522962824001O5vY" rel="lightbox"></a>
+							<div class="session_location">
+								Level 1, Hall E, Room 9
+							</div>
+							<div class="session_title">
+								Bluetooth Beacon Tracking on a Budget
+							</div>
+							<div class="session_speaker">
+								Blaine Carter
+							</div>
+							<div class="session_time">
+								04:20 PM - 05:05 PM
+							</div>
+<!-- New Session going here -->
+							<div id="1548522962824001O5vY" class="w11content">
+								<div class="cw82session-w11">
+									<h5 class="cw82session-title">Bluetooth Beacon Tracking on a Budget</h5>
+									<div class="cw82session-location">
+										<div class="cw82session-time">
+											<span class="cw82session-start">04:20 PM</span>
+											-
+											<span class="cw82session-end">05:05 PM</span>
+										</div>
+										<div class="cw82session-loc">Level 1, Hall E, Room 9</div>
+									</div>
+									<div class="cw82session-abstract">Have you ever wanted to track the location of a physical object and trigger an action based on the proximity of that object? The problem is, how to do this without spending a small fortune?  In this session, Blaine walks through using Raspberry Pi to track a small Bluetooth LE beacon. After a short explanation of BLE beacons, he talks about configuring the Pi and adding the software.  Beacon tracking generates lots of data for analysis which needs a home, ie, a database. Using REST APIs, Blaine safely stores the data in a cloud database and demonstrates using spatial queries to find the location of the beacon.  Attendees will come away from this session with the tools to build their own beacon scanning system that won't break the bank.
+									</div>
+									<hr>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+<!-- New Session ended here -->			
+			
+<!-- Session divided -->
+				<div class="session_breaker">
+				</div>
+<!-- Session divided -->
+				<div class="cw82w4">
+					<div class="cw82session">
+						<div class="cw82session-w1">
+							<a class="cw82session-open icn-plus" href="#1548522962824001O5vY" rel="lightbox"></a>
+							<div class="session_location">
+								Level 1, Hall E, Room 9
+							</div>
+							<div class="session_title">
+								Bluetooth Beacon Tracking on a Budget
+							</div>
+							<div class="session_speaker">
+								Blaine Carter
+							</div>
+							<div class="session_time">
+								04:20 PM - 05:05 PM
+							</div>
+<!-- New Session going here -->
+							<div id="1548522962824001O5vY" class="w11content">
+								<div class="cw82session-w11">
+									<h5 class="cw82session-title">Bluetooth Beacon Tracking on a Budget</h5>
+									<div class="cw82session-location">
+										<div class="cw82session-time">
+											<span class="cw82session-start">04:20 PM</span>
+											-
+											<span class="cw82session-end">05:05 PM</span>
+										</div>
+										<div class="cw82session-loc">Level 1, Hall E, Room 9</div>
+									</div>
+									<div class="cw82session-abstract">Have you ever wanted to track the location of a physical object and trigger an action based on the proximity of that object? The problem is, how to do this without spending a small fortune?  In this session, Blaine walks through using Raspberry Pi to track a small Bluetooth LE beacon. After a short explanation of BLE beacons, he talks about configuring the Pi and adding the software.  Beacon tracking generates lots of data for analysis which needs a home, ie, a database. Using REST APIs, Blaine safely stores the data in a cloud database and demonstrates using spatial queries to find the location of the beacon.  Attendees will come away from this session with the tools to build their own beacon scanning system that won't break the bank.
+									</div>
+									<hr>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+<!-- New Session ended here -->
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="box sidebar">
+				<div class="cw82w3">
+					<h4>
+						<span class="cw82time-hr">04</span>
+						<span class="cw82time-delim">:</span>
+						<span class="cw82time-min">50</span>
+						<span class="cw82time-ampm">PM</span>
+					</h4>
+				</div>
+			</div>
+			<div class="box content">
+				<div class="session_location">
+					Level 1, Hall E, Room 9
+				</div>
+				<div class="session_title">
+					Bluetooth Beacon Tracking on a Budget
+				</div>
+				<div class="session_speaker">
+					Blaine Carter
+				</div>
+				<div class="session_time">
+					04:20 PM - 05:05 PM
+				</div>
+				<div class="session_breaker">
+				</div>
+				<div class="session_location">
+					Level 1, Hall E, Room 9
+				</div>
+				<div class="session_title">
+					Bluetooth Beacon Tracking on a Budget
+				</div>
+				<div class="session_speaker">
+					Blaine Carter
+				</div>
+				<div class="session_time">
+					04:20 PM - 05:05 PM
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
