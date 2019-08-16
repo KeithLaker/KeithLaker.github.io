@@ -1,6 +1,8 @@
 <html>
 	<head>
 		<base href="https://keithlaker.github.io/bdw-oow-19/agenda-widget/">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
 	<script>
 		!function(){
 			var d=document.documentElement;d.className=d.className.replace(/no-js/,'js');
@@ -13,13 +15,9 @@
 			<link href="demo/assets/css/ocom-v1-styles.css" rel="stylesheet">
 		</noscript>
 		<link data-wsjs data-reqjq href="demo/assets/js/ocom-v1-base.js" rel="preload" as="script">
-		<link data-wsjs data-reqjq href="demo/assets/js/ocom-v1-lib.js" rel="preload" as="script">
 
 	<script data-wsjs src="demo/assets/js/jquery-min.js" async onload="$('head link[data-reqjq][rel=preload]').each(function(){var a=document.createElement('script');a.async=false;a.src=$(this).attr('href');this.parentNode.insertBefore(a, this);});$(function(){$('script[data-reqjq][data-src]').each(function(){this.async=true;this.src=$(this).data('src');});});"></script>
 	
-
-	<!-- FOR WEBSTANDARDS ONLY -->
-		<link href="www.oracle.com/demo/ws-assets/ws-comp.css" media="print, screen" rel="Stylesheet" type="text/css" />
 		<style>
 		
  body {
@@ -57,20 +55,6 @@
      "content"
      "footer"
   }
-
- 
-    @media only screen and (min-width: 600px)   {
-        .wrapper {
-            grid-gap: 1px;
-            grid-template-columns: 120px auto 10px;
-            grid-template-areas:
-            "header  header "
-            "sidebar content"
-            "footer  footer ";
-            max-width: 100%;
-        }
-    }
-
 
 
 .box {
@@ -166,6 +150,22 @@
 	margin-right: 80px;	
 	
 }
+ 
+    @media only screen and (min-width: 800px)   {
+        .wrapper {
+            grid-gap: 1px;
+            grid-template-columns: 120px auto 10px;
+            grid-template-areas:
+            "header  header "
+            "sidebar content"
+            "footer  footer ";
+            max-width: 100%;
+        }
+    }
+
+
+
+
 		</style>
 	</head>
 	<body>
