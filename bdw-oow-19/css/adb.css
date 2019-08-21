@@ -264,7 +264,7 @@ color: white;
   }
 
 .container_header {
-	height:400px;
+	height:250px;
 	width:100%px;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -353,7 +353,7 @@ collateral_monday, collateral_tuesday,collateral_wednesday,collateral_thursday {
   }
 
 .container_header {
-	height:300px;
+	height:250px;
 	width:100%px;
 	background-repeat: no-repeat;
 	background-size: cover;
