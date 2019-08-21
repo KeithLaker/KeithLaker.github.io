@@ -298,7 +298,7 @@ collateral_monday, collateral_tuesday,collateral_wednesday,collateral_thursday {
 /* Desktop Styles */
 @media
 only screen
- and (min-width: 415px) and (max-width: 899px) {
+ and (min-width: 451px) and (max-width: 899px) {
   html {
     font-size: 1.3em;
   }
@@ -341,7 +341,7 @@ collateral_monday, collateral_tuesday,collateral_wednesday,collateral_thursday {
 
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 450px) {
   html {
     font-size: 1.0em;
   }
@@ -353,7 +353,7 @@ collateral_monday, collateral_tuesday,collateral_wednesday,collateral_thursday {
   }
 
 .container_header {
-	height:275px;
+	height:300px;
 	width:100%px;
 	background-repeat: no-repeat;
 	background-size: cover;
