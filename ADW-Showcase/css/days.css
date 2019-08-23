@@ -1,0 +1,196 @@
+ body {
+  margin: 20px;
+  background-color: white;
+}
+
+
+  .floating-menu {
+    font-family: sans-serif;
+    width: 100px;
+    height: 100px;
+    z-index: 100;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 50%;
+    vertical-align: middle;
+ }
+
+  .floating-menu a, 
+  .floating-menu h3 {
+    font-size: 0.9em;
+    display: block;
+    margin: 0 0.5em;
+    color: white;
+  }
+
+.sidebar {
+        grid-area: sidebar;
+    }
+
+    .content {
+        grid-area: content;
+    }
+
+    .header {
+        grid-area: header;
+     }
+
+    .footer {
+        grid-area: footer;
+    }
+
+    .wrapper {
+        background-color: #00264d;
+        color: #444;
+    }
+
+  .wrapper {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-areas:
+     "header"
+     "sidebar"
+     "content"
+     "footer"
+  }
+
+
+.box {
+  background-color: #00264d;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 150%; 
+  margin-left:10px;
+  margin-top:10px;
+}
+
+.header {
+  color: white !important;
+  font-family:Arial, Helvetica, sans-serif !important;
+  text-align:center !important;
+  color:white !important;
+  font-size:1.8rem !important;
+}
+
+.footer {
+	border-bottom: 20px;
+	border-style: solid;
+	border-color: #00264d;
+}
+
+
+.sidebar {
+  background-color: #00264d;
+}
+
+.content {
+       background-color: #254d74;
+
+}
+
+.session_hour {
+ font-size:1.33em !important; 
+ font-weight: bold !important;
+ text-align:right !important;
+ font-family:Arial, Helvetica, sans-serif !important;
+}
+.session_divider {
+ font-size:1.1em !important; 
+ font-weight: bold !important;
+ text-align:right !important; 
+ font-family:Arial, Helvetica, sans-serif !important;
+}
+.session_mins {
+ font-size:0.8em !important; 
+ font-weight: bold !important;
+ text-align:right !important; 
+ font-family:Arial, Helvetica, sans-serif !important; 
+}
+.session_pm {
+ font-size:0.8em !important; 
+ font-weight: bold !important; 
+ text-align: right !important; 
+ font-family:Arial, Helvetica, sans-serif !important;
+}
+.session_location {
+  color: #4d9eb1 !important;
+  font-size:0.6em !important;
+  text-align: center !important;
+  font-family:Arial, Helvetica, sans-serif !important;
+  line-height: 2.7em !important;
+}
+
+.session_title {
+  color: white !important;
+  font-size:0.8em !important;
+  text-align: center !important;
+  font-family:Arial, Helvetica, sans-serif !important;
+  line-height: 1.2em !important;
+  font-weight: normal !important;
+}
+
+.session_speaker {
+  color: #4d9eb1 !important;
+  font-size:0.6em;
+  text-align: center !important;
+ font-family:Arial, Helvetica, sans-serif !important;
+  line-height: 1.7em !important;
+}
+
+.session_time {
+  color: white !important ;
+  font-size:0.6em !important;
+  text-align: center !important;
+ font-family:Arial, Helvetica, sans-serif !important;
+  line-height: 2.7em !important;
+}
+
+.session_breaker {
+	border-bottom: 1px;
+	border-style: solid;
+	border-color: #254d74;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left: 80px;
+	margin-right: 80px;	
+	
+}
+
+.cw82w4 {
+background-color: #254d74 !important; border-color:white !important; border-width:2px !important; border-style: solid !important;
+}
+
+.cw82session{
+background-color: #254d74 !important;
+}
+ 
+
+.my_signature {
+	color:white;
+	font-family:arial;
+	font-size:10px;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.cw82time-ampm {
+ margin-right:5px !important;
+}
+
+.cw82time-min {
+  margin-right:5px !important;
+}
+
+    @media only screen and (min-width: 600px)   {
+        .wrapper {
+            grid-gap: 1px;
+            grid-template-columns: 120px auto 10px;
+            grid-template-areas:
+            "header  header "
+            "sidebar content"
+            "footer  footer ";
+            max-width: 100%;
+        }
+    }
