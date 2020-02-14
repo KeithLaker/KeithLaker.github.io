@@ -5,10 +5,10 @@
 
 body {
   font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif !important;
-   margin: 0 auto !important !important;
-   padding: 0 !important !important;
-   height: 100% !important !important;
-   width: 100% !important !important;
+   margin: 0 auto !important;
+   padding: 0 !important;
+   height: 100% !important;
+   width: 100% !important;
    -webkit-font-smoothing: antialiased !important;
    mso-margin-top-alt:0px !important; 
    mso-margin-bottom-alt:0px !important; 
@@ -26,8 +26,8 @@ img {
 
  table,
    td {
-       mso-table-lspace: 0pt !important !important;
-       mso-table-rspace: 0pt !important !important;
+       mso-table-lspace: 0pt !important;
+       mso-table-rspace: 0pt !important;
    }
 
 
@@ -101,8 +101,8 @@ img {
 	border-style: solid !important;
 	border-color: silver !important;
 	background-color: white !important;
-	height: 10px !important !important;
-  	background-image: linear-gradient(to right, white, #228B22, #7FFFD4, #1E90FF , white)  !important !important;
+	height: 10px !important;
+  	background-image: linear-gradient(to right, white, #228B22, #7FFFD4, #1E90FF , white)  !important;
   *zoom: 1 !important;
 }
 
@@ -223,7 +223,7 @@ header_icon {
 
 
 banner_section {
-	color: #7187a7 !important !important; 
+	color: #7187a7 !important; 
 	font-family: Helvetica, Arial, sans-serif !important; 
 	font-size: 14px !important; 
 	line-height:24px !important; 
@@ -233,7 +233,7 @@ banner_section {
 
 internal_banner {
   background: white !important;
-  color: red !important !important;
+  color: red !important;
   margin-left: 20px !important;
   margin-right: 20px !important;
   text-align: center !important;
@@ -245,7 +245,7 @@ intro_section_header {
 	margin-bottom:15px !important;
 	margin-right:10px !important;	 
 	margin-left:15px !important;
-	color:SlateGrey !important !important;
+	color:SlateGrey !important;
 	font-family: Helvetica, Arial, sans-serif !important; 
 	font-weight:bold !important;
 	font-size:16px !important;
@@ -256,7 +256,7 @@ intro_section_text {
 	margin-bottom:11px !important; 
 	margin-right:10px !important;	 
 	margin-left:15px !important;
-	color: #7187a7 !important !important; 
+	color: #7187a7 !important; 
 	font-family: Helvetica, Arial, sans-serif !important; 
 	font-size: 14px !important; 
 	line-height:24px !important; 
@@ -274,7 +274,7 @@ feature_text, livesql_text, gl_text, archive_text {
 	margin-right:10px !important;	 
 	margin-left:10px !important;
 	text-align:justify !important;	
-	color: #7187a7 !important !important; 
+	color: #7187a7 !important; 
 	font-family: Helvetica, Arial, sans-serif !important; 
 	font-size: 14px !important; 
 	line-height:24px !important; 
@@ -297,7 +297,7 @@ collateral_box {
 
 collateral_banner {
 	text-align:center !important;
-	color:SlateGrey !important !important;
+	color:SlateGrey !important;
 	font-family:Helvetica, Arial, sans-serif !important;
 	font-size:12px !important;
 	line-height: 26px !important;	
@@ -306,7 +306,7 @@ collateral_banner {
 }
 
 collateral_text {
-	color:#666666 !important !important;
+	color:#666666 !important;
 	font-family:arial !important;
 	font-size:10px !important; 
 	text-align:left !important;
@@ -341,7 +341,7 @@ a.btt {
   font-family:Verdana !important;
   font-size:12px !important; 
   font-weight:bold !important;
-  color:black !important !important;
+  color:black !important;
   text-decoration: none !important;
   color: white !important;
   background-color: white !important;
@@ -357,7 +357,7 @@ blog_header_icon, gl_header_icon, archive_header_icon {
 }
 
 blog_header, sm_header {
-	color:SlateGrey !important !important;
+	color:SlateGrey !important;
 	margin-bottom:15px !important; 
 	margin-left:25px !important;
 	font-family:arial !important;
@@ -367,7 +367,7 @@ blog_header, sm_header {
 }
 
 blog_article {
-	color:#666666 !important !important;
+	color:#666666 !important;
 	font-family:arial !important;
 	font-size:10px !important; 
 	text-align:center !important;
@@ -386,7 +386,7 @@ blog_article {
 	}
 	
 ql_article {
-	color:#666666 !important !important;
+	color:#666666 !important;
 	font-family:arial !important;
 	font-size:10px !important; 
 	text-align:center !important;
@@ -409,7 +409,7 @@ ql_article {
 	
 
 archive_header, gl_header {
-	color:SlateGrey !important !important;
+	color:SlateGrey !important;
 	margin-bottom:15px !important; 
 	margin-left:25px !important;
 	font-family:arial !important;
@@ -424,7 +424,7 @@ picture {
 	font-size:12px !important;
 	font-weight:bold !important;
 	align: center !important;
-	color:grey !important !important;
+	color:grey !important;
 }
 
 
@@ -433,11 +433,11 @@ picture_text {
 	font-size:12px !important;
 	font-weight:bold !important;
 	text-align: right !important;
-	color:grey !important !important;
+	color:grey !important;
 }
 
 footer_email {
-	color:white !important !important;
+	color:white !important;
 	font-family:arial !important;
 	font-size:10px !important;
  	text-align:center !important;
@@ -450,7 +450,7 @@ footer_email {
 }
 
 footer_hardware {
-	color: white !important !important;
+	color: white !important;
 	font-family:arial !important;
 	font-size:12px !important;
 	text-align:center !important;
@@ -463,7 +463,7 @@ footer_hardware {
 }
 
 my_signature {
-	color:white !important !important;
+	color:white !important;
 	font-family:Helvetica, Arial, sans-serif !important;
 	font-size:10px !important;
     text-align:center !important;
@@ -613,15 +613,15 @@ h1, h4 {
 }
 
 h2, h3 {
-	color:grey !important !important;  
-	font-family:Helvetica !important !important;
+	color:grey !important;  
+	font-family:Helvetica !important;
 	font-weight: bold !important; 
-    color: #1C1C1C !important !important; 
+    color: #1C1C1C !important; 
     display: block 	
 }
 
 .basic_text {
-    color: #1C1C1C !important !important; 
+    color: #1C1C1C !important; 
 	font-family: Helvetica, Arial, sans-serif !important; 
 	font-size: 14px !important; 
 	line-height:24px !important; 
@@ -630,7 +630,7 @@ h2, h3 {
 }
 
 .heading_text {
-	color: #1C1C1C !important !important;
+	color: #1C1C1C !important;
 	font-family: Helvetica, Arial, sans-serif !important; 
 	font-size: 14px !important; 
 	line-height:24px !important; 
@@ -640,11 +640,11 @@ h2, h3 {
 
 .feature_header {
   font-weight:bold !important; 
-  color:#1C1C1C !important !important;
+  color:#1C1C1C !important;
 }
 
 li {
-    color: #1C1C1C !important !important; 
+    color: #1C1C1C !important; 
 	font-family: Helvetica, Arial, sans-serif !important; 
 	font-size: 14px !important; 
 }
@@ -652,13 +652,13 @@ li {
 .serverless {
    font-size:8pt !important; 
    font-weight:bold !important; 
-   color:red !important !important;
+   color:red !important;
 }
 
 .footer {
     background-color:#454545 !important;
-	color: white !important !important;  
-	font-family:Helvetica !important !important;
+	color: white !important;  
+	font-family:Helvetica !important;
 	font-weight: bold !important; 
     display: block !important;
 	text-align:center !important;
