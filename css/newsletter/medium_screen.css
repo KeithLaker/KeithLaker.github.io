@@ -156,8 +156,8 @@ sm_header {
    } 
 
 feature_text, livesql_text, gl_text, archive_text {
-	margin-left:30px !important !important;
-	margin-right:30px !important !important;
+	margin-left:30px !important;
+	margin-right:30px !important;
 	}
 
 
