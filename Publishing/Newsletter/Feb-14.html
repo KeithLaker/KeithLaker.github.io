@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Content | Oracle The Data Warehouse Insider Blog</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="alternate" type="application/rss+xml" title="Content | Oracle The Data Warehouse Insider Blog" href="https://blogs.oracle.com/datawarehousing/keith-laker/rss">
+    <meta name="country" content="US">
+ 
+
+
+<meta name="contenttype_id" content="WM147046"> 
+
+ 
+     
+                    <meta name="description" content="
+
+Newsletter For
+Autonomous Database on Shared Exadata Infrastructure
+February 13, 2020
+
+ 
+&lt;a name=&quot;btt&quot;/&gt;
+
+
+ORACLE CONFIDENTIAL | INTERNAL USE ONLY
+Overview of latest
+release of...">
+            
+     
+ 
+<meta property="fb:app_id" content="209650819625026">
+<meta name="host_name" content="https://blogs.oracle.com">
+<meta name="title" content="Content | Oracle The Data Warehouse Insider Blog">
+<meta name="page_type" content="item">
+<meta name="long_page_type" content="Item Page">
+<meta name="c_blog_type" content="norm">
+<meta name="blog_name" content="Keith Laker">
+ 
+<meta name="Additional_Author_Name" content=""> 
+<meta name="Asset Type" content="Array"> 
+<meta name="Channel" content=""> 
+<meta name="Country" content=""> 
+<meta name="CTA_Placement" content=""> 
+<meta name="Featured_Image_Setting" content=""> 
+<meta name="Hide_Post_From_Homepage" content="0"> 
+<meta name="Industries" content=""> 
+<meta name="Language" content=""> 
+<meta name="Large_Image" content=""> 
+<meta name="Placement" content="Array"> 
+<meta name="Product_Area" content="Array"> 
+<meta name="Region" content=""> 
+<meta name="Syndication_Category" content=""> 
+<meta name="Syndication_Publish_Date" content=""> 
+<meta name="Syndication_URL" content=""> 
+<meta name="Turnoff_Comments" content="0"> 
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+<meta name="keywords" content="">
+<meta name="author" content="Keith Laker">
+<meta name="publish_date" content="">
+<meta property="og:type" content="article">
+ 
+<meta property="og:title" content="Content">
+<meta property="og:image" content="https://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/3449984.png">
+<meta property="og:url" content="https://blogs.oracle.com/datawarehousing/content-v4">
+<meta name="category" content="">
+
+
+  
+
+
+	    <script type="text/javascript" src="https://cdn.app.compendium.com/uploads/user/a7c086f7-9adb-4d2c-90fa-e26177af8317/81991be8-4cc9-4542-8836-2388e09f8978/File/4d9c3ed6ade3f8c470bbcc0bd34cbffe/jquery.js"></script>
+	    <script type="text/javascript" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/1e509d21-7cff-49fe-a83c-ecf713a83ce0/File/8db64b12f7ae0d415add3cd127ad36f6/jquery_cookie_min.js"></script>
+
+                <link href="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/35dfc590-c854-42f6-8af3-ae9580d06c69/File/7e0d4e2b8b5b6a6938fcad452e078914/blogs_style_redwood.css" media="print, screen" rel="Stylesheet" type="text/css" />
+        <link rel="icon" href="https://cdn.app.compendium.com/uploads/user/a7c086f7-9adb-4d2c-90fa-e26177af8317/81991be8-4cc9-4542-8836-2388e09f8978/File/c9856f0a4dd7ad0c215a68052a04d9e8/favicon.ico" type="image/x-icon" />
+        <style>
+            li {line-height:2em;}
+        </style> 
+
+<style>
+    .cw36w3-featureimg { 
+    background-size: 102% auto; } 
+</style>
+<style>
+@media only screen and (min-width:1170px){.u18-blogtitlev1-mobile{display:none}.u18-blogtitlev1-desktop{display:block}}
+</style>
+
+    <style>
+        @media only screen and (max-width: 640px){table td{border-bottom:0px !important;}}
+    </style>
+
+    <style>
+    .slide-menu ul{padding-bottom: 10px;}
+    cw36v9-authordesc{margin-bottom: 0px;}
+    .slide-menu a.back::before {content: "❮" " " " | "; }
+    </style>
+
+       
+<link href="https://cdn.app.compendium.com/uploads/user/a7c086f7-9adb-4d2c-90fa-e26177af8317/81991be8-4cc9-4542-8836-2388e09f8978/File/d7dc9c101832bf0d23d238c9f18a817b/oracle_styles.css" media="print, screen" rel="Stylesheet" type="text/css" />
+
+<script src="https://cdn.app.compendium.com/uploads/user/a7c086f7-9adb-4d2c-90fa-e26177af8317/4790e630-263f-4339-828b-30ac369e19ac/File/e3fb9077e882b5ceb4b9021794ccf98f/oracle_script_min.js"></script>
+ 
+
+ <!-- Highlight and Share -->
+ <link href="https://cdn.app.compendium.com/uploads/user/1b375ffd-8b12-464f-bbde-c389f203067e/c9ff76d2-8140-4dfe-8aab-ddf80cd04f7b/File/71fc595418f2235863a164ee9d5781ed/selection_sharer.css" media="print, screen" rel="Stylesheet" type="text/css" /> 
+<script src="https://cdn.app.compendium.com/uploads/user/a7c086f7-9adb-4d2c-90fa-e26177af8317/81991be8-4cc9-4542-8836-2388e09f8978/File/9d9fd001dc64551d2b50c96e87f5a3f9/selection_sharer.js" type="text/javascript"></script>
+ <script type="text/javascript">
+ jQuery(document).ready(function($){
+   $( "p" ).selectionSharer(); 
+   $( "h2" ).selectionSharer(); 
+   $( "h1" ).selectionSharer(); 
+ });
+ </script>
+  <!-- Highlight and Share Ends-->
+
+    <script type="text/javascript" src="https://cdn.app.compendium.com/uploads/user/a7c086f7-9adb-4d2c-90fa-e26177af8317/4790e630-263f-4339-828b-30ac369e19ac/File/29bb86f4122ae804a564031f61bd5197/blogs_script.js"></script>
+    <script type="text/javascript" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/35dfc590-c854-42f6-8af3-ae9580d06c69/File/66547d2947405889810d0262e8d2f837/adserver.js"></script>
+    <!-- Minified Backbutton Js -->
+   <script type="text/javascript" src="https://cdn.app.compendium.com/uploads/user/a7c086f7-9adb-4d2c-90fa-e26177af8317/4790e630-263f-4339-828b-30ac369e19ac/File/fc2bb981923330942ed43db1b6c78ab4/backbutton.js"> </script> 
+   <!-- Minified Backbutton js ends -->
+    <style>@media only screen and (min-width:767px){@-moz-document url-prefix() {.u18-logo-link{top:-3px;}}}</style>
+    
+    <!-- Schema Markup -->
+       <!-- Schema Markup -->
+   
+   <script>
+   (function(){
+      var data = {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.oracle.com/datawarehousing/content-v4"},
+        "headline": "Content",
+        "image": {"@type":"ImageObject","url":"https://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/3449984.png"},
+        "datePublished": "",
+        "dateModified": "",
+        "author": {"@type": "Person","name": "Keith Laker"},
+        "publisher": {"@type": "Organization","name": "Data Warehouse Insider Blog",
+        "logo": {
+        "@type": "ImageObject",
+        "url": "https://cdn.app.compendium.com/uploads/user/a7c086f7-9adb-4d2c-90fa-e26177af8317/81991be8-4cc9-4542-8836-2388e09f8978/File/27e32ba71e73da072a1cf292b0144e79/badge_color_print.gif",
+        "width": 161,
+        "height": 60
+        }}
+        }
+         var script = document.createElement('script');
+        script.type = "application/ld+json";
+        if( !(data.image.url).startsWith("http") )
+          {data.image.url = "https://cdn.app.compendium.com/uploads/user/a7c086f7-9adb-4d2c-90fa-e26177af8317/81991be8-4cc9-4542-8836-2388e09f8978/File/27e32ba71e73da072a1cf292b0144e79/badge_color_print.gif";}
+        if( data.publisher.name == "NONE PROVIDED" )
+           {data.publisher.name = "Oracle Blogs"; }
+        
+        script.innerHTML = JSON.stringify(data);
+        document.getElementsByTagName('head')[0].appendChild(script);
+        })(document);
+   </script>
+               <style>
+        .u10v1x2 .u10w4.cwidth {margin:1em auto; height: auto; max-width: 1100px !important;}
+        </style>
+    <!-- Production DTM embed code - Header -->
+    <script src="//assets.adobedtm.com/6f37a0dc9cdbe818dc4979828b58b88e3f060ea4/satelliteLib-e598c5b61e39a10b402e048e87dd27b0f1cd2d4c.js"></script>
+    <!-- END of DTM embed code -->
+    <script>
+    $(document).ready(function() {
+    if(window.matchMedia("(min-width: 980px)").matches) {
+    if ($('.cb07social').children().length === 0){
+    $(".cb07v1 .cb07w1 .cb07w2").css("padding-top", ".3em");
+    }
+    }
+    if (window.matchMedia("(max-width: 640px)").matches) {
+        var nodelist = document.getElementsByTagName("table");
+        var i;
+        for (i = 0; i < nodelist.length; i++) {
+            nodelist[i].setAttribute("border", "1")
+        }
+    }
+});
+(function(window, document, undefined) {
+    'use strict';
+    var mediaQuery = window.matchMedia('(max-width: 640px)');
+    mediaQuery.addListener(doSomething);
+
+    function doSomething(mediaQuery) {
+        if (mediaQuery.matches) {
+            var nodelist = document.getElementsByTagName("table");
+            var i;
+            for (i = 0; i < nodelist.length; i++) {
+                nodelist[i].setAttribute("border", "1")
+            }
+        }
+    }
+    doSomething(mediaQuery)
+})(window, document);
+
+
+    </script>
+
+<link rel="stylesheet" href="https://keithlaker.github.io/css/newsletter/newsletter.css">
+<link rel="stylesheet" href="https://keithlaker.github.io/css/newsletter/medium_screen.css">
+
+		<div width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly;">
+			<div class="container_header">
+				<header_section>
+					<h1 style="margin-left:20px;margin-right:20px;">
+						Newsletter For Autonomous Database on Shared Exadata Infrastructure<br>
+						<br><br>
+						February 13, 2020
+					</h1>
+				</header_section>
+				<header_icon>
+					<picture>
+						<source srcset="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/3171ecca19062436f699f9aedcd05812/adb_header_icon_300.jpeg" media="(min-width: 720px)">
+						<source srcset="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/e177bf3956f676ba1984f24cef64521c/adb_header_icon_150.jpeg" media="(max-width: 719px)">
+						<img moz-do-not-send="true" class="header_icon" srcset="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/3171ecca19062436f699f9aedcd05812/adb_header_icon_300.jpeg" alt="ADB Logo">
+					</picture>
+				</header_icon>
+			</div>
+			<div class="container_feature">
+			</div>
+			<a name="btt"></a>
+			<div class="container_intro">
+				<span style="margin-left:-10px;"> </span>
+				<intro_section_header>
+					<p class="basic_text" style="margin-left:10px; margin-right:10px; font-size:10px; text-align:center; background-color:white; color:red !important; font-weight:bold;">ORACLE CONFIDENTIAL | INTERNAL USE ONLY</p>
+					<h3 style="text-align: center !important;">Overview of latest release of Autonomous Database<br>
+					on Shared Exadata Infrastructure</h2>
+					<blockquote>
+						<p class="basic_text"><em>If you have any issues viewing this email then download the <a href="https://stbeehive.oracle.com/content/dav/st/DWPM-public/PublicDocuments/Users/KLaker/Newsletters/ADB-Update-Feb13-2020.pdf" target="_blank">PDF version</a>.</em>
+						</p>
+					</blockquote>
+				</intro_section_header>
+				<intro_section_text>
+					<p class="basic_text">This latest newsletter covers the following key focus areas:
+					</p>
+					<ol class="scl-icons">
+						<li class="scl-facebook"><a href="#dbve">Database Vault now available</a></li>
+						<li class="scl-facebook"><a href="#apex">APEX 19.2 now available in Always Free ADB</a></li>
+						<li class="scl-facebook"><a href="#mdbs">Multiple DB support</a></li>
+						<li class="scl-facebook"><a href="#ngss">New Graph Server supports ADB</a></li>
+						<li class="scl-facebook"><a href="#ems">Easier migrations</a></li>
+						<li class="scl-facebook"><a href="#ndcs">New data centers</a></li>
+						<li class="scl-facebook"><a href="#dwgl">Global Leaders Program - Update</a></li>
+						<li class="scl-facebook">Quick links</li>
+						<ul class="scl-icons">
+							<li class="scl-facebook"><a href="#qli">Internal collateral</a></li>
+							<li class="scl-facebook"><a href="#qle">External collateral</a></li>
+						</ul>
+					</ol>
+					<p class="basic_text">Note - this newsletter is for <strong style="color:red;">INTERNAL USE ONLY.</strong></p>
+				</intro_section_text>
+			</div>
+			<div class="container_feature">
+			</div>
+			<a name="dbve"></a>
+			<div class="container_feature_flow">
+				<intro_section_text>
+					<h3>1. DATABASE VAULT NOW AVAILABLE</h3>
+				</intro_section_text>
+				<feature_icon>
+					<img  moz-do-not-send="true" src="https://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/3449984.png" alt="Feature Icon">
+					<br>
+					<p class="serverless">(Shared Infrastructure Only)</p>
+					<br>
+				</feature_icon>
+				<feature_text>
+					<span style="font-weight:bold; color:red;">NEW </span><span class="feature_header"> - Using Oracle Database Vault with Autonomous Database</span><br>
+					<p class="basic_text">Oracle Database Vault implements powerful security controls for your Autonomous Database. These unique security controls restrict access to application data by privileged database users, reducing the risk of insider and outside threats and addressing common compliance requirements.
+					</p>
+					<br>
+				</feature_text>
+			</div>
+			<div class="container_collateral">
+				<span style="margin-left:120px;"> </span>
+				<collateral_box>
+					<table class="learn"><tr><td>LEARN</td></tr></table>
+					<collateral_text>
+						<p class="basic_text">DOC: Using Oracle Database Vault with ADW:
+							<a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/autonomous-data-vault.html#GUID-70F233AF-458F-44B7-9418-F9AF70CFDD15" target="_blank">click here</a>
+						</p>
+						<p class="basic_text">DOC: Using Oracle Database Vault with ATP:
+							<a href="https://docs.oracle.com/en/cloud/paas/atp-cloud/atpug/autonomous-data-vault.html#GUID-70F233AF-458F-44B7-9418-F9AF70CFDD15" target="_blank">click here</a>.
+						</p>
+						<p class="basic_text">PPT: OOW2018 - Autonomous and Beyond: Security in the Age of the Autonomous Database:
+							<a href="https://stbeehive.oracle.com/content/dav/st/Database%20Security%20Product%20Management/Public%20Documents/Events/Openworld/2018%20-%20SF/PRM4108-Autonomous_Self_Securing-Russ.pptx" target="_blank">click here</a>
+						</p>
+						<p class="basic_text">DOC: Database 19c documentation for Database Vault, <a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/dvadm/release-changes.html" target="_blank">click here</a>.
+						</p>
+					</collateral_text>
+				</collateral_box>
+				<collateral_box>
+					<table class="position"><tr><td>POSITION</td></tr></table>
+					<collateral_text>
+						<p class="basic_text">
+							VIDEO: Database Vault Overview, <a href="https://otube.oracle.com/media/SecondThursday_20190314_DatabaseVault/1_up4g7dlr/102026902" target="_blank">click here</a>.
+						</p>
+						<p class="basic_text">PDF: Database Vault FAQ - <a href="https://www.oracle.com/a/tech/docs/dbsec/dbv/faq-dv-19c.pdf" target="_blank">click here</a>
+						</p>
+						<p class="basic_text">PDF: Database Vault Data Sheet - <a href="https://www.oracle.com/a/tech/docs/dbsec/dbv/dv-ds-19c.pdf" target="_blank">click here</a>
+						</p>
+						<p class="basic_text">PDF: Oracle Database Vault Overview  - <a href="https://www.oracle.com/a/tech/docs/dbsec/dbv/wp-dv-19c.pdf" target="_blank">click here</a>
+						</p>
+						<p class="basic_text">PDF: Oracle Database Vault Best Practices - <a href="https://www.oracle.com/technetwork/database/options/database-vault/learnmore/wp-security-dbv-best-practices-3493655.pdf" target="_blank">click here</a>
+						</p>
+						<p class="basic_text">PDF: Oracle Database Vault DBA Best Practices - <a href="https://www.oracle.com/technetwork/database/options/database-vault/learnmore/wp-security-dbvt-dba-bestpractices-3493656.pdf" target="_blank">click here</a>
+						</p>
+					</collateral_text>
+				</collateral_box>
+				<collateral_box>
+					<table class="demo"><tr><td>DEMO</td></tr></table>
+					<collateral_text>
+						<p class="basic_text">
+							VIDEO: Database Vault - Enforcing separation of duties, <a href="https://otube.oracle.com/media/Second+Thursday+-+Separation+of+Duties/0_b1tkw093/102026902" target="_blank">click here</a>.
+						</p>
+						<p class="basic_text">
+							VIDEO: Database Vault - Enforcing Trusted Path Access Control, <a href="https://otube.oracle.com/media/Database+vault+-+Enforcing+Trusted+Path+Access+Control/0_15fw6cvy/102026902" target="_blank">click here</a>.
+						</p>
+						<p class="basic_text">
+							VIDEO: Database Vault Advanced Use Cases II - Operations Control, Database Vault Simulation Mode, <a href="https://otube.oracle.com/media/SecondThursday_20191114_DB_Vault_Adv_II/1_wlenw8jd/102026902" target="_blank">click here</a>.
+						</p>
+						<br>
+						<br>
+					</collateral_text>
+				</collateral_box>
+			</div>
+			<div class="container_feature">
+			</div>
+			<div class="container_feature_flow">
+				<back_section>
+					<br>
+					<a class="btt" href="#btt">BACK TO TOP</a>
+					<br><br>
+				</back_section>
+			</div>
+			<div class="container_feature">
+			</div>
+			<a name="apex"></a>
+			<div class="container_feature_flow">
+				<intro_section_text>
+					<h3>2. APEX 19.2 NOW AVAILABLE</h3>
+				</intro_section_text>
+				<feature_icon>
+					<img moz-do-not-send="true" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/7850eb5d39dcbb79b110d1deea442d81/apex_logo.jpg" alt="Feature Icon">
+					<br>
+					<p class="serverless">(Free Version Only)</p>
+					<br>
+				</feature_icon>
+				<feature_text>
+					<span style="font-weight:bold; color:red;">NEW </span><span class="feature_header"> - Always Free Autonomous Database now includes APEX 19.2</span><br>
+					<p class="basic_text">
+						Oracle APEX 19.2 on Always Free Autonomous Database provides a preconfigured, fully managed and secured environment to both build and deploy world-class data-centric applications. Oracle APEX applications developed on-premise can be easily deployed to Oracle APEX on the free version Autonomous Database.
+					</p>
+					<br>
+					<br>
+				</feature_text>
+			</div>
+			<div class="container_collateral">
+				<span style="margin-left:120px;"> </span>
+				<collateral_box>
+					<table class="learn"><tr><td>LEARN</td></tr></table>
+					<collateral_text>
+						<p class="basic_text">What is Application Express:
+							<a href="https://apex.oracle.com/en/" target="_blank">click here</a>.
+						</p>
+						<p class="basic_text">DOC: APEX 19c Getting Started Guide:
+							<a href="https://docs.oracle.com/en/database/oracle/application-express/19.2/" target="_blank">click here</a>.
+						</p>
+						<p class="basic_text">DOC: Creating Applications with Oracle Application Express in ADW: <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/application-express-autonomous-database.html#GUID-6B304741-9B26-4B8E-9D6D-193AFF6679DA" target="_blank">click here</a>.
+						</p>
+						<p class="basic_text">DOC: Creating Applications with Oracle Application Express in ATP: <a href="https://docs.oracle.com/en/cloud/paas/atp-cloud/atpug/application-express-autonomous-database.html#GUID-6B304741-9B26-4B8E-9D6D-193AFF6679DA" target="_blank">click here</a>.
+						</p>
+					</collateral_text>
+				</collateral_box>
+				<collateral_box>
+					<table class="position"><tr><td>POSITION</td></tr></table>
+					<collateral_text>
+						<br>
+						<br>
+					</collateral_text>
+				</collateral_box>
+				<collateral_box>
+					<table class="demo"><tr><td>DEMO</td></tr></table>
+					<collateral_text>
+						<p class="basic_text">
+							Create a simple Human Resources (HR) application for the fictitious AnyCo Corp which manages departmental and employee information stored in database tables, <a href="https://docs.oracle.com/en/database/oracle/application-express/19.2/aetut/about-application-express.html#GUID-8AE8C399-E8A1-47E1-9ADA-F9736196495E" target="_blank">click here</a>.
+						</p>
+						<p class="basic_text">
+							VIDEO: Learn how to create an APEX Application using a spreadsheet in just 2 minutes! <a href="https://www.youtube.com/watch?v=BJ5__tbM_vs&list=PLUo-NIMouZ_tf9ZlPW9AacGqHsLpr0er3&index=1" target="_blank">click here</a>.
+						</p>
+						<p class="basic_text">
+							HOL: List of APEX hands-on labs: <a href="https://apex.oracle.com/en/learn/tutorials/" target="_blank">click here</a>.
+						</p>
+						<br>
+					</collateral_text>
+				</collateral_box>
+			</div>
+			<div class="container_feature">
+			</div>
+			<div class="container_feature_flow">
+				<back_section>
+					<br>
+					<a class="btt" href="#btt">BACK TO TOP</a>
+					<br><br>
+				</back_section>
+			</div>
+			<div class="container_feature">
+			</div>
+			<a name="mdbs"></a>
+			<div class="container_feature_flow">
+				<intro_section_text>
+					<h3>3. MULTIPLE DB SUPPORT</h3>
+				</intro_section_text>
+				<feature_icon>
+					<img moz-do-not-send="true" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/b0e0d4b2c6c6a0631d4124dfe83331a0/db_icon.jpg" alt="Feature Icon">
+					<br>
+					<p class="serverless">(Shared Infrastructure Only)</p>
+					<br>
+				</feature_icon>
+				<feature_text>
+					<span style="font-weight:bold; color:red;">NEW </span><span class="feature_header"> - Multiple Database Versions and Availability by Region</span><br>
+					<p class="basic_text">Depending on the region where you provision or clone your database, Autonomous Database now supports one or more Oracle Database versions. The version availability depends on the region - note that some regions do not support multiple Oracle Database versions.
+					</p>
+					<p class="basic_text">
+						When multiple database versions are available, you choose an Oracle Database version when you provision or clone a database
+					</p>
+					<picture>
+						<source srcset="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/7124676e1bc37de4fa27862f0875125d/mdb_18_19_550.png" media="(min-width: 720px)">
+						<source srcset="img/1024.jpg" media="(max-width: 719px)">
+						<img moz-do-not-send="true" class="header_icon" srcset="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/7124676e1bc37de4fa27862f0875125d/mdb_18_19_550.png" alt="Multiple Database Support when creating a new ADB instance">
+					</picture>
+					<br>
+				</feature_text>
+			</div>
+			<div class="container_collateral">
+				<span style="margin-left:120px;"> </span>
+				<collateral_box>
+					<table class="learn"><tr><td>LEARN</td></tr></table>
+					<collateral_text>
+						<p class="basic_text">
+							DOC: Oracle Database versions and availability by region for ADW:
+							<a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/autonomous-database-version.html#GUID-882460C7-EFCD-4E7E-B115-A7239E4CC406" target="_blank">click here</a>.
+							<br><br>
+							DOC: Oracle Database versions and availability by region for ATP:
+							<a href="https://docs.oracle.com/en/cloud/paas/atp-cloud/atpug/autonomous-database-version.html#GUID-882460C7-EFCD-4E7E-B115-A7239E4CC406" target="_blank">click here</a>.
+						</p>
+						<p class="basic_text">
+							If you are using ADB with Oracle Database 19c there are additional database features available in the database:<br><br>
+							DOC: ADW Oracle Database 19c features, <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/experienced-database-users.html#GUID-D7CBE041-8A8C-488D-9CF4-D7620A278358" target="_blank">click here</a>.
+							<br><br>
+							DOC: ATP Oracle Database 19c features, <a href="https://docs.oracle.com/en/cloud/paas/atp-cloud/atpug/experienced-database-users.html#GUID-D7CBE041-8A8C-488D-9CF4-D7620A278358" target="_blank">click here</a>.
+						</p>
+					</collateral_text>
+				</collateral_box>
+				<collateral_box>
+					<table class="position"><tr><td>POSITION</td></tr></table>
+					<collateral_text>
+						<br>
+						<br>
+					</collateral_text>
+				</collateral_box>
+				<collateral_box>
+					<table class="demo"><tr><td>DEMO</td></tr></table>
+					<collateral_text>
+						<br>
+						<br>
+					</collateral_text>
+				</collateral_box>
+			</div>
+			<div class="container_feature">
+			</div>
+			<div class="container_feature_flow">
+				<back_section>
+					<br>
+					<a class="btt" href="#btt">BACK TO TOP</a>
+					<br><br>
+				</back_section>
+			</div>
+			<div class="container_feature">
+			</div>
+			<a name="ngss"></a>
+			<div class="container_feature_flow">
+				<intro_section_text>
+					<h3>4. NEW GRAPH ENGINE SUPPORT</h3>
+				</intro_section_text>
+				<feature_icon>
+					<img moz-do-not-send="true" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/5c89b98bfa53e7c0d4fe74e99f71f7dd/graph_icon.png" alt="Feature Icon">
+					<br>
+					<p class="serverless">(Shared Infrastructure Only)</p>
+					<br>
+				</feature_icon>
+				<feature_text>
+					<span style="font-weight:bold; color:red;">NEW </span><span class="feature_header"> -  Availability of Oracle Graph Server and Client 20.1</span><br>
+					<p class="basic_text">
+						Oracle Graph Server and Client 20.1 is a software package that works with Autonomous Database. It includes the in-memory analytics server (PGX) and client libraries required to work with the Property Graph feature in Autonomous Database.
+					</p>
+					<p class="basic_text">
+						With graph analytics you can explore and discover connections and patterns in social networks, IoT, big data, data warehouses, and complex transaction data for applications such as fraud detection in banking, customer 360, and smart manufacturing.
+					</p>
+					<br>
+				</feature_text>
+			</div>
+			<div class="container_collateral">
+				<span style="margin-left:120px;"> </span>
+				<collateral_box>
+					<table class="learn"><tr><td>LEARN</td></tr></table>
+					<collateral_text>
+						<p class="basic_text">
+							Download is available on edelivery.oracle.com <a href="http://edelivery.oracle.com/" target="_blank">click here</a>.
+						</p>
+						<p class="basic_text">
+							DOC: Installation instructions <a href="https://www.oracle.com/a/tech/docs/property-graph-developer-guide.pdf" target="_blank">click here</a>. See section <em>1.7 Using Oracle Graph with the Autonomous Database</em>.
+						</p>
+						<p class="basic_text">
+							WEB: Graph Server page on oracle.com <a href="https://www.oracle.com/database/technologies/spatialandgraph/property-graph-features/graph-server-and-client.html" target="_blank">click here</a>.
+						</p>
+						<br>
+						<br>
+					</collateral_text>
+				</collateral_box>
+				<collateral_box>
+					<table class="position"><tr><td>POSITION</td></tr></table>
+					<collateral_text>
+						<p class="basic_text">
+							PPT: Demystifying Graph Analytics for the Non-expert, <a href="https://static.rainfocus.com/oracle/oow19/sess/1554733936263001kfzX/PF/Graph%20Demystified%20V7_1569015021257001iAtc.pdf" target="_blank">click here</a>
+						</p>
+						<p class="basic_text">
+							PPT: Using Graph Analytics for New Insights, <a href="https://static.rainfocus.com/oracle/oow19/sess/1553292320766001UjgY/PF/TUT4328%20Using%20Graph%20Analytics%20for%20New%20Insights_1568817538890001SQFO.pdf" target="_blank">click here</a>
+						</p>
+						<p class="basic_text">General positioning collateral available on salescentral portal, <a href="https://salescentral.oracle.com/SCPortal/?root=offeringDetails/51753" target="_blanl">click here</a>
+						</p>
+						<br>
+						<br>
+					</collateral_text>
+				</collateral_box>
+				<collateral_box>
+					<table class="demo"><tr><td>DEMO</td></tr></table>
+					<collateral_text>
+						<br>
+						<br>
+					</collateral_text>
+				</collateral_box>
+			</div>
+			<div class="container_feature">
+			</div>
+			<div class="container_feature_flow">
+				<back_section>
+					<br>
+					<a class="btt" href="#btt">BACK TO TOP</a>
+					<br><br>
+				</back_section>
+			</div>
+			<div class="container_feature">
+			</div>
+			<a name="ems"></a>
+			<div class="container_feature_flow">
+				<intro_section_text>
+					<h3>5. EASIER MIGRATIONS</h3>
+				</intro_section_text>
+				<feature_icon>
+					<img moz-do-not-send="true" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/b0e0d4b2c6c6a0631d4124dfe83331a0/db_icon.jpg" alt="Feature Icon">
+					<br>
+					<p class="serverless">(Shared Infrastructure Only)</p>
+					<br>
+				</feature_icon>
+				<feature_text>
+					<span style="font-weight:bold; color:red;">NEW </span><span class="feature_header"> -  Features to Simplify Migrations To ADB</span><br>
+					<p class="basic_text">
+						<strong>1. Database Resident Connection Pool (DRCP)</strong><br>
+						Using DRCP provides you with access to a connection pool in your ADB that enables a significant reduction in key database resources required to support many client connections. See Use Database Resident Connection Pooling with Autonomous Database for more information.
+						<br><br>
+						DOC: ADW <a href="https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/autonomous-data-warehouse-cloud/whats-new&id=CSWHU-GUID-E1337EC6-4A78-4199-84F0-A2739055F3FA" target="_blank">click here</a>.
+						<br>
+						DOC: ATP <a href="https://docs.oracle.com/en/cloud/paas/atp-cloud/atpug/connect-drcp.html#GUID-E1337EC6-4A78-4199-84F0-A2739055F3FA" target="_blank">click here</a>.
+					</p>
+					<br>
+					<p class="basic_text">
+						<strong>2. Set MAX_STRING_SIZE value</strong><br>
+						By default the Autonomous Data Warehouse database uses MAX_STRING_SIZE set to the value EXTENDED. To support migration from older Oracle Databases or applications you can set MAX_STRING_SIZE to the value STANDARD. See Checking and Setting MAX_STRING_SIZE for more information.
+						<br><br>
+						DOC: ADW <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/experienced-database-users.html#GUID-7340C837-FD5F-489D-9348-A4E86846323F" target="_blank">click here</a>.
+						<br>
+						DOC: ATP <a href="https://docs.oracle.com/en/cloud/paas/atp-cloud/atpug/experienced-database-users.html#GUID-7340C837-FD5F-489D-9348-A4E86846323F" target="_blank">click here</a>.
+					</p>
+					<br>
+					<p class="basic_text">
+						<strong>3. Number of concurrent statements</strong><br>
+						The maximum number of concurrent statements is increased. See Predefined Database Service Names for Autonomous Data Warehouse for more information.
+						<br><br>
+						DOC: ADW <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/connect-predefined.html#GUID-9747539B-FD46-44F1-8FF8-F5AC650F15BE" target="_blank">click here</a>.
+						<br>
+						DOC: ATP <a href="https://docs.oracle.com/en/cloud/paas/atp-cloud/atpug/connect-predefined.html#GUID-9747539B-FD46-44F1-8FF8-F5AC650F15BE" target="_blank">click here</a>.
+					</p>
+					<br>
+
+				</feature_text>
+			</div>
+			<div class="container_feature">
+			</div>
+			<div class="container_feature_flow">
+				<back_section>
+					<br>
+					<a class="btt" href="#btt">BACK TO TOP</a>
+					<br><br>
+				</back_section>
+			</div>
+			<div class="container_feature">
+			</div>
+			<a name="ndcs"></a>
+			<div class="container_feature_flow">
+				<intro_section_text>
+					<h3>6. NEW DATA CENTERS FOR AUTONOMOUS DATABASES</h3>
+				</intro_section_text>
+				<feature_icon>
+					<img id="img-left-margin" moz-do-not-send="true" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/6916573ddcbe23d2b95ed0e79ae45cb3/download.png">
+				</feature_icon>
+				<feature_text>
+					<p class="basic_text">Autonomous Database is now available in the following data centers:
+					</p>
+					<ul class="scl-icons">
+						<li class="scl-facebook"> Jeddah, Saudi Arabia</li>
+						<li class="scl-facebook"> Osaka, Japan</li>
+						<li class="scl-facebook"> Melbourne, Australia</li>
+						<li class="scl-facebook"> Amsterdam, Netherlands</li>
+					</ul>
+					<p class="basic_text">
+						For more information on the status of services in each data center <a href="https://ocistatus.oraclecloud.com/" target="_blank">click here</a>. For more information about how to subscribe to these new regions, <a href="https://docs.cloud.oracle.com/en-us/iaas/Content/Identity/Tasks/managingregions.htm#uconsole" target="_blank">click here</a>. To switch to the new region, use the Region menu in the Console. See Switching Regions for more information,  <a href="https://docs.cloud.oracle.com/en-us/iaas/Content/GSG/Concepts/console.htm#Switchin" target="_blank">click here</a>.
+					</p>
+					<br>
+				</feature_text>
+			</div>
+			<div class="container_feature">
+			</div>
+			<div class="container_feature_flow">
+				<back_section>
+					<br>
+					<a class="btt" href="#btt">BACK TO TOP</a>
+					<br><br>
+				</back_section>
+			</div>
+			<div class="container_feature">
+			</div>
+			<a name="dwgl"></a>
+			<div class="container_feature_flow">
+				<intro_section_text>
+					<h3>7. GLOBAL LEADERS PROGRAM</h3>
+				</intro_section_text>
+				<feature_icon>
+					<img moz-do-not-send="true" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/a097976708c524ccd5a1236bdf3d9aac/roundtable_icon.png">
+				</feature_icon>
+				<feature_text>
+					<span style="font-weight:bold; color:red;">CONTENT </span><span class="feature_header"> - Materials from Oracle Global Leaders Winter Meeting in Miami</span><br>
+					<p class="basic_text">The 5th annual Global Leaders winter event was recently held in Miami with over 80 people from 55+ companies from NA,LAD & EMEA, all peers implementing information management solutions, talking about their journeys to the cloud, many with Autonomous Database.
+					</p>
+					<picture>
+						<source srcset="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/6a8018f65c834767ec1e718359a07081/pastedgraphic_550.jpg" media="(min-width: 720px)">
+						<source srcset="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/82ee595cea2f02b6ed493ca0ff96f0bf/pastedgraphic_120.jpg" media="(max-width: 719px)">
+						<img moz-do-not-send="true" class="header_icon" srcset="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/6a8018f65c834767ec1e718359a07081/pastedgraphic_550.jpg" alt="Global Leaders Event Miami Customer Logo">
+					</picture>
+					<p class="basic_text">Agenda and presentations on data warehousing/ ADW are now available, <a href="https://oradocs-corp.sites.us2.oraclecloud.com/documents/link/LFD7BAB00CA65487039DB36EF6C3FF17C1177A968060/folder/F42D0B80A87967E585764D92F6C3FF17C1177A968060/_Miami2020" target="_blank">click here</a>. These can be selectively shared 1:1 with customers.
+					</p>
+					<br><br>
+				</feature_text>
+			</div>
+			<div class="container_feature_flow">
+				<intro_section_text>
+				</intro_section_text>
+				<feature_icon>
+					<img moz-do-not-send="true" src="https://www.oracle.com/a/ocom/img/cb-wp-map-cal-test.png">
+				</feature_icon>
+				<feature_text>
+					<span style="font-weight:bold; color:red;">EVENTS </span><span class="feature_header"> - Day With Development</span><br>
+					<p class="basic_text">Oracle Product Management will be hosting a series of workshops for Architects, DBAs, Application Developers and for those interested in learning more about Oracle Information Management.
+					</p>
+					<p class="basic_text">Content will cover a general architecture overview, various cloud service capabilities (<em>such as Autonomous Data Warehouse, Oracle Data Integration and Oracle Analytics Cloud</em>) and how these services work together. All Services will be shown live so customers/partners will experience the look and feel along with how to work with these services.
+					</p>
+					<p class="basic_text">The schedule for this series of "<em>Day With Development</em>" events is:
+					</p>
+					<ul class="scl-icons">
+						<li class="scl-facebook"><strong>US EVENTS</strong></li>
+						<ol class="scl-icons">
+							<li class="scl-facebook"><a href="https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x650789abcd&source=PDMK190618P00069:OW:ES:LV" target="_blank">Chesterfield/St Louis - Feb 21</a>
+							</li>
+							<li class="scl-facebook"><a href="https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x698346abcd" target="_blank">Vancouver - Feb 28</a>
+							</li>
+							<li class="scl-facebook"><a href="https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x695819abcd&source=PDMK190618P00063:OW:ES:LV" target="_blank">Irving - March 26</a>
+							</li>
+							<li class="scl-facebook"><a href="https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x649915abcd&source=PDMK190618P00066:OW:ES:LV" target="_blank">Nashville -April 20</a>
+							</li>
+							<li class="scl-facebook"><a href="https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x650314abcd&source=PDMK190618P00068:OW:ES:LV" target="_blank">Louisville - April 21</a>
+							</li>
+							<li class="scl-facebook"><a href="https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x695363abcd&source=PDMK190618P00062:OW:ES:LV" target="_blank">New York - May 21</a>
+							</li>
+						</ol>
+					</ul>
+					<ul class="scl-icons">
+						<li class="scl-facebook"><strong>EMEA EVENTS</strong></li>
+						<ol class="scl-icons">
+							<li class="scl-facebook"><a href="https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x708302abcd&source=EMMK191216P00140:OW:ES:LV" target="_blank">Madrid, Spain - March 3</a>
+							</li>
+							<li class="scl-facebook"><a href="https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x709005abcd" target="_blank">Roma, Italy - March 5</a>
+							</li>
+							<li class="scl-facebook"><a href="https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x708872abcd&source=EMMK191216P00132:OW:ES:LV" target="_blank">Dubai, United Arab Emirates - March 9 (Morning)</a>
+							</li>
+							<li class="scl-facebook"><a href="https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x711475fa21&varPage=home&source=WWSA200108P00021:OW:ES:LV" target="_blank">Dubai, United Arab Emirates - March 9 (Afternoon)</a>
+							</li>
+							<li class="scl-facebook"><a href="https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x709252abcd&source=EMMK191216P00135:OW:ES:LV" target="_blank">Istanbul, Turkey - March 12</a>
+							</li>
+							<li class="scl-facebook"><a href="https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x709442abcd&source=EMMK191216P00126:OW:ES:LV" target="_blank">Warszawa, Poland - March 16</a>
+							</li>
+							<li class="scl-facebook"><a href="https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x710506abcd&source=EMMK191216P00129:OW:ES:LV" target="_blank">Colombes cedex, France - March 18</a>
+							</li>
+							<li class="scl-facebook"><a href="https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x709366abcd&source=EMMK191216P00123:OW:ES:LV" target="_blank">Moscow, Russian Federation - March 23</a>
+							</li>
+						</ol>
+					</ul>
+					<p class="basic_text">Please invite your customers and partners to these events and forward the above links so they can register to attend.
+					</p>
+					<br>
+					<br>
+				</feature_text>
+			</div>
+			<div class="container_feature">
+			</div>
+			<div class="container_feature_flow">
+				<back_section>
+					<br>
+					<a class="btt" href="#btt">BACK TO TOP</a>
+					<br><br>
+				</back_section>
+			</div>
+			<div class="container_feature">
+			</div>
+			<a name="qli"></a>
+			<div class="container_feature_flow">
+				<archive_header_icon>
+					<img moz-do-not-send="true" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/eadbcb539c95a8f35393e2fc027d02a6/ecm_summary.png">
+				</archive_header_icon>
+				<archive_header>
+					<H3>QUICK LINKS - Internal...</h3>
+				</archive_header>
+				<ql_article>
+					<table width="100%">
+						<tr>
+							<td colspan="2" align="center">
+								<img moz-do-not-send="true" width="178px" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/7217c6ebe75a691b8368f2650907d92f/screen_shot_2019_05_31_at_18_00_01.png" alt="What's New Icon">
+							</td>
+						</tr>
+						<tr>
+							<td height="18px" id="ql" colspan="2" align="center">
+								<p class="basic_text">What's New in ADB - PDF
+								</p>
+							</td>
+						</tr>
+						<tr >
+							<td id="ql_sd"><a id="ql_sd" href="https://stbeehive.oracle.com/content/dav/st/DWPM-public/PublicDocuments/Users/KLaker/Newsletters/ADB-Internal-New%20-Features.html" target="_blank">Autonomous Database</a>
+							</td>
+						</tr>
+					</table>
+				</ql_article>
+				</archive_header>
+				<ql_article>
+					<table width="100%">
+						<tr>
+							<td colspan="2" align="center">
+								<img moz-do-not-send="true" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/d797b0f447ca461fbfae44c354d6499e/road_to_success.jpg" alt="Feature Roadmap Icon">
+							</td>
+						</tr>
+						<tr>
+							<td height="18px" id="ql" colspan="2" align="center">
+								<p class="basic_text">Feature Roadmap</p>
+							</td>
+						</tr>
+						<tr >
+							<td id="ql_sd"><a id="ql_sd" href="https://confluence.oraclecorp.com/confluence/display/DCS/Data+Management+Services+Feature+Level+Roadmaps" target="_blank">Autonomous Database</a>
+							</td>
+						</tr>
+					</table>
+				</ql_article>
+				<ql_article>
+					<table width="100%">
+						<tr>
+							<td colspan="2" align="center">
+								<img moz-do-not-send="true" width="134px" src="https://keithlaker.github.io/Images/Frequently-Asked-Questions.jpg" alt="FAQ Icon">
+								<br>
+							</td>
+						</tr>
+						<tr>
+							<td height="18px" id="ql" colspan="2" align="center">
+								<p class="basic_text">Einstein FAQ portal</p>
+							</td>
+						</tr>
+						<tr>
+							<td id="ql_sd"><a id="ql_sd" href="https://einstein.oracle.com" target="_blank">Serverless</a></td>
+							<td id="ql_sd"><a id="ql_sd" href="https://einstein.oracle.com/apex/f?p=300000:LISTS:106916976159308::NO::LIST:atp-dedicated-faq-3162" target="_blank"> Dedicated </a>
+							</td>
+						</tr>
+					</table>
+				</ql_article>
+				<ql_article>
+					<table width="100%">
+						<tr>
+							<td colspan="2" align="center">
+								<img moz-do-not-send="true" width="100px" src="https://keithlaker.github.io/Images/apex-apps-512.png" alt="Sales Central portal icon"><br>
+							</td>
+						</tr>
+						<tr>
+							<td height="18px" id="ql" colspan="2" align="center">
+								<p class="basic_text">Sales Central portal</p>
+							</td>
+						</tr>
+						<tr>
+							<td id="ql_sd"><a id="ql_sd" href="https://salescentral.oracle.com/SalesCentral/faces/Details?offid=6200" target="_blank">ADW</a>
+							</td>
+							<td id="ql_sd"><a id="ql_sd" href="https://salescentral.oracle.com/SalesCentral/faces/Details?offid=51156" target="_blank" moz-do-not-send="true">ATP</a>
+							</td>
+						</tr>
+					</table>
+				</ql_article>
+				<ql_article>
+					<table width="100%">
+						<tr>
+							<td colspan="2" align="center">
+								<img moz-do-not-send="true" width="132px" src="https://keithlaker.github.io/Images/apex-home.png" alt="PM portal Icon"><br>
+							</td>
+						</tr>
+						<tr>
+							<td height="18px" id="ql" colspan="2" align="center">
+								<p class="basic_text">PM portal</p>
+							</td>
+						</tr>
+						<tr>
+							<td id="ql_sd"><a id="ql_sd" href="http://database.us.oracle.com/pls/htmldb/f?p=781:2:14831543178009:::2:P2_ID:116801346139455321814998855387961759768" target="_blank">ADW</a>
+							</td>
+							<td id="ql_sd"><a id="ql_sd" href="http://database.us.oracle.com/pls/htmldb/f?p=781:2:412100123495522:::2:P2_ID,P2_CONTENT_ID:152678658554982889271293094471586698682,152678658554981680345473479842411992506" target="_blank" moz-do-not-send="true">ATP</a>
+							</td>
+						</tr>
+					</table>
+				</ql_article>
+				<ql_article>
+					<table width="100%">
+						<tr>
+							<td align="center">
+								<br>
+								<img moz-do-not-send="true" width="134px" src="https://keithlaker.github.io/Publishing/DWGL.jpg" alt="Global Leaders internal blog Icon">
+								<span style="line-height:1.0"><br><br></span>
+							</td>
+						</tr>
+						<tr>
+							<td height="18px" id="ql" colspan="2" align="center">
+								<p class="basic_text">Internal Blog</p>
+							</td>
+						</tr>
+						<tr>
+							<td id="ql_sd"><a id="ql_sd" href="http://blog.us.oracle.com/DWGL" target="_blank">Global Leaders</a>
+							</td>
+						</tr>
+					</table>
+				</ql_article>
+			</div>
+			<div class="container_feature">
+			</div>
+			<div class="container_feature_flow">
+				<back_section>
+					<br>
+					<a class="btt" href="#btt">BACK TO TOP</a>
+					<br><br>
+				</back_section>
+			</div>
+			<div class="container_feature">
+			</div>
+			<a name="qle"></a>
+			<div class="container_feature_flow">
+				<archive_header>
+					<h3>QUICK LINKS - External...</h3>
+				</archive_header>
+				<archive_header_icon>
+				</archive_header_icon>
+				<ql_article>
+					<table width="100%">
+						<tr>
+							<td colspan="2" align="center">
+								<img moz-do-not-send="true"  width="100px" src="https://keithlaker.github.io/Images/cloud-apps-512.png" alt="oracle.com Icon"><br>
+							</td>
+						</tr>
+						<tr>
+							<td height="18px" id="ql" colspan="2" align="center">
+								<p class="basic_text">oracle.com</p>
+							</td>
+						</tr>
+						<tr>
+							<td id="ql_sd"><a id="ql_sd" href="https://www.oracle.com/database/data-warehouse/index.html" target="_blank">ADW</a>
+							</td>
+							<td id="ql_sd"><a id="ql_sd" href="https://www.oracle.com/database/autonomous-transaction-processing.html" target="_blank"> ATP </a>
+							</td>
+						</tr>
+					</table>
+				</ql_article>
+				<ql_article>
+					<table width="100%">
+						<tr>
+							<td colspan="2" align="center">
+								<img moz-do-not-send="true" width="135px" src="https://keithlaker.github.io/Images/apex-page-designer.png" alt="Documentation Icon"><br>
+							</td>
+						</tr>
+						<tr>
+							<td height="18px" id="ql" colspan="2" align="center">
+								<p class="basic_text">Documentation</p>
+							</td>
+						</tr>
+						<tr>
+							<td id="ql_sd"><a id="ql_sd" href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/" target="_blank">ADW</a>
+							</td>
+							<td id="ql_sd"><a id="ql_sd" href="https://docs.oracle.com/en/cloud/paas/atp-cloud/index.html" target="_blank">ATP </a>
+							</td>
+						</tr>
+					</table>
+				</ql_article>
+				<ql_article>
+					<table style="width:100%;">
+						<tr>
+							<td colspan="2" align="center">
+								<img moz-do-not-send="true"  width="100px" src="https://keithlaker.github.io/Images/analytics.png" alt="YCO calculation Icon"><br>
+							</td>
+						</tr>
+						<tr>
+							<td height="18px" id="ql" colspan="2" align="center">
+								<p class="basic_text">TCO Calculator</p>
+							</td>
+						</tr>
+						<tr>
+							<td id="ql_sd"><a id="ql_sd" href="https://valuenavigator.oracle.com/benefitcalculator/faces/inputs?id=408D37F02AF0A012283B0D29A4A0708A" target="_blank">Serverless</a>
+							</td>
+							<td id="ql_sd"><a id="ql_sd" href="https://valuenavigator.oracle.com/benefitcalculator/faces/inputs?id=408D37F02AF0A0128AF3D5176E56D1C6" target="_blank">Dedicated</a>
+							</td>
+						</tr>
+					</table>
+				</ql_article>
+				<ql_article>
+					<table style="width:100%;">
+						<tr>
+							<td colspan="2" align="center">
+								<img moz-do-not-send="true"  width="100px" src="https://keithlaker.github.io/Images/analytics.png" alt="Cloud Cost Estimator Icon"><br>
+							</td>
+						</tr>
+						<tr>
+							<td height="18px" id="ql" colspan="2" align="center">
+								<p class="basic_text">Cloud Cost Estimator</p>
+							</td>
+						</tr>
+						<tr>
+							<td id="ql_sd"><a id="ql_sd" href="https://cloud.oracle.com/en_US/cost-estimator" target="_blank">Autonomous Database</a>
+							</td>
+						</tr>
+					</table>
+				</ql_article>
+				<ql_article>
+					<table width="100%">
+						<tr>
+							<td align="center">
+								<img moz-do-not-send="true"  width="100px" src="https://keithlaker.github.io/Images/cloudcircle-hot.png" alt="Public What's New Icon"><br>
+							</td>
+						</tr>
+						<tr>
+							<td height="18px" id="ql" colspan="2" align="center">
+								<p class="basic_text">ADB New Features</p>
+							</td>
+						</tr>
+						<tr>
+							<td id="ql_sd"><a id="ql_sd" href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/adw-features.html" target="_blank">Autonomous Database</a>
+							</td>
+						</tr>
+					</table>
+				</ql_article>
+				<ql_article>
+					<table width="100%">
+						<tr>
+							<td align="center">
+								<img moz-do-not-send="true" width="150px" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/03470a3232a6baffc15c1cc7cb6cdd06/acls.png" alt="Schema Advisor icon"><br>
+							</td>
+						</tr>
+						<tr>
+							<td height="18px" id="ql" colspan="2" align="center">
+								<p class="basic_text">Schema Advisor</p>
+							</td>
+						</tr>
+						<tr>
+							<td id="ql_sd"><a id="ql_sd" href="https://support.oracle.com/knowledge/Oracle%20Cloud/2462677_1.html" target="_blank">Autonomous Database</a>
+							</td>
+						</tr>
+					</table>
+				</ql_article>
+				<ql_article>
+					<table width="100%">
+						<tr>
+							<td align="center">
+								<img moz-do-not-send="true"  width="120px" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/b71bf780b3daae65644f4497ec0a48d6/download.png" alt="Database blog Icon"><br>
+							</td>
+						</tr>
+						<tr>
+							<td height="18px" id="ql" colspan="2" align="center">
+								<p class="basic_text">Blog</p>
+							</td>
+						</tr>
+						<tr>
+							<td id="ql_sd"><a id="ql_sd" href="http://blogs.oracle.com/oracle-database" target="_blank">Autonomous Database</a>
+							</td>
+						</tr>
+					</table>
+				</ql_article>
+				<ql_article>
+					<table width="100%">
+						<tr>
+							<td align="center">
+								<img moz-do-not-send="true"  width="120px" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/b71bf780b3daae65644f4497ec0a48d6/download.png" alt="Data Warehouse blog Icon"><br>
+							</td>
+						</tr>
+						<tr>
+							<td height="18px" id="ql" colspan="2" align="center">
+								<p class="basic_text">Blog</p>
+							</td>
+						</tr>
+						<tr>
+							<td id="ql_sd"><a id="ql_sd" href="http://blogs.oracle.com/datawarehousing" target="_blank">ADW</a>
+							</td>
+						</tr>
+					</table>
+				</ql_article>
+				<ql_article>
+					<table width="100%">
+						<tr>
+							<td colspan="2" align="center">
+								<img moz-do-not-send="true" width="134px" src="https://keithlaker.github.io/Images/apex-page-designer.png" alt="Training plans Icon"><br>
+							</td>
+						</tr>
+						<tr>
+							<td height="18px" id="ql" colspan="2" align="center">
+								<p class="basic_text">Learning Paths for ADB</p>
+							</td>
+						</tr>
+						<tr>
+							<td id="ql_sd"><a id="ql_sd" href="	http://oracle.com/goto/adw/tutorial" target="_blank">ADW</a>
+							</td>
+							<td id="ql_sd"><a id="ql_sd" href="	http://oracle.com/goto/atp/tutorial" target="_blank">ATP</a>
+							</td>
+						</tr>
+					</table>
+				</ql_article>
+			</div>
+			<div class="container_feature">
+			</div>
+			<div class="container_feature_flow">
+				<back_section>
+					<br>
+					<a class="btt" href="#btt">BACK TO TOP</a>
+					<br><br>
+				</back_section>
+			</div>
+			<div class="container_feature">
+			</div>
+			<div class="container_footer">
+				<blank_section>
+				</blank_section>
+				<footer_email>
+					<br>
+					<p class="footer">For all questions about ADB on both Shared and Dedicated Infrastructures use the internal FAQ site <a href="einstein.oracle.com" target="_blank" style="color:white;">einstein.oracle.com</a>.
+						<br>
+						See <strong>Quick Links</strong>.
+					</p>
+				</footer_email>
+				<footer_hardware>
+					<p class="footer">
+						<strong>ORACLE AUTONOMOUS DATABASE</strong>
+					</p>
+				</footer_hardware>
+				<my_signature>
+					<p class="footer">
+						<br><strong>Oracle Autonomous Database Product Management Team</strong>
+						<br><br>
+						Keith Laker | Senior Principal Product Manager | Analytic SQL and Autonomous Database<br>
+						Mobile +44-7768-431-268 | Office-Voicemail +44-161-493-4849<br>
+						Oracle Database Product Management<br>
+						Scotscroft, Towers Business Park, Wilmslow Road, Didsbury. M20 2RY.
+						<br><br>
+					</p><br><br>
+				</my_signature>
+				<blank_section>
+					<br><br><br><br>
+				</blank_section>
+			</div>
+			<div class="container_feature_flow">
+				<back_section>
+					<br>
+					<a class="btt" href="#btt">BACK TO TOP</a>
+					<br><br>
+				</back_section>
+			</div>
+			<div class="container_feature">
+			</div>
+		</div>
+
