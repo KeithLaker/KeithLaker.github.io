@@ -8,18 +8,27 @@
   }
 
 .container_header {
-	height:167px;
+	height:185px;
 	width:990px;
 	background-repeat: no-repeat;
 	background-size: cover; 
 	}
+ 
+ header_confidential {
+    float: left;
+    width: 100%;
+    order: 1;
+  }
 
   header_section {
     float: left;
+	margin-top:5px;
+	height:170px;
     width: 65.8%;
     order: 1;
   }
   header_icon {
+	margin-top:5px;
     float: left;
     width: 20%;
     order: 2;
@@ -133,7 +142,6 @@
   ql_article {
     float: left;
     width: 20%;
-	height:150px;
    } 
 
   footer_email, footer_hardware, my_signature {
@@ -150,4 +158,3 @@
     width: 14%;
    } 
 }
-
