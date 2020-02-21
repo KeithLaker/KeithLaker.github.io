@@ -206,10 +206,11 @@ img {
 }
 
 .main_wrapper {
-  margin: 15px; 
+  margin: 0px; 
   padding: 0 !important; 
   mso-line-height-rule: exactly;
   width:100%;
+  border-width:0px;
 }
 
 
