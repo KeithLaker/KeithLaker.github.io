@@ -1,49 +1,48 @@
+/* Printer Styles */
 @media print {
  .container, .container_header, .container_intro, .container_feature, .container_feature_flow,  .container_collateral, .container_gl, .container_blog, .container_links,  .container_sm, .container_footer {
-     max-width: 720px;
-     display: grid;
+   width: 990px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 
-  #header1_small {
-    line-height:38px;
-	}
-
-  #header4_small {
-    line-height:18px;
-	}
-	
-	
 .container_header {
-	height:480px;
+	height:290px;
+	width:990px;
 	background-repeat: no-repeat;
 	background-size: cover; 
 	}
+ 
+ header_confidential {
+    float: left;
+    width: 100%;
+    order: 1;
+  }
 
   header_section {
     float: left;
-    width: 80%;
-    order: 2;
-    margin-left: 5px;
-    margin-right: 5px;
+	margin-top:5px;
+	height:220px;
+    width: 65.8%;
+    order: 1;
   }
   header_icon {
+	margin-top:5px;
     float: left;
-    width: 85%;
-    order: 1;
-    margin-left: 20px;
-    margin-right: 5px;
+    width: 20%;
+    order: 2;
   }
   banner_section {
     float: left;
     width: 90%;
 	margin-left: 10px;
 	margin-right: 10px;
-   }
-  internal_banner{
+  }
+  internal_banner {
     float: left;
     width: 90%;
   }
-
   intro_section_header {
     float: left;
     width: 90%;
@@ -51,25 +50,28 @@
   intro_section_text {
     float: left;
     width: 90%;
+	margin-bottom:25px;
    }
- feature_icon, livesql_icon {
+  feature_icon, livesql_icon {
     float: left;
-    width: 90%;
-	margin-top:20px;
+    width: 10%;
+	margin-bottom: 50px;
+	margin-top:10px;
    }
- feature_text, archive_text {
+  feature_text, gl_text, archive_text {
     float: left;
-    width: 90%;	
-    margin-top:10px;
-	margin-bottom:10px;
+    width: 80%;
+	margin-bottom:0px;
+	margin-top:50px;
    }
+
   collateral_box {
     float: left;
-    width: 90%;
-	margin-bottom:20px;
-	margin-top:-2px;
-	margin-left:10px;
-	margin-right:10px;
+    width: 28%;
+	margin-bottom:55px;
+	margin-top:5px;
+	margin-left:0px;
+	margin-right:0px;
    }
 
  collateral_banner {
@@ -81,50 +83,68 @@
 
  collateral_text {
     float: left;
-    width: 90%;
+    width: 95%;
 	margin-left:10px;
 	margin-right:0px;
 	margin-bottom:2px;
 	margin-top:5px;
    }
 
-  livesql_text {
+ livesql_text {
     float: left;
     width: 70%;
 	margin-bottom:10px;
-	margin-top:10px;
+	margin-top:80px;
    }
- blog_header_icon, archive_header_icon {
+
+
+  blog_header_icon, archive_header_icon {
     float: left;
-    width: 90%;
-    margin-top: 20px;
-    margin-bottom:20px
+    width: 10%;
+    margin-top: 10px;
+    margin-bottom:20px;
    }
+
+  gl_header_icon {
+    float: left;
+    width: 10%;
+    order: 2;
+  }
+
+  gl_header {
+    float: left;
+    width: 60%;
+    order: 1;
+	margin-top:50px;
+	margin-bottom:50px;	
+  }
+
  blog_header {
     float: left;
-    width: 90%;
+    width: 70%;
+    margin-top: 20px;
     margin-bottom:20px
+
    }
- blog_article {
+  blog_article {
     float: left;
-    width: 90%;
-   }
- archive_header  {
-    float: left;
-    width: 90%;
-    margin-bottom:20px
-   }
- archive_text {
-    float: left;
-    width: 90%;
-   }
- ql_article {
-    float: left;
-    width: 90%;
+    width: 30%;
 	height:150px;
    } 
 
-footer_email, footer_hardware, my_signature {
+  archive_header {
+    float: left;
+    width: 70%;
+    margin-top:20px;
+    margin-bottom:50px;
+  }
+
+  ql_article {
+    float: left;
+    width: 20%;
+   } 
+
+  footer_email, footer_hardware, my_signature {
     float: left;
     width: 100%;
    }
@@ -133,13 +153,8 @@ footer_email, footer_hardware, my_signature {
     width: 90%;
     margin-bottom:20px
    }
- sm_link {
+  sm_link {
     float: left;
-    width: 90%;
+    width: 14%;
    } 
-
-feature_text, livesql_text, gl_text, archive_text {
-	text-align:left !important;
-	margin-left:10px !important;
-	}
 }

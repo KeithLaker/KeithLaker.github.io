@@ -1,3 +1,4 @@
+/* Small Styles */
 
 @media 
 only screen
@@ -17,24 +18,31 @@ only screen
 	
 	
 .container_header {
-	height:340px;
+	height:320px;
 	background-repeat: no-repeat;
 	background-size: cover; 
 	}
 
+ header_confidential {
+    float: left;
+    width: 100%;
+    order: 1;
+  }
+
   header_section {
     float: left;
-    width: 80%;
+    width: 90%;
     order: 2;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
   }
+
   header_icon {
     float: left;
-    width: 85%;
+    width: 90%;
     order: 1;
-    margin-left: 20px;
-    margin-right: 5px;
+    margin-left: 5%;
+    margin-right: 55;
   }
   banner_section {
     float: left;
@@ -125,7 +133,6 @@ only screen
  ql_article {
     float: left;
     width: 90%;
-	height:150px;
    } 
 
 footer_email, footer_hardware, my_signature {
@@ -148,3 +155,4 @@ feature_text, livesql_text, gl_text, archive_text {
 	}
 
 }
+

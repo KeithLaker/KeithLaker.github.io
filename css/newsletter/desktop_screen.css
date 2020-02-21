@@ -1,160 +1,160 @@
 /* Desktop Styles */
 @media only screen and (min-width: 990px) {
   .container,  .container_header, .container_intro, .container_feature, .container_collateral, .container_feature_flow, .container_gl, .container_blog, .container_links, .container_sm, .container_footer {
-    width: 990px !important;
-    display: flex !important;
-    flex-wrap: wrap !important;
-    flex-direction: row !important;
+    width: 990px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 
 .container_header {
-	height:185px !important;
-	width:990px !important;
-	background-repeat: no-repeat !important;
-	background-size: cover !important; 
+	height:185px;
+	width:990px;
+	background-repeat: no-repeat;
+	background-size: cover; 
 	}
  
  header_confidential {
-    float: left !important;
-    width: 100% !important;
-    order: 1 !important;
+    float: left;
+    width: 100%;
+    order: 1;
   }
 
   header_section {
-    float: left !important;
-	margin-top:5px !important;
-	height:170px !important;
-    width: 65.8% !important;
-    order: 1 !important;
+    float: left;
+	margin-top:5px;
+	height:170px;
+    width: 65.8%;
+    order: 1;
   }
   header_icon {
-	margin-top:5px !important;
-    float: left !important;
-    width: 20% !important;
-    order: 2 !important;
+	margin-top:5px;
+    float: left;
+    width: 20%;
+    order: 2;
   }
   banner_section {
-    float: left !important;
-    width: 90% !important;
-	margin-left: 10px !important;
-	margin-right: 10px !important;
+    float: left;
+    width: 90%;
+	margin-left: 10px;
+	margin-right: 10px;
   }
   internal_banner {
-    float: left !important;
-    width: 90% !important;
+    float: left;
+    width: 90%;
   }
   intro_section_header {
-    float: left !important;
-    width: 90% !important;
+    float: left;
+    width: 90%;
    }
   intro_section_text {
-    float: left !important;
-    width: 90% !important;
-	margin-bottom:25px !important;
+    float: left;
+    width: 90%;
+	margin-bottom:25px;
    }
   feature_icon, livesql_icon {
-    float: left !important;
-    width: 10% !important;
-	margin-bottom: 50px !important;
-	margin-top:10px !important;
+    float: left;
+    width: 10%;
+	margin-bottom: 50px;
+	margin-top:10px;
    }
   feature_text, gl_text, archive_text {
-    float: left !important;
-    width: 80% !important;
-	margin-bottom:0px !important;
-	margin-top:50px !important;
+    float: left;
+    width: 80%;
+	margin-bottom:0px;
+	margin-top:50px;
    }
 
   collateral_box {
-    float: left !important;
-    width: 28% !important;
-	margin-bottom:55px !important;
-	margin-top:5px !important;
-	margin-left:0px !important;
-	margin-right:0px !important;
+    float: left;
+    width: 28%;
+	margin-bottom:55px;
+	margin-top:5px;
+	margin-left:0px;
+	margin-right:0px;
    }
 
  collateral_banner {
-    float: left !important;
-    width: 100% !important;
-	margin-bottom:5px !important;
-	margin-top:5px !important;
+    float: left;
+    width: 100%;
+	margin-bottom:5px;
+	margin-top:5px;
    }
 
  collateral_text {
-    float: left !important;
-    width: 95% !important;
-	margin-left:10px !important;
-	margin-right:0px !important;
-	margin-bottom:2px !important;
-	margin-top:5px !important;
+    float: left;
+    width: 95%;
+	margin-left:10px;
+	margin-right:0px;
+	margin-bottom:2px;
+	margin-top:5px;
    }
 
  livesql_text {
-    float: left !important;
-    width: 70% !important;
-	margin-bottom:10px !important;
-	margin-top:80px !important;
+    float: left;
+    width: 70%;
+	margin-bottom:10px;
+	margin-top:80px;
    }
 
 
   blog_header_icon, archive_header_icon {
-    float: left !important;
-    width: 10% !important;
-    margin-top: 10px !important;
-    margin-bottom:20px !important;
+    float: left;
+    width: 10%;
+    margin-top: 10px;
+    margin-bottom:20px;
    }
 
   gl_header_icon {
-    float: left !important;
-    width: 10% !important;
-    order: 2 !important;
+    float: left;
+    width: 10%;
+    order: 2;
   }
 
   gl_header {
-    float: left !important;
-    width: 60% !important;
-    order: 1 !important;
-	margin-top:50px !important;
-	margin-bottom:50px !important;	
+    float: left;
+    width: 60%;
+    order: 1;
+	margin-top:50px;
+	margin-bottom:50px;	
   }
 
  blog_header {
-    float: left !important;
-    width: 70% !important;
-    margin-top: 20px !important;
+    float: left;
+    width: 70%;
+    margin-top: 20px;
     margin-bottom:20px
 
    }
   blog_article {
-    float: left !important;
-    width: 30% !important;
-	height:150px !important;
+    float: left;
+    width: 30%;
+	height:150px;
    } 
 
   archive_header {
-    float: left !important;
-    width: 70% !important;
-    margin-top:20px !important;
-    margin-bottom:50px !important;
+    float: left;
+    width: 70%;
+    margin-top:20px;
+    margin-bottom:50px;
   }
 
   ql_article {
-    float: left !important;
-    width: 20% !important;
+    float: left;
+    width: 20%;
    } 
 
   footer_email, footer_hardware, my_signature {
-    float: left !important;
-    width: 100% !important;
+    float: left;
+    width: 100%;
    }
  sm_header {
-    float: left !important;
-    width: 90% !important;
+    float: left;
+    width: 90%;
     margin-bottom:20px
    }
   sm_link {
-    float: left !important;
-    width: 14% !important;
+    float: left;
+    width: 14%;
    } 
 }

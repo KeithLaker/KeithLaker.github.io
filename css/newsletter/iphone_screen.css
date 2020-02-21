@@ -1,3 +1,5 @@
+/* iPhone Styles */
+
 @media all and (max-width: 419px) {
   .container, .container_header, .container_intro, .container_feature, .container_feature_flow,  .container_collateral, .container_gl, .container_blog, .container_links,  .container_sm, .container_footer {
      max-width: 420px;
@@ -14,24 +16,31 @@
 	
 	
 .container_header {
-	height:480px;
+	height:370px;
 	background-repeat: no-repeat;
 	background-size: cover; 
 	}
 
+ header_confidential {
+    float: left;
+    width: 100%;
+    order: 1;
+    font-size: 8px;
+  }
+
   header_section {
     float: left;
-    width: 80%;
+    width: 92%;
     order: 2;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 2%;
+    margin-right: 2%;
   }
   header_icon {
     float: left;
-    width: 85%;
+    width: 80%;
     order: 1;
-    margin-left: 20px;
-    margin-right: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   banner_section {
     float: left;
@@ -121,7 +130,6 @@
  ql_article {
     float: left;
     width: 90%;
-	height:150px;
    } 
 
 footer_email, footer_hardware, my_signature {
