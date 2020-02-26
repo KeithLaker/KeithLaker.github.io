@@ -221,3 +221,44 @@ a.btt {
   border-color: #454545 !important;
   border-style: solid !important;
 }
+
+
+.collapsible {
+  background-color: #2D7480 !important;
+  color: white  !important;
+  cursor: pointer !important;
+  padding: 18px !important;
+  width: 100% !important;
+  border: none !important;
+  outline: none !important;
+  font-size: 15px !important;
+  text-align:center !important;
+  background-image: url('https://www.oracle.com/asset/web/i/rw-natural06-15p.png') !important;
+}
+
+.active, .collapsible:hover {
+  background-color: #2D7480 !important;
+}
+
+.collapsible:after {
+  content: '\002B' !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size:40pt !important;
+  float: right !important;
+  margin-right: 50% !important;
+}
+
+.active:after {
+  content: "\2212" !important;
+}
+
+.content {
+  padding: 0 18px !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  transition: max-height 0.2s ease-out !important;
+  background-color: white !important;
+}
+
+area { outline: none !important; }
