@@ -222,6 +222,14 @@ a.btt {
   border-style: solid !important;
 }
 
+.border-edge {
+ width:80px;
+ background-image: url('https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/e4d1045cb7ad2dc5fd0b22313077053d/redwood_design.png');
+ background-position: left top !important;
+ background-size: 890px !important;
+ background-color: grey !important;
+}
+
 
 .collapsible {
   background-color: #2D7480 !important;
