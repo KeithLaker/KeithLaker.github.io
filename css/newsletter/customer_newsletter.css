@@ -230,6 +230,21 @@ a.btt {
  background-color: grey !important;
 }
 
+table.helper_learn {
+ background-image: url('https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/7232595a9e15dea24501c6b61c8681ee/redwood_analyze.jpg') !important;
+ background-position: left top !important;
+ background-size: 250px 290px !important;
+ background-color: grey !important;
+ background-repeat: no-repeat !important;
+}
+
+table.helper_do {
+ background-image: url('https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/7b078d381f1f83eb5939f955a9e62312/redwood_success.jpg') !important;
+ background-position: left top !important;
+ background-size: 250px 290px !important;
+ background-color: grey !important;
+ background-repeat: no-repeat !important;
+}
 
 .collapsible {
   background-color: #2D7480 !important;
