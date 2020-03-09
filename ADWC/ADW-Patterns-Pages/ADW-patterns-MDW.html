@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+	<head>
+		<title>Autonomous Data Warehouse Use Case Patterns</title>
+		<meta name="Title" content="Oracle Database for Data Warehousing and Big Data">
+		<meta name="Description" content="Home page for features and options of Oracle Database which support data warehousing and data.">
+		<meta name="Keywords" content="oracle database, data warehousing, business intelligence, exadata, database machine, big data, 18c, 19c">
+
+<!-- Container/Display Start -->
+
+<!-- _Raw-Text -->
+	<!-- css / js files start -->
+	<script>
+	!function(){
+		var d=document.documentElement;d.className=d.className.replace(/no-js/,'js');
+		if(document.location.href.indexOf('betamode=') > -1) document.write('<script src="https://www.oracle.com/asset/web/js/ocom-betamode.js"><\/script>');
+	}();
+	</script>
+		<link data-wscss href="https://www.oracle.com/asset/web/css/ocom-v1-base.css" rel="stylesheet">
+		<link data-wscss href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="preload" as="style" onload="this.rel='stylesheet'" onerror="this.rel='stylesheet'">
+		<noscript>
+			<link href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="stylesheet">
+		</noscript>
+	<script data-wsjs src="https://www.oracle.com/asset/web/js/jquery-min.js" async onload="$('head link[data-reqjq][rel=preload]').each(function(){var a = document.createElement('script');a.async=false;a.src=$(this).attr('href');this.parentNode.insertBefore(a, this);});$(function(){$('script[data-reqjq][data-src]').each(function(){this.async=true;this.src=$(this).data('src');});});"></script>
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/ocom-v1-base.js" rel="preload" as="script">
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/ocom-v1-lib.js" rel="preload" as="script">
+	<!-- end css / js files start -->
+<!-- / _Raw-Text -->
+
+<!-- Container/Display end -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="siteid" content="us">
+		<meta name="countryid" content="US">
+		<meta name="robots" content="index, follow">
+		<meta name="country" content="United States">
+		<meta name="Language" content="en">
+		<meta name="Updated Date" content="2018-04-19T19:17:32Z">
+	
+	<script type="text/javascript">
+		var pageData = pageData || {};
+		//page info
+		pageData.pageInfo = pageData.pageInfo || {};
+		pageData.pageInfo.language = "en";
+		pageData.pageInfo.country = "United States";
+		pageData.pageInfo.pageTitle = "Oracle Data Warehouse Use Case Patterns";
+		pageData.pageInfo.description = "Home page for features and options of Oracle Database which support data warehousing and data.";
+		pageData.pageInfo.keywords = "oracle database, data warehousing, business intelligence, exadata, database machine, big data, 18c, 19c";
+		pageData.pageInfo.siteId = "us";
+		pageData.pageInfo.countryId = "US";
+		pageData.pageInfo.updatedDate = "2018-04-19T19:17:32Z";
+	</script>
+	<!-- start : ocom/common/global/components/seo-taxonomy-meta-data-->
+	
+	<script type="text/javascript">
+		var pageData = pageData || {};
+		//taxonmy
+		pageData.taxonomy = pageData.taxonomy || {};
+		pageData.taxonomy.productServices = [];
+		pageData.taxonomy.industry = [];
+		pageData.taxonomy.region = [];
+		pageData.taxonomy.contentType = [];
+		pageData.taxonomy.buyersJourney = [];
+		pageData.taxonomy.revenue = [];
+		pageData.taxonomy.title = [];
+		pageData.taxonomy.audience = [];
+		pageData.taxonomy.persona = [];
+	</script>
+
+<!-- _Raw-Text -->
+<!-- www-us HeadAdminContainer -->
+<script async="async" type="text/javascript" src='//consent.truste.com/notice?domain=oracle.com&c=teconsent&js=bb&noticeType=bb&text=true&gtm=1&cdn=1&pcookie' crossorigin></script>
+		<style>
+#oReactiveChatContainer1 { display:none;}
+		</style>
+<!--DTM embed code - Header -->
+<script src="//assets.adobedtm.com/6f37a0dc9cdbe818dc4979828b58b88e3f060ea4/satelliteLib-e598c5b61e39a10b402e048e87dd27b0f1cd2d4c.js"></script>
+
+<!-- Truste for RU -->
+<script type="text/javascript">
+ if (location.pathname.indexOf("/ru/") == 0){
+ document.write('\x3Cscript async="async" src=//consent.truste.com/notice?domain=oracleru.com&c=teconsent&js=bb&noticeType=bb&text=true&gtm=1&cdn=1&pcookie crossorigin="">\x3C/script>');
+ }
+ </script>
+<!--End-->
+
+<!-- / _Raw-Text -->
+
+<!-- Container/Display end -->
+
+ 
+ <script>!function(){function o(n,i){if(n&&i)for(var r in i)i.hasOwnProperty(r)&&(void 0===n[r]?n[r]=i[r]:n[r].constructor===Object&&i[r].constructor===Object?o(n[r],i[r]):n[r]=i[r])}try{var n=decodeURIComponent("");if(n.length>0&&window.JSON&&"function"==typeof window.JSON.parse){var i=JSON.parse(n);void 0!==window.BOOMR_config?o(window.BOOMR_config,i):window.BOOMR_config=i}}catch(r){window.console&&"function"==typeof window.console.error&&console.error("mPulse: Could not parse configuration",r)}}();</script>
+ <script>!function(e){var a="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,a="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="DXNLE-YBWWY-AR74T-WMD99-77VRA",function(){function n(a){e.BOOMR_onload=a&&a.timeStamp||(new Date).getTime()}if(!e.BOOMR||!e.BOOMR.version&&!e.BOOMR.snippetExecuted){e.BOOMR=e.BOOMR||{},e.BOOMR.snippetExecuted=!0;var i,o,r,_=document.createElement("iframe");if(e[t])e[t]("load",n,!1);else if(e.attachEvent)e.attachEvent("onload",n);_.src="javascript:void(0)",_.title="",_.role="presentation",(_.frameElement||_).style.cssText="width:0;height:0;border:0;display:none;",r=document.getElementsByTagName("script")[0],r.parentNode.insertBefore(_,r);try{o=_.contentWindow.document}catch(O){i=document.domain,_.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",o=_.contentWindow.document}o.open()._l=function(){var e=this.createElement("script");if(i)this.domain=i;e.id="boomr-if-as",e.src=a+"DXNLE-YBWWY-AR74T-WMD99-77VRA",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(e)},o.write("<bo"+'dy onload="document._l();">'),o.close()}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var a=""=="true"?1:0,t="",n="rwh5knqx22ok4xofr2ya-f-bedd3d897-clientnsv4-s.akamaihd.net",i={"ak.v":25,"ak.cp":"82485","ak.ai":parseInt("165266",10),"ak.ol":"0","ak.cr":2,"ak.ipv":4,"ak.proto":"h2","ak.rid":"ecc3871","ak.r":20831,"ak.a2":a,"ak.m":"dscx","ak.n":"essl","ak.bpcip":"141.143.213.0","ak.cport":46539,"ak.gh":"23.212.108.11","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1573228208"};if(""!==t)i["ak.ruds"]=t;var o={i:!1,av:function(a){var t="http.initiator";if(a&&(!a[t]||"spa_hard"===a[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:n,init:function(){if(!o.i){var e=BOOMR.subscribe;e("before_beacon",o.av,null,null),e("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script>
+	</head>
+	<body class="f11 f11v6">
+		<style>
+ul {
+ list-style-type: square !important;
+ margin-left:55px; 
+}
+
+ul li::before {
+ content: "\2192"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+ color: grey; /* Change the color */
+ font-weight: bold; /* If you want it to be bold */
+ display: inline-block; /* Needed to add space between the bullet and the text */ 
+ width: 1em; /* Also needed for space (tweak if needed) */
+ margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+ol {
+ list-style-type: square !important;
+ margin-left:55px; 
+}
+
+ol li::before {
+ content: "\2192"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+ color: grey; /* Change the color */
+ font-weight: bold; /* If you want it to be bold */
+ display: inline-block; /* Needed to add space between the bullet and the text */ 
+ width: 1em; /* Also needed for space (tweak if needed) */
+ margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+		</style>
+		<div class="f11w1">
+			
+<!-- start Common/Header -->
+ 
+	<!-- Dispatcher:null -->
+	
+<!-- BEGIN: oWidget_C/_Raw-Text/Display -->
+<!-- CB83v2 -->
+			<section class="cb83 cb83v2 cpad bgblue" data-trackas="cb83" data-ocomid="cb83">
+				<div class="cb83w7 cwidth">
+					<div class="cb83w5">
+						<div class="svgimg obic">
+							<img src="https://www.oracle.com/a/tech/img/autonomous-data-warehouse-cloud.svg" alt="Autonomous Data Warehouse">
+						</div>
+					</div>
+					<div class="cb83w3">
+						<h2>Autonomous Data Warehouse<br>Use Case Patterns</h2>
+						<p>
+							Oracle Autonomous Data Warehouse is Oracle's new, fully managed database tuned and optimized for data warehouse workloads with the market-leading performance of Oracle Database. It delivers a completely new, comprehensive cloud experience for data warehousing that is easy, fast, and elastic.
+						</p>
+					</div>
+				</div>
+			</section>
+<!-- /CB83v2 -->
+<!-- CB27v5 -->
+			<section class="cb27 cb27v5 bgburgundy" data-trackas="cb27">
+				<div class="cb27w1 cwidth">
+					<div class="cb27w2">What's the different between a data warehouse, data mart and a data lake?</div>
+					<div class="cb27w3">
+						<div class="obttns">
+							<div class="bttn-darkburgundy obttn6">
+								<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/glossary-dw.html">Find out here</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+<!-- /CB27v5 -->
+			<section class="cb90 cb90v0 cpad bgvlightgrey" data-ocomid="cb90" data-trackas="cb90">
+				<div class="cb90w1 cwidth">
+				</div>
+			</section>
+
+<!-- CB87v0x2 -->
+			<section class="cb87 cb87v0 cb87txt cb87img cpad bgvlightgrey" data-trackas="cb87">
+				<div class="cb87w1 cwidth">
+					<div class="eyebrow">Get the Details</div>
+					<h2>Data Warehouse Use Case Patterns</h2>
+					<div class="col-framework col4 col-justified col-multi col-gutters col-hover col-top">
+						<div class="col-w1">
+							<a class="col-item" href="#mdw">
+								<div class="col-item-w1">
+									<img class="cb87w2" src="https://code.benco.io/icon-collection/official/Azure%20SQL%20DataWarehouse.svg">
+								</div>
+								<div class="col-item-w2">
+									<h3>Modern Data Warehouse</h3>
+								</div>
+							</a>
+							<a class="col-item" href="ADW-patterns-SM.html#esm">
+								<div class="col-item-w1">
+									<img class="cb87w2" width="50px !important" src="https://upload.wikimedia.org/wikipedia/commons/f/f8/X-office-spreadsheet.svg">
+								</div>
+								<div class="col-item-w2">
+									<h3>Spread-Marts</h3>
+								</div>
+							</a>
+							<a class="col-item" href="ADW-patterns-DL.html#dl">
+								<div class="col-item-w1">
+									<img class="cb87w2" src="https://image.flaticon.com/icons/svg/119/119592.svg">
+								</div>
+								<div class="col-item-w2">
+									<h3>Data Lake</h3>
+								</div>
+							</a>
+							<a class="col-item" href="ADW-patterns-DDS.html#dds">
+								<div class="col-item-w1">
+									<img class="cb87w2" src="https://image.flaticon.com/icons/svg/1588/1588847.svg">
+								</div>
+								<div class="col-item-w2">
+									<h3>Data Discovery Sandboxes</h3>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+<!-- CB27v5 -->
+			<section class="cb27 cb27v5 bgblue" data-trackas="cb27">
+				<div class="cb27w1 cwidth">
+					<div class="cb27w2" style="color:white; text-align:right;">Download Terraform template deployment file </div>
+					<div class="cb27w3">
+						<div class="obttns">
+							<div class="bttn-darkburgundy obttn6">
+								<a href="#">click here</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+<!-- CB27v5 -->			
+<!-- /CB87v0x2 -->
+			<a name="mdw"></a>
+			<section class="cb90 cb90v0 cpad bgvlightgrey" data-ocomid="cb90" data-trackas="cb90">
+				<br><br>
+				<div class="cb90w1 cwidth">
+					<h2>Pattern for a modern data warehouse</h2>
+					<img width="1400px" src="icons/modern_dw.png" usemap="#map_example">
+					<map name="map_example">
+						<area href="#oss" alt="Oracle Streaming Service" shape=poly coords="36,90, 178,90, 178,252, 36,252">
+						<area href="#oos" alt="Oracle Object Store"  shape=poly coords="36,270, 178,270, 178,422, 36,422">
+						<area href="#odi" alt="Oracle Data Integrator" shape=poly coords="390,170, 600,170, 600,400, 390,400">
+						<area href="#ggc" alt="Oracle GoldenGate Cloud" shape=poly coords="390,430, 600,430, 600,670, 390,670">
+						<area href="#adw" alt="Oracle Autonomous Data Warehouse" shape=poly coords="720,200, 950,200, 950,410, 720,410">
+						<area href="#dsc" alt="Oracle Data Safe" shape=poly coords="670,540, 890,540, 890,780, 670,780">
+						<area href="#oml" alt="Oracle Machine Learning" shape=poly coords="1110,540, 1350,540, 1350,780, 1110,780">
+						<area href="#oac" alt="Oracle Analytics" shape=poly coords="1150,120, 1390,120, 1390,350, 1150,350">
+					</map>
+					<br><br><br>
+				</div>
+			</section>
+<!-- _Raw-HTML -->
+
+<!-- CB90v0 -->
+			<section class="cb90 cb90v0 cpad bgvlightgrey" data-ocomid="cb90" data-trackas="cb90">
+				<div class="cb90w1 cwidth">
+					<br><br><h1>Stage 1 - CREATE</h1>
+					<a name="oos"></a>
+					<div class="cb90w2">
+						<div class="cb90w3">
+							<h3>Oracle Object Store</h3>
+							<div id="image_map">
+								<img height="100px" src="https://www.oracle.com/us/assets/obic-business-data-management-4500016.svg" />
+							</div>
+						</div>
+						<div class="cb90w4">
+							<p>The Oracle Cloud Infrastructure Object Storage service is an internet-scale, high-performance storage platform that offers reliable and cost-efficient data durability. The Object Storage service can store an unlimited amount of unstructured data of any content type, including analytic data and rich content, like images and videos.
+							</p>
+							<p>Object Storage is a regional service and is not tied to any specific compute instance. You can access data from anywhere inside or outside the context of the Oracle Cloud Infrastructure, as long you have internet connectivity and can access one of the Object Storage endpoints. Authorization and resource limits are discussed later in this topic.
+							</p>
+							<h4>Get more information...</h4>
+							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
+								<li> For a general overview of Oracle Object Store - <a href="https://docs.cloud.oracle.com/iaas/Content/Object/Concepts/objectstorageoverview.htm#OverviewofObjectStorage" target="_blank">click here</a>
+								</li>
+								<li> Learn how to setup and configure your Object Store - <a href="https://docs.cloud.oracle.com/iaas/Content/Object/Concepts/objectstorageoverview.htm#authentication" target="_blank">click here</a>
+								</li>
+								<li> Learn more about Object Store resources - <a href="https://docs.cloud.oracle.com/iaas/Content/Object/Concepts/objectstorageoverview.htm#resources" target="_blank">click here</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<a name="oss"></a>
+					<br><br>
+					<div class="cb90w2">
+						<div class="cb90w3">
+							<h3>Oracle Streaming Service</h3>
+							<img height="100px" src="https://docs.cloud.oracle.com/iaas/Content/Resources/Images/doc-portal-carousel-icon-streaming.png" />
+						</div>
+						<div class="cb90w4">
+							<p>The Oracle Cloud Infrastructure Streaming service provides a fully managed, scalable, and durable storage solution for ingesting continuous, high-volume streams of data that you can consume and process in real time. Streaming can be used for messaging, ingesting high-volume data such as application logs, operational telemetry, web click-stream data, or other use cases in which data is produced and processed continually and sequentially in a publish-subscribe messaging model.
+							</p>
+							<h4>Get more information...</h4>
+							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
+								<li> For a general overview of Oracle Streaming Service - <a href="https://docs.cloud.oracle.com/iaas/Content/Streaming/Concepts/streamingoverview.htm" target="_blank">click here</a>
+								</li>
+								<li> Learn how to setup and configure your Oracle Cloud Streaming service - <a href="https://blogs.oracle.com/developers/getting-your-feet-wet-with-oci-streams" target="_blank">click here</a>
+								</li>
+								<li> For instructions on how to manage streams - <a href="https://docs.cloud.oracle.com/iaas/Content/Streaming/Tasks/publishing.htm" target="_blank">click here</a>
+								</li>
+								<li> For information about publishing messages to a stream - <a href="https://blogs.oracle.com/developers/getting-your-feet-wet-with-oci-streams" target="_blank">click here</a>
+								</li>
+								<li> For information on how to consume messages - <a href="https://docs.cloud.oracle.com/iaas/Content/Streaming/Tasks/consuming.htm" target="_blank">click here</a>
+								</li>
+								<li> Learn more about migrating your Kafka Workloads to Oracle Cloud Streaming - <a href="https://blogs.oracle.com/developers/migrate-your-kafka-workloads-to-oracle-cloud-streaming" target="_blank">click here</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<br><br><h1>Stage 2 - INGEST</h1>
+					<a name="odi"></a>
+					<br><br>
+					<div class="cb90w2">
+						<div class="cb90w3">
+							<h3>Oracle Data Integrator</h3>
+							<img height="100px" src="https://docs.oracle.com/middleware/12212/odi/dcommon/img/3-middleware.png" />
+						</div>
+						<div class="cb90w4">
+							<p>Oracle Data Integrator provides a fully unified solution for building, deploying, and managing complex data warehouses or as part of data-centric architectures in a SOA or business intelligence environment. In addition, it combines all the elements of data integration—data movement, data synchronization, data quality, data management, and data services—to ensure that information is timely, accurate, and consistent across complex systems.
+							</p>
+							<p>ODI via the Cloud Marketplace is free to use with Autonomous Data Warehouse as the target. You only pay for the hardware resources required to run the ODI image from Oracle Marketplace.
+							</p>
+							<h4>Get more information...</h4>
+							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
+								<li> For a general overview of Oracle Data Integrator - <a href="https://docs.cloud.oracle.com/iaas/Content/Streaming/Concepts/streamingoverview.htm" target="_blank">click here</a>
+								</li>
+								<li> To download and configure ODI using Cloud Marketplace - <a href="https://cloudmarketplace.oracle.com/marketplace/en_US/listing/59419903" target="_blank">click here</a>
+								</li>
+								<li> For guided tutorials for ODI - <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:24:113660735353666::::P24_CONTENT_ID,P24_PREV_PAGE:7952,24" target="_blank">click here</a>
+								</li>
+								<li> For information about how to setup an integration project - <a href="https://docs.oracle.com/en/middleware/fusion-middleware/data-integrator/12.2.1.4/odidg/overview-integration-project.html#GUID-D27945BB-D678-414A-8AA0-6FAD22CA1B22" target="_blank">click here</a>
+								</li>
+								<li> For information on how to consume messages - <a href="https://docs.cloud.oracle.com/iaas/Content/Streaming/Tasks/consuming.htm" target="_blank">click here</a>
+								</li>
+								<li> Learn more about migrating your Kafka Workloads to Oracle Cloud Streaming - <a href="https://blogs.oracle.com/developers/migrate-your-kafka-workloads-to-oracle-cloud-streaming" target="_blank">click here</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<a name="ggc"></a>
+					<br><br>
+					<div class="cb90w2">
+						<div class="cb90w3">
+							<h3>GoldenGate Cloud</h3>
+							<img height="100px" src="https://docs.oracle.com/goldengate/c1221/gg-winux/dcommon/img/goldengate.png" />
+							<div class="cb90-img">
+								<div class="svgimg obic"><img src="https://www.oracle.com/us/assets/obic-business-data-management-4500016.svg" /></div>
+							</div>
+						</div>
+						<div class="cb90w4">
+							<p>Oracle GoldenGate is a comprehensive software package for real-time data integration and replication in heterogeneous IT environments. The product set enables high availability solutions, real-time data integration, transactional change data capture, data replication, transformations, and verification between operational and analytical enterprise systems.
+							</p>
+							<p>When you create an Oracle GoldenGate Cloud Service instance, the necessary compute infrastructure such as virtual machines and storage volumes is set up for you.
+							</p>
+							<p>As soon as you provision your Oracle GoldenGate Cloud Service account, you can access all features immediately and start preparing your data for replication. You don't need to set up a local environment.
+							</p>
+							<h4>Get more information...</h4>
+							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
+								<li> For a general overview of GoldenGate Cloud - <a href="https://docs.oracle.com/en/cloud/paas/goldengate-cloud/oggcs/what-is-oracle-goldengate-cloud.html" target="_blank">click here</a>
+								</li>
+								<li> For more information about the key components of GoldenGate Cloud - <a href="https://docs.oracle.com/en/cloud/paas/goldengate-cloud/oggcs/components-oracle-goldengate-cloud.html" target="_blank">click here</a>
+								</li>
+								<li> For more information about replicating data to ADW - <a href="https://docs.oracle.com/en/cloud/paas/goldengate-cloud/oggcs/replicate-data-using-oracle-goldengate-cloud.html#GUID-48017565-D642-4B40-AEF5-1844FD20E2E0" target="_blank">click here</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<a name="adw"></a>
+					<br><br><h1>Stage 3 - STORE</h1>
+					<br><br>
+					<div class="cb90w2">
+						<div class="cb90w3">
+							<h3>Autonomous Data Warehouse</h3>
+							<img height="100px" src="https://www.oracle.com/a/tech/img/autonomous-data-warehouse-cloud.svg" />
+						</div>
+						<div class="cb90w4">
+							<p>Oracle Autonomous Data Warehouse provides an easy-to-use, fully autonomous database that scales elastically, delivers fast query performance and requires no database administration.
+							</p>
+							<p>Fully-managed cloud service that makes it very simple to provision a data warehouse, quickly and easily load data and query that data using built-in web-based tools such as notebooks.
+							<h4>Get more information...</h4>
+							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
+								<li> Watch this video to hosted by Oracle SVP Çetin Özbütün to get an overview of Oracle Autonomous Data Warehouse and understand how it offers automated "load and go" management and tuning, high performance, and instant elasticity, <a href="https://www.youtube.com/watch?v=tZMZODoi2xw" target="_blank">click here</a>
+								</li>
+								<li> Learn more about what is an Autonomous Data Warehouse, <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/autonomous-intro-adw.html#GUID-4B91499D-7C2B-46D9-8E4D-A6ABF2093414" target="_blank">click here</a>
+								</li>
+								<li> Watch this tutorial to learn more about getting started and provisioning your first Autonomous Data Warehouse <a href="http://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:22488" target="_blank">click here</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<a name="dsc"></a>
+					<br><br><h1>Stage 4 - SECURE</h1>
+					<br><br>
+					<div class="cb90w2">
+						<div class="cb90w3">
+							<h3>Data Safe</h3>
+							<img height="100px" src="https://www.oracle.com/technetwork/database/security/dbsat/dbsat-logo-3941805.png" />
+						</div>
+						<div class="cb90w4">
+							<p>Oracle Data Safe helps organizations to accelerate Cloud adoption, achieve data privacy and compliance by discovering, classifying, and masking sensitive data. It also helps them establish IT internal controls for their database infrastructure in the cloud. Audit information is consolidated from multiple sources and alerts/reports are generated to meet security and regulatory requirements.
+							</p>
+							<h4>Get more information...</h4>
+							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
+								<li> For a general overview of Data Safe - <a href="https://docs.oracle.com/en/cloud/paas/data-safe/udscs/features-oracle-data-safe.html" target="_blank">click here</a>
+								</li>
+								<li> To learn how to enable Oracle Data Safe in a region of your tenancy - <a href="https://docs.oracle.com/en/cloud/paas/data-safe/udscs/enable-oracle-data-safe-region.html" target="_blank"> click here</a>
+								</li>
+								<li> For more information about the key concepts and terminology - <a href="https://docs.oracle.com/en/cloud/paas/data-safe/udscs/key-concepts-and-terminology.html" target="_blank">click here</a>
+								</li>
+								<li> For more information about registering ADW with Data Safe - <a href="https://docs.oracle.com/en/cloud/paas/data-safe/udscs/register-autonomous-database1.html" target="_blank">click here</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<a name="oml"></a>
+					<br><br><h1>Stage 5 - TRAIN-DISCOVER</h1>
+					<br><br>
+					<div class="cb90w2">
+						<div class="cb90w3">
+							<h3>Machine Learning Notebook</h3>
+							<img height="100px" src="https://learn.oracle.com/education/html/ols5/php/getArticleImage.php?componentId=79042&id=11885" />
+							<div class="cb90-img">
+								<div class="svgimg obic"></div>
+							</div>
+						</div>
+						<div class="cb90w4">
+							<p>Oracle Machine Learning is a SQL notebook interface for data scientists to perform machine learning in the Oracle Autonomous Data Warehouse (ADW). Notebook technologies support the creation of scripts while supporting the documentation of assumptions, approaches and rationale to increase data science team productivity.
+							</p>
+							<p>Oracle Machine Learning SQL notebooks, based on Apache Zeppelin technology, enable teams to collaborate to build, evaluate and deploy predictive models and analytical methodologies in the Oracle ADW.
+							</p>
+							<h4>Get more information...</h4>
+							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
+								<li> For more information on getting started with Machine Learning SQL notebooks - <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/omlug/get-started-oracle-machine-learning.html#GUID-2AEC56A4-E751-48A3-AAA0-0659EDD639BA" target="_blank">click here</a>
+								</li>
+								<li> For more information about the machine learning example templates - <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/omlug/use-library-collaborate-users.html#GUID-88B562CF-553C-4AD5-9D56-61B02E5ECBFA" target="_blank"> click here</a>
+								</li>
+								<li> For more information about data analysis and data visualization with OML - <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/omlug/get-started-notebooks-data-analysis-and-data-visualization.html#GUID-FC822409-1345-4172-8C23-C911D0590034" target="_blank">click here</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="cb90w2">
+						<div class="cb90w3">
+							<h3>Oracle Advanced Analytics</h3>
+							<img height="100px" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/1f9bdd45-713b-4e38-9ee6-05021c739181/Image/6e1b1f4c1f1022d874e6e92c066ddbf4/machine_learning_icon_color.png" />
+							<div class="cb90-img">
+								<div class="svgimg obic"></div>
+							</div>
+						</div>
+						<div class="cb90w4">
+							<p>Oracle machine learning moves the algorithms to the data, processing data where it resides—minimizing or eliminating data movement, achieving scalability, preserving security, and accelerating time-to-model deployment. Oracle delivers high performance, parallelized in-database implementations of machine learning algorithms and integration.
+							</p>
+							<h4>Get more information...</h4>
+							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
+								<li> For more information on getting started with machine learning - <a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/what-is-data-mining.html#GUID-8232ABAD-E6B9-4C70-B227-E00738040932" target="_blank">click here</a>
+								</li>
+								<li> For more information about the basics of machine learning - <a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/data-mining-basics.html#GUID-2116E665-721E-4EBA-AFE1-A30D6E8078C6" target="_blank"> click here</a>
+								</li>
+								<li> For more information about in-database scoring - <a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/data-mining-basics.html#GUID-21677973-2248-4119-A560-24D7F2FD7EAD" target="_blank">click here</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<a name="oac"></a>
+					<br><br><h1>Stage 6 - VISUALIZE</h1>
+					<br><br>
+					<div class="cb90w2">
+						<div class="cb90w3">
+							<h3>Oracle Analytics Desktop</h3>
+							<img height="100px" src="https://docs.oracle.com/en/middleware/bi/analytics-desktop/sp_common/shared-images/DataVisualizationDesktop-1.png" />
+							<div class="cb90-img">
+								<div class="svgimg obic"></div>
+							</div>
+						</div>
+						<div class="cb90w4">
+							<p>Oracle Analytics Desktop provides standalone data exploration and visualization in a per-user desktop download. Oracle Analytics Desktop is the tool for quick exploration of sample data from multiple sources or for analyses and investigation of your own local data sets.
+							</p>
+							<p>Oracle Analytics Desktop enables you to visualize your data so you can focus on exploring data patterns. Just upload data files or connect to Oracle Applications or a database, select the elements that you’re interested in, and let Oracle Analytics Desktop find the best way to visualize it. Choose from a variety of visualizations to look at data in a specific way.
+							</p>
+							<h4>Get more information...</h4>
+							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
+								<li> For more information on getting started with Analytics Desktop - <a href="https://docs.oracle.com/en/middleware/bi/analytics-desktop/bidvd/get-started-samples.html" target="_blank">click here</a>
+								</li>
+								<li> For more information about connecting ADW to Analytics Desktop - <a href="https://docs.oracle.com/en/middleware/bi/analytics-desktop/bidvd/create-connections-oracle-adw.html#GUID-D3542D1C-B21F-45D1-86F7-DBAAE43A5574" target="_blank"> click here</a>
+								</li>
+								<li> For more information about exploring and visualizing your data - <a href="https://docs.oracle.com/en/middleware/bi/analytics-desktop/bidvd/explore-visualize-and-analyze-data.html" target="_blank">click here</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="cb90w2">
+						<div class="cb90w3">
+							<h3>Oracle Analytics Cloud</h3>
+							<img height="100px" src="https://docs.oracle.com/en/cloud/paas/analytics-cloud/sp_common/shared-images/Analytics-cloud-270.png" />
+							<div class="cb90-img">
+								<div class="svgimg obic"></div>
+							</div>
+						</div>
+						<div class="cb90w4">
+							<p>Oracle Database is able to efficiently leverage all hardware resources - multiple CPUs, multiple IO channels, multiple storage units, multiple nodes in a cluster. The Oracle Optimizer can automatically decide if a query should run in parallel and the degree of parallelism to use based on the resource requirements of the statement.
+							</p>
+							<h4>Get more information...</h4>
+							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
+								<li> For more information on getting started with Analytics Cloud - <a href="https://docs.oracle.com/en/cloud/paas/analytics-cloud/acsgs/what-is-oracle-analytics-cloud.html#GUID-E68C8A55-1342-43BB-93BC-CA24E353D873" target="_blank">click here</a>
+								</li>
+								<li> For more information about connecting ADW to Analytics Cloud - <a href="https://docs.oracle.com/en/cloud/paas/analytics-cloud/acubi/create-connections-oracle-adw.html" target="_blank"> click here</a>
+								</li>
+								<li> For more information about exploring and visualizing your data - <a href="https://docs.oracle.com/en/cloud/paas/analytics-cloud/acubi/explore-visualize-and-analyze-data.html" target="_blank">click here</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+<!-- /CB90v0 -->
+<!-- / _Raw-HTML -->
+
+<!-- CB27v5 -->
+			<section class="cb27 cb27v5 bggreen" data-trackas="cb27">
+				<div class="cb27w1 cwidth">
+					<div class="cb27w2">Checkout Latest Autonomous Data Warehouse New Features</div>
+					<div class="cb27w3">
+						<div class="obttns">
+							<div class="bttn-darkburgundy obttn6">
+								<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/adw-features.html">Click here</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+<!-- /CB27v5 -->
+
+
+<!-- _Raw-HTML -->
+<!-- CW65v1 -->
+			<section class="cw65 cw65v1 cpad bgvlightgrey" data-feedsrc="https://www.oracle.com/json/datawarehousing.json" data-ocomid="cw65" data-template="cw65-blogfeed" data-trackas="cw65">
+				<div class="cw65w5 cwidth">
+					<div class="eyebrow">Trending</div>
+					<h2>Oracle Big Data Warehousing Blog</h2>
+				</div>
+				<div class="cw65w0 cwidth ofeed"><!-- data-feedsrc item --></div>
+			</section>
+<!-- /CW65v1 -->
+<!-- / _Raw-HTML -->
+
+<!-- CN25v0 -->
+			<section class="cn25 cn25v0 cpad" data-trackas="cn25" data-ocomid="cn25">
+				<div class="cn25w1 cwidth">
+					<div class="cn25w3">
+						<a href="#resources" data-viewmore="resources">Key Resources</a>
+						<a href="#blogs" data-viewmore="blogs">Data Warehouse Blogs</a>
+						<a href="#documentation" data-viewmore="documentation">Data Warehouse Documentation</a>
+						<a href="#customers" data-viewmore="customers">Customer Videos</a>
+					</div>
+
+<!-- /CN25v0 -->
+					<div data-categories="resources">
+						<div class="col-item" href="resources">
+							<div class="col-item-w1">
+								<h5><a name="resources">Key Resources For Data Warehousing</a></h5>
+								<ul class="cta-list">
+									<li><a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/data-warehousing.html">Data Warehousing with 19c</a>
+									</li>
+									<li><a href="https://education.oracle.com/searchresults?Nr=product.active%3A1&amp;Ntt=warehousing&amp;Nty=1&amp;No=0&amp;Nrpp=12&amp;Rdm=322&amp;searchType=simple&amp;type=search">Data Warehousing Training and Certification</a>
+									</li>
+									<li><a href="https://education.oracle.com/searchresults?Nr=product.active%3A1&amp;Ntt=19c&amp;Nty=1&amp;No=0&amp;Nrpp=12&amp;Rdm=89&amp;searchType=simple&amp;type=search">Oracle Database 19c Training Curriculum</a>
+									</li>
+									<li><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:50:105661262070804:::50:P50_COURSE_ID,P50_EVENT_ID:460,6353">Apply Oracle Database 19c New Features</a>
+									</li>
+									<li><a href="https://education.oracle.com/database/data-warehousing/pFamily_31?certPage=true">Certification for Data Warehouse/Database Administrators</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div data-categories="blogs">
+						<div class="col-item" href="blogs">
+							<div class="col-item-w1">
+								<h5><a name="blogs">Key Blogs For Data Warehousing</a></h5>
+								<ul class="cta-list">
+									<li><a href="https://oracle-big-data.blogspot.com/">Analytic SQL Blog</a></li>
+									<li><a href="https://blogs.oracle.com/datawarehousing/">Data Warehouse Insider Blog</a></li>
+									<li><a href="https://blogs.oracle.com/datamining/">Machine Learning Blog</a></li>
+									<li><a href="https://blogs.oracle.com/dw-big-data-global-leaders/">Data Warehouse and Big Data Global Leaders Blog</a>
+									</li>
+									<li><a href="https://blogs.oracle.com/optimizer/">Optimizer Blog</a></li>
+									<li><a href="https://blogs.oracle.com/r/">R Blog</a></li>
+									<li><a href="https://blogs.oracle.com/oraclespatial/">Spatial and Graph Blog</a></li>
+									<li><a href="https://blogs.oracle.com/sql/">SQL Blog</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div data-categories="documentation">
+						<div class="col-item" href="documentation">
+							<div class="col-item-w1">
+								<h5><a name="documentation">19c Documentation For Data Warehousing</a></h5>
+								<ul class="cta-list">
+									<li><a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/index.html/">Database Data Warehousing Guide</a>
+									</li>
+									<li><a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/tgdba/index.html">Database Performance Tuning Guide</a>
+									</li>
+									<li><a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/sutil/index.html">Database Utilities</a>
+									</li>
+									<li><a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/tgsql/index.html">SQL Tuning Guide</a>
+									</li>
+									<li><a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/vldbg/index.html/">VLDB and Partitioning Guide</a>
+									</li>
+									<li><a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/index.html">Data Mining Concepts</a>
+									</li>
+									<li><a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/dmprg/index.html">Data Mining User's Guide</a>
+									</li>
+									<li><a href="https://docs.oracle.com/en/database/oracle/r-enterprise/1.5.1/oreug/index.html">Oracle R Enterprise User's Guide</a>
+									</li>
+								</ul>
+								<h5><a name="documentation">Documentation Sets For Data Warehousing</a></h5>
+								<ul class="cta-list">
+									<li><a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/data-warehousing.html">19c Data Warehouse Documentation set</a>
+									</li>
+									<li><a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/data-warehousing.html">18c Data Warehouse Documentation set</a>
+									</li>
+									<li><a href="https://docs.oracle.com/en/database/oracle/oracle-database/12.2/data-warehousing.html">12c Release 2 Data Warehouse Documentation set</a>
+									</li>
+								</ul>
+								<h5><a name="documentation">Documentation For Autonomous Data Warehousing</a></h5>
+								<ul class="cta-list">
+									<li><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/business_analyst.html">Get Started as a Business Analyst</a>
+									</li>
+									<li><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/cloud_administrator.html">Get Started as a Cloud Admin</a>
+									</li>
+									<li><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/data_scientist.html">Get Started as a Data Scientist</a>
+									</li>
+									<li><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/data_warehouse_dev.html">Get Started as a DW Developer</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div data-categories="customers">
+						<div class="col-item" href="customers">
+							<div class="col-item-w1">
+								<h5><a name="customers">New Videos For Data Warehouse Customers</a></h5>
+								<p>New Customer Videos are available to support your sales effort for Oracle Autonomous Data Warehouse Cloud. Watch the videos and use them to initiate customer conversations on Autonomous Data Warehouse Cloud.
+								</p>
+								<ul class="cta-list">
+									<li>Sensa Analytics -&nbsp;<a href="https://www.youtube.com/watch?v=2re0rQjKfrg">Easy, Fast and Elastic Autonomous Data Warehouse Cloud Experience</a>
+									</li>
+									<li>Sensa Analytics -&nbsp;<a href="https://www.youtube.com/watch?v=peJaRkb2zmA" title="Eliminating Manual Operations with Autonomous Data Warehouse Cloud">Eliminating Manual Operations with Autonomous Data Warehouse Cloud</a>
+									</li>
+									<li>Hertz&nbsp; -&nbsp;<a href="https://www.youtube.com/watch?v=4RvC8Y8Mn_U">Analytics in Autonomous Data Warehouse Cloud</a>
+									</li>
+									<li>Hertz &ndash;&nbsp;<a href="https://www.youtube.com/watch?v=C8hml_gQlgE">Transitioning to Autonomous Data Warehouse Cloud</a>
+									</li>
+									<li>DX Marketing &ndash;&nbsp;<a href="https://www.youtube.com/watch?v=J-rdFSXq1SY">Advanced Analytics in Autonomous Data Warehouse Cloud</a>
+									</li>
+									<li>Vlamis -&nbsp;&nbsp;<a href="https://www.youtube.com/watch?v=E6J13mW36Go">Analytics in Oracle Autonomous Data Warehouse Cloud</a>
+									</li>
+									<li>Vlamis -&nbsp;&nbsp;<a href="https://www.youtube.com/watch?v=p6NNXbbGYTg">Scaling Analytics in Oracle Autonomous Data Warehouse Cloud</a>
+									</li>
+									<li>Minnesota State Colleges and Universities &ndash;&nbsp;<a href="https://www.youtube.com/watch?v=qq8abO9gigk">Easy, Fast and Elastic Autonomous Data Warehouse Cloud</a>
+									</li>
+									<li>QMP Health -&nbsp;<a href="https://www.youtube.com/watch?v=Ip3_FBY4Iv0" title="Delivering better customer service in Autonomous Data Warehouse Cloud">Delivering better customer service in Autonomous Data Warehouse Cloud</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+<!-- U10v3 -->
+			<section id="u10" class="u10v3 u10fl" data-trackas="footer">
+				<div class="u10w8 cwidth">
+					<div class="u10w9">
+						<h2>Join the conversation</h2>
+					</div>
+					<div class="u10w1 u104up">
+						<div class="u10w2">
+							<a href="https://twitter.com/AutonomousDW" target="_top">
+								<div class="u10w6 icn-img icn-twitter">&nbsp;</div>
+								<span>@AutonomousDW</span>
+							</a>
+						</div>
+						<div class="u10w2">
+							<a href="https://www.linkedin.com/groups/2129659/" target="_top">
+								<div class="u10w6 icn-img icn-linkedin">&nbsp;</div>
+								<span>Oracle Data Warehouse Professionals</span>
+							</a>
+						</div>
+						<div class="u10w2">
+							<a href="https://blogs.oracle.com/datawarehousing" target="_top">
+								<div class="u10w6 icn-img icn-blogs">&nbsp;</div>
+								<span>Data Warehouse Insider</span>
+							</a>
+						</div>
+						<div class="u10w2">
+							<a href="https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary" target="_top">
+								<div class="u10w6 icn-img icn-chat">&nbsp;</div>
+								<span>Autonomous Data Warehouse Forum</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+<!-- /U10v3 -->
+
+<!-- U10v0 -->
+
+	<!-- Dispatcher:null -->
+	
+<!-- BEGIN: oWidget_C/_Raw-Text/Display -->
+<!-- U10v0 -->
+			<div id="u10" class="u10 u10v6" data-trackas="ffooter" data-ocomid="u10">
+				<div class="u10w1">
+					<div class="u10w2">
+						<div class="u10w3">
+							<h5>Resources for</h5>
+							<ul>
+								<li><a data-lbl="resources-for:developers" href="https://developer.oracle.com/">Developers</a></li>
+								<li><a data-lbl="resources-for:startups" href="/startup/">Startups</a></li>
+								<li><a data-lbl="resources-for:students-educators" href="https://academy.oracle.com/en/oa-web-overview.html">Students and Educators</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="u10w2">
+						<div class="u10w3">
+							<h5>Partners</h5>
+							<ul>
+								<li><a data-lbl="partners:oracle-partnernetwork-ocom" href="/partnernetwork/">Oracle PartnerNetwork</a></li>
+								<li><a data-lbl="partners:find-a-partner" href="https://solutions.oracle.com/scwar/scr/Partners/index.html">Find a Partner</a>
+								</li>
+								<li><a data-lbl="partners:login-opn" href="/partners/">Log in to OPN</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="u10w2">
+						<div class="u10w3">
+							<h5>Emerging Technologies</h5>
+							<ul>
+								<li><a data-lbl="emerging-technlogy:artificial-intelligence" href="/artificial-intelligence/">Artificial Intelligence</a>
+								</li>
+								<li><a data-lbl="emerging-technlogy:iot" href="/internet-of-things/">Internet of Things (IoT)</a></li>
+								<li><a data-lbl="emerging-technlogy:solutions" href="/emerging-technologies/">More Solutions</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="u10w2">
+						<div class="u10w3">
+							<h5>How We Operate</h5>
+							<ul>
+								<li><a data-lbl="how-we-operate:corporate-security-practices" href="/corporate/security-practices/">Corporate Security Practices</a>
+								</li>
+								<li><a data-lbl="how-we-operate:doing-business-with-oracle" href="/corporate/doing-business.html">Doing Business with Oracle</a>
+								</li>
+								<li><a data-lbl="how-we-operate:oracle-at-oracle" href="/cloud/oracle-at-oracle/">Oracle@Oracle</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="u10w2">
+						<div class="u10w3">
+							<h5>Contact Us</h5>
+							<ul>
+								<li><a href="tel:18006330738">US Sales: +1.800.633.0738</a></li>
+								<li><a data-lbl="contact-us:global-contacts" href="/corporate/contact/global.html">Global Contacts</a></li>
+<!--<li><a data-lbl="contact-us:support-directory" href="/support/contact.html">Support Directory</a></li>-->
+								<li><a data-lbl="contact-us:subscribe-to-emails" href="https://go.oracle.com/subscriptions">Subscribe to emails</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="u10w4">
+						<hr />
+					</div>
+					<div class="u10w5" data-trackas="footer">
+						<ul class="scl-icons">
+							<li class="scl-facebook"><a data-lbl="scl-icon:facebook" href="https://www.facebook.com/Oracle/" title="Oracle on Facebook">Facebook</a>
+							</li>
+							<li class="scl-twitter"><a data-lbl="scl-icon:twitter" href="https://twitter.com/oracle" title="Follow Oracle on Twitter">Twitter</a>
+							</li>
+							<li class="scl-linkedin"><a data-lbl="scl-icon:linkedin" href="https://www.linkedin.com/company/oracle/" title="Oracle on LinkedIn">LinkedIn</a>
+							</li>
+							<li class="scl-youtube"><a data-lbl="scl-icon:you-tube" href="http://www.youtube.com/oracle/" title="Watch Oracle on YouTube">YouTube</a>
+							</li>
+						</ul>
+						<div class="u10-ologo"><a data-lbl="integrated-cloud-applications-and-platform-services" href="/">Oracle</a></div>
+						<h3>Integrated Cloud Applications &amp; Platform Services</h3>
+						<ul class="u10-links">
+							<li><a data-lbl="copyright" href="/legal/copyright.html">&copy; 2019 Oracle</a></li>
+							<li><a data-lbl="site-map" href="/sitemap.html">Site Map</a></li>
+							<li><a data-lbl="terms-of-use-and-privacy" href="/legal/privacy/">Terms of Use and Privacy</a></li>
+							<li class="u10mtool" id="u10cmenu"><a data-lbl="country-region" class="u10ticon u10regn" href="/universal-menu/index.html#u10countrymenu">Country/Region</a>
+							</li>
+							<li><div id="teconsent"></div></li>
+							<li><a data-lbl="ad-choices" href="/legal/privacy/marketing-cloud-data-cloud-privacy-policy.html#12">Ad Choices</a>
+							</li>
+							<li><a data-lbl="careers" href="/corporate/careers/">Careers</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+<!-- /U10v0 -->
+
+
+
+<!-- END: oWidget_C/_Raw-Text/Display -->
+
+<!-- /U10v0 -->
+		</div>
+		
+<!-- Container/Display Start -->
+
+<!-- _Raw-Text -->
+<!-- www-us EndBodyAdminContainer -->
+<!-- Start SiteCatalyst code -->
+<script language="JavaScript" src="https://www.oracleimg.com/us/assets/metrics/ora_ocom.js"></script>
+<!-- End SiteCatalyst code -->
+
+ <!--DTM embed code - Footer -->
+ <script type="text/javascript">_satellite.pageBottom();</script>
+ <!--End-->
+<!-- www-us EndBodyAdminContainer -->
+
+<!-- / _Raw-Text -->
+
+<!-- Container/Display end -->
+	</body>
+</html>
+
