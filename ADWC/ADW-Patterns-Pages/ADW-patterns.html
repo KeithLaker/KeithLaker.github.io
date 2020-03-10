@@ -121,6 +121,11 @@ ol li::before {
  width: 1em; /* Also needed for space (tweak if needed) */
  margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
+
+#arrow-link  {
+ float: right;    
+ width:20px;
+}
 		</style>
 		<div class="f11w1">
 			
@@ -208,292 +213,72 @@ ol li::before {
 					</div>
 				</div>
 			</section>
-<!-- /CB87v0x2 -->
-			<a name="mdw"></a>
-			<section class="cb90 cb90v0 cpad bgvlightgrey" data-ocomid="cb90" data-trackas="cb90">
-				<br><br>
-				<div class="cb90w1 cwidth">
-					<br><br><br>
-					<h2>Pattern for a modern data warehouse</h2>
-					<br><br><br>
-					<img width="1400px" src="icons/modern_dw.png" usemap="#map_example">
-					<map name="map_example">
-						<area href="#oss" alt="Oracle Streaming Service" shape=poly coords="36,90, 178,90, 178,252, 36,252">
-						<area href="#oos" alt="Oracle Object Store"  shape=poly coords="36,270, 178,270, 178,422, 36,422">
-						<area href="#odi" alt="Oracle Data Integrator" shape=poly coords="390,170, 600,170, 600,400, 390,400">
-						<area href="#ggc" alt="Oracle GoldenGate Cloud" shape=poly coords="390,430, 600,430, 600,670, 390,670">
-						<area href="#adw" alt="Oracle Autonomous Data Warehouse" shape=poly coords="720,200, 950,200, 950,410, 720,410">
-						<area href="#dsc" alt="Oracle Data Safe" shape=poly coords="670,540, 890,540, 890,780, 670,780">
-						<area href="#oml" alt="Oracle Machine Learning" shape=poly coords="1110,540, 1350,540, 1350,780, 1110,780">
-						<area href="#oac" alt="Oracle Analytics" shape=poly coords="1150,120, 1390,120, 1390,350, 1150,350">
-					</map>
-					<br><br><br>
-				</div>
-			</section>
 <!-- _Raw-HTML -->
-<!-- CB90v0 -->
-			<section class="cb90 cb90v0 cpad bgvlightgrey" data-ocomid="cb90" data-trackas="cb90">
-				<div class="cb90w1 cwidth">
-					<br><br><h1>Stage 1 - CREATE</h1>
-					<a name="oos"></a>
-					<div class="cb90w2">
-						<div class="cb90w3">
-							<h3>Spreadsheet Files</h3>
-							<div id="image_map">
-								<img height="100px" src="https://www.oracle.com/us/assets/obic-business-data-management-4500016.svg" />
+<!-- CW58v1 -->
+			<section class="cw58 cw58v1 cpad bgvlightgrey" data-ocomid="ocrsl" data-trackas="cw58">
+				<div class="cw58w0 cwidth">
+					<div class="o-crsl col4">
+						<header class="center-text">
+							<div class="eyebrow">&nbsp;</div>
+						</header>
+						<div class="cw58w1 crsl-slider col-gutters" data-dots="true">
+							<div class="cw58w2 col-item">
+								<div class="cw58w3 col-item-w2 border-green">
+									<p><!--StartFragment-->A modern data warehouse collects data from a wide variety of sources, both internal or external. It optimizes the data for retrieval for business purposes. The data is usually structured, often from relational databases, but it can be unstructured too pulled from "big data" sources such as Internet of Things devices etc.
+									</p>
+									<p>
+										Primarily, the data warehouse is designed to gather business insights and allows businesses to integrate their data, manage it, and analyze it at many levels.<!--EndFragment-->
+									</p>
+									<br><br><br>
+									<a class="col-item" href="#mdw">
+										<img id="arrow-link" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRJuku3gJRiZ6bKot52zZeZLsSULt1_CTnxpesmw_cd95c5hkob">
+									</a>
+								</div>
 							</div>
-						</div>
-						<div class="cb90w4">
-							<p>The Oracle Cloud Infrastructure Object Storage service is an internet-scale, high-performance storage platform that offers reliable and cost-efficient data durability. The Object Storage service can store an unlimited amount of unstructured data of any content type, including analytic data and rich content, like images and videos.
-							</p>
-							<p>Object Storage is a regional service and is not tied to any specific compute instance. You can access data from anywhere inside or outside the context of the Oracle Cloud Infrastructure, as long you have internet connectivity and can access one of the Object Storage endpoints. Authorization and resource limits are discussed later in this topic.
-							</p>
-							<h4>Get more information...</h4>
-							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
-								<li> For a general overview of Oracle Object Store - <a href="https://docs.cloud.oracle.com/iaas/Content/Object/Concepts/objectstorageoverview.htm#OverviewofObjectStorage" target="_blank">click here</a>
-								</li>
-								<li> Learn how to setup and configure your Object Store - <a href="https://docs.cloud.oracle.com/iaas/Content/Object/Concepts/objectstorageoverview.htm#authentication" target="_blank">click here</a>
-								</li>
-								<li> Learn more about Object Store resources - <a href="https://docs.cloud.oracle.com/iaas/Content/Object/Concepts/objectstorageoverview.htm#resources" target="_blank">click here</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<a name="oss"></a>
-					<br><br>
-					<div class="cb90w2">
-						<div class="cb90w3">
-							<h3>Oracle Streaming Service</h3>
-							<img height="100px" src="https://docs.cloud.oracle.com/iaas/Content/Resources/Images/doc-portal-carousel-icon-streaming.png" />
-						</div>
-						<div class="cb90w4">
-							<p>The Oracle Cloud Infrastructure Streaming service provides a fully managed, scalable, and durable storage solution for ingesting continuous, high-volume streams of data that you can consume and process in real time. Streaming can be used for messaging, ingesting high-volume data such as application logs, operational telemetry, web click-stream data, or other use cases in which data is produced and processed continually and sequentially in a publish-subscribe messaging model.
-							</p>
-							<h4>Get more information...</h4>
-							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
-								<li> For a general overview of Oracle Streaming Service - <a href="https://docs.cloud.oracle.com/iaas/Content/Streaming/Concepts/streamingoverview.htm" target="_blank">click here</a>
-								</li>
-								<li> Learn how to setup and configure your Oracle Cloud Streaming service - <a href="https://blogs.oracle.com/developers/getting-your-feet-wet-with-oci-streams" target="_blank">click here</a>
-								</li>
-								<li> For instructions on how to manage streams - <a href="https://docs.cloud.oracle.com/iaas/Content/Streaming/Tasks/publishing.htm" target="_blank">click here</a>
-								</li>
-								<li> For information about publishing messages to a stream - <a href="https://blogs.oracle.com/developers/getting-your-feet-wet-with-oci-streams" target="_blank">click here</a>
-								</li>
-								<li> For information on how to consume messages - <a href="https://docs.cloud.oracle.com/iaas/Content/Streaming/Tasks/consuming.htm" target="_blank">click here</a>
-								</li>
-								<li> Learn more about migrating your Kafka Workloads to Oracle Cloud Streaming - <a href="https://blogs.oracle.com/developers/migrate-your-kafka-workloads-to-oracle-cloud-streaming" target="_blank">click here</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<br><br><h1>Stage 2 - INGEST</h1>
-					<a name="odi"></a>
-					<br><br>
-					<div class="cb90w2">
-						<div class="cb90w3">
-							<h3>Oracle Data Integrator</h3>
-							<img height="100px" src="https://docs.oracle.com/middleware/12212/odi/dcommon/img/3-middleware.png" />
-						</div>
-						<div class="cb90w4">
-							<p>Oracle Data Integrator provides a fully unified solution for building, deploying, and managing complex data warehouses or as part of data-centric architectures in a SOA or business intelligence environment. In addition, it combines all the elements of data integration—data movement, data synchronization, data quality, data management, and data services—to ensure that information is timely, accurate, and consistent across complex systems.
-							</p>
-							<p>ODI via the Cloud Marketplace is free to use with Autonomous Data Warehouse as the target. You only pay for the hardware resources required to run the ODI image from Oracle Marketplace.
-							</p>
-							<h4>Get more information...</h4>
-							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
-								<li> For a general overview of Oracle Data Integrator - <a href="https://docs.cloud.oracle.com/iaas/Content/Streaming/Concepts/streamingoverview.htm" target="_blank">click here</a>
-								</li>
-								<li> To download and configure ODI using Cloud Marketplace - <a href="https://cloudmarketplace.oracle.com/marketplace/en_US/listing/59419903" target="_blank">click here</a>
-								</li>
-								<li> For guided tutorials for ODI - <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:24:113660735353666::::P24_CONTENT_ID,P24_PREV_PAGE:7952,24" target="_blank">click here</a>
-								</li>
-								<li> For information about how to setup an intergation project - <a href="https://docs.oracle.com/en/middleware/fusion-middleware/data-integrator/12.2.1.4/odidg/overview-integration-project.html#GUID-D27945BB-D678-414A-8AA0-6FAD22CA1B22" target="_blank">click here</a>
-								</li>
-								<li> For information on how to consume messages - <a href="https://docs.cloud.oracle.com/iaas/Content/Streaming/Tasks/consuming.htm" target="_blank">click here</a>
-								</li>
-								<li> Learn more about migrating your Kafka Workloads to Oracle Cloud Streaming - <a href="https://blogs.oracle.com/developers/migrate-your-kafka-workloads-to-oracle-cloud-streaming" target="_blank">click here</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<a name="ggc"></a>
-					<br><br>
-					<div class="cb90w2">
-						<div class="cb90w3">
-							<h3>GoldenGate Cloud</h3>
-							<img height="100px" src="https://docs.oracle.com/goldengate/c1221/gg-winux/dcommon/img/goldengate.png" />
-							<div class="cb90-img">
-								<div class="svgimg obic"><img src="https://www.oracle.com/us/assets/obic-business-data-management-4500016.svg" /></div>
+							<div class="cw58w2 col-item">
+								<div class="cw58w3 col-item-w2 border-darkblue">
+									<p><!--StartFragment-->A spread-mart is used by individual teams or individual departments or groups and is intentionally limited in scope because it focuses on a clearly defined subset of data that is relevant to the main users need right now versus the data that may already exist within the organization.<!--EndFragment-->
+									</p>
+									<br><br><br><br><br><br><br><br><br><br>
+									<a class="col-item" href="ADW-patterns-SM.html#esm">
+										<img id="arrow-link" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRJuku3gJRiZ6bKot52zZeZLsSULt1_CTnxpesmw_cd95c5hkob">
+									</a>
+								</div>
 							</div>
-						</div>
-						<div class="cb90w4">
-							<p>Oracle GoldenGate is a comprehensive software package for real-time data integration and replication in heterogeneous IT environments. The product set enables high availability solutions, real-time data integration, transactional change data capture, data replication, transformations, and verification between operational and analytical enterprise systems.
-							</p>
-							<p>When you create an Oracle GoldenGate Cloud Service instance, the necessary compute infrastructure such as virtual machines and storage volumes is set up for you.
-							</p>
-							<p>As soon as you provision your Oracle GoldenGate Cloud Service account, you can access all features immediately and start preparing your data for replication. You don't need to set up a local environment.
-							</p>
-							<h4>Get more information...</h4>
-							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
-								<li> For a general overview of GoldenGate Cloud - <a href="https://docs.oracle.com/en/cloud/paas/goldengate-cloud/oggcs/what-is-oracle-goldengate-cloud.html" target="_blank">click here</a>
-								</li>
-								<li> For more information about the key components of GoldenGate Cloud - <a href="https://docs.oracle.com/en/cloud/paas/goldengate-cloud/oggcs/components-oracle-goldengate-cloud.html" target="_blank">click here</a>
-								</li>
-								<li> For more information about replicating data to ADW - <a href="https://docs.oracle.com/en/cloud/paas/goldengate-cloud/oggcs/replicate-data-using-oracle-goldengate-cloud.html#GUID-48017565-D642-4B40-AEF5-1844FD20E2E0" target="_blank">click here</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<a name="adw"></a>
-					<br><br><h1>Stage 3 - STORE</h1>
-					<br><br>
-					<div class="cb90w2">
-						<div class="cb90w3">
-							<h3>Autonomous Data Warehouse</h3>
-							<img height="100px" src="https://learn.oracle.com/education/html/ols5/php/getArticleImage.php?componentId=70792&id=11403" />
-						</div>
-						<div class="cb90w4">
-							<p>Oracle Autonomous Data Warehouse provides an easy-to-use, fully autonomous database that scales elastically, delivers fast query performance and requires no database administration.
-							</p>
-							<h4>Get more information...</h4>
-							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
-								<li> For more information on getting started with ADW - <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/getting-started.html#GUID-00645C09-4E76-44C6-8BBE-B433D501AADB" target="_blank">click here</a>
-								</li>
-								<li> For more information on creating (<em>provisioning</em>) your first ADW instance - <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:22488 target="_blank">click here</a>
-								</li>
-								<li> For more information about how to securely connect tools and apps to ADW - <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/connect-data-warehouse.html#GUID-94719269-9218-4FAF-870E-6F0783E209FD" target="_blank"> click here</a>
-								</li>
-								<li> For more information about managing and monitoring your ADW - <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/part-manage.html#GUID-2CC0AD61-83B9-4F9E-A512-45AB589442E2" target="_blank">click here</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<a name="dsc"></a>
-					<br><br><h1>Stage 4 - SECURE</h1>
-					<br><br>
-					<div class="cb90w2">
-						<div class="cb90w3">
-							<h3>Data Safe</h3>
-							<img height="100px" src="https://www.oracle.com/technetwork/database/security/dbsat/dbsat-logo-3941805.png" />
-						</div>
-						<div class="cb90w4">
-							<p>Oracle Data Safe helps organizations to accelerate Cloud adoption, achieve data privacy and compliance by discovering, classifying, and masking sensitive data. It also helps organizations establish IT internal controls for their database infrastructure in the cloud. Audit information is consolidated from multiple sources and alerts/reports are generated to meet security and regulatory requirements.
-							</p>
-							<h4>Get more information...</h4>
-							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
-								<li> For a general overview of Data Safe - <a href="https://docs.oracle.com/en/cloud/paas/data-safe/udscs/features-oracle-data-safe.html" target="_blank">click here</a>
-								</li>
-								<li> To learn how to enable Oracle Data Safe in a region of your tenancy - <a href="https://docs.oracle.com/en/cloud/paas/data-safe/udscs/enable-oracle-data-safe-region.html" target="_blank"> click here</a>
-								</li>
-								<li> For more information about the key concepts and terminology - <a href="https://docs.oracle.com/en/cloud/paas/data-safe/udscs/key-concepts-and-terminology.html" target="_blank">click here</a>
-								</li>
-								<li> For more information about registering ADW with Data Safe - <a href="https://docs.oracle.com/en/cloud/paas/data-safe/udscs/register-autonomous-database1.html" target="_blank">click here</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<a name="oml"></a>
-					<br><br><h1>Stage 5 - TRAIN-DISCOVER</h1>
-					<br><br>
-					<div class="cb90w2">
-						<div class="cb90w3">
-							<h3>Machine Learning SQL Notebook</h3>
-							<img height="100px" src="https://learn.oracle.com/education/html/ols5/php/getArticleImage.php?componentId=79042&id=11885" />
-							<div class="cb90-img">
-								<div class="svgimg obic"></div>
+							<div class="cw58w2 col-item">
+								<div class="cw58w3 col-item-w2 border-burgundy">
+									<p><!--StartFragment-->A data lake is a place to store your structured and unstructured data, as well as a method for organizing large volumes of highly diverse data from diverse sources.
+									</p>
+									<p>
+										The data lake tends to ingest data very quickly and prepare it later, on the fly, as people access it..<!--EndFragment-->
+									</p>
+									<br><br><br><br><br><br><br><br><br><br>
+									<a class="col-item" href="ADW-patterns-DL.html#dl">
+										<img id="arrow-link" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRJuku3gJRiZ6bKot52zZeZLsSULt1_CTnxpesmw_cd95c5hkob">
+									</a>
+								</div>
 							</div>
-						</div>
-						<div class="cb90w4">
-							<p>Oracle Machine Learning is a SQL notebook interface for data scientists to perform machine learning in the Oracle Autonomous Data Warehouse (ADW). Notebook technologies support the creation of scripts while supporting the documentation of assumptions, approaches and rationale to increase data science team productivity.
-							</p>
-							<p>Oracle Machine Learning SQL notebooks, based on Apache Zeppelin technology, enable teams to collaborate to build, evaluate and deploy predictive models and analytical methodologies in the Oracle ADW.
-							</p>
-							<h4>Get more information...</h4>
-							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
-								<li> For more information on getting started with Machine Learning SQL notebooks - <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/omlug/get-started-oracle-machine-learning.html#GUID-2AEC56A4-E751-48A3-AAA0-0659EDD639BA" target="_blank">click here</a>
-								</li>
-								<li> For more information about the machine learning example templates - <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/omlug/use-library-collaborate-users.html#GUID-88B562CF-553C-4AD5-9D56-61B02E5ECBFA" target="_blank"> click here</a>
-								</li>
-								<li> For more information about data analysis and data visualization with OML - <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/omlug/get-started-notebooks-data-analysis-and-data-visualization.html#GUID-FC822409-1345-4172-8C23-C911D0590034" target="_blank">click here</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="cb90w2">
-						<div class="cb90w3">
-							<h3>Oracle Advanced Analytics</h3>
-							<img height="100px" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/1f9bdd45-713b-4e38-9ee6-05021c739181/Image/6e1b1f4c1f1022d874e6e92c066ddbf4/machine_learning_icon_color.png" />
-							<div class="cb90-img">
-								<div class="svgimg obic"></div>
+							<div class="cw58w2 col-item">
+								<div class="cw58w3 col-item-w2 border-darkgreen">
+									<p><!--StartFragment-->A data discovery sandbox is generally meant as a non-operational environment where business analysts and data scientists can test ideas, manipulate data and model what-if scenarios.
+									</p>
+									<p>It has a finite life expectancy and when timer runs out the sandbox is deleted. The associated discoveries are then either incorporated into the enterprise warehouse/data mart or simply abandoned.
+									</p>
+									<p>The primary driver from an organisational perspective is to use a 'fail-fast" approach.<!--EndFragment-->
+									</p>
+									<br><br>
+									<a class="col-item" href="ADW-patterns-DDS.html#dds">
+										<img id="arrow-link" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRJuku3gJRiZ6bKot52zZeZLsSULt1_CTnxpesmw_cd95c5hkob">
+									</a>
+								</div>
 							</div>
-						</div>
-						<div class="cb90w4">
-							<p>Oracle machine learning moves the algorithms to the data, processing data where it resides—minimizing or eliminating data movement, achieving scalability, preserving security, and accelerating time-to-model deployment. Oracle delivers parallelized in-database implementations of machine learning algorithms and integration.
-							</p>
-							<h4>Get more information...</h4>
-							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
-								<li> For more information on getting started with machine learning - <a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/what-is-data-mining.html#GUID-8232ABAD-E6B9-4C70-B227-E00738040932" target="_blank">click here</a>
-								</li>
-								<li> For more information about the basics of machine learning - <a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/data-mining-basics.html#GUID-2116E665-721E-4EBA-AFE1-A30D6E8078C6" target="_blank"> click here</a>
-								</li>
-								<li> For more information about in-database scoring - <a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/data-mining-basics.html#GUID-21677973-2248-4119-A560-24D7F2FD7EAD" target="_blank">click here</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<a name="oac"></a>
-					<br><br><h1>Stage 6 - VISUALIZE</h1>
-					<br><br>
-					<div class="cb90w2">
-						<div class="cb90w3">
-							<h3>Oracle Analytics Desktop</h3>
-							<img height="100px" src="https://docs.oracle.com/en/middleware/bi/analytics-desktop/sp_common/shared-images/DataVisualizationDesktop-1.png" />
-							<div class="cb90-img">
-								<div class="svgimg obic"></div>
-							</div>
-						</div>
-						<div class="cb90w4">
-							<p>Oracle Analytics Desktop provides standalone data exploration and visualization in a per-user desktop download. Oracle Analytics Desktop is the tool for quick exploration of sample data from multiple sources or for analyses and investigation of your own local data sets.
-							</p>
-							<p>Oracle Analytics Desktop enables you to visualize your data so you can focus on exploring data patterns. Just upload data files or connect to Oracle Applications or a database, select the elements that you’re interested in, and let Oracle Analytics Desktop find the best way to visualize it. Choose from a variety of visualizations to look at data in a specific way.
-							</p>
-							<h4>Get more information...</h4>
-							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
-								<li> For more information on getting started with Analytics Desktop - <a href="https://docs.oracle.com/en/middleware/bi/analytics-desktop/bidvd/get-started-samples.html" target="_blank">click here</a>
-								</li>
-								<li> For more information about connecting ADW to Analytics Desktop - <a href="https://docs.oracle.com/en/middleware/bi/analytics-desktop/bidvd/create-connections-oracle-adw.html#GUID-D3542D1C-B21F-45D1-86F7-DBAAE43A5574" target="_blank"> click here</a>
-								</li>
-								<li> For more information about exploring and visualizing your data - <a href="https://docs.oracle.com/en/middleware/bi/analytics-desktop/bidvd/explore-visualize-and-analyze-data.html" target="_blank">click here</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="cb90w2">
-						<div class="cb90w3">
-							<h3>Oracle Analytics Cloud</h3>
-							<img height="100px" src="https://docs.oracle.com/en/cloud/paas/analytics-cloud/sp_common/shared-images/Analytics-cloud-270.png" />
-							<div class="cb90-img">
-								<div class="svgimg obic"></div>
-							</div>
-						</div>
-						<div class="cb90w4">
-							<p>Oracle Database is able to efficiently leverage all hardware resources - multiple CPUs, multiple IO channels, multiple storage units, multiple nodes in a cluster. The Oracle Optimizer can automatically decide if a query should run in parallel and the degree of parallelism to use based on the resource requirements of the statement.
-							</p>
-							<h4>Get more information...</h4>
-							<ul class="cta-list" style="font-family:Arial, Helvetica, sans-serif;font-size:1em; margin-left:55px;">
-								<li> For more information on getting started with Analytics Cloud - <a href="https://docs.oracle.com/en/cloud/paas/analytics-cloud/acsgs/what-is-oracle-analytics-cloud.html#GUID-E68C8A55-1342-43BB-93BC-CA24E353D873" target="_blank">click here</a>
-								</li>
-								<li> For more information about connecting ADW to Analytics Cloud - <a href="https://docs.oracle.com/en/cloud/paas/analytics-cloud/acubi/create-connections-oracle-adw.html" target="_blank"> click here</a>
-								</li>
-								<li> For more information about exploring and visualizing your data - <a href="https://docs.oracle.com/en/cloud/paas/analytics-cloud/acubi/explore-visualize-and-analyze-data.html" target="_blank">click here</a>
-								</li>
-							</ul>
 						</div>
 					</div>
 				</div>
 			</section>
-<!-- /CB90v0 -->
-<!-- / _Raw-HTML -->
+
+
+
 
 <!-- CB27v5 -->
 			<section class="cb27 cb27v5 bgburgundy" data-trackas="cb27">
