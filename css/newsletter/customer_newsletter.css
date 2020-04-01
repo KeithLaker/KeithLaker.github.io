@@ -146,6 +146,22 @@ table.events {
   width:100% !important;
 }
 
+#container_content_top{
+  border-width: 10px !important;
+  border-bottom: 0px !important;
+  border-style: solid !important;
+  border-color: silver !important;
+  width:100% !important;
+}
+
+#container_content_bottom{
+  border-width: 10px !important;
+  border-top: 0px !important;
+  border-style: solid !important;
+  border-color: silver !important;
+  width:100% !important;
+}
+
 #back_section_1 {
   border-width: 10px !important;
   border-bottom: 10px !important;
