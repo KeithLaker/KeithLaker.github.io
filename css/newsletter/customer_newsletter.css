@@ -300,4 +300,27 @@ table.helper_do {
   background-color: white !important;
 }
 
-area { outline: none !important; }
+area { 
+ outline: none !important; 
+}
+
+a.doc:link {
+color: blue;
+}
+
+a.doc:visited {
+color: blue;
+}
+
+
+li {
+font-family: Oracle Sans !important;
+font-size: 10.5pt !important;
+font-color:#252525 !important;
+}
+
+p {
+font-family: Oracle Sans !important;
+font-size: 10.5pt !important;
+font-color:#252525 !important;
+}
