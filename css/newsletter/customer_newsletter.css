@@ -324,3 +324,16 @@ font-family: Oracle Sans !important;
 font-size: 10.5pt !important;
 font-color:#252525 !important;
 }
+
+td.topit{
+height:280px;
+width:100%;
+vertical-align:top;
+text-align:left;
+}
+
+.row_set{
+margin-left:300px; 
+margin-right:50px; 
+color:white !important;
+}
