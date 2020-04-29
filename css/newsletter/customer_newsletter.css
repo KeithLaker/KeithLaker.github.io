@@ -163,10 +163,6 @@ table.events {
 }
 
 #back_section_1 {
-  border-width: 10px !important;
-  border-bottom: 10px !important;
-  border-style: solid !important;
-  border-color: silver !important;
   text-align: right !important;
   font-family:Verdana !important;
   width:100% !important;
@@ -184,10 +180,6 @@ table.events {
 
 
 #back_section_2 {
-  border-width: 10px !important;
-  border-bottom: 10px !important;
-  border-style: solid !important;
-  border-color: silver !important;
   text-align: right !important;
   font-family:Verdana !important;
   width:100% !important;
@@ -204,10 +196,6 @@ table.events {
 }
 
 #back_section_3 {
-  border-width: 10px !important;
-  border-bottom: 10px !important;
-  border-style: solid !important;
-  border-color: silver !important;
   text-align: right !important;
   font-family:Verdana !important;
   width:100% !important;
