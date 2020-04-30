@@ -212,8 +212,8 @@ table.events {
 }
 
 a.btt {
-  text-align: right !important;
-  margin-right:-3px !important;
+  text-align:right !important;
+  margin-right:3px !important;
   font-family:Verdana !important;
   font-size:12px !important; 
   font-weight:bold !important;
