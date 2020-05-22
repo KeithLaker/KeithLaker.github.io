@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+	<head>
+		<title>Autonomous Data Warehouse Use Case Patterns</title>
+		<meta name="Title" content="Oracle Database for Data Warehousing and Big Data">
+		<meta name="Description" content="Home page for features and options of Oracle Database which support data warehousing and data.">
+		<meta name="Keywords" content="oracle database, data warehousing, business intelligence, exadata, database machine, big data, 18c, 19c">
+
+<!-- Container/Display Start -->
+
+<!-- _Raw-Text -->
+	<!-- css / js files start -->
+	<script>
+	!function(){
+		var d=document.documentElement;d.className=d.className.replace(/no-js/,'js');
+		if(document.location.href.indexOf('betamode=') > -1) document.write('<script src="https://www.oracle.com/asset/web/js/ocom-betamode.js"><\/script>');
+	}();
+	</script>
+		<link data-wscss href="https://www.oracle.com/asset/web/css/ocom-v1-base.css" rel="stylesheet">
+		<link data-wscss href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="preload" as="style" onload="this.rel='stylesheet'" onerror="this.rel='stylesheet'">
+		<noscript>
+			<link href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="stylesheet">
+		</noscript>
+	<script data-wsjs src="https://www.oracle.com/asset/web/js/jquery-min.js" async onload="$('head link[data-reqjq][rel=preload]').each(function(){var a = document.createElement('script');a.async=false;a.src=$(this).attr('href');this.parentNode.insertBefore(a, this);});$(function(){$('script[data-reqjq][data-src]').each(function(){this.async=true;this.src=$(this).data('src');});});"></script>
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/ocom-v1-base.js" rel="preload" as="script">
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/ocom-v1-lib.js" rel="preload" as="script">
+	<!-- end css / js files start -->
+<!-- / _Raw-Text -->
+
+<!-- Container/Display end -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="siteid" content="us">
+		<meta name="countryid" content="US">
+		<meta name="robots" content="index, follow">
+		<meta name="country" content="United States">
+		<meta name="Language" content="en">
+		<meta name="Updated Date" content="2018-04-19T19:17:32Z">
+	
+	<script type="text/javascript">
+		var pageData = pageData || {};
+		//page info
+		pageData.pageInfo = pageData.pageInfo || {};
+		pageData.pageInfo.language = "en";
+		pageData.pageInfo.country = "United States";
+		pageData.pageInfo.pageTitle = "Oracle Data Warehouse Use Case Patterns";
+		pageData.pageInfo.description = "Home page for features and options of Oracle Database which support data warehousing and data.";
+		pageData.pageInfo.keywords = "oracle database, data warehousing, business intelligence, exadata, database machine, big data, 18c, 19c";
+		pageData.pageInfo.siteId = "us";
+		pageData.pageInfo.countryId = "US";
+		pageData.pageInfo.updatedDate = "2018-04-19T19:17:32Z";
+	</script>
+	<!-- start : ocom/common/global/components/seo-taxonomy-meta-data-->
+	
+	<script type="text/javascript">
+		var pageData = pageData || {};
+		//taxonmy
+		pageData.taxonomy = pageData.taxonomy || {};
+		pageData.taxonomy.productServices = [];
+		pageData.taxonomy.industry = [];
+		pageData.taxonomy.region = [];
+		pageData.taxonomy.contentType = [];
+		pageData.taxonomy.buyersJourney = [];
+		pageData.taxonomy.revenue = [];
+		pageData.taxonomy.title = [];
+		pageData.taxonomy.audience = [];
+		pageData.taxonomy.persona = [];
+	</script>
+
+<!-- _Raw-Text -->
+<!-- www-us HeadAdminContainer -->
+<script async="async" type="text/javascript" src='//consent.truste.com/notice?domain=oracle.com&c=teconsent&js=bb&noticeType=bb&text=true&gtm=1&cdn=1&pcookie' crossorigin></script>
+		<style>
+#oReactiveChatContainer1 { display:none;}
+		</style>
+<!--DTM embed code - Header -->
+<script src="//assets.adobedtm.com/6f37a0dc9cdbe818dc4979828b58b88e3f060ea4/satelliteLib-e598c5b61e39a10b402e048e87dd27b0f1cd2d4c.js"></script>
+
+<!-- Truste for RU -->
+<script type="text/javascript">
+ if (location.pathname.indexOf("/ru/") == 0){
+ document.write('\x3Cscript async="async" src=//consent.truste.com/notice?domain=oracleru.com&c=teconsent&js=bb&noticeType=bb&text=true&gtm=1&cdn=1&pcookie crossorigin="">\x3C/script>');
+ }
+ </script>
+<!--End-->
+
+<!-- / _Raw-Text -->
+
+<!-- Container/Display end -->
+
+ 
+ <script>!function(){function o(n,i){if(n&&i)for(var r in i)i.hasOwnProperty(r)&&(void 0===n[r]?n[r]=i[r]:n[r].constructor===Object&&i[r].constructor===Object?o(n[r],i[r]):n[r]=i[r])}try{var n=decodeURIComponent("");if(n.length>0&&window.JSON&&"function"==typeof window.JSON.parse){var i=JSON.parse(n);void 0!==window.BOOMR_config?o(window.BOOMR_config,i):window.BOOMR_config=i}}catch(r){window.console&&"function"==typeof window.console.error&&console.error("mPulse: Could not parse configuration",r)}}();</script>
+ <script>!function(e){var a="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,a="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="DXNLE-YBWWY-AR74T-WMD99-77VRA",function(){function n(a){e.BOOMR_onload=a&&a.timeStamp||(new Date).getTime()}if(!e.BOOMR||!e.BOOMR.version&&!e.BOOMR.snippetExecuted){e.BOOMR=e.BOOMR||{},e.BOOMR.snippetExecuted=!0;var i,o,r,_=document.createElement("iframe");if(e[t])e[t]("load",n,!1);else if(e.attachEvent)e.attachEvent("onload",n);_.src="javascript:void(0)",_.title="",_.role="presentation",(_.frameElement||_).style.cssText="width:0;height:0;border:0;display:none;",r=document.getElementsByTagName("script")[0],r.parentNode.insertBefore(_,r);try{o=_.contentWindow.document}catch(O){i=document.domain,_.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",o=_.contentWindow.document}o.open()._l=function(){var e=this.createElement("script");if(i)this.domain=i;e.id="boomr-if-as",e.src=a+"DXNLE-YBWWY-AR74T-WMD99-77VRA",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(e)},o.write("<bo"+'dy onload="document._l();">'),o.close()}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var a=""=="true"?1:0,t="",n="rwh5knqx22ok4xofr2ya-f-bedd3d897-clientnsv4-s.akamaihd.net",i={"ak.v":25,"ak.cp":"82485","ak.ai":parseInt("165266",10),"ak.ol":"0","ak.cr":2,"ak.ipv":4,"ak.proto":"h2","ak.rid":"ecc3871","ak.r":20831,"ak.a2":a,"ak.m":"dscx","ak.n":"essl","ak.bpcip":"141.143.213.0","ak.cport":46539,"ak.gh":"23.212.108.11","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1573228208"};if(""!==t)i["ak.ruds"]=t;var o={i:!1,av:function(a){var t="http.initiator";if(a&&(!a[t]||"spa_hard"===a[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:n,init:function(){if(!o.i){var e=BOOMR.subscribe;e("before_beacon",o.av,null,null),e("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script>
+	</head>
+	<body class="f11 f11v6">
+		<style>
+ul {
+ list-style-type: square !important;
+ margin-left:55px; 
+}
+
+ul li::before {
+ content: "\2192"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+ color: grey; /* Change the color */
+ font-weight: bold; /* If you want it to be bold */
+ display: inline-block; /* Needed to add space between the bullet and the text */ 
+ width: 1em; /* Also needed for space (tweak if needed) */
+ margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+ol {
+ list-style-type: square !important;
+ margin-left:55px; 
+}
+
+ol li::before {
+ content: "\2192"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+ color: grey; /* Change the color */
+ font-weight: bold; /* If you want it to be bold */
+ display: inline-block; /* Needed to add space between the bullet and the text */ 
+ width: 1em; /* Also needed for space (tweak if needed) */
+ margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+#arrow-link  {
+ float: right;    
+ width:20px;
+}
+		</style>
+		<div class="f11w1">
+			
+<!-- start Common/Header -->
+ 
+	<!-- Dispatcher:null -->
+	
+<!-- CB87v0x2 -->
+			<section class="cb87 cb87v0 cb87txt cb87img cpad bgvlightgrey" data-trackas="cb87">
+				<div class="cb87w1 cwidth">
+					<div class="eyebrow">Get the Details</div>
+					<h2>Data Warehouse Use Case Patterns</h2>
+					<div class="col-framework col4 col-justified col-multi col-gutters col-hover col-top">
+						<div class="col-w1">
+							<a class="col-item" style="background-color:white;"  href="ADW-patterns-MDW.html#mdw">
+								<div class="col-item-w1">
+									<img class="cb87w2" style="height:125px !important; width:125px !important;" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/1c1a0b196df32092fdc39729ea4c33af/autonomous_data_warehouse_rw_red.png">
+								</div>
+								<div class="col-item-w2">
+									<h3>Modern Data Warehouse</h3>
+								</div>
+								<br><br>
+							</a>
+							<a class="col-item" style="background-color:white;" href="ADW-patterns-SM.html#esm">
+								<div class="col-item-w1">
+									<img class="cb87w2" style="width:125px; height:125px;" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/62786e8362229b49d6ae009af20c7d62/excel.png">
+								</div>
+								<div class="col-item-w2">
+									<h3>Spread-Marts</h3>
+								</div>
+								<br><br>
+							</a>
+							<a class="col-item" style="background-color:white;" href="ADW-patterns-DL.html#dl">
+								<div class="col-item-w1">
+									<img class="cb87w2" style="width:125px; height:125px;" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/b4664648876497c6dd2a24afe155cb77/unstructured_data.png">
+								</div>
+								<div class="col-item-w2">
+									<h3>Data Lake</h3>
+								</div>
+								<br><br>
+							</a>
+							<a class="col-item" style="background-color:lightgrey; box-shadow: 10px 10px 4px 0 rgba(0, 0, 0, 0.19);" href="ADW-patterns-DDS.html#dds">
+								<div class="col-item-w1">
+									<img class="cb87w2" style="width:125px; height:125px;" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/f9d72726ec1c4c3050f794fea9781f46/evolution_1of5.png">
+								</div>
+								<div class="col-item-w2">
+									<h3>Data Discovery Sandboxes</h3>
+								</div>
+								<br><br>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+
+<!-- END: oWidget_C/_Raw-Text/Display -->
+<!-- /U10v0 -->
+		</div>
+	</body>
+</html>
+
