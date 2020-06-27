@@ -97,6 +97,62 @@
 a[href="place-holder.html"] { 
    pointer-events: none; 
 }
+
+
+.close {
+	background: #3a6f86 !Important;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 74px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+	align:right;
+}
+
+.modalPopWindow:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalPopWindow > div {
+	width: 1112px;
+	height: 634px;	
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+
+
+.modalPopWindow {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
 		</style>
 		<div class="f11w1">
 			<nav id="u28nav" class="u28nav" data-trackas="menu">
@@ -202,8 +258,21 @@ a[href="place-holder.html"] {
 							<a href="https://www.linkedin.com/in/reinerzimmermann/" target="_blank"> </a>
 							<div class="cw58w4 col-item-w3">
 								<div class="obttns">
-									<div class="obttn4"><a href="https://youtu.be/Ljra7NSjRBE">Watch</a></div>
-									<div class="obttn4"><a href="http://www.oracle.com/technetwork/database/bi-datawarehousing/01-01-introduction-6715458.pdf">Download PDF</a>
+									<div class="obttn4">
+										<a href="#IntroPop">
+											Watch
+										</a>
+										<div id="IntroPop" class="modalPopWindow">
+											<div>
+												<a href="#close" title="Close" class="close">Close</a>
+												<h4>Oracle Global Leaders EMEA Summer Meeting 2020</h4>
+												<iframe width="820px" height="500px" src="https://www.youtube.com/embed/Ljra7NSjRBE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+												</iframe>
+												<h4>Introduction With Reiner Zimmermann, Vice President of Product Management, Oracle</h4>
+											</div>
+										</div>
+									</div>
+									<div class="obttn4"><a href="http://www.oracle.com/technetwork/database/bi-datawarehousing/01-01-introduction-6715458.pdf" target="_blank">Download PDF</a>
 									</div>
 								</div>
 							</div>
@@ -268,8 +337,19 @@ a[href="place-holder.html"] {
 							<div class="cb98w6" style="background-color:white !important; text-align:center; margin-left:0px !important; margin-right:0px !important;">
 								<div class="cw58w4 col-item-w3">
 									<div class="obttns">
-										<div class="obttn4"><a href="https://youtu.be/oVlkROGpazI">Watch</a></div>
-										<div class="obttn4"><a href="http://www.oracle.com/technetwork/database/bi-datawarehousing/01-02-oci-panel-6715459.pdf">Download PDF</a>
+										<div class="obttn4">
+											<a href="#OCIPop">Watch</a>
+											<div id="OCIPop" class="modalPopWindow">
+											<div>
+												<a href="#close" title="Close" class="close">Close</a>
+												<h4>Oracle Global Leaders EMEA Summer Meeting 2020</h4>
+												<iframe width="820px" height="500px" src="https://www.youtube.com/embed/oVlkROGpazI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="yes">
+												</iframe>
+												<h4>Oracle Cloud Infrastructure Customer Panel</h4>
+											</div>
+										</div>
+											</div>
+										<div class="obttn4"><a href="http://www.oracle.com/technetwork/database/bi-datawarehousing/01-02-oci-panel-6715459.pdf" target="_blank">Download PDF</a>
 										</div>
 									</div>
 								</div>
@@ -302,7 +382,7 @@ a[href="place-holder.html"] {
 								<div class="cw58w4 col-item-w3">
 									<div class="obttns">
 										<div class="obttn4"><a href="https://youtu.be/Afj0bU9ampc">Watch</a></div>
-										<div class="obttn4"><a href="http://www.oracle.com/technetwork/database/bi-datawarehousing/01-03-migrationcloud-6715460.pdf">Download PDF</a>
+										<div class="obttn4"><a href="http://www.oracle.com/technetwork/database/bi-datawarehousing/01-03-migrationcloud-6715460.pdf" target="_blank">Download PDF</a>
 										</div>
 									</div>
 								</div>
@@ -368,7 +448,7 @@ a[href="place-holder.html"] {
 								<div class="cw58w4 col-item-w3">
 									<div class="obttns">
 										<div class="obttn4"><a href="https://youtu.be/WgnOap90NGQ">Watch</a></div>
-										<div class="obttn4"><a href="http://www.oracle.com/technetwork/database/bi-datawarehousing/01-04-adb-panel-6715461.pdf">Download PDF</a>
+										<div class="obttn4"><a href="http://www.oracle.com/technetwork/database/bi-datawarehousing/01-04-adb-panel-6715461.pdf" target="_blank">Download PDF</a>
 										</div>
 									</div>
 								</div>
@@ -401,7 +481,7 @@ a[href="place-holder.html"] {
 								<div class="cw58w4 col-item-w3">
 									<div class="obttns">
 										<div class="obttn4"><a href="https://youtu.be/B60huLcYJ0k">Watch</a></div>
-										<div class="obttn4"><a href="http://www.oracle.com/technetwork/database/bi-datawarehousing/01-05-adb-update-6715462.pdf">Download PDF</a>
+										<div class="obttn4"><a href="http://www.oracle.com/technetwork/database/bi-datawarehousing/01-05-adb-update-6715462.pdf" target="_blank">Download PDF</a>
 										</div>
 									</div>
 								</div>
@@ -467,7 +547,7 @@ a[href="place-holder.html"] {
 								<div class="cw58w4 col-item-w3">
 									<div class="obttns">
 										<div class="obttn4"><a href="https://youtu.be/QCqxaWGMUnE">Watch</a></div>
-										<div class="obttn4"><a href="http://www.oracle.com/technetwork/database/bi-datawarehousing/01-06-exa-analytics-panel-6715463.pdf">Download PDF</a>
+										<div class="obttn4"><a href="http://www.oracle.com/technetwork/database/bi-datawarehousing/01-06-exa-analytics-panel-6715463.pdf" target="_blank">Download PDF</a>
 										</div>
 									</div>
 								</div>
@@ -499,7 +579,7 @@ a[href="place-holder.html"] {
 								<div class="cw58w4 col-item-w3">
 									<div class="obttns">
 										<div class="obttn4"><a href="https://youtu.be/07vAoWIyxP0">Watch</a></div>
-										<div class="obttn4"><a href="http://www.oracle.com/technetwork/database/bi-datawarehousing/01-07-exadataupdate-6715464.pdf">Download PDF</a>
+										<div class="obttn4"><a href="http://www.oracle.com/technetwork/database/bi-datawarehousing/01-07-exadataupdate-6715464.pdf" target="_blank">Download PDF</a>
 										</div>
 									</div>
 								</div>
@@ -526,7 +606,7 @@ a[href="place-holder.html"] {
 								<div class="cw58w4 col-item-w3">
 									<div class="obttns">
 										<div class="obttn4"><a href="https://youtu.be/OTwCOPewdcI">Watch</a></div>
-										<div class="obttn4"><a href="http://www.oracle.com/technetwork/database/bi-datawarehousing/01-08-oraclekeynote-6715465.pdf">Download PDF</a>
+										<div class="obttn4"><a href="http://www.oracle.com/technetwork/database/bi-datawarehousing/01-08-oraclekeynote-6715465.pdf" target="_blank">Download PDF</a>
 										</div>
 									</div>
 								</div>
@@ -837,28 +917,28 @@ a[href="place-holder.html"] {
 							<div class="cb98w6" style="background-color:white !important; text-align:center; margin-left:0px !important; margin-right:0px !important;">
 								<div class="cw58w4 col-item-w3">
 									<div class="obttns">
-									<br><br>
+										<br><br>
 										<p style="color:#353030;">
 											Special thanks to <strong><span style="color:#0071c5">Intel</span></strong> who will be our main conference sponsor for the event.<br><br>
-										<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Intel-logo.svg/1280px-Intel-logo.svg.png" width="150px">
+											<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Intel-logo.svg/1280px-Intel-logo.svg.png" width="150px">
 										</p>
 										<br>
 										<br>
 										<p style="color:#353030;">
 											Many thanks to our associate partners:<br>
 										</p>
-											<ul>
-												<li>Sysco</li>
-												<li>FORS</li>
-												<li>Global Maksimum</li>
-												<li>ISE</li>
-												<li>RittmanMead</li>
-												<li>SumIT</li>
-												<li>Tradeware</li>
-												<li>Tripwire Solutions</li>
-											</ul>
-											<br>
-											<br>
+										<ul>
+											<li>Sysco</li>
+											<li>FORS</li>
+											<li>Global Maksimum</li>
+											<li>ISE</li>
+											<li>RittmanMead</li>
+											<li>SumIT</li>
+											<li>Tradeware</li>
+											<li>Tripwire Solutions</li>
+										</ul>
+										<br>
+										<br>
 									</div>
 								</div>
 							</div>
