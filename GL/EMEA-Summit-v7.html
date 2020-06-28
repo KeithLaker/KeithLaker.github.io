@@ -134,7 +134,7 @@ a[href="place-holder.html"] {
    	padding-bottom: 75%;
     overflow: hidden;
     position: relative;
-	margin: 10% auto;
+	margin: 5% auto;
 	border-radius: 10px;
 	background: #fff;
 	background: -moz-linear-gradient(#fff, #999);
@@ -147,10 +147,10 @@ a[href="place-holder.html"] {
 .modalPopWindow {
 	position: fixed;
 	font-family: Arial, Helvetica, sans-serif;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+	top: 0px;
+	right: 10px;
+	bottom: 10px;
+	left: 10px;
 	background: rgba(0,0,0,0.8);
 	z-index: 99999;
 	opacity:0;
@@ -168,9 +168,26 @@ a[href="place-holder.html"] {
     right: 10%;
     align:center;
     width: 80%;
-    height: 65%;
+    height: 550px;
     position: absolute;
 }
+
+.embedded-video-16-9 {
+  width:  90vw;
+  height: 50.625vw; /* 90*9/16 */
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+@media (min-width: 893px) {
+  .embedded-video-16-9 {
+    width: 45vw;
+    height: 25.3125vw; /* 45*9/16 */
+    margin-left: 2vw;
+    margin-right: 2vw
+  }
+}
+
 		</style>
 		<div class="f11w1">
 			<nav id="u28nav" class="u28nav" data-trackas="menu">
@@ -275,6 +292,7 @@ a[href="place-holder.html"] {
 							</p>
 							<a href="https://www.linkedin.com/in/reinerzimmermann/" target="_blank"> </a>
 							<div class="cw58w4 col-item-w3">
+			
 								<div class="obttns">
 									<div class="obttn4">
 										<a href="#IntroPop">
@@ -290,7 +308,7 @@ a[href="place-holder.html"] {
 													Introduction with Reiner Zimmermann<br>Vice President of Product Management<br>Oracle
 												</p>
 												<br><br>
-												<iframe src="https://www.youtube.com/embed/Ljra7NSjRBE?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+												<iframe  class="embedded-video-16-9" src="https://www.youtube.com/embed/Ljra7NSjRBE?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 												</iframe>
 											</div>
 										</div>
@@ -370,7 +388,7 @@ a[href="place-holder.html"] {
 														<br>
 														Oracle Cloud Infrastructure Customer Panel
 													</p>
-													<iframe src="https://www.youtube.com/embed/oVlkROGpazI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="yes">
+													<iframe  class="embedded-video-16-9" src="https://www.youtube.com/embed/oVlkROGpazI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="yes">
 													</iframe>
 												</div>
 											</div>
@@ -421,7 +439,7 @@ a[href="place-holder.html"] {
 														Migration to the Cloud with Mike Dietrich<br>Master Product Manager, Database Technology<br>Oracle
 													</p>
 													<br><br>
-													<iframe src="https://www.youtube.com/embed/Afj0bU9ampc?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+													<iframe  class="embedded-video-16-9" src="https://www.youtube.com/embed/Afj0bU9ampc?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 													</iframe>
 												</div>
 											</div>
@@ -505,7 +523,7 @@ a[href="place-holder.html"] {
 														Oracle Autonomous Database Customer Panel
 													</p>
 													<br><br>
-													<iframe src="https://www.youtube.com/embed/WgnOap90NGQ?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+													<iframe  class="embedded-video-16-9" src="https://www.youtube.com/embed/WgnOap90NGQ?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 													</iframe>
 												</div>
 											</div>
@@ -556,7 +574,7 @@ a[href="place-holder.html"] {
 														Autonomous Database Update with Engin Senel<br>Consulting Member of Technical Staff<br>Oracle
 													</p>
 													<br><br>
-													<iframe src="https://www.youtube.com/embed/B60huLcYJ0k?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+													<iframe  class="embedded-video-16-9" src="https://www.youtube.com/embed/B60huLcYJ0k?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 													</iframe>
 												</div>
 											</div>
@@ -640,7 +658,7 @@ a[href="place-holder.html"] {
 														Oracle Exadata for Analytics Customer Panel
 													</p>
 													<br><br>
-													<iframe src="https://www.youtube.com/embed/ctlvCTzUXmk?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+													<iframe  class="embedded-video-16-9" src="https://www.youtube.com/embed/ctlvCTzUXmk?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 													</iframe>
 												</div>
 											</div>
@@ -690,7 +708,7 @@ a[href="place-holder.html"] {
 														Exadata Update with Barb Lundhild<br>Team Lead X-Team<br>Oracle
 													</p>
 													<br><br>
-													<iframe src="https://www.youtube.com/embed/07vAoWIyxP0?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+													<iframe  class="embedded-video-16-9" src="https://www.youtube.com/embed/07vAoWIyxP0?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 													</iframe>
 												</div>
 											</div>
@@ -735,7 +753,7 @@ a[href="place-holder.html"] {
 														Executive Keynote with &Ccedil;etin &Ouml;zb&uuml;t&uuml;n<br>Senior Vice President<br>Oracle
 													</p>
 													<br><br>
-													<iframe src="https://www.youtube.com/embed/OTwCOPewdcI?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+													<iframe  class="embedded-video-16-9" src="https://www.youtube.com/embed/OTwCOPewdcI?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 													</iframe>
 												</div>
 											</div>
@@ -818,7 +836,7 @@ a[href="place-holder.html"] {
 														Oracle Analytics Customer Panel
 													</p>
 													<br><br>
-													<iframe src="https://www.youtube.com/embed/tMQOCAActI4?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+													<iframe  class="embedded-video-16-9" src="https://www.youtube.com/embed/tMQOCAActI4?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 													</iframe>
 												</div>
 											</div>
@@ -870,7 +888,7 @@ a[href="place-holder.html"] {
 														Oracle Analytics Cloud Update with Philippe Lions<br>Senior Director<br>Oracle
 													</p>
 													<br><br>
-													<iframe src="https://www.youtube.com/embed/KZySOZYlbdI?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+													<iframe  class="embedded-video-16-9" src="https://www.youtube.com/embed/KZySOZYlbdI?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 													</iframe>
 												</div>
 											</div>
@@ -954,7 +972,7 @@ a[href="place-holder.html"] {
 														Oracle Machine Learning Customer Panel
 													</p>
 													<br><br>
-													<iframe src="https://www.youtube.com/embed/loIZzF5Loh0?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+													<iframe  class="embedded-video-16-9" src="https://www.youtube.com/embed/loIZzF5Loh0?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 													</iframe>
 												</div>
 											</div>
@@ -1004,7 +1022,7 @@ a[href="place-holder.html"] {
 														Oracle Machine Learning Update with Mark Hornick<br>Senior Director, Data Science and Machine Learning<br>Oracle
 													</p>
 													<br><br>
-													<iframe src="https://www.youtube.com/embed/WuNf5eXxB7Q?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+													<iframe  class="embedded-video-16-9" src="https://www.youtube.com/embed/WuNf5eXxB7Q?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 													</iframe>
 												</div>
 											</div>
@@ -1089,7 +1107,7 @@ a[href="place-holder.html"] {
 														Oracle Database Development Customer Panel
 													</p>
 													<br><br>
-													<iframe src="https://www.youtube.com/embed/p9cVIM4-kbM?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+													<iframe  class="embedded-video-16-9" src="https://www.youtube.com/embed/p9cVIM4-kbM?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 													</iframe>
 												</div>
 											</div>
@@ -1140,7 +1158,7 @@ a[href="place-holder.html"] {
 														Oracle APEX Update with Joel Kallman<br>Senior Director Software Development<br>Oracle
 													</p>
 													<br><br>
-													<iframe src="https://www.youtube.com/embed/vvXLPLrhDrI?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+													<iframe  class="embedded-video-16-9" src="https://www.youtube.com/embed/vvXLPLrhDrI?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 													</iframe>
 												</div>
 											</div>
