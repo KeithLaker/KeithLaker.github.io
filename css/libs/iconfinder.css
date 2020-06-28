@@ -1,0 +1,5034 @@
+/*!
+==============================================================================================================================
+ICON FONTS FOR ICONFINDER
+==============================================================================================================================
+*/
+/*! GENERIC - BRAND COLORS */
+.bgred, .afterbg-red:after, .beforebg-red:before, .setred .bcbgcolor, .setred .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bgred:after {
+    background-color:#c74634 !important
+}
+
+.txtred, .afterred:after, .beforered:before, .setred .bctxt, .setred .bcolorbefore:before {
+    color:#c74634 !important
+}
+
+.fillred {
+    fill: #c74634
+}
+
+.fill-red.fill-red[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-red.fill-red[class * ="icn-"]:before {
+    color:#c74634
+}
+
+.setred .bcbordercolor, .border-red {
+    border-color:#c74634 !important
+}
+
+.bgwhite, .afterbg-white:after, .beforebg-white:before, .setwhite .bcbgcolor, .setwhite .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bgwhite:after {
+    background-color:#fff !important
+}
+
+.txtwhite, .afterwhite:after, .beforewhite:before, .setwhite .bctxt, .setwhite .bcolorbefore:before {
+    color:#fff !important
+}
+
+.fillwhite {
+    fill: #fff
+}
+
+.fill-white.fill-white[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-white.fill-white[class * ="icn-"]:before {
+    color:#fff
+}
+
+.setwhite .bcbordercolor, .border-white {
+    border-color:#fff !important
+}
+
+.bgblack, .afterbg-black:after, .beforebg-black:before, .setblack .bcbgcolor, .setblack .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bgblack:after {
+    background-color:#000 !important
+}
+
+.txtblack, .afterblack:after, .beforeblack:before, .setblack .bctxt, .setblack .bcolorbefore:before {
+    color:#000 !important
+}
+
+.fillblack {
+    fill: #000
+}
+
+.fill-black.fill-black[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-black.fill-black[class * ="icn-"]:before {
+    color:#000
+}
+
+.setblack .bcbordercolor, .border-black {
+    border-color:#000 !important
+}
+
+.bgslate, .afterbg-slate:after, .beforebg-slate:before, .setslate .bcbgcolor, .setslate .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bgslate:after {
+    background-color:#665f5b !important
+}
+
+.txtslate, .afterslate:after, .beforeslate:before, .setslate .bctxt, .setslate .bcolorbefore:before {
+    color:#665f5b !important
+}
+
+.fillslate {
+    fill: #665f5b
+}
+
+.fill-slate.fill-slate[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-slate.fill-slate[class * ="icn-"]:before {
+    color:#665f5b
+}
+
+.setslate .bcbordercolor, .border-slate {
+    border-color:#665f5b !important
+}
+
+.bglightslate, .afterbg-lightslate:after, .beforebg-lightslate:before, .setlightslate .bcbgcolor, .setlightslate .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bglightslate:after {
+    background-color:#d4cfca !important
+}
+
+.txtlightslate, .afterlightslate:after, .beforelightslate:before, .setlightslate .bctxt, .setlightslate .bcolorbefore:before {
+    color:#d4cfca !important
+}
+
+.filllightslate {
+    fill: #d4cfca
+}
+
+.fill-lightslate.fill-lightslate[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-lightslate.fill-lightslate[class * ="icn-"]:before {
+    color:#d4cfca
+}
+
+.setlightslate .bcbordercolor, .border-lightslate {
+    border-color:#d4cfca !important
+}
+
+.bgdarkslate, .afterbg-darkslate:after, .beforebg-darkslate:before, .setdarkslate .bcbgcolor, .setdarkslate .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bgdarkslate:after {
+    background-color:#4f5a5a !important
+}
+
+.txtdarkslate, .afterdarkslate:after, .beforedarkslate:before, .setdarkslate .bctxt, .setdarkslate .bcolorbefore:before {
+    color:#4f5a5a !important
+}
+
+.filldarkslate {
+    fill: #4f5a5a
+}
+
+.fill-darkslate.fill-darkslate[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-darkslate.fill-darkslate[class * ="icn-"]:before {
+    color:#4f5a5a
+}
+
+.setdarkslate .bcbordercolor, .border-darkslate {
+    border-color:#4f5a5a !important
+}
+
+.bgvlightslate, .afterbg-vlightslate:after, .beforebg-vlightslate:before, .setvlightslate .bcbgcolor, .setvlightslate .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bgvlightslate:after {
+    background-color:#e4e1dd !important
+}
+
+.txtvlightslate, .aftervlightslate:after, .beforevlightslate:before, .setvlightslate .bctxt, .setvlightslate .bcolorbefore:before {
+    color:#e4e1dd !important
+}
+
+.fillvlightslate {
+    fill: #e4e1dd
+}
+
+.fill-vlightslate.fill-vlightslate[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-vlightslate.fill-vlightslate[class * ="icn-"]:before {
+    color:#e4e1dd
+}
+
+.setvlightslate .bcbordercolor, .border-vlightslate {
+    border-color:#e4e1dd !important
+}
+
+.bggrey, .afterbg-grey:after, .beforebg-grey:before, .setgrey .bcbgcolor, .setgrey .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bggrey:after {
+    background-color:#7a736e !important
+}
+
+.txtgrey, .aftergrey:after, .beforegrey:before, .setgrey .bctxt, .setgrey .bcolorbefore:before {
+    color:#7a736e !important
+}
+
+.fillgrey {
+    fill: #7a736e
+}
+
+.fill-grey.fill-grey[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-grey.fill-grey[class * ="icn-"]:before {
+    color:#7a736e
+}
+
+.setgrey .bcbordercolor, .border-grey {
+    border-color:#7a736e !important
+}
+
+.bglightgrey, .afterbg-lightgrey:after, .beforebg-lightgrey:before, .setlightgrey .bcbgcolor, .setlightgrey .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bglightgrey:after {
+    background-color:#e1ddda !important
+}
+
+.txtlightgrey, .afterlightgrey:after, .beforelightgrey:before, .setlightgrey .bctxt, .setlightgrey .bcolorbefore:before {
+    color:#e1ddda !important
+}
+
+.filllightgrey {
+    fill: #e1ddda
+}
+
+.fill-lightgrey.fill-lightgrey[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-lightgrey.fill-lightgrey[class * ="icn-"]:before {
+    color:#e1ddda
+}
+
+.setlightgrey .bcbordercolor, .border-lightgrey {
+    border-color:#e1ddda !important
+}
+
+.bgdarkgrey, .afterbg-darkgrey:after, .beforebg-darkgrey:before, .setdarkgrey .bcbgcolor, .setdarkgrey .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bgdarkgrey:after {
+    background-color:#3a3632 !important
+}
+
+.txtdarkgrey, .afterdarkgrey:after, .beforedarkgrey:before, .setdarkgrey .bctxt, .setdarkgrey .bcolorbefore:before {
+    color:#3a3632 !important
+}
+
+.filldarkgrey {
+    fill: #3a3632
+}
+
+.fill-darkgrey.fill-darkgrey[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-darkgrey.fill-darkgrey[class * ="icn-"]:before {
+    color:#3a3632
+}
+
+.setdarkgrey .bcbordercolor, .border-darkgrey {
+    border-color:#3a3632 !important
+}
+
+.bgvlightgrey, .afterbg-vlightgrey:after, .beforebg-vlightgrey:before, .setvlightgrey .bcbgcolor, .setvlightgrey .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bgvlightgrey:after {
+    background-color:#f1efed !important
+}
+
+.txtvlightgrey, .aftervlightgrey:after, .beforevlightgrey:before, .setvlightgrey .bctxt, .setvlightgrey .bcolorbefore:before {
+    color:#f1efed !important
+}
+
+.fillvlightgrey {
+    fill: #f1efed
+}
+
+.fill-vlightgrey.fill-vlightgrey[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-vlightgrey.fill-vlightgrey[class * ="icn-"]:before {
+    color:#f1efed
+}
+
+.setvlightgrey .bcbordercolor, .border-vlightgrey {
+    border-color:#f1efed !important
+}
+
+.bgorange, .afterbg-orange:after, .beforebg-orange:before, .setorange .bcbgcolor, .setorange .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bgorange:after {
+    background-color:#c58c52 !important
+}
+
+.txtorange, .afterorange:after, .beforeorange:before, .setorange .bctxt, .setorange .bcolorbefore:before {
+    color:#c58c52 !important
+}
+
+.fillorange {
+    fill: #c58c52
+}
+
+.fill-orange.fill-orange[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-orange.fill-orange[class * ="icn-"]:before {
+    color:#c58c52
+}
+
+.setorange .bcbordercolor, .border-orange {
+    border-color:#c58c52 !important
+}
+
+.bglightorange, .afterbg-lightorange:after, .beforebg-lightorange:before, .setlightorange .bcbgcolor, .setlightorange .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bglightorange:after {
+    background-color:#deb068 !important
+}
+
+.txtlightorange, .afterlightorange:after, .beforelightorange:before, .setlightorange .bctxt, .setlightorange .bcolorbefore:before {
+    color:#deb068 !important
+}
+
+.filllightorange {
+    fill: #deb068
+}
+
+.fill-lightorange.fill-lightorange[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-lightorange.fill-lightorange[class * ="icn-"]:before {
+    color:#deb068
+}
+
+.setlightorange .bcbordercolor, .border-lightorange {
+    border-color:#deb068 !important
+}
+
+.bgdarkorange, .afterbg-darkorange:after, .beforebg-darkorange:before, .setdarkorange .bcbgcolor, .setdarkorange .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bgdarkorange:after {
+    background-color:#aa643b !important
+}
+
+.txtdarkorange, .afterdarkorange:after, .beforedarkorange:before, .setdarkorange .bctxt, .setdarkorange .bcolorbefore:before {
+    color:#aa643b !important
+}
+
+.filldarkorange {
+    fill: #aa643b
+}
+
+.fill-darkorange.fill-darkorange[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-darkorange.fill-darkorange[class * ="icn-"]:before {
+    color:#aa643b
+}
+
+.setdarkorange .bcbordercolor, .border-darkorange {
+    border-color:#aa643b !important
+}
+
+.bgblue, .afterbg-blue:after, .beforebg-blue:before, .setblue .bcbgcolor, .setblue .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bgblue:after {
+    background-color:#3b7087 !important
+}
+
+.txtblue, .afterblue:after, .beforeblue:before, .setblue .bctxt, .setblue .bcolorbefore:before {
+    color:#3b7087 !important
+}
+
+.fillblue {
+    fill: #3b7087
+}
+
+.fill-blue.fill-blue[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-blue.fill-blue[class * ="icn-"]:before {
+    color:#3b7087
+}
+
+.setblue .bcbordercolor, .border-blue {
+    border-color:#3b7087 !important
+}
+
+.bglightblue, .afterbg-lightblue:after, .beforebg-lightblue:before, .setlightblue .bcbgcolor, .setlightblue .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bglightblue:after {
+    background-color:#558ea4 !important
+}
+
+.txtlightblue, .afterlightblue:after, .beforelightblue:before, .setlightblue .bctxt, .setlightblue .bcolorbefore:before {
+    color:#558ea4 !important
+}
+
+.filllightblue {
+    fill: #558ea4
+}
+
+.fill-lightblue.fill-lightblue[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-lightblue.fill-lightblue[class * ="icn-"]:before {
+    color:#558ea4
+}
+
+.setlightblue .bcbordercolor, .border-lightblue {
+    border-color:#558ea4 !important
+}
+
+.bgdarkblue, .afterbg-darkblue:after, .beforebg-darkblue:before, .setdarkblue .bcbgcolor, .setdarkblue .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bgdarkblue:after {
+    background-color:#325c72 !important
+}
+
+.txtdarkblue, .afterdarkblue:after, .beforedarkblue:before, .setdarkblue .bctxt, .setdarkblue .bcolorbefore:before {
+    color:#325c72 !important
+}
+
+.filldarkblue {
+    fill: #325c72
+}
+
+.fill-darkblue.fill-darkblue[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-darkblue.fill-darkblue[class * ="icn-"]:before {
+    color:#325c72
+}
+
+.setdarkblue .bcbordercolor, .border-darkblue {
+    border-color:#325c72 !important
+}
+
+.bgvdarkblue, .afterbg-vdarkblue:after, .beforebg-vdarkblue:before, .setvdarkblue .bcbgcolor, .setvdarkblue .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bgvdarkblue:after {
+    background-color:#264759 !important
+}
+
+.txtvdarkblue, .aftervdarkblue:after, .beforevdarkblue:before, .setvdarkblue .bctxt, .setvdarkblue .bcolorbefore:before {
+    color:#264759 !important
+}
+
+.fillvdarkblue {
+    fill: #264759
+}
+
+.fill-vdarkblue.fill-vdarkblue[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-vdarkblue.fill-vdarkblue[class * ="icn-"]:before {
+    color:#264759
+}
+
+.setvdarkblue .bcbordercolor, .border-vdarkblue {
+    border-color:#264759 !important
+}
+
+.bggreen, .afterbg-green:after, .beforebg-green:before, .setgreen .bcbgcolor, .setgreen .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bggreen:after {
+    background-color:#6f915d !important
+}
+
+.txtgreen, .aftergreen:after, .beforegreen:before, .setgreen .bctxt, .setgreen .bcolorbefore:before {
+    color:#6f915d !important
+}
+
+.fillgreen {
+    fill: #6f915d
+}
+
+.fill-green.fill-green[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-green.fill-green[class * ="icn-"]:before {
+    color:#6f915d
+}
+
+.setgreen .bcbordercolor, .border-green {
+    border-color:#6f915d !important
+}
+
+.bglightgreen, .afterbg-lightgreen:after, .beforebg-lightgreen:before, .setlightgreen .bcbgcolor, .setlightgreen .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bglightgreen:after {
+    background-color:#94b382 !important
+}
+
+.txtlightgreen, .afterlightgreen:after, .beforelightgreen:before, .setlightgreen .bctxt, .setlightgreen .bcolorbefore:before {
+    color:#94b382 !important
+}
+
+.filllightgreen {
+    fill: #94b382
+}
+
+.fill-lightgreen.fill-lightgreen[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-lightgreen.fill-lightgreen[class * ="icn-"]:before {
+    color:#94b382
+}
+
+.setlightgreen .bcbordercolor, .border-lightgreen {
+    border-color:#94b382 !important
+}
+
+.bgdarkgreen, .afterbg-darkgreen:after, .beforebg-darkgreen:before, .setdarkgreen .bcbgcolor, .setdarkgreen .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bgdarkgreen:after {
+    background-color:#3d5431 !important
+}
+
+.txtdarkgreen, .afterdarkgreen:after, .beforedarkgreen:before, .setdarkgreen .bctxt, .setdarkgreen .bcolorbefore:before {
+    color:#3d5431 !important
+}
+
+.filldarkgreen {
+    fill: #3d5431
+}
+
+.fill-darkgreen.fill-darkgreen[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-darkgreen.fill-darkgreen[class * ="icn-"]:before {
+    color:#3d5431
+}
+
+.setdarkgreen .bcbordercolor, .border-darkgreen {
+    border-color:#3d5431 !important
+}
+
+.bgburgundy, .afterbg-burgundy:after, .beforebg-burgundy:before, .setburgundy .bcbgcolor, .setburgundy .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bgburgundy:after {
+    background-color:#796087 !important
+}
+
+.txtburgundy, .afterburgundy:after, .beforeburgundy:before, .setburgundy .bctxt, .setburgundy .bcolorbefore:before {
+    color:#796087 !important
+}
+
+.fillburgundy {
+    fill: #796087
+}
+
+.fill-burgundy.fill-burgundy[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-burgundy.fill-burgundy[class * ="icn-"]:before {
+    color:#796087
+}
+
+.setburgundy .bcbordercolor, .border-burgundy {
+    border-color:#796087 !important
+}
+
+.bglightburgundy, .afterbg-lightburgundy:after, .beforebg-lightburgundy:before, .setlightburgundy .bcbgcolor, .setlightburgundy .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bglightburgundy:after {
+    background-color:#dbc9e5 !important
+}
+
+.txtlightburgundy, .afterlightburgundy:after, .beforelightburgundy:before, .setlightburgundy .bctxt, .setlightburgundy .bcolorbefore:before {
+    color:#dbc9e5 !important
+}
+
+.filllightburgundy {
+    fill: #dbc9e5
+}
+
+.fill-lightburgundy.fill-lightburgundy[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-lightburgundy.fill-lightburgundy[class * ="icn-"]:before {
+    color:#dbc9e5
+}
+
+.setlightburgundy .bcbordercolor, .border-lightburgundy {
+    border-color:#dbc9e5 !important
+}
+
+.bgdarkburgundy, .afterbg-darkburgundy:after, .beforebg-darkburgundy:before, .setdarkburgundy .bcbgcolor, .setdarkburgundy .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bgdarkburgundy:after {
+    background-color:#3f3048 !important
+}
+
+.txtdarkburgundy, .afterdarkburgundy:after, .beforedarkburgundy:before, .setdarkburgundy .bctxt, .setdarkburgundy .bcolorbefore:before {
+    color:#3f3048 !important
+}
+
+.filldarkburgundy {
+    fill: #3f3048
+}
+
+.fill-darkburgundy.fill-darkburgundy[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-darkburgundy.fill-darkburgundy[class * ="icn-"]:before {
+    color:#3f3048
+}
+
+.setdarkburgundy .bcbordercolor, .border-darkburgundy {
+    border-color:#3f3048 !important
+}
+
+.bglinkblue, .afterbg-linkblue:after, .beforebg-linkblue:before, .setlinkblue .bcbgcolor, .setlinkblue .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bglinkblue:after {
+    background-color:#00688c !important
+}
+
+.txtlinkblue, .afterlinkblue:after, .beforelinkblue:before, .setlinkblue .bctxt, .setlinkblue .bcolorbefore:before {
+    color:#00688c !important
+}
+
+.filllinkblue {
+    fill: #00688c
+}
+
+.fill-linkblue.fill-linkblue[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-linkblue.fill-linkblue[class * ="icn-"]:before {
+    color:#00688c
+}
+
+.setlinkblue .bcbordercolor, .border-linkblue {
+    border-color:#00688c !important
+}
+
+.bgcodeorange, .afterbg-codeorange:after, .beforebg-codeorange:before, .setcodeorange .bcbgcolor, .setcodeorange .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bgcodeorange:after {
+    background-color:#ef4c23 !important
+}
+
+.txtcodeorange, .aftercodeorange:after, .beforecodeorange:before, .setcodeorange .bctxt, .setcodeorange .bcolorbefore:before {
+    color:#ef4c23 !important
+}
+
+.fillcodeorange {
+    fill: #ef4c23
+}
+
+.fill-codeorange.fill-codeorange[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-codeorange.fill-codeorange[class * ="icn-"]:before {
+    color:#ef4c23
+}
+
+.setcodeorange .bcbordercolor, .border-codeorange {
+    border-color:#ef4c23 !important
+}
+
+.bgcodepink, .afterbg-codepink:after, .beforebg-codepink:before, .setcodepink .bcbgcolor, .setcodepink .bcbackgroundcolor, ul.icn-list.icn-circle-list li.bgcodepink:after {
+    background-color:#ed1e79 !important
+}
+
+.txtcodepink, .aftercodepink:after, .beforecodepink:before, .setcodepink .bctxt, .setcodepink .bcolorbefore:before {
+    color:#ed1e79 !important
+}
+
+.fillcodepink {
+    fill: #ed1e79
+}
+
+.fill-codepink.fill-codepink[class * ="icn-"] {
+    fill: transparent
+}
+
+.fill-codepink.fill-codepink[class * ="icn-"]:before {
+    color:#ed1e79
+}
+
+.setcodepink .bcbordercolor, .border-codepink {
+    border-color: #ed1e79 !important
+}
+
+.bgred-gradient:not([class * ="icn"]), .afterbg-red-gradient:not([class * ="icn"]):after, .beforebg-red-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #c74634 0%, rgba(199, 70, 52, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #c74634 0%, rgba(199, 70, 52, 0) 100%) !important;
+    background: linear-gradient(to right, #c74634 0%, rgba(199, 70, 52, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#c74634', endColorstr='rgba(199,70,52,0)', GradientType=1) !important
+}
+
+.bgred-45gradient:not([class * ="icn"]), .afterbg-red-45gradient:not([class * ="icn"]):after, .beforebg-red-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #c74634 0%, rgba(199, 70, 52, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #c74634 0%, rgba(199, 70, 52, 0) 100%) !important;
+    background: linear-gradient(135deg, #c74634 0%, rgba(199, 70, 52, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#c74634', endColorstr='rgba(199,70,52,0)', GradientType=1) !important
+}
+
+.bgred-vgradient:not([class * ="icn"]), .afterbg-red-vgradient:not([class * ="icn"]):after, .beforebg-red-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #c74634 0%, rgba(199, 70, 52, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #c74634 0%, rgba(199, 70, 52, 0) 100%) !important;
+    background: linear-gradient(to bottom, #c74634 0%, rgba(199, 70, 52, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#c74634', endColorstr='rgba(199,70,52,0)', GradientType=0) !important
+}
+
+.bgwhite-gradient:not([class * ="icn"]), .afterbg-white-gradient:not([class * ="icn"]):after, .beforebg-white-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #fff 0%, rgba(255, 255, 255, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #fff 0%, rgba(255, 255, 255, 0) 100%) !important;
+    background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='rgba(255,255,255,0)', GradientType=1) !important
+}
+
+.bgwhite-45gradient:not([class * ="icn"]), .afterbg-white-45gradient:not([class * ="icn"]):after, .beforebg-white-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #fff 0%, rgba(255, 255, 255, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #fff 0%, rgba(255, 255, 255, 0) 100%) !important;
+    background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='rgba(255,255,255,0)', GradientType=1) !important
+}
+
+.bgwhite-vgradient:not([class * ="icn"]), .afterbg-white-vgradient:not([class * ="icn"]):after, .beforebg-white-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #fff 0%, rgba(255, 255, 255, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #fff 0%, rgba(255, 255, 255, 0) 100%) !important;
+    background: linear-gradient(to bottom, #fff 0%, rgba(255, 255, 255, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='rgba(255,255,255,0)', GradientType=0) !important
+}
+
+.bgblack-gradient:not([class * ="icn"]), .afterbg-black-gradient:not([class * ="icn"]):after, .beforebg-black-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #000 0%, rgba(0, 0, 0, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #000 0%, rgba(0, 0, 0, 0) 100%) !important;
+    background: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='rgba(0,0,0,0)', GradientType=1) !important
+}
+
+.bgblack-45gradient:not([class * ="icn"]), .afterbg-black-45gradient:not([class * ="icn"]):after, .beforebg-black-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #000 0%, rgba(0, 0, 0, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #000 0%, rgba(0, 0, 0, 0) 100%) !important;
+    background: linear-gradient(135deg, #000 0%, rgba(0, 0, 0, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='rgba(0,0,0,0)', GradientType=1) !important
+}
+
+.bgblack-vgradient:not([class * ="icn"]), .afterbg-black-vgradient:not([class * ="icn"]):after, .beforebg-black-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #000 0%, rgba(0, 0, 0, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #000 0%, rgba(0, 0, 0, 0) 100%) !important;
+    background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='rgba(0,0,0,0)', GradientType=0) !important
+}
+
+.bgslate-gradient:not([class * ="icn"]), .afterbg-slate-gradient:not([class * ="icn"]):after, .beforebg-slate-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #665f5b 0%, rgba(102, 95, 91, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #665f5b 0%, rgba(102, 95, 91, 0) 100%) !important;
+    background: linear-gradient(to right, #665f5b 0%, rgba(102, 95, 91, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#665f5b', endColorstr='rgba(102,95,91,0)', GradientType=1) !important
+}
+
+.bgslate-45gradient:not([class * ="icn"]), .afterbg-slate-45gradient:not([class * ="icn"]):after, .beforebg-slate-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #665f5b 0%, rgba(102, 95, 91, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #665f5b 0%, rgba(102, 95, 91, 0) 100%) !important;
+    background: linear-gradient(135deg, #665f5b 0%, rgba(102, 95, 91, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#665f5b', endColorstr='rgba(102,95,91,0)', GradientType=1) !important
+}
+
+.bgslate-vgradient:not([class * ="icn"]), .afterbg-slate-vgradient:not([class * ="icn"]):after, .beforebg-slate-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #665f5b 0%, rgba(102, 95, 91, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #665f5b 0%, rgba(102, 95, 91, 0) 100%) !important;
+    background: linear-gradient(to bottom, #665f5b 0%, rgba(102, 95, 91, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#665f5b', endColorstr='rgba(102,95,91,0)', GradientType=0) !important
+}
+
+.bglightslate-gradient:not([class * ="icn"]), .afterbg-lightslate-gradient:not([class * ="icn"]):after, .beforebg-lightslate-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #d4cfca 0%, rgba(212, 207, 202, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #d4cfca 0%, rgba(212, 207, 202, 0) 100%) !important;
+    background: linear-gradient(to right, #d4cfca 0%, rgba(212, 207, 202, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#d4cfca', endColorstr='rgba(212,207,202,0)', GradientType=1) !important
+}
+
+.bglightslate-45gradient:not([class * ="icn"]), .afterbg-lightslate-45gradient:not([class * ="icn"]):after, .beforebg-lightslate-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #d4cfca 0%, rgba(212, 207, 202, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #d4cfca 0%, rgba(212, 207, 202, 0) 100%) !important;
+    background: linear-gradient(135deg, #d4cfca 0%, rgba(212, 207, 202, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#d4cfca', endColorstr='rgba(212,207,202,0)', GradientType=1) !important
+}
+
+.bglightslate-vgradient:not([class * ="icn"]), .afterbg-lightslate-vgradient:not([class * ="icn"]):after, .beforebg-lightslate-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #d4cfca 0%, rgba(212, 207, 202, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #d4cfca 0%, rgba(212, 207, 202, 0) 100%) !important;
+    background: linear-gradient(to bottom, #d4cfca 0%, rgba(212, 207, 202, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#d4cfca', endColorstr='rgba(212,207,202,0)', GradientType=0) !important
+}
+
+.bgdarkslate-gradient:not([class * ="icn"]), .afterbg-darkslate-gradient:not([class * ="icn"]):after, .beforebg-darkslate-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #4f5a5a 0%, rgba(79, 90, 90, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #4f5a5a 0%, rgba(79, 90, 90, 0) 100%) !important;
+    background: linear-gradient(to right, #4f5a5a 0%, rgba(79, 90, 90, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#4f5a5a', endColorstr='rgba(79,90,90,0)', GradientType=1) !important
+}
+
+.bgdarkslate-45gradient:not([class * ="icn"]), .afterbg-darkslate-45gradient:not([class * ="icn"]):after, .beforebg-darkslate-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #4f5a5a 0%, rgba(79, 90, 90, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #4f5a5a 0%, rgba(79, 90, 90, 0) 100%) !important;
+    background: linear-gradient(135deg, #4f5a5a 0%, rgba(79, 90, 90, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#4f5a5a', endColorstr='rgba(79,90,90,0)', GradientType=1) !important
+}
+
+.bgdarkslate-vgradient:not([class * ="icn"]), .afterbg-darkslate-vgradient:not([class * ="icn"]):after, .beforebg-darkslate-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #4f5a5a 0%, rgba(79, 90, 90, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #4f5a5a 0%, rgba(79, 90, 90, 0) 100%) !important;
+    background: linear-gradient(to bottom, #4f5a5a 0%, rgba(79, 90, 90, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#4f5a5a', endColorstr='rgba(79,90,90,0)', GradientType=0) !important
+}
+
+.bgvlightslate-gradient:not([class * ="icn"]), .afterbg-vlightslate-gradient:not([class * ="icn"]):after, .beforebg-vlightslate-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #e4e1dd 0%, rgba(228, 225, 221, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #e4e1dd 0%, rgba(228, 225, 221, 0) 100%) !important;
+    background: linear-gradient(to right, #e4e1dd 0%, rgba(228, 225, 221, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#e4e1dd', endColorstr='rgba(228,225,221,0)', GradientType=1) !important
+}
+
+.bgvlightslate-45gradient:not([class * ="icn"]), .afterbg-vlightslate-45gradient:not([class * ="icn"]):after, .beforebg-vlightslate-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #e4e1dd 0%, rgba(228, 225, 221, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #e4e1dd 0%, rgba(228, 225, 221, 0) 100%) !important;
+    background: linear-gradient(135deg, #e4e1dd 0%, rgba(228, 225, 221, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#e4e1dd', endColorstr='rgba(228,225,221,0)', GradientType=1) !important
+}
+
+.bgvlightslate-vgradient:not([class * ="icn"]), .afterbg-vlightslate-vgradient:not([class * ="icn"]):after, .beforebg-vlightslate-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #e4e1dd 0%, rgba(228, 225, 221, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #e4e1dd 0%, rgba(228, 225, 221, 0) 100%) !important;
+    background: linear-gradient(to bottom, #e4e1dd 0%, rgba(228, 225, 221, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#e4e1dd', endColorstr='rgba(228,225,221,0)', GradientType=0) !important
+}
+
+.bggrey-gradient:not([class * ="icn"]), .afterbg-grey-gradient:not([class * ="icn"]):after, .beforebg-grey-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #7a736e 0%, rgba(122, 115, 110, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #7a736e 0%, rgba(122, 115, 110, 0) 100%) !important;
+    background: linear-gradient(to right, #7a736e 0%, rgba(122, 115, 110, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#7a736e', endColorstr='rgba(122,115,110,0)', GradientType=1) !important
+}
+
+.bggrey-45gradient:not([class * ="icn"]), .afterbg-grey-45gradient:not([class * ="icn"]):after, .beforebg-grey-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #7a736e 0%, rgba(122, 115, 110, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #7a736e 0%, rgba(122, 115, 110, 0) 100%) !important;
+    background: linear-gradient(135deg, #7a736e 0%, rgba(122, 115, 110, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#7a736e', endColorstr='rgba(122,115,110,0)', GradientType=1) !important
+}
+
+.bggrey-vgradient:not([class * ="icn"]), .afterbg-grey-vgradient:not([class * ="icn"]):after, .beforebg-grey-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #7a736e 0%, rgba(122, 115, 110, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #7a736e 0%, rgba(122, 115, 110, 0) 100%) !important;
+    background: linear-gradient(to bottom, #7a736e 0%, rgba(122, 115, 110, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#7a736e', endColorstr='rgba(122,115,110,0)', GradientType=0) !important
+}
+
+.bglightgrey-gradient:not([class * ="icn"]), .afterbg-lightgrey-gradient:not([class * ="icn"]):after, .beforebg-lightgrey-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #e1ddda 0%, rgba(225, 221, 218, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #e1ddda 0%, rgba(225, 221, 218, 0) 100%) !important;
+    background: linear-gradient(to right, #e1ddda 0%, rgba(225, 221, 218, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#e1ddda', endColorstr='rgba(225,221,218,0)', GradientType=1) !important
+}
+
+.bglightgrey-45gradient:not([class * ="icn"]), .afterbg-lightgrey-45gradient:not([class * ="icn"]):after, .beforebg-lightgrey-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #e1ddda 0%, rgba(225, 221, 218, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #e1ddda 0%, rgba(225, 221, 218, 0) 100%) !important;
+    background: linear-gradient(135deg, #e1ddda 0%, rgba(225, 221, 218, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#e1ddda', endColorstr='rgba(225,221,218,0)', GradientType=1) !important
+}
+
+.bglightgrey-vgradient:not([class * ="icn"]), .afterbg-lightgrey-vgradient:not([class * ="icn"]):after, .beforebg-lightgrey-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #e1ddda 0%, rgba(225, 221, 218, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #e1ddda 0%, rgba(225, 221, 218, 0) 100%) !important;
+    background: linear-gradient(to bottom, #e1ddda 0%, rgba(225, 221, 218, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#e1ddda', endColorstr='rgba(225,221,218,0)', GradientType=0) !important
+}
+
+.bgdarkgrey-gradient:not([class * ="icn"]), .afterbg-darkgrey-gradient:not([class * ="icn"]):after, .beforebg-darkgrey-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #3a3632 0%, rgba(58, 54, 50, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #3a3632 0%, rgba(58, 54, 50, 0) 100%) !important;
+    background: linear-gradient(to right, #3a3632 0%, rgba(58, 54, 50, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#3a3632', endColorstr='rgba(58,54,50,0)', GradientType=1) !important
+}
+
+.bgdarkgrey-45gradient:not([class * ="icn"]), .afterbg-darkgrey-45gradient:not([class * ="icn"]):after, .beforebg-darkgrey-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #3a3632 0%, rgba(58, 54, 50, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #3a3632 0%, rgba(58, 54, 50, 0) 100%) !important;
+    background: linear-gradient(135deg, #3a3632 0%, rgba(58, 54, 50, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#3a3632', endColorstr='rgba(58,54,50,0)', GradientType=1) !important
+}
+
+.bgdarkgrey-vgradient:not([class * ="icn"]), .afterbg-darkgrey-vgradient:not([class * ="icn"]):after, .beforebg-darkgrey-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #3a3632 0%, rgba(58, 54, 50, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #3a3632 0%, rgba(58, 54, 50, 0) 100%) !important;
+    background: linear-gradient(to bottom, #3a3632 0%, rgba(58, 54, 50, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#3a3632', endColorstr='rgba(58,54,50,0)', GradientType=0) !important
+}
+
+.bgvlightgrey-gradient:not([class * ="icn"]), .afterbg-vlightgrey-gradient:not([class * ="icn"]):after, .beforebg-vlightgrey-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #f1efed 0%, rgba(241, 239, 237, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #f1efed 0%, rgba(241, 239, 237, 0) 100%) !important;
+    background: linear-gradient(to right, #f1efed 0%, rgba(241, 239, 237, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#f1efed', endColorstr='rgba(241,239,237,0)', GradientType=1) !important
+}
+
+.bgvlightgrey-45gradient:not([class * ="icn"]), .afterbg-vlightgrey-45gradient:not([class * ="icn"]):after, .beforebg-vlightgrey-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #f1efed 0%, rgba(241, 239, 237, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #f1efed 0%, rgba(241, 239, 237, 0) 100%) !important;
+    background: linear-gradient(135deg, #f1efed 0%, rgba(241, 239, 237, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#f1efed', endColorstr='rgba(241,239,237,0)', GradientType=1) !important
+}
+
+.bgvlightgrey-vgradient:not([class * ="icn"]), .afterbg-vlightgrey-vgradient:not([class * ="icn"]):after, .beforebg-vlightgrey-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #f1efed 0%, rgba(241, 239, 237, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #f1efed 0%, rgba(241, 239, 237, 0) 100%) !important;
+    background: linear-gradient(to bottom, #f1efed 0%, rgba(241, 239, 237, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#f1efed', endColorstr='rgba(241,239,237,0)', GradientType=0) !important
+}
+
+.bgorange-gradient:not([class * ="icn"]), .afterbg-orange-gradient:not([class * ="icn"]):after, .beforebg-orange-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #c58c52 0%, rgba(197, 140, 82, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #c58c52 0%, rgba(197, 140, 82, 0) 100%) !important;
+    background: linear-gradient(to right, #c58c52 0%, rgba(197, 140, 82, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#c58c52', endColorstr='rgba(197,140,82,0)', GradientType=1) !important
+}
+
+.bgorange-45gradient:not([class * ="icn"]), .afterbg-orange-45gradient:not([class * ="icn"]):after, .beforebg-orange-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #c58c52 0%, rgba(197, 140, 82, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #c58c52 0%, rgba(197, 140, 82, 0) 100%) !important;
+    background: linear-gradient(135deg, #c58c52 0%, rgba(197, 140, 82, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#c58c52', endColorstr='rgba(197,140,82,0)', GradientType=1) !important
+}
+
+.bgorange-vgradient:not([class * ="icn"]), .afterbg-orange-vgradient:not([class * ="icn"]):after, .beforebg-orange-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #c58c52 0%, rgba(197, 140, 82, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #c58c52 0%, rgba(197, 140, 82, 0) 100%) !important;
+    background: linear-gradient(to bottom, #c58c52 0%, rgba(197, 140, 82, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#c58c52', endColorstr='rgba(197,140,82,0)', GradientType=0) !important
+}
+
+.bglightorange-gradient:not([class * ="icn"]), .afterbg-lightorange-gradient:not([class * ="icn"]):after, .beforebg-lightorange-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #deb068 0%, rgba(222, 176, 104, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #deb068 0%, rgba(222, 176, 104, 0) 100%) !important;
+    background: linear-gradient(to right, #deb068 0%, rgba(222, 176, 104, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#deb068', endColorstr='rgba(222,176,104,0)', GradientType=1) !important
+}
+
+.bglightorange-45gradient:not([class * ="icn"]), .afterbg-lightorange-45gradient:not([class * ="icn"]):after, .beforebg-lightorange-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #deb068 0%, rgba(222, 176, 104, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #deb068 0%, rgba(222, 176, 104, 0) 100%) !important;
+    background: linear-gradient(135deg, #deb068 0%, rgba(222, 176, 104, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#deb068', endColorstr='rgba(222,176,104,0)', GradientType=1) !important
+}
+
+.bglightorange-vgradient:not([class * ="icn"]), .afterbg-lightorange-vgradient:not([class * ="icn"]):after, .beforebg-lightorange-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #deb068 0%, rgba(222, 176, 104, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #deb068 0%, rgba(222, 176, 104, 0) 100%) !important;
+    background: linear-gradient(to bottom, #deb068 0%, rgba(222, 176, 104, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#deb068', endColorstr='rgba(222,176,104,0)', GradientType=0) !important
+}
+
+.bgdarkorange-gradient:not([class * ="icn"]), .afterbg-darkorange-gradient:not([class * ="icn"]):after, .beforebg-darkorange-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #aa643b 0%, rgba(170, 100, 59, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #aa643b 0%, rgba(170, 100, 59, 0) 100%) !important;
+    background: linear-gradient(to right, #aa643b 0%, rgba(170, 100, 59, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#aa643b', endColorstr='rgba(170,100,59,0)', GradientType=1) !important
+}
+
+.bgdarkorange-45gradient:not([class * ="icn"]), .afterbg-darkorange-45gradient:not([class * ="icn"]):after, .beforebg-darkorange-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #aa643b 0%, rgba(170, 100, 59, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #aa643b 0%, rgba(170, 100, 59, 0) 100%) !important;
+    background: linear-gradient(135deg, #aa643b 0%, rgba(170, 100, 59, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#aa643b', endColorstr='rgba(170,100,59,0)', GradientType=1) !important
+}
+
+.bgdarkorange-vgradient:not([class * ="icn"]), .afterbg-darkorange-vgradient:not([class * ="icn"]):after, .beforebg-darkorange-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #aa643b 0%, rgba(170, 100, 59, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #aa643b 0%, rgba(170, 100, 59, 0) 100%) !important;
+    background: linear-gradient(to bottom, #aa643b 0%, rgba(170, 100, 59, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#aa643b', endColorstr='rgba(170,100,59,0)', GradientType=0) !important
+}
+
+.bgblue-gradient:not([class * ="icn"]), .afterbg-blue-gradient:not([class * ="icn"]):after, .beforebg-blue-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #3b7087 0%, rgba(59, 112, 135, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #3b7087 0%, rgba(59, 112, 135, 0) 100%) !important;
+    background: linear-gradient(to right, #3b7087 0%, rgba(59, 112, 135, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#3b7087', endColorstr='rgba(59,112,135,0)', GradientType=1) !important
+}
+
+.bgblue-45gradient:not([class * ="icn"]), .afterbg-blue-45gradient:not([class * ="icn"]):after, .beforebg-blue-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #3b7087 0%, rgba(59, 112, 135, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #3b7087 0%, rgba(59, 112, 135, 0) 100%) !important;
+    background: linear-gradient(135deg, #3b7087 0%, rgba(59, 112, 135, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#3b7087', endColorstr='rgba(59,112,135,0)', GradientType=1) !important
+}
+
+.bgblue-vgradient:not([class * ="icn"]), .afterbg-blue-vgradient:not([class * ="icn"]):after, .beforebg-blue-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #3b7087 0%, rgba(59, 112, 135, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #3b7087 0%, rgba(59, 112, 135, 0) 100%) !important;
+    background: linear-gradient(to bottom, #3b7087 0%, rgba(59, 112, 135, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#3b7087', endColorstr='rgba(59,112,135,0)', GradientType=0) !important
+}
+
+.bglightblue-gradient:not([class * ="icn"]), .afterbg-lightblue-gradient:not([class * ="icn"]):after, .beforebg-lightblue-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #558ea4 0%, rgba(85, 142, 164, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #558ea4 0%, rgba(85, 142, 164, 0) 100%) !important;
+    background: linear-gradient(to right, #558ea4 0%, rgba(85, 142, 164, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#558ea4', endColorstr='rgba(85,142,164,0)', GradientType=1) !important
+}
+
+.bglightblue-45gradient:not([class * ="icn"]), .afterbg-lightblue-45gradient:not([class * ="icn"]):after, .beforebg-lightblue-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #558ea4 0%, rgba(85, 142, 164, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #558ea4 0%, rgba(85, 142, 164, 0) 100%) !important;
+    background: linear-gradient(135deg, #558ea4 0%, rgba(85, 142, 164, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#558ea4', endColorstr='rgba(85,142,164,0)', GradientType=1) !important
+}
+
+.bglightblue-vgradient:not([class * ="icn"]), .afterbg-lightblue-vgradient:not([class * ="icn"]):after, .beforebg-lightblue-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #558ea4 0%, rgba(85, 142, 164, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #558ea4 0%, rgba(85, 142, 164, 0) 100%) !important;
+    background: linear-gradient(to bottom, #558ea4 0%, rgba(85, 142, 164, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#558ea4', endColorstr='rgba(85,142,164,0)', GradientType=0) !important
+}
+
+.bgdarkblue-gradient:not([class * ="icn"]), .afterbg-darkblue-gradient:not([class * ="icn"]):after, .beforebg-darkblue-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #325c72 0%, rgba(50, 92, 114, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #325c72 0%, rgba(50, 92, 114, 0) 100%) !important;
+    background: linear-gradient(to right, #325c72 0%, rgba(50, 92, 114, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#325c72', endColorstr='rgba(50,92,114,0)', GradientType=1) !important
+}
+
+.bgdarkblue-45gradient:not([class * ="icn"]), .afterbg-darkblue-45gradient:not([class * ="icn"]):after, .beforebg-darkblue-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #325c72 0%, rgba(50, 92, 114, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #325c72 0%, rgba(50, 92, 114, 0) 100%) !important;
+    background: linear-gradient(135deg, #325c72 0%, rgba(50, 92, 114, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#325c72', endColorstr='rgba(50,92,114,0)', GradientType=1) !important
+}
+
+.bgdarkblue-vgradient:not([class * ="icn"]), .afterbg-darkblue-vgradient:not([class * ="icn"]):after, .beforebg-darkblue-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #325c72 0%, rgba(50, 92, 114, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #325c72 0%, rgba(50, 92, 114, 0) 100%) !important;
+    background: linear-gradient(to bottom, #325c72 0%, rgba(50, 92, 114, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#325c72', endColorstr='rgba(50,92,114,0)', GradientType=0) !important
+}
+
+.bgvdarkblue-gradient:not([class * ="icn"]), .afterbg-vdarkblue-gradient:not([class * ="icn"]):after, .beforebg-vdarkblue-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #264759 0%, rgba(38, 71, 89, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #264759 0%, rgba(38, 71, 89, 0) 100%) !important;
+    background: linear-gradient(to right, #264759 0%, rgba(38, 71, 89, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#264759', endColorstr='rgba(38,71,89,0)', GradientType=1) !important
+}
+
+.bgvdarkblue-45gradient:not([class * ="icn"]), .afterbg-vdarkblue-45gradient:not([class * ="icn"]):after, .beforebg-vdarkblue-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #264759 0%, rgba(38, 71, 89, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #264759 0%, rgba(38, 71, 89, 0) 100%) !important;
+    background: linear-gradient(135deg, #264759 0%, rgba(38, 71, 89, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#264759', endColorstr='rgba(38,71,89,0)', GradientType=1) !important
+}
+
+.bgvdarkblue-vgradient:not([class * ="icn"]), .afterbg-vdarkblue-vgradient:not([class * ="icn"]):after, .beforebg-vdarkblue-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #264759 0%, rgba(38, 71, 89, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #264759 0%, rgba(38, 71, 89, 0) 100%) !important;
+    background: linear-gradient(to bottom, #264759 0%, rgba(38, 71, 89, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#264759', endColorstr='rgba(38,71,89,0)', GradientType=0) !important
+}
+
+.bggreen-gradient:not([class * ="icn"]), .afterbg-green-gradient:not([class * ="icn"]):after, .beforebg-green-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #6f915d 0%, rgba(111, 145, 93, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #6f915d 0%, rgba(111, 145, 93, 0) 100%) !important;
+    background: linear-gradient(to right, #6f915d 0%, rgba(111, 145, 93, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#6f915d', endColorstr='rgba(111,145,93,0)', GradientType=1) !important
+}
+
+.bggreen-45gradient:not([class * ="icn"]), .afterbg-green-45gradient:not([class * ="icn"]):after, .beforebg-green-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #6f915d 0%, rgba(111, 145, 93, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #6f915d 0%, rgba(111, 145, 93, 0) 100%) !important;
+    background: linear-gradient(135deg, #6f915d 0%, rgba(111, 145, 93, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#6f915d', endColorstr='rgba(111,145,93,0)', GradientType=1) !important
+}
+
+.bggreen-vgradient:not([class * ="icn"]), .afterbg-green-vgradient:not([class * ="icn"]):after, .beforebg-green-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #6f915d 0%, rgba(111, 145, 93, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #6f915d 0%, rgba(111, 145, 93, 0) 100%) !important;
+    background: linear-gradient(to bottom, #6f915d 0%, rgba(111, 145, 93, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#6f915d', endColorstr='rgba(111,145,93,0)', GradientType=0) !important
+}
+
+.bglightgreen-gradient:not([class * ="icn"]), .afterbg-lightgreen-gradient:not([class * ="icn"]):after, .beforebg-lightgreen-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #94b382 0%, rgba(148, 179, 130, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #94b382 0%, rgba(148, 179, 130, 0) 100%) !important;
+    background: linear-gradient(to right, #94b382 0%, rgba(148, 179, 130, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#94b382', endColorstr='rgba(148,179,130,0)', GradientType=1) !important
+}
+
+.bglightgreen-45gradient:not([class * ="icn"]), .afterbg-lightgreen-45gradient:not([class * ="icn"]):after, .beforebg-lightgreen-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #94b382 0%, rgba(148, 179, 130, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #94b382 0%, rgba(148, 179, 130, 0) 100%) !important;
+    background: linear-gradient(135deg, #94b382 0%, rgba(148, 179, 130, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#94b382', endColorstr='rgba(148,179,130,0)', GradientType=1) !important
+}
+
+.bglightgreen-vgradient:not([class * ="icn"]), .afterbg-lightgreen-vgradient:not([class * ="icn"]):after, .beforebg-lightgreen-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #94b382 0%, rgba(148, 179, 130, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #94b382 0%, rgba(148, 179, 130, 0) 100%) !important;
+    background: linear-gradient(to bottom, #94b382 0%, rgba(148, 179, 130, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#94b382', endColorstr='rgba(148,179,130,0)', GradientType=0) !important
+}
+
+.bgdarkgreen-gradient:not([class * ="icn"]), .afterbg-darkgreen-gradient:not([class * ="icn"]):after, .beforebg-darkgreen-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #3d5431 0%, rgba(61, 84, 49, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #3d5431 0%, rgba(61, 84, 49, 0) 100%) !important;
+    background: linear-gradient(to right, #3d5431 0%, rgba(61, 84, 49, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#3d5431', endColorstr='rgba(61,84,49,0)', GradientType=1) !important
+}
+
+.bgdarkgreen-45gradient:not([class * ="icn"]), .afterbg-darkgreen-45gradient:not([class * ="icn"]):after, .beforebg-darkgreen-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #3d5431 0%, rgba(61, 84, 49, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #3d5431 0%, rgba(61, 84, 49, 0) 100%) !important;
+    background: linear-gradient(135deg, #3d5431 0%, rgba(61, 84, 49, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#3d5431', endColorstr='rgba(61,84,49,0)', GradientType=1) !important
+}
+
+.bgdarkgreen-vgradient:not([class * ="icn"]), .afterbg-darkgreen-vgradient:not([class * ="icn"]):after, .beforebg-darkgreen-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #3d5431 0%, rgba(61, 84, 49, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #3d5431 0%, rgba(61, 84, 49, 0) 100%) !important;
+    background: linear-gradient(to bottom, #3d5431 0%, rgba(61, 84, 49, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#3d5431', endColorstr='rgba(61,84,49,0)', GradientType=0) !important
+}
+
+.bgburgundy-gradient:not([class * ="icn"]), .afterbg-burgundy-gradient:not([class * ="icn"]):after, .beforebg-burgundy-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #796087 0%, rgba(121, 96, 135, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #796087 0%, rgba(121, 96, 135, 0) 100%) !important;
+    background: linear-gradient(to right, #796087 0%, rgba(121, 96, 135, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#796087', endColorstr='rgba(121,96,135,0)', GradientType=1) !important
+}
+
+.bgburgundy-45gradient:not([class * ="icn"]), .afterbg-burgundy-45gradient:not([class * ="icn"]):after, .beforebg-burgundy-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #796087 0%, rgba(121, 96, 135, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #796087 0%, rgba(121, 96, 135, 0) 100%) !important;
+    background: linear-gradient(135deg, #796087 0%, rgba(121, 96, 135, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#796087', endColorstr='rgba(121,96,135,0)', GradientType=1) !important
+}
+
+.bgburgundy-vgradient:not([class * ="icn"]), .afterbg-burgundy-vgradient:not([class * ="icn"]):after, .beforebg-burgundy-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #796087 0%, rgba(121, 96, 135, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #796087 0%, rgba(121, 96, 135, 0) 100%) !important;
+    background: linear-gradient(to bottom, #796087 0%, rgba(121, 96, 135, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#796087', endColorstr='rgba(121,96,135,0)', GradientType=0) !important
+}
+
+.bglightburgundy-gradient:not([class * ="icn"]), .afterbg-lightburgundy-gradient:not([class * ="icn"]):after, .beforebg-lightburgundy-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #dbc9e5 0%, rgba(219, 201, 229, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #dbc9e5 0%, rgba(219, 201, 229, 0) 100%) !important;
+    background: linear-gradient(to right, #dbc9e5 0%, rgba(219, 201, 229, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#dbc9e5', endColorstr='rgba(219,201,229,0)', GradientType=1) !important
+}
+
+.bglightburgundy-45gradient:not([class * ="icn"]), .afterbg-lightburgundy-45gradient:not([class * ="icn"]):after, .beforebg-lightburgundy-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #dbc9e5 0%, rgba(219, 201, 229, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #dbc9e5 0%, rgba(219, 201, 229, 0) 100%) !important;
+    background: linear-gradient(135deg, #dbc9e5 0%, rgba(219, 201, 229, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#dbc9e5', endColorstr='rgba(219,201,229,0)', GradientType=1) !important
+}
+
+.bglightburgundy-vgradient:not([class * ="icn"]), .afterbg-lightburgundy-vgradient:not([class * ="icn"]):after, .beforebg-lightburgundy-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #dbc9e5 0%, rgba(219, 201, 229, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #dbc9e5 0%, rgba(219, 201, 229, 0) 100%) !important;
+    background: linear-gradient(to bottom, #dbc9e5 0%, rgba(219, 201, 229, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#dbc9e5', endColorstr='rgba(219,201,229,0)', GradientType=0) !important
+}
+
+.bgdarkburgundy-gradient:not([class * ="icn"]), .afterbg-darkburgundy-gradient:not([class * ="icn"]):after, .beforebg-darkburgundy-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #3f3048 0%, rgba(63, 48, 72, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #3f3048 0%, rgba(63, 48, 72, 0) 100%) !important;
+    background: linear-gradient(to right, #3f3048 0%, rgba(63, 48, 72, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#3f3048', endColorstr='rgba(63,48,72,0)', GradientType=1) !important
+}
+
+.bgdarkburgundy-45gradient:not([class * ="icn"]), .afterbg-darkburgundy-45gradient:not([class * ="icn"]):after, .beforebg-darkburgundy-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #3f3048 0%, rgba(63, 48, 72, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #3f3048 0%, rgba(63, 48, 72, 0) 100%) !important;
+    background: linear-gradient(135deg, #3f3048 0%, rgba(63, 48, 72, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#3f3048', endColorstr='rgba(63,48,72,0)', GradientType=1) !important
+}
+
+.bgdarkburgundy-vgradient:not([class * ="icn"]), .afterbg-darkburgundy-vgradient:not([class * ="icn"]):after, .beforebg-darkburgundy-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #3f3048 0%, rgba(63, 48, 72, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #3f3048 0%, rgba(63, 48, 72, 0) 100%) !important;
+    background: linear-gradient(to bottom, #3f3048 0%, rgba(63, 48, 72, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#3f3048', endColorstr='rgba(63,48,72,0)', GradientType=0) !important
+}
+
+.bglinkblue-gradient:not([class * ="icn"]), .afterbg-linkblue-gradient:not([class * ="icn"]):after, .beforebg-linkblue-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #00688c 0%, rgba(0, 104, 140, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #00688c 0%, rgba(0, 104, 140, 0) 100%) !important;
+    background: linear-gradient(to right, #00688c 0%, rgba(0, 104, 140, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00688c', endColorstr='rgba(0,104,140,0)', GradientType=1) !important
+}
+
+.bglinkblue-45gradient:not([class * ="icn"]), .afterbg-linkblue-45gradient:not([class * ="icn"]):after, .beforebg-linkblue-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #00688c 0%, rgba(0, 104, 140, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #00688c 0%, rgba(0, 104, 140, 0) 100%) !important;
+    background: linear-gradient(135deg, #00688c 0%, rgba(0, 104, 140, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00688c', endColorstr='rgba(0,104,140,0)', GradientType=1) !important
+}
+
+.bglinkblue-vgradient:not([class * ="icn"]), .afterbg-linkblue-vgradient:not([class * ="icn"]):after, .beforebg-linkblue-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #00688c 0%, rgba(0, 104, 140, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #00688c 0%, rgba(0, 104, 140, 0) 100%) !important;
+    background: linear-gradient(to bottom, #00688c 0%, rgba(0, 104, 140, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00688c', endColorstr='rgba(0,104,140,0)', GradientType=0) !important
+}
+
+.bgcodeorange-gradient:not([class * ="icn"]), .afterbg-codeorange-gradient:not([class * ="icn"]):after, .beforebg-codeorange-gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(left, #ef4c23 0%, rgba(239, 76, 35, 0) 100%) !important;
+    background: -webkit-linear-gradient(left, #ef4c23 0%, rgba(239, 76, 35, 0) 100%) !important;
+    background: linear-gradient(to right, #ef4c23 0%, rgba(239, 76, 35, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ef4c23', endColorstr='rgba(239,76,35,0)', GradientType=1) !important
+}
+
+.bgcodeorange-45gradient:not([class * ="icn"]), .afterbg-codeorange-45gradient:not([class * ="icn"]):after, .beforebg-codeorange-45gradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(-45deg, #ef4c23 0%, rgba(239, 76, 35, 0) 100%) !important;
+    background: -webkit-linear-gradient(-45deg, #ef4c23 0%, rgba(239, 76, 35, 0) 100%) !important;
+    background: linear-gradient(135deg, #ef4c23 0%, rgba(239, 76, 35, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ef4c23', endColorstr='rgba(239,76,35,0)', GradientType=1) !important
+}
+
+.bgcodeorange-vgradient:not([class * ="icn"]), .afterbg-codeorange-vgradient:not([class * ="icn"]):after, .beforebg-codeorange-vgradient:not([class * ="icn"]):before {
+    background: -moz-linear-gradient(top, #ef4c23 0%, rgba(239, 76, 35, 0) 100%) !important;
+    background: -webkit-linear-gradient(top, #ef4c23 0%, rgba(239, 76, 35, 0) 100%) !important;
+    background: linear-gradient(to bottom, #ef4c23 0%, rgba(239, 76, 35, 0) 100%) !important;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ef4c23', endColorstr='rgba(239,76,35,0)', GradientType=0) !important
+}
+
+.bgorangered:not([class * ="icn"]), .afterbg-orangered:not([class * ="icn"]):after, .beforebg-orangered:before {
+    background: #C58C52 !important
+}
+
+.bgredorange:not([class * ="icn"]), .afterbg-redorange:not([class * ="icn"]):after, .beforebg-redorange:before {
+    background: #C74634 !important
+}
+
+.bgburgundyblue:not([class * ="icn"]), .afterbg-burgundyblue:not([class * ="icn"]):after, .beforebg-burgundyblue:before {
+    background: #796087 !important
+}
+
+.bgblueburgundy:not([class * ="icn"]), .afterbg-blueburgundy:not([class * ="icn"]):after, .beforebg-blueburgundy:before {
+    background: #3B7087 !important
+}
+
+.bggreenblue:not([class * ="icn"]), .afterbg-greenblue:not([class * ="icn"]):after, .beforebg-greenblue:before {
+    background: #6F915D !important
+}
+
+.bgbluegreen:not([class * ="icn"]), .afterbg-bluegreen:not([class * ="icn"]):after, .beforebg-bluegreen:before {
+    background: #3B7087 !important
+}
+
+.bggreendarkgreen:not([class * ="icn"]), .afterbg-greendarkgreen:not([class * ="icn"]):after, .beforebg-greendarkgreen:before {
+    background: #6F915D !important
+}
+
+.bgdarkgreengreen:not([class * ="icn"]), .afterbg-darkgreengreen:not([class * ="icn"]):after, .beforebg-darkgreengreen:before {
+    background: #3D5431 !important
+}
+
+.bgredblue:not([class * ="icn"]), .afterbg-redblue:not([class * ="icn"]):after, .beforebg-redblue:before {
+    background: #C74634 !important
+}
+
+.bgbluered:not([class * ="icn"]), .afterbg-bluered:not([class * ="icn"]):after, .beforebg-bluered:before {
+    background: #3B7087 !important
+}
+
+.bgredburgundy:not([class * ="icn"]), .afterbg-redburgundy:not([class * ="icn"]):after, .beforebg-redburgundy:before {
+    background: #C74634 !important
+}
+
+.bgburgundyred:not([class * ="icn"]), .afterbg-burgundyred:not([class * ="icn"]):after, .beforebg-burgundyred:before {
+    background: #796087 !important
+}
+
+.bgbluedarkblue:not([class * ="icn"]), .afterbg-bluedarkblue:not([class * ="icn"]):after, .beforebg-bluedarkblue:before {
+    background: #3B7087 !important
+}
+
+.bgdarkblueblue:not([class * ="icn"]), .afterbg-darkblueblue:not([class * ="icn"]):after, .beforebg-darkblueblue:before {
+    background: #325C72 !important
+}
+
+.bgburgundydarkblue:not([class * ="icn"]), .afterbg-burgundydarkblue:not([class * ="icn"]):after, .beforebg-burgundydarkblue:before {
+    background: #796087 !important
+}
+
+.bgdarkblueburgundy:not([class * ="icn"]), .afterbg-darkblueburgundy:not([class * ="icn"]):after, .beforebg-darkblueburgundy:before {
+    background: #325C72 !important
+}
+
+[class * ="icn-"].fill-icngradient-green:before, .icn-img.icn-circle.bg-icngradient-green:after, ul.icn-list.icn-circle-list li.bg-icngradient-green:after {
+    background:#577346
+}
+
+.icn-img.icn-circle.bg-icngradient-green {
+    background:transparent !important
+}
+
+.icn-img.icn-circle.bg-icngradient-green:before {
+    color: #fff
+}
+
+[class * ="icn-"].fill-icngradient-green:before {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text
+}
+
+[class * ="icn-"].fill-icngradient-darkorange:before, .icn-img.icn-circle.bg-icngradient-darkorange:after, ul.icn-list.icn-circle-list li.bg-icngradient-darkorange:after {
+    background:#AA643B
+}
+
+.icn-img.icn-circle.bg-icngradient-darkorange {
+    background:transparent !important
+}
+
+.icn-img.icn-circle.bg-icngradient-darkorange:before {
+    color: #fff
+}
+
+[class * ="icn-"].fill-icngradient-darkorange:before {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text
+}
+
+[class * ="icn-"].fill-icngradient-burgundy:before, .icn-img.icn-circle.bg-icngradient-burgundy:after, ul.icn-list.icn-circle-list li.bg-icngradient-burgundy:after {
+    background:#594564
+}
+
+.icn-img.icn-circle.bg-icngradient-burgundy {
+    background:transparent !important
+}
+
+.icn-img.icn-circle.bg-icngradient-burgundy:before {
+    color: #fff
+}
+
+[class * ="icn-"].fill-icngradient-burgundy:before {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text
+}
+
+[class * ="icn-"].fill-icngradient-orange:before, .icn-img.icn-circle.bg-icngradient-orange:after, ul.icn-list.icn-circle-list li.bg-icngradient-orange:after {
+    background:#C58C52
+}
+
+.icn-img.icn-circle.bg-icngradient-orange {
+    background:transparent !important
+}
+
+.icn-img.icn-circle.bg-icngradient-orange:before {
+    color: #fff
+}
+
+[class * ="icn-"].fill-icngradient-orange:before {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text
+}
+
+[class * ="icn-"].fill-icngradient-blue:before, .icn-img.icn-circle.bg-icngradient-blue:after, ul.icn-list.icn-circle-list li.bg-icngradient-blue:after {
+    background:#325C72
+}
+
+.icn-img.icn-circle.bg-icngradient-blue {
+    background:transparent !important
+}
+
+.icn-img.icn-circle.bg-icngradient-blue:before {
+    color: #fff
+}
+
+[class * ="icn-"].fill-icngradient-blue:before {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text
+}
+
+[class * ="icn-"].fill-icngradient-red:before, .icn-img.icn-circle.bg-icngradient-red:after, ul.icn-list.icn-circle-list li.bg-icngradient-red:after {
+    background:#AB4A39
+}
+
+.icn-img.icn-circle.bg-icngradient-red {
+    background:transparent !important
+}
+
+.icn-img.icn-circle.bg-icngradient-red:before {
+    color: #fff
+}
+
+[class * ="icn-"].fill-icngradient-red:before {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip:text
+}
+
+@media all and (-ms-high-contrast: none),(-ms-high-contrast: active) {
+    [class * ="icn-"].fill-icngradient-green:before {
+        color: #C74634;
+        background: transparent
+    }
+
+    [class * ="icn-"].fill-icngradient-darkorange:before {
+        color: #3B7087;
+        background: transparent
+    }
+
+    [class * ="icn-"].fill-icngradient-burgundy:before {
+        color: #3B7087;
+        background: transparent
+    }
+
+    [class * ="icn-"].fill-icngradient-orange:before {
+        color: #3D5431;
+        background: transparent
+    }
+
+    [class * ="icn-"].fill-icngradient-blue:before {
+        color: #3B7087;
+        background: transparent
+    }
+
+    [class * ="icn-"].fill-icngradient-red:before {
+        color: #796087;
+        background: transparent
+    }
+}
+/*! FONT - ORACLE ICONS */
+
+@font-face {
+    font-family: 'oracleicons';
+    src: url("/assets/fonts/oracleicons.woff2?cache_arg") format("woff2"), url("/assets/fonts/oracleicons.woff?cache_arg") format("woff");
+    font-weight: normal;
+    font-style: normal
+}
+
+.icnbefore:before, [class^="icn-"]:before, [class * =" icn-"]:before, [class^="icn-cv-right-after"]:after, [class * =" icn-cv-right-after"]:after, [class^="icn-cv-down-after"]:after, [class * =" icn-cv-down-after"]:after, [class^="icn-cvthnr-right-after"]:after, [class * =" icn-cvthnr-right-after"]:after {
+    font-family: 'oracleicons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color:#00688C
+}
+
+a:hover * :after, a:hover:after, a:hover * :before, a:hover:before, a:focus * :after, a:focus:after, a:focus * :before, a:focus:before {
+    text-decoration:underline
+}
+
+a:hover * :after, a:hover:after, a:hover * :before, a:hover:before, a:focus * :after, a:focus:after, a:focus * :before, a:focus:before {
+    text-decoration:none !important
+}
+
+.icn-googleplus {
+    display:none !important
+}
+
+.icn-document:before {
+    content: "\e92c"
+}
+
+.icn-document-lock:before {
+    content: "\eb47"
+}
+
+.icn-pdf:before {
+    content: "\eafb"
+}
+
+.icn-pdf-lock:before {
+    content: "\eafa"
+}
+
+.icn-excel:before {
+    content: "\eaaa"
+}
+
+.icn-word:before {
+    content: "\eb4b"
+}
+
+.icn-html:before {
+    content: "\eac5"
+}
+
+.icn-zip:before {
+    content: "\eb51"
+}
+
+.icn-business-billing:before {
+    content: "\e913"
+}
+
+.icn-billing-pound:before {
+    content: "\e915"
+}
+
+.icn-billing-euro:before {
+    content: "\e914"
+}
+
+.icn-billing-yen:before {
+    content: "\e916"
+}
+
+.icn-proposals:before {
+    content: "\e95c"
+}
+
+.icn-report:before {
+    content: "\e961"
+}
+
+.icn-report-lock:before {
+    content: "\e979"
+}
+
+.icn-spreadsheet:before {
+    content: "\e967"
+}
+
+.icn-editorial-guidelines:before {
+    content: "\e92d"
+}
+
+.icn-contract:before {
+    content: "\e926"
+}
+
+.icn-legislation-and-regulation:before {
+    content: "\e944"
+}
+
+.icn-business-newsletter:before {
+    content: "\e94b"
+}
+
+.icn-risk-and-performance-analysis:before {
+    content: "\e964"
+}
+
+.icn-voice:before {
+    content: "\e975"
+}
+
+.icn-contract-approval:before {
+    content: "\e927"
+}
+
+.icn-order-execution:before {
+    content: "\e94e"
+}
+
+.icn-building-permit:before {
+    content: "\e918"
+}
+
+.icn-gov-risk-and-compliance:before {
+    content: "\e933"
+}
+
+.icn-accounting:before {
+    content: "\e963"
+}
+
+.icn-contract-negotiation:before {
+    content: "\e929"
+}
+
+.icn-contract-management:before {
+    content: "\e928"
+}
+
+.icn-human-resources-f:before {
+    content: "\e938"
+}
+
+.icn-patient-administration-m:before {
+    content: "\e950"
+}
+
+.icn-patient-administration-f:before {
+    content: "\e94f"
+}
+
+.icn-inventory-management:before {
+    content: "\e941"
+}
+
+.icn-catalog:before {
+    content: "\e930"
+}
+
+.icn-information-management:before {
+    content: "\e93d"
+}
+
+.icn-content-management:before {
+    content: "\e925"
+}
+
+.icn-identity-management:before {
+    content: "\e93b"
+}
+
+.icn-project-close:before {
+    content: "\e95b"
+}
+
+.icn-perfman:before {
+    content: "\e951"
+}
+
+.icn-client-management:before {
+    content: "\e91e"
+}
+
+.icn-client-management-2:before {
+    content: "\e91f"
+}
+
+.icn-client-management-3:before {
+    content: "\e920"
+}
+
+.icn-client-management-4:before {
+    content: "\e921"
+}
+
+.icn-ip-management:before {
+    content: "\e942"
+}
+
+.icn-grant-management:before {
+    content: "\e935"
+}
+
+.icn-sales-channel-mgmt:before {
+    content: "\e965"
+}
+
+.icn-supply-chain-management:before {
+    content: "\e96c"
+}
+
+.icn-workforce-mng:before {
+    content: "\eb4c"
+}
+
+.icn-talent-mng:before {
+    content: "\eb2d"
+}
+
+.icn-data-management:before {
+    content: "\e92b"
+}
+
+.icn-archivingdata:before {
+    content: "\e90d"
+}
+
+.icn-data-integration:before {
+    content: "\e92a"
+}
+
+.icn-platform-extensibility:before {
+    content: "\ea78"
+}
+
+.icn-integration:before {
+    content: "\e93f"
+}
+
+.icn-network:before {
+    content: "\e94a"
+}
+
+.icn-case-management:before {
+    content: "\e91b"
+}
+
+.icn-b-tree-index:before {
+    content: "\e910"
+}
+
+.icn-bar-graph:before {
+    content: "\e911"
+}
+
+.icn-chart:before {
+    content: "\e91c"
+}
+
+.icn-analytics:before {
+    content: "\e90c"
+}
+
+.icn-data-discovery:before {
+    content: "\ea7b"
+}
+
+.icn-pie-chart:before {
+    content: "\e953"
+}
+
+.icn-finance-chart:before {
+    content: "\e917"
+}
+
+.icn-subscription:before {
+    content: "\eb28"
+}
+
+.icn-money:before {
+    content: "\e946"
+}
+
+.icn-money-pound:before {
+    content: "\e948"
+}
+
+.icn-money-euro:before {
+    content: "\e947"
+}
+
+.icn-money-yen:before {
+    content: "\e949"
+}
+
+.icn-globe:before {
+    content: "\eaba"
+}
+
+.icn-globe-east:before {
+    content: "\eab9"
+}
+
+.icn-globe-apac:before {
+    content: "\eab8"
+}
+
+.icn-bigdata:before {
+    content: "\e912"
+}
+
+.icn-recruitment:before {
+    content: "\e95f"
+}
+
+.icn-recruitment-f:before {
+    content: "\e95e"
+}
+
+.icn-staffing:before {
+    content: "\e968"
+}
+
+.icn-staffing-m:before {
+    content: "\e969"
+}
+
+.icn-collaboration-tools:before {
+    content: "\e923"
+}
+
+.icn-presentation-m:before {
+    content: "\e956"
+}
+
+.icn-presentation-f:before {
+    content: "\e955"
+}
+
+.icn-training:before {
+    content: "\e972"
+}
+
+.icn-certification:before {
+    content: "\e934"
+}
+
+.icn-product-development:before {
+    content: "\e959"
+}
+
+.icn-business-form:before {
+    content: "\e932"
+}
+
+.icn-calendar:before {
+    content: "\e919"
+}
+
+.icn-tables:before {
+    content: "\e971"
+}
+
+.icn-tables1:before {
+    content: "\e970"
+}
+
+.icn-tables2:before {
+    content: "\e96f"
+}
+
+.icn-tables3:before {
+    content: "\e96e"
+}
+
+.icn-roi:before {
+    content: "\eb15"
+}
+
+.icn-quality-control:before {
+    content: "\e95d"
+}
+
+.icn-inventory:before {
+    content: "\e940"
+}
+
+.icn-extensible-architecture:before {
+    content: "\ea80"
+}
+
+.icn-smart-data:before {
+    content: "\ea81"
+}
+
+.icn-demo3d:before {
+    content: "\e90e"
+}
+
+.icn-product-portfolio:before {
+    content: "\e95a"
+}
+
+.icn-demo:before {
+    content: "\e958"
+}
+
+.icn-campaign-design:before {
+    content: "\e91a"
+}
+
+.icn-enterprise-architecture:before {
+    content: "\e92e"
+}
+
+.icn-optimization:before {
+    content: "\e94d"
+}
+
+.icn-clock:before {
+    content: "\e922"
+}
+
+.icn-hazard:before {
+    content: "\e936"
+}
+
+.icn-business_security:before {
+    content: "\e966"
+}
+
+.icn-strategy:before {
+    content: "\e96b"
+}
+
+.icn-innovation:before {
+    content: "\e93e"
+}
+
+.icn-recycling:before {
+    content: "\e960"
+}
+
+.icn-ecoleaf:before {
+    content: "\eaa2"
+}
+
+.icn-photography:before {
+    content: "\e952"
+}
+
+.icn-photo-autosuggest:before {
+    content: "\ea7d"
+}
+
+.icn-hourglass:before {
+    content: "\e937"
+}
+
+.icn-incentives:before {
+    content: "\e93c"
+}
+
+.icn-magnifyingglass:before {
+    content: "\e945"
+}
+
+.icn-binoculars:before {
+    content: "\e931"
+}
+
+.icn-online-finance:before {
+    content: "\e94c"
+}
+
+.icn-procurement:before {
+    content: "\e957"
+}
+
+.icn-expenses:before {
+    content: "\e92f"
+}
+
+.icn-research:before {
+    content: "\e962"
+}
+
+.icn-statutory-compliance:before {
+    content: "\e96a"
+}
+
+.icn-scp:before {
+    content: "\e96d"
+}
+
+.icn-bp:before {
+    content: "\ea68"
+}
+
+.icn-lead-generation:before {
+    content: "\e943"
+}
+
+.icn-voice-and-tone:before {
+    content: "\e976"
+}
+
+.icn-large-quote:before {
+    content: "\ead0"
+}
+
+.icn-quote-reverse:before {
+    content: "\eb0c"
+}
+
+.icn-x-mark:before {
+    content: "\e97a"
+}
+
+.icn-checkmark:before {
+    content: "\e91d"
+}
+
+.icn-getstarted:before {
+    content: "\eab6"
+}
+
+.icn-whyoracle:before {
+    content: "\eb49"
+}
+
+.icn-oraclecares:before {
+    content: "\ea6b"
+}
+
+.icn-giving:before {
+    content: "\ea6c"
+}
+
+.icn-location:before {
+    content: "\ea6d"
+}
+
+.icn-business-to-business:before {
+    content: "\e900"
+}
+
+.icn-enterprise-business:before {
+    content: "\1f30a"
+}
+
+.icn-event:before {
+    content: "\e902"
+}
+
+.icn-factory:before {
+    content: "\e901"
+}
+
+.icn-government:before {
+    content: "\e903"
+}
+
+.icn-hospital-clinic:before {
+    content: "\e904"
+}
+
+.icn-large-factory:before {
+    content: "\e905"
+}
+
+.icn-medbiz:before {
+    content: "\e906"
+}
+
+.icn-officebuilding:before {
+    content: "\e907"
+}
+
+.icn-operations-warehouse:before {
+    content: "\e908"
+}
+
+.icn-small-business:before {
+    content: "\e909"
+}
+
+.icn-university:before {
+    content: "\e90a"
+}
+
+.icn-warehouse:before {
+    content: "\e90b"
+}
+
+.icn-cx-m:before {
+    content: "\e993"
+}
+
+.icn-cx-f:before {
+    content: "\e991"
+}
+
+.icn-marketing:before {
+    content: "\e997"
+}
+
+.icn-market-analysis:before {
+    content: "\e996"
+}
+
+.icn-marketing-and-planning:before {
+    content: "\e998"
+}
+
+.icn-marketing-and-planning-campaign:before {
+    content: "\e999"
+}
+
+.icn-planning:before {
+    content: "\e99b"
+}
+
+.icn-sales-account-mgmt-m:before {
+    content: "\e99e"
+}
+
+.icn-sales-account-mgmt-f:before {
+    content: "\e99d"
+}
+
+.icn-relationship-management:before {
+    content: "\e98e"
+}
+
+.icn-partner:before {
+    content: "\eaf7"
+}
+
+.icn-atm:before {
+    content: "\e98b"
+}
+
+.icn-membership:before {
+    content: "\eadc"
+}
+
+.icn-membership-f:before {
+    content: "\ea08"
+}
+
+.icn-customer-profile-f:before {
+    content: "\e98c"
+}
+
+.icn-customer-profile-m:before {
+    content: "\e98d"
+}
+
+.icn-customer-satisfaction-f:before {
+    content: "\e98f"
+}
+
+.icn-customer-satisfaction-m:before {
+    content: "\e990"
+}
+
+.icn-cx-infinity-loop:before {
+    content: "\e992"
+}
+
+.icn-loyalty-program:before {
+    content: "\e995"
+}
+
+.icn-online-store:before {
+    content: "\e99a"
+}
+
+.icn-sales:before {
+    content: "\e99c"
+}
+
+.icn-sales-customer-segmentation-1:before {
+    content: "\e99f"
+}
+
+.icn-sales-customer-segmentation-2:before {
+    content: "\e9a0"
+}
+
+.icn-sales-direct:before {
+    content: "\e9a1"
+}
+
+.icn-shopping-cart:before {
+    content: "\e9a2"
+}
+
+.icn-ecommerce:before {
+    content: "\e994"
+}
+
+.icn-retail-card:before {
+    content: "\e9a3"
+}
+
+.icn-appreciation-event:before {
+    content: "\ea5a"
+}
+
+.icn-backpack:before {
+    content: "\ea63"
+}
+
+.icn-welcome-reception:before {
+    content: "\eb46"
+}
+
+.icn-cashregister:before {
+    content: "\ea6e"
+}
+
+.icn-concierge:before {
+    content: "\e9b8"
+}
+
+.icn-hospitality:before {
+    content: "\e9a8"
+}
+
+.icn-foodbev:before {
+    content: "\e9b2"
+}
+
+.icn-food-casual:before {
+    content: "\eaaf"
+}
+
+.icn-gaming:before {
+    content: "\e9b3"
+}
+
+.icn-research-and-education:before {
+    content: "\e9c4"
+}
+
+.icn-education:before {
+    content: "\e9a4"
+}
+
+.icn-chemicals:before {
+    content: "\e9a5"
+}
+
+.icn-health-sciences:before {
+    content: "\e9b4"
+}
+
+.icn-manufacturing:before {
+    content: "\e9b9"
+}
+
+.icn-engineering-and-construction:before {
+    content: "\e9ae"
+}
+
+.icn-construction:before {
+    content: "\e9a9"
+}
+
+.icn-natural-resources-coal:before {
+    content: "\e9bd"
+}
+
+.icn-oil-and-gas:before {
+    content: "\e9c0"
+}
+
+.icn-natural-resources-wind:before {
+    content: "\e9bf"
+}
+
+.icn-solar:before {
+    content: "\e9be"
+}
+
+.icn-communications:before {
+    content: "\e9a7"
+}
+
+.icn-energy-data-acquisition:before {
+    content: "\e9ab"
+}
+
+.icn-consumer-goods:before {
+    content: "\e9aa"
+}
+
+.icn-energy-thermostat:before {
+    content: "\e9ac"
+}
+
+.icn-energy-use:before {
+    content: "\e9ad"
+}
+
+.icn-financial-services-f:before {
+    content: "\e9af"
+}
+
+.icn-financial-services-m:before {
+    content: "\e9b0"
+}
+
+.icn-healthcare:before {
+    content: "\e9b5"
+}
+
+.icn-hitech:before {
+    content: "\e9b6"
+}
+
+.icn-city-planning:before {
+    content: "\e9a6"
+}
+
+.icn-architecture-security:before {
+    content: "\ea7e"
+}
+
+.icn-insurance:before {
+    content: "\e9ba"
+}
+
+.icn-water:before {
+    content: "\eb40"
+}
+
+.icn-life-sciences:before {
+    content: "\e9bb"
+}
+
+.icn-media-and-entertainment:before {
+    content: "\e9bc"
+}
+
+.icn-online-retail:before {
+    content: "\e9c1"
+}
+
+.icn-public-sector:before {
+    content: "\e9c2"
+}
+
+.icn-real-estate:before {
+    content: "\e9c3"
+}
+
+.icn-retail:before {
+    content: "\e9c5"
+}
+
+.icn-social-services:before {
+    content: "\e9c6"
+}
+
+.icn-volunteer:before {
+    content: "\e9c8"
+}
+
+.icn-utilities:before {
+    content: "\e9c7"
+}
+
+.icn-mobi:before {
+    content: "\e9cb"
+}
+
+.icn-mobi-2:before {
+    content: "\e9cc"
+}
+
+.icn-pay-mobile:before {
+    content: "\e9ca"
+}
+
+.icn-tablet-1:before {
+    content: "\e9cd"
+}
+
+.icn-tablet-2:before {
+    content: "\e9ce"
+}
+
+.icn-ebook:before {
+    content: "\eaa1"
+}
+
+.icn-ebook-lock:before {
+    content: "\eaa0"
+}
+
+.icn-tablet-mobile:before {
+    content: "\eb2c"
+}
+
+.icn-mobile-application:before {
+    content: "\e9c9"
+}
+
+.icn-wearables:before {
+    content: "\e9cf"
+}
+
+.icn-wireless-network:before {
+    content: "\e9d0"
+}
+
+.icn-executive-m:before {
+    content: "\e9ec"
+}
+
+.icn-executive-f:before {
+    content: "\e9e9"
+}
+
+.icn-end-user-m:before {
+    content: "\e9e8"
+}
+
+.icn-end-user-f:before {
+    content: "\e9e7"
+}
+
+.icn-service:before {
+    content: "\e9e2"
+}
+
+.icn-service-f:before {
+    content: "\e9e1"
+}
+
+.icn-business-person-lob-m:before {
+    content: "\e9d4"
+}
+
+.icn-business-person-lob-f:before {
+    content: "\e9d3"
+}
+
+.icn-hacker:before {
+    content: "\ea6f"
+}
+
+.icn-database-administrator-m:before {
+    content: "\e9e4"
+}
+
+.icn-database-administrator-f:before {
+    content: "\e9e3"
+}
+
+.icn-developer-male:before {
+    content: "\e9e6"
+}
+
+.icn-developer-female:before {
+    content: "\e9e5"
+}
+
+.icn-customer-service-and-support-m:before {
+    content: "\e9e0"
+}
+
+.icn-customer-service-and-support-f:before {
+    content: "\e9df"
+}
+
+.icn-financial-advisor-m:before {
+    content: "\e9f1"
+}
+
+.icn-financial-advisor-f:before {
+    content: "\e9f0"
+}
+
+.icn-it-professional-male:before {
+    content: "\e9f5"
+}
+
+.icn-it-professional-female:before {
+    content: "\e9f4"
+}
+
+.icn-idea-m:before {
+    content: "\e9f3"
+}
+
+.icn-idea-f:before {
+    content: "\e9f2"
+}
+
+.icn-student:before {
+    content: "\ea02"
+}
+
+.icn-student-female:before {
+    content: "\ea01"
+}
+
+.icn-salesperson-m:before {
+    content: "\e9fe"
+}
+
+.icn-salesperson-f:before {
+    content: "\e9fd"
+}
+
+.icn-business-intelligence-m:before {
+    content: "\e9d2"
+}
+
+.icn-business-intelligence-f:before {
+    content: "\e9d1"
+}
+
+.icn-student-demographics-m:before {
+    content: "\ea00"
+}
+
+.icn-student-demographics-f:before {
+    content: "\e9ff"
+}
+
+.icn-person-on-laptop:before {
+    content: "\e9f6"
+}
+
+.icn-person-on-mobile:before {
+    content: "\e9f7"
+}
+
+.icn-tablet-male:before {
+    content: "\e9f8"
+}
+
+.icn-clientcustomer:before {
+    content: "\e9d5"
+}
+
+.icn-clientcustomer2:before {
+    content: "\e9d6"
+}
+
+.icn-clientcustomer3:before {
+    content: "\e9d7"
+}
+
+.icn-clientcustomer4:before {
+    content: "\e9d8"
+}
+
+.icn-collaboration-formal-1:before {
+    content: "\e9d9"
+}
+
+.icn-collaboration-formal-2:before {
+    content: "\e9da"
+}
+
+.icn-collaboration-informal-1:before {
+    content: "\e9db"
+}
+
+.icn-collaboration-informal-2:before {
+    content: "\e9dc"
+}
+
+.icn-premier-support:before {
+    content: "\eabe"
+}
+
+.icn-consultation-1:before {
+    content: "\e9dd"
+}
+
+.icn-consultation-2:before {
+    content: "\e9de"
+}
+
+.icn-sales-team-2:before {
+    content: "\e9fc"
+}
+
+.icn-sales-team-1:before {
+    content: "\e9fb"
+}
+
+.icn-executive-full-body-m:before {
+    content: "\e9eb"
+}
+
+.icn-executive-full-body-f:before {
+    content: "\e9ea"
+}
+
+.icn-workforce2:before {
+    content: "\ea04"
+}
+
+.icn-workforce:before {
+    content: "\ea03"
+}
+
+.icn-family-1:before {
+    content: "\e9ed"
+}
+
+.icn-family-2:before {
+    content: "\e9ee"
+}
+
+.icn-family-3:before {
+    content: "\e9ef"
+}
+
+.icn-resources:before {
+    content: "\e9f9"
+}
+
+.icn-resources-2:before {
+    content: "\e9fa"
+}
+
+.icn-middleware:before {
+    content: "\e97b"
+}
+
+.icn-application-strategy-campaign:before {
+    content: "\e97c"
+}
+
+.icn-big-data-campaign:before {
+    content: "\e97d"
+}
+
+.icn-engineered-systems-campaign:before {
+    content: "\e983"
+}
+
+.icn-cloud-platform-campaign:before {
+    content: "\e97e"
+}
+
+.icn-storage-campaign-f:before {
+    content: "\e988"
+}
+
+.icn-storage-campaign-m:before {
+    content: "\e989"
+}
+
+.icn-database-12c-campaign:before {
+    content: "\e981"
+}
+
+.icn-data-center-campaign:before {
+    content: "\e980"
+}
+
+.icn-exalytics-campaign:before {
+    content: "\e986"
+}
+
+.icn-database-appliance-campaign:before {
+    content: "\e982"
+}
+
+.icn-exalogic-campaign:before {
+    content: "\e985"
+}
+
+.icn-server-campaign:before {
+    content: "\e987"
+}
+
+.icn-cmpn-server-exadata:before {
+    content: "\e98a"
+}
+
+.icn-cmpn-server-bigdata:before {
+    content: "\ea58"
+}
+
+.icn-cmpn-server-recovery:before {
+    content: "\ea5b"
+}
+
+.icn-public-cloud-campaign:before {
+    content: "\e9b7"
+}
+
+.icn-exadata-12c-campaign:before {
+    content: "\e984"
+}
+
+.icn-cloud-at-customer-campaign:before {
+    content: "\ea07"
+}
+
+.icn-cmpn-cloud-exadata:before {
+    content: "\ea6a"
+}
+
+.icn-autonomous-db:before {
+    content: "\e97f"
+}
+
+.icn-autonomous-paas:before {
+    content: "\ea70"
+}
+
+.icn-cmpn-db-upgrade:before {
+    content: "\ea62"
+}
+
+.icn-cmpn-high-availability:before {
+    content: "\ea64"
+}
+
+.icn-cmpn-rac:before {
+    content: "\ea65"
+}
+
+.icn-cmpn-auto-transaction:before {
+    content: "\ea71"
+}
+
+.icn-cloud:before {
+    content: "\ea17"
+}
+
+.icn-cloud-solid:before {
+    content: "\ea16"
+}
+
+.icn-cloud-security:before {
+    content: "\ea7c"
+}
+
+.icn-tech-cloud-iaas:before {
+    content: "\e974"
+}
+
+.icn-tech-cloud-paas:before {
+    content: "\e978"
+}
+
+.icn-tech-cloud-saas:before {
+    content: "\e977"
+}
+
+.icn-flatscreen-monitor:before {
+    content: "\ea28"
+}
+
+.icn-webcast:before {
+    content: "\eb43"
+}
+
+.icn-webcast-lock:before {
+    content: "\eb42"
+}
+
+.icn-order-mgmt:before {
+    content: "\eaf4"
+}
+
+.icn-computer:before {
+    content: "\ea18"
+}
+
+.icn-laptop:before {
+    content: "\ea30"
+}
+
+.icn-it-administration:before {
+    content: "\ea2e"
+}
+
+.icn-it-services:before {
+    content: "\ea2f"
+}
+
+.icn-software:before {
+    content: "\ea3d"
+}
+
+.icn-software-update:before {
+    content: "\ea3e"
+}
+
+.icn-maintenance:before {
+    content: "\ea34"
+}
+
+.icn-elearning:before {
+    content: "\ea25"
+}
+
+.icn-security-endpoint:before {
+    content: "\ea38"
+}
+
+.icn-mobicomp:before {
+    content: "\eae3"
+}
+
+.icn-opn:before {
+    content: "\eaf0"
+}
+
+.icn-database-virtual:before {
+    content: "\ea21"
+}
+
+.icn-database:before {
+    content: "\ea1e"
+}
+
+.icn-data-security:before {
+    content: "\ea1c"
+}
+
+.icn-database-pluggable:before {
+    content: "\ea20"
+}
+
+.icn-data-sharing:before {
+    content: "\ea1d"
+}
+
+.icn-data-aggregation:before {
+    content: "\ea19"
+}
+
+.icn-data-mining:before {
+    content: "\ea1b"
+}
+
+.icn-database-container:before {
+    content: "\ea1f"
+}
+
+.icn-database-virtualization:before {
+    content: "\ea22"
+}
+
+.icn-tech-infrastructure:before {
+    content: "\eb2f"
+}
+
+.icn-tech-datacenter:before {
+    content: "\ea1a"
+}
+
+.icn-hardware:before {
+    content: "\ea2a"
+}
+
+.icn-mainframe-computers-f:before {
+    content: "\ea32"
+}
+
+.icn-mainframe-computers-m:before {
+    content: "\ea33"
+}
+
+.icn-tech-server-big:before {
+    content: "\ea3b"
+}
+
+.icn-tech-server-db:before {
+    content: "\ea3c"
+}
+
+.icn-tech-server-cloud:before {
+    content: "\eb31"
+}
+
+.icn-it:before {
+    content: "\ea2d"
+}
+
+.icn-product-stack:before {
+    content: "\ea36"
+}
+
+.icn-simplified-product-stack:before {
+    content: "\e90f"
+}
+
+.icn-server-application:before {
+    content: "\ea3a"
+}
+
+.icn-storage-tape-drive:before {
+    content: "\ea3f"
+}
+
+.icn-hard-drive:before {
+    content: "\ea29"
+}
+
+.icn-tech-download:before {
+    content: "\ea24"
+}
+
+.icn-tech-email:before {
+    content: "\ea26"
+}
+
+.icn-tech-email-security:before {
+    content: "\ea27"
+}
+
+.icn-layout:before {
+    content: "\ea31"
+}
+
+.icn-ou:before {
+    content: "\ea37"
+}
+
+.icn-ux:before {
+    content: "\ea41"
+}
+
+.icn-interactive:before {
+    content: "\ea2c"
+}
+
+.icn-buttons-links:before {
+    content: "\ea15"
+}
+
+.icn-vr-person-f:before {
+    content: "\e954"
+}
+
+.icn-vr-person-m:before {
+    content: "\e973"
+}
+
+.icn-security-network:before {
+    content: "\ea39"
+}
+
+.icn-tech-publications:before {
+    content: "\ea40"
+}
+
+.icn-navigation:before {
+    content: "\ea35"
+}
+
+.icn-web-browser:before {
+    content: "\ea43"
+}
+
+.icn-developmentcode:before {
+    content: "\ea23"
+}
+
+.icn-support-simplified:before {
+    content: "\eb29"
+}
+
+.icn-assessment:before {
+    content: "\ea61"
+}
+
+.icn-javacomm:before {
+    content: "\eacf"
+}
+
+.icn-developer-ops:before {
+    content: "\ea96"
+}
+
+.icn-video:before {
+    content: "\e924"
+}
+
+.icn-video-lock:before {
+    content: "\ea42"
+}
+
+.icn-video-camera:before {
+    content: "\e93a"
+}
+
+.icn-development:before {
+    content: "\ea98"
+}
+
+.icn-tech-iot2:before {
+    content: "\ea0a"
+}
+
+.icn-tech-iot:before {
+    content: "\ea0b"
+}
+
+.icn-tech-ai:before {
+    content: "\ea0c"
+}
+
+.icn-tech-machine-learning:before {
+    content: "\ea11"
+}
+
+.icn-tech-deep-learning:before {
+    content: "\ea12"
+}
+
+.icn-tech-blockchain:before {
+    content: "\ea13"
+}
+
+.icn-tech-chatbot:before {
+    content: "\ea14"
+}
+
+.icn-tech-self-driving:before {
+    content: "\ea73"
+}
+
+.icn-tech-self-secure:before {
+    content: "\ea75"
+}
+
+.icn-tech-self-repairing:before {
+    content: "\ea76"
+}
+
+.icn-tech-transaction:before {
+    content: "\ea77"
+}
+
+.icn-logistics-helicopter:before {
+    content: "\ea4e"
+}
+
+.icn-military:before {
+    content: "\ea44"
+}
+
+.icn-airline:before {
+    content: "\ea45"
+}
+
+.icn-train:before {
+    content: "\ea51"
+}
+
+.icn-ambulance:before {
+    content: "\ea46"
+}
+
+.icn-logistics-truck:before {
+    content: "\ea50"
+}
+
+.icn-automotive:before {
+    content: "\ea47"
+}
+
+.icn-electric-car:before {
+    content: "\ea2b"
+}
+
+.icn-bus:before {
+    content: "\ea69"
+}
+
+.icn-cargo-truck:before {
+    content: "\ea49"
+}
+
+.icn-truck:before {
+    content: "\ea52"
+}
+
+.icn-cargo:before {
+    content: "\ea48"
+}
+
+.icn-logistics-ship:before {
+    content: "\ea4f"
+}
+
+.icn-logistics-ship-full-length:before {
+    content: "\ea53"
+}
+
+.icn-cruise-half:before {
+    content: "\ea4a"
+}
+
+.icn-cruise:before {
+    content: "\ea4b"
+}
+
+.icn-fisheries:before {
+    content: "\ea4c"
+}
+
+.icn-logistics:before {
+    content: "\ea4d"
+}
+
+.icn-oracle-logo:before {
+    content: "\eaf2"
+}
+
+.icn-java:before {
+    content: "\eace"
+}
+
+.icn-duke:before {
+    content: "\ea9f"
+}
+
+.icn-ace:before {
+    content: "\ea55"
+}
+
+.icn-icnlogoace:before {
+    content: "\eae2"
+}
+
+.icn-facebook:before {
+    content: "\eaab"
+}
+
+.icn-videoplay:before {
+    content: "\eb3e"
+}
+
+.icn-wechat:before {
+    content: "\eb44"
+}
+
+.icn-email:before {
+    content: "\eaa6"
+}
+
+.icn-newsletter:before {
+    content: "\eaeb"
+}
+
+.icn-delicious:before {
+    content: "\ea92"
+}
+
+.icn-blogs:before {
+    content: "\ea67"
+}
+
+.icn-googleplus:before {
+    content: "\eabb"
+}
+
+.icn-linkedin:before {
+    content: "\ead2"
+}
+
+.icn-tumblr:before {
+    content: "\eb37"
+}
+
+.icn-pinterest:before {
+    content: "\eafe"
+}
+
+.icn-twitter:before {
+    content: "\eb38"
+}
+
+.icn-youtube:before {
+    content: "\eb50"
+}
+
+.icn-instagram:before {
+    content: "\eac9"
+}
+
+.icn-blogger:before {
+    content: "\ea05"
+}
+
+.icn-podcast:before {
+    content: "\eb03"
+}
+
+.icn-rss:before {
+    content: "\ea0d"
+}
+
+.icn-glassdoor:before {
+    content: "\eab7"
+}
+
+.icn-periscope:before {
+    content: "\eafd"
+}
+
+.icn-weibo:before {
+    content: "\eb45"
+}
+
+.icn-github:before {
+    content: "\ea54"
+}
+
+.icn-youku:before {
+    content: "\eb4f"
+}
+
+.icn-socialmedia:before {
+    content: "\ea0f"
+}
+
+.icn-discussion:before {
+    content: "\ea06"
+}
+
+.icn-social-network-3:before {
+    content: "\ea10"
+}
+
+.icn-social:before {
+    content: "\ea0e"
+}
+
+.icn-arrow:before {
+    content: "\ea60"
+}
+
+.icn-arrow-left:before {
+    content: "\ea5d"
+}
+
+.icn-arrow-down:before {
+    content: "\ea5c"
+}
+
+.icn-arrow-up:before {
+    content: "\ea5f"
+}
+
+.icn-arrow-lock:before {
+    content: "\ea5e"
+}
+
+.icn-circlearrow:before {
+    content: "\ea74"
+}
+
+.icn-close:before {
+    content: "\ea79"
+}
+
+.icn-cv-circle:before {
+    content: "\ea89"
+}
+
+.icn-cv-down:before {
+    content: "\ea8a"
+}
+
+.icn-cv-up:before {
+    content: "\ea8e"
+}
+
+.icn-cv-left:before {
+    content: "\ea8b"
+}
+
+.icn-cv-right:before {
+    content: "\ea8d"
+}
+
+.icn-cvthnr-left:before {
+    content: "\ea8f"
+}
+
+.icn-cvthnr-right:before {
+    content: "\ea90"
+}
+
+.icn-cv-right-lock:before {
+    content: "\ea8c"
+}
+
+.icn-fpo:before {
+    content: "\eab3"
+}
+
+.icn-min:before {
+    content: "\eae1"
+}
+
+.icn-plus:before {
+    content: "\eb02"
+}
+
+.icn-min-cs:before {
+    content: "\eae0"
+}
+
+.icn-min-cf:before {
+    content: "\eadf"
+}
+
+.icn-plus-cs:before {
+    content: "\eb01"
+}
+
+.icn-plus-cf:before {
+    content: "\eb00"
+}
+
+.icn-plus-bttn:before {
+    content: "\eae4"
+}
+
+.icn-play-bttn:before {
+    content: "\eae5"
+}
+
+.icn-vidplay:before {
+    content: "\eb3f"
+}
+
+.icn-shuffle:before {
+    content: "\eb1e"
+}
+
+.icn-search:before {
+    content: "\eb19"
+}
+
+.icn-download-locked:before {
+    content: "\ea9d"
+}
+
+.icn-download:before {
+    content: "\ea9e"
+}
+
+.icn-padlock:before {
+    content: "\eaf6"
+}
+
+.icn-unlocked-padlock:before {
+    content: "\eae6"
+}
+
+.icn-telephone:before {
+    content: "\eb33"
+}
+
+.icn-chat:before {
+    content: "\ea72"
+}
+
+.icn-email-signup:before {
+    content: "\eaa5"
+}
+
+.icn-email2:before {
+    content: "\e939"
+}
+
+.icn-myaccount:before {
+    content: "\eae9"
+}
+
+.icn-useraccount:before {
+    content: "\eae8"
+}
+
+.icn-code:before {
+    content: "\eae7"
+}
+
+.icn-share:before {
+    content: "\e9b1"
+}
+
+.icn-bullet:before {
+    content: "\ea56"
+}
+
+.icn-service-gateway:before {
+    content: "\ead4"
+}
+
+.icn-cloud-network:before {
+    content: "\ead5"
+}
+
+.icn-api-service:before {
+    content: "\ead7"
+}
+
+.icn-backbone:before {
+    content: "\ead8"
+}
+
+.icn-data-transfer:before {
+    content: "\ead9"
+}
+
+.icn-waf:before {
+    content: "\eada"
+}
+
+.icn-cdn:before {
+    content: "\eadb"
+}
+
+.icn-dns:before {
+    content: "\eadd"
+}
+
+.icn-backup-restore:before {
+    content: "\eade"
+}
+
+.icn-autoscale:before {
+    content: "\ea82"
+}
+
+.icn-vm:before {
+    content: "\ea83"
+}
+
+.icn-bm:before {
+    content: "\ea84"
+}
+
+.icn-database-service:before {
+    content: "\ea85"
+}
+
+.icn-load-balance:before {
+    content: "\ea86"
+}
+
+.icn-container:before {
+    content: "\ea87"
+}
+
+.icn-drg:before {
+    content: "\ea88"
+}
+
+.icn-route-table:before {
+    content: "\ea91"
+}
+
+.icn-resource-mgmt:before {
+    content: "\ea93"
+}
+
+.icn-customer-premises:before {
+    content: "\ea94"
+}
+
+.icn-customer-datacenter:before {
+    content: "\ea95"
+}
+
+.icn-groups:before {
+    content: "\ea97"
+}
+
+.icn-id-access:before {
+    content: "\ea99"
+}
+
+.icn-file-storage:before {
+    content: "\ea9b"
+}
+
+.icn-block-storage:before {
+    content: "\ea9c"
+}
+
+.icn-object-storage:before {
+    content: "\eaa3"
+}
+
+.icn-object-bucket:before {
+    content: "\eaa4"
+}
+
+.icn-compartments:before {
+    content: "\eaa7"
+}
+
+.icn-logging:before {
+    content: "\eaa8"
+}
+
+.icn-instance-pool:before {
+    content: "\eaa9"
+}
+
+.icn-storage-gateway:before {
+    content: "\eaac"
+}
+
+.icn-notifications:before {
+    content: "\eaad"
+}
+
+.icn-streaming:before {
+    content: "\eaae"
+}
+
+.icn-cloud-search:before {
+    content: "\eab0"
+}
+
+.icn-alarm:before {
+    content: "\eab5"
+}
+
+.icn-key-management:before {
+    content: "\eabc"
+}
+
+.icn-security-checklist:before {
+    content: "\eabd"
+}
+
+.icn-queuing:before {
+    content: "\eabf"
+}
+
+.icn-ddos:before {
+    content: "\eac0"
+}
+
+.icn-vpn:before {
+    content: "\eac1"
+}
+
+.icn-ocid:before {
+    content: "\eac2"
+}
+
+.icn-fast-connect:before {
+    content: "\eac3"
+}
+
+.icn-internet-gateway:before {
+    content: "\eac4"
+}
+
+.icn-tagging:before {
+    content: "\eac7"
+}
+
+.icn-firewall:before {
+    content: "\eac8"
+}
+
+.icn-healthcheck:before {
+    content: "\eaca"
+}
+
+.icn-email-delivery:before {
+    content: "\eacb"
+}
+
+.icn-audit:before {
+    content: "\eacc"
+}
+
+.icn-telemetry:before {
+    content: "\eacd"
+}
+
+.icn-workflow:before {
+    content: "\ead1"
+}
+
+.icn-oci-event:before {
+    content: "\ead3"
+}
+
+.icn-ocloud:before {
+    content: "\ea09"
+}
+
+.icn-service-cloud:before {
+    content: "\eb1b"
+}
+
+.icn-cloud-database:before {
+    content: "\ea7a"
+}
+
+.icn-applications:before {
+    content: "\ea59"
+}
+
+.icn-cloudconnect:before {
+    content: "\ea7f"
+}
+
+.icn-oraclecloud-cx:before {
+    content: "\eaf3"
+}
+
+.icn-cloud-management:before {
+    content: "\ead6"
+}
+
+.icn-hybrid-cloud:before {
+    content: "\eac6"
+}
+
+.icn-blog:before {
+    content: "\ea66"
+}
+
+.icn-networking-data:before {
+    content: "\eaea"
+}
+
+.icn-prima:before {
+    content: "\eb07"
+}
+
+.icn-forum1:before {
+    content: "\eab1"
+}
+
+.icn-forum2:before {
+    content: "\eab2"
+}
+
+.icn-topliners-community-tile:before {
+    content: "\eb34"
+}
+
+.icn-allindustry:before {
+    content: "\ea57"
+}
+
+.icn-fpvfs:before {
+    content: "\eab4"
+}
+
+.icn-differ:before {
+    content: "\ea9a"
+}
+
+.icn-newwindow:before {
+    content: "\eaec"
+}
+
+.icn-cv-right-after:after {
+    content: "\ea8d"
+}
+
+.icn-cv-down-after:after {
+    content: "\ea8a"
+}
+
+.icn-cvthnr-right-after:after {
+    content: "\ea90"
+}
+
+.rtl .icn-cv-right-after:after {
+    content: "\ea8b"
+}
+
+.rtl .c74 .icn-cv-right-after:after {
+    content: "\ea5d"
+}
+
+.icn-adv-cust-support:before {
+    content: "\e9d5"
+}
+
+.icn-application:before {
+    content: "\e9c9"
+}
+
+.icn-arrow.icn-lock:before {
+    content: "\ea5e"
+}
+
+.icn-arrowthn:before {
+    content: "\ea60"
+}
+
+.icn-asessment:before {
+    content: "\ea61"
+}
+
+.icn-careers:before {
+    content: "\e9dc"
+}
+
+.icn-chartfolder:before {
+    content: "\e965"
+}
+
+.icn-commerce:before {
+    content: "\e909"
+}
+
+.icn-consulting:before {
+    content: "\ea0e"
+}
+
+.icn-customer-relationship-management:before, .icn-relations:before {
+    content: "\e98e"
+}
+
+.icn-cv-right.icn-lock:before {
+    content: "\ea8c"
+}
+
+.icn-cvthn-left:before {
+    content: "\ea8b"
+}
+
+.icn-cvthn-right:before {
+    content: "\ea8d"
+}
+
+.icn-developer-tools:before {
+    content: "\eb29"
+}
+
+.icn-download.icn-lock:before {
+    content: "\ea9d"
+}
+
+.icn-ebook.icn-lock:before {
+    content: "\eaa0"
+}
+
+.icn-engineering-systems:before {
+    content: "\eb2f"
+}
+
+.icn-financial:before {
+    content: "\e946"
+}
+
+.icn-financing:before {
+    content: "\e9f1"
+}
+
+.icn-FPVFS:before {
+    content: "\eab4"
+}
+
+.icn-group:before {
+    content: "\eabe"
+}
+
+.icn-health.icn-lock:before, .icn-health-lock:before, .icn-health:before {
+    content: "\e9b4"
+}
+
+.icn-infographic:before {
+    content: "\e964"
+}
+
+.icn-managed-cloud:before {
+    content: "\ead6"
+}
+
+.icn-management:before {
+    content: "\e9d2"
+}
+
+.icn-market:before {
+    content: "\e998"
+}
+
+.icn-omn:before {
+    content: "\eb50"
+}
+
+.icn-operating-system:before {
+    content: "\ea43"
+}
+
+.icn-oraclecloud-cx2:before {
+    content: "\eaf3"
+}
+
+.icn-OU:before {
+    content: "\ea37"
+}
+
+.icn-pcast:before {
+    content: "\eb03"
+}
+
+.icn-pdf-doc-lock:before, .icn-pdf.icn-lock:before {
+    content: "\eafa"
+}
+
+.icn-pdf-doc:before {
+    content: "\eafb"
+}
+
+.icn-plm:before {
+    content: "\e9f3"
+}
+
+.icn-levent:before {
+    content: "\e902"
+}
+
+.icn-present:before {
+    content: "\e93c"
+}
+
+.icn-presentation-female:before {
+    content: "\e955"
+}
+
+.icn-customer:before, .icn-presentation:before {
+    content: "\e956"
+}
+
+.icn-product-demo:before, .icn-storage:before {
+    content: "\e958"
+}
+
+.icn-publicsector:before {
+    content: "\e903"
+}
+
+.icn-reporta:before {
+    content: "\e926"
+}
+
+.icn-reporta.icn-lock:before, .icn-reporta-lock:before {
+    content: "\e979"
+}
+
+.icn-reportb:before {
+    content: "\e961"
+}
+
+.icn-servers:before {
+    content: "\e98a"
+}
+
+.icn-share-alt:before {
+    content: "\e9b1"
+}
+
+.icn-single:before {
+    content: "\e9e8"
+}
+
+.icn-social2:before {
+    content: "\ea0e"
+}
+
+.icn-solutions:before {
+    content: "\e959"
+}
+
+.icn-strategy-play:before {
+    content: "\e99b"
+}
+
+.icn-video.icn-lock:before {
+    content: "\ea42"
+}
+
+.icn-video2:before {
+    content: "\ea28"
+}
+
+.icn-webcast.icn-lock:before {
+    content: "\eb42"
+}
+
+.icn-whitepaper-lock:before, .icn-whitepaper.icn-lock:before {
+    content: "\eb47"
+}
+
+.icn-whitepaper:before {
+    content: "\e92c"
+}
+
+.icn-linked-in:before {
+    content: "\ead2"
+}
+
+.icn-cv-right, .icn-arrowthn {
+    position:relative
+}
+
+.rtl .icn-cv-circle:before {
+    -ms-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform:rotateY(180deg)
+}
+
+.f11v0 .f12 div.icn-img {
+    float: left;
+    max-width:115px
+}
+
+.icn-ovr-hdn:before {
+    height: 0.97em;
+    overflow: hidden;
+    position:absolute
+}
+
+div.icn-img {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 110px;
+    font-size:11rem
+}
+
+div.icn-img br {
+    display:none
+}
+
+span.icn-inline {
+    display: inline-block;
+    font-size: 1.6em;
+    vertical-align:middle
+}
+
+a:hover span.icn-inline {
+    text-decoration:none
+}
+
+.icn-img.icn-circle.icn-shadow:after {
+    box-shadow:0.04em 0.04em 0.11em rgba(0, 0, 0, 0.25)
+}
+
+.icn-img.icn-grey:before {
+    color:#7F7F7F
+}
+
+div.icn-sicons {
+    font-size:2.6em
+}
+
+div.icn-sicons:before {
+    padding-top: 0;
+    top: -0.14em;
+    left: -0.13em;
+    font-size: 3.5rem;
+    -webkit-transition: color .3s ease;
+    -moz-transition: color .3s ease;
+    transition:color .3s ease
+}
+
+.rtl div.icn-sicons:before {
+    left: auto;
+    right:-0.13em
+}
+
+ul.icn-list {
+    margin:0 0 1.6em
+}
+
+ul.icn-list li {
+    margin: 0 0 1.2em;
+    clear: both;
+    position: relative;
+    padding-left:2.6em
+}
+
+ul.icn-list li:before {
+    font-family: 'oracleicons' !important;
+    position: absolute;
+    top: -0.15em;
+    left: 0;
+    display: block;
+    width: auto;
+    height: 1em;
+    font-size: 38px;
+    font-size:3.8rem
+}
+
+ul.icn-list.icn-circle-list > li, ul.icn-list.icn-xlrg-list > li {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    -ms-flex-wrap: none;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 0;
+    border-radius: 0;
+    line-height: 1.2;
+    margin-bottom: 1.6em;
+    background:inherit !important
+}
+
+@media (min-width: 1500px) {
+    ul.icn-list.icn-circle-list > li, ul.icn-list.icn-xlrg-list > li {
+        line-height:2.1
+    }
+}
+
+ul.icn-list.icn-circle-list > li:before, ul.icn-list.icn-xlrg-list > li:before {
+    box-sizing: content-box;
+    position: static;
+    font-size: 5.65rem;
+    line-height: 1;
+    padding: 0.19em 0.18em 0.175em 0.18em;
+    margin: 0 1.7rem 1px 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    z-index: 2;
+    transform: scale(1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition:color 0.3s, background-color 0.3s, border-color 0.3s, transform 0.15s cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+ul.icn-list.icn-xlrg-list > li:before {
+    font-size: 8rem;
+    height: 1em;
+    width: 1em;
+    padding: 0
+}
+
+ul.icn-list.icn-circle-list > li:not([class * ="fill-"]):before {
+    background: rgba(255, 255, 255, 0);
+    color:#fff
+}
+
+ul.icn-list.icn-circle-list > li:after {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    left: 0;
+    box-sizing: content-box;
+    padding: 0.18em;
+    line-height: 1;
+    height: 1em;
+    width: 1em;
+    top: 50%;
+    font-size: 5.65rem;
+    margin-top: calc(-0.18em - .5em);
+    border-radius: 50%;
+    transform: rotate(1deg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition:color 0.3s, opacity 0.3s, border-color 0.3s, transform 0.12s cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+ul.icn-list.icn-xlrg-list.icn-hover > li:hover:before, ul.icn-list.icn-circle-list.icn-hover > li:hover:before {
+    transform:scale(1.12)
+}
+
+ul.icn-list.icn-circle-img.icn-hover > li:hover:after, ul.icn-list.icn-circle-list.icn-hover > li:hover:after {
+    transform:scale(1.12)
+}
+
+ul.icn-list.icn-xlrg-list.icn-top > li, ul.icn-list.icn-circle-list.icn-top > li {
+    position: relative;
+    padding-left: 6.5em;
+    min-height: 5.5em;
+    align-items:flex-start
+}
+
+ul.icn-list.icn-xlrg-list.icn-top > li:before, ul.icn-list.icn-xlrg-list.icn-top > li:after, ul.icn-list.icn-circle-list.icn-top > li:before, ul.icn-list.icn-circle-list.icn-top > li:after {
+    position: absolute;
+    top: auto;
+    left: 0;
+    margin-top:0
+}
+
+.rtl ul.icn-list.icn-circle-list > li:before, .rtl ul.icn-list.icn-xlrg-list > li:before {
+    margin:0 0 1px 1.7rem
+}
+
+.rtl ul.icn-list.icn-xlrg-list.icn-top > li, .rtl ul.icn-list.icn-circle-list.icn-top > li {
+    padding-right: 6.5em;
+    padding-left:0
+}
+
+.rtl ul.icn-list.icn-xlrg-list.icn-top > li:before, .rtl ul.icn-list.icn-xlrg-list.icn-top > li:after, .rtl ul.icn-list.icn-circle-list.icn-top > li:before, .rtl ul.icn-list.icn-circle-list.icn-top > li:after {
+    left: auto;
+    right:0
+}
+
+ul.icn-circle-list.icn-shadow > li:after {
+    box-shadow:0.04em 0.04em 0.11em rgba(0, 0, 0, 0.25)
+}
+
+ul.icn-list.icn-list-sm li {
+    min-height: 29px;
+    padding-left: 1.6em;
+    font-size: 16px;
+    font-size:1.6rem
+}
+
+ul.icn-list.icn-list-sm li:before {
+    top: -0.03em;
+    font-size: 24px;
+    font-size:2.4rem
+}
+
+ul.icn-list.icn-list-med li {
+    min-height: 38px;
+    padding-left: 38px;
+    font-size: 18px;
+    font-size:1.8rem
+}
+
+ul.icn-list.icn-list-med li:before {
+    font-size: 34px;
+    font-size: 3.4rem;
+    top:-0.17em
+}
+
+ul.icn-list.icn-list-lg li:before {
+    top:-0.25em
+}
+
+ul.icn-list.icn-ondark li, ul.icn-list.icn-ondark li:before, ul.icn-list.icn-ondark li a, ul.icn-list.icn-ondark li:visited, .icn-heading.icn-ondark, .icn-link.icn-ondark, .icn-link.icn-ondark:before, .icn-img.icn-ondark:before {
+    color:#fff
+}
+
+ul.icn-list.icn-grey li:before, div.icn-img.icn-grey:before, .icn-link.icn-grey:before {
+    top: -0.13em;
+    color:#7F7F7F
+}
+
+.icn-heading.icn-grey:before {
+    color:#7F7F7F
+}
+
+.icn-img.icn-circle {
+    float: left;
+    height: 1em;
+    line-height: 1;
+    font-size: 116px;
+    font-size: 11.6rem;
+    width: 1em !important;
+    margin: .1em .1em !important;
+    max-width: none !important;
+    position:relative
+}
+
+.icn-img.icn-circle:after {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    transform:rotate(1deg)
+}
+
+.icn-img.icn-circle:before {
+    z-index: 1;
+    top: 50%;
+    color: #3B7087;
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-top: -.5em;
+    font-size: .65em;
+    line-height: 1.05;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing:grayscale
+}
+
+.icn-circle {
+    border-radius: 50%;
+    background: #EBEAE7;
+    font-size:8.6rem
+}
+
+div.icn-heading, h1.icn-heading, h2.icn-heading, h3.icn-heading, h4.icn-heading, h5.icn-heading, h6.icn-heading {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    -ms-flex-wrap: none;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    clear: both;
+    font-weight: bold;
+    line-height: 1.114285714286em;
+    margin:0 0 0.6em -0.12em
+}
+
+.rtl div.icn-heading, .rtl h1.icn-heading, .rtl h2.icn-heading, .rtl h3.icn-heading, .rtl h4.icn-heading, .rtl h5.icn-heading, .rtl h6.icn-heading {
+    margin:0 -0.12em 0.6em 0
+}
+
+div.icn-heading:before, h1.icn-heading:before, h2.icn-heading:before, h3.icn-heading:before, h4.icn-heading:before, h5.icn-heading:before, h6.icn-heading:before {
+    position: relative;
+    top: 0.12em !important;
+    padding-right: 0.15em !important;
+    font-size:1.2em !important
+}
+
+div.icn-heading.icn-ondark:before, h1.icn-heading.icn-ondark:before, h2.icn-heading.icn-ondark:before, h3.icn-heading.icn-ondark:before, h4.icn-heading.icn-ondark:before, h5.icn-heading.icn-ondark:before, h6.icn-heading.icn-ondark:before {
+    color:#fff
+}
+
+.rtl ul.icn-list li {
+    padding-right: 2.3em;
+    padding-left:0
+}
+
+.rtl ul.icn-list li:before {
+    right: 0;
+    left: auto
+}
+
+.icn-socialcolors [class * ="icn"]:before {
+    color: #211E1C !important
+}
+/*! FONT - ORACLESANS + NOTO */
+
+@font-face {
+    font-display: fallback;
+    font-family: "OracleSansVF";
+    src: url("/assets/fonts/OracleSansVF.woff2") format("woff2");
+    font-weight: 275 800;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "OracleSansVF";
+    src: url("/assets/fonts/OracleSansVF-Cond.woff2") format("woff2");
+    font-weight: 300 700;
+    font-style: normal;
+    font-stretch:75% 99%
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "OracleSansVFCyGr";
+    src: url("/assets/fonts/OracleSansVF-CyGr.woff2") format("woff2");
+    font-weight: 275 800;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "OracleSansVF";
+    src: url("/assets/fonts/OracleSansVF-It.woff2") format("woff2");
+    font-weight: 275 800;
+    font-style:italic
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "OracleSansVF";
+    src: url("/assets/fonts/OracleSansVF-Cond-It.woff2") format("woff2");
+    font-weight: 300 700;
+    font-style: italic;
+    font-stretch:75% 99%
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "OracleSansVFCyGr";
+    src: url("/assets/fonts/OracleSansVF-CyGr-It.woff2") format("woff2");
+    font-weight: 275 800;
+    font-style:italic
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("/assets/fonts/OracleSans-ULt.woff2") format("woff2"), url("/assets/fonts/OracleSans-ULt.woff") format("woff");
+    font-weight: 100;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("/assets/fonts/OracleSans-ULt.woff2") format("woff2"), url("/assets/fonts/OracleSans-ULt.woff") format("woff");
+    font-weight: 200;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("/assets/fonts/OracleSans-Lt.woff2") format("woff2"), url("/assets/fonts/OracleSans-Lt.woff") format("woff");
+    font-weight: 300;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("/assets/fonts/OracleSans-Rg.woff2") format("woff2"), url("/assets/fonts/OracleSans-Rg.woff") format("woff");
+    font-weight: 400;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("/assets/fonts/OracleSans-Rg.woff2") format("woff2"), url("/assets/fonts/OracleSans-Rg.woff") format("woff");
+    font-weight: 500;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("/assets/fonts/OracleSans-SBd.woff2") format("woff2"), url("/assets/fonts/OracleSans-SBd.woff") format("woff");
+    font-weight: 600;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("/assets/fonts/OracleSans-Bd.woff2") format("woff2"), url("/assets/fonts/OracleSans-Bd.woff") format("woff");
+    font-weight: 700;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("/assets/fonts/OracleSans-XBd.woff2") format("woff2"), url("/assets/fonts/OracleSans-XBd.woff") format("woff");
+    font-weight: 800;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("/assets/fonts/OracleSans-XBd.woff2") format("woff2"), url("/assets/fonts/OracleSans-XBd.woff") format("woff");
+    font-weight: 900;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("/assets/fonts/OracleSans-ULtIt.woff2") format("woff2"), url("/assets/fonts/OracleSans-ULtIt.woff") format("woff");
+    font-weight: 100;
+    font-style:italic
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("/assets/fonts/OracleSans-ULtIt.woff2") format("woff2"), url("/assets/fonts/OracleSans-ULtIt.woff") format("woff");
+    font-weight: 200;
+    font-style:italic
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("/assets/fonts/OracleSans-LtIt.woff2") format("woff2"), url("/assets/fonts/OracleSans-LtIt.woff") format("woff");
+    font-weight: 300;
+    font-style:italic
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("/assets/fonts/OracleSans-It.woff2") format("woff2"), url("/assets/fonts/OracleSans-It.woff") format("woff");
+    font-weight: 400;
+    font-style:italic
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("/assets/fonts/OracleSans-It.woff2") format("woff2"), url("/assets/fonts/OracleSans-It.woff") format("woff");
+    font-weight: 500;
+    font-style:italic
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("/assets/fonts/OracleSans-SBdIt.woff2") format("woff2"), url("/assets/fonts/OracleSans-SBdIt.woff") format("woff");
+    font-weight: 600;
+    font-style:italic
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("/assets/fonts/OracleSans-BdIt.woff2") format("woff2"), url("/assets/fonts/OracleSans-BdIt.woff") format("woff");
+    font-weight: 700;
+    font-style:italic
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("/assets/fonts/OracleSans-XBdIt.woff2") format("woff2"), url("/assets/fonts/OracleSans-XBdIt.woff") format("woff");
+    font-weight: 800;
+    font-style:italic
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    src: url("/assets/fonts/OracleSans-XBdIt.woff2") format("woff2"), url("/assets/fonts/OracleSans-XBdIt.woff") format("woff");
+    font-weight: 900;
+    font-style:italic
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    font-weight: 100;
+    font-stretch: condensed;
+    src: url("/assets/fonts/OracleSansCd-Lt.woff2") format("woff2");
+    src: url("/assets/fonts/OracleSansCd-Lt.woff") format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    font-weight: 200;
+    font-stretch: condensed;
+    src: url("/assets/fonts/OracleSansCd-Lt.woff2") format("woff2");
+    src: url("/assets/fonts/OracleSansCd-Lt.woff") format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    font-weight: 300;
+    font-stretch: condensed;
+    src: url("/assets/fonts/OracleSansCd-Lt.woff2") format("woff2");
+    src: url("/assets/fonts/OracleSansCd-Lt.woff") format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    font-weight: 400;
+    font-stretch: condensed;
+    src: url("/assets/fonts/OracleSansCd-Rg.woff2") format("woff2");
+    src: url("/assets/fonts/OracleSansCd-Rg.woff") format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    font-weight: 500;
+    font-stretch: condensed;
+    src: url("/assets/fonts/OracleSansCd-Rg.woff2") format("woff2");
+    src: url("/assets/fonts/OracleSansCd-Rg.woff") format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    font-weight: 600;
+    font-stretch: condensed;
+    src: url("/assets/fonts/OracleSansCd-Rg.woff2") format("woff2");
+    src: url("/assets/fonts/OracleSansCd-Rg.woff") format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    font-weight: 700;
+    font-stretch: condensed;
+    src: url("/assets/fonts/OracleSansCd-Bd.woff2") format("woff2");
+    src: url("/assets/fonts/OracleSansCd-Bd.woff") format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    font-weight: 800;
+    font-stretch: condensed;
+    src: url("/assets/fonts/OracleSansCd-Bd.woff2") format("woff2");
+    src: url("/assets/fonts/OracleSansCd-Bd.woff") format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    font-weight: 900;
+    font-stretch: condensed;
+    src: url("/assets/fonts/OracleSansCd-Bd.woff2") format("woff2");
+    src: url("/assets/fonts/OracleSansCd-Bd.woff") format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    font-weight: 100;
+    font-style: italic;
+    font-stretch: condensed;
+    src: url("/assets/fonts/OracleSansCd-LtIt.woff2") format("woff2");
+    src: url("/assets/fonts/OracleSansCd-LtIt.woff") format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: condensed;
+    src: url("/assets/fonts/OracleSansCd-LtIt.woff2") format("woff2");
+    src: url("/assets/fonts/OracleSansCd-LtIt.woff") format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: condensed;
+    src: url("/assets/fonts/OracleSansCd-LtIt.woff2") format("woff2");
+    src: url("/assets/fonts/OracleSansCd-LtIt.woff") format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: condensed;
+    src: url("/assets/fonts/OracleSansCd-It.woff2") format("woff2");
+    src: url("/assets/fonts/OracleSansCd-It.woff") format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: condensed;
+    src: url("/assets/fonts/OracleSansCd-It.woff2") format("woff2");
+    src: url("/assets/fonts/OracleSansCd-It.woff") format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: condensed;
+    src: url("/assets/fonts/OracleSansCd-It.woff2") format("woff2");
+    src: url("/assets/fonts/OracleSansCd-It.woff") format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: condensed;
+    src: url("/assets/fonts/OracleSansCd-BdIt.woff2") format("woff2");
+    src: url("/assets/fonts/OracleSansCd-BdIt.woff") format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: condensed;
+    src: url("/assets/fonts/OracleSansCd-BdIt.woff2") format("woff2");
+    src: url("/assets/fonts/OracleSansCd-BdIt.woff") format("woff")
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Oracle Sans";
+    font-weight: 900;
+    font-style: italic;
+    font-stretch: condensed;
+    src: url("/assets/fonts/OracleSansCd-BdIt.woff2") format("woff2");
+    src: url("/assets/fonts/OracleSansCd-BdIt.woff") format("woff")
+}
+
+html, input, button, textarea, select {
+    font-family: "Oracle Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color:#161513
+}
+
+@supports (font-variation-settings: normal) {
+    html, input, button, textarea, select {
+        font-family: "OracleSansVF", "OracleSansVFCyGr", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif
+    }
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic";
+    src: url("/assets/fonts/NotoSansArabic-ExtraLight.ttf") format("truetype");
+    font-weight: 100;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic";
+    src: url("/assets/fonts/NotoSansArabic-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic";
+    src: url("/assets/fonts/NotoSansArabic-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic";
+    src: url("/assets/fonts/NotoSansArabic-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic";
+    src: url("/assets/fonts/NotoSansArabic-Regular.ttf") format("truetype");
+    font-weight: 500;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic";
+    src: url("/assets/fonts/NotoSansArabic-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic";
+    src: url("/assets/fonts/NotoSansArabic-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic";
+    src: url("/assets/fonts/NotoSansArabic-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic";
+    src: url("/assets/fonts/NotoSansArabic-ExtraBold.ttf") format("truetype");
+    font-weight: 900;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic";
+    src: url("/assets/fonts/NotoSansArabic-CondensedLight.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic";
+    src: url("/assets/fonts/NotoSansArabic-CondensedLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic";
+    src: url("/assets/fonts/NotoSansArabic-CondensedLight.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic";
+    src: url("/assets/fonts/NotoSansArabic-Condensed.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic";
+    src: url("/assets/fonts/NotoSansArabic-Condensed.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic";
+    src: url("/assets/fonts/NotoSansArabic-Condensed.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic";
+    src: url("/assets/fonts/NotoSansArabic-CondensedBold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic";
+    src: url("/assets/fonts/NotoSansArabic-CondensedBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic";
+    src: url("/assets/fonts/NotoSansArabic-CondensedBold.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic UI";
+    src: url("/assets/fonts/NotoSansArabicUI-ExtraLight.ttf") format("truetype");
+    font-weight: 100;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic UI";
+    src: url("/assets/fonts/NotoSansArabicUI-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic UI";
+    src: url("/assets/fonts/NotoSansArabicUI-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic UI";
+    src: url("/assets/fonts/NotoSansArabicUI-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic UI";
+    src: url("/assets/fonts/NotoSansArabicUI-Regular.ttf") format("truetype");
+    font-weight: 500;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic UI";
+    src: url("/assets/fonts/NotoSansArabicUI-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic UI";
+    src: url("/assets/fonts/NotoSansArabicUI-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic UI";
+    src: url("/assets/fonts/NotoSansArabicUI-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic UI";
+    src: url("/assets/fonts/NotoSansArabicUI-ExtraBold.ttf") format("truetype");
+    font-weight: 900;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic UI";
+    src: url("/assets/fonts/NotoSansArabicUI-CondensedLight.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic UI";
+    src: url("/assets/fonts/NotoSansArabicUI-CondensedLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic UI";
+    src: url("/assets/fonts/NotoSansArabicUI-CondensedLight.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic UI";
+    src: url("/assets/fonts/NotoSansArabicUI-Condensed.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic UI";
+    src: url("/assets/fonts/NotoSansArabicUI-Condensed.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic UI";
+    src: url("/assets/fonts/NotoSansArabicUI-Condensed.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic UI";
+    src: url("/assets/fonts/NotoSansArabicUI-CondensedBold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic UI";
+    src: url("/assets/fonts/NotoSansArabicUI-CondensedBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Arabic UI";
+    src: url("/assets/fonts/NotoSansArabicUI-CondensedBold.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: condensed
+}
+
+html[lang^="ar"], html[lang^="ar"] input, html[lang^="ar"] button, html[lang^="ar"] textarea, html[lang^="ar"] select {
+    font-family: "Oracle Sans", "Noto Sans Arabic", "Noto Sans Arabic UI", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif
+}
+
+@supports (font-variation-settings: normal) {
+    html[lang^="ar"], html[lang^="ar"] input, html[lang^="ar"] button, html[lang^="ar"] textarea, html[lang^="ar"] select {
+        font-family: "OracleSansVF", "OracleSansVFCyGr", "Noto Sans Arabic", "Noto Sans Arabic UI", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif
+    }
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Hebrew";
+    src: url("/assets/fonts/NotoSansHebrew-ExtraLight.ttf") format("truetype");
+    font-weight: 100;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Hebrew";
+    src: url("/assets/fonts/NotoSansHebrew-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Hebrew";
+    src: url("/assets/fonts/NotoSansHebrew-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Hebrew";
+    src: url("/assets/fonts/NotoSansHebrew-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Hebrew";
+    src: url("/assets/fonts/NotoSansHebrew-Regular.ttf") format("truetype");
+    font-weight: 500;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Hebrew";
+    src: url("/assets/fonts/NotoSansHebrew-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Hebrew";
+    src: url("/assets/fonts/NotoSansHebrew-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Hebrew";
+    src: url("/assets/fonts/NotoSansHebrew-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Hebrew";
+    src: url("/assets/fonts/NotoSansHebrew-ExtraBold.ttf") format("truetype");
+    font-weight: 900;
+    font-style:normal
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Hebrew";
+    src: url("/assets/fonts/NotoSansHebrew-CondensedLight.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Hebrew";
+    src: url("/assets/fonts/NotoSansHebrew-CondensedLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Hebrew";
+    src: url("/assets/fonts/NotoSansHebrew-CondensedLight.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Hebrew";
+    src: url("/assets/fonts/NotoSansHebrew-Condensed.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Hebrew";
+    src: url("/assets/fonts/NotoSansHebrew-Condensed.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Hebrew";
+    src: url("/assets/fonts/NotoSansHebrew-Condensed.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Hebrew";
+    src: url("/assets/fonts/NotoSansHebrew-CondensedBold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Hebrew";
+    src: url("/assets/fonts/NotoSansHebrew-CondensedBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch:condensed
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: "Noto Sans Hebrew";
+    src: url("/assets/fonts/NotoSansHebrew-CondensedBold.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: condensed
+}
+
+html[lang^="he"], html[lang^="he"] input, html[lang^="he"] button, html[lang^="he"] textarea, html[lang^="he"] select {
+    font-family: "Oracle Sans", "Noto Sans Hebrew", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif
+}
+
+@supports (font-variation-settings: normal) {
+    html[lang^="he"], html[lang^="he"] input, html[lang^="he"] button, html[lang^="he"] textarea, html[lang^="he"] select {
+        font-family: "OracleSansVF", "OracleSansVFCyGr", "Noto Sans Hebrew", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight:600
+}
+
+i {
+    font-style: italic
+}
+/*! INFO */
+
+#redwood-styles {
+    content: "%ga_build%"
+}
+
