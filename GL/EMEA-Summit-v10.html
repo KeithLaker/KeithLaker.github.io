@@ -187,6 +187,8 @@ a[href="place-holder.html"] {
   }
 }
 		</style>
+		
+
 		<div class="f11w1">
 			<nav id="u28nav" class="u28nav" data-trackas="menu">
 				<span class="mnavback u28back">Back</span>
@@ -300,7 +302,7 @@ a[href="place-holder.html"] {
 										</a>
 										<div id="IntroPop" class="modalPopWindow">
 											<div class="embedded-video-16-9">
-												<a href="#close" title="Close" class="close">Close</a>
+												<a href="#close" title="Close" class="close" id="closeIntro">Close</a>
 												<br><br>
 												<p class="video_header">
 													<strong>Oracle Global Leaders EMEA Summer Meeting 2020</strong>
@@ -308,12 +310,22 @@ a[href="place-holder.html"] {
 													Introduction with Reiner Zimmermann<br>Vice President, Oracle
 												</p>
 												<br>
-												<video height="450px" width="70%" autoplay playsinline controls  preload="metadata" id="event-video">
+												<video height="450px" width="70%" playsinline controls  preload="metadata" id="event-video-intro">
 													<source src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/aa9d82d06dd8526fa0784298b936cfe6/01_01___oraclegloballeadersvirtualevent2020_introduction.mp4" type="video/mp4">
 													Your browser does not support the video tag.
 												</video>
+													<script>
+														var ppbutton = document.getElementById("closeIntro");
+														ppbutton.addEventListener("click", pauseIntro);
+														introVideo = document.getElementById("event-video-intro");
+														function pauseIntro() { 
+															introVideo.pause();
+															}
+													</script>
+												
 												<br>
 												<br>
+
 											</div>
 										</div>
 									</div>
@@ -386,16 +398,24 @@ a[href="place-holder.html"] {
 											<a href="#OCIPop">Watch</a>
 											<div id="OCIPop" class="modalPopWindow">
 												<div class="embedded-video-16-9">
-													<a href="#close" title="Close" class="close">Close</a>
+													<a href="#close" title="Close" class="close" id="closeOCI">Close</a>
 													<p class="video_header">
 														<strong>Oracle Global Leaders EMEA Summer Meeting 2020</strong>
 														<br>
 														Oracle Cloud Infrastructure Customer Panel
 													</p>
-													<video height="450px" width="70%" autoplay playsinline controls  preload="metadata" id="event-video">
+													<video height="450px" width="70%" playsinline controls  preload="metadata" id="event-video-oci">
 														<source src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/dfc8d8305daa2e835197ccc03a45660b/01_02___oracle_cloud_infrastructure_panel.mp4" type="video/mp4">
 														Your browser does not support the video tag.
 													</video>
+													<script>
+														var ppbutton = document.getElementById("closeOCI");
+														ppbutton.addEventListener("click", pauseOCI);
+														ociVideo = document.getElementById("event-video-oci");
+														function pauseOCI() { 
+															ociVideo.pause();
+															}
+													</script>
 												</div>
 											</div>
 										</div>
@@ -437,7 +457,7 @@ a[href="place-holder.html"] {
 											</a>
 											<div id="OCIUpd" class="modalPopWindow">
 												<div class="embedded-video-16-9">
-													<a href="#close" title="Close" class="close">Close</a>
+													<a href="#close" title="Close" class="closeMD">Close</a>
 													<br><br>
 													<p class="video_header">
 														<strong>Oracle Global Leaders EMEA Summer Meeting 2020</strong>
@@ -445,10 +465,18 @@ a[href="place-holder.html"] {
 														Migration to the Cloud with Mike Dietrich<br>Master Product Manager, Database Technology<br>Oracle
 													</p>
 													<br><br>
-													<video height="450px" width="70%" autoplay playsinline controls  preload="metadata" id="event-video">
+													<video height="450px" width="70%" playsinline controls  preload="metadata" id="event-video-md">
 														<source src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/b09773686d9a732b15a7c4049729cbda/01_03___oraclemigrationcloud.mp4" type="video/mp4">
 														Your browser does not support the video tag.
 													</video>
+																										<script>
+														var ppbutton = document.getElementById("closeMD");
+														ppbutton.addEventListener("click", pauseOCI);
+														mdVideo = document.getElementById("event-video-md");
+														function pauseOCI() { 
+															mdVideo.pause();
+															}
+													</script>
 
 												</div>
 											</div>
