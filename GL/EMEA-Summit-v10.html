@@ -188,7 +188,6 @@ a[href="place-holder.html"] {
 }
 		</style>
 		
-
 		<div class="f11w1">
 			<nav id="u28nav" class="u28nav" data-trackas="menu">
 				<span class="mnavback u28back">Back</span>
@@ -314,15 +313,15 @@ a[href="place-holder.html"] {
 													<source src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/aa9d82d06dd8526fa0784298b936cfe6/01_01___oraclegloballeadersvirtualevent2020_introduction.mp4" type="video/mp4">
 													Your browser does not support the video tag.
 												</video>
-													<script>
-														var ppbutton = document.getElementById("closeIntro");
-														ppbutton.addEventListener("click", pauseIntro);
-														introVideo = document.getElementById("event-video-intro");
-														function pauseIntro() { 
-															introVideo.pause();
-															}
-													</script>
-												
+												<script>
+													var ppbutton = document.getElementById("closeIntro");
+													ppbutton.addEventListener("click", pauseIntro);
+													introVideo = document.getElementById("event-video-intro");
+													function pauseIntro() { 
+														introVideo.pause();
+													}
+												</script>
+
 												<br>
 												<br>
 
@@ -457,7 +456,7 @@ a[href="place-holder.html"] {
 											</a>
 											<div id="OCIUpd" class="modalPopWindow">
 												<div class="embedded-video-16-9">
-													<a href="#close" title="Close" class="closeMD">Close</a>
+													<a href="#close" title="Close" class="close"  id="closeMD">Close</a>
 													<br><br>
 													<p class="video_header">
 														<strong>Oracle Global Leaders EMEA Summer Meeting 2020</strong>
@@ -471,11 +470,11 @@ a[href="place-holder.html"] {
 													</video>
 																										<script>
 														var ppbutton = document.getElementById("closeMD");
-														ppbutton.addEventListener("click", pauseOCI);
+														ppbutton.addEventListener("click", pauseMD);
 														mdVideo = document.getElementById("event-video-md");
-														function pauseOCI() { 
+														function pauseMD() { 
 															mdVideo.pause();
-															}
+														}
 													</script>
 
 												</div>
