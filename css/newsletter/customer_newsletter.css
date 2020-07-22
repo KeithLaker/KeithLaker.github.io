@@ -318,14 +318,16 @@ a {
  color: white !important;
 }
 
+
 /* Style the Image Used to Trigger the Modal */
-#myImg {
+#myImg, #myImg02 {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-#myImg:hover {opacity: 0.7;}
+#myImg:hover, #myImg02:hover
+ {opacity: 0.7;}
 
 /* The Modal (background) */
 .modal {
@@ -371,7 +373,8 @@ a {
 }
 
 
-.close {
+.close, 
+.close02 {
   position: absolute;
   top: 15px;
   right: 35px;
@@ -381,6 +384,8 @@ a {
   transition: 0.3s;
 }
 
+.close02:hover,
+.close02:focus,
 .close:hover,
 .close:focus {
   color: #bbb;
