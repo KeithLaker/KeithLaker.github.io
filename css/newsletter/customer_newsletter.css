@@ -57,8 +57,6 @@ table.helper {
  border-bottom: 2px !important;
  border-style: solid !important;
  border-color: grey !important;
- cellpadding:1 !important;
- cellspacing:1 !important; 
  width:100% !important;
  padding: 10px !important;
 }
@@ -73,8 +71,6 @@ table.helper {
   border-color: #154360 !important;
   background-color:#154360 !important;
   text-align:center !important;
-  font-weight:normal !important;
-  line-height: 16px !important;
   color: white !important; 
   font-family: Helvetica, Arial, sans-serif !important; 
   font-size: 10px !important; 
@@ -87,17 +83,12 @@ table.helper {
   width:50% !important; 
   border-top: 0px !important;
   border-left: 0px !important;
-  border-right: 0px !important
-  border-bottom: 0px !important
+  border-right: 0px !important;
+  border-bottom: 0px !important;
   border-style: solid !important;
   border-color: white !important;
   background-color:white !important;
-  color:#515A5A !important;
-  font-family:arial !important;
-  font-size:10px !important;
   text-align:center !important;
-  font-weight:bold !important;
-  line-height: 10px !important;
   color: #7187a7 !important; 
   font-family: Helvetica, Arial, sans-serif !important; 
   font-size: 12px !important; 
@@ -114,8 +105,6 @@ table.events {
  border-bottom: 2px !important;
  border-style: solid !important;
  border-color: white !important;
- cellpadding:10px !important;
- cellspacing:10px !important; 
  width:100% !important;
  padding: 5px !important;
  background-color:grey;
@@ -217,7 +206,6 @@ a.btt {
   font-family:Verdana !important;
   font-size:12px !important; 
   font-weight:bold !important;
-  color:white !important;
   text-decoration: none !important;
   color: white !important;
   background-color: #454545 !important;
@@ -304,13 +292,13 @@ color: blue;
 li {
 font-family: Oracle Sans !important;
 font-size: 10.5pt !important;
-font-color:#252525 !important;
+color:#252525 !important;
 }
 
 p {
 font-family: Oracle Sans !important;
 font-size: 10.5pt !important;
-font-color:#252525 !important;
+color:#252525 !important;
 }
 
 td.topit{
@@ -354,7 +342,6 @@ a {
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
-/* Modal Content (Image) */
 .modal-content {
   margin: auto;
   display: block;
@@ -362,7 +349,6 @@ a {
   max-width: 1000px;
 }
 
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
 #caption {
   margin: auto;
   display: block;
@@ -374,7 +360,6 @@ a {
   height: 150px;
 }
 
-/* Add Animation - Zoom in the Modal */
 .modal-content, #caption { 
   animation-name: zoom;
   animation-duration: 0.6s;
@@ -385,7 +370,7 @@ a {
   to {transform:scale(1)}
 }
 
-/* The Close Button */
+
 .close {
   position: absolute;
   top: 15px;
@@ -403,7 +388,7 @@ a {
   cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
+
 @media only screen and (max-width: 700px){
   .modal-content {
     width: 100%;
