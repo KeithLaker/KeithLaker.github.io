@@ -1,0 +1,34 @@
+<html>
+	<head>
+	
+<script>
+const RSS_URL = 'https://keithlaker.github.io/rss/rss.txt';
+
+fetch(RSS_URL)
+  .then(response => response.text())
+  .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+  .then(data => {
+    console.log(data);
+    const items = data.querySelectorAll("item");
+    let html = `
+					</div>
+					<div class="obttns obttn-center">
+						<div class="obttn2 bttn-black">
+							<a href="placeholder-best-paractices.html">See more Data Warehouse posts</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+`;
+	document.body.insertAdjacentHTML("afterbegin", html);
+  });
+
+</script>
+
+	</head>
+	<body>
+
+	</body>
+</html>

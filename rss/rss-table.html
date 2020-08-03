@@ -11,14 +11,6 @@ fetch(RSS_URL)
     console.log(data);
     const items = data.querySelectorAll("item");
     let html = `
-		<section class="cw58 cw58v1 cpad bgvlightgrey" data-trackas="cw58">
-			<div class="cw58w0 cwidth">
-				<div class="o-crsl col3">
-					<header class="center-text">
-						<div class="eyebrow">New to Data Warehousing</div>
-						<h2>Data Warehousing Blog Posts</h2>
-					</header>
-					<div class="cw58w1 crsl-slider col-gutters" data-dots="false">
 `;
     items.forEach(el => {
       html += `
@@ -44,18 +36,6 @@ fetch(RSS_URL)
       `;
     });
 
-    html += `
-					</div>
-					<div class="obttns obttn-center">
-						<div class="obttn2 bttn-black">
-							<a href="placeholder-best-paractices.html">See more Data Warehouse posts</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-     `;
 	document.body.insertAdjacentHTML("afterbegin", html);
   });
 
