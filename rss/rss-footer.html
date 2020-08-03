@@ -2,9 +2,9 @@
 	<head>
 	
 <script>
-const RSS_URL = 'https://keithlaker.github.io/rss/rss.txt';
+const RSS_URL_FOOTER = 'https://keithlaker.github.io/rss/rss.txt';
 
-fetch(RSS_URL)
+fetch(RSS_URL_FOOTER)
   .then(response => response.text())
   .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
   .then(data => {
