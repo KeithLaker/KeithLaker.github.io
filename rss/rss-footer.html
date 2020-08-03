@@ -1,17 +1,6 @@
-<html>
-	<head>
-	
-<script>
-const RSS_URL_FOOTER = 'https://keithlaker.github.io/rss/rss.txt';
-
-fetch(RSS_URL_FOOTER)
-  .then(response => response.text())
-  .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-  .then(data => {
-    console.log(data);
-    const items = data.querySelectorAll("item");
-    let html = `
-					</div>
+		<section class="cw58 cw58v1 cpad bgvlightgrey" data-trackas="cw58">
+			<div class="cw58w0 cwidth">
+				<div class="o-crsl col3">
 					<div class="obttns obttn-center">
 						<div class="obttn2 bttn-black">
 							<a href="placeholder-best-paractices.html">See more Data Warehouse posts</a>
@@ -20,15 +9,3 @@ fetch(RSS_URL_FOOTER)
 				</div>
 			</div>
 		</section>
-
-`;
-	document.body.insertAdjacentHTML("afterbegin", html);
-  });
-
-</script>
-
-	</head>
-	<body>
-
-	</body>
-</html>

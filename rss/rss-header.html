@@ -1,16 +1,3 @@
-<html>
-	<head>
-	
-<script>
-const RSS_URL_HEADER = 'https://keithlaker.github.io/rss/rss.txt';
-
-fetch(RSS_URL_HEADER)
-  .then(response => response.text())
-  .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-  .then(data => {
-    console.log(data);
-    const items = data.querySelectorAll("item");
-    let html = `
 		<section class="cw58 cw58v1 cpad bgvlightgrey" data-trackas="cw58">
 			<div class="cw58w0 cwidth">
 				<div class="o-crsl col3">
@@ -19,14 +6,7 @@ fetch(RSS_URL_HEADER)
 						<h2>Data Warehousing Blog Posts</h2>
 					</header>
 					<div class="cw58w1 crsl-slider col-gutters" data-dots="false">
-`;
-	document.body.insertAdjacentHTML("afterbegin", html);
-  });
-
-</script>
-
-	</head>
-	<body>
-
-	</body>
-</html>
+					</div>
+				</div>
+			</div>
+		</section>
