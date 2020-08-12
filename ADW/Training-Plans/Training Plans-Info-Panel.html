@@ -1,0 +1,694 @@
+<html lang="en-US" class="no-js">
+	<head>
+		<title>Oracle Autonomous Database - FAQ Guide</title>
+		<meta name="Title" content="Oracle Partitioning">
+		<base href="www-sites.oracle.com">
+		<meta name="Description" content="Oracle Partitioning">
+		<meta name="Keywords" content="oracle partitioning, technology, Partitioning">
+	
+<!-- _Raw-Text -->
+	<!-- css / js files start -->
+	<script>
+	!function(){
+		var d=document.documentElement;d.className=d.className.replace(/no-js/,'js');
+		if(document.location.href.indexOf('betamode=') > -1) document.write('<script src="https://www.oracle.com/asset/web/js/ocom-betamode.js"><\/script>');
+	}();
+	</script>
+		<link data-wscss href="https://www.oracle.com/asset/web/css/ocom-v1-base.css" rel="stylesheet">
+		<link data-wscss href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="preload" as="style" onload="this.rel='stylesheet'" onerror="this.rel='stylesheet'">
+		<noscript>
+			<link href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="stylesheet">
+		</noscript>
+	<script data-wsjs src="https://www.oracle.com/asset/web/js/jquery-min.js" async onload="$('head link[data-reqjq][rel=preload]').each(function(){var a = document.createElement('script');a.async=false;a.src=$(this).attr('href');this.parentNode.insertBefore(a, this);});$(function(){$('script[data-reqjq][data-src]').each(function(){this.async=true;this.src=$(this).data('src');});});"></script>
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/ocom-v1-base.js" rel="preload" as="script">
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/ocom-v1-lib.js" rel="preload" as="script">
+	<!-- end css / js files start -->
+<!-- / _Raw-Text -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="siteid" content="us">
+		<meta name="countryid" content="US">
+		<meta name="robots" content="index, follow">
+		<meta name="country" content="United States">
+		<meta name="Language" content="en">
+		<meta name="Updated Date" content="2018-04-19T19:17:32Z">
+	<!-- start : ocom/common/global/components/social-media-meta-tags -->
+<!-- end : ocom/common/global/components/social-media-meta-tags -->
+<!-- start : ocom/common/global/components/seo-hreflang-meta-tags -->
+		<link rel="canonical" href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/partitioning.html" />
+		<link rel="alternate" hreflang="en-US" href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/partitioning.html" />
+					<!-- end : ocom/common/global/components/seo-hreflang-meta-tags -->
+
+<!-- _Raw-Text -->
+<!-- www-us HeadAdminContainer -->
+<script async="async" type="text/javascript" src='//consent.truste.com/notice?domain=oracle.com&c=teconsent&js=bb&noticeType=bb&text=true&gtm=1' crossorigin></script>
+		<style>
+#oReactiveChatContainer1 { display:none;}
+		</style>
+<!--DTM embed code - Header -->
+<script src="//assets.adobedtm.com/6f37a0dc9cdbe818dc4979828b58b88e3f060ea4/satelliteLib-e598c5b61e39a10b402e048e87dd27b0f1cd2d4c.js"></script>
+
+<!-- Truste for RU -->
+<script type="text/javascript">
+ if (location.pathname.indexOf("/ru/") == 0){
+ document.write('\x3Cscript async="async" src=//consent.truste.com/notice?domain=oracleru.com&c=teconsent&js=bb&noticeType=bb&text=true crossorigin="">\x3C/script>');
+ }
+ </script>
+<!--End-->
+
+<!-- / _Raw-Text -->
+	</head>
+	<body class="f11 f11v6">
+		<style type="text/css">
+	   table.events {
+	    border-top: 2px !important;
+	    border-left: 2px !important;
+	    border-right: 2px !important;
+	    border-bottom: 2px !important;
+	    border-style: solid !important;
+	    border-color: white !important;
+	    cellpadding:10px !important;
+	    cellspacing:10px !important; 
+	    width:100% !important;
+	    padding: 5px !important;
+	    background-color:grey;
+	    color:white;
+	    text-decoration:none;
+	   }
+	
+	</style>
+		<div class="f11w1">
+			<nav id="u28nav" class="u28nav" data-trackas="menu">
+				<span class="mnavback u28back">Back</span>
+			</nav>
+
+        <!-- END: oWidget_C/_Raw-Text/Display -->
+
+        <!-- end Common/Header -->
+
+        <!-- U03v5 -->
+			<nav class="u03 u03v5 u03bttns" data-trackas="breadcrumb" data-ocomid="u03">
+				<div class="cwidth">
+					<div class="u03w1">
+						<ul>
+							<li>
+								<a href="/database/">Database</a>
+							</li>
+							<li>
+								<a href="/database/technologies/">Technical Details</a>
+							</li>
+							<li>
+								<a href="/database/technologies/datawarehouse-bigdata.html">Data Warehousing and Big Data </a>
+							</li>
+						</ul>
+						<h1>Autonomous Database - Training Plans </h1>
+					</div>
+				</div>
+            <script type="text/javascript">
+            var pageData = pageData || {};
+            //page info
+            pageData.pageInfo = pageData.pageInfo || {};
+            pageData.pageInfo.breadCrumbs = "Database / Technical Details / Data Warehousing and Big Data ";
+            </script>
+			</nav>
+
+
+
+        <!-- _Raw-HTML -->
+        <!-- CH10v0 -->
+			<table style="height:455px; width:100%">
+				<tbody>
+					<tr>
+						<td style="max-width: 100%; max-height: 100%; zoom: 1.11; height: auto; background-position: bottom left; background-image:url(https://cdn.app.compendium.com/uploads/user/a7c086f7-9adb-4d2c-90fa-e26177af8317/c2dea8f7-8c26-44de-ae5f-5dc019485c8c/Image/60691dbc9e7de7390b93ea5284177459/data_analytics_banner.png);">
+							<div class="ch10w1">
+								<div class="ch10w2 cwidth">
+									<div class="ch10w3" style="margin-bottom:150px; margin-left:50px; font-weight:bold">
+										<br>
+										<h2  style="font-weight:bold;">Oracle Autonomous Database</h2>
+										<div class="ch10w4">
+											<br>
+											<br>
+											<br>
+										</div>
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+        <!-- /CH10v0 -->
+		
+	<!-- CB129v0 -->
+			<section class="cb129 cb129v0 cpad bgvlightgrey" data-ocomid="cb129" data-trackas="cb129">
+				<header class="cwidth">
+					<div class="eyebrow" style="text-align:center !important;">
+						Autonomous Data Warehouse
+						<h2 style="text-align:center !important;">
+							Training Plans<br>
+						</h2>
+					</div>
+					<a class="icn-img icn-plus cb129icn cb129toggle-all">
+						<span class="cb129open-all">
+							Open all
+						</span>
+						<span class="cb129close-all">
+							Close all
+						</span>
+					</a>
+				</header>
+				<div class="cb129w1 cwidth">
+					<div class="cb129w2">
+						<div class="cb129w3">
+							<h4 class="icn-hospitality fill-blue">Overview</h4>
+						</div>
+						<div class="cb129w4 cb129open">
+							<div class="col-framework col1 col-threetwofifth col-gutters col-noanimation">
+								<div class="col-w1">
+									<div class="col-item">
+										<div class="col-item-w1">
+											<p>There's nothing quite like learning how to use a tool or product first-hand. Oracle LiveLabs gives you free access to Oracle's Cloud to run a wide variety of labs and workshops; allowing you to learn cutting-edge skills in our Cloud, live!
+											</p>
+											<p>Here's how our Oracle LiveLabs works...
+											</p>
+											<br><br>
+											<div class="t-Region-bodyWrap">
+												<div class="t-Region-body">
+													<table width="100%">
+														<tbody>
+															<tr>
+																<td align="center" width="100%">
+																	<div align="center"><img src="https://apexapps.oracle.com/pls/apex/dbpm/r/133/files/static/v50/ll_flow.png"></div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<br><br>
+											<p>Find the workshop you want in the lists below, then either choose to start the workshop now or reserve a date and time to work through it. We'll guide you through the process from end-to-end. You won't need to sign up for anything else - all accounts and access will be provided!
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cb129w2">
+						<div class="cb129w3">
+							<h4 class="icn-cloud-database fill-blue">New to Autonomous Data Warehouse?</h4>
+						</div>
+						<div class="cb129w4 cb129open">
+							<div class="col-framework col1 col-threetwofifth col-gutters col-noanimation">
+								<div class="col-w1">
+									<div class="col-item">
+										<div class="col-item-w1">
+
+<!-- CB119v0 -->
+											<section class="cb119 cb119v0 cpad" data-trackas="cb119" data-ocomid="cb119">
+												<div class="cb119w1 cwidth">
+													<h2>Labs to Get You Started</h2>
+													<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+														<div class="col-w1">
+															<div class="col-item bgdarkslate">
+																<div class="col-item-w1">
+																	<div>
+																		<div class="icn-img icn-binoculars icn-circle bgwhite fill-darkslate">&nbsp;</div>
+																		<div class="cb119w2 txtwhite">
+																			<strong>1. QUICK START</strong>
+																			<br>
+																			<div>
+																				<span style="font-size:12pt !important; font-weight:bold">Autonomous Database Quick Start</span>
+																				<br><br>
+																				Perform basic tasks on ADB. Everything from provisioning to querying to creating data visualizations.
+																				<br><br><br>
+																				<span style="font-size:10pt !important;">
+																					Workshop Duration: 1 hr, 30 mins
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-item bgblue">
+																<div class="col-item-w1">
+																	<div>
+																		<div class="icn-img icn-marketing icn-circle bgwhite fill-blue">&nbsp;</div>
+																		<div class="cb119w2 txtwhite">
+																			<strong>2. END-TO-END</strong>
+																			<br>
+																			<div>
+																				<span style="font-size:12pt !important; font-weight:bold">Analyzing Your Data With Autonomous Database</span>
+																				<br><br>
+																				Provision Autonomous Database and perform basic tasks extending into machine learning, scaling and more.
+																				<br><br><br>
+																				<span style="font-size:10pt !important;">
+																					Workshop Duration: 3 hrs
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</section>
+<!-- /CB119v0 -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cb129w2">
+						<div class="cb129w3">
+							<h4 class="icn-database-administrator-f fill-blue">Start here if you are a Cloud Admin...</h4>
+						</div>
+						<div class="cb129w4 cb129open">
+							<div class="col-framework col1 col-threetwofifth col-gutters col-noanimation">
+								<div class="col-w1">
+									<div class="col-item">
+										<div class="col-item-w1">
+<!-- CB119v0 -->
+											<section class="cb119 cb119v0 cpad" data-trackas="cb119" data-ocomid="cb119">
+												<div class="cb119w1 cwidth">
+													<h2>Labs to Get You Working...</h2>
+													</div>
+													<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+														<div class="col-w1">
+															<div class="col-item bgdarkslate">
+																<div class="col-item-w1">
+																	<div>
+																		<div class="icn-img icn-data-aggregation icn-circle bgwhite fill-darkslate">&nbsp;</div>
+																		<div class="cb119w2 txtwhite">
+																			<strong>1. PROVISION</strong>
+																			<br>
+																			<div>
+																				<span style="font-size:12pt !important; font-weight:bold">Provisioning and Autonomous Database</span>
+																				<br><br>
+																				Create an Oracle Autonomous Database (ATP or ADW).
+																				<br><br><br><br><br><br>
+																				<span style="font-size:10pt !important;">
+																					Workshop Duration: 45 mins
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-item bgburgundy">
+																<div class="col-item-w1">
+																	<div>
+																		<div class="icn-img icn-database-administrator-f icn-circle bgwhite fill-burgundy">&nbsp;</div>
+																		<div class="cb119w2 txtwhite">
+																			<strong>2. MANAGE</strong>
+																			<br>
+																			<div>
+																				<span style="font-size:12pt !important; font-weight:bold">Managing and Monitoring in Autonomous Database</span>
+																				<br><br><br>
+																				Provision ADB, load sample data and manage and monitor the environment using the Service Console.
+																				<br><br><br>
+																				<span style="font-size:10pt !important;">
+																					Workshop Duration: 2 hrs
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-item bggreen">
+																<div class="col-item-w1">
+																	<div>
+																		<div class="icn-img icn-optimization icn-circle bgwhite fill-green">&nbsp;</div>
+																		<div class="cb119w2 txtwhite">
+																			<strong>3. SCALE</strong>
+																			<br>
+																			<div>
+																				<span style="font-size:12pt !important; font-weight:bold">Scaling and Performance in the Autonomous Database</span>
+																				<br><br>
+																				This lab walks you through the scaling and performance in your Autonomous Database.
+																				<br><br><br><br><br>
+																				<span style="font-size:10pt !important;">
+																					Workshop Duration: 45 mins
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-item bgblue">
+																<div class="col-item-w1">
+																	<div>
+																		<div class="icn-img icn-analytics icn-circle bgwhite fill-blue">&nbsp;</div>
+																		<div class="cb119w2 txtwhite">
+																			<strong>4. QUERY</strong>
+																			<br>
+																			<div>
+																				<span style="font-size:12pt !important; font-weight:bold">Querying Data in the Autonomous Database</span>
+																				<br><br><br>
+																				Provision Autonomous Database and perform basic tasks extending into machine learning, scaling and more.
+																				<br><br><br>
+																				<span style="font-size:10pt !important;">
+																					Workshop Duration: 45 mins
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="col-item bgorange">
+																<div class="col-item-w1">
+																	<div>
+																		<div class="icn-img icn-tech-cloud-paas icn-circle bgwhite fill-green">&nbsp;</div>
+																		<div class="cb119w2 txtwhite">
+																			<strong>5. RESTful</strong>
+																			<br>
+																			<div>
+																				<span style="font-size:12pt !important; font-weight:bold">RESTful Services for your Autonomous Database</span>
+																				<br><br>
+																				Create a user, REST enable the user, create a restful (web) service, consume the service, protect the service, access the service securely.
+																				<br><br>
+																				<span style="font-size:10pt !important;">
+																					Workshop Duration: 2 hrs
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</section>
+<!-- /CB119v0 -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><a id="dwdw" name="dwdw"></a>
+					<div class="cb129w2">
+						<div class="cb129w3">
+							<h4 class="icn-person-on-laptop fill-blue">Start here if you are a Business User or Report Developer...</h4>
+						</div>
+						<div class="cb129w4 cb129open">
+							<div class="col-framework col1 col-threetwofifth col-gutters col-noanimation">
+								<div class="col-w1">
+									<div class="col-item">
+										<div class="col-item-w1">
+
+<!-- CB119v0 -->
+											<section class="cb119 cb119v0 cpad" data-trackas="cb119" data-ocomid="cb119">
+												<div class="cb119w1 cwidth">
+													<h2>Labs to Get You Working...</h2>
+													<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+														<div class="col-w1">
+															<div class="col-item bgdarkslate">
+																<div class="col-item-w1">
+																	<div>
+																		<div class="icn-img icn-analytics icn-circle bgwhite fill-darkslate">&nbsp;</div>
+																		<div class="cb119w2 txtwhite">
+																			<strong>1. VISUALIZE</strong>
+																			<br>
+																			<div>
+																				<span style="font-size:12pt !important; font-weight:bold">Visualizing Your Data on Autonomous Database</span>
+																				<br><br>
+																				This workshop walks you through the steps to create rich data visualizations.
+																				<br><br><br><br><br>
+																				<span style="font-size:10pt !important;">
+																					Workshop Duration: 2 hrs
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-item bgblue">
+																<div class="col-item-w1">
+																	<div>
+																		<div class="icn-img icn-optimization icn-circle bgwhite fill-blue">&nbsp;</div>
+																		<div class="cb119w2 txtwhite">
+																			<strong>2. SCALE</strong>
+																			<br>
+																			<div>
+																				<span style="font-size:12pt !important; font-weight:bold">Scaling and Performance in the Autonomous Database</span>
+																				<br><br>
+																				This lab walks you through the scaling and performance in your Autonomous Database.
+																				<br><br><br><br><br>
+																				<span style="font-size:10pt !important;">
+																					Workshop Duration: 45 mins
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-item bggreen">
+																<div class="col-item-w1">
+																	<div>
+																		<div class="icn-img icn-tech-ai icn-circle bgwhite fill-green">&nbsp;</div>
+																		<div class="cb119w2 txtwhite">
+																			<strong>3. SCIENCE</strong>
+																			<br>
+																			<div>
+																				<span style="font-size:12pt !important; font-weight:bold">Introduction to Machine Learning Algorithms on Autonomous Database</span>
+																				<br><br>
+																				Use Oracle Machine Learning SQL Notebooks to build reports, dashboards and workbooks on your Autonomous Database.
+																				.																			<br><br>
+																				<span style="font-size:10pt !important;">
+																					Workshop Duration: 45 mins
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-item bgburgundy">
+																<div class="col-item-w1">
+																	<div>
+																		<div class="icn-img icn-optimization icn-circle bgwhite fill-green">&nbsp;</div>
+																		<div class="cb119w2 txtwhite">
+																			<strong>4. BUILD</strong>
+																			<br>
+																			<div>
+																				<span style="font-size:12pt !important; font-weight:bold">Building an App from a Spreadsheet for Autonomous Database</span>
+																				<br><br>
+																				Upload a spreadsheet into Oracle and create an application on this table.
+																				<br><br><br><br>
+																				<span style="font-size:10pt !important;">
+																					Workshop Duration: 45 mins
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</section>
+<!-- /CB119v0 -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cb129w2">
+						<div class="cb129w3">
+							<h4 class="icn-chemicals fill-blue">Start here if you are an Data Scientist</h4>
+						</div>
+						<div class="cb129w4 cb129open">
+							<div class="col-framework col1 col-threetwofifth col-gutters col-noanimation">
+								<div class="col-w1">
+									<div class="col-item">
+										<div class="col-item-w1">
+<!-- CB119v0 -->
+											<section class="cb119 cb119v0 cpad" data-trackas="cb119" data-ocomid="cb119">
+												<div class="cb119w1 cwidth">
+													<h2>Labs to Get You Started</h2>
+													<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+														<div class="col-w1">
+															<div class="col-item bgdarkslate">
+																<div class="col-item-w1">
+																	<div>
+																		<div class="icn-img icn-tech-ai icn-circle bgwhite fill-darkslate">&nbsp;</div>
+																		<div class="cb119w2 txtwhite">
+																			<strong>1. INTRO</strong>
+																			<br>
+																			<div>
+																				<span style="font-size:12pt !important; font-weight:bold">Introduction to Machine Learning Algorithms on Autonomous Database</span>
+																				<br><br>
+																				Use Oracle Machine Learning SQL Notebooks to build reports, dashboards and workbooks on Autonomous Database.
+																				<br><br><br>
+																				<span style="font-size:10pt !important;">
+																					Workshop Duration: 45 mins
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-item bgblue">
+																<div class="col-item-w1">
+																	<div>
+																		<div class="icn-img icn-risk-and-performance-analysis icn-circle bgwhite fill-blue">&nbsp;</div>
+																		<div class="cb119w2 txtwhite">
+																			<strong>2. NOTEBOOKS</strong>
+																			<br>
+																			<div>
+																				<span style="font-size:12pt !important; font-weight:bold">Machine Learning on Autonomous Database</span>
+																				<br><br>
+																				Explore machine learning notebooks and use prediction in applications on Autonmous Database.
+																				<br><br><br><br><br>
+																				<span style="font-size:10pt !important;">
+																					Workshop Duration: 2 hrs
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-item bggreen">
+																<div class="col-item-w1">
+																	<div>
+																		<div class="icn-img icn-optimization icn-circle bgwhite fill-green">&nbsp;</div>
+																		<div class="cb119w2 txtwhite">
+																			<strong>3. SCALE</strong>
+																			<br>
+																			<div>
+																				<span style="font-size:12pt !important; font-weight:bold">Scaling and Performance in the Autonomous Database</span>
+																				<br><br>
+																				This lab walks you through the scaling and performance in your Autonomous Database.
+																				<br><br><br><br><br><br>
+																				<span style="font-size:10pt !important;">
+																					Workshop Duration: 45 mins
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</section>
+<!-- /CB119v0 -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cb129w2">
+						<div class="cb129w3">
+							<h4 class="icn-it-professional-female fill-blue">Start here if you are an Application Developer</h4>
+						</div>
+						<div class="cb129w4 cb129open">
+							<div class="col-framework col1 col-threetwofifth col-gutters col-noanimation">
+								<div class="col-w1">
+									<div class="col-item">
+										<div class="col-item-w1">
+
+<!-- CB119v0 -->
+											<section class="cb119 cb119v0 cpad" data-trackas="cb119" data-ocomid="cb119">
+												<div class="cb119w1 cwidth">
+													<h2>Labs to Get You Started</h2>
+													<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+														<div class="col-w1">
+															<div class="col-item bgdarkslate">
+																<div class="col-item-w1">
+																	<div>
+																		<div class="icn-img icn-data-aggregation icn-circle bgwhite fill-darkslate">&nbsp;</div>
+																		<div class="cb119w2 txtwhite">
+																			<strong>1. PROVISION</strong>
+																			<br>
+																			<div>
+																				<span style="font-size:12pt !important; font-weight:bold">Provisioning and Autonomous Database</span>
+																				<br><br>
+																				Create an Oracle Autonomous Database (ATP or ADW).
+																				<br><br><br><br><br><br><BR>
+																				<span style="font-size:10pt !important;">
+																					Workshop Duration: 45 mins
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-item bgblue">
+																<div class="col-item-w1">
+																	<div>
+																		<div class="icn-img icn-it-professional-male icn-circle bgwhite fill-blue">&nbsp;</div>
+																		<div class="cb119w2 txtwhite">
+																			<strong>2. APEX</strong>
+																			<br>
+																			<div>
+																				<span style="font-size:12pt !important; font-weight:bold">Extending APEX Applications with Autonomous Database</span>
+																				<br><br>
+																				Create an APEX workspace and add spatial, machine learning and security features to your application.
+																				<br><br><br><br><br>
+																				<span style="font-size:10pt !important;">
+																					Workshop Duration: 2 hrs
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-item bggreen">
+																<div class="col-item-w1">
+																	<div>
+																		<div class="icn-img icn-optimization icn-circle bgwhite fill-green">&nbsp;</div>
+																		<div class="cb119w2 txtwhite">
+																			<strong>3. REST</strong>
+																			<br>
+																			<div>
+																				<span style="font-size:12pt !important; font-weight:bold">Building an App using REST Web Sources for Oracle Autonomous Cloud Services</span>
+																				<br><br>
+																				Learn how to REST enables database objects, and then use those REST endpoints as the basis for Web Source Modules within an application.
+																				<br><br><br>
+																				<span style="font-size:10pt !important;">
+																					Workshop Duration: 1 hr
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-item bgburgundy">
+																<div class="col-item-w1">
+																	<div>
+																		<div class="icn-img icn-optimization icn-circle bgwhite fill-green">&nbsp;</div>
+																		<div class="cb119w2 txtwhite">
+																			<strong>4. SCALE</strong>
+																			<br>
+																			<div>
+																				<span style="font-size:12pt !important; font-weight:bold">Scaling and Performance in the Autonomous Database</span>
+																				<br><br>
+																				This lab walks you through the scaling and performance in your Autonomous Database.
+																				<br><br><br><br><br><br>
+																				<span style="font-size:10pt !important;">
+																					Workshop Duration: 45 mins
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</section>
+<!-- /CB119v0 -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section><!-- /CB129v0 -->
