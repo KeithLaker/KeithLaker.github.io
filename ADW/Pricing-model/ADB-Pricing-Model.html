@@ -1,0 +1,615 @@
+<html lang="en-US" class="no-js">
+	<head>
+		<title>Oracle Autonomous Database - Simple Costing Model</title>
+		<meta name="Title" content="Oracle Partitioning">
+		<meta name="Description" content="Oracle Autonomous Database">
+		<meta name="Keywords" content="oracle autonomous database, oracle cloud, LiveLabs, training plans">
+	
+<!-- _Raw-Text -->
+	<!-- css / js files start -->
+	<script>
+	!function(){
+		var d=document.documentElement;d.className=d.className.replace(/no-js/,'js');
+		if(document.location.href.indexOf('betamode=') > -1) document.write('<script src="https://www.oracle.com/asset/web/js/ocom-betamode.js"><\/script>');
+	}();
+	</script>
+		<link data-wscss href="https://www.oracle.com/asset/web/css/ocom-v1-base.css" rel="stylesheet">
+		<link data-wscss href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="preload" as="style" onload="this.rel='stylesheet'" onerror="this.rel='stylesheet'">
+		<noscript>
+			<link href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="stylesheet">
+		</noscript>
+	<script data-wsjs src="https://www.oracle.com/asset/web/js/jquery-min.js" async onload="$('head link[data-reqjq][rel=preload]').each(function(){var a = document.createElement('script');a.async=false;a.src=$(this).attr('href');this.parentNode.insertBefore(a, this);});$(function(){$('script[data-reqjq][data-src]').each(function(){this.async=true;this.src=$(this).data('src');});});"></script>
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/ocom-v1-base.js" rel="preload" as="script">
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/ocom-v1-lib.js" rel="preload" as="script">
+	<!-- end css / js files start -->
+<!-- / _Raw-Text -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="siteid" content="us">
+		<meta name="countryid" content="US">
+		<meta name="robots" content="index, follow">
+		<meta name="country" content="United States">
+		<meta name="Language" content="en">
+		<meta name="Updated Date" content="2018-04-19T19:17:32Z">
+	<!-- start : ocom/common/global/components/social-media-meta-tags -->
+<!-- end : ocom/common/global/components/social-media-meta-tags -->
+<!-- start : ocom/common/global/components/seo-hreflang-meta-tags -->
+					<!-- end : ocom/common/global/components/seo-hreflang-meta-tags -->
+
+<!-- _Raw-Text -->
+<!-- www-us HeadAdminContainer -->
+<script async="async" type="text/javascript" src='//consent.truste.com/notice?domain=oracle.com&c=teconsent&js=bb&noticeType=bb&text=true&gtm=1' crossorigin></script>
+		<style>
+#oReactiveChatContainer1 { display:none;}
+		</style>
+<!--DTM embed code - Header -->
+<script src="//assets.adobedtm.com/6f37a0dc9cdbe818dc4979828b58b88e3f060ea4/satelliteLib-e598c5b61e39a10b402e048e87dd27b0f1cd2d4c.js"></script>
+
+<!-- Truste for RU -->
+<script type="text/javascript">
+ if (location.pathname.indexOf("/ru/") == 0){
+ document.write('\x3Cscript async="async" src=//consent.truste.com/notice?domain=oracleru.com&c=teconsent&js=bb&noticeType=bb&text=true crossorigin="">\x3C/script>');
+ }
+ </script>
+<!--End-->
+
+<!-- / _Raw-Text -->
+	</head>
+	<body class="f11 f11v6">
+		<style type="text/css">
+	   table.events {
+	    border-top: 2px !important;
+	    border-left: 2px !important;
+	    border-right: 2px !important;
+	    border-bottom: 2px !important;
+	    border-style: solid !important;
+	    border-color: white !important;
+	    cellpadding:10px !important;
+	    cellspacing:10px !important; 
+	    width:100% !important;
+	    padding: 5px !important;
+	    background-color:grey;
+	    color:white;
+	    text-decoration:none;
+	   }
+		</style>
+		<div class="f11w1">
+			<nav id="u28nav" class="u28nav" data-trackas="menu">
+				<span class="mnavback u28back">Back</span>
+			</nav>
+
+        <!-- END: oWidget_C/_Raw-Text/Display -->
+
+        <!-- end Common/Header -->
+
+        <!-- U03v5 -->
+			<nav class="u03 u03v5 u03bttns" data-trackas="breadcrumb" data-ocomid="u03">
+				<div class="cwidth">
+					<div class="u03w1">
+						<ul>
+							<li>
+								<a href="/database/">Database</a>
+							</li>
+							<li>
+								<a href="/database/technologies/">Technical Details</a>
+							</li>
+							<li>
+								<a href="/database/technologies/datawarehouse-bigdata.html">Data Warehousing and Big Data </a>
+							</li>
+						</ul>
+						<h1>Autonomous Database - Costing Model for a Modern Data Warehouse</h1>
+					</div>
+				</div>
+            <script type="text/javascript">
+            var pageData = pageData || {};
+            //page info
+            pageData.pageInfo = pageData.pageInfo || {};
+            pageData.pageInfo.breadCrumbs = "Database / Technical Details / Data Warehousing and Big Data ";
+            </script>
+			</nav>
+
+
+
+        <!-- _Raw-HTML -->
+        <!-- CH10v0 -->
+			<table style="height:455px; width:100%">
+				<tbody>
+					<tr>
+						<td style="max-width: 100%; max-height: 100%; zoom: 1.11; height: auto; background-position: bottom left; background-image:url(https://cdn.app.compendium.com/uploads/user/a7c086f7-9adb-4d2c-90fa-e26177af8317/c2dea8f7-8c26-44de-ae5f-5dc019485c8c/Image/60691dbc9e7de7390b93ea5284177459/data_analytics_banner.png);">
+							<div class="ch10w1">
+								<div class="ch10w2 cwidth">
+									<div class="ch10w3" style="margin-bottom:150px; margin-left:50px; font-weight:bold">
+										<br>
+										<h2  style="font-weight:bold;">Oracle Autonomous Database</h2>
+										<div class="ch10w4">
+											<br>
+											<br>
+											<br>
+										</div>
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+        <!-- /CH10v0 -->
+		
+
+<!-- CB98v0 -->
+			<section class="cb98 cb98v0 cpad" data-trackas="cb98" data-ocomid="cb98">
+				<div class="cb98w1 cwidth">
+					<div class="cb98w2">
+						<h3>Example Of A Costing Model For A Modern Data Warehouse</h3>
+						<p>
+							For the sake of simplicity, the examples below assume usage in set blocks of time (either hours or minutes) Actual billing with Oracle Cloud is calculated using per-second billing. Therefore, it's highly likely that actual running costs could be considerbly lower than shown below.
+						</p>
+						<p>
+							The key assumptions for this costing model are:
+						</p>
+						<p style="margin-left: 55px;">
+							1) The Autonomous Database is always ony started when the data loading workload runs and at the start of each business day. Once the data loading workload has finished and at the end of each business day the Autonomous Database instance is stopped.
+							<br>
+							2) The number of OCPUs used by each workload are set when the instance is started (either manually or using a script to automate the process).
+						</p>
+						<br>
+						<br>
+					</div>
+					<div class="cb98w3">
+						<div class="cb98w4"><h4 class="icn-heading icn-data-aggregation">Loading Data</h4></div>
+						<div class="cb98w5">
+							<h5>Workload Description</h5>
+							<ul class="icn-list">
+								<li class="">Multiple, concurrent ETL jobs are used to load data from a wide variety of data sources</li>
+								<li class="">Source data files are located in Oracle Object Store</li>
+								<li class="">Complex transformations and use of staging tables are part of the ETL process</li>
+								<li class="">Data loading takes place at night and no other users are on the system</li>
+								<li class="">Auto-scaling is enabled</li>
+							</ul>
+						</div>
+						<div class="cb98w6">
+							<h5>Workload Characteristic</h5>
+							<ul class="icn-list">
+								<li class="">ETL workload runs for 2 hours 30 minutes every night (5 nights per week)</li>
+								<li class="">Base workload usage requires 4 OCPUs - 2 hours</li>
+								<li class="">Peak workload usage requires 12 OCPUs - 30 minutes</li>
+								<li class="">Per-second billing is used to calculate compute costs</li>
+							</ul>
+						</div>
+					</div>
+					<div class="cb98w3">
+						<div style="max-width:291px !important;" class="cb98w4">
+							<h3 style="color:white !important;" class="icn-heading">
+							</h3>
+						</div>
+						<div class="cb98w6">
+							<table width="100%">
+								<tr>
+									<td width="50%">
+										<p style="font-size:11pt !important;">Costing Model for Data Loading Compute Costs</p>
+									</td>
+									<td width="50%" align="right">
+										<p style="font-size:11pt !important;"  text-align:right !important;>
+											((4 OPCUs * 2 hours * $1.3441) + (12 OPCUs * 30/60 * $1.3441)) * 5 days * 4 weeks
+										</p>
+									</td>
+								</tr>
+							</table>
+							<table width="100%">
+								<tr>
+									<td width="50%">
+										<p style="font-size:11pt !important;">
+											Per month costs for data loading workload
+										</p>
+									</td>
+									<td width="50%" align="right">
+										<p style="font-size:11pt !important;  text-align:right !important;">
+											($10.7528 + $8.0646) * 20 days
+										</p>
+									</td>
+								</tr>
+							</table>
+							<table width="100%">
+								<tr>
+									<td width="50%">
+									</td>
+									<td width="50%" align="right">
+										<p style="font-size:11pt !important; text-align:right !important;">
+											$376.348
+										</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="cb98w3">
+						<div class="cb98w4"><h4 class="icn-heading icn-analytics">Reporting And Data Analysis</h4></div>
+						<div class="cb98w5">
+							<h5>Workload Description</h5>
+							<ul class="icn-list">
+								<li class="">Multiple, concurrent queries are run during the day</li>
+								<li class="">Queries are derived from standard reports, dashboards and adhoc queries</li>
+								<li class="">Assume no data caching or summary within BI middle-tier server</li>
+								<li class="">Auto-scaling is enabled</li>
+							</ul>
+						</div>
+						<div class="cb98w6">
+							<h5>Workload Characteristic</h5>
+							<ul class="icn-list">
+								<li class="">Working day is 8 hours per day, 5 days per week</li>
+								<li class="">The data warehouse is not used at weekends</li>
+								<li class="">Base query workload usage requires 8 OCPUs - 5 hours</li>
+								<li class="">Peak morning query workload requires 24 OCPUs - 1:15 hour</li>
+								<li class="">Afternoon peak query workload requires 16 OCPUs - 45 hours</li>
+							</ul>
+						</div>
+					</div>
+					<div class="cb98w3">
+						<div style="max-width:291px !important;" class="cb98w4">
+							<h3 style="color:white !important;" class="icn-heading">
+							</h3>
+						</div>
+						<div class="cb98w6">
+							<table width="100%">
+								<tr>
+									<td width="50%">
+										<p style="font-size:11pt !important;">
+											Costing Model for Query Compute Costs
+										</p>
+									</td>
+									<td>
+										<p style="font-size:11pt !important; text-align:right !important;">
+											((8 OPCUs * 5 hours * $1.3441) + (24 OPCUs * 75/60 * $1.3441) + (16 OPCUs * 45/60 * $1.3441)) 5 days * 4 weeks
+										</p>
+									</td>
+								</tr>
+							</table>
+							<table width="100%">
+								<tr>
+									<td width="50%">
+										<p style="font-size:11pt !important;">
+											Per month costs for query loading workload
+										</p>
+									</td>
+									<td width="50%" align="right">
+										<p style="font-size:11pt !important; text-align:right !important;">
+											($53.764 + $40.323 + $16.1292) * 20 days
+										</p>
+									</td>
+								</tr>
+							</table>
+							<table width="100%">
+								<tr>
+									<td width="50%">
+									</td>
+									<td width="50%" align="right">
+										<p style="font-size:11pt !important; text-align:right !important;">
+											$2,204.324
+										</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>				
+					<div class="cb98w3">
+						<div class="cb98w4"><h4 class="icn-heading icn-database">Data Storage Costs</h4></div>
+						<div class="cb98w5">
+							<h5>Data Storage Requirements</h5>
+							<ul class="icn-list">
+								<li class="">Initial raw data set size is 100TB</li>
+								<li class="">Assume data growth per day of 1TB raw data</li>
+								<li class="">Assume a compression rate of 8x using EHCC</li>
+							</ul>
+						</div>
+						<div class="cb98w6">
+							<h5>Factors that do not influence storage costs</h5>
+							<ul class="icn-list">
+								<li class="">There is no charge for storing 60 days of online backups</li>
+								<li class="">There is no charge for putting data in Oracle Object Store</li>
+							</ul>
+						</div>
+					</div>
+					<div class="cb98w3">
+						<div style="max-width:291px !important;" class="cb98w4">
+							<h3 style="color:white !important;" class="icn-heading">
+							</h3>
+						</div>
+						<div class="cb98w6">
+							<table width="100%">
+								<tr>
+									<td width="50%">
+										<p style="font-size:11pt !important;">
+											Monthly Costing Model for Initial Data Storage Costs
+										</p>
+									</td>
+									<td>
+										<p style="font-size:11pt !important; text-align:right !important;">
+											(100TB * 0.125 * $118.40)
+										</p>
+									</td>
+								</tr>
+							</table>
+							<table width="100%">
+								<tr>
+									<td width="50%">
+									</td>
+									<td width="50%" align="right">
+										<p style="font-size:11pt !important; text-align:right !important;">
+											$1,480.00
+										</p>
+									</td>
+								</tr>
+							</table>
+							<table width="100%">
+								<tr>
+									<td width="50%">
+										<p style="font-size:11pt !important;">
+											On-going Monthly Incremental Cost for Data Storage Costs
+										</p>
+									</td>
+									<td>
+										<p style="font-size:11pt !important; text-align:right !important;">
+											(1TB * 0.125 * $118.40) * 5 days * 4 weeks
+										</p>
+									</td>
+								</tr>
+							</table>
+							<table width="100%">
+								<tr>
+									<td width="50%">
+									</td>
+									<td width="50%" align="right">
+										<p style="font-size:11pt !important; text-align:right !important;">
+											$296.00
+										</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="cb98w3">
+						<div class="cb98w4"><h4 class="icn-heading icn-tech-deep-learning">Data Discovery Sandbox</h4></div>
+						<div class="cb98w5">
+							<h5>Workload Description</h5>
+							<ul class="icn-list">
+								<li class="">Data scientist team create clone each month to benchmark existing models</li>
+								<li class="">Model evaluation and testing of new models takes approx. 2 days (16 hours)</li>
+								<li class="">Simulataneous testing of multiple models</li>
+								<li class="">Auto-scaling is enabled</li>
+							</ul>
+						</div>
+						<div class="cb98w6">
+							<h5>Workload Characteristic</h5>
+							<ul class="icn-list">
+								<li class="">Working day is 8 hours per day</li>
+								<li class="">The data discovery clone is discarded at the end of the 2-day period</li>
+								<li class="">Base workload usage requires 4 OCPUs</li>
+								<li class="">Auto-scaling is not enabled</li>
+								<li class="">Some additional datasets are accessed directly from Object Store</li>
+							</ul>
+						</div>
+					</div>
+					<div class="cb98w3">
+						<div style="max-width:291px !important;" class="cb98w4">
+							<h3 style="color:white !important;" class="icn-heading">
+							</h3>
+						</div>
+						<div class="cb98w6">
+							<table width="100%">
+								<tr>
+									<td width="50%">
+										<p style="font-size:11pt !important;">
+											Costing Model for Query Compute Costs
+										</p>
+									</td>
+									<td>
+										<p style="font-size:11pt !important; text-align:right !important;">
+											((4 OPCUs * 16 hours * $1.3441)
+										</p>
+									</td>
+								</tr>
+							</table>
+							<table width="100%">
+								<tr>
+									<td width="50%">
+									</td>
+									<td width="50%" align="right">
+										<p style="font-size:11pt !important; text-align:right !important;">
+											$86.0224
+										</p>
+									</td>
+								</tr>
+							</table>							
+							<table width="100%">
+								<tr>
+									<td width="50%">
+										<p style="font-size:11pt !important;">
+											Costing Model for Storage Costs
+										</p>
+									</td>
+									<td width="50%" align="right">
+										<p style="font-size:11pt !important; text-align:right !important;">
+											(100TB * 0.125 * $118.40/31/60*16)
+										</p>
+									</td>
+								</tr>
+							</table>
+							<table width="100%">
+								<tr>
+									<td width="50%">
+									</td>
+									<td width="50%" align="right">
+										<p style="font-size:11pt !important; text-align:right !important;">
+											$1.0184
+										</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+
+
+				</div>
+			</section>
+
+
+<!-- U10v3 -->
+			<section id="u10" class="u10v3 u10fl" data-trackas="footer">
+				<div class="u10w8 cwidth">
+					<div class="u10w9">
+						<h2>Join the conversation</h2>
+					</div>
+					<div class="u10w1 u104up">
+						<div class="u10w2">
+							<a href="https://twitter.com/AutonomousDW" target="_top">
+								<div class="u10w6 icn-img icn-twitter">&nbsp;</div>
+								<span>@AutonomousDW</span>
+							</a>
+						</div>
+						<div class="u10w2">
+							<a href="https://www.linkedin.com/groups/2129659/" target="_top">
+								<div class="u10w6 icn-img icn-linkedin">&nbsp;</div>
+								<span>Oracle Data Warehouse Professionals</span>
+							</a>
+						</div>
+						<div class="u10w2">
+							<a href="https://blogs.oracle.com/datawarehousing" target="_top">
+								<div class="u10w6 icn-img icn-blogs">&nbsp;</div>
+								<span>Data Warehouse Insider</span>
+							</a>
+						</div>
+						<div class="u10w2">
+							<a href="https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary" target="_top">
+								<div class="u10w6 icn-img icn-chat">&nbsp;</div>
+								<span>Autonomous Data Warehouse Forum</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+<!-- /U10v3 -->
+
+<!-- U10v0 -->
+
+	<!-- Dispatcher:null -->
+	
+<!-- BEGIN: oWidget_C/_Raw-Text/Display -->
+<!-- U10v0 -->
+			<div id="u10" class="u10 u10v6" data-trackas="ffooter" data-ocomid="u10">
+				<div class="u10w1">
+					<div class="u10w2">
+						<div class="u10w3">
+							<h5>Resources for</h5>
+							<ul>
+								<li><a data-lbl="resources-for:developers" href="https://developer.oracle.com/">Developers</a></li>
+								<li><a data-lbl="resources-for:startups" href="/startup/">Startups</a></li>
+								<li><a data-lbl="resources-for:students-educators" href="https://academy.oracle.com/en/oa-web-overview.html">Students and Educators</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="u10w2">
+						<div class="u10w3">
+							<h5>Partners</h5>
+							<ul>
+								<li><a data-lbl="partners:oracle-partnernetwork-ocom" href="/partnernetwork/">Oracle PartnerNetwork</a></li>
+								<li><a data-lbl="partners:find-a-partner" href="https://solutions.oracle.com/scwar/scr/Partners/index.html">Find a Partner</a>
+								</li>
+								<li><a data-lbl="partners:login-opn" href="/partners/">Log in to OPN</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="u10w2">
+						<div class="u10w3">
+							<h5>Emerging Technologies</h5>
+							<ul>
+								<li><a data-lbl="emerging-technlogy:artificial-intelligence" href="/artificial-intelligence/">Artificial Intelligence</a>
+								</li>
+								<li><a data-lbl="emerging-technlogy:iot" href="/internet-of-things/">Internet of Things (IoT)</a></li>
+								<li><a data-lbl="emerging-technlogy:solutions" href="/emerging-technologies/">More Solutions</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="u10w2">
+						<div class="u10w3">
+							<h5>How We Operate</h5>
+							<ul>
+								<li><a data-lbl="how-we-operate:corporate-security-practices" href="/corporate/security-practices/">Corporate Security Practices</a>
+								</li>
+								<li><a data-lbl="how-we-operate:doing-business-with-oracle" href="/corporate/doing-business.html">Doing Business with Oracle</a>
+								</li>
+								<li><a data-lbl="how-we-operate:oracle-at-oracle" href="/cloud/oracle-at-oracle/">Oracle@Oracle</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="u10w2">
+						<div class="u10w3">
+							<h5>Contact Us</h5>
+							<ul>
+								<li><a href="tel:18006330738">US Sales: +1.800.633.0738</a></li>
+								<li><a data-lbl="contact-us:global-contacts" href="/corporate/contact/global.html">Global Contacts</a></li>
+<!--<li><a data-lbl="contact-us:support-directory" href="/support/contact.html">Support Directory</a></li>-->
+								<li><a data-lbl="contact-us:subscribe-to-emails" href="https://go.oracle.com/subscriptions">Subscribe to emails</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="u10w4">
+						<hr />
+					</div>
+					<div class="u10w5" data-trackas="footer">
+						<ul class="scl-icons">
+							<li class="scl-facebook"><a data-lbl="scl-icon:facebook" href="https://www.facebook.com/Oracle/" title="Oracle on Facebook">Facebook</a>
+							</li>
+							<li class="scl-twitter"><a data-lbl="scl-icon:twitter" href="https://twitter.com/oracle" title="Follow Oracle on Twitter">Twitter</a>
+							</li>
+							<li class="scl-linkedin"><a data-lbl="scl-icon:linkedin" href="https://www.linkedin.com/company/oracle/" title="Oracle on LinkedIn">LinkedIn</a>
+							</li>
+							<li class="scl-youtube"><a data-lbl="scl-icon:you-tube" href="http://www.youtube.com/oracle/" title="Watch Oracle on YouTube">YouTube</a>
+							</li>
+						</ul>
+						<div class="u10-ologo"><a data-lbl="integrated-cloud-applications-and-platform-services" href="/">Oracle</a></div>
+						<h3>Integrated Cloud Applications &amp; Platform Services</h3>
+						<ul class="u10-links">
+							<li><a data-lbl="copyright" href="/legal/copyright.html">&copy; 2019 Oracle</a></li>
+							<li><a data-lbl="site-map" href="/sitemap.html">Site Map</a></li>
+							<li><a data-lbl="terms-of-use-and-privacy" href="/legal/privacy/">Terms of Use and Privacy</a></li>
+							<li class="u10mtool" id="u10cmenu"><a data-lbl="country-region" class="u10ticon u10regn" href="/universal-menu/index.html#u10countrymenu">Country/Region</a>
+							</li>
+							<li><div id="teconsent"></div></li>
+							<li><a data-lbl="ad-choices" href="/legal/privacy/marketing-cloud-data-cloud-privacy-policy.html#12">Ad Choices</a>
+							</li>
+							<li><a data-lbl="careers" href="/corporate/careers/">Careers</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+<!-- /U10v0 -->
+
+
+
+<!-- END: oWidget_C/_Raw-Text/Display -->
+
+<!-- /U10v0 -->
+		</div>
+		
+<!-- Container/Display Start -->
+
+<!-- _Raw-Text -->
+<!-- www-us EndBodyAdminContainer -->
+<!-- Start SiteCatalyst code -->
+<script language="JavaScript" src="https://www.oracleimg.com/us/assets/metrics/ora_ocom.js"></script>
+<!-- End SiteCatalyst code -->
+
+ <!--DTM embed code - Footer -->
+ <script type="text/javascript">_satellite.pageBottom();</script>
+ <!--End-->
+<!-- www-us EndBodyAdminContainer -->
+
+<!-- / _Raw-Text -->
+
+<!-- Container/Display end -->
+	</body>
+</html>
+
