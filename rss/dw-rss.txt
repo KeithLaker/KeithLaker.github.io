@@ -349,7 +349,7 @@ COUNT(*)
             <category>The Data Warehouse Insider</category>
             <pubDate>Fri, 24 Jul 2020 15:44:00 +0000</pubDate>
             <guid>https://blogs.oracle.com/datawarehousing/how-to-access-non-oracle-databases-from-autonomous-database-using-oracle-database-gateway</guid>
-            <enclosure url="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/6e262756-1698-47f0-9d18-36a726127d6a/File/9c7156783f47c6cf1b200a93fae12fbe/images.png" length="0" type="image/png" />
+            <enclosure>https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/6e262756-1698-47f0-9d18-36a726127d6a/File/9c7156783f47c6cf1b200a93fae12fbe/images.png" length="0" type="image/png"</enclosure>
             <dc:creator>Can Tuzla</dc:creator>
         </item>
         <item>
