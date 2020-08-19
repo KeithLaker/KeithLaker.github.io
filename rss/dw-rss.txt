@@ -349,7 +349,7 @@ COUNT(*)
             <category>The Data Warehouse Insider</category>
             <pubDate>Fri, 24 Jul 2020 15:44:00 +0000</pubDate>
             <guid>https://blogs.oracle.com/datawarehousing/how-to-access-non-oracle-databases-from-autonomous-database-using-oracle-database-gateway</guid>
-            <enclosure>https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/6e262756-1698-47f0-9d18-36a726127d6a/File/9c7156783f47c6cf1b200a93fae12fbe/images.png" length="0" type="image/png"</enclosure>
+            <enclosure>https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/6e262756-1698-47f0-9d18-36a726127d6a/File/9c7156783f47c6cf1b200a93fae12fbe/images.png</enclosure>
             <dc:creator>Can Tuzla</dc:creator>
         </item>
         <item>
@@ -477,7 +477,7 @@ COUNT(*)
             <category>The Data Warehouse Insider</category>
             <pubDate>Thu, 23 Jul 2020 13:04:00 +0000</pubDate>
             <guid>https://blogs.oracle.com/datawarehousing/using-oci-resource-manage-to-deploy-a-complete-end-to-end-data-warehouse</guid>
-            <enclosure url="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/b98a78434d7507df090d0fbfc44302cd/screenshot_2020_07_23_at_12_46_38.png" length="0" type="image/png" />
+            <enclosure>https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/b98a78434d7507df090d0fbfc44302cd/screenshot_2020_07_23_at_12_46_38.png</enclosure>
             <dc:creator>Keith Laker</dc:creator>
         </item>
         <item>
@@ -901,7 +901,7 @@ span.onclick = function() {
             <category>The Data Warehouse Insider</category>
             <pubDate>Wed, 22 Jul 2020 11:25:00 +0000</pubDate>
             <guid>https://blogs.oracle.com/datawarehousing/autonomous-database-newsletter-july-22-2020</guid>
-            <enclosure url="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/3171ecca19062436f699f9aedcd05812/adb_header_icon_300.jpeg" length="0" type="image/jpeg" />
+            <enclosure>https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/3171ecca19062436f699f9aedcd05812/adb_header_icon_300.jpeg</enclosure> 
             <dc:creator>Keith Laker</dc:creator>
         </item>
         <item>
@@ -1581,7 +1581,7 @@ span.onclick = function() {
             <category>Newsletter</category>
             <pubDate>Wed, 15 Jul 2020 11:01:00 +0000</pubDate>
             <guid>https://blogs.oracle.com/datawarehousing/autonomous-database-newsletter-july-15-2020</guid>
-            <enclosure url="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/3171ecca19062436f699f9aedcd05812/adb_header_icon_300.jpeg" length="0" type="image/jpeg" />
+            <enclosure>https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/3171ecca19062436f699f9aedcd05812/adb_header_icon_300.jpeg</enclosure> 
             <dc:creator>Keith Laker</dc:creator>
         </item>
         <item>
@@ -2210,7 +2210,7 @@ a {
             <category>The Data Warehouse Insider</category>
             <pubDate>Wed, 24 Jun 2020 09:00:00 +0000</pubDate>
             <guid>https://blogs.oracle.com/datawarehousing/autonomous-database-newsletter-june-24-2020</guid>
-            <enclosure url="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/3171ecca19062436f699f9aedcd05812/adb_header_icon_300.jpeg" length="0" type="image/jpeg" />
+            <enclosure>https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/3171ecca19062436f699f9aedcd05812/adb_header_icon_300.jpeg</enclosure> 
             <dc:creator>Keith Laker</dc:creator>
         </item>
         <item>
@@ -3590,7 +3590,7 @@ SQL&amp;gt; select count(*) from dvdemo.products;
             <category>The Data Warehouse Insider</category>
             <pubDate>Thu, 04 Jun 2020 11:29:00 +0000</pubDate>
             <guid>https://blogs.oracle.com/datawarehousing/autonomous-database-newsletter-june-4-2020</guid>
-            <enclosure url="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/3171ecca19062436f699f9aedcd05812/adb_header_icon_300.jpeg" length="0" type="image/jpeg" />
+            <enclosure>https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/3171ecca19062436f699f9aedcd05812/adb_header_icon_300.jpeg</enclosure> 
             <dc:creator>Keith Laker</dc:creator>
         </item>
         <item>
@@ -4328,7 +4328,7 @@ SQL&amp;gt; select count(*) from dvdemo.products;
             <category>The Data Warehouse Insider</category>
             <pubDate>Thu, 30 Apr 2020 10:38:00 +0000</pubDate>
             <guid>https://blogs.oracle.com/datawarehousing/autonomous-database-newsletter-april-30-2020</guid>
-            <enclosure url="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/3171ecca19062436f699f9aedcd05812/adb_header_icon_300.jpeg" length="0" type="image/jpeg" />
+            <enclosure>https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/3171ecca19062436f699f9aedcd05812/adb_header_icon_300.jpeg</enclosure> 
             <dc:creator>Keith Laker</dc:creator>
         </item>
         <item>
@@ -4980,7 +4980,7 @@ SQL&amp;gt; select count(*) from dvdemo.products;
             <category>The Data Warehouse Insider</category>
             <pubDate>Wed, 08 Apr 2020 10:31:54 +0000</pubDate>
             <guid>https://blogs.oracle.com/datawarehousing/autonomous-database-newsletter-april-08-2020</guid>
-            <enclosure url="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/3171ecca19062436f699f9aedcd05812/adb_header_icon_300.jpeg" length="0" type="image/jpeg" />
+            <enclosure>https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/3171ecca19062436f699f9aedcd05812/adb_header_icon_300.jpeg</enclosure> 
             <dc:creator>Keith Laker</dc:creator>
         </item>
         <item>
@@ -5007,7 +5007,7 @@ SQL&amp;gt; select count(*) from dvdemo.products;
             <category>Data Warehousing</category>
             <pubDate>Mon, 06 Apr 2020 14:30:49 +0000</pubDate>
             <guid>https://blogs.oracle.com/datawarehousing/now-available-oracle-big-data-service</guid>
-            <enclosure url="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/e8f3928c-7512-4a66-82ed-f88dfefaf4c6/File/ef5fb4a172d6864faf26a12dac056f7c/bds_title.png" length="0" type="image/png" />
+            <enclosure>https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/e8f3928c-7512-4a66-82ed-f88dfefaf4c6/File/ef5fb4a172d6864faf26a12dac056f7c/bds_title.png</enclosure>
             <dc:creator>Martin Gubar</dc:creator>
         </item>
         <item>
@@ -5182,7 +5182,7 @@ execute send_mail(&amp;#39;taylor@example.com&amp;#39;, &amp;#39;Email from Orac
             <category>The Data Warehouse Insider</category>
             <pubDate>Fri, 22 Nov 2019 12:32:00 +0000</pubDate>
             <guid>https://blogs.oracle.com/datawarehousing/announcing-easier%2C-faster-access-to-all-your-favorite-tools</guid>
-            <enclosure url="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/File/f59e0aae48623511ef417cdafb51b91c/imagetoolbox_19.jpg" length="0" type="image/jpeg" />
+            <enclosure>https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/File/f59e0aae48623511ef417cdafb51b91c/imagetoolbox_19.jpg</enclosure> 
             <dc:creator>Keith Laker</dc:creator>
         </item>
         <item>
@@ -5505,7 +5505,7 @@ SELECT REPORT_DATE, AVERAGE_MIN_TEMP FROM WEATHER_REPORT_EXTERNAL_PART PARTITION
             <category>Data Warehousing</category>
             <pubDate>Fri, 15 Nov 2019 04:29:00 +0000</pubDate>
             <guid>https://blogs.oracle.com/datawarehousing/creating-partitioned-external-tables-over-any-object-store</guid>
-            <enclosure url="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/f3971c04-8bd4-4efa-a5e3-1af82fc8a9ca/File/93c7477a629fdecdb18b4dc4d607bdaa/table_row_detailed.png" length="0" type="image/png" />
+            <enclosure>https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/f3971c04-8bd4-4efa-a5e3-1af82fc8a9ca/File/93c7477a629fdecdb18b4dc4d607bdaa/table_row_detailed.png</enclosure>
             <dc:creator>Nilay Panchal</dc:creator>
         </item>
         <item>
@@ -5688,7 +5688,7 @@ Database Security Blog: &lt;a href=&quot;https://blogs.oracle.com/cloudsecurity/
             <category>The Data Warehouse Insider</category>
             <pubDate>Wed, 13 Nov 2019 14:03:00 +0000</pubDate>
             <guid>https://blogs.oracle.com/datawarehousing/keeping-your-autonomous-data-warehouse-secure-with-data-safe-part-2</guid>
-            <enclosure url="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/62aee7ff-065c-4ac8-bdc6-52e632dee649/File/14b5ba00020e1efa46567531e2199219/shutterstock_540167482.jpg" length="0" type="image/jpeg" />
+            <enclosure>https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/62aee7ff-065c-4ac8-bdc6-52e632dee649/File/14b5ba00020e1efa46567531e2199219/shutterstock_540167482.jpg</enclosure> 
             <dc:creator>Keith Laker</dc:creator>
         </item>
     </channel>
