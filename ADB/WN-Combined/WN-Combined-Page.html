@@ -1,0 +1,1094 @@
+<html lang="en-US" class="js ishttp w11ready">
+	<head>
+	
+<!-- _Raw-Text -->
+	<!-- css / js files start -->
+	<script>
+	!function(){
+		var d=document.documentElement;d.className=d.className.replace(/no-js/,'js');
+		if(document.location.href.indexOf('betamode=') > -1) document.write('<script src="https://www.oracle.com/asset/web/js/ocom-betamode.js"><\/script>');
+	}();
+	</script>
+		<link data-wscss href="https://www.oracle.com/asset/web/css/ocom-v1-base.css" rel="stylesheet">
+		<link data-wscss href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="preload" as="style" onload="this.rel='stylesheet'" onerror="this.rel='stylesheet'">
+		<noscript>
+			<link href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="stylesheet">
+		</noscript>
+	<script data-wsjs src="https://www.oracle.com/asset/web/js/jquery-min.js" async onload="$('head link[data-reqjq][rel=preload]').each(function(){var a = document.createElement('script');a.async=false;a.src=$(this).attr('href');this.parentNode.insertBefore(a, this);});$(function(){$('script[data-reqjq][data-src]').each(function(){this.async=true;this.src=$(this).data('src');});});"></script>
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/ocom-v1-base.js" rel="preload" as="script">
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/ocom-v1-lib.js" rel="preload" as="script">
+	<!-- end css / js files start -->
+<!-- / _Raw-Text -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="siteid" content="us">
+		<meta name="countryid" content="US">
+		<meta name="robots" content="index, follow">
+		<meta name="country" content="United States">
+		<meta name="Language" content="en">
+		<meta name="Updated Date" content="2018-04-19T19:17:32Z">
+	<!-- start : ocom/common/global/components/social-media-meta-tags -->
+<!-- end : ocom/common/global/components/social-media-meta-tags -->
+<!-- start : ocom/common/global/components/seo-hreflang-meta-tags -->
+		<link rel="canonical" href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/partitioning.html" />
+		<link rel="alternate" hreflang="en-US" href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/partitioning.html" />
+					<!-- end : ocom/common/global/components/seo-hreflang-meta-tags -->
+
+<!-- _Raw-Text -->
+<!-- www-us HeadAdminContainer -->
+<script async="async" type="text/javascript" src='//consent.truste.com/notice?domain=oracle.com&c=teconsent&js=bb&noticeType=bb&text=true&gtm=1' crossorigin></script>
+		<style>
+#oReactiveChatContainer1 { display:none;}
+		</style>
+<!--DTM embed code - Header -->
+<script src="//assets.adobedtm.com/6f37a0dc9cdbe818dc4979828b58b88e3f060ea4/satelliteLib-e598c5b61e39a10b402e048e87dd27b0f1cd2d4c.js"></script>
+
+<!-- Truste for RU -->
+<script type="text/javascript">
+ if (location.pathname.indexOf("/ru/") == 0){
+ document.write('\x3Cscript async="async" src=//consent.truste.com/notice?domain=oracleru.com&c=teconsent&js=bb&noticeType=bb&text=true crossorigin="">\x3C/script>');
+ }
+ </script>
+<!--End-->
+		<title>Redwood</title>
+		<base href="http://webstandards.us.oracle.com">
+	<!-- BEGIN CSS/JS -->
+	<script>
+		!function(){
+			var d=document.documentElement;d.className=d.className.replace(/no-js/,'js');
+			if(document.location.href.indexOf('betamode=') > -1) document.write('<script src="/assets/js/ocom-betamode.js"><\/script>');
+		}();
+	</script>
+		<link data-wscss="" href="/assets/css/redwood-base.css" rel="stylesheet" as="style" onload="this.rel='stylesheet';" onerror="this.rel='stylesheet'">
+		<link data-wscss="" href="/assets/css/redwood-styles.css" rel="stylesheet" as="style" onload="this.rel='stylesheet';" onerror="this.rel='stylesheet'">
+		<noscript>
+			&lt;link href="/assets/css/redwood-base.css" rel="stylesheet"&gt;
+			&lt;link href="/assets/css/redwood-styles.css" rel="stylesheet"&gt;
+		</noscript>
+
+	<script src="/assets/js/redwood-base.js"></script>
+		<link data-wsjs="" data-reqjq="" href="/assets/js/redwood-base.js" rel="preload" as="script">
+	<script src="/assets/js/redwood-lib.js"></script>
+		<link data-wsjs="" data-reqjq="" href="/assets/js/redwood-lib.js" rel="preload" as="script">
+
+	<script data-wsjs="" src="/assets/js/jquery-min.js" async="" onload="$('head link[data-reqjq][rel=preload]').each(function(){var a = document.createElement('script');a.async=false;a.src=$(this).attr('href');this.parentNode.insertBefore(a, this);});$(function(){$('script[data-reqjq][data-src]').each(function(){this.async=true;this.src=$(this).data('src');});});"></script>
+
+	<!-- END CSS/JS -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="siteid" content="us">
+		<meta name="countryid" content="US">
+		<meta name="country" content="United States">
+		<meta name="Language" content="en">
+		<meta name="altpages" content="ae,ae-ar,ar,au,br,ca-en,ca-fr,cn,co,cz,de,es,fr,in,it,jp,kr,mx,nl,pl,ro,ru,se,tr,tw,uk">
+
+	
+
+	<!-- FOR WEBSTANDARDS ONLY -->
+		<link href="/ws-assets/ws-comp.css" media="print, screen" rel="Stylesheet" type="text/css"><script src="/assets/js/handlebars-redwood.js" type="text/javascript"></script>
+	</head>
+	<body class="f20 f20v0 ready" style="opacity:0">
+		<div id="consent_blackbar"></div>
+		<div class="f20w1">
+
+			
+
+<!--
+######################### WARNING #########################
+#
+#
+# THIS CODE MAY NOT FULLY REPRESENT PRODUCTION CODE!!!!!
+#
+# PLEASE GET ALL HTML CODE FROM THE CODE TAB TO ENSURE
+# THAT THE PROPER CODE IS USED IN PRODUCTION!!!
+#
+#
+######################### WARNING #########################
+-->
+
+
+<!-- CB83v2 -->
+				<section class="cb83 cb83v2 cpad bgdarkslate" data-trackas="cb83" data-ocomid="cb83" style="background-image:url(http://webstandards.us.oracle.com/assets/images/bgimg01/bgimg01-fpo-10.jpg) !important; background-repeat: repeat; background-position: left-top !important; height:600px;">
+					
+					<div class="cb83w7 cwidth">
+						<div class="cb83w5">
+							<div class="svgimg obic">
+								<img src="https://www.oracle.com/us/assets/obic-technology-database-autonomous-4485577.svg">
+							</div>
+						</div>
+						<div class="cb83w3">
+							<h2 style="text-align:left; color:black;">What's New in Autonomous Database</h2>
+							<p style="text-align:left; color:black; font-size:12px;"><strong>LAST UPDATED: August 20, 2020</strong></p>
+							<p style="text-align:left; color:black; margin-right:500px;;">Oracle Autonomous Database is Oracle's new, fully managed database tuned and optimized for data warehouse and transactional workloads with the market-leading performance of Oracle Database. It delivers a completely new, comprehensive cloud experience for data warehousing and transactional workloads that is easy, fast, and elastic.
+							<br>
+							<br>
+							This page lists the new features  added to Autonomous Database along with links to help you learn about each feature, position each feature with your customers and create demos.
+							</p>
+						</div>
+					</div>
+				</section>
+
+<!-- RC30v1 -->
+			<section class="rc30 rc30v1 cpad rw-theme-30bg rw-pattern-theme1w rw-pattern-8p rw-pattern-load" data-trackas="rc30" data-ocomid="rc30">
+				<div class="rc30w1 cwidth">
+					<h2 class="rwaccent">What's New In Autonomous Database</h2>
+					<div class="rc30w2">
+						<form class="oform rc30mobnav oform-initialized">
+							<span class="oform-w1">
+								<span class="oform-w1"><span class="oselect">
+										<span class="oinput">
+											<select name="f4" placeholder=" ">
+												<option value="#rc30p1" selected="selected">Shared Exadata Infrastructure</option>
+												<option value="#rc30p2">Dedicated Exadata Infrastructure</option>
+												<option value="#rc30p3">Cloud@Customer</option>
+											</select></span>
+									</span></span>
+							</span>
+						</form>
+					</div>
+					<div class="rc30w3" style="min-height: 780.09375px;">
+						<div class="rc30w4 rc30pane rc30pane3 rc30pane-bleed rw-neutral-00bg o-bgimg rc30activepane bgimgw1" id="rc30p1" style="width: 528px; min-height: 780.09375px;">
+							<div style="background-image:url(/assets/images/bgimg02/bgimg02-bgse-resources-03.png); background-repeat: repeat; background-position: left-top !important; background-blend-mode: lighten; opacity: 0.6;" class="bgimg bgimgw2 bgimg-rhalf bgimg-bottom bgimg-hsize bgimg-lightest"></div>
+							<div class="col-framework col2 inview">
+								<div class="col-w1">
+									<div class="col-item col-title">
+										<div class="col-item-w1 rc30w14"><h4>Autonomous Database on Shared Exadata Infrastructure</h4></div>
+									</div>
+									<div class="col-item-w1 rc30w10">
+										<div class="rc30w5">
+											<table width="120%">
+												<tr>
+													<td>
+														<section class="cb90 cb90v0 cpad bgwhite" data-ocomid="cb90" data-trackas="cb90">
+															<div class="cb90w1 cwidth">
+																<h2 style="text-align: left !important; color:#069 !important; font-weight: bold; font-size: 3.0rem;">August 2020</h2>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;"> Autonomous JSON Database - Targeting Application Developers </h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta">
+																			<a href="https://blogs.oracle.com/jsondb/autonomous-json-database" target="_blank">
+																				Learn more...
+																			</a>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<span style="display:inline-block;" class="tmpTextedtr">
+																			<p class="basic_text">
+																				Oracle Autonomous JSON Database is an Oracle Cloud service that is specialized for developing NoSQL-style applications that use JavaScript Object Notation (JSON) documents.
+																			</p>
+																			<p class="basic_text">
+																				Like other Oracle Autonomous Database services, it delivers: auto-scaling, automated patching, upgrading, and tuning.
+																			</p>
+																			<p class="basic_text">
+																				Autonomous JSON Database provides all of the same features as Autonomous Transaction Processing and, unlike MongoDB, allows developers to also store up to 20 GB of non-JSON data. There is <strong>no storage limit for JSON collections</strong>.
+																			</p>
+																			<br>
+																		</span>
+																		<br>
+																		<div class="row">
+																			<div class="column" style="align:center">
+																				<img  moz-do-not-send="true" width="550" style="max-width:550px !important; width:550px !important; border: 2px solid grey; border-radius: 15px;" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/9ed37aad23bf3e855eeeb46a974cbdbe/create_ajd_550.gif" alt="Simplified animated GIF showing creation of an Autonomous JSON Database instance" width="100%">
+																				<p class="basic_text" style="font-size:10pt;">
+																					<em>Simplified animation showing basic steps to create an AJD instance</em>
+																				</p>
+																			</div>
+																		</div>
+																		</span>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;"> Change Database Name For An Autonomous Database</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/autonomous-rename.html#GUID-E83E85D3-6D76-4E82-8570-8C10D07B46C4" target="_blank">Learn more...</a>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<span style="display:inline-block;" class="tmpTextedtr">
+																			<p class="basic_text">
+																				Autonomous Database offers quick and easy provisioning which is an integral part of an agile development framework.
+																			</p>
+																			<p class="basic_text">
+																				This agility can be further accelerated with the help of a new feature - database rename - which makes it significantly easier and faster to deploy dev/test instances, cloned from production, by avoiding the need to change connect strings in supporting application code (<em>blog post about a real-world use case coming soon on  <a href="https://blogs.oracle.com/datawarehousing" target="_blank"> blogs.oracle.com/datawarehousing</a></em>)
+																			</p>
+																		</span>
+																		<br>
+																		<br>
+																		<span style="display:inline-block;" class="tmpTextedtr">
+																			<div class="row">
+																				<div class="column">
+																					<img  moz-do-not-send="true" width="550" style="max-width:550px !important; width:550px !important; border: 2px solid grey; border-radius: 15px;" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/243c82f681e767fca08c05d6307aeae0/adb_db_rename_550.png" width="100%" alt="Image shows rename pop-up form from the OCI ADB instance details page">
+																					<p class="basic_text" style="font-size:10pt;">
+																						<em>The rename pop-up form from the OCI ADB instance details page</em>
+																					</p>
+																				</div>
+																			</div>
+																		</span>
+																		<br>
+																		<br>
+																		<span style="display:inline-block;" class="tmpTextedtr">
+																			<div class="row">
+																				<div class="column">
+																					<img  moz-do-not-send="true" width="550" style="max-width:550px !important; width:550px !important;  border: 2px solid grey; border-radius: 15px;" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/e66d5e462ba4e685e94e42012602cb71/database_rename_550.gif" width="100%" alt="Image shows end-to-end flow of renaming an existing ADB instance">
+																					<p class="basic_text" style="font-size:10pt;">
+																						<em>End-to-end flow of renaming an ADB instance</em>
+																					</p>
+																				</div>
+																			</div>
+																		</span>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;"> Data Safe Now Supports ADBs Using Private Endpoints</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.oracle.com/en/cloud/paas/data-safe/udscs/register-autonomous-databases-shared-exadata-infrastructure-private-vcn-access.html#GUID-88E197BD-BEEE-4E93-8F2A-4613C1A1A4E2" target="_blank">Learn more...</a>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<span style="display:inline-block;" class="tmpTextedtr">
+																			<p class="basic_text">
+																				You can now register an Autonomous Database on Shared Exadata Infrastructure within a private virtual cloud network (VCN).
+																			</p>
+																			<p class="basic_text">
+																				For Oracle Data Safe to communicate with your database, you need to create an Oracle Data Safe private endpoint on the same VCN as your database's private endpoint. You can use any subnet; however, Oracle recommends that you use the same subnet as your database.
+																			</p>
+																			<div class="row">
+																				<div class="column">
+																					<img  moz-do-not-send="true" width="550" style="max-width:550px !important; width:550px !important; border: 2px solid grey; border-radius: 15px;" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/4e6cba51a3eebced317f4ead575f8607/adb_s_private_vcn.png" alt="illustration shows two private endpoints communicate with each other, allowing Oracle Data Safe to communicate with your database." width="100%">
+																					<p class="basic_text" style="font-size:10pt;">
+																						<em>Illustration shows two private endpoints communicate with each other, allowing Oracle Data Safe to communicate with your database.</em>
+																					</p>
+																				</div>
+																			</div>
+																			<br>
+																			<br>
+																		</span>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;"> Democratize Machine Learning with Oracle Analytics Cloud 5.7</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.oracle.com/en/cloud/paas/analytics-cloud/acubi/register-and-use-oracle-machine-learning-models.html#GUID-C3E0DC8C-E274-44E1-852E-FC5DAC2765E7" target="_blank">Learn more...</a>
+																		</div>
+																		<br>
+																	</div>
+																	<div class="cb90w4">
+																		<span style="display:inline-block;" class="tmpTextedtr">
+																			<p class="basic_text">
+																				Machine learning models in Oracle Autonomous Database can now be registered in Oracle Analytics Cloud. These can then be applied to datasets and data connections through the Oracle Analytics Cloud interface.
+																			</p>
+																			<p class="basic_text">
+																				Not only does this reduce the cost of switching between environments, it opens the door for business users to tap into the expertise of an organization’s data scientists.
+																			</p>
+																			<div class="row">
+																				<div class="column">
+																					<img  moz-do-not-send="true" width="550" style="max-width:550px !important; width:550px !important; border: 2px solid grey; border-radius: 15px;" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/a0e1a9f4-b2f2-496b-ac14-50032102b3f3/Image/7adcd42e39dbf1713dc2194389c1a06f/adw_model_import.png" alt="illustration shows two private endpoints communicate with each other, allowing Oracle Data Safe to communicate with your database." width="100%">
+																					<p class="basic_text" style="font-size:10pt;">
+																						<em>Illustration shows registration process within Analytics Cloud 5.7 for enabling access to Oracle Machine Learning models.</em>
+																					</p>
+																				</div>
+																			</div>
+																			<br>
+																			<br>
+																			<br>
+																			<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;"> Autonomous Data Warehouse Training Plans For LiveLabs</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/adw-training-plans.html" target="_blank">Learn more...</a>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<span style="display:inline-block;" class="tmpTextedtr">
+																			<p class="basic_text">
+																				We have launched a new page on oracle.com to help you navigate all the data warehousing workshops available within LiveLabs.
+																			</p>
+																			<p class="basic_text">
+																				Select the main topic area, then either choose to start a specific workshop now or reserve a date and time to work through it. Customers won't need to sign up for anything - all accounts and access will be provided!
+																			</p>
+																			<div class="row">
+																				<div class="column">
+																					<img  moz-do-not-send="true" width="550" style="max-width:550px !important; width:550px !important; border: 2px solid grey; border-radius: 15px;" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/ad3768031db19c2c3caa7ec8bd88e683/tpll.png" alt="illustration shows two private endpoints communicate with each other, allowing Oracle Data Safe to communicate with your database." width="100%">
+																					<p class="basic_text" style="font-size:10pt;">
+																						<em>Illustration shows new data warehousing training plans for content in Oracle LiveLabs</em>
+																					</p>
+																				</div>
+																			</div>
+																			<br>
+																			<br>
+																		</span>
+																	</div>
+																</div>
+															</div>
+														</section>
+
+<!-- _Raw-HTML -->
+														<section class="cb90 cb90v0 cpad bgwhite" data-ocomid="cb90" data-trackas="cb90">
+															<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:2px !important; margin-left:50px !important;margin-right:50px !important;">&nbsp;</div>
+														</section>
+<!-- _Raw-HTML -->
+														<section class="cb90 cb90v0 cpad bgwhite" data-ocomid="cb90" data-trackas="cb90">
+															<div class="cb90w1 cwidth">
+																<h2 style="text-align: left !important; color:#069 !important; font-weight: bold; font-size: 3.0rem;">July 2020</h2>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;"> Creating a standby database with Autonomous Data Guard </h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://blogs.oracle.com/datawarehousing/announcing-autonomous-data-guard" target="_blank">Learn more...</a>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<p class="basic_text">
+																			When you enable Autonomous Data Guard on ADB, the system creates a standby database that stays "connected" to the primary database and automatically refreshes its data from the primary database.
+																		</p>
+																		<p class="basic_text">
+																			This allows the following, depending on the state of the primary database:
+																		</p>
+																		<p class="basic_text" style="margin-left:55px;">
+																			If your primary database goes down, Autonomous Data Guard converts the standby database to the primary database with minimal interruption. After failover completes, Autonomous Data Guard automatically creates a new standby database.
+																		</p>
+																		<p class="basic_text"  style="margin-left:55px;">
+																			You can perform a switchover operation, where the primary database becomes the standby database, and the standby database becomes the primary database.
+																		</p>
+																		<p class="basic_text">
+																			<strong>Note:</strong> Autonomous Database does not provide access to the standby database.
+																		</p>
+																		<div class="row">
+																			<div class="column">
+																				<img  moz-do-not-send="true" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/3f425d604e4ec4fb55c3b40f8f72b98e/adg_animation.gif" alt="Simplified animated GIF showing creation of an Autonomous Data Guard standby instance for ADW" width="600pt;">
+																				<p class="basic_text" style="font-size:10pt;">
+																					<em>Simplified animation showing basic steps to create an ADG standby instance for ADW</em>
+																				</p>
+																			</div>
+																		</div>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;"> Using OCI Resource Manager to Deploy Data Warehouse Reference Architecture Patterns</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.oracle.com/en/solutions/index.html" target="_blank">Learn more...</a>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<p class="basic_text">
+																			The list of pre-built Stacks within OCI Resource Manager has been expanded to include some of the new reference architecture patterns that support this year's Modern Data Warehouse sales plays.
+																		</p>
+																		<p class="basic_text">
+																			Currently, the Departmental Data Warehouse pattern is available as a pre-built stack and the other Modern Data Warehouse patterns will be available shortly.
+																		</p>
+																		<div class="row">
+																			<div class="column">
+																				<img id="myImg02" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/82e90fd56d76658b232d34dbbae05799/rm_patterns.gif" alt="Simplified animated GIF showing automated deployment process for reference architecture patterns" style="width:100%;max-width:550px">
+																				<br>
+																				<br>
+																				<p class="basic_text" style="font-size:10pt;">
+																					<em>Simplified animation showing basic steps for using Resource Manager pre-built stacks to deploy a departmental data warehouse.</em>
+																				</p>
+																			</div>
+																		</div>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;"> Connecting to Non-Oracle Databases</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/database-links-other-databases.html#GUID-E4F35EEE-3147-4822-A9EB-A341D87E4EC" target="_blank">Learn more...</a>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<p class="basic_text">
+																			Autonomous Database now supports using connections that are enabled via Oracle Database Gateway. Gateways are designed for accessing a specific non-Oracle Database such as DB2, Teradata, SQL Server etc.
+																		</p>
+																		<p class="basic_text">
+																			Oracle Database Gateway provide queries and applications with access to data anywhere in a distributed database system without knowing either the location of the data or how it is stored. This removes the need to customize applications to access data from non-Oracle systems.
+																		</p>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;">Modify Network Settings for ADB Instances</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/network-access-change-topublic.html#GUID-CAF3F02E-C6C7-40DE-B3FF-FF0F7A89FDA" target="_blank">Learn more...</a>
+																		</div>
+																		<br>
+																	</div>
+																	<div class="cb90w4">
+																		<p class="basic_text">
+																			Autonomous Database now supports switching network access type. This feature enables customers to perform an in-place switch from public endpoint to private endpoint (and vice versa).
+																			<br><br>
+																			The feature will reduce customer effort required for switching between public and private endpoints and make it easier for customers to adopt private endpoint.
+																		</p>
+																		<br>
+																		<div class="row">
+																			<div class="column">
+																				<img moz-do-not-send="true" width="600px;" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/bd07f9d2fd3ad6019ce9fa3b3726ee5f/adb_network.gif" width="100%">
+																			</div>
+																		</div>
+																		<br>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;">Timezone Files Automatically Updated</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/event-notification.html#GUID-BACC9C4A-C0FA-4912-862A-1A2A24D6A0C2" target="_blank">Learn more...</a>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<p class="basic_text">
+																			For time zone support, Oracle Database uses time zone files that store the list of all time zones. The time zone files for Autonomous Database are periodically updated to reflect the latest time zone specific changes.
+																		</p>
+																		<p class="basic_text">
+																			An Autonomous Database instance will automatically pick up updated time zone files depending on the lifecycle state of the instance:
+																		</p>
+																		<p class="basic_text" style="margin-left:45px;">
+																			- Stopped: At the next start operation the update is automatically applied.
+																			<br>
+																			- Available: After a restart the update is automatically applied.
+																		</p>
+																		<p class="basic_text">
+																			When a load or import operation results in a timezone related error, restart the ADB instance and try again.
+																		</p>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;">Create/Modify User Profile and Set Password</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/manage-user-profiles.html#GUID-BD3C5573-DF0E-4E44-919A-08A471462B87" target="_blank">Learn more...</a>
+																		</div>
+																		<br>
+																	</div>
+																	<div class="cb90w4">
+																		<p class="basic_text">
+																			Autonomous Database now supports the ability to create/alter user profiles and import existing user profiles from another environment with Oracle Data Pump Import.
+																		</p>
+																		<p class="basic_text">
+																			Cloud Admins can now manage the rules for password complexity on Autonomous Database. Administrators can can create a Password Verify Function (PVF) and associate the PVF with a profile to manage the rules for password complexity.
+																		</p>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+															</div>
+														</section>
+
+<!-- _Raw-HTML -->
+														<section class="cb90 cb90v0 cpad bgwhite" data-ocomid="cb90" data-trackas="cb90">
+															<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:2px !important; margin-left:50px !important;margin-right:50px !important;">&nbsp;</div>
+														</section>
+<!-- _Raw-HTML -->
+
+
+		
+		
+<!-- _Raw-HTML --><!-- CB90v0 -->
+														<section class="cb90 cb90v0 cpad bgwhite" data-ocomid="cb90" data-trackas="cb90">
+															<div class="cb90w1 cwidth">
+																<h2 style="text-align: left !important; color:#069 !important; font-weight: bold; font-size: 3.0rem;">June 2020</h2>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;">ADB now supports Customer Managed Oracle REST Data Services</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/ords-customer-managed.html#GUID-1094A25C-44C3-4912-8DB2-6413B7973D9B" target="_blank">Learn more...</a>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<p>
+																			When you use the default ORDS on Autonomous Database, you cannot modify any of the ORDS configuration options. For example, with the default configuration connections for ORDS are preconfigured to use the LOW database service. You can now use a customer managed environment if you want manual control of the configuration and management of Oracle REST Data Services.
+																		</p>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;">Performance Hub Now Has a Timezone Selector</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<p>
+																			A time zone control has been added to Performance Hub. This will allow users to view data using an alternate time zone to UTC. They will have the choice of viewing data using either UTC (default), the time zone of their browser client, or the time zone of the database.
+																		</p>
+																		<br>
+																		<br>
+																		<img moz-do-not-send="true" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/749047be6040d82eea048b744e07bda9/per_hub_tz_500.png" alt="Autonomous Database Performance Hub panel showing new timezone selector">
+																		<br>
+																		<div class="cb90cta"><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/autonomous-database-support-ocid.html#GUID-C2B866BD-379D-46AA-9277-DC78F974FAD2" target="_blank">Learn more...</a>
+																		</div>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;">SQL access to tenancy details for ADB</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<p>
+																			When you file a service request for Autonomous Database, you need to provide the tenancy details for your instance.  Tenancy details for the instance are available on the Oracle Cloud Infrastructure console. However, if you are connected to the database, you can now obtain these details by querying the <strong>CLOUD_IDENTITY</strong> column of the <strong>V$PDBS view</strong>. For example:
+																		</p>
+																		<p class="basic_text" style="font-family:courier !important; margin-left:40px;">
+																			SELECT cloud_identity<br>
+																			FROM v$pdbs;
+																		</p>
+																		<p>
+																			...will generate something similar to the following:
+																		</p>
+																		<p class="basic_text" style="font-family:courier !important; margin-left:40px;">
+																			{"DATABASE_NAME" : "DBxxxxxxxxxxxx",<br>
+																			"REGION" : "us-phoenix-1",  <br>
+																			"TENANT_OCID" : "OCID1.TENANCY.REGION1..ID1",<br>
+																			"DATABASE_OCID" :  "OCID1.AUTONOMOUSDATABASE.OC1.SEA.ID2",<br>
+																			"COMPARTMENT_OCID" : "ocid1.tenancy.region1..ID3"}<br>
+																		</p>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+															</div>
+														</section>
+
+<!-- _Raw-HTML -->
+														<section class="cb90 cb90v0 cpad bgwhite" data-ocomid="cb90" data-trackas="cb90">
+															<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:2px !important; margin-left:50px !important;margin-right:50px !important;">&nbsp;</div>
+														</section>
+<!-- _Raw-HTML -->
+
+
+<!-- _Raw-HTML --><!-- CB90v0 -->
+														<section class="cb90 cb90v0 cpad bgwhite" data-ocomid="cb90" data-trackas="cb90">
+															<div class="cb90w1 cwidth">
+																<h2 style="text-align: left !important; color:#069 !important; font-weight: bold; font-size: 3.0rem;">May 2020</h2>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;">Workload metrics on performance Hub</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.cloud.oracle.com/en-us/iaas/Content/Database/Tasks/perfhub.htm#navperfhub" target="_blank">Learn more...</a>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<p>
+																			Performance Hub has been expanded to include a new tab, "Workload". This can be used to monitor the workload in the database and helps the user identify performance spikes and bottlenecks.
+																		</p>
+																		<p>
+																			There are 4 regions in this tab: CPU Statistics, Wait Time Statistics, Workload Profile, and Sessions. Each region contains a group of charts that indicate the characteristics of the workload and the distribution of the resources, as shown below.
+																		</p>
+																		<br>
+																		<img moz-do-not-send="true" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/4a8e4a66f3bb40e0acc33f54110273f8/perf_hub_workload_500.jpg" alt="Autonomous Database Performance Hub console showing new workload metrics">
+																		<br>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;">Latency Metrics Now Available in Service Metrics</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.cloud.oracle.com/iaas/Content/Events/Concepts/eventsoverview.htm" target="_blank">Learn more...</a>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<p>
+																			The Database Service Metrics information help Cloud Admins measure useful quantitative data about their Autonomous Databases. This list of available metrics now includes two new latency metrics:
+																		</p>
+																		<div style="margin-left:25px">
+																			<p>
+																				1) Connection latency - Time taken (in milliseconds) to connect to an Autonomous Database that uses shared Exadata infrastructure in each region from a Compute service virtual machine in the same region.
+																			</p>
+																			<p>
+																				2) Query latency/response time - Time taken (in milliseconds) to display the results of a simple query on the user's screen.
+																			</p>
+																		</div>
+																		<p>
+																			<em>Note - the tests to measure connection latency and query latency are not run against any customer instances.</em>
+																		</p>
+																		<p>
+																			Within the Service Metrics console, it is possible to define and publish alarms against these new metrics.
+																		</p>
+																		<br>
+																		<img moz-do-not-send="true" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/4a8e4a66f3bb40e0acc33f54110273f8/perf_hub_workload_500.jpg" alt="Service Metrics OCI console showing new latency metrics">
+																		<br />
+																		<br />
+																	</div>
+																</div>
+															</div>
+														</section>
+
+
+<!-- _Raw-HTML -->
+														<section class="cb90 cb90v0 cpad bgwhite" data-ocomid="cb90" data-trackas="cb90">
+															<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:2px !important; margin-left:50px !important;margin-right:50px !important;">&nbsp;</div>
+														</section>
+
+		
+<!--
+July starts here 
+-->
+														<section class="cb90 cb90v0 cpad bgwhite" data-ocomid="cb90" data-trackas="cb90">
+															<div class="cb90w1 cwidth">
+																<h2 style="text-align: left !important; color:#069 !important; font-weight: bold; font-size: 3.0rem;">July 2020</h2>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;"> Creating a standby database with Autonomous Data Guard </h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://blogs.oracle.com/datawarehousing/announcing-autonomous-data-guard" target="_blank">Learn more...</a>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<p class="basic_text">
+																			When you enable Autonomous Data Guard on ADB, the system creates a standby database that stays "connected" to the primary database and automatically refreshes its data from the primary database.
+																		</p>
+																		<p class="basic_text">
+																			This allows the following, depending on the state of the primary database:
+																		</p>
+																		<p class="basic_text" style="margin-left:55px;">
+																			If your primary database goes down, Autonomous Data Guard converts the standby database to the primary database with minimal interruption. After failover completes, Autonomous Data Guard automatically creates a new standby database.
+																		</p>
+																		<p class="basic_text"  style="margin-left:55px;">
+																			You can perform a switchover operation, where the primary database becomes the standby database, and the standby database becomes the primary database.
+																		</p>
+																		<p class="basic_text">
+																			<strong>Note:</strong> Autonomous Database does not provide access to the standby database.
+																		</p>
+																		<div class="row">
+																			<div class="column">
+																				<img  moz-do-not-send="true" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/3f425d604e4ec4fb55c3b40f8f72b98e/adg_animation.gif" alt="Simplified animated GIF showing creation of an Autonomous Data Guard standby instance for ADW" width="600pt;">
+																				<p class="basic_text" style="font-size:10pt;">
+																					<em>Simplified animation showing basic steps to create an ADG standby instance for ADW</em>
+																				</p>
+																			</div>
+																		</div>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;"> Using OCI Resource Manager to Deploy Data Warehouse Reference Architecture Patterns</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.oracle.com/en/solutions/index.html" target="_blank">Learn more...</a>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<p class="basic_text">
+																			The list of pre-built Stacks within OCI Resource Manager has been expanded to include some of the new reference architecture patterns that support this year's Modern Data Warehouse sales plays.
+																		</p>
+																		<p class="basic_text">
+																			Currently, the Departmental Data Warehouse pattern is available as a pre-built stack and the other Modern Data Warehouse patterns will be available shortly.
+																		</p>
+																		<div class="row">
+																			<div class="column">
+																				<img id="myImg02" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/82e90fd56d76658b232d34dbbae05799/rm_patterns.gif" alt="Simplified animated GIF showing automated deployment process for reference architecture patterns" style="width:100%;max-width:550px">
+																				<br>
+																				<br>
+																				<p class="basic_text" style="font-size:10pt;">
+																					<em>Simplified animation showing basic steps for using Resource Manager pre-built stacks to deploy a departmental data warehouse.</em>
+																				</p>
+																			</div>
+																		</div>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;"> Connecting to Non-Oracle Databases</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/database-links-other-databases.html#GUID-E4F35EEE-3147-4822-A9EB-A341D87E4EC" target="_blank">Learn more...</a>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<p class="basic_text">
+																			Autonomous Database now supports using connections that are enabled via Oracle Database Gateway. Gateways are designed for accessing a specific non-Oracle Database such as DB2, Teradata, SQL Server etc.
+																		</p>
+																		<p class="basic_text">
+																			Oracle Database Gateway provide queries and applications with access to data anywhere in a distributed database system without knowing either the location of the data or how it is stored. This removes the need to customize applications to access data from non-Oracle systems.
+																		</p>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;">Modify Network Settings for ADB Instances</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/network-access-change-topublic.html#GUID-CAF3F02E-C6C7-40DE-B3FF-FF0F7A89FDA" target="_blank">Learn more...</a>
+																		</div>
+																		<br>
+																	</div>
+																	<div class="cb90w4">
+																		<p class="basic_text">
+																			Autonomous Database now supports switching network access type. This feature enables customers to perform an in-place switch from public endpoint to private endpoint (and vice versa).
+																			<br><br>
+																			The feature will reduce customer effort required for switching between public and private endpoints and make it easier for customers to adopt private endpoint.
+																		</p>
+																		<br>
+																		<div class="row">
+																			<div class="column">
+																				<img moz-do-not-send="true" width="600px;" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/bd07f9d2fd3ad6019ce9fa3b3726ee5f/adb_network.gif" width="100%">
+																			</div>
+																		</div>
+																		<br>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;">Timezone Files Automatically Updated</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/event-notification.html#GUID-BACC9C4A-C0FA-4912-862A-1A2A24D6A0C2" target="_blank">Learn more...</a>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<p class="basic_text">
+																			For time zone support, Oracle Database uses time zone files that store the list of all time zones. The time zone files for Autonomous Database are periodically updated to reflect the latest time zone specific changes.
+																		</p>
+																		<p class="basic_text">
+																			An Autonomous Database instance will automatically pick up updated time zone files depending on the lifecycle state of the instance:
+																		</p>
+																		<p class="basic_text" style="margin-left:45px;">
+																			- Stopped: At the next start operation the update is automatically applied.
+																			<br>
+																			- Available: After a restart the update is automatically applied.
+																		</p>
+																		<p class="basic_text">
+																			When a load or import operation results in a timezone related error, restart the ADB instance and try again.
+																		</p>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;">Create/Modify User Profile and Set Password</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/manage-user-profiles.html#GUID-BD3C5573-DF0E-4E44-919A-08A471462B87" target="_blank">Learn more...</a>
+																		</div>
+																		<br>
+																	</div>
+																	<div class="cb90w4">
+																		<p class="basic_text">
+																			Autonomous Database now supports the ability to create/alter user profiles and import existing user profiles from another environment with Oracle Data Pump Import.
+																		</p>
+																		<p class="basic_text">
+																			Cloud Admins can now manage the rules for password complexity on Autonomous Database. Administrators can can create a Password Verify Function (PVF) and associate the PVF with a profile to manage the rules for password complexity.
+																		</p>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+															</div>
+														</section>
+
+<!-- _Raw-HTML -->
+														<section class="cb90 cb90v0 cpad bgwhite" data-ocomid="cb90" data-trackas="cb90">
+															<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:2px !important; margin-left:50px !important;margin-right:50px !important;">&nbsp;</div>
+														</section>
+<!-- _Raw-HTML -->
+
+		
+		
+<!-- _Raw-HTML --><!-- CB90v0 -->
+														<section class="cb90 cb90v0 cpad bgwhite" data-ocomid="cb90" data-trackas="cb90">
+															<div class="cb90w1 cwidth">
+																<h2 style="text-align: left !important; color:#069 !important; font-weight: bold; font-size: 3.0rem;">June 2020</h2>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;">ADB now supports Customer Managed Oracle REST Data Services</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/ords-customer-managed.html#GUID-1094A25C-44C3-4912-8DB2-6413B7973D9B" target="_blank">Learn more...</a>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<p>
+																			When you use the default ORDS on Autonomous Database, you cannot modify any of the ORDS configuration options. For example, with the default configuration connections for ORDS are preconfigured to use the LOW database service. You can now use a customer managed environment if you want manual control of the configuration and management of Oracle REST Data Services.
+																		</p>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;">Performance Hub Now Has a Timezone Selector</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<p>
+																			A time zone control has been added to Performance Hub. This will allow users to view data using an alternate time zone to UTC. They will have the choice of viewing data using either UTC (default), the time zone of their browser client, or the time zone of the database.
+																		</p>
+																		<br>
+																		<br>
+																		<img moz-do-not-send="true" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/749047be6040d82eea048b744e07bda9/per_hub_tz_500.png" alt="Autonomous Database Performance Hub panel showing new timezone selector">
+																		<br>
+																		<div class="cb90cta"><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/autonomous-database-support-ocid.html#GUID-C2B866BD-379D-46AA-9277-DC78F974FAD2" target="_blank">Learn more...</a>
+																		</div>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;">SQL access to tenancy details for ADB</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<p>
+																			When you file a service request for Autonomous Database, you need to provide the tenancy details for your instance.  Tenancy details for the instance are available on the Oracle Cloud Infrastructure console. However, if you are connected to the database, you can now obtain these details by querying the <strong>CLOUD_IDENTITY</strong> column of the <strong>V$PDBS view</strong>. For example:
+																		</p>
+																		<p class="basic_text" style="font-family:courier !important; margin-left:40px;">
+																			SELECT cloud_identity<br>
+																			FROM v$pdbs;
+																		</p>
+																		<p>
+																			...will generate something similar to the following:
+																		</p>
+																		<p class="basic_text" style="font-family:courier !important; margin-left:40px;">
+																			{"DATABASE_NAME" : "DBxxxxxxxxxxxx",<br>
+																			"REGION" : "us-phoenix-1",  <br>
+																			"TENANT_OCID" : "OCID1.TENANCY.REGION1..ID1",<br>
+																			"DATABASE_OCID" :  "OCID1.AUTONOMOUSDATABASE.OC1.SEA.ID2",<br>
+																			"COMPARTMENT_OCID" : "ocid1.tenancy.region1..ID3"}<br>
+																		</p>
+																		<br>
+																		<br>
+																	</div>
+																</div>
+															</div>
+														</section>
+
+<!-- _Raw-HTML -->
+														<section class="cb90 cb90v0 cpad bgwhite" data-ocomid="cb90" data-trackas="cb90">
+															<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:2px !important; margin-left:50px !important;margin-right:50px !important;">&nbsp;</div>
+														</section>
+<!-- _Raw-HTML -->
+
+
+<!-- _Raw-HTML --><!-- CB90v0 -->
+														<section class="cb90 cb90v0 cpad bgwhite" data-ocomid="cb90" data-trackas="cb90">
+															<div class="cb90w1 cwidth">
+																<h2 style="text-align: left !important; color:#069 !important; font-weight: bold; font-size: 3.0rem;">May 2020</h2>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;">Workload metrics on performance Hub</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.cloud.oracle.com/en-us/iaas/Content/Database/Tasks/perfhub.htm#navperfhub" target="_blank">Learn more...</a>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<p>
+																			Performance Hub has been expanded to include a new tab, "Workload". This can be used to monitor the workload in the database and helps the user identify performance spikes and bottlenecks.
+																		</p>
+																		<p>
+																			There are 4 regions in this tab: CPU Statistics, Wait Time Statistics, Workload Profile, and Sessions. Each region contains a group of charts that indicate the characteristics of the workload and the distribution of the resources, as shown below.
+																		</p>
+																		<br>
+																		<img moz-do-not-send="true" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/4a8e4a66f3bb40e0acc33f54110273f8/perf_hub_workload_500.jpg" alt="Autonomous Database Performance Hub console showing new workload metrics">
+																		<br>
+																		<br>
+																	</div>
+																</div>
+																<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+																	<div class="cb90w3">
+																		<h3 style="text-align: left !important; font-size: 2.0rem;">Latency Metrics Now Available in Service Metrics</h3>
+																		<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+																		<div class="cb90-img">
+																			<div class="icn-img icn-email2">&nbsp;</div>
+																		</div>
+																		<div class="cb90cta"><a href="https://docs.cloud.oracle.com/iaas/Content/Events/Concepts/eventsoverview.htm" target="_blank">Learn more...</a>
+																		</div>
+																	</div>
+																	<div class="cb90w4">
+																		<p>
+																			The Database Service Metrics information help Cloud Admins measure useful quantitative data about their Autonomous Databases. This list of available metrics now includes two new latency metrics:
+																		</p>
+																		<div style="margin-left:25px">
+																			<p>
+																				1) Connection latency - Time taken (in milliseconds) to connect to an Autonomous Database that uses shared Exadata infrastructure in each region from a Compute service virtual machine in the same region.
+																			</p>
+																			<p>
+																				2) Query latency/response time - Time taken (in milliseconds) to display the results of a simple query on the user's screen.
+																			</p>
+																		</div>
+																		<p>
+																			<em>Note - the tests to measure connection latency and query latency are not run against any customer instances.</em>
+																		</p>
+																		<p>
+																			Within the Service Metrics console, it is possible to define and publish alarms against these new metrics.
+																		</p>
+																		<br>
+																		<img moz-do-not-send="true" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/4a8e4a66f3bb40e0acc33f54110273f8/perf_hub_workload_500.jpg" alt="Service Metrics OCI console showing new latency metrics">
+																		<br />
+																		<br />
+																	</div>
+																</div>
+															</div>
+														</section>
+
+
+<!-- _Raw-HTML -->
+														<section class="cb90 cb90v0 cpad bgwhite" data-ocomid="cb90" data-trackas="cb90">
+															<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:2px !important; margin-left:50px !important;margin-right:50px !important;">&nbsp;</div>
+														</section>
+<!-- _Raw-HTML -->
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="rc30w4 rc30pane rc30pane3 rc30pane-bleed rw-neutral-00bg o-bgimg rc30activepane bgimgw1" id="rc30p2" style="width: 528px; min-height: 780.09375px;">
+							<div style="background-image:url(/assets/images/bgimg02/bgimg02-bgse-resources-03.png)" class="bgimg bgimgw2 bgimg-rhalf bgimg-bottom bgimg-hsize bgimg-lightest"></div>
+							<div class="col-framework col2 inview">
+								<div class="col-w1">
+									<div class="col-item col-title">
+										<div class="col-item-w1 rc30w14"><h4>Autonomous Database on Dedicated Exadata Infrastructure</h4></div>
+									</div>
+									<div class="col-item-w1 rc30w10">
+										<div class="rc30w5">
+											<h5>End-to-end HR</h5>
+											<p>Oracle Human Resources (HR) Cloud is an all-in-one HR system designed to meet the unique requirements of managing a global workforce. Use Oracle HR Cloud to drive operational efficiencies across cultures and countries.
+											</p>
+											<h5>On-demand information</h5>
+											<p>Oracle Human Resources (HR) Cloud is an all-in-one HR system designed to meet the unique requirements of managing a global workforce. Use Oracle HR Cloud to drive operational efficiencies across cultures and countries.
+											</p>
+											<h5>Global and local coverage</h5>
+											<p>Oracle Human Resources (HR) Cloud is an all-in-one HR system designed to meet the unique requirements of managing a global workforce. Use Oracle HR Cloud to drive operational efficiencies across cultures and countries.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="rc30w4 rc30pane rc30pane3 rc30pane-bleed rw-neutral-00bg o-bgimg rc30activepane bgimgw1" id="rc30p3" style="width: 528px; min-height: 780.09375px;">
+							<div style="background-image:url(/assets/images/bgimg02/bgimg02-bgse-resources-03.png)" class="bgimg bgimgw2 bgimg-rhalf bgimg-bottom bgimg-hsize bgimg-lightest"></div>
+							<div class="col-framework col2 inview">
+								<div class="col-w1">
+									<div class="col-item col-title">
+										<div class="col-item-w1 rc30w14"><h4>Autonomous Database on Cloud@Customer</h4></div>
+									</div>
+									<div class="col-item-w1 rc30w10">
+										<div class="rc30w5">
+											<h5>End-to-end HR</h5>
+											<p>Oracle Human Resources (HR) Cloud is an all-in-one HR system designed to meet the unique requirements of managing a global workforce. Use Oracle HR Cloud to drive operational efficiencies across cultures and countries.
+											</p>
+											<h5>On-demand information</h5>
+											<p>Oracle Human Resources (HR) Cloud is an all-in-one HR system designed to meet the unique requirements of managing a global workforce. Use Oracle HR Cloud to drive operational efficiencies across cultures and countries.
+											</p>
+											<h5>Global and local coverage</h5>
+											<p>Oracle Human Resources (HR) Cloud is an all-in-one HR system designed to meet the unique requirements of managing a global workforce. Use Oracle HR Cloud to drive operational efficiencies across cultures and countries.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+<!-- /RC30v1 -->
+		</div>
+	</body>
+</html>
