@@ -341,7 +341,7 @@
   <![endif]-->
 	</head>
 	<body id="body" style="font-family: 'Oracle Sans';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;">
-		<table align="center" cellpadding="0" cellspacing="0" class="devicewidth" id="mainTable" width="614" style="border-left: 5px; border-right: 5px; border-top: 5px; border-bottom: 5px; border-style:solid; border-color:#6fc6df; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+		<table align="center" cellpadding="0" cellspacing="0" class="devicewidth" id="mainTable" width="614" style="border-left: 5px; border-right: 5px; border-top: 5px; border-bottom: 5px; border-style:solid; border-color:#E4CE96; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 			<tbody>
 				<tr>
 					<td align="left" valign="top">
@@ -389,7 +389,7 @@
       														<table width="50%">
 																<tr>
 																	<td>
-																		<img src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/74df6b7034ca25ab8e78b01da27d30ec/adw_announcement_w614_h307.jpg" style="text-align: right; width: 100%; border: 0; text-decoration:none; vertical-align: baseline;">
+																		<img src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/f26d2356ba6b153eab4e9176094bc0c1/direction_1.png" style="text-align: right; width: 100%; border: 0; text-decoration:none; vertical-align: baseline;">
 																	</td>
 																</tr>
 															</table>
@@ -397,9 +397,9 @@
    													<![endif]-->
 														<div class="herobanner">
 															<picture>
-																<source media="(min-width: 621px)" srcset="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/0041b21b3835d1365d2176b4452117f8/ajd_announcement_w614_h307.png">
-																<source media="(max-width: 620px)" srcset="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/631fc58e4123a9079581bb64b3912a55/ajd_announcement_w614_h30.jpg">
-																<img alt="" border="0" class="heroimage" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/631fc58e4123a9079581bb64b3912a55/ajd_announcement_w614_h30.jpg" style="display:block;max-width: 100%; height:auto;" width="614">
+																<source media="(min-width: 621px)" srcset="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/f26d2356ba6b153eab4e9176094bc0c1/direction_1.png">
+																<source media="(max-width: 620px)" srcset="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/cbee2fe2c8632df2ee1eb50b586d150d/direction_1_w614_h27.png">
+																<img alt="" border="0" class="heroimage" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/cbee2fe2c8632df2ee1eb50b586d150d/direction_1_w614_h27.png" style="display:block;max-width: 100%; height:auto;" width="614">
 															</picture>
 														</div>
 													<!--[if mso]>
@@ -438,8 +438,8 @@
 											<!-- Intro Text -->
 												<tr>
 													<td align="left" style="padding-top: 15px;">
-														<span style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:36px; color:#ffffff; font-weight: normal; text-decoration:none;">
-															Welcome to Oracle Cloud!
+														<span style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:26px; color:#ffffff; font-weight: normal; text-decoration:none;">
+															WARNING - Storage Quota Exceeded!
 														</span>
 														<br>
 														<br>
@@ -463,149 +463,16 @@
 																			Hello
 																			<br>
 																			<br>
-																			Congratulations, a new Autonomous JSON Database was just provisioned in your tenancy <b>{{oci_tenancy}}</b>.
-																			<br>
-																			<br> 
-																			It is called <b> {{database_name_string}} </b> and was successfully provisioned in the <b>{{service_region}}</b> data center with 
-																			<b> {{cpu_count_string}} </b> 
-																			and 
-																			<b> {{storage_string}} </b> 
-																			of usable database storage.
+																			Your Autonomous JSON Database, <b>{{database_name}}</b> in the <b>{{service_region}}</b> data center, in your tenancy <b>{{oci_tenancy}}</b>, has exceeded the maximum storage limit of 20GB of data stored outside of SODA collections.
 																			<br>
 																			<br>
+																			This limit does not apply to data stored in SODA collections, or objects associated with SODA collections, such as indexes and materialized views.
+																			<br>
+																			<br>
+																			To continue using your Autonomous JSON Database, you must either reduce your usage of non-SODA-related data or upgrade to Autonomous Transaction Processing.
+																			<br><br>
+																			For more information about data limits in Autonomous JSON Database, see <a href="https://docs.oracle.com/en/cloud/paas/autonomous-json-database/ajdug/promote-autonomous-transaction-processing.html" style="text-decoration:underline; font-style:italic;">Promote to Autonomous Transaction Processing</a>. If you believe you received this message in error, please contact the <a href="https://www.oracle.com/support/cloud.html" style="text-decoration:underline;">Oracle Cloud Support</a> team.
 																		</p>
-																		<br>
-																		<p style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color: #000000; font-weight: normal;">
-																			<b style="font-size: 16px;">Let's get you started...</b><br>
-																		</p>
-																		<br>
-																	</td>
-																</tr>
-															</tbody>
-														</table>
-														<table border="0" cellpadding="10" cellspacing="0" width="100%">
-															<tbody>
-																<tr>
-																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; vertical-align: text-top; text-align: left;">
-																		<div>
-<!--[if mso]>
- <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:55px;v-text-anchor:middle;width:55px;" arcsize="100%" strokecolor="#800080" fillcolor="#800080">
-                    <w:anchorlock/>
-    <v:textbox style="mso-fit-shape-to-text:true" height="55" width="55">
-        <center style="color:#ffffff;font-family:sans-serif;font-size:34px;font-weight:bold;">3</center>
-    </v:textbox>
-  </v:roundrect>
-  <![endif]-->
-																			<![if !mso]>
-																			<div class="circle_purple" style="border-radius: 50%; width: 34px; height: 34px; padding: 10px; background: #800080; border: 0px solid #800080; color: #FFFFFF; text-align: center; font: 32px Arial, sans-serif; font-weight: bold;">
-																				1
-																			</div>
-																			<![endif]>
-																		</div>
-																	</td>
-																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left; vertical-align:top !important;">
-																		<p style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color: #000000; font-weight: normal;">
-																			Checkout our online guide to <b>Getting Started</b> with Autonomous Autonomous JSON Database.
-																		</p>
-																		<table border="0" cellpadding="0" cellspacing="0" class="left" style="mso-hide: all !important;" width="auto">
-																			<tbody>
-																				<tr>
-																					<td style="padding:10px 16px 10px 16px; -webkit-border-radius: 18px; -moz-border-radius: 18px; border-radius: 18px; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; color:#ffffff !important; background-color: #800080">
-																						<a class="tbfooter" href="https://docs.oracle.com/en/cloud/paas/autonomous-json-database/ajdug/get-started1.html" style="text-decoration:none; word-break:break-all; white-space: nowrap; color: #FFFFFF! important;" target="_self">
-																							<span style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#ffffff; font-weight: bold;">
-																								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Goto Getting Started Guide&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																							</span>
-																						</a>
-																					</td>
-																				</tr>
-																			</tbody>
-																		</table>
-																	</td>
-																</tr>
-															</tbody>
-														</table>
-														<br>
-														<br>
-														<table border="0" cellpadding="10" cellspacing="0" width="100%">
-															<tbody>
-																<tr>
-																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; vertical-align: text-top; text-align: left;">
-																		<div>
-<!--[if mso]>
- <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:55px;v-text-anchor:middle;width:55px;" arcsize="100%" strokecolor="#008000" fillcolor="#008000">
-                    <w:anchorlock/>
-    <v:textbox style="mso-fit-shape-to-text:true" height="55" width="55">
-        <center style="color:#ffffff;font-family:sans-serif;font-size:34px;font-weight:bold;">4</center>
-    </v:textbox>
-  </v:roundrect>
-  <![endif]-->
-																			<![if !mso]>
-																			<div class="circle_green" style="border-radius: 50%; width: 34px; height: 34px; padding: 10px; background: #008000; border: 0px solid #008000; color: #FFFFFF; text-align: center; font: 32px Arial, sans-serif; font-weight: bold;">
-																				2
-																			</div>
-																			<![endif]>
-																		</div>
-																	</td>
-																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left; vertical-align:top !important;">
-																		<p style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color: #000000; font-weight: normal;">
-																			Our range of reference architecture patterns in the <b>Oracle Solution Center</b> will help you design and deploy a flexible, modern framework for running applications in the cloud.
-																		</p>
-																		<table border="0" cellpadding="0" cellspacing="0" class="left" style="mso-hide: all !important;" width="auto">
-																			<tbody>
-																				<tr>
-																					<td style="padding:10px 16px 10px 16px; -webkit-border-radius: 18px; -moz-border-radius: 18px; border-radius: 18px; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; color:#ffffff !important; background-color:#008000">
-																						<a href="https://docs.oracle.com/en/solutions/index.html?product=Autonomous%20Transaction%20Processing&page=0&is=true&sort=0" style="text-decoration:none; word-break:break-all; white-space: nowrap; color: #FFFFFF! important;" target="_self">
-																							<span style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#ffffff; font-weight: bold;">
-																								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Goto Solution Center&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																							</span>
-																						</a>
-																					</td>
-																				</tr>
-																			</tbody>
-																		</table>
-																	</td>
-																</tr>
-															</tbody>
-														</table>
-														<br>
-														<br>
-														<table border="0" cellpadding="10" cellspacing="0" width="100%">
-															<tbody>
-																<tr>
-																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; vertical-align: text-top; text-align: left;">
-																		<div style="width:50px; height:50px;">
-<!--[if mso]>
- <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:55px;v-text-anchor:middle;width:55px;" arcsize="100%" strokecolor="#008080" fillcolor="#008080">
-                    <w:anchorlock/>
-    <v:textbox style="mso-fit-shape-to-text:true" height="55" width="55">
-        <center style="color:#ffffff;font-family:sans-serif;font-size:34px;font-weight:bold;">5</center>
-    </v:textbox>
-  </v:roundrect>
-  <![endif]-->
-																			<![if !mso]>
-																			<div class="circle_teal" style="border-radius: 50%; width: 34px; height: 34px; padding: 10px; background: teal; border: 0px solid teal; color: #FFFFFF; text-align: center; font: 32px Arial, sans-serif; font-weight: bold;">
-																				3
-																			</div>
-																			<![endif]>
-																		</div>
-																	</td>
-																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left; vertical-align:top !important;">
-																		<p style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color: #000000; font-weight: normal;">
-																			<b>Got a question?</b> Visit our online forum to post a question and collaborate with experts in the area of Autonomous JSON Database.
-																		</p>
-																		<table border="0" cellpadding="0" cellspacing="0" class="left" style="mso-hide: all !important;" width="auto">
-																			<tbody>
-																				<tr>
-																					<td style="padding:10px 16px 10px 16px; -webkit-border-radius: 18px; -moz-border-radius: 18px; border-radius: 18px; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; color:#ffffff !important; background-color:#008080">
-																						<a class="tbfooter" href="https://cloudcustomerconnect.oracle.com/resources/ae46f0cd09/summary" style="text-decoration:none; word-break:break-all; white-space: nowrap; color: #FFFFFF! important;" target="_self">
-																							<span style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#ffffff; font-weight: bold;">
-																								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Goto Q & A  Forum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																							</span>
-																						</a>
-																					</td>
-																				</tr>
-																			</tbody>
-																		</table>
 																	</td>
 																</tr>
 															</tbody>
@@ -623,11 +490,8 @@
 																<tr>
 																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left;">
 																		<p style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color: #000000; font-weight: normal;">
-																			<br>
-																			Put your new Autonomous JSON Database to work!
-																			<br><br>
 																			Best regards,<br><br>
-																			 Autonomous JSON Database Product Management Team
+																			Autonomous JSON Database Product Management Team
 																		</p>
 																	</td>
 																</tr>
@@ -640,7 +504,7 @@
 									</td>
 								</tr>
 								<tr>
-									<td align="left" valign="top"  style="padding:0; background-color:#312D2A; border-left: 0px; border-right: 0px; border-top: 5px; border-bottom: 0px; border-style:solid; border-color:#6fc6df">
+									<td align="left" valign="top"  style="padding:0; background-color:#312D2A; border-left: 0px; border-right: 0px; border-top: 5px; border-bottom: 0px; border-style:solid; border-color:#E4CE96">
 										<table border="0" cellpadding="0" cellspacing="0" width="100%">
 											<tbody>
 												<tr>
@@ -686,6 +550,6 @@
 		<br>
 		<br>
 		<br>
-		<br>						
+		<br>
 	</body>
 </html>
