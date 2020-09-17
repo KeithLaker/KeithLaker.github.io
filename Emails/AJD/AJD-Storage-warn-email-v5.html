@@ -438,8 +438,8 @@
 											<!-- Intro Text -->
 												<tr>
 													<td align="left" style="padding-top: 15px;">
-														<span style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:26px; color:#ffffff; font-weight: normal; text-decoration:none;">
-															WARNING - Storage Quota Exceeded!
+														<span style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:24px; color:#ffffff; font-weight: normal; text-decoration:none;">
+															<b>WARNING</b> - Your Storage Quota Is 85% Full!
 														</span>
 														<br>
 														<br>
@@ -463,13 +463,13 @@
 																			Hello
 																			<br>
 																			<br>
-																			Your Autonomous JSON Database, <b>{{database_name}}</b> in the <b>{{service_region}}</b> data center, in your tenancy <b>{{oci_tenancy}}</b>, has exceeded the maximum storage limit of 20GB of data stored outside of SODA collections.
+																			Your Autonomous JSON Database, <b>{{database_name}}</b> in the <b>{{service_region}}</b> data center, in your tenancy <b>{{oci_tenancy}}</b>, has consumed 85% of its maximum storage limit of 20GB for data stored outside of SODA collections.
 																			<br>
 																			<br>
 																			This limit does not apply to data stored in SODA collections, or objects associated with SODA collections, such as indexes and materialized views.
 																			<br>
 																			<br>
-																			To continue using your Autonomous JSON Database, you must either reduce your usage of non-SODA-related data or upgrade to Autonomous Transaction Processing.
+																			You may wish to consider upgrading your Autonomous JSON Database to Autonomous Transaction Processing which offers unlimited storage or you will shortly have to reduce your usage of non-SODA-related data to remain within the 20GB limit.
 																			<br><br>
 																			For more information about data limits in Autonomous JSON Database, see <a href="https://docs.oracle.com/en/cloud/paas/autonomous-json-database/ajdug/promote-autonomous-transaction-processing.html" style="text-decoration:underline; font-style:italic;">Promote to Autonomous Transaction Processing</a>. If you believe you received this message in error, please contact the <a href="https://www.oracle.com/support/cloud.html" style="text-decoration:underline;">Oracle Cloud Support</a> team.
 																		</p>
