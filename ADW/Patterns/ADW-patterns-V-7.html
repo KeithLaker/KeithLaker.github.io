@@ -145,6 +145,102 @@
     -moz-transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+a[href="place-holder.html"] { 
+   pointer-events: none; 
+}
+
+.video_header {
+    color: #3a6f86 !Important;
+	text-align: center;
+}
+
+.close {
+	background: #3a6f86 !Important;
+	color: white;
+	line-height: 25px;
+	position: absolute;
+	right: 50%;
+	left:50%;
+	text-align: center;
+	top: 0px;
+	width: 200px;
+	height:75px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+	align:right;
+}
+
+.modalPopWindow:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalPopWindow > div {
+    position: relative;
+    height: 85%;
+   	padding-bottom: 75%;
+    overflow: hidden;
+    position: relative;
+	margin: 5% auto;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+	text-align:center !important;
+}
+
+
+.modalPopWindow {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0px;
+	right: 10px;
+	bottom: 10px;
+	left: 10px;
+	background: rgba(0,0,0,0.6);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+
+.modalPopWindow iframe {
+    top: 175px;
+    left: 20%;
+	margin-bottom:50px;
+    right: 20%;
+    align:center;
+    width: 60%;
+    height: 30%;
+    position: absolute;
+}
+
+.embedded-video-16-9 {
+  width:  80%;
+  height: 70%;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+@media (min-width: 893px) {
+  .embedded-video-16-9 {
+    width: 80%;
+    height: 70%;
+    margin-left: 1vw;
+    margin-right: 1vw
+  }
+}
 		</style>
 		<div class="f11w1">
 			
@@ -282,16 +378,16 @@
 												<div class="col-item-w1">
 													<div>
 														<div class="icn-img icn-extensible-architecture icn-circle bgwhite fill-darkslate">&nbsp;</div>
-														<div class="cb119w2 txtwhite"><strong><a title="Goto information for crearting cubes and dimensions over your schema" href="" style="text-decoration:none; color:white;">CUBES</a> </strong><br><br>
+														<div class="cb119w2 txtwhite"><strong><a title="Goto information for crearting cubes and dimensions over your schema" href=""#Cubes" style="text-decoration:none; color:white;">CUBES</a> </strong><br><br>
 															<div>
-																<a title="Goto information for crearting cubes and dimensions over your schema" href="" style="text-decoration:none; color:white;">
+																<a title="Goto information for crearting cubes and dimensions over your schema" href="#Cubes" style="text-decoration:none; color:white;">
 																	Add Multidimensional Model Over Your Schema With Analytical
 																	Views<br><br>
 																</a>
 															</div>
 															<br>
 															<br>
-															<a href="" target="_blank">
+															<a href="#Cubes">
 																<button class="cb51-btn"> + </button>
 															</a>
 														</div>
@@ -302,15 +398,15 @@
 												<div class="col-item-w1">
 													<div>
 														<div class="icn-img icn-tech-ai icn-circle bgwhite fill-blue">&nbsp;</div>
-														<div class="cb119w2 txtwhite"><strong><a title="Goto information about machine learning" href="" style="text-decoration:none; color:white;">DATA SCIENCE</a> </strong><br><br>
+														<div class="cb119w2 txtwhite"><strong><a title="Goto information about machine learning" href="#oml" style="text-decoration:none; color:white;">DATA SCIENCE</a> </strong><br><br>
 															<div>
-																<a title="Goto information about machine learning" href="" style="text-decoration:none; color:white;" target="_blank">
+																<a title="Goto information about machine learning" href="#oml" style="text-decoration:none; color:white;" target="_blank">
 																	Discover New Insights By Building Machine Learning Models
 																</a>
 															</div>
 															<br>
 															<br>
-															<a href="" target="_blank">
+															<a href="#oml">
 																<button class="cb51-btn"> + </button>
 															</a>
 														</div>
@@ -381,7 +477,7 @@
 											<div class="col-item bgdarkorange">
 												<div class="col-item-w1">
 													<div>
-														<div class="icn-img icn-database-administrator-f icn-circle bgwhite fill-darkorange">&nbsp;</div>
+														<div class="icn-img icn-vpn icn-circle bgwhite fill-darkorange">&nbsp;</div>
 														<div class="cb119w2 txtwhite"><strong>
 																<a title="Goto information for Data Safe" href="" style="text-decoration:none; color:white;">SECURE</a><br><br>
 															</strong>
@@ -425,7 +521,7 @@
 											<div class="col-item bggrey">
 												<div class="col-item-w1">
 													<div>
-														<div class="icn-img icn-cmpn-high-availability icn-circle bgwhite fill-grey">&nbsp;</div>
+														<div class="icn-img icn-platform-extensibility icn-circle bgwhite fill-grey">&nbsp;</div>
 														<div class="cb119w2 txtwhite"><strong>
 																<a title="Goto information about building a data lake" href="" style="text-decoration:none; color:white;">DATA LAKE</a><br><br>
 															</strong>
@@ -449,14 +545,6 @@
 								</div>
 							</section>
 <!-- /CB119v0 -->
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
 						</div>
 					</div>
 					<div class="cb129w2">
@@ -588,8 +676,180 @@
 					</div>
 				</div>
 			</section>
-<!-- /CB27v5 -->
 
+<!-- /CB27v5 -->
+			<div id="Cubes" class="modalPopWindow">
+				<div class="embedded-video-16-9">
+					<table width="100%">
+						<tr>
+							<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
+								<p class="video_header" style="margin-top:10px;">
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Departmental Data Warehouse Pattern</span>
+									<br>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Extending Your Data Warehouse With Analytic Views</span>
+								</p>
+							</td>
+							<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
+								<a href="#close" title="Close" id="closeCubes" style="background-color:#3a6f86; color:white; font=weight:bold; font-family:arial; font-size:16pt; text-decoration:none;">
+									Close
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center">
+								<table width="100%">
+									<tr>
+										<td width="30%" style="background-color: rgb(13, 58, 32, .6); color:white; vertical-align:top;">
+											<div style="margin-left:50px; margin-right:50px; margin-top:20px; margin-bottom: 20px; color:white;">
+												<h3 style="color:white;">What is an Analytic View?</h3>
+												<p >Analytic views organize data using a dimensional model. They allow you to easily add aggregations and calculations to data sets and to present data in views that can be queried with relatively simple SQL. Analytic Views provide the following features:
+												</p>
+												<ul style="list-style-type: circle !important; color:white;  padding: 5px; margin-left: 35px;">
+													<li style="list-style-type: circle !important;">Organize data using a rich business model that has dimensional and hierarchical concepts</li>
+													<li style="list-style-type: circle !important;">Include system-generated columns with hierarchical data</li>
+													<li style="list-style-type: circle !important;">Automatically aggregate data</li>
+													<li style="list-style-type: circle !important;">Include embedded measure calculations that are easily defined using syntax based on the business model
+													</li>
+													<li style="list-style-type: circle !important;">Include presentation metadata</li>
+												</ul>
+												<br>
+												<br>
+											</div>
+										</td>
+										<td width="30%" style="background-color: rgb(30, 38, 69, .8); color:white; vertical-align:top;">
+											<div style="margin-left:50px; margin-right:50px; margin-top:20px; margin-bottom: 20px; color:white;">
+												<h3 style="color:white;">Learn More</h3>
+												<br>
+												<p>
+													A series of scripted tutorials available on the LiveSQL service:
+												</p>
+												<p>
+													Getting Started - Creating Analytic Views
+													<a href="https://livesql.oracle.com/apex/livesql/file/tutorial_EDVE861IID1QUD1NIUPU5ALEW.html" target="_blank" style="color:white; font-weight:bold;">
+														click here
+													</a>
+												</p>
+												<p>
+													Getting Started - Querying Analytic Views
+													<a href="https://livesql.oracle.com/apex/livesql/file/tutorial_EDVE861H8YZ72TOBQQ4KS6EH0.html" target="_blank" style="color:white; font-weight:bold;">
+														click here
+													</a>
+												</p>
+												<p>
+													Creating Time Series Calculations in Analytic Views
+													<a href="https://livesql.oracle.com/apex/livesql/file/tutorial_EDVE861IAM5PW9HEEWEQPIRB8.html" target="_blank" style="color:white; font-weight:bold;">
+														click here
+													</a>
+												</p>
+												<p>
+													Creating Hierarchical Ratio Calculations (<em>Share Of</em>) in Analytic Views
+													<a href="https://livesql.oracle.com/apex/livesql/file/tutorial_EDVE861ILFE0DQE8QQ8CE0B04.html" target="_blank" style="color:white; font-weight:bold;">
+														click here
+													</a>
+												</p>
+											</div>
+										</td>
+										<td width="30%" style="background-color: rgb(50, 51, 56, .6); color:white; vertical-align:top;">
+											<div style="margin-left:50px; margin-right:50px; margin-top:20px; margin-bottom: 20px; color:white;">
+												<h3 style="color:white;">Videos</h3>
+												<p>
+													Presenter: William Endress, Product Manager, Oracle<br>
+												</p>
+												<div style="text-align:center;">
+													<a href="https://www.youtube.com/watch?v=tM6-SbuLK2I" target="_blank">
+														<img width="200" src="https://img.youtube.com/vi/tM6-SbuLK2I/0.jpg">
+													</a>
+												</div>
+												<p>
+													In this video, learn how analytic views embed joins and aggregation rules, measure calculations and navigation paths into a single view that is queried with very simple SQL.
+													<br>
+													<br>
+													This session will be of particular interest to data warehouse architects and developers and business intelligence application developers.
+												</p>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+<!-- /CB27v5 -->
+			<div id="oml" class="modalPopWindow">
+				<div class="embedded-video-16-9">
+					<table width="100%">
+						<tr>
+							<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
+								<p class="video_header" style="margin-top:10px;">
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Departmental Data Warehouse Pattern</span>
+									<br>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Extending Your Data Warehouse With Machine Learning</span>
+								</p>
+							</td>
+							<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
+								<a href="#close" title="Close" id="closeOml" style="background-color:#3a6f86; color:white; font=weight:bold; font-family:arial; font-size:16pt; text-decoration:none;">
+									Close
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center">
+								<table width="100%">
+									<tr>
+										<td width="30%" style="background-color: rgb(13, 58, 32, .6); color:white; vertical-align:top;">
+											<div style="margin-left:50px; margin-right:50px; margin-top:20px; margin-bottom: 20px; color:white;">
+												<h3 style="color:white;">What is Machine Learning?</h3>
+												<p >Machine Learning is a technique that discovers previously unknown relationships in data. It is the practice of automatically searching large stores of data to discover patterns and trends that go beyond simple analysis. Data mining uses sophisticated mathematical algorithms to segment the data and to predict the likelihood of future events based on past events.
+											</p>
+											<p>Oracle Machine Learning offers a comprehensive set of in-database algorithms for performing a variety of mining tasks, such as classification, regression, anomaly detection, feature extraction, clustering, and market basket analysis.
+											</p>
+												<br>
+												<br>
+											</div>
+										</td>
+										<td width="30%" style="background-color: rgb(30, 38, 69, .8); color:white; vertical-align:top;">
+											<div style="margin-left:50px; margin-right:50px; margin-top:20px; margin-bottom: 20px; color:white;">
+												<h3 style="color:white;">Learn More</h3>
+												<br>
+												<p>
+													Introduction to Machine Learning Algorithms Workshop
+													<a href="https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?p180_id=586" target="_blank" style="color:white; font-weight:bold;">
+														click here
+													</a>
+												</p>
+												<p>
+													Machine Learning on Autonomous Database Workshop
+													<a href="https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?p180_id=560" target="_blank" style="color:white; font-weight:bold;">
+														click here
+													</a>
+												</p>
+											</div>
+										</td>
+										<td width="30%" style="background-color: rgb(50, 51, 56, .6); color:white; vertical-align:top;">
+											<div style="margin-left:50px; margin-right:50px; margin-top:20px; margin-bottom: 20px; color:white;">
+												<h3 style="color:white;">Videos</h3>
+												<p>
+													Presenter: Charlie Berger, Product Manager, Oracle<br>
+												</p>
+												<div style="text-align:center;">
+													<a href="https://www.youtube.com/watch?v=UDwlTpbhPX0" target="_blank">
+														<img width="200" src="https://img.youtube.com/vi/UDwlTpbhPX0/0.jpg">
+													</a>
+												</div>
+												<p>
+													In this video, learn the fast, quick basics of getting started with Oracle Machine Learning and Oracle Autonomous Database. Login, set up users, explore the example notebooks and start your own Oracle Machine Learning notebook.
+												</p>												
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
 
 
 <!-- CB129v0 -->
@@ -605,7 +865,7 @@
 				<div class="cb129w1 cwidth">
 					<div class="cb129w2">
 						<div class="cb129w3">
-							<h4 class="icn-cloud-database">Migrating to Autonomous Data Warehouse</h4>
+							<h4 class="icn-cloud-database">Learn More about Adding A Multidimensional Model</h4>
 						</div>
 						<div class="cb129w4 cb129close">
 							<div class="col-framework col2 col-threetwofifth col-gutters col-noanimation">
@@ -762,7 +1022,7 @@
 
 <!-- /CN25v0 -->
 					<div data-categories="resources">
-						<div class="col-item" href="resources">
+						<div class="col-item">
 							<div class="col-item-w1">
 								<h5><a name="resources">Key Resources For Data Warehousing</a></h5>
 								<ul class="cta-list">
@@ -781,7 +1041,7 @@
 						</div>
 					</div>
 					<div data-categories="blogs">
-						<div class="col-item" href="blogs">
+						<div class="col-item">
 							<div class="col-item-w1">
 								<h5><a name="blogs">Key Blogs For Data Warehousing</a></h5>
 								<ul class="cta-list">
@@ -799,7 +1059,7 @@
 						</div>
 					</div>
 					<div data-categories="documentation">
-						<div class="col-item" href="documentation">
+						<div class="col-item">
 							<div class="col-item-w1">
 								<h5><a name="documentation">19c Documentation For Data Warehousing</a></h5>
 								<ul class="cta-list">
@@ -835,7 +1095,7 @@
 									</li>
 									<li><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/cloud_administrator.html">Get Started as a Cloud Admin</a>
 									</li>
-									<li><a hre="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/data_scientist.html">Get Started as a Data Scientist</a>
+									<li><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/data_scientist.html">Get Started as a Data Scientist</a>
 									</li>
 									<li><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/data_warehouse_dev.html">Get Started as a DW Developer</a>
 									</li>
@@ -844,7 +1104,7 @@
 						</div>
 					</div>
 					<div data-categories="customers">
-						<div class="col-item" href="customers">
+						<div class="col-item">
 							<div class="col-item-w1">
 								<h5><a name="customers">New Videos For Data Warehouse Customers</a></h5>
 								<p>New Customer Videos are available to support your sales effort for Oracle Autonomous Data Warehouse Cloud. Watch the videos and use them to initiate customer conversations on Autonomous Data Warehouse Cloud.
