@@ -212,19 +212,25 @@ a[href="place-holder.html"] {
 	-moz-transition: opacity 400ms ease-in;
 	transition: opacity 400ms ease-in;
 	pointer-events: none;
+	width:  100%;
+    height: 100%;
+
 }
 
 
 .modalPopWindow iframe {
-    top: 175px;
-    left: 20%;
+    top: 125px;
+    left: 1%;
 	margin-bottom:50px;
-    right: 20%;
+    right: 1%;
     align:center;
-    width: 60%;
-    height: 30%;
+    width: 99%;
+    height: 500px;
     position: absolute;
+    overflow: scroll;
+    border:0px;
 }
+
 
 .embedded-video-16-9 {
   width:  80%;
@@ -328,6 +334,11 @@ a[href="place-holder.html"] {
 											</a>
 										</div>
 									</div>
+								</div>
+							</div>
+							<div class="col-framework col1 col-threetwofifth col-gutters col-noanimation">	
+								<div class="col-w1">
+									<div class="col-item">
 									<br>
 									<br><br><br>
 									<div style="margin-left:20px;">
@@ -378,7 +389,7 @@ a[href="place-holder.html"] {
 												<div class="col-item-w1">
 													<div>
 														<div class="icn-img icn-extensible-architecture icn-circle bgwhite fill-darkslate">&nbsp;</div>
-														<div class="cb119w2 txtwhite"><strong><a title="Goto information for crearting cubes and dimensions over your schema" href=""#Cubes" style="text-decoration:none; color:white;">CUBES</a> </strong><br><br>
+														<div class="cb119w2 txtwhite"><strong><a title="Goto information for crearting cubes and dimensions over your schema" href="#Cubes" style="text-decoration:none; color:white;">CUBES</a> </strong><br><br>
 															<div>
 																<a title="Goto information for crearting cubes and dimensions over your schema" href="#Cubes" style="text-decoration:none; color:white;">
 																	Add Multidimensional Model Over Your Schema With Analytical
@@ -697,79 +708,9 @@ a[href="place-holder.html"] {
 						</tr>
 						<tr>
 							<td colspan="2" align="center">
-								<table width="100%">
-									<tr>
-										<td width="30%" style="background-color: rgb(13, 58, 32, .6); color:white; vertical-align:top;">
-											<div style="margin-left:50px; margin-right:50px; margin-top:20px; margin-bottom: 20px; color:white;">
-												<h3 style="color:white;">What is an Analytic View?</h3>
-												<p >Analytic views organize data using a dimensional model. They allow you to easily add aggregations and calculations to data sets and to present data in views that can be queried with relatively simple SQL. Analytic Views provide the following features:
-												</p>
-												<ul style="list-style-type: circle !important; color:white;  padding: 5px; margin-left: 35px;">
-													<li style="list-style-type: circle !important;">Organize data using a rich business model that has dimensional and hierarchical concepts</li>
-													<li style="list-style-type: circle !important;">Include system-generated columns with hierarchical data</li>
-													<li style="list-style-type: circle !important;">Automatically aggregate data</li>
-													<li style="list-style-type: circle !important;">Include embedded measure calculations that are easily defined using syntax based on the business model
-													</li>
-													<li style="list-style-type: circle !important;">Include presentation metadata</li>
-												</ul>
-												<br>
-												<br>
-											</div>
-										</td>
-										<td width="30%" style="background-color: rgb(30, 38, 69, .8); color:white; vertical-align:top;">
-											<div style="margin-left:50px; margin-right:50px; margin-top:20px; margin-bottom: 20px; color:white;">
-												<h3 style="color:white;">Learn More</h3>
-												<br>
-												<p>
-													A series of scripted tutorials available on the LiveSQL service:
-												</p>
-												<p>
-													Getting Started - Creating Analytic Views
-													<a href="https://livesql.oracle.com/apex/livesql/file/tutorial_EDVE861IID1QUD1NIUPU5ALEW.html" target="_blank" style="color:white; font-weight:bold;">
-														click here
-													</a>
-												</p>
-												<p>
-													Getting Started - Querying Analytic Views
-													<a href="https://livesql.oracle.com/apex/livesql/file/tutorial_EDVE861H8YZ72TOBQQ4KS6EH0.html" target="_blank" style="color:white; font-weight:bold;">
-														click here
-													</a>
-												</p>
-												<p>
-													Creating Time Series Calculations in Analytic Views
-													<a href="https://livesql.oracle.com/apex/livesql/file/tutorial_EDVE861IAM5PW9HEEWEQPIRB8.html" target="_blank" style="color:white; font-weight:bold;">
-														click here
-													</a>
-												</p>
-												<p>
-													Creating Hierarchical Ratio Calculations (<em>Share Of</em>) in Analytic Views
-													<a href="https://livesql.oracle.com/apex/livesql/file/tutorial_EDVE861ILFE0DQE8QQ8CE0B04.html" target="_blank" style="color:white; font-weight:bold;">
-														click here
-													</a>
-												</p>
-											</div>
-										</td>
-										<td width="30%" style="background-color: rgb(50, 51, 56, .6); color:white; vertical-align:top;">
-											<div style="margin-left:50px; margin-right:50px; margin-top:20px; margin-bottom: 20px; color:white;">
-												<h3 style="color:white;">Videos</h3>
-												<p>
-													Presenter: William Endress, Product Manager, Oracle<br>
-												</p>
-												<div style="text-align:center;">
-													<a href="https://www.youtube.com/watch?v=tM6-SbuLK2I" target="_blank">
-														<img width="200" src="https://img.youtube.com/vi/tM6-SbuLK2I/0.jpg">
-													</a>
-												</div>
-												<p>
-													In this video, learn how analytic views embed joins and aggregation rules, measure calculations and navigation paths into a single view that is queried with very simple SQL.
-													<br>
-													<br>
-													This session will be of particular interest to data warehouse architects and developers and business intelligence application developers.
-												</p>
-											</div>
-										</td>
-									</tr>
-								</table>
+								<br>
+								<iframe src="ADW-Cubes.html"></iframe>
+								<br>
 							</td>
 						</tr>
 					</table>
@@ -802,9 +743,9 @@ a[href="place-holder.html"] {
 											<div style="margin-left:50px; margin-right:50px; margin-top:20px; margin-bottom: 20px; color:white;">
 												<h3 style="color:white;">What is Machine Learning?</h3>
 												<p >Machine Learning is a technique that discovers previously unknown relationships in data. It is the practice of automatically searching large stores of data to discover patterns and trends that go beyond simple analysis. Data mining uses sophisticated mathematical algorithms to segment the data and to predict the likelihood of future events based on past events.
-											</p>
-											<p>Oracle Machine Learning offers a comprehensive set of in-database algorithms for performing a variety of mining tasks, such as classification, regression, anomaly detection, feature extraction, clustering, and market basket analysis.
-											</p>
+												</p>
+												<p>Oracle Machine Learning offers a comprehensive set of in-database algorithms for performing a variety of mining tasks, such as classification, regression, anomaly detection, feature extraction, clustering, and market basket analysis.
+												</p>
 												<br>
 												<br>
 											</div>
@@ -840,7 +781,7 @@ a[href="place-holder.html"] {
 												</div>
 												<p>
 													In this video, learn the fast, quick basics of getting started with Oracle Machine Learning and Oracle Autonomous Database. Login, set up users, explore the example notebooks and start your own Oracle Machine Learning notebook.
-												</p>												
+												</p>
 											</div>
 										</td>
 									</tr>
