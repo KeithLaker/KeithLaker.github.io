@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+	<head>
+		<title>Autonomous Data Warehouse Use Case Patterns</title>
+		<meta name="Title" content="Oracle Database for Data Warehousing and Big Data">
+		<meta name="Description" content="Home page for features and options of Oracle Database which support data warehousing and data.">
+		<meta name="Keywords" content="oracle database, data warehousing, business intelligence, exadata, database machine, big data, 18c, 19c">
+
+<!-- Container/Display Start -->
+
+<!-- _Raw-Text -->
+	<!-- css / js files start -->
+	<script>
+	!function(){
+		var d=document.documentElement;d.className=d.className.replace(/no-js/,'js');
+		if(document.location.href.indexOf('betamode=') > -1) document.write('<script src="https://www.oracle.com/asset/web/js/ocom-betamode.js"><\/script>');
+	}();
+	</script>
+		<link data-wscss href="https://www.oracle.com/asset/web/css/ocom-v1-base.css" rel="stylesheet">
+		<link data-wscss href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="preload" as="style" onload="this.rel='stylesheet'" onerror="this.rel='stylesheet'">
+		<noscript>
+			<link href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="stylesheet">
+		</noscript>
+	<script data-wsjs src="https://www.oracle.com/asset/web/js/jquery-min.js" async onload="$('head link[data-reqjq][rel=preload]').each(function(){var a = document.createElement('script');a.async=false;a.src=$(this).attr('href');this.parentNode.insertBefore(a, this);});$(function(){$('script[data-reqjq][data-src]').each(function(){this.async=true;this.src=$(this).data('src');});});"></script>
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/ocom-v1-base.js" rel="preload" as="script">
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/ocom-v1-lib.js" rel="preload" as="script">
+	<!-- end css / js files start -->
+<!-- / _Raw-Text -->
+
+<!-- Container/Display end -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="siteid" content="us">
+		<meta name="countryid" content="US">
+		<meta name="robots" content="index, follow">
+		<meta name="country" content="United States">
+		<meta name="Language" content="en">
+		<meta name="Updated Date" content="2018-04-19T19:17:32Z">
+	
+	<script type="text/javascript">
+		var pageData = pageData || {};
+		//page info
+		pageData.pageInfo = pageData.pageInfo || {};
+		pageData.pageInfo.language = "en";
+		pageData.pageInfo.country = "United States";
+		pageData.pageInfo.pageTitle = "Oracle Data Warehouse Use Case Patterns";
+		pageData.pageInfo.description = "Home page for features and options of Oracle Database which support data warehousing and data.";
+		pageData.pageInfo.keywords = "oracle database, data warehousing, business intelligence, exadata, database machine, big data, 18c, 19c";
+		pageData.pageInfo.siteId = "us";
+		pageData.pageInfo.countryId = "US";
+		pageData.pageInfo.updatedDate = "2018-04-19T19:17:32Z";
+	</script>
+	<!-- start : ocom/common/global/components/seo-taxonomy-meta-data-->
+	
+	<script type="text/javascript">
+		var pageData = pageData || {};
+		//taxonmy
+		pageData.taxonomy = pageData.taxonomy || {};
+		pageData.taxonomy.productServices = [];
+		pageData.taxonomy.industry = [];
+		pageData.taxonomy.region = [];
+		pageData.taxonomy.contentType = [];
+		pageData.taxonomy.buyersJourney = [];
+		pageData.taxonomy.revenue = [];
+		pageData.taxonomy.title = [];
+		pageData.taxonomy.audience = [];
+		pageData.taxonomy.persona = [];
+	</script>
+
+<!-- _Raw-Text -->
+<!-- www-us HeadAdminContainer -->
+<script async="async" type="text/javascript" src='//consent.truste.com/notice?domain=oracle.com&c=teconsent&js=bb&noticeType=bb&text=true&gtm=1&cdn=1&pcookie' crossorigin></script>
+		<style>
+#oReactiveChatContainer1 { display:none;}
+		</style>
+<!--DTM embed code - Header -->
+<script src="//assets.adobedtm.com/6f37a0dc9cdbe818dc4979828b58b88e3f060ea4/satelliteLib-e598c5b61e39a10b402e048e87dd27b0f1cd2d4c.js"></script>
+
+<!-- Truste for RU -->
+<script type="text/javascript">
+ if (location.pathname.indexOf("/ru/") == 0){
+ document.write('\x3Cscript async="async" src=//consent.truste.com/notice?domain=oracleru.com&c=teconsent&js=bb&noticeType=bb&text=true&gtm=1&cdn=1&pcookie crossorigin="">\x3C/script>');
+ }
+ </script>
+<!--End-->
+
+<!-- / _Raw-Text -->
+
+<!-- Container/Display end -->
+
+ 
+ <script>!function(){function o(n,i){if(n&&i)for(var r in i)i.hasOwnProperty(r)&&(void 0===n[r]?n[r]=i[r]:n[r].constructor===Object&&i[r].constructor===Object?o(n[r],i[r]):n[r]=i[r])}try{var n=decodeURIComponent("");if(n.length>0&&window.JSON&&"function"==typeof window.JSON.parse){var i=JSON.parse(n);void 0!==window.BOOMR_config?o(window.BOOMR_config,i):window.BOOMR_config=i}}catch(r){window.console&&"function"==typeof window.console.error&&console.error("mPulse: Could not parse configuration",r)}}();</script>
+ <script>!function(e){var a="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,a="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="DXNLE-YBWWY-AR74T-WMD99-77VRA",function(){function n(a){e.BOOMR_onload=a&&a.timeStamp||(new Date).getTime()}if(!e.BOOMR||!e.BOOMR.version&&!e.BOOMR.snippetExecuted){e.BOOMR=e.BOOMR||{},e.BOOMR.snippetExecuted=!0;var i,o,r,_=document.createElement("iframe");if(e[t])e[t]("load",n,!1);else if(e.attachEvent)e.attachEvent("onload",n);_.src="javascript:void(0)",_.title="",_.role="presentation",(_.frameElement||_).style.cssText="width:0;height:0;border:0;display:none;",r=document.getElementsByTagName("script")[0],r.parentNode.insertBefore(_,r);try{o=_.contentWindow.document}catch(O){i=document.domain,_.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",o=_.contentWindow.document}o.open()._l=function(){var e=this.createElement("script");if(i)this.domain=i;e.id="boomr-if-as",e.src=a+"DXNLE-YBWWY-AR74T-WMD99-77VRA",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(e)},o.write("<bo"+'dy onload="document._l();">'),o.close()}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var a=""=="true"?1:0,t="",n="rwh5knqx22ok4xofr2ya-f-bedd3d897-clientnsv4-s.akamaihd.net",i={"ak.v":25,"ak.cp":"82485","ak.ai":parseInt("165266",10),"ak.ol":"0","ak.cr":2,"ak.ipv":4,"ak.proto":"h2","ak.rid":"ecc3871","ak.r":20831,"ak.a2":a,"ak.m":"dscx","ak.n":"essl","ak.bpcip":"141.143.213.0","ak.cport":46539,"ak.gh":"23.212.108.11","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1573228208"};if(""!==t)i["ak.ruds"]=t;var o={i:!1,av:function(a){var t="http.initiator";if(a&&(!a[t]||"spa_hard"===a[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:n,init:function(){if(!o.i){var e=BOOMR.subscribe;e("before_beacon",o.av,null,null),e("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script>
+	</head>
+	<body class="f11 f11v6">
+		<style type="text/css">ul {
+  list-style-type: square !important;
+  margin-left:55px; 
+  color:black
+}
+
+ul li::before {
+  content: "\2192";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: grey; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */ 
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+ol {
+  list-style-type: square !important;
+  margin-left:55px;  
+}
+
+ol li::before {
+  content: "\2192";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: grey; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */ 
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+p{
+color:black;
+}
+		</style>
+
+
+<!-- CW60v1 -->
+		<section class="cw60 cw60v1 cpad" data-ocomid="cw60" data-trackas="cw60">
+			<div class="cwidth">
+				<header class="center-text">
+					<h2 class="hdx">What's New in Autonomous Database</h2>
+				</header>
+				<div>
+					<p>Oracle Autonomous Database is Oracle's new, fully managed database tuned and optimized for both data warehouse and transaction processing workloads with the market-leading performance of Oracle Database. It delivers a completely new, comprehensive cloud experience for data warehousing and transaction processing workloads that is easy, fast, and elastic.
+					</p>
+					<p>
+						This page lists the new features and updates added to Autonomous Database.
+					</p>
+					<p>
+						Last Updated August 20, 2020.
+					</p>
+				</div>
+				<div class="cw60w1">
+					<div class="cw60w2">
+						<a href="#data">
+							<h6 class="icn-database fill-lightgrey">ADB Shared</h6>
+						</a>
+						<div class="cw60w3 bglightgrey">
+							<section class="cb90 cb90v0 cpad bgvlightgrey" data-ocomid="cb90" data-trackas="cb90" >
+								<div class="cb90w1 cwidth">
+									<h2 style="margin-left:40px !important; text-align: left !important; color:#069 !important; font-weight: bold; font-size: 3.0rem;">September 2020</h2>
+									<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+										<div class="cb90w3" style="margin-left:40px !important;">
+											<h3 style="text-align: left !important; font-size: 2.0rem;"> Refreshable Clones </h3>
+											<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+											<div class="cb90-img">
+												<div class="icn-img icn-email2">&nbsp;</div>
+											</div>
+											<div class="cb90cta"><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/autonomous-refreshable-clone.html#GUID-C49DA251-D347-491B-9C50-3D42EB3F93D9" target="_blank">Learn more...</a>
+											</div>
+										</div>
+										<div class="cb90w4" style="margin-right:80px !important;">
+											<span style="display:inline-block;" class="tmpTextedtr">
+												<p class="basic_text">
+													Autonomous Database provides cloning where you can choose to create a full clone of the active instance, create a metadata clone, or create a refreshable clone.
+												</p>
+												<p class="basic_text">
+													With a refreshable clone the system creates a clone that can be easily updated with changes from the source database.
+												</p>
+												<p class="basic_text">
+													A refreshable clone allows the following:
+												</p>
+												<ul>
+													<li class="basic_text" style="margin-left:10px; margin-bottom:10px;">
+														Maintain one or more copies of the source database for use as read-only databases. A clone database is available when needed, and when the data needs to be updated, simply refresh the clone from its source database.
+													</li>
+													<li class="basic_text" style="margin-left:10px;">
+														Share copies of a production database with multiple business units. For example, one business unit might use the source database for ongoing transactions and another business unit could at the same time use the refreshable clone database for read-only operations.
+													</li>
+												</ul>
+												<br>
+												<p class="basic_text">
+													Refreshable clones allow customers to spread the cost of database usage across multiple business units. They can bill the different units separately, based on their usage of one or more refreshable clones.
+												</p>
+												<div class="row">
+													<div class="column">
+														<img  moz-do-not-send="true" width="550" style="max-width:550px !important; width:550px !important; border: 2px solid grey; border-radius: 15px;" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/134291070a22d543b7a2c4e6064923bd/refreshable_clones_550.gif" alt="Console view of a refreshable clone" width="100%">
+														<p class="basic_text" style="font-size:10pt;">
+															<em>Illustration shows a click-through demo for creating a new refreshable clone.</em>
+														</p>
+													</div>
+												</div>
+												<br><br>
+												<p class="basic_text">
+													If an Autonomous Database is the source for a refreshable clone or clones then you can view the list of refreshable clones via the Resources area, select "Refreshable Clones" as shown below.
+												</p>
+												<div class="row">
+													<div class="column">
+														<img  moz-do-not-send="true" width="550" style="max-width:550px !important; width:550px !important; border: 2px solid grey; border-radius: 15px;" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/a944a83aac646db9852d3cc101335c0e/adb_resources_refreshable_clones.png" alt="OCI console view of refreshable clones associated with a specific ADB instance" width="100%">
+														<p class="basic_text" style="font-size:10pt;">
+															<em>Illustration shows the OCI console view of refreshable clones associated with a specific ADB instance.</em>
+														</p>
+														<br><br>
+													</div>
+												</div>
+											</span>
+										</div>
+									</div>
+									<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+										<div class="cb90w3" style="margin-left:40px !important;">
+											<h3 style="text-align: left !important; font-size: 2.0rem;"> SQL Macros Now Part of Autonomous Database</h3>
+											<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+											<div class="cb90-img">
+												<div class="icn-img icn-email2">&nbsp;</div>
+											</div>
+											<div class="cb90cta"><a href="https://docs-uat.us.oracle.com/en/database/oracle/oracle-database/19/lnpls/plsql-language-elements.html#GUID-292C3A17-2A4B-4EFB-AD38-68DF6380E5F7" target="_blank">Learn more...</a>
+											</div>
+										</div>
+										<div class="cb90w4" style="margin-right:80px !important;">
+											<span style="display:inline-block;" class="tmpTextedtr">
+												<p class="basic_text">
+													What is a SQL Macro? It is a new and unique way for SQL developers to encapsulate complex processing which can then be reused within SQL statements.
+												</p>
+												<p class="basic_text">
+													There are two types of SQL Macros:
+												</p>
+												<ul style="font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000000;" valign="top" align="left">
+													<li class="basic_text"><strong> TABLE</strong> macro used in a FROM-clause</li>
+													<li class="basic_text"><strong> SCALAR</strong> macro used in SELECT list, WHERE/HAVING, GROUP BY/ORDER BY clauses </li>
+												</ul>
+												<br>
+												<p class="basic_text">
+													Initially only TABLE macros will be available within Autonomous Database. Support for SCALAR macros is coming soon!
+												</p>
+												<p class="basic_text">
+													Pleae refer to the following MOS note <em>How To Identify the SQL Macros in Oracle Data Dictionary 19.7 Onwards</em> <a href="https://mosemp.us.oracle.com/epmos/faces/DocumentDisplay?_afrLoop=509034666817231&parent=AWIZ_SUBMIT&id=2678637.1&_afrWindowMode=0&_adf.ctrl-state=rwa4h14fh_1071" target="_blank">(Doc ID 2678637.1)</a>.
+												</p>
+											</span>
+											<br>
+											<br>
+										</div>
+									</div>
+									<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+										<div class="cb90w3" style="margin-left:40px !important;">
+											<h3 style="text-align: left !important; font-size: 2.0rem;"> Updates to SQL Developer Web UI</h3>
+											<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+											<div class="cb90-img">
+												<div class="icn-img icn-email2">&nbsp;</div>
+											</div>
+											<div class="cb90cta"><a href="https://www.thatjeffsmith.com/archive/2020/08/exploring-the-latest-sql-developer-web-in-the-oracle-autonomous-database/" target="_blank">Learn more...</a>
+											</div>
+										</div>
+										<div class="cb90w4" style="margin-right:80px !important;">
+											<span style="display:inline-block;" class="tmpTextedtr">
+												<p class="basic_text">
+													Autonomous Database comes with a built-in SQL Developer Web. The UI for this web console has just been updated.
+													<br>
+													<br>
+													Autonomous Database uses pre-set consumer groups/resource plans (high, medium, low, tp and tpurgent) which determine memory, CPU, and the degree of parallelism for queries and scripts.
+												</p>
+												<p class="basic_text">
+													In the past SQL Developer Web connections were defaulted to the LOW consumer group. With this latest update it is now possible to select any of the available consumer groups when using the worksheet.
+												</p>
+												<div class="row">
+													<div class="column">
+														<img  moz-do-not-send="true" width="550" style="max-width:550px !important; width:550px !important; border: 2px solid grey; border-radius: 15px;" src="https://www.thatjeffsmith.com/wp-content/uploads/2020/08/image-31.png" alt="SQL Developer Web UI showing how to select ADB resource group" width="100%">
+														<p class="basic_text" style="font-size:10pt;">
+															<em>Illustration shows SQL Developer Web UI for selecting a consumer group.</em>
+														</p>
+														<br>
+													</div>
+												</div>
+											</span>
+											<span style="display:inline-block;" class="tmpTextedtr">
+												<p class="basic_text">
+													The latest UI also provides a simpler experience for managing users: create, edit, grant roles & privileges, REST Enable accounts, view accounts where the password is about to expire and unlock an account.
+												</p>
+												<div class="row">
+													<div class="column">
+														<img  moz-do-not-send="true" width="550" style="max-width:550px !important; width:550px !important; border: 2px solid grey; border-radius: 15px;" src="https://www.thatjeffsmith.com/wp-content/uploads/2020/08/image-30.png" alt="SQL Developer Web UI showing how to select ADB resource group" width="100%">
+														<p class="basic_text" style="font-size:10pt;">
+															<em>Illustration shows SQL Developer Web UI for managing ADB users.</em>
+														</p>
+													</div>
+												</div>
+											</span>
+											<br>
+											<br>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+					<div class="cw60w2">
+						<a href="#customer-experience">
+							<h6 class="icn-service">ADB Dedicated</h6>
+						</a>
+						<div class="cw60w3 bglightgrey">
+							<section class="cb90 cb90v0 cpad bgvlightgrey" data-ocomid="cb90" data-trackas="cb90" >
+								<div class="cb90w1 cwidth">
+									<h2 style="margin-left:40px !important; text-align: left !important; color:#069 !important; font-weight: bold; font-size: 3.0rem;">September 2020</h2>
+									<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+										<div class="cb90w3" style="margin-left:40px !important;">
+											<h3 style="text-align: left !important; font-size: 2.0rem;"> Refreshable Clones </h3>
+											<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+											<div class="cb90-img">
+												<div class="icn-img icn-email2">&nbsp;</div>
+											</div>
+											<div class="cb90cta"><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/autonomous-refreshable-clone.html#GUID-C49DA251-D347-491B-9C50-3D42EB3F93D9" target="_blank">Learn more...</a>
+											</div>
+										</div>
+										<div class="cb90w4" style="margin-right:80px !important;">
+											<span style="display:inline-block;" class="tmpTextedtr">
+												<p class="basic_text">
+													Autonomous Database provides cloning where you can choose to create a full clone of the active instance, create a metadata clone, or create a refreshable clone.
+												</p>
+												<p class="basic_text">
+													With a refreshable clone the system creates a clone that can be easily updated with changes from the source database.
+												</p>
+												<p class="basic_text">
+													A refreshable clone allows the following:
+												</p>
+												<ul>
+													<li class="basic_text" style="margin-left:10px; margin-bottom:10px;">
+														Maintain one or more copies of the source database for use as read-only databases. A clone database is available when needed, and when the data needs to be updated, simply refresh the clone from its source database.
+													</li>
+													<li class="basic_text" style="margin-left:10px;">
+														Share copies of a production database with multiple business units. For example, one business unit might use the source database for ongoing transactions and another business unit could at the same time use the refreshable clone database for read-only operations.
+													</li>
+												</ul>
+												<br>
+												<p class="basic_text">
+													Refreshable clones allow customers to spread the cost of database usage across multiple business units. They can bill the different units separately, based on their usage of one or more refreshable clones.
+												</p>
+												<div class="row">
+													<div class="column">
+														<img  moz-do-not-send="true" width="550" style="max-width:550px !important; width:550px !important; border: 2px solid grey; border-radius: 15px;" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/134291070a22d543b7a2c4e6064923bd/refreshable_clones_550.gif" alt="Console view of a refreshable clone" width="100%">
+														<p class="basic_text" style="font-size:10pt;">
+															<em>Illustration shows a click-through demo for creating a new refreshable clone.</em>
+														</p>
+													</div>
+												</div>
+												<br><br>
+												<p class="basic_text">
+													If an Autonomous Database is the source for a refreshable clone or clones then you can view the list of refreshable clones via the Resources area, select "Refreshable Clones" as shown below.
+												</p>
+												<div class="row">
+													<div class="column">
+														<img  moz-do-not-send="true" width="550" style="max-width:550px !important; width:550px !important; border: 2px solid grey; border-radius: 15px;" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/a944a83aac646db9852d3cc101335c0e/adb_resources_refreshable_clones.png" alt="OCI console view of refreshable clones associated with a specific ADB instance" width="100%">
+														<p class="basic_text" style="font-size:10pt;">
+															<em>Illustration shows the OCI console view of refreshable clones associated with a specific ADB instance.</em>
+														</p>
+														<br><br>
+													</div>
+												</div>
+											</span>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+					<div class="cw60w2">
+						<a href="#internet-of-things-apps">
+							<h6 class="icn-tablet-mobile">Cloud@Customer</h6>
+						</a>
+
+
+						<div class="cw60w3 bglightgrey">
+							<section class="cb90 cb90v0 cpad bgvlightgrey" data-ocomid="cb90" data-trackas="cb90" >
+								<div class="cb90w1 cwidth">
+									<h2 style="margin-left:40px !important; text-align: left !important; color:#069 !important; font-weight: bold; font-size: 3.0rem;">September 2020</h2>
+									<div class="cb90w2" style="border-top-width:0px !important; border-bottom-width:0px !important;">
+										<div class="cb90w3" style="margin-left:40px !important;">
+											<h3 style="text-align: left !important; font-size: 2.0rem;"> Refreshable Clones </h3>
+											<p style="font-size:8pt">(Shared Infrastructure Only)</p>
+											<div class="cb90-img">
+												<div class="icn-img icn-email2">&nbsp;</div>
+											</div>
+											<div class="cb90cta"><a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/autonomous-refreshable-clone.html#GUID-C49DA251-D347-491B-9C50-3D42EB3F93D9" target="_blank">Learn more...</a>
+											</div>
+										</div>
+										<div class="cb90w4" style="margin-right:80px !important;">
+											<span style="display:inline-block;" class="tmpTextedtr">
+												<p class="basic_text">
+													Autonomous Database provides cloning where you can choose to create a full clone of the active instance, create a metadata clone, or create a refreshable clone.
+												</p>
+												<p class="basic_text">
+													With a refreshable clone the system creates a clone that can be easily updated with changes from the source database.
+												</p>
+												<p class="basic_text">
+													A refreshable clone allows the following:
+												</p>
+												<ul>
+													<li class="basic_text" style="margin-left:10px; margin-bottom:10px;">
+														Maintain one or more copies of the source database for use as read-only databases. A clone database is available when needed, and when the data needs to be updated, simply refresh the clone from its source database.
+													</li>
+													<li class="basic_text" style="margin-left:10px;">
+														Share copies of a production database with multiple business units. For example, one business unit might use the source database for ongoing transactions and another business unit could at the same time use the refreshable clone database for read-only operations.
+													</li>
+												</ul>
+												<br>
+												<p class="basic_text">
+													Refreshable clones allow customers to spread the cost of database usage across multiple business units. They can bill the different units separately, based on their usage of one or more refreshable clones.
+												</p>
+												<div class="row">
+													<div class="column">
+														<img  moz-do-not-send="true" width="550" style="max-width:550px !important; width:550px !important; border: 2px solid grey; border-radius: 15px;" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/134291070a22d543b7a2c4e6064923bd/refreshable_clones_550.gif" alt="Console view of a refreshable clone" width="100%">
+														<p class="basic_text" style="font-size:10pt;">
+															<em>Illustration shows a click-through demo for creating a new refreshable clone.</em>
+														</p>
+													</div>
+												</div>
+												<br><br>
+												<p class="basic_text">
+													If an Autonomous Database is the source for a refreshable clone or clones then you can view the list of refreshable clones via the Resources area, select "Refreshable Clones" as shown below.
+												</p>
+												<div class="row">
+													<div class="column">
+														<img  moz-do-not-send="true" width="550" style="max-width:550px !important; width:550px !important; border: 2px solid grey; border-radius: 15px;" src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/a944a83aac646db9852d3cc101335c0e/adb_resources_refreshable_clones.png" alt="OCI console view of refreshable clones associated with a specific ADB instance" width="100%">
+														<p class="basic_text" style="font-size:10pt;">
+															<em>Illustration shows the OCI console view of refreshable clones associated with a specific ADB instance.</em>
+														</p>
+														<br><br>
+													</div>
+												</div>
+											</span>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div><!--/.cw60w1 -->
+			</div><!--/.cwidth -->
+		</section>
+<!-- /CW60v1 -->

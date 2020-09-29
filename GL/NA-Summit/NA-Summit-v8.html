@@ -223,11 +223,13 @@ a[href="place-holder.html"] {
 		
 <script>
 
-function pauseVideo(htmlId) { 
+function pauseVideo(htmlId, videosrc) { 
 	document.getElementById(htmlId).src='';
+	document.getElementById(htmlId).src=videosrc;
 }
 
 </script>
+
 		<div class="f11w1">
 			<nav id="u28nav" class="u28nav" data-trackas="menu">
 				<span class="mnavback u28back">Back</span>
@@ -381,7 +383,7 @@ function pauseVideo(htmlId) {
 															</iframe>
 <script>
 ppbutton = document.getElementById("closeIntro");
-ppbutton.addEventListener("click", function() {pauseVideo('event-video-intro');}, false);													
+ppbutton.addEventListener("click", function() {pauseVideo('event-video-intro', 'https://www.youtube.com/embed/u5tE2kpwCxM');}, false);													
 </script>
 														</td>
 													</tr>
@@ -494,7 +496,7 @@ ppbutton.addEventListener("click", function() {pauseVideo('event-video-intro');}
 															</iframe>
 												<script>
 													ppbutton = document.getElementById("closeADBcp");
-													ppbutton.addEventListener("click", function() {pauseVideo('event-video-adbcp');}, false);
+													ppbutton.addEventListener("click", function() {pauseVideo('event-video-adbcp', 'https://www.youtube.com/embed/ZI-uCRwNqKE');}, false);
 												</script>
 														</td>
 													</tr>
@@ -586,7 +588,7 @@ ppbutton.addEventListener("click", function() {pauseVideo('event-video-intro');}
 															</iframe>
 												<script>
 													ppbutton = document.getElementById("closeADBgm");
-													ppbutton.addEventListener("click", function() {pauseVideo('event-video-adbgm');}, false);
+													ppbutton.addEventListener("click", function() {pauseVideo('event-video-adbgm','https://www.youtube.com/embed/PRaXsXvGceg');}, false);
 												</script>
 														</td>
 													</tr>
@@ -700,7 +702,7 @@ ppbutton.addEventListener("click", function() {pauseVideo('event-video-intro');}
 															</iframe>
 												<script>
 													ppbutton = document.getElementById("closeArccp");
-													ppbutton.addEventListener("click", function() {pauseVideo('event-video-arccp');}, false);
+													ppbutton.addEventListener("click", function() {pauseVideo('event-video-arccp', 'https://www.youtube.com/embed/CgXM6JVVQH8');}, false);
 												</script>
 														</td>
 													</tr>
@@ -788,7 +790,7 @@ ppbutton.addEventListener("click", function() {pauseVideo('event-video-intro');}
 															</iframe>
 												<script>
 													ppbutton = document.getElementById("closeDWBD");
-													ppbutton.addEventListener("click", function() {pauseVideo('event-video-dwbd');}, false);
+													ppbutton.addEventListener("click", function() {pauseVideo('event-video-dwbd', 'https://www.youtube.com/embed/5v70p2XvFb8');}, false);
 												</script>
 														</td>
 													</tr>
@@ -900,7 +902,7 @@ ppbutton.addEventListener("click", function() {pauseVideo('event-video-intro');}
 															</iframe>
 												<script>
 													ppbutton = document.getElementById("closeMLcp");
-													ppbutton.addEventListener("click", function() {pauseVideo('event-video-mlcp');}, false);
+													ppbutton.addEventListener("click", function() {pauseVideo('event-video-mlcp', 'https://www.youtube.com/embed/ljXvHNEdtBk');}, false);
 												</script>
 														</td>
 													</tr>
@@ -975,12 +977,13 @@ ppbutton.addEventListener("click", function() {pauseVideo('event-video-intro');}
 													</tr>
 													<tr>
 														<td colspan="2" align="center">
-															<br>												<br>
+															<br>
+															<br>
 															<iframe width="560" height="315" id="event-video-mlpm" src="https://www.youtube.com/embed/fy27CHccxSA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 															</iframe>
 												<script>
 													ppbutton = document.getElementById("closeMLpm");
-													ppbutton.addEventListener("click", function() {pauseVideo('event-video-mlpm');}, false);
+													ppbutton.addEventListener("click", function() {pauseVideo('event-video-mlpm', 'https://www.youtube.com/embed/fy27CHccxSA');}, false);
 
 												</script>
 														</td>
@@ -1055,7 +1058,7 @@ ppbutton.addEventListener("click", function() {pauseVideo('event-video-intro');}
 															</iframe>
 												<script>
 													ppbutton = document.getElementById("closeKN1");
-													ppbutton.addEventListener("click", function() {pauseVideo('event-video-kn1');}, false);
+													ppbutton.addEventListener("click", function() {pauseVideo('event-video-kn1', 'https://www.youtube.com/embed/Mp-ahC_rkhQ');}, false);
 												</script>
 														</td>
 													</tr>
@@ -1131,7 +1134,7 @@ ppbutton.addEventListener("click", function() {pauseVideo('event-video-intro');}
 															</iframe>
 												<script>
 													ppbutton = document.getElementById("closeKN2");
-													ppbutton.addEventListener("click", function() {pauseVideo('event-video-kn2');}, false);
+													ppbutton.addEventListener("click", function() {pauseVideo('event-video-kn2', 'https://www.youtube.com/embed/cwO1WZm1JUA');}, false);
 												</script>
 														</td>
 													</tr>
@@ -1241,7 +1244,7 @@ ppbutton.addEventListener("click", function() {pauseVideo('event-video-intro');}
 															</iframe>
 												<script>
 													ppbutton = document.getElementById("closeExacp");
-													ppbutton.addEventListener("click", function() {pauseVideo('event-video-exacp');}, false);
+													ppbutton.addEventListener("click", function() {pauseVideo('event-video-exacp', 'https://www.youtube.com/embed/Q-0Hg5ZzeE8');}, false);
 
 												</script>
 														</td>
@@ -1321,7 +1324,7 @@ ppbutton.addEventListener("click", function() {pauseVideo('event-video-intro');}
 															</iframe>
 												<script>
 													ppbutton = document.getElementById("closeExapm");
-													ppbutton.addEventListener("click", function() {pauseVideo('event-video-exapm');}, false);
+													ppbutton.addEventListener("click", function() {pauseVideo('event-video-exapm', 'https://www.youtube.com/embed/DVx2_AVLsT8');}, false);
 
 												</script>
 														</td>
@@ -1435,7 +1438,7 @@ ppbutton.addEventListener("click", function() {pauseVideo('event-video-intro');}
 															</iframe>
 												<script>
 													ppbutton = document.getElementById("closePerfpm");
-													ppbutton.addEventListener("click", function() {pauseVideo('event-video-perfpm');}, false);
+													ppbutton.addEventListener("click", function() {pauseVideo('event-video-perfpm', 'https://www.youtube.com/embed/PnFuiq45Ufs');}, false);
 												</script>
 														</td>
 													</tr>
@@ -1552,7 +1555,7 @@ ppbutton.addEventListener("click", function() {pauseVideo('event-video-intro');}
 															</iframe>
 												<script>
 													ppbutton = document.getElementById("closeLCcp");
-													ppbutton.addEventListener("click", function() {pauseVideo('event-video-lccp');}, false);
+													ppbutton.addEventListener("click", function() {pauseVideo('event-video-lccp', 'https://www.youtube.com/embed/Z-Ya39zK76I');}, false);
 
 												</script>
 														</td>
@@ -1630,7 +1633,7 @@ ppbutton.addEventListener("click", function() {pauseVideo('event-video-intro');}
 															</iframe>
 												<script>
 													ppbutton = document.getElementById("closeLCpm");
-													ppbutton.addEventListener("click", function() {pauseVideo('event-video-lcpm');}, false);
+													ppbutton.addEventListener("click", function() {pauseVideo('event-video-lcpm', 'https://www.youtube.com/embed/Wz9xf_Lx4qc');}, false);
 												</script>
 														</td>
 													</tr>
@@ -1746,7 +1749,7 @@ ppbutton.addEventListener("click", function() {pauseVideo('event-video-intro');}
 															</iframe>
 												<script>
 													ppbutton = document.getElementById("closeAnacp");
-													ppbutton.addEventListener("click", function() {pauseVideo('event-video-anacp');}, false);
+													ppbutton.addEventListener("click", function() {pauseVideo('event-video-anacp', 'https://www.youtube.com/embed/U00RBoX89NQ');}, false);
 
 												</script>
 														</td>

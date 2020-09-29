@@ -221,10 +221,13 @@ a[href="place-holder.html"] {
 }
 		</style>
 
-<script>											
-	function pauseVideo(eventVideo) { 
-		eventVideo.pause();
-	}
+<script>
+
+function pauseVideo(htmlId, videosrc) { 
+	document.getElementById(htmlId).src='';
+	document.getElementById(htmlId).src=videosrc;
+}
+
 </script>
 		<div class="f11w1">
 			<nav id="u28nav" class="u28nav" data-trackas="menu">
@@ -275,7 +278,7 @@ a[href="place-holder.html"] {
 								<br><br>
 								<h2>Oracle Global Leaders Switzerland Online Technology Day 2020</h2>
 								<div class="ch10w4">
-									<p style="color:black;">September 2020  </p>
+									<p style="color:black;">September 2020    |   REPLAY NOW AVAILABLE</p>
 								</div>
 								<br>
 							</div>
@@ -304,9 +307,9 @@ a[href="place-holder.html"] {
 							<p style="color:#353030;">Vielen Dank, dass sie an unserem Online Technology Day - Switzerland teilgenommen haben, Sie finden hier die "Replays" und Presentationen der Panels:
 							</p>
 							<ul style="margin-left:50px;  list-style-type: circle; !important;">
-								<li>- <a href="#oci" style="color: #353030;">Oracle Cloud Infrastructure</a></li>
-								<li>- <a href="#oxa" style="color: #353030;">Oracle Exadata</a></li>
-								<li>- <a href="#odd" style="color: #353030;">Oracle Database Development</a></li>
+								<li>- Oracle Cloud Infrastructure</li>
+								<li>- Oracle Exadata</li>
+								<li>- Oracle Database Development</li>
 							</ul>
 							&nbsp;
 						</div>
@@ -326,43 +329,54 @@ a[href="place-holder.html"] {
 							<a href="https://www.linkedin.com/in/reinerzimmermann/" target="_blank"><img alt="" src="https://keithlaker.github.io/GL/Images/0-1.png" /> </a>
 							<h5><a href="https://www.linkedin.com/in/reinerzimmermann/" target="_blank">Willkommen zum Online Technology Day - Switzerland 2020</a></h5>
 							<a href="https://www.linkedin.com/in/reinerzimmermann/" target="_blank"> </a>
-							<p style="color:#353030;"><a href="https://www.linkedin.com/in/reinerzimmermann/" target="_blank">Reiner Zimmermann<br />
-									Vice President of Product Management<br />
-									Oracle
+							<p style="color:#353030;"><a href="https://www.linkedin.com/in/reinerzimmermann/" target="_blank">Reiner Zimmermann, Vice President of Product Management, Oracle
 								</a>
 							</p>
 							<a href="https://www.linkedin.com/in/reinerzimmermann/" target="_blank"> </a>
 							<div class="cw58w4 col-item-w3">
 								<div class="obttns">
 									<div class="obttn4">
-										<a href="place-holder.html">
+										<a href="#IntroPop">
 											Watch
 										</a>
 										<div id="IntroPop" class="modalPopWindow">
 											<div class="embedded-video-16-9">
-												<a href="#close" title="Close" class="close" id="closeIntro">Close</a>
-												<br><br>
-												<p class="video_header">
-													<strong>Willkommen zum Online Technology Day - Switzerland 2020</strong>
-													<br>
-													mit Reiner Zimmermann<br>Vice President, Oracle
-												</p>
-												<br>
-												<video height="450px" width="70%" playsinline controls  preload="metadata" id="event-video-intro">
-													<source src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/aa9d82d06dd8526fa0784298b936cfe6/01_01___oraclegloballeadersvirtualevent2020_introduction.mp4" type="video/mp4">
-													Your browser does not support the video tag.
-												</video>
-												<script>
-													var introButton = document.getElementById("closeIntro");
-													introVideo = document.getElementById("event-video-intro");
-													introButton.addEventListener("click", pauseVideo.bind(null, introVideo));
-												</script>
-												<br>
-												<br>
+												<table width="100%">
+													<tr>
+														<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
+															<p class="video_header" style="margin-top:10px;">
+																<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Oracle Global Leaders Online Technology Day - Switzerland 2020</span>
+																<br>
+																<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">
+																	Willkommen zum Online Technology Day - Switzerland 2020
+																	<br>
+																	mit Reiner Zimmermann, Vice President, Oracle
+																</span>
+															</p>
+														</td>
+														<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
+															<a href="#close" title="Close" id="closeIntro" style="background-color:#3a6f86; color:white; font=weight:bold; font-family:arial; font-size:16pt; text-decoration:none;">
+																Close
+															</a>
+														</td>
+													</tr>
+													<tr>
+														<td colspan="2" align="center">
+															<br>
+															<br>
+															<iframe width="560" height="315" id="event-video-intro" src="https://www.youtube.com/embed/fR2z8bcBhT0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen>
+															</iframe>
+<script>
+ppbutton = document.getElementById("closeIntro");
+ppbutton.addEventListener("click", function() {pauseVideo('event-video-intro', 'https://www.youtube.com/embed/fR2z8bcBhT0');}, false);													
+</script>
+														</td>
+													</tr>
+												</table>
 											</div>
 										</div>
 									</div>
-									<div class="obttn4"><a href="place-holder.html" target="_blank">Download PDF</a>
+									<div class="obttn4"><a href="https://securesites-prodapp.cec.ocp.oraclecloud.com/documents/link/LF950A339698309CD7704EE07D94F25C94DBE430C2DD/fileview/DE8E2CBE21D06A9E995E839094728E63CC4BFAB24443/_00_Introduction_OracleIntel.pdf" target="_blank">Vew Presentation</a>
 									</div>
 								</div>
 							</div>
@@ -429,31 +443,43 @@ a[href="place-holder.html"] {
 								<div class="cw58w4 col-item-w3">
 									<div class="obttns">
 										<div class="obttn4">
-											<a href="place-holder.html">Watch</a>
-											<div id="OCIPop" class="modalPopWindow">
+											<a href="#OCIPanel">Watch</a>
+											<div id="OCIPanel" class="modalPopWindow">
 												<div class="embedded-video-16-9">
-													<a href="#close" title="Close" class="close" id="closeOCI">Close</a>
-													<p class="video_header">
-														<strong>Online Technology Day – Switzerland</strong>
-														<br>
-														Oracle Cloud Infrastructure Customer Panel
-													</p>
-													<br>
-													<video height="450px" width="70%" playsinline controls  preload="metadata" id="event-video-oci">
-														<source src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/dfc8d8305daa2e835197ccc03a45660b/01_02___oracle_cloud_infrastructure_panel.mp4" type="video/mp4">
-														Your browser does not support the video tag.
-													</video>
-													<script>
-														var ociButton = document.getElementById("closeOCI");
-														ociVideo = document.getElementById("event-video-oci");
-														ociButton.addEventListener("click", pauseVideo.bind(null, ociVideo));
-													</script>
-													<br>
-													<br>
+													<table width="100%">
+														<tr>
+															<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
+																<p class="video_header" style="margin-top:10px;">
+																	<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Oracle Global Leaders Online Technology Day - Switzerland 2020</span>
+																	<br>
+																	<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">
+																		Oracle Cloud Infrastructure Customer Panel
+																	</span>
+																</p>
+															</td>
+															<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
+																<a href="#close" title="Close" id="closeOCIPanel" style="background-color:#3a6f86; color:white; font=weight:bold; font-family:arial; font-size:16pt; text-decoration:none;">
+																	Close
+																</a>
+															</td>
+														</tr>
+														<tr>
+															<td colspan="2" align="center">
+																<br>
+																<br>
+																<iframe width="560" height="315" id="event-video-ocipanel" src="https://www.youtube.com/embed/CB8_isVGExE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen>
+																</iframe>
+<script>
+ppbutton = document.getElementById("closeOCIPanel");
+ppbutton.addEventListener("click", function() {pauseVideo('event-video-ocipanel','https://www.youtube.com/embed/CB8_isVGExE');}, false);													
+</script>
+															</td>
+														</tr>
+													</table>
 												</div>
 											</div>
 										</div>
-										<div class="obttn4"><a href="place-holder.html" target="_blank">Download PDF</a>
+										<div class="obttn4"><a href="https://securesites-prodapp.cec.ocp.oraclecloud.com/documents/link/LF950A339698309CD7704EE07D94F25C94DBE430C2DD/fileview/D7BB9298EA084CFA29653953E766FB44933FA61692DC/_01_OracleCloudInfrastructure_Panel.pdf" target="_blank">View Presentation</a>
 										</div>
 									</div>
 								</div>
@@ -515,34 +541,46 @@ a[href="place-holder.html"] {
 								<div class="cw58w4 col-item-w3">
 									<div class="obttns">
 										<div class="obttn4">
-											<a href="place-holder.html">
+											<a href="#ExaPanel">
 												Watch
 											</a>
-											<div id="ExaAPanel" class="modalPopWindow">
+											<div id="ExaPanel" class="modalPopWindow">
 												<div class="embedded-video-16-9">
-													<a href="#close" title="Close" class="close" id="closeEAP">Close</a>
-													<br><br>
-													<p class="video_header">
-														<strong>Online Technology Day – Switzerland</strong>
-														<br>
-														Oracle Exadata Customer Panel
-													</p>
-													<br>
-													<video height="450px" width="70%" playsinline controls  preload="metadata" id="event-video-eap">
-														<source src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/82cd92309d01385cfd5ae300aedad79e/01_06___exadata_for_analytics_panel.mp4" type="video/mp4">
-														Your browser does not support the video tag.
-													</video>
-													<script>
-														var eapButton = document.getElementById("closeEAP");
-														eapVideo = document.getElementById("event-video-eap");
-														eapButton.addEventListener("click", pauseVideo.bind(null, eapVideo));
-													</script>
-													<br>
-													<br>
+													<table width="100%">
+														<tr>
+															<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
+																<p class="video_header" style="margin-top:10px;">
+																	<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Oracle Global Leaders Online Technology Day - Switzerland 2020</span>
+																	<br>
+																	<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">
+																		Oracle Exadata Customer Panel
+																	</span>
+																</p>
+															</td>
+															<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
+																<a href="#close" title="Close" id="closeExaPanel" style="background-color:#3a6f86; color:white; font=weight:bold; font-family:arial; font-size:16pt; text-decoration:none;">
+																	Close
+																</a>
+															</td>
+														</tr>
+														<tr>
+															<td colspan="2" align="center">
+																<br>
+																<br>
+																<iframe width="560" height="315" id="event-video-exapanel" src="https://www.youtube.com/embed/IFYjLGPg9Qw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen>
+																</iframe>
+<script>
+ppbutton = document.getElementById("closeExaPanel");
+ppbutton.addEventListener("click", function() {pauseVideo('event-video-exapanel', 'https://www.youtube.com/embed/IFYjLGPg9Qw');}, false);													
+</script>
+															</td>
+														</tr>
+													</table>
 												</div>
 											</div>
 										</div>
-										<div class="obttn4"><a href="place-holder.html" target="_blank">Download PDF</a>
+										<div class="obttn4">
+											<a href="https://securesites-prodapp.cec.ocp.oraclecloud.com/documents/link/LF950A339698309CD7704EE07D94F25C94DBE430C2DD/fileview/D831C2899425525302E1FDB25AF715CF2B9DFFE9E104/_02_Exadata_Panel.pdf" target="_blank">View Presentation</a>
 										</div>
 									</div>
 								</div>
@@ -608,25 +646,45 @@ a[href="place-holder.html"] {
 								<div class="cw58w4 col-item-w3">
 									<div class="obttns">
 										<div class="obttn4">
-											<a href="place-holder.html">
+											<a href="#DBPanel">
 												Watch
 											</a>
-											<div id="DBDevPanel" class="modalPopWindow">
+											<div id="DBPanel" class="modalPopWindow">
 												<div class="embedded-video-16-9">
-													<a href="#close" title="Close" class="close">Close</a>
-													<br><br>
-													<p class="video_header">
-														<strong>Oracle Global Leaders EMEA Summer Meeting 2020</strong>
-														<br>
-														Oracle Database Development Customer Panel
-													</p>
-													<br><br>
-													<iframe src="https://www.youtube.com/embed/p9cVIM4-kbM?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-													</iframe>
+													<table width="100%">
+														<tr>
+															<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
+																<p class="video_header" style="margin-top:10px;">
+																	<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Oracle Global Leaders Online Technology Day - Switzerland 2020</span>
+																	<br>
+																	<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">
+																		Oracle Database Development Customer Panel
+																	</span>
+																</p>
+															</td>
+															<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
+																<a href="#close" title="Close" id="closeDBPanel" style="background-color:#3a6f86; color:white; font=weight:bold; font-family:arial; font-size:16pt; text-decoration:none;">
+																	Close
+																</a>
+															</td>
+														</tr>
+														<tr>
+															<td colspan="2" align="center">
+																<br>
+																<br>
+																<iframe width="560" height="315" id="event-video-dbpanel" src="https://www.youtube.com/embed/dEDWBEwW7jg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen>
+																</iframe>
+<script>
+ppbutton = document.getElementById("closeDBPanel");
+ppbutton.addEventListener("click", function() {pauseVideo('event-video-dbpanel', 'https://www.youtube.com/embed/dEDWBEwW7jg');}, false);													
+</script>
+															</td>
+														</tr>
+													</table>
 												</div>
 											</div>
 										</div>
-										<div class="obttn4"><a href="place-holder.html" target="_blank">Download PDF</a>
+										<div class="obttn4"><a href="https://securesites-prodapp.cec.ocp.oraclecloud.com/documents/link/LF950A339698309CD7704EE07D94F25C94DBE430C2DD/fileview/DB8827CD4B9D53F2B50A47A113AC66F5090E93BF801A/_03_OracleDatabaseDevelopmentPanel.pdf" target="_blank">View Presentation</a>
 										</div>
 									</div>
 								</div>
@@ -642,7 +700,7 @@ a[href="place-holder.html"] {
 				</div>
 			</div>
 <!-- U10v3 -->
-
+		</div>
 		
 <!-- Container/Display Start -->
 
