@@ -222,9 +222,10 @@ div.box_text {
 }
 
 
-div.col-item:hover {
+div.col-item-w1:hover {
     -webkit-box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
     box-shadow: 15px 15px 8px rgba(0, 0, 0, 0.5	);
+    border:medium solid white;
 }
 		</style>
 
@@ -328,55 +329,91 @@ function adb_svsd_onClick() {
 							<div class="col-w1">
 								<div class="col-item bgdarkslate" id="shared_box">
 									<div class="col-item-w1">
-										<div class="cb119w2 txtwhite"><strong>
-												<a class="cb119w2-a" onclick="adb_shared_onClick()" style="font-size:0.75em; text-decoration:none; color:white; cursor:pointer;">WHAT'S NEW<BR>IN SHARED</a>
-											</strong><br><br>
-											<div>
-												<a onclick="adb_shared_onClick()" style="text-decoration:none; color:white;cursor:pointer;">
-													Click to find out what's new in Autonomous Database Shared<br><br>
-												</a>
-											</div>
-										</div>
+										<table>
+											<tr>
+												<td style="vertical-align:top;">
+													<div class="icn-img icn-autonomous-db bgdarkslate fill-white" style="align:top;"></div>
+												</td>
+												<td>
+													<div class="cb119w2 txtwhite"><strong>
+															<a class="cb119w2-a" onclick="adb_shared_onClick()" style="font-size:1.15em; text-decoration:none; color:white; cursor:pointer;">WHAT'S NEW<BR>IN SHARED</a>
+														</strong><br><br>
+														<div>
+															<a onclick="adb_shared_onClick()" style="text-decoration:none; color:white;cursor:pointer;">
+																Click to find out what's new in Autonomous Database Shared<br><br>
+															</a>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</table>
 									</div>
 								</div>
 								<div class="col-item bgblue" id="dedicated_box">
 									<div class="col-item-w1">
-										<div>
-											<div class="cb119w2 txtwhite"><strong><a onclick="adb_dedicated_onClick()" style="font-size:0.75em; text-decoration:none; color:white; cursor:pointer;">WHAT'S NEW<BR>IN DEDICATED</a> </strong><br><br>
-												<div>
-													<a onclick="adb_dedicated_onClick()" style="text-decoration:none; color:white; cursor:pointer;" target="_blank">
-														Click to find out what's new in Autonomous Database Dedicated and Cloud@Customer
-													</a>
-												</div>
-											</div>
-										</div>
+										<table>
+											<tr>
+												<td style="vertical-align:top;">
+													<div class="icn-img icn-tech-cloud-iaas bgblue fill-white" style="align:top;"></div>
+												</td>
+												<td  style="vertical-align:top;">
+													<div class="cb119w2 txtwhite">
+														<strong>
+															<a onclick="adb_dedicated_onClick()" style="font-size:1.15em; text-decoration:none; color:white; cursor:pointer;">
+																WHAT'S NEW<br>IN DEDICATED
+															</a>
+														</strong>
+														<br><br>
+														<div>
+															<a onclick="adb_dedicated_onClick()" style="text-decoration:none; color:white; cursor:pointer;" target="_blank">
+																Click to find out what's new in Autonomous Database Dedicated and Cloud@Customer
+															</a>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</table>
 									</div>
 								</div>
 								<div class="col-item bgdarkburgundy" id="svsd_box">
 									<div class="col-item-w1">
-										<div>
-											<div class="cb119w2 txtwhite"><strong><a onclick="adb_svsd_onClick()" style="font-size:0.75em; text-decoration:none; color:white; cursor:pointer;">DEPLOYMENT OPTIONS</a> </strong><br><br>
-												<div>
-													<a onclick="adb_svsd_onClick()" style="text-decoration:none; color:white; cursor:pointer;">
-														Click to understand the differences between Shared vs. Dedicated<br><br>
-													</a>
-												</div>
-											</div>
-										</div>
+										<table>
+											<tr>
+												<td style="vertical-align:top;">
+													<div class="icn-img icn-tech-cloud-iaas bgdarkburgundy fill-white" style="align:top;"></div>
+												</td>
+												<td  style="vertical-align:top;">
+													<div class="cb119w2 txtwhite"><strong><a onclick="adb_svsd_onClick()" style="font-size:1.15em; text-decoration:none; color:white; cursor:pointer;">DEPLOYMENT OPTIONS</a> </strong><br><br>
+														<div>
+															<a onclick="adb_svsd_onClick()" style="text-decoration:none; color:white; cursor:pointer;">
+																Click to understand the differences between Shared vs. Dedicated<br><br>
+															</a>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</table>
 									</div>
 								</div>
 								<div class="col-item bgdarkgreen" id="aftrial_box">
 									<div class="col-item-w1">
-										<div>
-											<div class="cb119w2 txtwhite">
-												<strong><a href="https://www.oracle.com/cloud/free/?source=:ow:o:h:po:OHPPanel1nav0625&intcmp=:ow:o:h:po:OHPPanel1nav0625" style="font-size:0.75em; text-decoration:none; color:white; cursor:pointer;">TRY FOR<br>FREE</a> </strong><br><br>
-												<div>
-													<a href="https://www.oracle.com/cloud/free/?source=:ow:o:h:po:OHPPanel1nav0625&intcmp=:ow:o:h:po:OHPPanel1nav0625" style="text-decoration:none; color:white; cursor:pointer;">
-														Try Always Free cloud services and get a 30-day trial<br><br>
-													</a>
-												</div>
-											</div>
-										</div>
+										<table>
+											<tr>
+												<td style="vertical-align:top;">
+													<div class="icn-img icn-autonomous-db bgdarkgree fill-white" style="align:top;"></div>
+												</td>
+												<td  style="vertical-align:top;">
+													<div class="cb119w2 txtwhite">
+														<strong><a href="https://www.oracle.com/cloud/free/?source=:ow:o:h:po:OHPPanel1nav0625&intcmp=:ow:o:h:po:OHPPanel1nav0625" style="font-size:1.15em; text-decoration:none; color:white; cursor:pointer;">TRY FOR<br>FREE</a> </strong><br><br>
+														<div>
+															<a href="https://www.oracle.com/cloud/free/?source=:ow:o:h:po:OHPPanel1nav0625&intcmp=:ow:o:h:po:OHPPanel1nav0625" style="text-decoration:none; color:white; cursor:pointer;">
+																Try Always Free cloud services and get a 30-day trial<br><br>
+															</a>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</table>
 									</div>
 								</div>
 							</div>
