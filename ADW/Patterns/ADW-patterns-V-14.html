@@ -256,6 +256,23 @@ a[href="place-holder.html"] {
   }
 }
 		</style>
+
+<script>
+    function changeClassEbus(){
+		document.getElementById("section-ebus").className = "cb129w4 cb129open";
+		document.getElementById("section-ebus").scrollIntoView(); 
+    }
+
+    function changeClassEDW(){
+		document.getElementById("section-edw").className = "cb129w4 cb129open";
+		document.getElementById("section-edw").scrollIntoView(); 
+    }
+
+    window.onload = function(){
+        document.getElementById("OpenEbus").addEventListener( 'click', changeClassEbus);
+        document.getElementById("OpenEDW").addEventListener( 'click', changeClassEDW);
+    }
+</script>
 		<div class="f11w1">
 			
 <!-- start Common/Header -->
@@ -449,7 +466,7 @@ a[href="place-holder.html"] {
 																			<br>
 																			<br>
 																			<br>
-																			<a title="Goto information about using Data Catalog"  href="#Catalog" style="text-decoration:none; color:white;" target="_blank">
+																			<a title="Govern data using an organized inventory of data assets across your enterprise" href="#Catalog" style="text-decoration:none; color:white;">
 																				<button class="cb51-btn"> + </button>
 																			</a>
 																		</div>
@@ -610,12 +627,81 @@ a[href="place-holder.html"] {
 														</div>
 													</div>
 												</div>
+												<div class="col-item bgburgundy">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-security-endpoint icn-circle bgburgundy fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					AUDITING
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Add Auditing to Control And Monitor Data Access.
+																			<br>
+																			<br>
+																			<br>
+																			<br>
+																			<a title="Goto information for Data Safe" href="#DbVault" style="text-decoration:none; color:white;">
+																				<button class="cb51-btn"> + </button>
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
 										<br>
 										<h4 style="color:#30688C; font-size:14pt;">Broaden The Scope Of Your Departmental Data Warehouse...</h4>
 										<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
 											<div class="col-w1">
+												<div class="col-item bglightorange">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-prima icn-circle bglightorange fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					ENTERPRISE<br>APPS
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite" style="margin-right:10px;">
+																			Add Additional Data Sets From Enterprise Applications
+																			<br>
+																			<br>
+																			<br>
+																			<button class="cb51-btn" id="OpenEbus"> + </button>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
 												<div class="col-item bglightblue">
 													<div class="col-item-w1">
 														<div>
@@ -641,9 +727,7 @@ a[href="place-holder.html"] {
 																			<br>
 																			<br>
 																			<br>
-																			<a title="Goto information about streaming and real-time data capture" href="#EDWDL" style="text-decoration:none; color:white;">
-																				<button class="cb51-btn"> + </button>
-																			</a>
+																			<button class="cb51-btn" id="OpenEDW"> + </button>
 																		</div>
 																	</td>
 																</tr>
@@ -676,9 +760,7 @@ a[href="place-holder.html"] {
 																			<br>
 																			<br>
 																			<br>
-																			<a title="Goto information about building a data lake" href="#EDWDL" style="text-decoration:none; color:white;">
-																				<button class="cb51-btn"> + </button>
-																			</a>
+																			<button class="cb51-btn" id="OpenEDW"> + </button>
 																		</div>
 																	</td>
 																</tr>
@@ -694,11 +776,12 @@ a[href="place-holder.html"] {
 							</div>
 						</div>
 					</div>
+					<a name="ebus"></a>
 					<div class="cb129w2">
 						<div class="cb129w3">
 							<h4 class="icn-autonomous-db">Departmental Data Warehouse From E-Business Suite</h4>
 						</div>
-						<div class="cb129w4">
+						<div class="cb129w4" id="section-ebus">
 							<div class="col-framework col2 col-threetwofifth col-gutters col-noanimation">
 								<div class="col-w1">
 									<div class="col-item">
@@ -992,9 +1075,7 @@ a[href="place-holder.html"] {
 																			<br>
 																			<br>
 																			<br>
-																			<a title="Goto information about streaming and real-time data capture" href="#EDWDL" style="text-decoration:none; color:white;">
-																				<button class="cb51-btn"> + </button>
-																			</a>
+																			<button class="cb51-btn" id="OpenEDW"> + </button>
 																		</div>
 																	</td>
 																</tr>
@@ -1027,9 +1108,7 @@ a[href="place-holder.html"] {
 																			<br>
 																			<br>
 																			<br>
-																			<a title="Goto information about building a data lake" href="#EDWDL" style="text-decoration:none; color:white;">
-																				<button class="cb51-btn"> + </button>
-																			</a>
+																			<button class="cb51-btn" id="OpenEDW"> + </button>
 																		</div>
 																	</td>
 																</tr>
@@ -1045,7 +1124,6 @@ a[href="place-holder.html"] {
 							</div>
 						</div>
 					</div>
-					<a name="EDWDL"></a>
 					<div class="cb129w2">
 						<div class="cb129w3">
 							<h4 class="icn-autonomous-db">Departmental Data Warehouse For Human Capital</h4>
@@ -1235,9 +1313,7 @@ a[href="place-holder.html"] {
 																			<br>
 																			<br>
 																			<br>
-																			<a title="Goto information for Data Safe" href="#DataSafe" style="text-decoration:none; color:white;">
-																				<button class="cb51-btn"> + </button>
-																			</a>
+																			<button class="cb51-btn" id="OpenEDW"> + </button>
 																		</div>
 																	</td>
 																</tr>
@@ -1276,9 +1352,7 @@ a[href="place-holder.html"] {
 																			<br>
 																			<br>
 																			<br>
-																			<a title="Goto information about building a data lake" href="#EDWDL" style="text-decoration:none; color:white;">
-																				<button class="cb51-btn"> + </button>
-																			</a>
+																			<button class="cb51-btn" id="OpenEDW"> + </button>
 																		</div>
 																	</td>
 																</tr>
@@ -1299,7 +1373,7 @@ a[href="place-holder.html"] {
 						<div class="cb129w3">
 							<h4 class="icn-autonomous-db">Enterprise Data Warehouse with Data Lakes</h4>
 						</div>
-						<div class="cb129w4 cb129open">
+						<div class="cb129w4" id="section-edw">
 							<div class="col-framework col2 col-threetwofifth col-gutters col-noanimation">
 								<div class="col-w1">
 									<div class="col-item">
@@ -1474,7 +1548,7 @@ a[href="place-holder.html"] {
 																			<br>
 																			<br>
 																			<br>
-																			<a title="Goto information about using property graphs" href="#graphs" style="text-decoration:none; color:white;">
+																			<a title="Goto information on spatial analytics" href="#graphs" style="text-decoration:none; color:white;">
 																				<button class="cb51-btn"> + </button>
 																			</a>
 																		</div>
@@ -1565,9 +1639,9 @@ a[href="place-holder.html"] {
 							</td>
 							<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
 								<p class="video_header" style="margin-top:10px;">
-									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Departmental Data Warehouse Pattern</span>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Extending Your Oracle Reference Architecture Pattern</span>
 									<br>
-									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Extending Your Data Warehouse With Analytic Views</span>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Working With Analytic Views</span>
 								</p>
 							</td>
 							<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
@@ -1591,9 +1665,9 @@ a[href="place-holder.html"] {
 							</td>
 							<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
 								<p class="video_header" style="margin-top:10px;">
-									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Departmental Data Warehouse Pattern</span>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Extending Your Oracle Reference Architecture Pattern</span>
 									<br>
-									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Extending Your Data Warehouse With Machine Learning</span>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Using Machine Learning</span>
 								</p>
 							</td>
 							<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
@@ -1617,9 +1691,9 @@ a[href="place-holder.html"] {
 							</td>
 							<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
 								<p class="video_header" style="margin-top:10px;">
-									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Departmental Data Warehouse Pattern</span>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Extending Your Oracle Reference Architecture Pattern</span>
 									<br>
-									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Extending Your Data Warehouse With Spatial Analytics</span>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Using Spatial Analytics</span>
 								</p>
 							</td>
 							<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
@@ -1634,7 +1708,7 @@ a[href="place-holder.html"] {
 			</div>
 
 <!-- /CB27v5 -->
-			<div id="maps" class="modalPopWindow">
+			<div id="graphs" class="modalPopWindow">
 				<div class="embedded-video-16-9">
 					<table width="100%" style="background-color:white;">
 						<tr>
@@ -1643,9 +1717,9 @@ a[href="place-holder.html"] {
 							</td>
 							<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
 								<p class="video_header" style="margin-top:10px;">
-									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Departmental Data Warehouse Pattern</span>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Extending Your Oracle Reference Architecture Pattern</span>
 									<br>
-									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Extending Your Data Warehouse With Spatial Analytics</span>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Using Graph Analytics</span>
 								</p>
 							</td>
 							<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
@@ -1655,13 +1729,13 @@ a[href="place-holder.html"] {
 							</td>
 						</tr>
 					</table>
-					<iframe width="100%" style="overflow: scroll; background-color:white;" src="ADW-Maps.html"></iframe>
+					<iframe width="100%" style="overflow: scroll; background-color:white;" src="ADW-Graph.html"></iframe>
 				</div>
 			</div>
 
 
 <!-- /CB27v5 -->
-			<div id="catalog" class="modalPopWindow">
+			<div id="Catalog" class="modalPopWindow">
 				<div class="embedded-video-16-9">
 					<table width="100%" style="background-color:white;">
 						<tr>
@@ -1672,7 +1746,7 @@ a[href="place-holder.html"] {
 								<p class="video_header" style="margin-top:10px;">
 									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Departmental Data Warehouse Pattern</span>
 									<br>
-									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Extending Your Data Warehouse With Data Catalog</span>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Building A Data Catalog</span>
 								</p>
 							</td>
 							<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
@@ -1683,6 +1757,58 @@ a[href="place-holder.html"] {
 						</tr>
 					</table>
 					<iframe width="100%" style="overflow: scroll; background-color:white;" src="ADW-Catalog.html"></iframe>
+				</div>
+			</div>
+
+<!-- /CB27v5 -->
+			<div id="DataSafe" class="modalPopWindow">
+				<div class="embedded-video-16-9">
+					<table width="100%" style="background-color:white;">
+						<tr>
+							<td style="background-color:white;">
+								<img src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3686f2be-72a7-40d0-bcd5-f3ef9f6e2ac7/Image/8f9e6155df15d7f113540ecc07a45592/ai_blog_pic.jpg" width="170px">
+							</td>
+							<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
+								<p class="video_header" style="margin-top:10px;">
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Extending Your Oracle Reference Architecture Pattern</span>
+									<br>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Protecting Your Data With Data Safe</span>
+								</p>
+							</td>
+							<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
+								<a href="#close" title="Close" id="closeOml" style="background-color:#3a6f86; color:white; font=weight:bold; font-family:arial; font-size:16pt; text-decoration:none;">
+									Close
+								</a>
+							</td>
+						</tr>
+					</table>
+					<iframe width="100%" style="overflow: scroll; background-color:white;" src="ADW-DataSafe.html"></iframe>
+				</div>
+			</div>
+
+<!-- /CB27v5 -->
+			<div id="DbVault" class="modalPopWindow">
+				<div class="embedded-video-16-9">
+					<table width="100%" style="background-color:white;">
+						<tr>
+							<td style="background-color:white;">
+								<img src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3686f2be-72a7-40d0-bcd5-f3ef9f6e2ac7/Image/8f9e6155df15d7f113540ecc07a45592/ai_blog_pic.jpg" width="170px">
+							</td>
+							<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
+								<p class="video_header" style="margin-top:10px;">
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Extending Your Oracle Reference Architecture Pattern</span>
+									<br>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Controlling Access To Your Data With Database Vault</span>
+								</p>
+							</td>
+							<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
+								<a href="#close" title="Close" id="closeOml" style="background-color:#3a6f86; color:white; font=weight:bold; font-family:arial; font-size:16pt; text-decoration:none;">
+									Close
+								</a>
+							</td>
+						</tr>
+					</table>
+					<iframe width="100%" style="overflow: scroll; background-color:white;" src="ADW-DbVault.html"></iframe>
 				</div>
 			</div>
 
