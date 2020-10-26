@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+	<head>
+		<title>Autonomous Data Warehouse Use Case Patterns</title>
+		<meta name="Title" content="Oracle Database for Data Warehousing and Big Data">
+		<meta name="Description" content="Home page for features and options of Oracle Database which support data warehousing and data.">
+		<meta name="Keywords" content="oracle database, data warehousing, business intelligence, exadata, database machine, big data, 18c, 19c">
+
+<!-- Container/Display Start -->
+
+<!-- _Raw-Text -->
+	<!-- css / js files start -->
+	<script>
+	!function(){
+		var d=document.documentElement;d.className=d.className.replace(/no-js/,'js');
+		if(document.location.href.indexOf('betamode=') > -1) document.write('<script src="https://www.oracle.com/asset/web/js/ocom-betamode.js"><\/script>');
+	}();
+	</script>
+		<link data-wscss href="https://www.oracle.com/asset/web/css/ocom-v1-base.css" rel="stylesheet">
+		<link data-wscss href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="preload" as="style" onload="this.rel='stylesheet'" onerror="this.rel='stylesheet'">
+		<noscript>
+			<link href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="stylesheet">
+		</noscript>
+	<script data-wsjs src="https://www.oracle.com/asset/web/js/jquery-min.js" async onload="$('head link[data-reqjq][rel=preload]').each(function(){var a = document.createElement('script');a.async=false;a.src=$(this).attr('href');this.parentNode.insertBefore(a, this);});$(function(){$('script[data-reqjq][data-src]').each(function(){this.async=true;this.src=$(this).data('src');});});"></script>
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/ocom-v1-base.js" rel="preload" as="script">
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/ocom-v1-lib.js" rel="preload" as="script">
+	<!-- end css / js files start -->
+<!-- / _Raw-Text -->
+
+<!-- Container/Display end -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="siteid" content="us">
+		<meta name="countryid" content="US">
+		<meta name="robots" content="index, follow">
+		<meta name="country" content="United States">
+		<meta name="Language" content="en">
+		<meta name="Updated Date" content="2018-04-19T19:17:32Z">
+	
+	<script type="text/javascript">
+		var pageData = pageData || {};
+		//page info
+		pageData.pageInfo = pageData.pageInfo || {};
+		pageData.pageInfo.language = "en";
+		pageData.pageInfo.country = "United States";
+		pageData.pageInfo.pageTitle = "Oracle Data Warehouse Use Case Patterns";
+		pageData.pageInfo.description = "Home page for features and options of Oracle Database which support data warehousing and data.";
+		pageData.pageInfo.keywords = "oracle database, data warehousing, business intelligence, exadata, database machine, big data, 18c, 19c";
+		pageData.pageInfo.siteId = "us";
+		pageData.pageInfo.countryId = "US";
+		pageData.pageInfo.updatedDate = "2018-04-19T19:17:32Z";
+	</script>
+	<!-- start : ocom/common/global/components/seo-taxonomy-meta-data-->
+	
+	<script type="text/javascript">
+		var pageData = pageData || {};
+		//taxonmy
+		pageData.taxonomy = pageData.taxonomy || {};
+		pageData.taxonomy.productServices = [];
+		pageData.taxonomy.industry = [];
+		pageData.taxonomy.region = [];
+		pageData.taxonomy.contentType = [];
+		pageData.taxonomy.buyersJourney = [];
+		pageData.taxonomy.revenue = [];
+		pageData.taxonomy.title = [];
+		pageData.taxonomy.audience = [];
+		pageData.taxonomy.persona = [];
+	</script>
+
+<!-- _Raw-Text -->
+<!-- www-us HeadAdminContainer -->
+<script async="async" type="text/javascript" src='//consent.truste.com/notice?domain=oracle.com&c=teconsent&js=bb&noticeType=bb&text=true&gtm=1&cdn=1&pcookie' crossorigin></script>
+		<style>
+#oReactiveChatContainer1 { display:none;}
+		</style>
+<!--DTM embed code - Header -->
+<script src="//assets.adobedtm.com/6f37a0dc9cdbe818dc4979828b58b88e3f060ea4/satelliteLib-e598c5b61e39a10b402e048e87dd27b0f1cd2d4c.js"></script>
+
+<!-- Truste for RU -->
+<script type="text/javascript">
+ if (location.pathname.indexOf("/ru/") == 0){
+ document.write('\x3Cscript async="async" src=//consent.truste.com/notice?domain=oracleru.com&c=teconsent&js=bb&noticeType=bb&text=true&gtm=1&cdn=1&pcookie crossorigin="">\x3C/script>');
+ }
+ </script>
+<!--End-->
+
+<!-- / _Raw-Text -->
+
+<!-- Container/Display end -->
+
+ 
+ <script>!function(){function o(n,i){if(n&&i)for(var r in i)i.hasOwnProperty(r)&&(void 0===n[r]?n[r]=i[r]:n[r].constructor===Object&&i[r].constructor===Object?o(n[r],i[r]):n[r]=i[r])}try{var n=decodeURIComponent("");if(n.length>0&&window.JSON&&"function"==typeof window.JSON.parse){var i=JSON.parse(n);void 0!==window.BOOMR_config?o(window.BOOMR_config,i):window.BOOMR_config=i}}catch(r){window.console&&"function"==typeof window.console.error&&console.error("mPulse: Could not parse configuration",r)}}();</script>
+ <script>!function(e){var a="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,a="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="DXNLE-YBWWY-AR74T-WMD99-77VRA",function(){function n(a){e.BOOMR_onload=a&&a.timeStamp||(new Date).getTime()}if(!e.BOOMR||!e.BOOMR.version&&!e.BOOMR.snippetExecuted){e.BOOMR=e.BOOMR||{},e.BOOMR.snippetExecuted=!0;var i,o,r,_=document.createElement("iframe");if(e[t])e[t]("load",n,!1);else if(e.attachEvent)e.attachEvent("onload",n);_.src="javascript:void(0)",_.title="",_.role="presentation",(_.frameElement||_).style.cssText="width:0;height:0;border:0;display:none;",r=document.getElementsByTagName("script")[0],r.parentNode.insertBefore(_,r);try{o=_.contentWindow.document}catch(O){i=document.domain,_.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",o=_.contentWindow.document}o.open()._l=function(){var e=this.createElement("script");if(i)this.domain=i;e.id="boomr-if-as",e.src=a+"DXNLE-YBWWY-AR74T-WMD99-77VRA",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(e)},o.write("<bo"+'dy onload="document._l();">'),o.close()}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var a=""=="true"?1:0,t="",n="rwh5knqx22ok4xofr2ya-f-bedd3d897-clientnsv4-s.akamaihd.net",i={"ak.v":25,"ak.cp":"82485","ak.ai":parseInt("165266",10),"ak.ol":"0","ak.cr":2,"ak.ipv":4,"ak.proto":"h2","ak.rid":"ecc3871","ak.r":20831,"ak.a2":a,"ak.m":"dscx","ak.n":"essl","ak.bpcip":"141.143.213.0","ak.cport":46539,"ak.gh":"23.212.108.11","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1573228208"};if(""!==t)i["ak.ruds"]=t;var o={i:!1,av:function(a){var t="http.initiator";if(a&&(!a[t]||"spa_hard"===a[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:n,init:function(){if(!o.i){var e=BOOMR.subscribe;e("before_beacon",o.av,null,null),e("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script>
+	</head>
+	<body class="f11 f11v6">
+		<style>
+.cb51-btn {
+    border: 0;
+    background: transparent;
+    color: transparent;
+    position: absolute;
+    font-size: 3.8rem;
+    left: 50%;
+    margin-left: -0.5em;
+    height: 38px;
+    width: 38px;
+    bottom: 1em;
+    z-index: 2;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+}
+
+.cb51-btn:after, .cb51-btn:before {
+    content: ' ';
+    height: 100%;
+    width: 100%;
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJJY29uIiB2aWV3Qm94PSItNTc1IDUwNSA0NCA0NCI+PHN0eWxlPi5he2ZpbGw6I0ZGRjt9PC9zdHlsZT48cGF0aCBkPSJNLTU1MyA1MDdjMTEgMCAyMCA5IDIwIDIwcy05IDIwLTIwIDIwIC0yMC05LTIwLTIwUy01NjQgNTA3LTU1MyA1MDdNLTU1MyA1MDVjLTEyLjIgMC0yMiA5LjgtMjIgMjJzOS44IDIyIDIyIDIyIDIyLTkuOCAyMi0yMlMtNTQwLjggNTA1LTU1MyA1MDVMLTU1MyA1MDV6IiBjbGFzcz0iYSIvPjxwb2x5Z29uIHBvaW50cz0iLTU0NC40IDUyNiAtNTUyIDUyNiAtNTUyIDUxOCAtNTU0IDUxOCAtNTU0IDUyNiAtNTYxLjYgNTI2IC01NjEuNiA1MjggLTU1NCA1MjggLTU1NCA1MzYgLTU1MiA1MzYgLTU1MiA1MjggLTU0NC40IDUyOCAiIGNsYXNzPSJhIi8+PC9zdmc+DQo=) no-repeat 50% 50% transparent;
+    background-size: 100% auto;
+    -webkit-transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cb51-btn:after {
+    opacity: 0;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iLTU3NSA1MDUgNDQgNDQiPjxwYXRoIGQ9Ik0tNTUzIDUwNWMtMTIuMiAwLTIyIDkuOC0yMiAyMnM5LjggMjIgMjIgMjIgMjItOS44IDIyLTIyUy01NDAuOCA1MDUtNTUzIDUwNXpNLTU0NC40IDUyOGgtNy42djhoLTEuOXYtOGgtNy42di0yaDcuNnYtOGgxLjl2OGg3LjZWNTI4eiIgZmlsbD0iI0ZGRiIvPjwvc3ZnPg==);
+}
+.cb51-btn:after, .cb51-btn:before {
+    content: ' ';
+    height: 100%;
+    width: 100%;
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJJY29uIiB2aWV3Qm94PSItNTc1IDUwNSA0NCA0NCI+PHN0eWxlPi5he2ZpbGw6I0ZGRjt9PC9zdHlsZT48cGF0aCBkPSJNLTU1MyA1MDdjMTEgMCAyMCA5IDIwIDIwcy05IDIwLTIwIDIwIC0yMC05LTIwLTIwUy01NjQgNTA3LTU1MyA1MDdNLTU1MyA1MDVjLTEyLjIgMC0yMiA5LjgtMjIgMjJzOS44IDIyIDIyIDIyIDIyLTkuOCAyMi0yMlMtNTQwLjggNTA1LTU1MyA1MDVMLTU1MyA1MDV6IiBjbGFzcz0iYSIvPjxwb2x5Z29uIHBvaW50cz0iLTU0NC40IDUyNiAtNTUyIDUyNiAtNTUyIDUxOCAtNTU0IDUxOCAtNTU0IDUyNiAtNTYxLjYgNTI2IC01NjEuNiA1MjggLTU1NCA1MjggLTU1NCA1MzYgLTU1MiA1MzYgLTU1MiA1MjggLTU0NC40IDUyOCAiIGNsYXNzPSJhIi8+PC9zdmc+DQo=) no-repeat 50% 50% transparent;
+    background-size: 100% auto;
+    -webkit-transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a[href="place-holder.html"] { 
+   pointer-events: none; 
+}
+
+.video_header {
+    color: #3a6f86 !Important;
+	text-align: center;
+}
+
+.close {
+	background: #3a6f86 !Important;
+	color: white;
+	line-height: 25px;
+	position: absolute;
+	right: 50%;
+	left:50%;
+	text-align: center;
+	top: 0px;
+	width: 200px;
+	height:75px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+	align:right;
+}
+
+.modalPopWindow:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalPopWindow > div {
+    position: relative;
+    height: 85%;
+   	padding-bottom: 75%;
+    overflow: hidden;
+    position: relative;
+	margin: 5% auto;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+	text-align:center !important;
+}
+
+
+.modalPopWindow {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0px;
+	right: 10px;
+	bottom: 10px;
+	left: 10px;
+	background: rgba(0,0,0,0.6);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+	width:  100%;
+    height: 100%;
+
+}
+
+
+.modalPopWindow iframe {
+    top: 125px;
+    left: 1%;
+	margin-bottom:50px;
+    right: 1%;
+    align:center;
+    width: 99%;
+    height: 500px;
+    position: absolute;
+    overflow: scroll;
+    border:0px;
+}
+
+
+.embedded-video-16-9 {
+  width:  80%;
+  height: 70%;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+
+.content-row iframe {
+   display: block; 
+   width: 100%; 
+   height: 100%; 
+   border: none;
+}
+
+#image-table{
+	border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    box-shadow: 10px 10px 5px grey; 
+    border:2px solid lightgrey; 
+    padding: 0px;
+    width:490px;
+}
+
+#needs-hover:hover{
+    box-shadow: 10px 10px 10px grey; 
+
+}
+
+@media (min-width: 893px) {
+  .embedded-video-16-9 {
+    width: 80%;
+    height: 70%;
+    margin-left: 1vw;
+    margin-right: 1vw
+  }
+}
+		</style>
+
+<script>
+    function changeClassEbus(){
+		document.getElementById("section-ebus").className = "cb129w4 cb129open";
+		document.getElementById("section-ebus").scrollIntoView(); 
+    }
+
+    function changeClassEDW(){
+		document.getElementById("section-edw").className = "cb129w4 cb129open";
+		document.getElementById("section-edw").scrollIntoView(); 
+    }
+
+    window.onload = function(){
+        document.getElementById("OpenEbus").addEventListener( 'click', changeClassEbus);
+        document.getElementById("OpenEDW").addEventListener( 'click', changeClassEDW);
+    }
+</script>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("deptDW");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+		<div class="f11w1">
+			
+<!-- start Common/Header -->
+ 
+	<!-- Dispatcher:null -->
+	
+<!-- BEGIN: oWidget_C/_Raw-Text/Display -->
+<!-- CB83v2 -->
+			<section class="cb83 cb83v2 cpad bgblue" data-trackas="cb83" data-ocomid="cb83">
+				<div class="cb83w7 cwidth">
+					<div class="cb83w5">
+						<div class="svgimg obic">
+							<img src="https://www.oracle.com/a/tech/img/autonomous-data-warehouse-cloud.svg" alt="Autonomous Data Warehouse">
+						</div>
+					</div>
+					<div class="cb83w3">
+						<h2>Autonomous Data Warehouse<br>Use Case Patterns</h2>
+						<p>
+							Oracle Autonomous Data Warehouse is Oracle's new, fully managed database tuned and optimized for data warehouse workloads with the market-leading performance of Oracle Database. It delivers a completely new, comprehensive cloud experience for data warehousing that is easy, fast, and elastic.
+						</p>
+					</div>
+				</div>
+			</section>
+<!-- /CB83v2 -->
+<!-- CB27v5 -->
+			<section class="cb27 cb27v5 bgburgundy" data-trackas="cb27">
+				<div class="cb27w1 cwidth">
+					<div class="cb27w2">What's the difference between a data warehouse, data mart and a data lake?</div>
+					<div class="cb27w3">
+						<div class="obttns">
+							<div class="bttn-darkburgundy obttn6">
+								<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/glossary-dw.html">Find out here</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+<!-- /CB27v5 -->
+			<section class="cb90 cb90v0 cpad bgvlightgrey" data-ocomid="cb90" data-trackas="cb90">
+				<div class="cb90w1 cwidth">
+				</div>
+			</section>
+
+
+
+
+<!-- CB129v0 -->
+			<section class="cb129 cb129v0 cpad bgvlightgrey" data-trackas="cb129" data-ocomid="cb129">
+				<header class="cwidth">
+					<div class="eyebrow">Get the details</div>
+					<h2>Data Warehouse Reference Architecture Patterns</h2>
+					<a class="icn-img icn-plus cb129icn cb129toggle-all">
+						<span class="cb129open-all">Open all</span>
+						<span class="cb129close-all">Close all</span>
+					</a>
+				</header>
+				<div class="cb129w1 cwidth">
+					<div class="cb129w2">
+						<div class="cb129w3">
+							<h4 class="icn-autonomous-db">Departmental Data Warehouse Pattern</h4>
+						</div>
+						<div class="cb129w4 cb129open">
+							<div class="col-framework col2 col-threetwofifth col-gutters col-noanimation">
+								<div class="col-w1">
+									<div class="col-item">
+										<div class="col-item-w1">
+											<div style="color:black; text-align:left !important; margin-left:10px; margin-right:10px;">
+												<p>A departmental data warehouse is used by individual teams or individual departments or groups and is intentionally limited in scope because it focuses on a clearly defined subset of data usually managed within a spreadsheet package.
+												</p>
+												<p>
+													Autonomous Database makes it easy to move departmental marts to a safe, secure always-on cloud...
+												</p>
+											</div>
+											<div class="obttns">
+												<div><a href="https://docs.oracle.com/en/solutions/oci-spreadsheet-analysis/index.html#GUID-B70715C4-9C44-48AB-A7AE-2B31BC252A40">More Information</a>
+												</div>
+												<div><a href="https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?p180_id=582">Take a Workshop</a>
+												</div>
+												<div><a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/adw-training-plans.html">View Training Plans</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-item">
+										<div class="col-item-w1">
+											<a class="ozoom ozoom-cta" rel="lightbox" href="https://docs.oracle.com/en/solutions/oci-spreadsheet-analysis/img/analysis-spreadsheets-architecture.png">
+												<img src="https://docs.oracle.com/en/solutions/oci-spreadsheet-analysis/img/analysis-spreadsheets-architecture.png">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-framework col1 col-threetwofifth col-gutters col-noanimation">
+								<div class="col-w1">
+									<div class="col-item">
+										<br>
+										<div style="margin-left:5px;">
+											<h4 style="color:#30688C; font-size:14pt;">Departmental Data Warehouse Customer Example</h4>
+											<br>
+											<br>
+											<table id="image-table">
+												<tr>
+													<td valign="top">
+														<div style="margin-left:10px; margin-top:10px; text-align:center;">
+															<h4>AoA Innovates Healthcare with Autonomous Database</h4>
+														</div>
+														<img src="https://img.youtube.com/vi/It8a0WqmB7M/0.jpg">
+														<br>
+													</td>
+												</tr>
+												<tr>
+													<td valign="top">
+														<div style="margin-left:10px; margin-top:10px;">
+															<p style="font-size:0.9em;">
+																AoA's benefited from zero maintenance, patching, or tuning database which freed up 6 financial and IT analysts. By using a modern data warehouse they were able to deliver real-time performance dashboards and reports for providers for more patient time.<br><br>Doubled patient count without adding maintenance and support IT costs and resources
+															</p>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td align="center">
+														<div class="obttns">
+															<div class="bttn-darkburgundy obttn6">
+																<a href="https://www.youtube.com/watch?v=It8a0WqmB7M" target="_blank"><span style="font-size:16pt">Watch</span></a>
+																<br>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+<!-- CB119v0 -->
+								<section class="cb119 cb119v0 cpad" data-ocomid="cb119" data-trackas="cb119">
+									<div class="cb119w1 cwidth">
+										<h4 style="color:#30688C;">Where To Next...</h4>
+										<div id="deptDW">
+											<p>
+												Use the following topics to explore how you can get more from your Departmental Data Warehouse:
+											</p>
+											<h4 style="color:#30688C; font-size:14pt;">Discover How To Organize Your Data...</h4>
+											<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+												<div class="col-w1">
+													<div class="col-item bgdarkslate">
+														<div class="col-item-w1"  id="needs-hover">
+															<div>
+																<table>
+																	<tr>
+																		<td style="vertical-align:top;">
+																			<div class="icn-img icn-extensible-architecture icn-circle bgdarkslate fill-white">&nbsp;</div>
+																		</td>
+																		<td>
+																			<div class="cb119w2 txtwhite">
+																				<strong>
+																					<div style="font-size:0.7em; line-height: 99% !important;">
+																						ADD<br>CUBES
+																					</div>
+																				</strong>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan="2">
+																			<div class="cb119w2 txtwhite">
+																				Add A Business Model Over Your Schema With Analytical
+																				Views
+																				<br>
+																				<br>
+																				<br>
+																				<br>
+																				<a title="Goto information for crearting cubes and dimensions over your schema" href="#Cubes" style="text-decoration:none; color:white;">
+																					<button class="cb51-btn"> + </button>
+																				</a>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+														</div>
+													</div>
+													<div class="col-item bgred" style="">
+														<div class="col-item-w1" id="needs-hover">
+															<div>
+																<table>
+																	<tr>
+																		<td style="vertical-align:top;">
+																			<div class="icn-img icn-archivingdata icn-circle bgred fill-white">&nbsp;</div>
+																		</td>
+																		<td>
+																			<div class="cb119w2 txtwhite">
+																				<strong>
+																					<div style="font-size:0.7em; line-height: 99% !important;">
+																						CATALOG YOUR DATA
+																					</div>
+																				</strong>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan="2">
+																			<div class="cb119w2 txtwhite">
+																				Catalog Your Data Sets And Build A Business Glossary Using Data Catalog
+																				<br>
+																				<br>
+																				<br>
+																				<a title="Govern data using an organized inventory of data assets across your enterprise" href="#Catalog" style="text-decoration:none; color:white;">
+																					<button class="cb51-btn"> + </button>
+																				</a>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<br>
+											<h4 style="color:#30688C; font-size:14pt;">Discover New Ways to Analyze Your Data...</h4>
+											<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+												<div class="col-w1">
+													<div class="col-item bgblue">
+														<div class="col-item-w1" id="needs-hover">
+															<div>
+																<table>
+																	<tr>
+																		<td style="vertical-align:top;">
+																			<div class="icn-img icn-tech-ai icn-circle bgblue fill-white">&nbsp;</div>
+																		</td>
+																		<td>
+																			<div class="cb119w2 txtwhite">
+																				<strong>
+																					<div style="font-size:0.7em; line-height: 99% !important;">
+																						DATA SCIENCE
+																					</div>
+																				</strong>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan="2">
+																			<div class="cb119w2 txtwhite">
+																				Discover New Insights By Building Machine Learning Models
+																				<br>
+																				<br>
+																				<br>
+																				<a title="Goto information about machine learning" href="#oml" style="text-decoration:none; color:white;">
+																					<button class="cb51-btn"> + </button>
+																				</a>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+														</div>
+													</div>
+													<div class="col-item bggreen">
+														<div class="col-item-w1" id="needs-hover">
+															<div>
+																<table>
+																	<tr>
+																		<td style="vertical-align:top;">
+																			<div class="icn-img icn-globe-east icn-circle bggreen fill-white">&nbsp;</div>
+																		</td>
+																		<td>
+																			<div class="cb119w2 txtwhite">
+																				<strong>
+																					<div style="font-size:0.7em; line-height: 99% !important;">
+																						EXPLORE MAPS
+																					</div>
+																				</strong>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan="2">
+																			<div class="cb119w2 txtwhite">
+																				Overlay Maps On To Your Data Using Spatial Analytics
+																				<br>
+																				<br>
+																				<br>
+																				<a title="Goto information on spatial analytics" href="#maps" style="text-decoration:none; color:white;">
+																					<button class="cb51-btn"> + </button>
+																				</a>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+														</div>
+													</div>
+													<div class="col-item bgorange">
+														<div class="col-item-w1" id="needs-hover">
+															<div>
+																<table>
+																	<tr>
+																		<td style="vertical-align:top;">
+																			<div class="icn-img icn-resources icn-circle bgorange fill-white">&nbsp;</div>
+																		</td>
+																		<td>
+																			<div class="cb119w2 txtwhite">
+																				<strong>
+																					<div style="font-size:0.7em; line-height: 99% !important;">
+																						DISCOVER LINKS
+																					</div>
+																				</strong>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan="2">
+																			<div class="cb119w2 txtwhite">
+																				Explore Connections Within Your Data Using Property Graphs
+																				<br>
+																				<br>
+																				<br>
+																				<a title="Goto information about using property graphs"  href="#graphs" style="text-decoration:none; color:white;">
+																					<button class="cb51-btn"> + </button>
+																				</a>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<br>
+											<h4 style="color:#30688C; font-size:14pt;">Learn How To Protect Your Sensitive Data...</h4>
+											<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+												<div class="col-w1">
+													<div class="col-item bgdarkorange">
+														<div class="col-item-w1" id="needs-hover">
+															<div>
+																<table>
+																	<tr>
+																		<td style="vertical-align:top;">
+																			<div class="icn-img icn-vpn icn-circle bgdarkorange fill-white">&nbsp;</div>
+																		</td>
+																		<td>
+																			<div class="cb119w2 txtwhite">
+																				<strong>
+																					<div style="font-size:0.7em; line-height: 99% !important;">
+																						PROTECT DATA
+																					</div>
+																				</strong>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan="2">
+																			<div class="cb119w2 txtwhite">
+																				Discover, Mask. Secure, Monitor All Your Data Using Data Safe<br>
+																				<br>
+																				<br>
+																				<br>
+																				<a title="Goto information for Data Safe" href="#DataSafe" style="text-decoration:none; color:white;">
+																					<button class="cb51-btn"> + </button>
+																				</a>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+														</div>
+													</div>
+													<div class="col-item bgburgundy">
+														<div class="col-item-w1" id="needs-hover">
+															<div>
+																<table>
+																	<tr>
+																		<td style="vertical-align:top;">
+																			<div class="icn-img icn-security-endpoint icn-circle bgburgundy fill-white">&nbsp;</div>
+																		</td>
+																		<td>
+																			<div class="cb119w2 txtwhite">
+																				<strong>
+																					<div style="font-size:0.7em; line-height: 99% !important;">
+																						AUDITING
+																						<br><br>
+																					</div>
+																				</strong>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan="2">
+																			<div class="cb119w2 txtwhite">
+																				Add In-Database Auditing to Control And Monitor Data Access.
+																				<br>
+																				<br>
+																				<br><br>
+																				<a title="Goto information for Data Safe" href="#DbVault" style="text-decoration:none; color:white;">
+																					<button class="cb51-btn"> + </button>
+																				</a>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<br>
+											<h4 style="color:#30688C; font-size:14pt;">Broaden The Scope Of Your Departmental Data Warehouse...</h4>
+											<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+												<div class="col-w1">
+													<div class="col-item bglightorange">
+														<div class="col-item-w1" id="needs-hover">
+															<div>
+																<table>
+																	<tr>
+																		<td style="vertical-align:top;">
+																			<div class="icn-img icn-cmpn-high-availability icn-circle bglightorange fill-white">&nbsp;</div>
+																		</td>
+																		<td>
+																			<div class="cb119w2 txtwhite">
+																				<strong>
+																					<div style="font-size:0.7em; line-height: 99% !important;">
+																						ENTERPRISE<br>APPS
+																					</div>
+																				</strong>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan="2">
+																			<div class="cb119w2 txtwhite">
+																				Intergate Additional<br> Richer Data Sets From <br>Enterprise Applications<br>
+																				<br>
+																				<br>
+																				<br>
+																				<button class="cb51-btn" id="OpenEDW"> + </button>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+														</div>
+													</div>
+													<div class="col-item bglightblue">
+														<div class="col-item-w1" id="needs-hover">
+															<div>
+																<table>
+																	<tr>
+																		<td style="vertical-align:top;">
+																			<div class="icn-img icn-cmpn-high-availability icn-circle bglightblue fill-white">&nbsp;</div>
+																		</td>
+																		<td>
+																			<div class="cb119w2 txtwhite">
+																				<strong>
+																					<div style="font-size:0.7em; line-height: 99% !important;">
+																						ADD<br>REAL-TIME
+																					</div>
+																				</strong>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan="2">
+																			<div class="cb119w2 txtwhite">
+																				Capture Real-Time Data From Operational Systems and IoT Devices Using Streams
+																				<br>
+																				<br>
+																				<br>
+																				<button class="cb51-btn" id="OpenEDW"> + </button>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+														</div>
+													</div>
+													<div class="col-item bggrey">
+														<div class="col-item-w1" id="needs-hover">
+															<div>
+																<table>
+																	<tr>
+																		<td style="vertical-align:top;">
+																			<div class="icn-img icn-platform-extensibility icn-circle bggrey fill-white">&nbsp;</div>
+																		</td>
+																		<td>
+																			<div class="cb119w2 txtwhite">
+																				<strong>
+																					<div style="font-size:0.7em; line-height: 99% !important;">
+																						ADD<br>A LAKE
+																					</div>
+																				</strong>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan="2">
+																			<div class="cb119w2 txtwhite">
+																				Expand Your Departmental Data Warehouse To Include A Data Lake
+																				<br>
+																				<br>
+																				<br>
+																				<button class="cb51-btn" id="OpenEDW"> + </button>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+<!-- /CB119v0 -->
+							</div>
+						</div>
+					</div>
+					<a name="ebus"></a>
+					<div class="cb129w2">
+						<div class="cb129w3">
+							<h4 class="icn-autonomous-db">Departmental Data Warehouse From E-Business Suite</h4>
+						</div>
+						<div class="cb129w4" id="section-ebus">
+							<div class="col-framework col2 col-threetwofifth col-gutters col-noanimation">
+								<div class="col-w1">
+									<div class="col-item">
+										<div class="col-item-w1">
+											<div style="color:black; text-align:left !important; margin-left:10px; margin-right:10px;">
+												<p>
+													Analysts need an efficient way to consolidate data from multiple financial systems and other data sources into a trusted, maintainable, and query-optimized source.
+												</p>
+												<p>
+													Typically data mart projects struggle to optimize data from multiple sources which makes it very difficult to effectively analyze the data and generate actionable insights.
+												</p>
+												<p>
+													Autonomous Data Warehouse makes it easy to resolve these key challenges...
+												</p>
+											</div>
+											<div class="obttns">
+												<div><a href="https://docs.oracle.com/en/solutions/oci-ebs-analysis/index.html#GUID-3B8FD7AA-DD7E-4D2D-90BC-988B4D6C2890">More Information</a>
+												</div>
+												<div><a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/adw-training-plans.html">View Training Plans</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-item">
+										<div class="col-item-w1">
+											<a class="ozoom ozoom-cta" rel="lightbox" href="https://docs.oracle.com/en/solutions/oci-ebs-analysis/img/analysis-ebs.png">
+												<img src="https://docs.oracle.com/en/solutions/oci-ebs-analysis/img/analysis-ebs.png">
+											</a>
+										</div>
+									</div>
+								</div>
+<!-- /CB119v0 -->
+							</div>
+							<div class="col-framework col1 col-threetwofifth col-gutters col-noanimation">
+								<div class="col-w1">
+									<div class="col-item">
+										<br>
+										<div style="margin-left:5px;">
+											<h4 style="color:#30688C; font-size:14pt;">Departmental Data Warehouse Customer Example</h4>
+											<p>
+												Learn more about how DX Marketing innovates campaign management using Autonomous Database and Oracle Analytics Cloud.
+											</p>
+											<table>
+												<tr>
+													<td valign="top">
+														<a href="https://www.youtube.com/watch?v=FTpJe4nEHWg" target="_blank">
+															<img style="box-shadow: 10px 10px 5px grey;" width="400" src="https://img.youtube.com/vi/FTpJe4nEHWg/0.jpg">
+															<br>
+															<br>
+															<p>
+																VIDEO: DX Marketing Innovates Campaign Management, click to watch
+															</p>
+														</a>
+														<br>
+													</td>
+													<td valign="top">
+														<div style="margin-left:50px;">
+															<p style="font-size:0.9em;">
+																Oracle Autonomous Data Warehouse helps DX Marketing integrate terabytes of 3rd-party data offline with online data in minutes with Oracle Analytics and Marketing Cloud for 14X revenue growth, reducing clients' customer acquisition costs by 52%.
+															</p>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+<!-- CB119v0 -->
+								<section class="cb119 cb119v0 cpad" data-ocomid="cb119" data-trackas="cb119">
+									<div class="cb119w1 cwidth">
+										<h4 style="color:#30688C;">Where To Next...</h4>
+										<p>
+											Use the following topics to explore how you can get more from your Departmental Data Warehouse:
+										</p>
+										<h4 style="color:#30688C; font-size:14pt;">Discover How To Organize Your Data...</h4>
+										<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+											<div class="col-w1">
+												<div class="col-item bgdarkslate">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-extensible-architecture icn-circle bgdarkslate fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					ADD<br>CUBES
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Add A Business Model Over Your Schema With Analytical
+																			Views
+																			<br>
+																			<br>
+																			<br>
+																			<a title="Goto information for crearting cubes and dimensions over your schema" href="#Cubes" style="text-decoration:none; color:white;">
+																				<button class="cb51-btn"> + </button>
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<br>
+										<h4 style="color:#30688C; font-size:14pt;">Discover New Ways to Analyze Your Data...</h4>
+										<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+											<div class="col-w1">
+												<div class="col-item bgblue">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-tech-ai icn-circle bgblue fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					DATA SCIENCE
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Discover New Insights By Building Machine Learning Models
+																			<br>
+																			<br>
+																			<a title="Goto information about machine learning" href="#oml" style="text-decoration:none; color:white;">
+																				<button class="cb51-btn"> + </button>
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="col-item bggreen">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-globe-east icn-circle bggreen fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					EXPLORE MAPS
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Overlay Maps On To Your Data Using Spatial Analytics
+																			<br>
+																			<br>
+																			<a title="Goto information on spatial analytics" href="#maps" style="text-decoration:none; color:white;">
+																				<button class="cb51-btn"> + </button>
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="col-item bgorange">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-resources icn-circle bgorange fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					DISCOVER LINKS
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Explore Connections And Relationships Within Your Data Using Property Graphs
+																			<br>
+																			<br>
+																			<br>
+																			<a title="Goto information about using property graphs" href="#graphs" style="text-decoration:none; color:white;">
+																				<button class="cb51-btn"> + </button>
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<br>
+										<h4 style="color:#30688C; font-size:14pt;">Learn How To Protect Your Sensitive Data...</h4>
+										<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+											<div class="col-w1">
+												<div class="col-item bgdarkorange">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-vpn icn-circle bgdarkorange fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					PROTECT DATA
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Discover, Mask. Secure, Monitor All Your Data Using Data Safe
+																			<br>
+																			<br>
+																			<br>
+																			<br>
+																			<a title="Goto information for Data Safe" href="#DataSafe" style="text-decoration:none; color:white;">
+																				<button class="cb51-btn"> + </button>
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="col-item bgburgundy">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-security-endpoint icn-circle bgburgundy fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					AUDITING
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Add Auditing to Control And Monitor Data Access.
+																			<br>
+																			<br>
+																			<br>
+																			<br>
+																			<a title="Goto information for Data Safe" href="#DbVault" style="text-decoration:none; color:white;">
+																				<button class="cb51-btn"> + </button>
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<br>
+										<h4 style="color:#30688C; font-size:14pt;">Broaden The Scope Of Your Departmental Data Warehouse...</h4>
+										<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+											<div class="col-w1">
+												<div class="col-item bglightblue">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-cmpn-high-availability icn-circle bglightblue fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					ADD<br>REAL-TIME
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Capture Real-Time Data From Operational Systems and IoT Devices Using Streams
+																			<br>
+																			<br>
+																			<br>
+																			<button class="cb51-btn" id="OpenEDW"> + </button>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="col-item bggrey">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-platform-extensibility icn-circle bggrey fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					ADD<br>A LAKE
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Expand Your Departmental Data Warehouse To Include A Data Lake
+																			<br>
+																			<br>
+																			<br>
+																			<button class="cb51-btn" id="OpenEDW"> + </button>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+<!-- /CB119v0 -->
+							</div>
+						</div>
+					</div>
+					<div class="cb129w2">
+						<div class="cb129w3">
+							<h4 class="icn-autonomous-db">Departmental Data Warehouse For Human Capital</h4>
+						</div>
+						<div class="cb129w4">
+							<div class="col-framework col2 col-threetwofifth col-gutters col-noanimation">
+								<div class="col-w1">
+									<div class="col-item">
+										<div class="col-item-w1">
+											<div style="color:black; text-align:left !important; margin-left:10px; margin-right:10px;">
+												<p>
+													Human resource data is often distributed in multiple systems across the enterprise and can't easily be integrated and analyzed to produce actionable insights.
+												</p>
+												<p>
+													This makes it very difficult to capture raw application data, enrich it with data from other sources and produce actionable and predictive insights.
+												</p>
+												<p>
+													Autonomous Data Warehouse makes it easy to resolve these key challenges......<!--EndFragment-->
+												</p>
+											</div>
+											<div class="obttns">
+												<div><a href="https://docs.oracle.com/en/solutions/oci-hcm-analysis/index.html#GUID-36B10720-9CEE-4664-8DF4-38A62967DDE4">More Information</a>
+												</div>
+												<div><a href="https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?p180_id=678">Take a Workshop</a>
+												</div>
+												<div><a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/adw-training-plans.html">View Training Plans</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-item">
+										<div class="col-item-w1">
+											<a class="ozoom ozoom-cta" rel="lightbox" href="https://docs.oracle.com/en/solutions/oci-hcm-analysis/img/analysis-hcm-architecture.png">
+												<img src="https://docs.oracle.com/en/solutions/oci-hcm-analysis/img/analysis-hcm-architecture.png" alt="Commodo Sed">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-framework col1 col-threetwofifth col-gutters col-noanimation">
+<!-- CB119v0 -->
+								<section class="cb119 cb119v0 cpad" data-ocomid="cb119" data-trackas="cb119">
+									<div class="cb119w1 cwidth">
+										<h4 style="color:#30688C;">Where To Next...</h4>
+										<p>
+											Use the following topics to explore how you can get more from your Departmental Data Warehouse:
+										</p>
+										<h4 style="color:#30688C; font-size:14pt;">Discover How To Organize Your Data...</h4>
+										<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+											<div class="col-w1">
+												<div class="col-item bgdarkslate">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-extensible-architecture icn-circle bgdarkslate fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					ADD<br>CUBES
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Add A Business Model Over Your Schema With Analytical
+																			Views
+																			<br>
+																			<br>
+																			<br>
+																			<a title="Goto information for crearting cubes and dimensions over your schema" href="#Cubes" style="text-decoration:none; color:white;">
+																				<button class="cb51-btn"> + </button>
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<br>
+										<h4 style="color:#30688C; font-size:14pt;">Discover New Ways to Analyze Your Data...</h4>
+										<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+											<div class="col-w1">
+												<div class="col-item bggreen">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-globe-east icn-circle bggreen fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					EXPLORE MAPS
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Overlay Maps On To Your Data Using Spatial Analytics
+																			<br>
+																			<br>
+																			<a title="Goto information on spatial analytics" href="#maps" style="text-decoration:none; color:white;">
+																				<button class="cb51-btn"> + </button>
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="col-item bgorange">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-resources icn-circle bgorange fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					DISCOVER LINKS
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Explore Connections And Relationships Within Your Data Using Property Graphs
+																			<br>
+																			<br>
+																			<br>
+																			<a title="Goto information about using property graphs" href="#graphs" style="text-decoration:none; color:white;">
+																				<button class="cb51-btn"> + </button>
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<br>
+										<h4 style="color:#30688C; font-size:14pt;">Learn How To Protect Your Sensitive Data...</h4>
+										<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+											<div class="col-w1">
+												<div class="col-item bgdarkorange">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-vpn icn-circle bgdarkorange fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					PROTECT DATA
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Discover, Mask. Secure, Monitor All Your Data Using Data Safe
+																			<br>
+																			<br>
+																			<br>
+																			<br>
+																			<button class="cb51-btn" id="OpenEDW"> + </button>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="col-item bgburgundy">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-security-endpoint icn-circle bgburgundy fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					AUDITING
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Add Auditing to Control And Monitor Data Access.
+																			<br>
+																			<br>
+																			<br>
+																			<br>
+																			<a title="Goto information for Data Safe" href="#DbVault" style="text-decoration:none; color:white;">
+																				<button class="cb51-btn"> + </button>
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<br>
+										<h4 style="color:#30688C; font-size:14pt;">Broaden The Scope Of Your Departmental Data Warehouse...</h4>
+										<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+											<div class="col-w1">
+												<div class="col-item bggrey">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-platform-extensibility icn-circle bggrey fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					ADD<br>A LAKE
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Expand Your Departmental Data Warehouse To Include A Data Lake
+																			<br>
+																			<br>
+																			<br>
+																			<button class="cb51-btn" id="OpenEDW"> + </button>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+<!-- /CB119v0 -->
+							</div>
+						</div>
+					</div>
+					<a name="EDWDL"></a>
+					<div class="cb129w2">
+						<div class="cb129w3">
+							<h4 class="icn-autonomous-db">Enterprise Data Warehouse with Data Lakes</h4>
+						</div>
+						<div class="cb129w4" id="section-edw">
+							<div class="col-framework col2 col-threetwofifth col-gutters col-noanimation">
+								<div class="col-w1">
+									<div class="col-item">
+										<div class="col-item-w1">
+											<div style="color:black; text-align:left !important; margin-left:10px; margin-right:10px;">
+												<p><!--StartFragment-->
+													A modern data warehouse collects data from a wide variety of sources, both internal or external. The data is usually structured, often from relational databases, but it can be unstructured too pulled from "big data" sources such as Internet of Things devices etc.
+												</p>
+												<br>
+												<p>
+													Autonomous Data Warehouse makes it easy to integrate and secure data from many sources and then generate richer, smarter, faster business insights... <!--EndFragment-->
+												</p>
+												<br><br><br>
+											</div>
+											<div class="obttns">
+												<div><a href="https://docs.oracle.com/en/solutions/oci-curated-analysis/index.html#GUID-7FF7A024-5EB0-414B-A1A5-4718929DC7F2">More Information</a>
+												</div>
+												<div><a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/adw-training-plans.html">View Training Plans</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-item">
+										<div class="col-item-w1">
+											<a class="ozoom ozoom-cta" rel="lightbox" href="https://docs.oracle.com/en/solutions/oci-curated-analysis/img/analysis-enterprise-and-streamed-data-architecture.png">
+												<img src="https://docs.oracle.com/en/solutions/oci-curated-analysis/img/analysis-enterprise-and-streamed-data-architecture.png" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-framework col1 col-threetwofifth col-gutters col-noanimation">
+								<div class="col-w1">
+									<div class="col-item">
+										<br>
+										<div style="margin-left:5px;">
+											<h4 style="color:#30688C; font-size:14pt;">Enterprise Data Warehouse Customer Example</h4>
+											<p>
+												Learn more about how Oracle Autonomous Data Warehouse helps OUTFRONT Media provision a robust database in minutes versus months to integrate terabytes of 3rd-party data in minutes and securely publish interactive dashboards in Oracle Analytics to the sales force.
+											</p>
+											<table>
+												<tr>
+													<td valign="top">
+														<a href="https://www.youtube.com/watch?v=iqG7L-g5j18" target="_blank">
+															<img style="box-shadow: 10px 10px 5px grey;" width="400" src="https://img.youtube.com/vi/iqG7L-g5j18/0.jpg">
+															<br>
+															<br>
+															<p>
+																VIDEO: OUTFRONT Media Innovates Sales with Autonomous Database, click to watch
+															</p>
+														</a>
+														<br>
+													</td>
+													<td valign="top">
+														<div style="margin-left:50px;">
+															<p style="font-size:0.9em;">
+																OUTFRONT Media uses ADW and Analytics to ingest 1TB of external data in 30 minutes vs weeks with it's previous data warehouse. The business teams are benefiting from Autnomous Databases self-tuning features which has helped to reduce complex pricing queries to 6 minutes then to 2 seconds. Overall, they have seen a 25% increase in productivity for more valuable data modeling and dashboards.
+															</p>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+<!-- CB119v0 -->
+								<section class="cb119 cb119v0 cpad" data-ocomid="cb119" data-trackas="cb119">
+									<div class="cb119w1 cwidth">
+										<h4 style="color:#30688C;">Where To Next...</h4>
+										<p>
+											Use the following topics to explore how you can get more from your Departmental Data Warehouse:
+										</p>
+										<h4 style="color:#30688C; font-size:14pt;">Discover How To Organize Your Data...</h4>
+										<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+											<div class="col-w1">
+												<div class="col-item bgdarkslate">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-extensible-architecture icn-circle bgdarkslate fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					ADD<br>CUBES
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Add A Business Model Over Your Schema With Analytical
+																			Views
+																			<br>
+																			<br>
+																			<br>
+																			<a title="Goto information for crearting cubes and dimensions over your schema" href="#Cubes" style="text-decoration:none; color:white;">
+																				<button class="cb51-btn"> + </button>
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<br>
+										<h4 style="color:#30688C; font-size:14pt;">Discover New Ways to Analyze Your Data...</h4>
+										<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+											<div class="col-w1">
+												<div class="col-item bggreen">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-globe-east icn-circle bggreen fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					EXPLORE MAPS
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Overlay Maps On To Your Data Using Spatial Analytics
+																			<br>
+																			<br>
+																			<a title="Goto information on spatial analytics" href="#maps" style="text-decoration:none; color:white;">
+																				<button class="cb51-btn"> + </button>
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="col-item bgorange">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-resources icn-circle bgorange fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					DISCOVER LINKS
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Explore Connections And Relationships Within Your Data Using Property Graphs
+																			<br>
+																			<br>
+																			<br>
+																			<a title="Goto information on spatial analytics" href="#graphs" style="text-decoration:none; color:white;">
+																				<button class="cb51-btn"> + </button>
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<br>
+										<h4 style="color:#30688C; font-size:14pt;">Learn How To Protect Your Sensitive Data...</h4>
+										<div class="col-framework col4 col-altbreak-2 col-gutters col-justified">
+											<div class="col-w1">
+												<div class="col-item bgdarkorange">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-vpn icn-circle bgdarkorange fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					PROTECT DATA
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Discover, Mask. Secure, Monitor All Your Data Using Data Safe
+																			<br>
+																			<br>
+																			<br>
+																			<br>
+																			<a title="Goto information for Data Safe" href="#DataSafe" style="text-decoration:none; color:white;">
+																				<button class="cb51-btn"> + </button>
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="col-item bgburgundy">
+													<div class="col-item-w1">
+														<div>
+															<table>
+																<tr>
+																	<td style="vertical-align:top;">
+																		<div class="icn-img icn-security-endpoint icn-circle bgburgundy fill-white">&nbsp;</div>
+																	</td>
+																	<td>
+																		<div class="cb119w2 txtwhite">
+																			<strong>
+																				<div style="font-size:0.7em; line-height: 99% !important;">
+																					AUDITING
+																				</div>
+																			</strong>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td colspan="2">
+																		<div class="cb119w2 txtwhite">
+																			Add Auditing to Control And Monitor Data Access.
+																			<br>
+																			<br>
+																			<br>
+																			<br>
+																			<a title="Goto information for Data Safe" href="#DbVault" style="text-decoration:none; color:white;">
+																				<button class="cb51-btn"> + </button>
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<br>
+									</div>
+								</section>
+<!-- /CB119v0 -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+<!-- /CB129v0 -->
+
+<!-- CB27v5 -->
+			<section class="cb27 cb27v5 bgburgundy" data-trackas="cb27">
+				<div class="cb27w1 cwidth">
+					<div class="cb27w2">
+						<span style="font-size:16pt">Visit the Oracle Architecture Center..</span><br>
+						<span style="font-size:12pt">You can find more reference architectures patterns for Autonomous Data Warehouse...</span><br>
+					</div>
+					<div class="obttns">
+						<div class="bttn-darkburgundy obttn6">
+							<a href="https://docs.oracle.com/en/solutions"><span style="font-size:16pt">Click here</span></a>
+							<br>
+						</div>
+					</div>
+				</div>
+			</section>
+
+<!-- /CB27v5 -->
+			<div id="Cubes" class="modalPopWindow">
+				<div class="embedded-video-16-9">
+					<table width="100%" style="background-color:white;">
+						<tr>
+							<td style="background-color:white;">
+								<img src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3686f2be-72a7-40d0-bcd5-f3ef9f6e2ac7/Image/8f9e6155df15d7f113540ecc07a45592/ai_blog_pic.jpg" width="170px">
+							</td>
+							<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
+								<p class="video_header" style="margin-top:10px;">
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Extending Your Oracle Reference Architecture Pattern</span>
+									<br>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Working With Analytic Views</span>
+								</p>
+							</td>
+							<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
+								<a href="#close" title="Close" id="closeCubes" style="background-color:#3a6f86; color:white; font=weight:bold; font-family:arial; font-size:16pt; text-decoration:none;">
+									Close
+								</a>
+							</td>
+						</tr>
+					</table>
+					<iframe width="100%" style="overflow: scroll; background-color:white;" src="ADW-Cubes.html"></iframe>
+				</div>
+			</div>
+
+<!-- /CB27v5 -->
+			<div id="oml" class="modalPopWindow">
+				<div class="embedded-video-16-9">
+					<table width="100%" style="background-color:white;">
+						<tr>
+							<td style="background-color:white;">
+								<img src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3686f2be-72a7-40d0-bcd5-f3ef9f6e2ac7/Image/8f9e6155df15d7f113540ecc07a45592/ai_blog_pic.jpg" width="170px">
+							</td>
+							<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
+								<p class="video_header" style="margin-top:10px;">
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Extending Your Oracle Reference Architecture Pattern</span>
+									<br>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Using Machine Learning</span>
+								</p>
+							</td>
+							<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
+								<a href="#close" title="Close" id="closeOml" style="background-color:#3a6f86; color:white; font=weight:bold; font-family:arial; font-size:16pt; text-decoration:none;">
+									Close
+								</a>
+							</td>
+						</tr>
+					</table>
+					<iframe width="100%" style="overflow: scroll; background-color:white;" src="ADW-ML.html"></iframe>
+				</div>
+			</div>
+
+<!-- /CB27v5 -->
+			<div id="maps" class="modalPopWindow">
+				<div class="embedded-video-16-9">
+					<table width="100%" style="background-color:white;">
+						<tr>
+							<td style="background-color:white;">
+								<img src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3686f2be-72a7-40d0-bcd5-f3ef9f6e2ac7/Image/8f9e6155df15d7f113540ecc07a45592/ai_blog_pic.jpg" width="170px">
+							</td>
+							<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
+								<p class="video_header" style="margin-top:10px;">
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Extending Your Oracle Reference Architecture Pattern</span>
+									<br>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Using Spatial Analytics</span>
+								</p>
+							</td>
+							<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
+								<a href="#close" title="Close" id="closeOml" style="background-color:#3a6f86; color:white; font=weight:bold; font-family:arial; font-size:16pt; text-decoration:none;">
+									Close
+								</a>
+							</td>
+						</tr>
+					</table>
+					<iframe width="100%" style="overflow: scroll; background-color:white;" src="ADW-Maps.html"></iframe>
+				</div>
+			</div>
+
+<!-- /CB27v5 -->
+			<div id="graphs" class="modalPopWindow">
+				<div class="embedded-video-16-9">
+					<table width="100%" style="background-color:white;">
+						<tr>
+							<td style="background-color:white;">
+								<img src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3686f2be-72a7-40d0-bcd5-f3ef9f6e2ac7/Image/8f9e6155df15d7f113540ecc07a45592/ai_blog_pic.jpg" width="170px">
+							</td>
+							<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
+								<p class="video_header" style="margin-top:10px;">
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Extending Your Oracle Reference Architecture Pattern</span>
+									<br>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Using Graph Analytics</span>
+								</p>
+							</td>
+							<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
+								<a href="#close" title="Close" id="closeOml" style="background-color:#3a6f86; color:white; font=weight:bold; font-family:arial; font-size:16pt; text-decoration:none;">
+									Close
+								</a>
+							</td>
+						</tr>
+					</table>
+					<iframe width="100%" style="overflow: scroll; background-color:white;" src="ADW-Graph.html"></iframe>
+				</div>
+			</div>
+
+
+<!-- /CB27v5 -->
+			<div id="Catalog" class="modalPopWindow">
+				<div class="embedded-video-16-9">
+					<table width="100%" style="background-color:white;">
+						<tr>
+							<td style="background-color:white;">
+								<img src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3686f2be-72a7-40d0-bcd5-f3ef9f6e2ac7/Image/8f9e6155df15d7f113540ecc07a45592/ai_blog_pic.jpg" width="170px">
+							</td>
+							<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
+								<p class="video_header" style="margin-top:10px;">
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Departmental Data Warehouse Pattern</span>
+									<br>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Building A Data Catalog</span>
+								</p>
+							</td>
+							<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
+								<a href="#close" title="Close" id="closeOml" style="background-color:#3a6f86; color:white; font=weight:bold; font-family:arial; font-size:16pt; text-decoration:none;">
+									Close
+								</a>
+							</td>
+						</tr>
+					</table>
+					<iframe width="100%" style="overflow: scroll; background-color:white;" src="ADW-Catalog.html"></iframe>
+				</div>
+			</div>
+
+<!-- /CB27v5 -->
+			<div id="DataSafe" class="modalPopWindow">
+				<div class="embedded-video-16-9">
+					<table width="100%" style="background-color:white;">
+						<tr>
+							<td style="background-color:white;">
+								<img src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3686f2be-72a7-40d0-bcd5-f3ef9f6e2ac7/Image/8f9e6155df15d7f113540ecc07a45592/ai_blog_pic.jpg" width="170px">
+							</td>
+							<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
+								<p class="video_header" style="margin-top:10px;">
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Extending Your Oracle Reference Architecture Pattern</span>
+									<br>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Protecting Your Data With Data Safe</span>
+								</p>
+							</td>
+							<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
+								<a href="#close" title="Close" id="closeOml" style="background-color:#3a6f86; color:white; font=weight:bold; font-family:arial; font-size:16pt; text-decoration:none;">
+									Close
+								</a>
+							</td>
+						</tr>
+					</table>
+					<iframe width="100%" style="overflow: scroll; background-color:white;" src="ADW-DataSafe.html"></iframe>
+				</div>
+			</div>
+
+<!-- /CB27v5 -->
+			<div id="DbVault" class="modalPopWindow">
+				<div class="embedded-video-16-9">
+					<table width="100%" style="background-color:white;">
+						<tr>
+							<td style="background-color:white;">
+								<img src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3686f2be-72a7-40d0-bcd5-f3ef9f6e2ac7/Image/8f9e6155df15d7f113540ecc07a45592/ai_blog_pic.jpg" width="170px">
+							</td>
+							<td width="90%" style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center;">
+								<p class="video_header" style="margin-top:10px;">
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:16pt;">Extending Your Oracle Reference Architecture Pattern</span>
+									<br>
+									<span style="background-color:grey; color:white; font=weight:bold; font-family:arial; font=weight:bold; text-align:center; font-size:22pt;">Controlling Access To Your Data With Database Vault</span>
+								</p>
+							</td>
+							<td width="10%" style="background-color:#3a6f86; color:white; font=weight:bold; text-align:center;">
+								<a href="#close" title="Close" id="closeOml" style="background-color:#3a6f86; color:white; font=weight:bold; font-family:arial; font-size:16pt; text-decoration:none;">
+									Close
+								</a>
+							</td>
+						</tr>
+					</table>
+					<iframe width="100%" style="overflow: scroll; background-color:white;" src="ADW-DbVault.html"></iframe>
+				</div>
+			</div>
+
+<!-- CB129v0 -->
+			<section class="cb129 cb129v0 cpad bgvlightgrey" data-trackas="cb129" data-ocomid="cb129">
+				<header class="cwidth">
+					<div class="eyebrow">Get the details</div>
+					<h2>Data Warehouse Solution Patterns</h2>
+					<a class="icn-img icn-plus cb129icn cb129toggle-all">
+						<span class="cb129open-all">Open all</span>
+						<span class="cb129close-all">Close all</span>
+					</a>
+				</header>
+				<div class="cb129w1 cwidth">
+					<div class="cb129w2">
+						<div class="cb129w3">
+							<h4 class="icn-tech-blockchain">ADW With Private Endpoints</h4>
+						</div>
+						<div class="cb129w4">
+							<div class="col-framework col2 col-threetwofifth col-gutters col-noanimation">
+								<div class="col-w1">
+									<div class="col-item">
+										<div class="col-item-w1">
+											<div style="color:black; text-align:left !important; margin-left:10px; margin-right:10px;">
+												<p>
+													This architecture uses an autonomous database (which can be an Oracle Autonomous Transaction Processing database or an Oracle Autonomous Data Warehouse) provisioned in a private subnet; that is with a private endpoint.
+												</p>
+											</div>
+											<div class="obttns">
+												<div><a href="https://docs.oracle.com/en/solutions/autonomous-db-private-endpoint/index.html#GUID-B8422778-8DB1-454C-8383-DA1BEF6C8439">More Information</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-item">
+										<div class="col-item-w1">
+											<a class="ozoom ozoom-cta" rel="lightbox" href="https://docs.oracle.com/en/solutions/autonomous-db-private-endpoint/img/autonomous-db-private-endpoint.png">
+												<img src="https://docs.oracle.com/en/solutions/autonomous-db-private-endpoint/img/autonomous-db-private-endpoint.png">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cb129w2">
+						<div class="cb129w3">
+							<h4 class="icn-tech-deep-learning">Building a Data Science Environment</h4>
+						</div>
+						<div class="cb129w4">
+							<div class="col-framework col2 col-threetwofifth col-gutters col-noanimation">
+								<div class="col-w1">
+									<div class="col-item">
+										<div class="col-item-w1">
+											<div style="color:black; text-align:left !important; margin-left:10px; margin-right:10px;">
+												<p>
+													This is a flexible architecture that can support multiple scenarios based on Oracle Machine Learning in Autonomous Data Warehouse. In addition to Autonomous Data Warehouse, it includes Data Catalog and Oracle Analytics Cloud along with three Oracle Cloud Infrastructure Compute instances.
+												</p>
+											</div>
+											<div class="obttns">
+												<div><a href="https://docs.oracle.com/en/solutions/data-science-environment/index.html#GUID-25FBDA8E-BCD8-42D5-98FA-7FA997B01D75">More Information</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-item">
+										<div class="col-item-w1">
+											<a class="ozoom ozoom-cta" rel="lightbox" href="https://docs.oracle.com/en/solutions/data-science-environment/img/oci-ml-modeling.png">
+												<img src="https://docs.oracle.com/en/solutions/data-science-environment/img/oci-ml-modeling.png" alt="Commodo Sed">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cb129w2">
+						<div class="cb129w3">
+							<h4 class="icn-developer-ops">Automated Data Loading in the Cloud</h4>
+						</div>
+						<div class="cb129w4">
+							<div class="col-framework col2 col-threetwofifth col-gutters col-noanimation">
+								<div class="col-w1">
+									<div class="col-item">
+										<div class="col-item-w1">
+											<div style="color:black; text-align:left !important; margin-left:10px; margin-right:10px;">
+												<p>
+													This reference architecture shows how you can use a serverless function to automate the process of extracting data from files generated by various databases or applications and loading the data into a data warehouse for analysis.
+												</p>
+												<br><br><br>
+											</div>
+											<div class="obttns">
+												<div><a href="https://docs.oracle.com/en/solutions/serverless-dataload-adw/index.html#GUID-36A94B9D-0B06-4A4A-81B0-A292392181BD">More Information</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-item">
+										<div class="col-item-w1">
+											<a class="ozoom ozoom-cta" rel="lightbox" href="https://docs.oracle.com/en/solutions/serverless-dataload-adw/img/autoload-adw.png">
+												<img src="https://docs.oracle.com/en/solutions/serverless-dataload-adw/img/autoload-adw.png" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+<!-- /CB129v0 -->			
+			
+			<!-- CB27v5 -->
+			<section class="cb27 cb27v5 bgburgundy" data-trackas="cb27">
+				<div class="cb27w1 cwidth">
+					<div class="cb27w2">
+						<span style="font-size:16pt">Visit the Oracle Architecture Center..</span><br>
+						<span style="font-size:12pt">You can find more solution playbooks for Autonomous Data Warehouse...</span><br>
+					</div>
+					<div class="obttns">
+						<div class="bttn-darkburgundy obttn6">
+							<a href="https://docs.oracle.com/en/solutions"><span style="font-size:16pt">Click here</span></a>
+							<br>
+						</div>
+					</div>
+				</div>
+			</section>
+<!-- /CB27v5 -->
+
+
+
+
+<!-- END: oWidget_C/_Raw-Text/Display -->
+
+<!-- /U10v0 -->
+		</div>
+		
+<!-- Container/Display Start -->
+
+<!-- _Raw-Text -->
+<!-- www-us EndBodyAdminContainer -->
+<!-- Start SiteCatalyst code -->
+<script language="JavaScript" src="https://www.oracleimg.com/us/assets/metrics/ora_ocom.js"></script>
+<!-- End SiteCatalyst code -->
+
+ <!--DTM embed code - Footer -->
+ <script type="text/javascript">_satellite.pageBottom();</script>
+ <!--End-->
+<!-- www-us EndBodyAdminContainer -->
+
+<!-- / _Raw-Text -->
+
+<!-- Container/Display end -->
+	</body>
+</html>
+
