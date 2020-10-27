@@ -128,10 +128,10 @@ table.events {
 }
 
 #container_content{
-  border-width: 10px !important;
-  border-bottom: 10px !important;
+  border-top: 30px !important;
+  border-bottom: 0px !important;
   border-style: solid !important;
-  border-color: silver !important;
+  border-color: white !important;
   width:100% !important;
 }
 
@@ -155,15 +155,12 @@ table.events {
   text-align: right !important;
   font-family:Verdana !important;
   width:100% !important;
-  height:80px !important;
+  height:101px !important;
   font-size:10px !important; 
   font-weight:bold !important;
   color:white !important;
   text-decoration: none !important;
-  background-position: left bottom !important;
-  background-image: url('https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/1f0f0232ea27c84d7c6dde017ef5303e/rh02_panel1.jpg'); background-color: grey !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;		
+  border-bottom: 5px solid silver;
 }
 
 
@@ -171,30 +168,25 @@ table.events {
   text-align: right !important;
   font-family:Verdana !important;
   width:100% !important;
-  height:80px !important;
+  height:101px !important;
   font-size:10px !important; 
   font-weight:bold !important;
   color:white !important;
   text-decoration: none !important;
-  background-position: left bottom !important;
-  background-image: url('https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/e2a1d65933519a2d6b2f5693d56143fb/rh02_panel2.jpg'); background-color: grey !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;		
+  border-bottom: 5px solid silver;
 }
 
 #back_section_3 {
   text-align: right !important;
+  text-align: right !important;
   font-family:Verdana !important;
   width:100% !important;
-  height:80px !important;
+  height:101px !important;
   font-size:10px !important; 
   font-weight:bold !important;
   color:white !important;
   text-decoration: none !important;
-  background-position: left bottom !important;
-  background-image: url('https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/9b796d7058dcdf29f6cde9a6c2324681/rh02_panel3.jpg'); background-color: grey !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;		
+  border-bottom: 5px solid silver;
 }
 
 a.btt {
@@ -403,4 +395,5 @@ a {
     width: 100%;
   }
 }
+
 
