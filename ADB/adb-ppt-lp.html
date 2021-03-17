@@ -1,0 +1,571 @@
+<html>
+	<head>
+		<style>
+
+@import url('https://www.oracle.com/a/ocom/docs/dc/tb/src/oracle-sans-font.css?family=Oracle+Sans');@font-face {	font-family: "Oracle Sans";	src: url("https://static.oracle.com/cdn/fonts/oraclesans.woff") format("woff"), url("https://static.oracle.com/cdn/fonts/oraclesans.woff2") format("woff2");	font-weight: 300;	font-style: normal;	-webkit-font-smoothing: antialiased;	-moz-font-smoothing: antialiased;	font-smoothing: antialiased;	-moz-osx-font-smoothing: grayscale;
+}
+#pointer {
+  display: inline-block;
+  font-size: 20pt;
+  width: 200px;
+  height: 4em;
+  position: relative;
+  background: gray;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0.6em;
+  box-shadow: 8px 8px 8px 3px #888888;
+
+}
+
+#pointer-ahead {
+  display: inline-block;
+  font-size: 20pt;
+  max-width: 600px;
+  height: 4em;
+  position: relative;
+  background: gray;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0.6em;
+  box-shadow: 8px 8px 8px 3px #888888;
+
+}
+
+#pointer:after, #pointer-ahead:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 1.25em solid white;
+  border-top: 2em solid transparent;
+  border-bottom: 2em solid transparent;
+
+}
+
+#pointer:before, #pointer-ahead:before {
+  content: "";
+  position: absolute;
+  right: -1.20em;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 1.25em solid gray;
+  border-top: 2em solid transparent;
+  border-bottom: 2em solid transparent;
+}
+
+.cnt {
+  position: relative;
+  top: 0.25em;
+  left: 1em;
+  color: white;
+  font-weight:bold;
+
+}
+
+.cnt-ahead {
+  position: relative;
+  top: 0.25em;
+  left: 1em;
+  color: white;
+  font-weight:bold;
+
+}
+
+.top-main, .futures-main {
+  margin-left:30px;
+  font-weight: 600;  font-style: normal;  font-size:18px;
+  visibility: visible;  
+}
+
+.top-minor, .futures-minor{
+  margin-left:30px;
+  font-weight: 300;  font-style: normal;  font-size:14px;  
+
+}
+
+.jan2020h, .jan2021h {
+padding:10px;
+box-shadow: 8px 8px 8px 3px #888888;
+vertical-align: top;
+text-align:left;
+background-color: slategray;
+border:solid; border-color:white;
+}
+
+
+.jan2020t, .mar2020t, .may2020t, .jul2020t, .sep2020t, .nov2020t, .jan2021t, .mar2021t, .futurest {
+border-bottom:0px solid gray;
+border-left:0px;
+border-right:0px;
+border-top:0px solid gray;
+padding:10px;
+box-shadow: 8px 8px 8px 3px #888888;
+vertical-align: top;
+text-align:left;
+}
+
+.feb2020b, .apr2020b, .jun2020b, .aug2020b, .oct2020b, .dec2020b, .feb2021b, .apr2021b, .futuresb {
+border-bottom:0px solid gray;
+border-left:0px;
+border-right:0px;
+border-top:0px solid gray;
+padding:10px;
+box-shadow: 8px 8px 8px 3px #888888;
+vertical-align: top;
+text-align:left;
+}
+		</style>
+	</head>
+	<body>
+		<br>
+		<br>
+		<form name="checkboxform">
+			<input type="checkbox" name="checkbox1" onclick="myMainFunction();" checked="checked" />
+			<span style="font-weight:bold">Show/Hide Main Features </span><br>
+			<input type="checkbox" name="checkbox2" onclick="myMinorFunction();" checked="checked" />
+			<span style="font-weight:bold">Show/Hide Minor Features</span><br>
+			<input type="checkbox" name="checkbox3" onclick="myFuturesFunction();" checked="checked" />
+			<span style="font-weight:bold">Show/Hide Roadmap Features</span><br>
+		</form>
+		<br>
+		<br>
+		<h1>TIMELINE SHOWING RELEASE OF AUTONOMOUS DATABASE NEW FEATURES</h1>
+		<br>
+		<br>
+		<table width="100%">
+			<tr>
+				<td class="jan2020h" style="" colspan="12">
+					<h1 style="color:white; font-weight:bold; margin-left: 40px;">
+						2020
+					</h1>
+				</td>
+				<td class="jan2021h" colspan="12">
+					<h1 style="color:white; font-weight:bold; margin-left: 40px;">
+						2021
+					</h1>
+				</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan="12">
+					<br>
+					<br>
+				</td>
+				<td colspan="12"></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>JAN</p>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div id="pointer" style="width:300px;">
+						<div class="cnt" style="width:300px;">
+							<p>FEB</p>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div id="pointer" style="width:300px;">
+						<div class="cnt" style="width:300px;">
+							<p>MAR</p>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div id="pointer" style="width:300px;">
+						<div class="cnt" style="width:300px;">
+							<p>APR</p>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>MAY</p>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div id="pointer" style="width:300px;">
+						<div class="cnt" style="width:300px;">
+							<p>JUN</p>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div id="pointer" style="width:300px;">
+						<div class="cnt" style="width:300px;">
+							<p>JUL</p>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div id="pointer" style="width:300px;">
+						<div class="cnt" style="width:300px;">
+							<p>AUG</p>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>SEP</p>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div id="pointer" style="width:300px;">
+						<div class="cnt" style="width:300px;">
+							<p>OCT</p>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div id="pointer" style="width:300px;">
+						<div class="cnt" style="width:300px;">
+							<p>NOV</p>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div id="pointer" style="width:300px;">
+						<div class="cnt" style="width:300px;">
+							<p>DEC</p>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>JAN</p>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div id="pointer" style="width:300px;">
+						<div class="cnt" style="width:300px;">
+							<p>FEB</p>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div id="pointer" style="width:300px;">
+						<div class="cnt" style="width:300px;">
+							<p>MAR</p>
+						</div>
+					</div>
+				</td>
+				<td class="futuresq">
+					<div id="pointer-ahead" style="width:600px;">
+						<div class="cnt-ahead" style="width:600px;">
+							<p>Q4-FY21</p>
+						</div>
+					</div>
+				</td>
+				<td class="futuresq">
+					<div id="pointer-ahead" style="width:600px;">
+						<div class="cnt-ahead" style="width:600px;">
+							<p>Q1-FY22</p>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="jan2020t">
+					<p class="top-main">
+						Clone from backup<br>
+						REST API functions<br>
+						ACLs to control access for tools<br>
+						<br>
+					</p>
+					<p class="top-minor">
+						UTL_SMTP added<br>
+						#concurrent statements increased<br>
+						Option to set MAX_STRING_SIZE value<br>
+						<br>
+					</p>
+				</td>			
+				<td class="feb2020b">
+					<p class="top-main">
+						Support for Private Endpoints<br>
+						Added Database Vault<br>
+						APEX 19.2 Released<br>
+						<br>
+					</p>
+					<p class="top-minor">
+						Database Resident Connection Pool added<br>
+						<br>
+					</p>
+				</td>
+				<td class="mar2020t">
+					<p class="top-main">
+						ADB version by region<br>
+						Upgrade to 19c doc<br>
+						<br>
+					</p>
+					<p class="top-minor">
+						Restart ADB instance<br>
+						Data Pump direct Export to Object Store<br>
+						Data Pump Pre-authenticated URLs<br>
+						<br>
+					</p>
+				</td>
+				<td class="apr2020b">
+					<p class="top-main">
+						SODA Documents and Collections<br>
+						Per-Second Billing<br>
+						Wallet file contains README<br>
+						<br>
+					</p>
+					<p class="top-minor">
+						Load Data with Data Pump files<br>
+						External Tables support for Data Pump Files<br>
+						Oracle Extensions for IDEs<br>
+						Stateful Rule Support in Private Endpoints<br>
+						<br>
+					</p>
+				</td>
+				<td class="may2020t">
+					<p class="top-main">
+						Upgrade ADB to Database 19c<br>
+						<br>
+					</p>
+					<p class="top-minor">
+						Move Selective Data to Object Store<br>
+						Obtain Tenancy Details for SRs<br>
+						<br>
+					</p>
+				</td>
+				<td class="jun2020b">
+					<p class="top-main">
+						Customer Managed Oracle REST Data Services<br>
+						<br>
+					</p>
+					<p class="top-minor">
+						PUT_OBJECT maximum file transfer size increased<br>
+						ORC Format and complex types<br>
+						Oracle Extensions for IDEs<br>
+						Stateful Rule Support in Private Endpoints<br>
+						<br>
+					</p>
+				</td>
+				<td class="jul2020t">
+					<p class="top-main">
+						APEX 20.1<br>
+						Autonomous Data Guard<br>
+						DB links via Database Gateways<br>
+						<br>
+					</p>
+					<p class="top-minor">
+						Create and Alter User Profiles<br>
+						Manage Time Zone File Versions<br>
+						Switch network access Public and PEs<br>
+						<br>
+					</p>
+				</td>
+				<td class="aug2020b">
+					<p class="top-main">
+						Autonomous JSON Database<br>
+						<br>
+					</p>
+					<p class="top-minor">
+						Amazon S3-Compatible Object Stores<br>
+						Asynchronous Requests using SEND_REQUEST<br>
+						Rename database<br>
+						<br>
+					</p>
+				</td>
+				<td class="sep2020t">
+					<p class="top-main">
+						Private Endpoint support for tools<br>
+						Refreshable Clones<br>
+						<br>
+					</p>
+					<p class="top-minor">
+						Read-Only and Restricted Modes<br>
+						<br>
+					</p>
+				</td>
+				<td class="oct2020b">
+					<p class="top-main">
+						Autonomous Database Events<br>
+						PL/SQL SDK for OCI resources<br>
+						<br>
+					</p>
+					<p class="top-minor">
+						User-Defined profiles minimum password length<br>
+						<br>
+					</p>
+				</td>
+				<td class="nov2020t">
+					<p class="top-main">
+						S3 presigned URLs<br>
+						Azure Blob Storage shared-access-signatures URLs<br>
+						<br>
+					</p>
+					<p class="top-minor">
+						<br>
+						<br>
+					</p>
+				</td>
+				<td class="dec2020b">
+					<p class="top-main">
+						APEX 20.2<br>
+						Replicate and capture data with GoldenGate<br>
+						Database 21c on Always Free<br>
+						Oracle APEX Cloud Service
+						<br>
+					</p>
+					<p class="top-minor">
+						<br>
+						<br>
+					</p>
+				</td>
+				<td class="jan2021t">
+					<p class="top-main">
+						New ADB events<br>
+						PE support for OML Notebooks<br>
+						<br>
+					</p>
+					<p class="top-minor">
+						Manual Backup Enhancements<br>
+						<br>
+					</p>
+				</td>
+
+				<td class="feb2021b">
+					<p class="top-main">
+						Database Actions landing page<br>
+						Query Big Data Service Hadoop Data<br>
+						<br>
+					</p>
+					<p class="top-minor">
+						<br>
+						<br>
+					</p>
+				</td>
+				<td class="mar2021t">
+					<p class="top-main">
+						Oracle Machine Learning for Python<br>
+						<br>
+					</p>
+					<p class="top-minor">
+						ADMIN password expiration-warning event<br>
+						<br>
+					</p>
+				</td>
+
+				<td class="futuresb">
+					<p class="futures-main">
+						Access to private IP addresses from ADB-S<br>
+						Automatic refresh for Refreshable Clones<br>
+						Cloud SQL<br>
+						Oracle Machine Learning Services<br>
+						Oracle Machine Learning AutoML UI<br>
+						Customer managed keys (KMS integration)<br>
+						Walletless connections with private endpoints<br>
+					</p>
+				</td>
+				<td class="futurest">
+					<p class="futures-main">
+						Cross-region Autonomous Data Guard
+						<br>
+					</p>
+				</td>
+			</tr>
+		</table>
+		
+<script>
+function myMainFunction() {
+
+    let allContent = document.querySelectorAll('.top-main');
+
+    // loop through all content classes
+    for (let content of allContent) {
+ 		 if (content.style.display === "none") {
+    			content.style.display = "block";
+  			} else {
+    		content.style.display = "none";
+  		}
+	}
+}
+</script>
+
+<script>
+function myMinorFunction() {
+    let allContent = document.querySelectorAll('.top-minor');
+
+    // loop through all content classes
+    for (let content of allContent) {
+ 		 if (content.style.display === "none") {
+    			content.style.display = "block";
+  			} else {
+    		content.style.display = "none";
+  		}
+	}
+}
+</script>
+
+<script>
+function myFuturesFunction() {
+	
+   let allContent = document.querySelectorAll('.futures-main');
+
+    // loop through all content classes
+    for (let content of allContent) {
+ 		 if (content.style.display === "none") {
+    			content.style.display = "block";
+  			} else {
+    		content.style.display = "none";
+  		}
+	}
+  
+ let allContent2 = document.querySelectorAll('.futuresb');
+
+    // loop through all content classes
+    for (let content2 of allContent2) {
+ 		 if (content2.style.display === "none") {
+    			content2.style.display = "block";
+  			} else {
+    		content2.style.display = "none";
+  		}
+	}
+	
+ let allContent3 = document.querySelectorAll('.futurest');
+
+    // loop through all content classes
+    for (let content3 of allContent3) {
+ 		 if (content3.style.display === "none") {
+    			content3.style.display = "block";
+  			} else {
+    		content3.style.display = "none";
+  		}
+	}
+
+ let allContent4 = document.querySelectorAll('.futuresq');
+
+    // loop through all content classes
+    for (let content4 of allContent4) {
+ 		 if (content4.style.display === "none") {
+    			content4.style.display = "block";
+  			} else {
+    		content4.style.display = "none";
+  		}
+	}
+
+
+}
+</script>
+	</body>
+</html>
