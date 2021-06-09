@@ -1,0 +1,433 @@
+<html>
+	<head>
+		<style>
+
+@import url('https://www.oracle.com/a/ocom/docs/dc/tb/src/oracle-sans-font.css?family=Oracle+Sans');@font-face {	font-family: "Oracle Sans";	src: url("https://static.oracle.com/cdn/fonts/oraclesans.woff") format("woff"), url("https://static.oracle.com/cdn/fonts/oraclesans.woff2") format("woff2");	font-weight: 300;	font-style: normal;	-webkit-font-smoothing: antialiased;	-moz-font-smoothing: antialiased;	font-smoothing: antialiased;	-moz-osx-font-smoothing: grayscale;
+}#td_pointer {
+  display: inline-block;
+  width: 960px !important;
+  height: 130px;
+  background-color: slategrey;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 15px;
+  color:white;
+  border: 10px solid lightgrey;
+  padding: 40px;
+}
+
+#month_name {
+  font-size: 20pt;
+  background-color: slategrey;
+  text-align: center;
+  vertical-align: middle;
+  font-family: arial;
+  font-weight: bold;
+  color:white;
+}
+
+#circle {
+    background: lightblue;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 10px solid black;
+}
+
+#top_circle {
+    background: lightblue;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 10px solid black;
+}
+
+#clear_circle {
+    background: white;
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    border: 1px solid white;
+}
+
+
+#vertical_line {
+  border-left: 16px solid black;
+  height: 110px;
+}
+
+#top_vertical_line {
+  border-left: 16px solid black;
+  height: 150px;
+}
+
+
+#table_qtrs {
+ z-index: -1; 
+ border-spacing: 30px;
+ border-collapse: separate;
+ padding: 10px;
+}
+
+.top-main, .futures-main {
+  margin-left:30px;
+  font-weight: 600;  font-style: normal;  font-size:18px;
+  visibility: visible;  
+}
+
+.top-minor, .futures-minor{
+  margin-left:30px;
+  font-weight: 300;  font-style: normal;  font-size:14px;  
+
+}
+
+.jan2020h, .jan2021h {
+padding:10px;
+border-radius: 15px;
+vertical-align: top;
+text-align:left;
+valign:middle;
+background-color: slategray;
+border:solid;
+border-color: darkgrey;
+border-width: 5px;
+}
+
+
+.jan2020t, .mar2020t, .may2020t, .jul2020t, .sep2020t, .nov2020t, .jan2021t, .mar2021t, .futurest {
+border-bottom:0px solid gray;
+border-left:0px;
+border-right:0px;
+border-top:0px solid gray;
+padding:10px;
+box-shadow: 8px 8px 8px 3px #888888;
+vertical-align: top;
+text-align:left;
+width: 300px;
+height:200px;
+}
+
+
+.jan2020b, .mar2020b, .may2020b, .jul2020b, .sep2020b, .nov2020b, .jan2021b, .mar2021b, .futures1b {
+border-bottom:0px solid gray;
+border-left:0px;
+border-right:0px;
+border-top:0px solid gray;
+padding:10px;
+vertical-align: top;
+text-align:left;
+width: 400px;
+}
+
+
+
+
+.feb2020b, .apr2020b, .jun2020b, .aug2020b, .oct2020b, .dec2020b, .feb2021b, .apr2021b, .futures2b {
+border-bottom:0px solid gray;
+border-left:0px;
+border-right:0px;
+border-top:0px solid gray;
+padding:10px;
+box-shadow: 8px 8px 8px 3px #888888;
+vertical-align: top;
+text-align:left;
+width: 300px;
+}
+
+.feb2020t, .apr2020t, .jun2020t, .aug2020t, .oct2020b, .dec2020b, .feb2021b, .apr2021b, .futures2b {
+border-bottom:0px solid gray;
+border-left:0px;
+border-right:0px;
+border-top:0px solid gray;
+padding:10px;
+vertical-align: top;
+text-align:left;
+width: 300px;
+height:100px;
+}
+		</style>
+	</head>
+	<body>
+		<br>
+		<br>
+		<form name="checkboxform">
+			<input type="checkbox" name="checkbox1" onclick="myMainFunction();" checked="checked" />
+			<span style="font-weight:bold">Show/Hide Main Features </span><br>
+			<input type="checkbox" name="checkbox2" onclick="myMinorFunction();" checked="checked" />
+			<span style="font-weight:bold">Show/Hide Minor Features</span><br>
+			<input type="checkbox" name="checkbox3" onclick="myFuturesFunction();" checked="checked" />
+			<span style="font-weight:bold">Show/Hide Roadmap Features</span><br>
+		</form>
+		<br>
+		<br>
+		<h1>TIMELINE SHOWING RELEASE OF AUTONOMOUS DATABASE NEW FEATURES</h1>
+		<br>
+		<br>
+		<table width="2300px" style="table-layout: fixed; align:left;">
+			<tr>
+				<td>
+					<table width="1160px" style="table-layout: fixed; align:left;">
+						<tr>
+							<td class="jan2020b">
+							</td>
+							<td class="feb2020b">
+								<p class="top-main">
+									Support for Private Endpoints<br>
+									Added Database Vault<br>
+									APEX 19.2 Released<br>
+									<br>
+								</p>
+								<p class="top-minor">
+									Database Resident Connection Pool added<br>
+								</p>
+							</td>
+							<td class="mar2020b">
+							</td>
+						</tr>
+					</table>
+					<br><br>
+					<table width="960px" style="table-layout: fixed; margin-top: -20px;">
+						<tr>
+							<td align="center" height="105px"></td>
+							<td align="center" height="105px">
+								<div id="clear_circle" style="margin-top:-105px;">
+									<div id="top_vertical_line" style="margin-left:7px; margin-top:35px;">
+										<br><br><br><br><br style="line-height: 29px;">
+										<div id="top_circle" style="margin-left: -32px;">
+										</div>
+									</div>
+								</div>
+							</td>
+							<td align="center" height="105px"></td>
+					</table>
+					<table width="1160px;" id="table_qtrs">
+						<tr>
+							<td id="td_pointer">
+								<span id="month_name">Q1 2020</span>
+							</td>
+						</tr>
+					</table>
+					<table width="1160px" style="table-layout: fixed;">
+						<tr>
+							<td align="center" height="105px">
+								<div id="circle" style="margin-top:-105px;">
+									<div id="vertical_line" style="margin-left:7px; margin-top:35px;"></div>
+								</div>
+							</td>
+							<td align="center" height="105px">
+							</td>
+							<td align="center" height="105px">
+								<div id="circle" style="margin-top:-105px;">
+									<div id="vertical_line" style="margin-left:7px; margin-top:35px;"></div>
+								</div>
+							</td>
+					</table>
+					<table width="1160px" style="table-layout: fixed;">
+						<tr>
+							<td class="jan2020t">
+								<p class="top-main">
+									Clone from backup<br>
+									REST API functions<br>
+									ACLs to control access for tools<br>
+									<br>
+								</p>
+								<p class="top-minor">
+									UTL_SMTP added<br>
+									#concurrent statements increased<br>
+									Option to set MAX_STRING_SIZE value<br>
+									<br>
+								</p>
+							</td>
+							<td class="feb2020t">
+							</td>
+							<td class="mar2020t">
+								<p class="top-main">
+									ADB version by region<br>
+									Upgrade to 19c doc<br>
+									<br>
+								</p>
+								<p class="top-minor">
+									Restart ADB instance<br>
+									Data Pump direct Export to Object Store<br>
+									Data Pump Pre-authenticated URLs<br>
+									<br>
+								</p>
+							</td>
+					</table>
+				</td>
+				<td>
+					<table width="1160px" style="table-layout: fixed; align:left;">
+						<tr>
+							<td class="jan2020b">
+							</td>
+							<td class="feb2020b">
+								<p class="top-main">
+									Support for Private Endpoints<br>
+									Added Database Vault<br>
+									APEX 19.2 Released<br>
+									<br>
+								</p>
+								<p class="top-minor">
+									Database Resident Connection Pool added<br>
+								</p>
+							</td>
+							<td class="mar2020b">
+							</td>
+						</tr>
+					</table>
+					<br><br>
+					<table width="960px" style="table-layout: fixed; margin-top: -20px;">
+						<tr>
+							<td align="center" height="105px"></td>
+							<td align="center" height="105px">
+								<div id="clear_circle" style="margin-top:-105px;">
+									<div id="top_vertical_line" style="margin-left:7px; margin-top:35px;">
+										<br><br><br><br><br style="line-height: 29px;">
+										<div id="top_circle" style="margin-left: -32px;">
+										</div>
+									</div>
+								</div>
+							</td>
+							<td align="center" height="105px"></td>
+					</table>
+					<table width="1160px;" id="table_qtrs">
+						<tr>
+							<td id="td_pointer">
+								<span id="month_name">Q1 2020</span>
+							</td>
+						</tr>
+					</table>
+					<table width="1160px" style="table-layout: fixed;">
+						<tr>
+							<td align="center" height="105px">
+								<div id="circle" style="margin-top:-105px;">
+									<div id="vertical_line" style="margin-left:7px; margin-top:35px;"></div>
+								</div>
+							</td>
+							<td align="center" height="105px">
+							</td>
+							<td align="center" height="105px">
+								<div id="circle" style="margin-top:-105px;">
+									<div id="vertical_line" style="margin-left:7px; margin-top:35px;"></div>
+								</div>
+							</td>
+					</table>
+					<table width="1160px" style="table-layout: fixed;">
+						<tr>
+							<td class="jan2020t">
+								<p class="top-main">
+									Clone from backup<br>
+									REST API functions<br>
+									ACLs to control access for tools<br>
+									<br>
+								</p>
+								<p class="top-minor">
+									UTL_SMTP added<br>
+									#concurrent statements increased<br>
+									Option to set MAX_STRING_SIZE value<br>
+									<br>
+								</p>
+							</td>
+							<td class="feb2020t">
+							</td>
+							<td class="mar2020t">
+								<p class="top-main">
+									ADB version by region<br>
+									Upgrade to 19c doc<br>
+									<br>
+								</p>
+								<p class="top-minor">
+									Restart ADB instance<br>
+									Data Pump direct Export to Object Store<br>
+									Data Pump Pre-authenticated URLs<br>
+									<br>
+								</p>
+							</td>
+					</table>
+				</td>
+			</tr>
+		</table>
+		
+<script>
+function myMainFunction() {
+
+    let allContent = document.querySelectorAll('.top-main');
+
+    // loop through all content classes
+    for (let content of allContent) {
+ 		 if (content.style.display === "none") {
+    			content.style.display = "block";
+  			} else {
+    		content.style.display = "none";
+  		}
+	}
+}
+</script>
+
+<script>
+function myMinorFunction() {
+    let allContent = document.querySelectorAll('.top-minor');
+
+    // loop through all content classes
+    for (let content of allContent) {
+ 		 if (content.style.display === "none") {
+    			content.style.display = "block";
+  			} else {
+    		content.style.display = "none";
+  		}
+	}
+}
+</script>
+
+<script>
+function myFuturesFunction() {
+	
+   let allContent = document.querySelectorAll('.futures-main');
+
+    // loop through all content classes
+    for (let content of allContent) {
+ 		 if (content.style.display === "none") {
+    			content.style.display = "block";
+  			} else {
+    		content.style.display = "none";
+  		}
+	}
+  
+ let allContent2 = document.querySelectorAll('.futuresb');
+
+    // loop through all content classes
+    for (let content2 of allContent2) {
+ 		 if (content2.style.display === "none") {
+    			content2.style.display = "block";
+  			} else {
+    		content2.style.display = "none";
+  		}
+	}
+	
+ let allContent3 = document.querySelectorAll('.futurest');
+
+    // loop through all content classes
+    for (let content3 of allContent3) {
+ 		 if (content3.style.display === "none") {
+    			content3.style.display = "block";
+  			} else {
+    		content3.style.display = "none";
+  		}
+	}
+
+ let allContent4 = document.querySelectorAll('.futuresq');
+
+    // loop through all content classes
+    for (let content4 of allContent4) {
+ 		 if (content4.style.display === "none") {
+    			content4.style.display = "block";
+  			} else {
+    		content4.style.display = "none";
+  		}
+	}
+
+
+}
+</script>
+	</body>
+</html>
