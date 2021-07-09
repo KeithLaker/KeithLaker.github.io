@@ -5,7 +5,7 @@
 
 Autonomous Data Warehouse supports the ability to define constraints against your data that enforce logical and business rules. In the example below, we are going to add a unique constraint and ensure that there are no empty rows in our data table.
 
-A unique constraint designates a column (it could also be a group of columns) as a unique key. To satisfy a unique constraint, no two rows in the table can have the same value for the unique key. The second step is to combine this concept with the NOT NULL constraint that was included in the definition of our data table to derive a **PRIMART KEY**. The concept of a primary key concept is a key part of an efficient relational database. Without the primary key, along with the closely related concept of a foreign key, relational databases would simply not work. A primary key provides us with a fast and efficient way to uniquely identify each row in a table.   
+A unique constraint designates a column (it could also be a group of columns) as a unique key. To satisfy a unique constraint, no two rows in the table can have the same value for the unique key. The second step is to combine this concept with the NOT NULL constraint that was included in the definition of our data table to derive a **PRIMARY KEY**. The concept of a primary key concept is a key part of an efficient relational database. Without the primary key, along with the closely related concept of a foreign key, relational databases would simply not work. A primary key provides us with a fast and efficient way to uniquely identify each row in a table.   
 
 ## STEP 1 - Adding Constraints
 
@@ -15,7 +15,7 @@ A unique constraint designates a column (it could also be a group of columns) a
     <copy>CREATE UNIQUE INDEX idx_msf_order_num ON MOVIE_SALES_FACT(order_num);
     ALTER TABLE movie_sales_fact ADD primary KEY (order_num) USING INDEX idx_msf_order_num;</copy>
     ```
-    **NOTE:**  These two statement may take a 1-2 minutes to complete.
+    **NOTE:**  These two statements may take a 1-2 minutes to complete.
 
 ## STEP 2 - Testing that the New Constraint Works
 
@@ -26,22 +26,22 @@ A unique constraint designates a column (it could also be a group of columns) a
     ```
     **NOTE:** This should return a value of **$160,365,556.83**.
 
-2. Now let's try to reload sales data for January 2018 using the following command: 
+2. Now let's try to reload sales data for January 2018 using the following command (**Note**: *the command reuses the variables you created in step 2 that point to the location of the data file and the format strings used to parse the CSV file*): 
 
     ```
     <copy>BEGIN
     DBMS_CLOUD.COPY_DATA (
     table_name => 'MOVIE_SALES_FACT',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_fact_m-201801.csv',
-    format => '{"type":"csv","skipheaders":"1"}'
+    file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_fact_m-201801.csv',
+    format => '&csv_format_string'
     );
     END;
     /</copy>
     ```
 
-3. This time, the data load process will fail with the following error message in the script output window that indicates the duplicate records have been rejected: (ORA-20000: ORA-00001: unique constraint (ADMIN.SYS_C0022899) violated...):
+3. This time, the data load process will fail with the following error message in the script output window that indicates the duplicate records have been rejected: (ORA-20000: ORA-00001: unique constraint (ADMIN.SYS_xxxxxxx) violated...):
 
-    ![Error message showing duplicates](images/loading-lab-3-step-2-substep-3.png)
+    ![Error message showing duplicates](images/sql-data-loading-lab3-step2-substep3.png)
 
     **NOTE:** The data integrity checking does not depend on the name of the source data file. We could use a different filename (i.e. a filename that has not been used before) and we will get the same result - an error message that indicates the data file contains records that have already been loaded.
 

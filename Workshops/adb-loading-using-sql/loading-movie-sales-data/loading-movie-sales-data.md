@@ -65,7 +65,7 @@ During this part of the workshop, we will use the SQL Worksheet application that
     QUARTER_NAME VARCHAR2(26),
     QUARTER_NUM_OF_YEAR NUMBER(38,0),
     YEAR NUMBER(38,0),
-    USTOMER_ID NUMBER(38,0),
+    CUSTOMER_ID NUMBER(38,0),
     USERNAME VARCHAR2(26),
     CUSTOMER_NAME VARCHAR2(250),
     STREET_ADDRESS VARCHAR2(250),
@@ -149,7 +149,7 @@ Now we are ready to start loading the sales data.
 
 All the MovieStream data files for this workshop are stored in a public bucket in the OCI Object Storage. For this initial data load into our new data warehouse, we will use a script to import sales data for 2018 to 2020 - this will give you some insight into how to create your own scripts to automate your own data loading processes. There are 35 separate data files for the sales data stored in the public bucket. We can either load each file individually, or we can bulk load all the files in one step. If we wanted to load a single month, then we could use the following approach:
 
-Let's say that we were going to load data for January 2018; then the filename in the public bucket for that file would be *movie\_sales\_fact-2018**01**.csv*. This filename is passed into the built-in data load procedure (which is called DBMS\_CLOUD.COPY\_DATA) as a parameter (**Note**: *you do not need to run the command below at this stage!*):
+Let's say that we were going to load data for January 2018; then the filename in the public bucket for that file would be *movie\_sales\_fact-2018**01**.csv*. This filename is passed into the built-in data load procedure, which is called DBMS\_CLOUD.COPY\_DATA. as a parameter. Let's take a quick look at how our data load command would be formatted - it would look as follows **BUT** **note**: *you do not need to run the command below at this stage!*:
 
 <pre><code>
     BEGIN
@@ -188,13 +188,55 @@ A smarter and more efficient way to load all the data for 2018 to 2020 is to let
 
     ![Select the HIGH consumer group from the pulldown menu.](images/3054194709.png)
 
-3. To load all the data for 2018-2020, use the following code:
+3. The files for the data load process are stored in a series of regional buckets. Use one of the following **URI strings** in the next step based on the closest location to the region where you have created your ADW. For example, if your ADW is located in our UK-London data center then you would select the regional URI string for "Europe, Middle East, Africa" which is 'https://objectstorage.uk-london-1.oraclecloud.com/n/dwcsprod/b/MovieStream/o'
+:
+<div style="margin-left: 80px;">
+<table class="wrapped relative-table confluenceTable" style="width: 100.0%;">
+	<colgroup>
+		<col style="width: 12.019421%;"/>
+		<col style="width: 45.07344%;"/>
+	</colgroup>
+	<tbody>
+		<tr>
+			<th colspan="1" class="confluenceTh">Geographical Region</th>
+			<th colspan="1" class="confluenceTh">Regional URI String</th>
+		</tr>
+		<tr>
+			<td colspan="1" class="confluenceTd">Europe, Middle East, Africa</td>
+			<td class="confluenceTd">https://objectstorage.uk-london-1.oraclecloud.com/n/dwcsprod/b/MovieStream_full/o</td>
+		</tr>
+		<tr>
+			<td colspan="1" class="confluenceTd">Americas</td>
+			<td colspan="1" class="confluenceTd">https://objectstorage.us-phoenix-1.oraclecloud.com/n/dwcsprod/b/MovieStream_full/o</td>
+		</tr>
+		<tr>
+			<td colspan="1" class="confluenceTd">Japan</td>
+			<td colspan="1" class="confluenceTd">https://objectstorage.ap-tokyo-1.oraclecloud.com/n/dwcsprod/b/MovieStream_full/o</td>
+		</tr>
+		<tr>
+			<td colspan="1" class="confluenceTd">Asia &amp; Oceania</td>
+			<td colspan="1" class="confluenceTd">https://objectstorage.ap-mumbai-1.oraclecloud.com/n/dwcsprod/b/MovieStream_full/o</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+**Note** : In the step below we will use a SQL feature that allows us to define some variables that we can incorporate into the data load statement. This makes the data loading statement very flexible and we will use this technique again later in the workshop.
+
+4. You will need to paste your regional URI string from the table above between the double quotes in the assignment that is part of the first define statement.
+
+    ```
+    <copy>define uri_ms_oss_bucket = 'paste_in_your_regional_uri_string_between_the_single_quotes';
+    define csv_format_string = '{"type":"csv","skipheaders":"1"}';
+    </copy>
+    ```
+
+5. To load all the data for 2018-2020, use the following code which includes the variables we defined in the previous step (notice how much simpler and cleaner the DBMS\_CLOUD.COPY\_DATA statement is below compared to the previous example at the start of this step):
 
     ```
     <copy>BEGIN
     DBMS_CLOUD.COPY_DATA (table_name => 'MOVIE_SALES_FACT',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_fact_m-*.csv',
-    format =>  '{"type":"csv","skipheaders":"1"}'
+    file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_fact_m-*.csv',
+    format =>  '&csv_format_string'
     );
     END;
     /</copy>
@@ -204,19 +246,19 @@ A smarter and more efficient way to load all the data for 2018 to 2020 is to let
 
     ![Click the trashcan icon in menu](images/3054194708.png)
 
-4. Then paste the SQL command above into the worksheet and run the command:
+6. Then paste the SQL command above into the worksheet and run the command:
 
-    ![SQL command pasted into the worksheet](images/3054194707.png)
+    ![SQL command pasted into the worksheet](images/sql-data-loading-lab2-step3-subsetp6.png)
 
-5.  While the procedure is executing and loading your data, you will see a small cog spinning in the bottom left corner of your browser window:
+7.  While the procedure is executing and loading your data, you will see a small cog spinning in the bottom left corner of your browser window:
 
     ![Cog spins while procedure is executing](images/3054194706.png)
 
-6.  With 8 OCPUs, this data load process should take around 4 minutes to load 35 months’ worth of movie sales data. Once all the data has been loaded, the following message will appear in the status window, indicating that the procedure completed successfully:
+8.  With 8 OCPUs, this data load process should take around 4 minutes to load 35 months’ worth of movie sales data. Once all the data has been loaded, the following message will appear in the status window, indicating that the procedure completed successfully:
 
     ![Message indicating the procedure completed successfully](images/3054194705.png)
 
-7.  To check the status of the data load, we can query a metadata table (USER\_LOAD\_OPERATIONS) that tracks all our data load jobs. Copy and paste the SQL query below into the worksheet and run the query:
+9.  To check the status of the data load, we can query a metadata table (USER\_LOAD\_OPERATIONS) that tracks all our data load jobs. Copy and paste the SQL query below into the worksheet and run the query:
 
     ```
     <copy>SELECT
@@ -234,34 +276,36 @@ A smarter and more efficient way to load all the data for 2018 to 2020 is to let
     FETCH FIRST 1 ROWS ONLY;</copy>
     ```
 
+
+10. You should see from the column headed rows_loaded that 97,890,562 rows were loaded from the csv files that were located in our Object Storage bucket. 
+
     ![Query to show result of data load](images/3054194687.png)
 
-    You should see from the column headed rows_loaded that 97,890,562 rows were loaded from the csv files that were located in our Object Storage bucket.
 
-8. Now let's confirm that information by finding out how many rows are actually in our fact table:
+11. Now let's confirm that information by finding out how many rows are actually in our fact table: 
 
     ```
     <copy>SELECT COUNT(*) FROM movie_sales_fact;</copy>
     ```
 
-9. Running the above query should return the value 97,890,562 records, as shown below in the Query Result window:
+12. Running the above query should return the value 97,890,562 records, as shown below in the Query Result window:
 
     ![Query result window showing number of rows in table](images/3054194703.png)
 
-10. If you refresh the navigator panel again, you will see that we have two additional new files: 1) a bad records table and 2) a log table.
+13. If you refresh the navigator panel again, you will see that we have two additional new tables: 1) a bad records table and 2) a log table.
 
-    **NOTE:** Your filenames will be slightly different than those shown below in terms of the numeric identifier within each filename:
+    **NOTE:** Your table names will be slightly different than those shown below in terms of the numeric identifier within each table name:
 
     ![Two new files showing in Navigator panel](images/3054194702.png)
 
-11. If we check the table containing information about the bad records, this query should return zero rows:
+14. If we check the table containing information about the bad records, this query should return zero rows:
 
     ```
     <copy>SELECT COUNT(*) FROM copy$1_bad;</copy>
     ```
     **NOTE**: Amend the above query to match the table name shown in your Navigator panel!
 
-12. We can check how many data files were processed by querying the log file as follows:
+15. We can check how many data files were processed by querying the log table as follows (**Note**: *the file location will be different from that showbn below since it is based the data center you selected ealier in this step* ):
 
     ```
     <copy>SELECT *
@@ -269,7 +313,7 @@ A smarter and more efficient way to load all the data for 2018 to 2020 is to let
     WHERE RECORD LIKE '%Data File%'ORDER BY 1;</copy>
     ```
 
-13. This should return a list of 35 entries as shown below:
+16. This should return a list of 35 entries as shown below:
 
     ![List of 35 entries](images/3054194701.png)
 

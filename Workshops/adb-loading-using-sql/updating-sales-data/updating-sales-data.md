@@ -2,8 +2,43 @@
 # Updating the Sales Data
 
 ## Overview 
+MovieStream is a global business with finance departments distributed around the world. Each of these periodically generates a number of financial adjustments for customers in their respective countries. In practice, these will come in at various times and will need to be processed one-by-one. In this section we are going to process all the regional adjustment files altogether but it is important to bear in mind that each would usually be processed immediately on arrival (and therefore individually) so that we can always get the most up-to-date information from our warehouse. Below we will run the update process by creating an external table for each country’s adjustment file and then run the corresponding merge to update the sales data.
 
 Autonomous Database automatically manages the data storage process for you, so there are no settings to monitor or tweak. You simply load your data, update your data and let Autonomous Database efficiently manage how that data is stored. You will update the movie sales data using MERGE.
+
+The files for this data load process are stored in a series of regional buckets. Use one of the following **URI strings** in the next step based on the closest location to the region where you have created your ADW. For example, if your ADW is located in our UK-London data center then you would select the regional URI string for "Europe, Middle East, Africa" which is 'https://objectstorage.uk-london-1.oraclecloud.com/n/dwcsprod/b/MovieStream/o'
+:
+
+<table class="wrapped relative-table confluenceTable" style="width: 100.0%;">
+	<colgroup>
+		<col style="width: 12.019421%;"/>
+		<col style="width: 45.07344%;"/>
+	</colgroup>
+	<tbody>
+		<tr>
+			<th colspan="1" class="confluenceTh">Geographical Region</th>
+			<th colspan="1" class="confluenceTh">Regional URI String</th>
+		</tr>
+		<tr>
+			<td colspan="1" class="confluenceTd">Europe, Middle East, Africa</td>
+			<td class="confluenceTd">https://objectstorage.uk-london-1.oraclecloud.com/n/dwcsprod/b/MovieStream_full/o</td>
+		</tr>
+		<tr>
+			<td colspan="1" class="confluenceTd">Americas</td>
+			<td colspan="1" class="confluenceTd">https://objectstorage.us-phoenix-1.oraclecloud.com/n/dwcsprod/b/MovieStream_full/o</td>
+		</tr>
+		<tr>
+			<td colspan="1" class="confluenceTd">Japan</td>
+			<td colspan="1" class="confluenceTd">https://objectstorage.ap-tokyo-1.oraclecloud.com/n/dwcsprod/b/MovieStream_full/o</td>
+		</tr>
+		<tr>
+			<td colspan="1" class="confluenceTd">Asia &amp; Oceania</td>
+			<td colspan="1" class="confluenceTd">https://objectstorage.ap-mumbai-1.oraclecloud.com/n/dwcsprod/b/MovieStream_full/o</td>
+		</tr>
+	</tbody>
+</table>
+
+**Note** : In the step below we will use a SQL feature that allows us to define some variables that we can incorporate into the data load statement. This makes the data loading statement very flexible and we will use this technique again later in the workshop.
 
 ## STEP 1 - Finding Out Space Usage for the Movie Sales Data
 
@@ -16,32 +51,43 @@ Autonomous Database automatically manages the data storage process for you, so t
     FROM user_segments
     WHERE segment_type='TABLE'
     AND segment_name = 'MOVIE_SALES_FACT'
-    GROUP BY segment_name;</copy>
+    GROUP BY segment_name;
+		</copy>
     ```
 
 2. This will return something similar to the results shown below: 8.441 GB.
 
     ![Query result showing space consumed by movie sales table](images/3054194685.png)
 
-## STEP 2 - Creating The Staging Table
+## STEP 2 - Creating The Staging Table For Argentina's Adjustments
 
-1. Copy and paste the following code into your SQL worksheet and then run the code:
+1. Copy and paste the following code into your SQL worksheet - you can get the correct regional URI from the table in the overview section:
+
+    ```
+    <copy>define uri_ms_oss_bucket = 'paste_in_your_regional_uri_string_between_the_single_quotes';
+    define csv_format_string = '{"type":"csv","skipheaders":"1"}';
+    define adj_column_names = '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER';</copy>
+    ```
+
+**Note**: in the above set of commands we have added an additional variable that contains the definitions of the columns within the table that we are going to create. Notice how using these variables makes the data loading code very easy to understand!
+
+2. Copy and paste the following code into your SQL worksheet and then run the code:
 
     ```
     <copy>BEGIN
     dbms_cloud.create_external_table (
     table_name => 'MOVIE_FIN_ADJ_argentina_EXT',
-    format =>  '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_argentina.csv'
+    format =>  '&csv_format_string',
+    column_list => '&adj_column_names',
+    file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_argentina.csv'
     );END;
     /</copy>
     ```
-2.  In the script output window, you should see the following which indicates that our new external table has been successfully created:
+3.  In the script output window, you should see the following which indicates that our new external table has been successfully created:
 
     ![Output window showing external table successfully created](images/3054194699.png)
 
-3. To validate the external table, we can use the following command:
+4. To validate the external table, we can use the following command:
 
     ```
     <copy>BEGIN
@@ -50,17 +96,17 @@ Autonomous Database automatically manages the data storage process for you, so t
     /</copy>
     ```
 
-4. The validation process should only take a few seconds and return a successfully completed message:
+5. The validation process should only take a few seconds and return a successfully completed message:
 
     ![Message of successfully completed procedure](images/3054194698.png)
 
-5. This shows us that the data we are going to query is OK. Therefore, we can use the following query to count how many rows are in the staging table:
+6. This shows us that the data we are going to query is OK. Therefore, we can use the following query to count how many rows are in the staging table:
 
     ```
     <copy>SELECT COUNT(*) FROM movie_fin_adj_argentina_ext;</copy>
     ```
 
-6. This should show that we have 1,036 refunds to process, as shown below:
+7. This should show that we have 1,036 financial adjustments to process, as shown below:
 
     ![Query result showing number of rows](images/3054194697.png)
 
@@ -87,27 +133,27 @@ Autonomous Database automatically manages the data storage process for you, so t
 ## STEP 4 - Updating The Movie Sales Data Using MERGE
 
 1. Copy and paste the command below in SQL worksheet and run it:
-
     ```
     <copy>MERGE INTO movie_sales_fact a
-    USING (
-    SELECT order_num,
-    discount_percent,
-    actual_price
-    FROM movie_fin_adj_argentina_ext) b
-    ON ( a.order_num = b.order_num )
-    WHEN MATCHED THEN
-    UPDATE
-    SET a.discount_percent = b.discount_percent,
-    a.actual_price = b.actual_price;
-    COMMIT;</copy>
+		USING (
+			SELECT order_num,
+			discount_percent,
+			actual_price
+		FROM movie_fin_adj_argentina_ext) b
+		ON ( a.order_num = b.order_num )
+		WHEN MATCHED THEN
+		UPDATE
+		SET a.discount_percent = b.discount_percent,
+		a.actual_price = b.actual_price;
+		COMMIT;</copy>
     ```
+
 
 2.  The update process should take about 2-3 seconds and then return the usual successfully completed message:
 
     ![Update process completes successfully](images/3054194696.png)
 
-3. Let's run the same simple query again to validate that our refunds file has been successfully processed. Copy and paste the following query into your SQL worksheet:
+3. Let's run the same simple query again to validate that our financial adjustments file has been successfully processed. Copy and paste the following query into your SQL worksheet:
 
     ```
     <copy>SELECT
@@ -117,7 +163,7 @@ Autonomous Database automatically manages the data storage process for you, so t
 
 4. This shows that our revenue has gone down slightly since we are now reporting a figure of $160,364,274.19 (vs. the previous value of $160,365,556.83):
 
-    ![Results of query to validate refunds file processed successfuly](images/3054194694.png)
+    ![Results of query to validate financial adjustments file processed successfuly](images/3054194694.png)
 
 ## STEP 5 - Finding Out Space Usage For The Movie Sales Data
 
@@ -137,408 +183,474 @@ Autonomous Database automatically manages the data storage process for you, so t
 
     ![Query result showing very slight increase in space usage](images/3054194684.png)
 
-## STEP 6 – Creating Additional External Tables
+## STEP 6 – Adding External Tables For Other Country-Based Adjustments 
 
-1.  Now we are ready to load the remaining files. Use the following code to create the remaining tables for the other adjustments data files:
+#### Overview
+We have processed the financial adjustments for Argentina. Now we are going to process the adjustments from the other countries using the same approach with a bit of additional coding to help automate the process and reduce the amount of SQL we need to copy and paste.
+
+
+1.  Now we are ready to load the remaining files containing the adjustments to our sales data. Use the following code to create the remaining tables for the other adjustments data files. **Note**: the definitions for the substitution variables used in the code below (csv\_format\_string, adj\_column_names and uri\_ms_oss\_bucket) can be found in the first part of Step 2 - Creating The Staging Table.
 
     ```
-    <copy>BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_Austria_EXT',
-    format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_austria.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_belarus_EXT',
-    format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_belarus.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_brazil_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_brazil.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_canada_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_canada.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_chile_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_chile.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_china_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_china.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_egypt_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_egypt.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-      table_name => 'MOVIE_FIN_ADJ_finland_EXT', format => '{"type":"csv","skipheaders":"1"}',
-      column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-      file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_finland.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_france_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_france.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_germany_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_germany.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_greece_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_greece.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_hungary_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_hungary.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_india_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_india.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_indonesia_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_indonesia.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_israel_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_israel.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_italy_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_italy.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_japan_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_japan.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_jordan_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_jordan.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_kazakhstan_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_kazakhstan.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_kenya_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_kenya.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_madagascar_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_madagascar.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_malaysia_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_malaysia.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_mexico_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_mexico.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_mozambique_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_mozambique.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_netherlands_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_netherlands.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_new_zealand_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_new_zealand.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_pakistan_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_pakistan.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_paraguay_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_paraguay.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_peru_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_peru.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_poland_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_poland.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_portugal_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_portugal.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_romania_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_romania.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_russian_federation_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_russian_federation.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_saudi_arabia_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_saudi_arabia.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_serbia_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_serbia.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_singapore_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_singapore.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_somalia_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_somalia.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_south_korea_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_south_korea.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_thailand_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_thailand.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_turkey_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_turkey.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_ukraine_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_ukraine.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_united_kingdom_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_united_kingdom.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_united_states_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_united_states.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_uruguay_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_uruguay.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_uzbekistan_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_uzbekistan.csv');
-    END;
-    /
-    BEGIN
-    dbms_cloud.create_external_table (
-    table_name => 'MOVIE_FIN_ADJ_venezuela_EXT', format => '{"type":"csv","skipheaders":"1"}',
-    column_list => '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER',
-    file_uri_list => 'https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/data_library/o/d801_movie_sales_finance_adj_venezuela.csv');
-    END;
-    /</copy>
+    <copy>
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_Austria_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_austria.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_belarus_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_belarus.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_brazil_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_brazil.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_canada_EXT',  
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_canada.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_chile_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_chile.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_china_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_china.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_egypt_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_egypt.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_finland_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_finland.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_france_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_france.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_germany_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_germany.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_greece_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_greece.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_hungary_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_hungary.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_india_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_india.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_indonesia_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_indonesia.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_israel_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_israel.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_italy_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_italy.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_japan_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_japan.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_jordan_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_jordan.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_kazakhstan_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_kazakhstan.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_kenya_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_kenya.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_madagascar_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_madagascar.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_malaysia_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_malaysia.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_mexico_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_mexico.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_mozambique_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_mozambique.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_netherlands_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_netherlands.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_new_zealand_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_new_zealand.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_pakistan_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_pakistan.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_paraguay_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_paraguay.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_peru_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_peru.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_poland_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_poland.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_portugal_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_portugal.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_romania_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_romania.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_russian_federation_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_russian_federation.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_saudi_arabia_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_saudi_arabia.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_serbia_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_serbia.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_singapore_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_singapore.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_somalia_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_somalia.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_south_korea_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_south_korea.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_thailand_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_thailand.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_turkey_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_turkey.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_ukraine_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_ukraine.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_united_kingdom_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_united_kingdom.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_united_states_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_united_states.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_uruguay_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_uruguay.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_uzbekistan_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_uzbekistan.csv');
+		END;
+		/
+		BEGIN
+		dbms_cloud.create_external_table (
+		table_name => 'MOVIE_FIN_ADJ_venezuela_EXT',
+		format =>  '&csv_format_string',
+		column_list => '&adj_column_names',
+		file_uri_list => '&uri_ms_oss_bucket/d801_movie_sales_finance_adj_venezuela.csv');
+		END;
+		/
+    </copy>
     ```
+
+
+
 
 2. To simplify the process of running the update for each of our country files, we can create a simple procedure to manage the update. Copy and paste and run the following code to create a new stored procedure:
 
     ```
-    <copy>CREATE OR REPLACE PROCEDURE RUN_ADJ (letter_in IN VARCHAR2) AUTHID CURRENT_USER
+    <copy>
+    CREATE OR REPLACE PROCEDURE RUN_ADJ (letter_in IN VARCHAR2) AUTHID CURRENT_USER
     IS
     ddl_string VARCHAR2(4000);
     BEGIN
-    ddl_string := 'MERGE INTO movie_sales_fact a USING (SELECT order_num, discount_percent, actual_price FROM movie_fin_adj_'||letter_in||'_ext) b ON ( a.order_num = b.order_num ) WHEN MATCHED THEN UPDATE SET a.discount_percent = b.discount_percent, a.actual_price = b.actual_price';DBMS_OUTPUT.PUT_LINE(ddl_string);
-    EXECUTE IMMEDIATE ddl_string;
+    ddl_string := 'MERGE INTO movie_sales_fact a USING
+		 (SELECT order_num, discount_percent, actual_price
+			 FROM movie_fin_adj_'||letter_in||'_ext)
+		 b ON ( a.order_num = b.order_num )
+		 WHEN MATCHED THEN UPDATE SET a.discount_percent = b.discount_percent,
+		 a.actual_price = b.actual_price';
+    DBMS_OUTPUT.PUT_LINE(ddl_string);
+	EXECUTE IMMEDIATE ddl_string;
     EXECUTE IMMEDIATE 'commit';
-    END;</copy>
+    END;
+    /
+    </copy>
     ```
-3. Now copy, paste and run the following code to run the additional merge statements:
+
+
+3. Now copy, paste and run the following code to run the additional merge statements:
 
     ```
-    <copy>BEGIN
-    RUN_ADJ('austria');
-    RUN_ADJ('belarus');
-    RUN_ADJ('brazil');
-    RUN_ADJ('canada');
-    RUN_ADJ('chile');
-    RUN_ADJ('china');
-    RUN_ADJ('egypt');
-    RUN_ADJ('finland');
-    RUN_ADJ('france');
-    RUN_ADJ('germany');
-    RUN_ADJ('greece');
-    RUN_ADJ('hungary');
-    RUN_ADJ('india');
-    RUN_ADJ('indonesia');
-    RUN_ADJ('israel');
-    RUN_ADJ('italy');
-    RUN_ADJ('japan');
-    RUN_ADJ('jordan');
-    RUN_ADJ('kazakhstan');
-    RUN_ADJ('kenya');
-    RUN_ADJ('madagascar');
-    RUN_ADJ('malaysia');
-    RUN_ADJ('mexico');
-    RUN_ADJ('mozambique');
-    RUN_ADJ('netherlands');
-    RUN_ADJ('new_zealand');
-    RUN_ADJ('pakistan');
-    RUN_ADJ('paraguay');
-    RUN_ADJ('peru');
-    RUN_ADJ('poland');
-    RUN_ADJ('portugal');
-    RUN_ADJ('romania');
-    RUN_ADJ('russian_federation');
-    RUN_ADJ('saudi_arabia');
-    RUN_ADJ('serbia');
-    RUN_ADJ('singapore');
-    RUN_ADJ('somalia');
-    RUN_ADJ('south_korea');
-    RUN_ADJ('thailand');
-    RUN_ADJ('turkey');
-    RUN_ADJ('ukraine');
-    RUN_ADJ('united_kingdom');
-    RUN_ADJ('united_states');
-    RUN_ADJ('uruguay');
-    RUN_ADJ('uzbekistan');
-    RUN_ADJ('venezuela');
-    END;
-    /</copy>
+    <copy>
+    BEGIN
+		run_adj('austria');
+		run_adj('belarus');
+		run_adj('brazil');
+		run_adj('canada');
+		run_adj('chile');
+		run_adj('china');
+		run_adj('egypt');
+		run_adj('finland');
+		run_adj('france');
+		run_adj('germany');
+		run_adj('greece');
+		run_adj('hungary');
+		run_adj('india');
+		run_adj('indonesia');
+		run_adj('israel');
+		run_adj('italy');
+		run_adj('japan');
+		run_adj('jordan');
+		run_adj('kazakhstan');
+		run_adj('kenya');
+		run_adj('madagascar');
+		run_adj('malaysia');
+		run_adj('mexico');
+		run_adj('mozambique');
+		run_adj('netherlands');
+		run_adj('new_zealand');
+		run_adj('pakistan');
+		run_adj('paraguay');
+		run_adj('peru');
+		run_adj('poland');
+		run_adj('portugal');
+		run_adj('romania');
+		run_adj('russian_federation');
+		run_adj('saudi_arabia');
+		run_adj('serbia');
+		run_adj('singapore');
+		run_adj('somalia');
+		run_adj('south_korea');
+		run_adj('thailand');
+		run_adj('turkey');
+		run_adj('ukraine');
+		run_adj('united_kingdom');
+		run_adj('united_states');
+		run_adj('uruguay');
+		run_adj('uzbekistan');
+		run_adj('venezuela');
+		END;
+		/
+    </copy>
     ```
 
 4. The above code should take approximately 2-3 minutes to complete. The primary key, which was created earlier, helps the database to quickly and efficiently locate the records that need to be updated by each MERGE statement. When the code finishes, the Script Output window will show something similar to the following:
 
   ![Result of running script to run additional merge statements](images/3054194683.png)
 
-5. Let's run the same simple query again to validate that our refund files have been successfully processed. Copy and paste the following query into your SQL worksheet:
+5. Let's run the same simple query again to validate that our financial adjustment files have been successfully processed. Copy and paste the following query into your SQL worksheet:
 
     ```
     <copy>SELECT
