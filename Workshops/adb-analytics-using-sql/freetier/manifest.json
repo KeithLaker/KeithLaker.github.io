@@ -18,24 +18,24 @@
         "filename": "../analyzing-movie-sales-data/analyzing-movie-sales-data.md"
       },
       {
-        "title": "Lab 2: Deeper Analysis Of Movie Sales Data",
+        "title": "Lab 2: Working With Semi-Structured Movie Data",
+        "description": "Working With Semi-Structured Movie Data",
+        "filename": "../working-with-semi-structured-data/working-with-semi-structured-data.md"
+      },
+      {
+        "title": "Lab 3: Deeper Analysis Of Movie Sales Data",
         "description": "Deeper Analysis Of Movie Sales Data",
         "filename": "../deeper-analysis-movie-sales-data/deeper-analysis-movie-sales-data.md"
       },
       {
-        "title": "Lab 3: Finding Our Most Important Customers",
+        "title": "Lab 4: Finding Our Most Important Customers",
         "description": "Finding Our Most Important Customers",
         "filename": "../finding-most-important-customers/finding-most-important-customers.md"
       },
       {
-        "title": "Lab 4: Targeting Customers Based On Viewing Patterns",
+        "title": "Lab 5: Targeting Customers Based On Viewing Patterns",
         "description": "Targeting Customers Based On Viewing Patterns",
         "filename": "../targeting-customers/targeting-customers.md"
-      },
-      {
-        "title": "Lab 5: Working With Semi-Structured Movie Data",
-        "description": "Working With Semi-Structured Movie Data",
-        "filename": "../working-with-semi-structured-data/working-with-semi-structured-data.md"
       },
       {
         "title": "Lab 6: Applying Machine Learning To Customer Demographics",

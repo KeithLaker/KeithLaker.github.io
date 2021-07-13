@@ -25,7 +25,9 @@ Estimated Lab Time: 20 minutes
 
 1. Before we being creating our next SQL, let’s set our territory as being “America” by using the following command:
 
-    <pre>ALTER SESSION SET NLS_TERRITORY = America;</pre>
+    ```
+    <copy>ALTER SESSION SET NLS_TERRITORY = America;</copy>
+    ```
 
 2. We can now check that our week starts on Sunday by using the following query:
 
@@ -93,7 +95,7 @@ Now we know which day is the first day of the week we can move on. In spreadshee
 
     ![Result of query using MODEL clause](images/3038282356.png)
 
-6. See how easy it is to build up existing discoveries made using SQL, and extend our understanding of the data! As with previous examples, we can pivot the results and the final pivoted version of our code looks like this:
+6. See how easy it is to build up existing discoveries made using SQL, and extend our understanding of the data? As with previous examples, we can pivot the results and the final pivoted version of our code looks like this:
 
     ```
     <copy>SELECT *
@@ -146,7 +148,7 @@ Now we know which day is the first day of the week we can move on. In spreadshee
     ORDER BY day_no;</copy>
     ```
 
-7. The final output looking like this, where we can now see that over 60% of revenue is generated over those days within a Long Weekend! Conversely, the other three days in our week (Tuesday, Wednesday, Thursday) are generating nearly 40% of our weekly revenue which means that on work/school nights we are still seeing strong demand for streaming movies. This type of information might be useful for our infrastructure team so they can manage their resources more effectively and our marketing team could use this information to help them drive new campaigns.
+7. The final output looks like this, where we can now see that over 60% of revenue is generated over those days within a Long Weekend! Conversely, the other three days in our week (Tuesday, Wednesday, Thursday) are generating nearly 40% of our weekly revenue, which means that on work/school nights we are still seeing strong demand for streaming movies. This type of information might be useful for our infrastructure team so they can manage their resources more effectively and our marketing team could use this information to help them drive new campaigns.
 
     ![Final query output using Pivot](images/3038282357.png)
 
@@ -216,7 +218,7 @@ Our LISTAGG function looks like this:
 
     ![Result of query with SUBSTR() function wrapped around LISTAGG function](images/3038282316.png)
 
-We can send this initial report to the marketing team and see if they want us to extract the additional email addresses for them. Fortunately, Autonomous Data Warehouse has the tools to do this and we will explore one of those tools in the next section,
+We can send this initial report to the marketing team and see if they want us to extract the additional email addresses for them. Fortunately, Autonomous Data Warehouse has the tools to do this and we will explore one of those tools in the next section.
 
 ### Recap
 
@@ -227,6 +229,8 @@ Let's quickly recap what has been covered in this lab:
 - Learned how to combine spreadsheet-like operations with other SQL features such as PIVOT
 
 - Learned how to use the LISTAGG function to concatenate string values into a single row
+
+Please *proceed to the next lab*.
 
 ## **Acknowledgements**
 

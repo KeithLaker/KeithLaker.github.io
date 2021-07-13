@@ -39,15 +39,15 @@ Estimated Lab Time: 25 minutes
 
 ## STEP 1 -  Identifying The Customers Who Watch Family Movies
 
-We can find the customers who watched at least 1 family genre movies during a quarter by using the SQL pattern matching function **MATCH_RECOGNIZE.** To map this pattern within our query we use the following to outline what we are looking for:
+We can find the customers who watched at least 1 family genre movies during a quarter by using the SQL pattern matching function **```MATCH_RECOGNIZE```.** To map this pattern within our query we use the following to outline what we are looking for:
 
 ```
 PATTERN (family+)</pre>
 ```
-And then the pattern id defined as follows:
+And then the pattern ID defined as follows:
 ```
-<copy>DEFINE family as genre = 'Family',
-AND first(family.quarter_num_of_year) = last(family.quarter_num_of_year)</copy>
+DEFINE family as genre = 'Family',
+AND first(family.quarter_num_of_year) = last(family.quarter_num_of_year)
 ```
 1. The first step is to create a view over the `movie_sales_fact` table to filter the results to only show customer data for 2020. Copy and paste the following code:
 
@@ -72,15 +72,15 @@ AND first(family.quarter_num_of_year) = last(family.quarter_num_of_year)</copy>
     );</copy>
     ```
 
-3. the result should be similar to that shown below:
+3. The result should be similar to that shown below:
 
     ![Query result showing the pattern](images/3038282323.png)
 
-This shows that we have over 1,013,572 customers that match this pattern. Before we refine our pattern, let's try and get a little bit more information about these customers by extending our query.
+    This shows that we have over 1,013,572 customers that match this pattern. Before we refine our pattern, let's try and get a little bit more information about these customers by extending our query.
 
 ## STEP 2 -  Returning More Information About The Pattern
 
-1. The pattern matching process can return information about the pattern it has discovered. Defining the information needed is done within the keyword  **MEASURES.**  In this case we want to know the movie_id, the number of family movies that were watched by each customer and just to confirm our pattern matching process is working as expected we return the quarter name of the first matched row and the quarter name for the pattern (*and those two columns should have identical values since that is the requirement from our business definition*):
+1. The pattern matching process can return information about the pattern it has discovered. Defining the information needed is done within the keyword  **```MEASURES```.**  In this case, we want to know the movie_id, the number of family movies that were watched by each customer and just to confirm our pattern matching process is working as expected, we return the quarter name of the first matched row and the quarter name for the pattern (*and those two columns should have identical values since that is the requirement from our business definition*):
 
     ```
     MEASURES
@@ -121,7 +121,7 @@ This shows that we have over 1,013,572 customers that match this pattern. Before
     order by mr.customer_id, match_number;</copy>
     ```
 
-3. This time we get a lot more information returned by our query. This expanded query shows a row for each occurrence of a customer watching a family movie and it shows the movie. As you scroll through the list of customers, you can see that in some cases each customer watches more than one family movie per month (see the column headed FAMILY_MOVIES):
+3. This time we get a lot more information returned by our query. This expanded query shows a row for each occurrence of a customer watching a family movie and it shows the movie. As you scroll through the list of customers, you can see that in some cases each customer watches more than one family movie per month (see the column headed ```FAMILY_MOVIES```):
 
     ![Result of expanded query](images/3038282326.png)
 
@@ -141,7 +141,7 @@ This shows that we have over 1,013,572 customers that match this pattern. Before
 
     **Note:** We are defining "family-related" genres as comedy, crime and drama as you can see in the above definition. The above means we are now looking for rows with at least one comedy movie, one crime movie, one drama movie and at least one family movie within a given quarter. Essentially we are looking for a specific pattern of movie streaming.
 
-2. If we insert the above into our first pattern matching query we can then paste the following code into our SQL Worksheet:
+2. If we insert the above into our first pattern matching query, we can then paste the following code into our SQL Worksheet:
 
     ```
     <copy>SELECT COUNT(*)
@@ -170,13 +170,13 @@ This shows that we have over 1,013,572 customers that match this pattern. Before
 
     ![Query result with additional family related genres](images/3038282324.png)
 
-Before we do any more work on this query, we should check-in with our marketing team to see if this number is within the range they were expecting.
+    Before we do any more work on this query, we should check-in with our marketing team to see if this number is within the range they were expecting.
 
 ## STEP 4 - Changing Requirements
 
 A quick Zoom call with the marketing team reveals that they are really pleased to have the list of customers so quickly! However, they think the list contains too many customers. Ideally they want to target a much smaller list of customers with the first round of this campaign! So we need to identify only those customers that have more than a *specific* interest in watching family-related movies, but also like to watch sci-fi movies and very occasionally might watch a horror movie! 
 
-1. How can you adapt the previous query to pick out those customers that really enjoy family and sci-fi movies?  All we need to do is tweak our pattern statement! Which means our pattern definition will now look like this:
+1. How can you adapt the previous query to pick out those customers that really enjoy family and sci-fi movies?  All we need to do is tweak our pattern statement! This means our pattern definition will now look like this:
 
     <pre>
     PATTERN (comedy+ crime drama family+ horror scifi+ quarter)
@@ -215,7 +215,7 @@ A quick Zoom call with the marketing team reveals that they are really pleased t
 
     ![Query showing how many customers match the new pattern](images/3038282322.png)
 
-4. To help them validate this smaller list of customers, we will add some additional information into our results by showing whether a movie was matched by our pattern as a family or sci-fi movie (this is shown in the  **classifier**  column.
+4. To help them validate this smaller list of customers, we will add some additional information into our results by showing whether a movie was matched by our pattern as a family or sci-fi movie (this is shown in the **classifier** column.)
 
     ```
     <copy>SELECT
@@ -254,7 +254,7 @@ A quick Zoom call with the marketing team reveals that they are really pleased t
     order by mr.customer_id, first_quarter family_movies, sf_movies;</copy>
     ```
 
-5. Now we have a much smaller list of customers for our marketing team to review which should allow them to test out their new campaign.
+5. Now we have a much smaller list of customers for our marketing team to review, which should allow them to test out their new campaign.
 
     ![Query result showing much smaller list of customers](images/3038282321.png)
 
@@ -266,17 +266,19 @@ A quick Zoom call with the marketing team reveals that they are really pleased t
 
 ## Recap
 
-Let's quickly recap what has been covering in this topic:
+Let's quickly recap what has been covered in this lab:
 
-- How to use MATCH_RECOGNIZE to find patterns in your data
+- Using ```MATCH_RECOGNIZE``` to find patterns in your data
 
-- How to define search rules for a pattern
+- Defining search rules for a pattern
 
-- Explore quickly changing a pattern to meet new business requirements
+- Quickly changing a pattern to meet new business requirements
 
-- How to calculate useful information from data inside your pattern
+- Calculating useful information from data inside your pattern
 
 - Sharing results with other data warehouse users
+
+Please *proceed to the next lab*.
 
 ## **Acknowledgements**
 

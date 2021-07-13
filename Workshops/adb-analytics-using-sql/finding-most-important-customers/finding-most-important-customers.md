@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this lab we are going to create a Recency Frequency Monetary (RFM) query to analyze our sales data. This commonly used customer metric will combine some of the SQL analytic functions used in previous queries to create a more complex query using the WITH clause. 
+In this lab we are going to create a Recency Frequency Monetary (RFM) query to analyze our sales data. This commonly used customer metric will combine some of the SQL analytic functions used in previous queries to create a more complex query using the **```WITH```** clause. 
 
 **NOTE:** For more information about RFM, see **[this page](https://en.wikipedia.org/wiki/RFM_(market_research))** on Wikipedia: 
 
@@ -27,7 +27,7 @@ Estimated Lab Time: 10 minutes
 
 - Understand the importance of Recency Frequency Monetary queries
 
-- Learn how to combine queries using WITH clause
+- Learn how to combine queries using **```WITH```** clause
 
 - Learn about binning as an analytical technique
 
@@ -51,7 +51,7 @@ Estimated Lab Time: 10 minutes
 
     ![Result of query to segment customers into bins](images/3038282308.png)
 
-3. The last column in the report shows the "Bin" value. A value of 1 in this column indicates that a customer is a low spending customer and a value of 5 indicates that a customer is a high spending customer. To see more information about using the NTILE function in the SQL documentation, click [here](https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/NTILE.html#GUID-FAD7A986-AEBD-4A03-B0D2-F7F2148BA5E9).
+    The last column in the report shows the "Bin" value. A value of 1 in this column indicates that a customer is a low spending customer and a value of 5 indicates that a customer is a high spending customer. To see more information about using the ```NTILE``` function in the SQL documentation, click [here](https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/NTILE.html#GUID-FAD7A986-AEBD-4A03-B0D2-F7F2148BA5E9).
 
 
 ## STEP 2 -  Binning Customer Sales By Frequency
@@ -70,7 +70,7 @@ Estimated Lab Time: 10 minutes
 
     ![Query result showing how frequently customers watch movies](images/3038282305.png)
 
-Now we can identify those customers, based on when they last watched a movie, that watch the fewest number of movies, where the rfm\_frequency is 1, versus those customers that watch the most number of movies, where the rfm\_frequency is 5.
+    Now we can identify those customers, based on when they last watched a movie, that watch the fewest number of movies, where the rfm\_frequency is 1, versus those customers that watch the most number of movies, where the rfm\_frequency is 5.
 
 ## STEP 3 -  Creating an RFM Query
 
@@ -127,11 +127,13 @@ Now we can identify those customers, based on when they last watched a movie, th
 
 Let's quickly recap what has been covering in this lab:
 
-- How to use NTILE function to "bin" your sales data
+- How to use ```NTILE``` function to "bin" your sales data
 
-- How to use the WITH clause to combine SQL queries 
+- How to use the ```WITH``` clause to combine SQL queries 
 
 - How to create a Recency Frequency Monetary query
+
+Please *proceed to the next lab*.
 
 ## **Acknowledgements**
 

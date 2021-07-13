@@ -3,9 +3,9 @@
 
 ## Overview
 
-Autonomous Data Warehouse contains built-in machine learning algorithms. There is a separate workshop that can guide you through creating machine learning models to solve common business problems. In this short lab the objective is to use one of these built-in algorithms to help us understand the demographic factors that can explain why a customer triggers an "insufficient funds" event against their account. If we can find a way to identify the key demographic attributes associated with this type of event, we can target customers to help them better manage their account and therefore have a better experience on MovieStream.
+Autonomous Data Warehouse contains built-in machine learning algorithms. There is a separate workshop that can guide you through creating machine learning models to solve common business problems. In this short lab, the objective is to use one of these built-in algorithms to help us understand the demographic factors that can explain why a customer triggers an "insufficient funds" event against their account. If we can find a way to identify the key demographic attributes associated with this type of event, we can target customers to help them better manage their account and therefore have a better experience on MovieStream.
 
-To do this analysis, we are going to use a package called **DBMS\_PREDICTIVE\_ANALYTICS**. This package contains routines that perform an automated form of machine learning known as predictive analytics. With predictive analytics, we do not need to be aware of typical machine learning steps such as model building or model scoring. All machine learning activities are handled internally by the procedure. This makes it really easy for everyone to benefit from the power of machine learning-driven analytics.
+To do this analysis, we are going to use a package called **DBMS\_PREDICTIVE\_ANALYTICS**. This package contains routines that perform an automated form of machine learning known as **predictive analytics**. With predictive analytics, we do not need to be aware of typical machine learning steps such as model building or model scoring. All machine learning activities are handled internally by the procedure. This makes it really easy for everyone to benefit from the power of machine learning-driven analytics.
 
 Estimated Lab Time: 15 minutes
 
@@ -46,7 +46,7 @@ SELECT DISTINCT
 FROM movie_sales_fact</copy>
     ```
 
-2. You should get a message in the log window saying "View VW\_CUST\_FUNDS created". Check the number of rows returned by the above query/view, by running the following query, which should show that there are 4,845 unique Customer :
+2. You should get a message in the log window saying "View VW\_CUST\_FUNDS created". Check the number of rows returned by the above query/view, by running the following query, which should show that there are 4,845 unique customers:
 
     ```
     <copy>SELECT COUNT(*) FROM vw_cust_funds</copy>
@@ -81,7 +81,7 @@ FROM movie_sales_fact</copy>
 
     ![Query result showing the column contains only four values](images/3038282313.png)
 
-Obviously we are interested in all the values in this column, not just the non-zero values. From a machine learning perspective, it is important for this type of analysis to have situations where an event did occur, as well as situations where an event does not occur - we need data to cover both sides of the story. Now that we know we have the right data set in place, we can proceed to building our model.
+    Obviously we are interested in all the values in this column, not just the non-zero values. From a machine learning perspective, it is important for this type of analysis to have situations where an event did occur, as well as situations where an event does not occur - we need data to cover both sides of the story. Now that we know we have the right data set in place, we can proceed to building our model.
 
 ## STEP 2 - Building The Model
 
@@ -97,7 +97,7 @@ To run this analysis we need to provide the following information:
 
 - Name of the output table - this gets created automatically by the procedure so just needs a name of table that doesn't exist
 
-**NOTE:**  The input table contains the column `CUSTOMER_ID` to make the data easier to validate once we get a final result. However, under normal circumstances this column would not be included as an input to the machine learning model, since every row is unique. Fortunately, the machine learning features in Autonomous Data Warehouse are smart enough to automatically ignore these types of columns and focus on the other more "interesting" columns.
+**NOTE:**  The input table contains the column ```CUSTOMER_ID``` to make the data easier to validate once we get a final result. However, under normal circumstances this column would not be included as an input to the machine learning model, since every row is unique. Fortunately, the machine learning features in Autonomous Data Warehouse are smart enough to automatically ignore these types of columns and focus on the other more "interesting" columns.
 
 1. Now that we understand the required inputs, let's run the model:
 
@@ -156,7 +156,7 @@ Simply shows the ranking of explanatory power. Rows with equal values for expla
 
     ![Query results showing enhanced output](images/3038282310.png)
 
-What do the results tell us? The above results tell us that to understand why an insufficient funds event occurs we need to examine the occurrence of late mortgage payments by a customer, their segment name and the mortgage amount. Note that the analysis doesn't focus on specific attribute values. The analysis shows that by using the top four attributes we could expect a better-than-average (53%) ability to predict the likelihood of an insufficient funds event based on the top three attributes identified by the EXPLAIN procedure.
+What do the results tell us? The above results tell us that to understand why an insufficient funds event occurs, we need to examine the occurrence of late mortgage payments by a customer, their segment name and the mortgage amount. Note that the analysis doesn't focus on specific attribute values. The analysis shows that by using the top four attributes we could expect a better-than-average (53%) ability to predict the likelihood of an insufficient funds event based on the top three attributes identified by the EXPLAIN procedure.
 
 Conversely, we can say that demographic attributes such as job\_type, marital\_status and education have no impact on whether a customer is likely to incur an insufficient funds event.
 
@@ -165,10 +165,10 @@ Conversely, we can say that demographic attributes such as job\_type, marital\_s
 This lab has introduced you to the built-in capabilities of machine learning within Autonomous Data Warehouse. There are additional workshops in this series that will take you deeper into these unique capabilities. 
 
 Within this lab we have examined:
-- How to use the DBMS\_PREDICTIVE\_ANALYTICS.EXPLAIN procedure and how to interpret the results that are automatically generated.
+- How to use the ```DBMS_PREDICTIVE_ANALYTICS.EXPLAIN``` procedure and how to interpret the results that are automatically generated.
 - How to use one of these built-in algorithms to help us understand the demographic factors that can explain why a customer triggers an "insufficient funds" event against their account.
 
-Now that we identified theses key demographic attributes, we can do more analysis using SQL to go deeper. This type of analysis can allow us to identify and guide customers in better ways to manage their account and, therefore, have a better experience on our MovieStream platform.
+Now that we identified these key demographic attributes, we can do more analysis using SQL to go deeper. This type of analysis can allow us to identify and guide customers in better ways to manage their account and, therefore, have a better experience on our MovieStream platform.
 
 ## **Acknowledgements**
 
