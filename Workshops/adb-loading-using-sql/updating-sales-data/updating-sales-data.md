@@ -654,7 +654,7 @@ We have processed the financial adjustments for Argentina. Now we are going to p
 
 4. The above code should take approximately 4-5 minutes to complete (around 10 seconds per country). The primary key, which was created earlier, helps the database to quickly and efficiently locate the records that need to be updated by each MERGE statement. When the code finishes, the Script Output window will show something similar to the following:
 
-  ![Result of running script to run additional merge statements](images/sql-data-loading-lab4-step3-subset6.png)
+  ![Result of running script to run additional merge statements](images/sql-data-loading-lab4-step6-substep4.png)
 
 5. Let's run the same simple query again to validate that our financial adjustment files have been successfully processed. Copy and paste the following query into your SQL worksheet:
 
