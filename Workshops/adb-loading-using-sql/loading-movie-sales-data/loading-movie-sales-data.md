@@ -196,15 +196,6 @@ A smarter and more efficient way to load all the data for 2018 to 2020 is to let
     ![LOW consumer group shown in worksheet](images/3054194710.png)
 
 
-<details>
-   <summary>
-      What is a consumer group?
-
-      Autonomous Data Warehouse comes complete with a set of pre-defined consumer groups (HIGH, MEDIUM and LOW) which provide different levels of performance and concurrency. Each consumer group has different allocations of CPU/IO resources. With the default settings the consumer group HIGH will be able to use 4 times more CPU/IO resources compared to LOW and 2 times more CPU/IO resources compared to MEDIUM, when needed. The consumer group MEDIUM will be able to use 2 times more CPU/IO resources compared to LOW, when needed. Most data warehouse queries will run quickly and efficiently using the LOW consumer group. However, this workshop contains data load and data merge operations that can benefit from having access to additional CPU and IO resources.  
-   </summary>
-</details>
-
-
 **NOTE**: For more information about how to use consumer groups to manage concurrency and prioritization of user requests in Autonomous Data Warehouse, please click the following link: [Manage Concurrency and Priorities on Autonomous Database](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/manage-priorities.html#GUID-19175472-D200-445F-897A-F39801B0E953).
 
 2. Change the consumer group, by simply clicking the downward pointing arrow next to the word LOW, and from the pulldown menu select the word **HIGH**.
