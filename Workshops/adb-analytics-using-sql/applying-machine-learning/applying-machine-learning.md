@@ -1,13 +1,11 @@
 ﻿
 # Applying Machine Learning to Customer Demographics
 
-## Overview
+## Introduction
 
-Autonomous Data Warehouse contains built-in machine learning algorithms. There is a separate workshop that can guide you through creating machine learning models to solve common business problems. In this short lab, the objective is to use one of these built-in algorithms to help us understand the demographic factors that can explain why a customer triggers an "insufficient funds" event against their account. If we can find a way to identify the key demographic attributes associated with this type of event, we can target customers to help them better manage their account and therefore have a better experience on MovieStream.
+Autonomous Data Warehouse contains built-in machine learning algorithms. The aim of this lab is to provide a simple introduction into using machine learning models to solve common business problems. There are many other workshops in LiveLabs that will help you explore machine learning in more detail: [see here](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/livelabs-workshop-cards?c=y&p100_focus_area=27&p100_product=131).
 
-To do this analysis, we are going to use a package called **DBMS\_PREDICTIVE\_ANALYTICS**. This package contains routines that perform an automated form of machine learning known as **predictive analytics**. With predictive analytics, we do not need to be aware of typical machine learning steps such as model building or model scoring. All machine learning activities are handled internally by the procedure. This makes it really easy for everyone to benefit from the power of machine learning-driven analytics.
-
-Estimated Lab Time: 15 minutes
+Estimated Lab Time: 10 minutes
 
 ### Objectives
 
@@ -15,41 +13,49 @@ Estimated Lab Time: 15 minutes
 
 - Learn how to interpret the results that are automatically generated
 
+
+## Overview
+
+Autonomous Data Warehouse contains built-in machine learning algorithms. There is a separate workshop that can guide you through creating machine learning models to solve common business problems. In this short lab, the objective is to use one of these built-in algorithms to help us understand the demographic factors that can explain why a customer triggers an "insufficient funds" event against their account. If we can find a way to identify the key demographic attributes associated with this type of event, we can target customers to help them better manage their account and therefore have a better experience on MovieStream.
+
+To do this analysis, we are going to use a package called **DBMS\_PREDICTIVE\_ANALYTICS**. This package contains routines that perform an automated form of machine learning known as **predictive analytics**. With predictive analytics, we do not need to be aware of typical machine learning steps such as model building or model scoring. All machine learning activities are handled internally by the procedure. This makes it really easy for everyone to benefit from the power of machine learning-driven analytics.
+
+
 ## STEP 1 - Preparing Our customer Data Set
 
 1. The firsts step is to create a view which summarizes the main customer demographic attributes. This means removing the time attributes, transaction attributes and movie attributes from our movie sales data.  Copy and paste the following code into the SQL worksheet window:
 
     ```
-<copy>CREATE OR REPLACE VIEW vw_cust_funds AS
-SELECT DISTINCT
-    customer_id,
-    segment_name,
-    credit_balance,
-    education,
-    full_time,
-    gender,
-    household_size,
-    insuff_funds_incidents,
-    job_type,
-    late_mort_rent_pmts,
-    marital_status,
-    mortgage_amt,
-    num_cars,
-    num_mortgages,
-    pet,
-    rent_own,
-    years_current_employer_band,
-    years_customer,
-    years_residence_band,
-    commute_distance,
-    commute_distance_band
-FROM movie_sales_fact</copy>
+    <copy>CREATE OR REPLACE VIEW vw_cust_funds AS
+    SELECT DISTINCT
+    customer_id,
+    segment_name,
+    credit_balance,
+    education,
+    full_time,
+    gender,
+    household_size,
+    insuff_funds_incidents,
+    job_type,
+    late_mort_rent_pmts,
+    marital_status,
+    mortgage_amt,
+    num_cars,
+    num_mortgages,
+    pet,
+    rent_own,
+    years_current_employer_band,
+    years_customer,
+    years_residence_band,
+    commute_distance,
+    commute_distance_band
+    FROM movie_sales_fact;</copy>
     ```
 
 2. You should get a message in the log window saying "View VW\_CUST\_FUNDS created". Check the number of rows returned by the above query/view, by running the following query, which should show that there are 4,845 unique customers:
 
     ```
-    <copy>SELECT COUNT(*) FROM vw_cust_funds</copy>
+    <copy>SELECT COUNT(*) FROM vw_cust_funds;</copy>
     ```
 
     You should see that there are 4,845 unique customer rows:
@@ -59,7 +65,7 @@ FROM movie_sales_fact</copy>
 3. What does the data set in our table actually look like? Let's run another simple query:
 
     ```
-    <copy>SELECT COUNT(*)
+    <copy>SELECT *
     FROM vw_cust_funds
     ORDER BY 1;</copy>
     ```
@@ -102,10 +108,7 @@ To run this analysis we need to provide the following information:
 1. Now that we understand the required inputs, let's run the model:
 
     ```
-    <copy>EXEC DBMS_PREDICTIVE_ANALYTICS.EXPLAIN(       
-      data_table_name      => 'vw_cust_funds',
-      explain_column_name  => 'insuff_funds_incidents',
-      result_table_name    => 'customer_explain_result');</copy>
+    <copy>EXEC DBMS_PREDICTIVE_ANALYTICS.EXPLAIN('vw_cust_funds', 'insuff_funds_incidents', 'customer_explain_result');</copy>
     ```
 
 2. The package will return a "PL/SQL procedure successfully completed" message to the log window once it has finished processing - which should take around 20 seconds.
@@ -160,13 +163,14 @@ What do the results tell us? The above results tell us that to understand why an
 
 Conversely, we can say that demographic attributes such as job\_type, marital\_status and education have no impact on whether a customer is likely to incur an insufficient funds event.
 
-##  **Recap**
+## Recap
 
 This lab has introduced you to the built-in capabilities of machine learning within Autonomous Data Warehouse. There are additional workshops in this series that will take you deeper into these unique capabilities. 
 
 Within this lab we have examined:
+
 - How to use the ```DBMS_PREDICTIVE_ANALYTICS.EXPLAIN``` procedure and how to interpret the results that are automatically generated.
-- How to use one of these built-in algorithms to help us understand the demographic factors that can explain why a customer triggers an "insufficient funds" event against their account.
+- How to this built-in feature helps us understand the demographic factors that can explain why a customer mght trigger an "insufficient funds" event.
 
 Now that we identified these key demographic attributes, we can do more analysis using SQL to go deeper. This type of analysis can allow us to identify and guide customers in better ways to manage their account and, therefore, have a better experience on our MovieStream platform.
 

@@ -8,11 +8,6 @@
         "filename": "../workshop-intro/workshop-intro.md"
       },
       {
-        "title": "Getting Started",
-        "description": "Getting Started - prereq is the Data Loading and Management Using the SQL MovieStream Dataset",
-        "filename": "../getting-started-prereq-loading-workshop/getting-started-prereq-loading-workshop.md"
-      },
-      {
         "title": "Lab 1: Analyzing Movie Sales Data",
         "description": "Analyzing Movie Sales Data",
         "filename": "../analyzing-movie-sales-data/analyzing-movie-sales-data.md"
@@ -27,18 +22,23 @@
         "description": "Deeper Analysis Of Movie Sales Data",
         "filename": "../deeper-analysis-movie-sales-data/deeper-analysis-movie-sales-data.md"
       },
-      {
-        "title": "Lab 4: Finding Our Most Important Customers",
+     {
+        "title": "Lab 4: Managing Text Lists Using SQL",
+        "description": "Managing Text Lists Using SQL",
+        "filename": "../managing-text-lists/managing-text-lists.md"
+      },
+     {
+        "title": "Lab 5: Finding Our Most Important Customers",
         "description": "Finding Our Most Important Customers",
         "filename": "../finding-most-important-customers/finding-most-important-customers.md"
       },
       {
-        "title": "Lab 5: Targeting Customers Based On Viewing Patterns",
+        "title": "Lab 6: Targeting Customers Based On Viewing Patterns",
         "description": "Targeting Customers Based On Viewing Patterns",
         "filename": "../targeting-customers/targeting-customers.md"
       },
       {
-        "title": "Lab 6: Applying Machine Learning To Customer Demographics",
+        "title": "Lab 7: Applying Machine Learning To Customer Demographics",
         "description": "Applying Machine Learning To Customer Demographics",
         "filename": "../applying-machine-learning/applying-machine-learning.md"
       },

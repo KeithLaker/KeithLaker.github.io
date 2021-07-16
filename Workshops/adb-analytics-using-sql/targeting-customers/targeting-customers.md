@@ -1,11 +1,25 @@
-﻿
-# Targeting Customers Based On Viewing Patterns
+﻿# Targeting Customers Based On Viewing Patterns
 
 ## Introduction
 
 Patterns are everywhere in business but what is a pattern? They are usually defined as a repetitive series or sequence of specific events or actions and they occur everywhere in business. The ability to find, analyze and quantify individual or groups of patterns within a data set is now a key business requirement. It can help you gain a better understanding of your customers’ behavior and associated operational activities, seek out new opportunities to drive additional revenue streams and even help identify malicious activities that could lead to your business incurring significant costs.
 
 Autonomous Data Warehouse comes complete with native pattern matching capabilities. This brings the simplicity and efficiency of the most common data analysis language (SQL) to the process of identifying patterns within a data set. It offers significant gains in term of performance, maintainability and scalability compared to the legacy ways of solving pattern matching-like problems. 
+
+Estimated time: 15 minutes
+
+### Objectives
+
+- Understand that many data sets have patterns
+
+- Learn how to write simple MATCH_RECOGNIZE queries
+
+- Learn how to use built-in pattern matching measures
+
+- Learn how to define frequency criteria for patterns
+
+- Learn how to define search criteria for patterns
+
 
 ### Overview Of Business Problem
 
@@ -23,19 +37,7 @@ The business requirement breaks down as follows:
 
 This all sounds very complicated, but using SQL pattern matching it is very easy to find these customers!
 
-Estimated Lab Time: 25 minutes
 
-### Objectives
-
-- Understand that many data sets have patterns
-
-- Learn how to write simple MATCH_RECOGNIZE queries
-
-- Learn how to use built-in pattern matching measures
-
-- Learn how to define frequency criteria for patterns
-
-- Learn how to define search criteria for patterns
 
 ## STEP 1 -  Identifying The Customers Who Watch Family Movies
 
@@ -54,7 +56,7 @@ AND first(family.quarter_num_of_year) = last(family.quarter_num_of_year)
     ```
     <copy>CREATE VIEW movie_sales_fact_2020 AS
     SELECT * FROM movie_sales_fact
-    WHERE year = '2020';</copy>
+    WHERE year = 2020;</copy>
     ```
 
 2. The format of our SQL query needs to include some additional keywords as shown below, which counts the number of customers that have watched at least two family movies within a quarter. We can now copy and paste the following code into our SQL Worksheet and run the code:
@@ -251,7 +253,7 @@ A quick Zoom call with the marketing team reveals that they are really pleased t
     scifi as genre = 'Sci-Fi',
     quarter as scifi.quarter_num_of_year = comedy.quarter_num_of_year
     ) mr
-    order by mr.customer_id, first_quarter family_movies, sf_movies;</copy>
+    order by mr.customer_id, first_quarter, family_movies, sf_movies;</copy>
     ```
 
 5. Now we have a much smaller list of customers for our marketing team to review, which should allow them to test out their new campaign.

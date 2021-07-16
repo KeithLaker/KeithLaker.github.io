@@ -1,11 +1,21 @@
-﻿
-# Finding Our Most Important Customers
+﻿# Finding Our Most Important Customers
 
 ## Introduction
 
 In this lab we are going to create a Recency Frequency Monetary (RFM) query to analyze our sales data. This commonly used customer metric will combine some of the SQL analytic functions used in previous queries to create a more complex query using the **```WITH```** clause. 
 
 **NOTE:** For more information about RFM, see **[this page](https://en.wikipedia.org/wiki/RFM_(market_research))** on Wikipedia: 
+
+Estimated time: 10 minutes
+
+### Objectives
+
+- How to assign sales data to a set of "bins"
+
+- How to combine different SQL queries together for more sophisicated data analysis 
+
+- How to create the classic Recency Frequency Monetary (RFM) query
+
 
 ### Overview Of Business Problem
 
@@ -36,7 +46,7 @@ Estimated Lab Time: 10 minutes
 1. Use the following query to segment customers into 5 distinct bins based on the value of their purchases:
 
     ```
-    <copy>SELECT m.customer_id,
+    <copy>SELECT customer_id,
     customer_name,
     country,
     gender,
@@ -44,12 +54,17 @@ Estimated Lab Time: 10 minutes
     income_band,
     NTILE (5) over (order by sum(actual_price)) AS rfm_monetary
     FROM movie_sales_fact
-    GROUP BY customer_id, customer_name, country, gender, age, income_band;</copy>
+    GROUP BY customer_id,
+    customer_name,
+    country,
+    gender,
+    age,
+    income_band;</copy>
     ```
 
 2. This should take approximately 3-4 seconds to run.
 
-    ![Result of query to segment customers into bins](images/3038282308.png)
+    ![Result of query to segment customers into bins](images/analytics-lab-5-step-1-substep-2.png)
 
     The last column in the report shows the "Bin" value. A value of 1 in this column indicates that a customer is a low spending customer and a value of 5 indicates that a customer is a high spending customer. To see more information about using the ```NTILE``` function in the SQL documentation, click [here](https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/NTILE.html#GUID-FAD7A986-AEBD-4A03-B0D2-F7F2148BA5E9).
 
@@ -68,7 +83,7 @@ Estimated Lab Time: 10 minutes
 
 2. This should take around 1-2 seconds to complete.
 
-    ![Query result showing how frequently customers watch movies](images/3038282305.png)
+    ![Query result showing how frequently customers watch movies](images/analytics-lab-5-step-2-substep-2.png)
 
     Now we can identify those customers, based on when they last watched a movie, that watch the fewest number of movies, where the rfm\_frequency is 1, versus those customers that watch the most number of movies, where the rfm\_frequency is 5.
 
@@ -121,7 +136,7 @@ Estimated Lab Time: 10 minutes
 
 2. The result only shows customers who have significant spend (>= 4) but have not visited the site recently (<= 2).
 
-    ![Query result showing customers with significant spend and having not visited site recently](images/3038282304.png)
+    ![Query result showing customers with significant spend and having not visited site recently](images/analytics-lab-5-step-3-substep-2.png)
 
 ## Recap
 

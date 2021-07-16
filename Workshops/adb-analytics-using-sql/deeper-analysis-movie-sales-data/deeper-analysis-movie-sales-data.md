@@ -1,9 +1,17 @@
-﻿
-# Deeper Analysis of Movie Sales Data
+﻿# Deeper Analysis of Movie Sales Data
 
 ## Introduction
 
-This lab is optional. This lab is aimed at people who are accustomed to working with spreadsheets and are comfortable creating sophisticated formulas within their worksheets. In this lab we explore how to use the SQL MODEL clause to make SQL more spreadsheet-like in terms of inserting new rows and new calculations into a query.
+**This lab is optional**. This lab is aimed at people who are accustomed to working with spreadsheets and are comfortable creating sophisticated formulas within their worksheets. In this lab we explore how to use the SQL MODEL clause to make SQL more spreadsheet-like in terms of inserting new rows and new calculations into a query.
+
+Estimated time: 10 minutes
+
+### Objectives
+
+- Learn how to combine existing rows within a query create new rows 
+
+- Understand how define new calculations using a spreadsheet-like syntax
+
 
 ### Going A Little Deeper
 
@@ -19,7 +27,7 @@ What if we want to group the days of week into two new custom aggregates, effect
 
 Estimated Lab Time: 20 minutes
 
-## STEP 1 - Analysis by Weekdays vs. Long Weekends
+## STEP 1 - Revenue Analysis by Weekdays vs. Long Weekends
 
  **NOTE:** Different regions organize their day numbers in different ways. In Germany, for example, the week starts on Monday, so that day is assigned as day number one. In the US the day numbers start at one on Sunday. Therefore, it’s important to understand these regional differences. Oracle Database provides session settings that allow you to control these types of regional differences by using the **ALTER SESSION SET** command.
 
@@ -45,7 +53,60 @@ Estimated Lab Time: 20 minutes
 
 Now we know which day is the first day of the week we can move on. In spreadsheets, we can refer to values by referencing the row + column position such as A1 + B2. This would allow us to see more clearly the % contribution provided by each grouping so we can get some insight into the most heavily trafficked days for movie-watching. How can we do this?
 
-4. Autonomous Data Warehouse has a unique SQL feature called the **MODEL** clause which creates a spreadsheet-like modeling framework over our data. If we tweak and extend the last query we can use the MODEL clause to add the new rows (**Weekday** and **Long Weekend**) into our results:
+4. Autonomous Data Warehouse has a unique SQL feature called the **MODEL** clause which creates a spreadsheet-like modeling framework over our data. If we tweak and extend the last query we can use the MODEL clause to add completely new rows (**Weekday** and **Long Weekend**) into our results:
+
+    ```
+    <copy>
+    SELECT
+    quarter_name,
+    day_name,
+    revenue
+    FROM
+    (SELECT
+    quarter_name,
+    TO_CHAR(day, 'D') AS day_no,
+    SUM(actual_price * quantity_sold) AS revenue
+    FROM movie_sales_fact
+    WHERE YEAR = '2020'
+    GROUP BY quarter_name, to_char(day, 'D'), to_char(day, 'Day')
+    ORDER BY quarter_name, to_char(day, 'D'))
+    MODEL
+    PARTITION BY (quarter_name)
+    DIMENSION BY (day_no)
+    MEASURES(revenue revenue, 'Long Weekend' day_name, 0 contribution)
+    RULES(
+    revenue[8] = revenue[3]+revenue[4]+revenue[5],
+    revenue[9] = revenue[1]+revenue[2]+revenue[6]+revenue[7],
+    day_name[1] = 'Sunday',
+    day_name[2] = 'Monday',
+    day_name[3] = 'Tuesday',
+    day_name[4] = 'Wednesday',
+    day_name[5] = 'Thursday',
+    day_name[6] = 'Friday',
+    day_name[7] = 'Saturday',
+    day_name[8] = 'Weekday',
+    day_name[9] = 'Long Weekend'
+    )
+    ORDER BY quarter_name, day_no;</copy>
+    ```
+
+5. This will generate the following output:
+
+    ![Result of query using MODEL clause](images/analytics-lab-3-step-1-substep-5.png)
+
+See how easy it is to build upon existing discoveries using SQL to extend our understanding of the data! The concept of being able to add new rows using a spreadsheet-like approach within SQL is unique to Oracle. The MODEL clause creates two new rows that we identify as **day 8** and **day 9**. These new rows are assigned names -  day\_name\[8\] = 'Weekday' and day\_name\[9\] = 'Long Weekend'. The calculation of revenue for these two new rows uses a similar approach to many spreadsheets: revenue for day \[8\] is derived from adding together revenue for day \[3\]+ revenue for \[4\] + revenue for day \[5\].
+
+
+## STEP 2 - Revenue and Contribution Analysis by Weekdays vs. Long Weekends
+
+If we tweak and extend the last query we can expand the MODEL clause to also calculate contribution using a similar syntax to a spreadsheet:
+
+
+    contribution[1] = trunc((revenue[1])/(revenue[1]+revenue[2]+revenue[3]+revenue[4]+revenue[5]+revenue[6]+revenue[7])*100,2)
+    
+This statement calculates the contribution for Sunday (day 1) by taking the revenue for day **1** and dividing it by the revenue from each of the seven days .
+
+2. Run the following query to calculate revenue and contribution for each day including the new rows (Long Weekend and Weekday): 
 
     ```
     <copy>
@@ -69,15 +130,15 @@ Now we know which day is the first day of the week we can move on. In spreadshee
     RULES(
     revenue[8] = revenue[3]+revenue[4]+revenue[5],
     revenue[9] = revenue[1]+revenue[2]+revenue[6]+revenue[7],
-    contribution[1] = trunc((revenue[1])/(revenue[1]+revenue[5]+revenue[6]+revenue[7]+revenue[2]+revenue[3]+revenue[4])*100,2),
-    contribution[2] = trunc((revenue[2])/(revenue[1]+revenue[5]+revenue[6]+revenue[7]+revenue[2]+revenue[3]+revenue[4])*100,2),
-    contribution[3] = trunc((revenue[3])/(revenue[1]+revenue[5]+revenue[6]+revenue[7]+revenue[2]+revenue[3]+revenue[4])*100,2),
-    contribution[4] = trunc((revenue[4])/(revenue[1]+revenue[5]+revenue[6]+revenue[7]+revenue[2]+revenue[3]+revenue[4])*100,2),
-    contribution[5] = trunc((revenue[5])/(revenue[1]+revenue[5]+revenue[6]+revenue[7]+revenue[2]+revenue[3]+revenue[4])*100,2),
-    contribution[6] = trunc((revenue[6])/(revenue[1]+revenue[5]+revenue[6]+revenue[7]+revenue[2]+revenue[3]+revenue[4])*100,2),
-    contribution[7] = trunc((revenue[7])/(revenue[1]+revenue[5]+revenue[6]+revenue[7]+revenue[2]+revenue[3]+revenue[4])*100,2),
-    contribution[8] = trunc((revenue[3]+revenue[4]+revenue[5])/(revenue[1]+revenue[5]+revenue[6]+revenue[7]+revenue[2]+revenue[3]+revenue[4])*100,2),
-    contribution[9] = trunc((revenue[1]+revenue[2]+revenue[6]+revenue[7])/(revenue[1]+revenue[5]+revenue[6]+revenue[7]+revenue[2]+revenue[3]+revenue[4])*100,2),
+    contribution[1] = trunc((revenue[1])/(revenue[1]+revenue[2]+revenue[3]+revenue[4]+revenue[5]+revenue[6]+revenue[7])*100,2),
+    contribution[2] = trunc((revenue[2])/(revenue[1]+revenue[2]+revenue[3]+revenue[4]+revenue[5]+revenue[6]+revenue[7])*100,2),
+    contribution[3] = trunc((revenue[3])/(revenue[1]+revenue[2]+revenue[3]+revenue[4]+revenue[5]+revenue[6]+revenue[7])*100,2),
+    contribution[4] = trunc((revenue[4])/(revenue[1]+revenue[2]+revenue[3]+revenue[4]+revenue[5]+revenue[6]+revenue[7])*100,2),
+    contribution[5] = trunc((revenue[5])/(revenue[1]+revenue[2]+revenue[3]+revenue[4]+revenue[5]+revenue[6]+revenue[7])*100,2),
+    contribution[6] = trunc((revenue[6])/(revenue[1]+revenue[2]+revenue[3]+revenue[4]+revenue[5]+revenue[6]+revenue[7])*100,2),
+    contribution[7] = trunc((revenue[7])/(revenue[1]+revenue[2]+revenue[3]+revenue[4]+revenue[5]+revenue[6]+revenue[7])*100,2),
+    contribution[8] = trunc((revenue[3]+revenue[4]+revenue[5])/(revenue[1]+revenue[2]+revenue[3]+revenue[4]+revenue[5]+revenue[6]+revenue[7])*100,2),
+    contribution[9] = trunc((revenue[1]+revenue[2]+revenue[6]+revenue[7])/(revenue[1]+revenue[2]+revenue[3]+revenue[4]+revenue[5]+revenue[6]+revenue[7])*100,2),
     day_name[2] = 'Monday',
     day_name[3] = 'Tuesday',
     day_name[4] = 'Wednesday',
@@ -91,11 +152,12 @@ Now we know which day is the first day of the week we can move on. In spreadshee
     ORDER BY quarter_name, day_no;</copy>
     ```
 
-5. This will generate the following output:
+2. This will generate the following output:
 
     ![Result of query using MODEL clause](images/3038282356.png)
 
-6. See how easy it is to build up existing discoveries made using SQL, and extend our understanding of the data? As with previous examples, we can pivot the results and the final pivoted version of our code looks like this:
+
+3. As with earlier examples, we can pivot the results and the final pivoted version of our code looks like this:
 
     ```
     <copy>SELECT *
@@ -152,73 +214,6 @@ Now we know which day is the first day of the week we can move on. In spreadshee
 
     ![Final query output using Pivot](images/3038282357.png)
 
-## STEP 2 - Creating Lists of Customers 
-
-The direct marketing team at MovieStream wants us to generate a report that groups customer email addresses by their level of education. The list needs to be in comma-separated format so they can load the information into their database that tracks demographic data of our customers. We have looked at comma-separated file formats during the data loading part of these workshops. The filename suffix associated with this format is usually **.csv**.
-
-1. Creating this type of list as part of a query is actually very easy to do with Autonomous Data Warehouse because we can use the SQL **LISTAGG** function. To get started with this query, we first we need a unique list of customers by education:
-
-    ```
-    <copy>
-    SELECT
-    DISTINCT education,
-    username,
-    email
-    FROM movie_sales_fact;</copy>
-    ```
-2. This query should return relatively quickly, as shown below.
-
-    ![Initial query results grouping customer email addresses by level of education](images/3038282318.png)
-
-Next, we need to group the email addresses by each attribute value of our Education column. The LISTAGG function will do this for us. It will take the email address in each row and concatenate it into a string in a similar way to the PIVOT function we used in the previous section. Now when we build the string of email addresses, we might end up with too many values for a specific level of education. At this point, many data warehouse engines will simply return an error message, something like **result of string concatenation is too long**. Fortunately, Autonomous Data Warehouse has a unique capability in that it can trap this error directly within the LISTAGG function.
-
-Our LISTAGG function looks like this:
-
-<pre>LISTAGG(email, ',' ON OVERFLOW TRUNCATE '...' WITH COUNT) WITHIN GROUP (ORDER BY username) AS customer_list</pre>
-
-3. If we wrap this around our original query, we can use the following syntax to create the report we need:
-
-    ```
-    <copy>
-    SELECT
-    education,
-    LISTAGG(email, ',' ON OVERFLOW TRUNCATE '...' WITH COUNT) WITHIN GROUP (ORDER BY username) AS customer_list
-    FROM
-    (SELECT
-    DISTINCT education,
-    username,
-    email
-    FROM movie_sales_fact)
-    GROUP BY education
-    ORDER BY 1;</copy>
-    ```
-
-4. The results should look similar to the following:
-
-    ![Query result using LISTAGG](images/3038282317.png)
-
-5. That's it! It looks simple, but only Autonomous Data Warehouse can run this query without generating an error and aborting. To understand why, let's tweak the query to show the rows where our string concatenation gets too long. Run the following modified query:
-
-    ```
-    <copy>
-    SELECT
-    education,
-    SUBSTR(LISTAGG(email, ',' ON OVERFLOW TRUNCATE '...' WITH COUNT) WITHIN GROUP (ORDER BY username), -50) AS customer_list
-    FROM
-    (SELECT
-    DISTINCT education,
-    username,
-    email
-    FROM movie_sales_fact)
-    GROUP BY education
-    ORDER BY 1;</copy>
-    ```
-
-6. Notice that there is now a SUBSTR() function wrapped around our LISTAGG function. This additional function returns the last 50 characters of each row, which allows us to see that we have a lot of customers who achieved **High School** or **Bachelor** levels of education. For **High School** customers, our list could contain a possible 484 additional email addresses; and where the education level is **Bachelor**, then our list could contain an additional 255 email addresses. 
-
-    ![Result of query with SUBSTR() function wrapped around LISTAGG function](images/3038282316.png)
-
-We can send this initial report to the marketing team and see if they want us to extract the additional email addresses for them. Fortunately, Autonomous Data Warehouse has the tools to do this and we will explore one of those tools in the next section.
 
 ### Recap
 
@@ -228,7 +223,6 @@ Let's quickly recap what has been covered in this lab:
 
 - Learned how to combine spreadsheet-like operations with other SQL features such as PIVOT
 
-- Learned how to use the LISTAGG function to concatenate string values into a single row
 
 Please *proceed to the next lab*.
 
@@ -236,4 +230,4 @@ Please *proceed to the next lab*.
 
 - **Author** - Keith Laker, ADB Product Management
 - **Adapted for Cloud by** - Richard Green, Principal Developer, Database User Assistance
-- **Last Updated By/Date** - Richard Green, June 2021
+- **Last Updated By/Date** - Keith Laker, July 2021
