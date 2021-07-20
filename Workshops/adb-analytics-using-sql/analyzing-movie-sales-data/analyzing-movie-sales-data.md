@@ -2,11 +2,11 @@
 
 ## Introduction
 
-In most real-world scenarios queries against your data warehouse would normally involve the use of a data visualization tool such as Oracle Analytics Cloud (alternatively, 3rd party business intelligence products such as Qlik, Tableau, PowerBI, and so on, currently support Autonomous Data Warehouse). Within this part of the workshop we will use SQL commands to query our data using the built-in SQL Worksheet.  
+In most real-world scenarios, queries against your data warehouse would normally involve the use of a data visualization tool such as Oracle Analytics Cloud (alternatively, 3rd party business intelligence products such as Qlik, Tableau, PowerBI, and so on, currently support Autonomous Data Warehouse). Within this part of the workshop we will use SQL commands to query our data using the built-in SQL Worksheet.  
 
-**Note** that your Autonomous Data Warehouse also comes complete with a built-in machine learning notebook tool which is launched from the tools menu on the console page. It is aimed at data scientists and data analysts and allows them to build machine learning models using PL/SQL, Python and/or R. This feature is explored in one of our other online labs for Autonomous Data Warehouse.
+**Note:** Your Autonomous Data Warehouse also comes complete with a built-in machine learning notebook tool which is launched from the tools menu on the console page. It is aimed at data scientists and data analysts and allows them to build machine learning models using PL/SQL, Python and/or R. This feature is explored in one of our other online labs for Autonomous Data Warehouse.
 
-  *Autonomous Data Warehouse also provides 5 free licenses for Oracle Analytics Desktop which is the desktop client version of Oracle Analytics Cloud. For more information about Oracle Analytics Cloud [click here](https://www.oracle.com/uk/business-analytics/analytics-cloud.html)*.
+  *Autonomous Data Warehouse also provides 5 free licenses for Oracle Analytics Desktop, which is the desktop client version of Oracle Analytics Cloud. For more information about Oracle Analytics Cloud [click here](https://www.oracle.com/uk/business-analytics/analytics-cloud.html)*.
 
 Estimated time: 15 minutes
 
@@ -16,27 +16,26 @@ Estimated time: 15 minutes
 
 - Learn how query caching improves performance
 
-- Learn about the different types of built-in calculations 
+- Learn about the different types of built-in calculations
 
 - Learn how to pivot data rows into columns to make analysis easier
 
 ### Prerequisites
 
-- You will need to have completed the related LiveLabs workshop, **Autonomous Data Warehouse: Data Loading and Management Using SQL on the MovieStream Dataset**. The **Getting Started** section of that prerequisite workshop describes how to obtain an Oracle cloud account if you do not already have one. In that workshop you provision an Oracle Autonomous Database, and then load the MovieStream data needed for this analytics workshop.
+- You will need to have completed the related LiveLabs workshop, [**ADW: Data Loading and Management Using SQL on the MovieStream Dataset**](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=838&clear=180&session=102687399911158). The **Getting Started** section of that prerequisite workshop describes how to obtain an Oracle cloud account if you do not already have one. In that workshop you provision an Oracle Autonomous Database, and then load the MovieStream data needed for this analytics workshop.
 
-- The **Autonomous Data Warehouse: Data Loading and Management Using SQL on the MovieStream Dataset** includes some simple SQL queries so this workshop assumes familiarity with those simple queries by layering new concepts and functionality to extend those previous examples. 
+- The **ADW: Data Loading and Management Using SQL on the MovieStream Dataset** workshop includes some simple SQL queries, so this workshop assumes familiarity with those simple queries by layering new concepts and functionality to extend those previous examples.
 
-Before starting to run the code in this workshop, we need to manage the resources we are going to use to query our sales data. You will notice that when you open SQL Worksheet, it automatically defaults to using the LOW consumer group - this is shown in the top right section of your worksheet.
+Before starting to run the code in this workshop, we need to manage the resources we are going to use to query our sales data. You will notice that when you open SQL Worksheet, it automatically defaults to using the LOW consumer group - this is shown in the top right section of your worksheet.
 
 ![LOW consumer group shown in worksheet](images/3054194710.png)
 
 
-**NOTE**: Autonomous Data Warehouse comes complete with three built-in consumer groups for managing workloads. The three groups are: HIGH, MEDIUM and LOW. Each consumer group is based on predefined CPU/IO shares based on the numner of OCPUs assigned to the ADW. The basic characteristics of these consumer groups are:
-<ul>
-<li>HIGH: A high priority connection service for reporting and batch workloads. Workloads run in parallel and are subject to queuing.</li>
-<li>MEDIUM: A typical connection service for reporting and batch workloads. Workloads also run in parallel and are subject to queuing. Using this service the degree of parallelism is limited to 4.</li>
-<li>LOW: A connection service for all other reporting or batch processing workloads. This connection service does not run with parallelism.</li>
-</ul>
+**NOTE**: Autonomous Data Warehouse comes complete with three built-in consumer groups for managing workloads. The three groups are: HIGH, MEDIUM and LOW. Each consumer group is based on predefined CPU/IO shares based on the number of OCPUs assigned to the ADW. The basic characteristics of these consumer groups are:
+
+* HIGH: A high priority connection service for reporting and batch workloads. Workloads run in parallel and are subject to queuing.
+* MEDIUM: A typical connection service for reporting and batch workloads. Workloads also run in parallel and are subject to queuing. Using this service the degree of parallelism is limited to 4.
+* LOW: A connection service for all other reporting or batch processing workloads. This connection service does not run with parallelism.
 
 For more information about how to use consumer groups to manage concurrency and prioritization of user requests in Autonomous Data Warehouse, please click the following link: [Manage Concurrency and Priorities on Autonomous Database](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/manage-priorities.html#GUID-19175472-D200-445F-897A-F39801B0E953). If you want to explore this topic using a workshop, [click here](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=618) to launch the **Managing and Monitoring in Autonomous Database** workshop.
 
@@ -47,7 +46,9 @@ Change the consumer group by simply clicking the downward pointing arrow next to
 
 ## STEP 1 - Exploring Sales Data
 
-1. To get started, let's use a very simple query to look at total movie sales by year and quarter which extends the earlier simple SQL queries by adding a GROUP BY clause:
+1. To get started, let's use a very simple query to look at total movie sales by year and quarter, which extends the earlier simple SQL queries by adding a GROUP BY clause.
+
+    **Note**: For copy/pasting, be sure to click the convenient Copy button in the upper right corner of the following code snippet, and all subsequent code snippets:
 
     ```
     <copy>SELECT
@@ -59,34 +60,33 @@ Change the consumer group by simply clicking the downward pointing arrow next to
     GROUP BY year, quarter_name
     ORDER BY 1,2;</copy>
     ```
-
-**Note** :In this query, we have returned a resultset where the data has been aggregated (or grouped by) year then, within year, by quarter. The ORDER BY clause sorts the resultset by year and then quarter. In addition there is a filter or WHERE clause that allows us to return only data for the year 2020.
+    **Note**: In this query, we have returned a resultset where the data has been aggregated (or grouped by) year then, within year, by quarter. The ORDER BY clause sorts the resultset by year and then quarter. In addition there is a filter or WHERE clause that allows us to return only data for the year 2020.
 
 2. The result should look something like this:
 
     ![The result of simple query should look like this.](images/analytics-lab-1-step-1-substep-2.png)
 
-    Note the time taken to run your query. In the above example, this was 1.315 seconds to run (*when you run your query the timing may vary slightly*). 
+    Note the time taken to run your query. In the above example, this was 1.315 seconds to run (*when you run your query the timing may vary slightly*).
 
-3. Now simply run the query again:
+3. Now simply run the query again:
 
     ![Run the query again.](images/analytics-lab-1-step-1-substep-2-after-note.png)
 
 4. This time the query ran much faster, taking just 0.004 seconds! So what happened?
 
-    When we executed the query the first time, Autonomous Data Warehouse executed the query against our movie sales table and scanned all the rows. It returned the result of our query to our worksheet and then it stored the result in something called a **result cache**;. When we then ran the same query again, Autonomous Data Warehouse simply retrieved the result from its result cache! No need to scan all the rows again. This saved a lot of time and saved us money because we used hardly any compute resources.
+    When we executed the query the first time, Autonomous Data Warehouse executed the query against our movie sales table and scanned all the rows. It returned the result of our query to our worksheet and then it stored the result in something called a **result cache**. When we then ran the same query again, Autonomous Data Warehouse simply retrieved the result from its result cache! No need to scan all the rows again. This saved a lot of time and saved us money because we used hardly any compute resources.
 
-    If you want to understand a little bit more about **result cache**, then continue with STEP 2; otherwise, just jump ahead to **STEP 3 - Analyzing Customer Viewing Habits**.
+    If you want to understand a little bit more about **result cache**, then continue with STEP 2; otherwise, just jump ahead to **STEP 3 - Analyzing Customer Viewing Habits**.
 
 ## STEP 2 - Learn How ADW's RESULT CACHE Means Faster Queries (Optional)
 
-A result cache is an area of memory within our Autonomous Data Warehouse that stores the results of database queries for reuse. The *cached* rows are shared across queries and sessions. What this means is that when we run a query, the first thing the database does is to search its cache memory to determine whether the result already exists in the result cache. If it does, then the database retrieves the result from memory instead of executing the query. If the result is not cached, then the database executes the query, returns the result and stores the result in the result cache so the next time the query is run, the results can simply be returned from the cache.
+A result cache is an area of memory within our Autonomous Data Warehouse that stores the results of database queries for reuse. The **cached** rows are shared across queries and sessions. What this means is that when we run a query, the first thing the database does is to search its cache memory to determine whether the result already exists in the result cache. If it does, then the database retrieves the result from memory instead of executing the query. If the result is not cached, then the database executes the query, returns the result and stores the result in the result cache so the next time the query is run, the results can simply be returned from the cache.
 
 But, how do you know if the results from a query are returned from the **result cache**?
 
 1. Our Autonomous Data Warehouse console has a built-in performance monitoring tool called **Performance Hub**. This tool gives us both real-time and historical performance data for our Autonomous Data Warehouse. Performance Hub shows active session analytics along with SQL monitoring and workload information. Let's try running a query and then see how Autonomous Data Warehouse executes it.
 
-2. To simplify the monitoring process, we will add some additional instructions to the database about how we want it to execute our query. These extra instructions are called **hints** and they are enclosed within special markers: **/*  */.** In the example below we have given our query a name (Query 1) and we have told Autonomous Data Warehouse to monitor the query during its execution: 
+2. To simplify the monitoring process, we will add some additional instructions to the database about how we want it to execute our query. These extra instructions are called **hints** and they are enclosed within special markers: **/*  */.** In the example below we have given our query a name (Query 1) and we have told Autonomous Data Warehouse to monitor the query during its execution: 
 
     ```
     <copy>SELECT /* Query 1 */ /*+ monitor */
@@ -105,7 +105,7 @@ But, how do you know if the results from a query are returned from the **result 
     ORDER BY 1,2,3,4;</copy>
     ```
 
-**Note**: In this query, we added more calculations and assigned more meaningful names to each calculated column.
+    **Note**: In this query, we added more calculations and assigned more meaningful names to each calculated column.
 
 3. This query should return a result similar to this:
 
@@ -119,7 +119,7 @@ But, how do you know if the results from a query are returned from the **result 
 
     ![Explain Plan shown in a tree-form](images/3038282367.png)
 
-**Note**: The plan above shows a lot of information that can be very helpful in terms of understanding how your query has been run by Autonomous Data Warehouse. However, at this point the information shown is not the main focus area for this workshop. 
+    **Note**: The plan above shows a lot of information that can be very helpful in terms of understanding how your query has been run by Autonomous Data Warehouse. However, at this point the information shown is not the main focus area for this workshop.
 
 6. Now simply run the query again:
 
@@ -143,31 +143,31 @@ But, how do you know if the results from a query are returned from the **result 
 
     ![Query results with faster run time](images/analytics-lab-1-step-2-substep-7.png)
 
-8. If you look at the explain plan again it will be the same explain plan as last time which is helpful in some ways but we want to dig a little deeper this time. To track the actual execution process, we need to switch over to the Autonomous Data Warehouse console. There should be a tab open in your browser which is labelled **Oracle Cloud Infrastructure**, or simply open a new tab and go to  **[cloud.oracle.com](http://cloud.oracle.com),**  then click on the card labelled **View all my resources **,  and find your data warehouse in the list of resources so that this page is now visible: 
+8. If you look at the explain plan again it will be the same explain plan as last time which is helpful in some ways but we want to dig a little deeper this time. To track the actual execution process, we need to switch over to the Autonomous Data Warehouse console. There should be a tab open in your browser which is labelled **Oracle Cloud Infrastructure**, or simply open a new tab and go to  **[cloud.oracle.com](http://cloud.oracle.com),**  then click on the card labeled **View all my resources **,  and find your data warehouse in the list of resources so that this page is now visible: 
 
     ![Autonomous Database Details page, with Tools tab selected](images/3038282369.png)
 
-9. Click the button **Performance Hub** to open the monitoring window.
+9. Click the **Performance Hub** button to open the monitoring window.
 
     **Note:** Your performance charts will look a little different because we have only just started using our new Autonomous Data Warehouse:
 
     ![Monitoring window of Performance Hub](images/3038282370.png)
 
-10. Now click the tab marked **SQL Monitoring** in the lower half of the screen:
+10. Now click the tab marked **SQL Monitoring** in the lower half of the screen:
 
     ![Click the SQL Monitoing tab.](images/analytics-lab-1-step-2-substep-10.png)
 
-    **Note:** The first two queries in the list will be the queries we just executed - (*you can identify them by looking at database times if the two queries are not grouped together*). The first execution of our query (row two in the table above) shows that we used 8 parallel execution servers to execute the query and this resulted in 2,470 I/O requests to retrieve data stored on disk. So it's clear that we had to use some database resources to run our query the first time. Now look at the performance monitoring data for the second execution (the first row in the table above) - no parallel resources were used, no I/O requests were made and the database time was insignificant. This tells us that the database was able to reuse the results from a previous execution of the same query. Essentially there was zero cost in running the same query a second time. 
+    **Note:** The first two queries in the list will be the queries we just executed - (*you can identify them by looking at database times if the two queries are not grouped together*). The first execution of our query (row two in the table above) shows that we used 8 parallel execution servers to execute the query and this resulted in 2,470 I/O requests to retrieve data stored on disk. So it's clear that we had to use some database resources to run our query the first time. Now look at the performance monitoring data for the second execution (the first row in the table above) - no parallel resources were used, no I/O requests were made and the database time was insignificant. This tells us that the database was able to reuse the results from a previous execution of the same query. Essentially there was zero cost in running the same query a second time. 
 
     This is a typical real-world scenario where users are viewing pre-built reports on dashboards and in their data visualization tools. Result cache is one of the many transparent performance features that helps Autonomous Data Warehouse efficiently and effectively run data warehouse workloads.
 
-Now that we have some insight into how Autonomous Data Warehouse manages queries, let's expand our first query and begin to do some analysis of our sales data.
+Now that we have some insight into how Autonomous Data Warehouse manages queries, let's expand our first query and begin to do some analysis of our sales data.
 
 ## STEP 3 - Analyzing Customer Viewing Habits
 
-1. Switch back to the tab where SQL Worksheet is running.
+1. Switch back to the tab where SQL Worksheet is running.
 
-2. Let's start by investigating the viewing habits of our MovieStream customers by seeing how many of them are buying movies on each day of the week and whether there are any specific patterns we can spot. Copy the following SQL into your worksheet and then press the green circle icon to execute the query: 
+2. Let's start by investigating the viewing habits of our MovieStream customers by seeing how many of them are buying movies on each day of the week and whether there are any specific patterns we can spot. Copy the following SQL into your worksheet and then press the green circle icon to execute the query: 
 
     ```
     <copy>SELECT
@@ -192,17 +192,17 @@ Here we are using a built-in function, TO_CHAR, to convert the column 'day', whi
 
 ### Overview
 
-It would be helpful for our analysis if we could calculate the contribution that each day is providing to our overall sales. To do this, we need to use a special type of aggregation process within our query - we need a type of function that is called a **window** function. This type of function is very powerful since it allows us to calculate additional totals (or ratios, ranks, averages, maximum values, minimum values) as part of our query. In this case, we want to calculate the total revenue across all seven days and then divide each day's total by that aggregate total. 
+It would be helpful for our analysis if we could calculate the contribution that each day is providing to our overall sales. To do this, we need to use a special type of aggregation process within our query - we need a type of function that is called a **window** function. This type of function is very powerful since it allows us to calculate additional totals (or ratios, ranks, averages, maximum values, minimum values) as part of our query. In this case, we want to calculate the total revenue across all seven days and then divide each day's total by that aggregate total. 
 
-Let's start by defining the total for each day:   **```SUM(actual_price * quantity_sold)```**
+Let's start by defining the total for each day:   **```SUM(actual_price * quantity_sold)```**
 
-Then we can add the total revenue for all days by using a standard SQL operation called a window function that extends the **SUM** function. This means adding an additional keyword **OVER** as follows:  **```SUM(actual_price * quantity_sold) OVER ()```**  to calculate a grand total for all rows.
+Then we can add the total revenue for all days by using a standard SQL operation called a window function that extends the **SUM** function. This means adding an additional keyword **OVER** as follows:  **```SUM(actual_price * quantity_sold) OVER ()```**  to calculate a grand total for all rows.
 
   **NOTE:** If you want to read more about window functions, look at this topic in the [Oracle Data Warehouse Guide](https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-analysis-reporting-data-warehouses.html#GUID-2877E1A5-9F11-47F1-A5ED-D7D5C7DED90A).
 
-Now we can combine these two calculations to compute the contribution for each day: **SUM(actual\_price * quantity\_sold) / SUM(actual\_price * quantity\_sold) OVER ()** which is easy to understand having slowly built up the SQL, step-by-step. However, the calculation does look a little complicated!
+Now we can combine these two calculations to compute the contribution for each day: **SUM(actual\_price * quantity\_sold) / SUM(actual\_price * quantity\_sold) OVER ()** which is easy to understand having slowly built up the SQL, step-by-step. However, the calculation does look a little complicated!
 
-**BUT WAIT!** There is actually a specific SQL function that can do this calculation. It's called [RATIO\_TO\_REPORT](https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-analysis-reporting-data-warehouses.html#GUID-C545E24F-B162-45CC-8042-B2ACED4E1FD7) and the SQL looks like this:
+**BUT WAIT!** There is actually a specific SQL function that can do this calculation. It's called [RATIO\_TO\_REPORT](https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-analysis-reporting-data-warehouses.html#GUID-C545E24F-B162-45CC-8042-B2ACED4E1FD7) and the SQL looks like this:
 
 **```RATIO_TO_REPORT(SUM(actual_price * quantity_sold)) OVER()```**
 
@@ -210,7 +210,7 @@ This approach looks much neater, easier to read, and much simpler!
 
 **Note:**  the function **```RATIO_TO_REPORT```** returns results in the format where 1 equals 100%. Therefore, the code below multiplies the result by 100 to return a typical percentage value.
 
-We are going to extend the **```RATIO_TO_REPORT```** function a little further on in this workshop so you will get some more insight regarding the flexibility and power of this type of calculation. 
+We are going to extend the **```RATIO_TO_REPORT```** function a little further on in this workshop so you will get some more insight regarding the flexibility and power of this type of calculation. 
 
 1. For now, let's extend our original query so that it now includes this new window function:
 
@@ -249,7 +249,7 @@ We are going to extend the **```RATIO_TO_REPORT```** function a little further 
 
     ![[Output from query showing more meaningful values for contribution calculation](images/analytics-lab-1-step-4-substep-4.png)
 
-    We can see that Monday provides a significant contribution compared to the other weekdays, however, **Saturday**, **Sunday** and **Friday** are actually providing the highest levels of contribution across the whole week.  Now let's try to drill down and breakout the data across different dimensions to get some more insight. 
+    We can see that Monday provides a significant contribution compared to the other weekdays, however, **Saturday**, **Sunday** and **Friday** are actually providing the highest levels of contribution across the whole week.  Now let's try to drill down and breakout the data across different dimensions to get some more insight. 
 
 ## STEP 5 - Breaking Data Out By Specific Genre
 
@@ -289,7 +289,7 @@ We are starting to get an interesting picture of our customers' viewing habits d
 
 It's most likely that when you are doing this type of analysis on your own data set, the next most obvious step is to look at the same data over time to see if any other interesting patterns pop out.
 
-1.  Let's dig a little deeper into the numbers by breaking out the data by year. With SQL, all we need to do is add the additional column name into the **SELECT** clause, **GROUP BY** clause and most importantly the **ORDER BY** clause as well:
+1.  Let's dig a little deeper into the numbers by breaking out the data by year. With SQL, all we need to do is add the additional column name into the **SELECT** clause, **GROUP BY** clause and most importantly the **ORDER BY** clause as well:
 
     ```
     <copy>SELECT
@@ -308,7 +308,7 @@ It's most likely that when you are doing this type of analysis on your own data 
 
     ![Results with additional quarter_name column](images/3038282362.png)
 
-3. Take a look at the contribution column; the values are very low. This is because we are comparing each day's revenue with the grand total for revenue across all four quarters. What we really need to do is compute the contribution within each quarter. This is a very easy change to make by simply adding a **PARTITION BY** clause to our window function.
+3. Take a look at the contribution column; the values are very low. This is because we are comparing each day's revenue with the grand total for revenue across all four quarters. What we really need to do is compute the contribution within each quarter. This is a very easy change to make by simply adding a **PARTITION BY** clause to our window function.
 
     ```
     <copy>SELECT
@@ -332,7 +332,7 @@ It's most likely that when you are doing this type of analysis on your own data 
 
 ### Overview
 
-However, the challenge here is: it would be much easier if we could have a spreadsheet-like view of our result set, where the quarters are across the top of the report. Spreadsheets (along with many BI/data visualization tools) make this very easy to achieve through the use of pivot tables. Fortunately, SQL provides an almost identical feature:  **[PIVOT](https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-analysis-reporting-data-warehouses.html#GUID-05BB22CD-0F53-4C90-AE84-CE3F88DBD591)** function (you may need to scroll down to find the section on PIVOT). In the code snippet below, we are telling SQL to break out the contribution column into separate columns for each quarter (where each column will be named as Q1, Q2, Q3 and Q4): 
+However, the challenge here is: it would be much easier if we could have a spreadsheet-like view of our result set, where the quarters are across the top of the report. Spreadsheets (along with many BI/data visualization tools) make this very easy to achieve through the use of pivot tables. Fortunately, SQL provides an almost identical feature:  **[PIVOT](https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-analysis-reporting-data-warehouses.html#GUID-05BB22CD-0F53-4C90-AE84-CE3F88DBD591)** function (you may need to scroll down to find the section on PIVOT). In the code snippet below, we are telling SQL to break out the contribution column into separate columns for each quarter (where each column will be named as Q1, Q2, Q3 and Q4): 
 
 **Note:** You don't need to run this block of code:
 
@@ -370,7 +370,7 @@ However, the challenge here is: it would be much easier if we could have a sprea
 
 ### Wrapping It All Up
 
-From this result set, we can easily spot that Monday's contribution is declining over time whilst the contribution provided by Friday, Saturday and Sunday is increasing over time. This could have important knock-on effects for our networks and servers during those three days, so this trend will need to be watched closely to see how it develops further over time.
+From this result set, we can easily spot that Monday's contribution is declining over time whilst the contribution provided by Friday, Saturday and Sunday is increasing over time. This could have important knock-on effects for our networks and servers during those three days, so this trend will need to be watched closely to see how it develops further over time.
 
 ### Recap
 
@@ -390,4 +390,4 @@ Please *proceed to the next lab*.
 
 - **Author** - Keith Laker, ADB Product Management
 - **Adapted for Cloud by** - Richard Green, Principal Developer, Database User Assistance
-- **Last Updated By/Date** - Keith Laker, June 2021
+- **Last Updated By/Date** - Keith Laker, July 2021

@@ -2,24 +2,24 @@
 
 ## Introduction
 
-**This lab is optional**. This lab is aimed at people who are accustomed to working with spreadsheets and are comfortable creating sophisticated formulas within their worksheets. In this lab we explore how to use the SQL MODEL clause to make SQL more spreadsheet-like in terms of inserting new rows and new calculations into a query.
+**This lab is optional**. This lab is aimed at people who are accustomed to working with spreadsheets and are comfortable creating sophisticated formulas within their worksheets. In this lab we explore how to use the **`SQL MODEL`** clause to make SQL more spreadsheet-like in terms of inserting new rows and new calculations into a query.
 
 Estimated time: 10 minutes
 
 ### Objectives
 
-- Learn how to combine existing rows within a query create new rows 
+- Learn how to combine existing rows within a query to create new rows
 
-- Understand how define new calculations using a spreadsheet-like syntax
+- Understand how to define new calculations using a spreadsheet-like syntax
 
 
 ### Going A Little Deeper
 
-Sometimes we will find that the data is organized in just the way we want it to be! In many cloud-based data warehouses, we are locked in to only viewing data in terms of the way it is stored. Making changes to the structure and organization of our data when it's in a spreadsheet is really easy - we can insert new rows and new columns to add new content.
+Sometimes we will find that the data is organized in just the way we want it to be! In many cloud-based data warehouses, we are locked in to only viewing data in terms of the way it is stored. Making changes to the structure and organization of our data when it's in a spreadsheet is really easy - we can insert new rows and new columns to add new content.
 
 Wouldn't it be great if our data warehouse offered the flexibility to add completely new rows to our data set that were derived from existing rows - effectively giving us the chance to build our own  **dimension**  values. In general data warehousing terminology this is known as adding **custom aggregates** to our result set.
 
-What if we want to group the days of week into two new custom aggregates, effectively adding two new rows within our query?:
+What if we want to group the days of week into two new custom aggregates, effectively adding two new rows within our query?
 
 - **new row 1 - Weekday** which consists of values for Tuesday(#3), Wednesday(#4), Thursday(#5)
 
@@ -29,9 +29,9 @@ Estimated Lab Time: 20 minutes
 
 ## STEP 1 - Revenue Analysis by Weekdays vs. Long Weekends
 
- **NOTE:** Different regions organize their day numbers in different ways. In Germany, for example, the week starts on Monday, so that day is assigned as day number one. In the US the day numbers start at one on Sunday. Therefore, it’s important to understand these regional differences. Oracle Database provides session settings that allow you to control these types of regional differences by using the **ALTER SESSION SET** command.
+ **NOTE:** Different regions organize their day numbers in different ways. In Germany, for example, the week starts on Monday, so that day is assigned as day number one. In the United States, the day numbers start at one on Sunday. Therefore, it’s important to understand these regional differences. Oracle Database provides session settings that allow you to control these types of regional differences by using the **`ALTER SESSION SET`** command.
 
-1. Before we being creating our next SQL, let’s set our territory as being “America” by using the following command:
+1. Before we begin creating our next SQL, let’s set our territory as being “America” by using the following command:
 
     ```
     <copy>ALTER SESSION SET NLS_TERRITORY = America;</copy>
@@ -51,9 +51,9 @@ Estimated Lab Time: 20 minutes
 
     ![Query results showing week starting Sunday](images/3038282319.png)
 
-Now we know which day is the first day of the week we can move on. In spreadsheets, we can refer to values by referencing the row + column position such as A1 + B2. This would allow us to see more clearly the % contribution provided by each grouping so we can get some insight into the most heavily trafficked days for movie-watching. How can we do this?
+Now we know which day is the first day of the week we can move on. In spreadsheets, we can refer to values by referencing the row + column position such as A1 + B2. This would allow us to see more clearly the % contribution provided by each grouping so we can get some insight into the most heavily trafficked days for movie-watching. How can we do this?
 
-4. Autonomous Data Warehouse has a unique SQL feature called the **MODEL** clause which creates a spreadsheet-like modeling framework over our data. If we tweak and extend the last query we can use the MODEL clause to add completely new rows (**Weekday** and **Long Weekend**) into our results:
+4. Autonomous Data Warehouse has a unique SQL feature called the **`MODEL`** clause which creates a spreadsheet-like modeling framework over our data. If we tweak and extend the last query we can use the MODEL clause to add completely new rows (**Weekday** and **Long Weekend**) into our results:
 
     ```
     <copy>
@@ -103,10 +103,10 @@ If we tweak and extend the last query we can expand the MODEL clause to also cal
 
 
     contribution[1] = trunc((revenue[1])/(revenue[1]+revenue[2]+revenue[3]+revenue[4]+revenue[5]+revenue[6]+revenue[7])*100,2)
-    
+
 This statement calculates the contribution for Sunday (day 1) by taking the revenue for day **1** and dividing it by the revenue from each of the seven days .
 
-2. Run the following query to calculate revenue and contribution for each day including the new rows (Long Weekend and Weekday): 
+1. Run the following query to calculate revenue and contribution for each day including the new rows (Long Weekend and Weekday):
 
     ```
     <copy>
@@ -210,7 +210,7 @@ This statement calculates the contribution for Sunday (day 1) by taking the reve
     ORDER BY day_no;</copy>
     ```
 
-7. The final output looks like this, where we can now see that over 60% of revenue is generated over those days within a Long Weekend! Conversely, the other three days in our week (Tuesday, Wednesday, Thursday) are generating nearly 40% of our weekly revenue, which means that on work/school nights we are still seeing strong demand for streaming movies. This type of information might be useful for our infrastructure team so they can manage their resources more effectively and our marketing team could use this information to help them drive new campaigns.
+4. The final output looks like this, where we can now see that over 60% of revenue is generated over those days within a Long Weekend! Conversely, the other three days in our week (Tuesday, Wednesday, Thursday) are generating nearly 40% of our weekly revenue, which means that on work/school nights we are still seeing strong demand for streaming movies. This type of information might be useful for our infrastructure team so they can manage their resources more effectively and our marketing team could use this information to help them drive new campaigns.
 
     ![Final query output using Pivot](images/3038282357.png)
 

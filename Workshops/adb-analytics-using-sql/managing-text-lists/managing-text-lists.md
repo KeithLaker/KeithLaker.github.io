@@ -10,14 +10,13 @@ Estimated time: 10 minutes
 
 ### Objectives
 
-- Learn how to combine existing rows within a query create new rows 
+-  Lean how to efficiently manage very, very long text strings
 
-- Understand how define new calculations using a spreadsheet-like syntax
+- Learn how to use the LISTAGG function to concatenate string values into a single row
 
+## STEP 1 - Creating Lists of Customers 
 
-## STEP 1 - Creating Lists of Customers 
-
-1. Creating this type of list as part of a query is actually very easy to do with Autonomous Data Warehouse because we can use the SQL **LISTAGG** function. To get started with this query, we first we need a unique list of customers by education:
+1. Creating this type of list as part of a query is actually very easy to do with Autonomous Data Warehouse because we can use the SQL **`LISTAGG`** function. To get started with this query, we first we need a unique list of customers by education:
 
     ```
     <copy>
@@ -31,7 +30,7 @@ Estimated time: 10 minutes
 
     ![Initial query results grouping customer email addresses by level of education](images/3038282318.png)
 
-Next, we need to group the email addresses by each attribute value of our Education column. The LISTAGG function will do this for us. It will take the email address in each row and concatenate it into a string in a similar way to the PIVOT function we used in the previous section. Now as it build the string of email addresses, we might end up with too many values for a specific level of education....
+Next, we need to group the email addresses by each attribute value of our Education column. The `LISTAGG` function will do this for us. It will take the email address in each row and concatenate it into a string in a similar way to the PIVOT function we used in the previous section. Now as it builds the string of email addresses, we might end up with too many values for a specific level of education.
 
 3. Try running the following query:
 
@@ -52,14 +51,14 @@ Next, we need to group the email addresses by each attribute value of our Educat
 
 4. Unfortunately, this query will not run! You will see an error message : **result of string concatenation is too long**
 
-This is situation with almost every other cloud data warehouse. It returns an error message and there is no way around the problem. 
+This is a situation with almost every other cloud data warehouse. It returns an error message and there is no way around the problem.
 
 
-## STEP 2 - Efficiently Managing Very Long Strings 
+## STEP 2 - Efficiently Managing Very Long Strings 
 
-Fortunately, Autonomous Data Warehouse has a unique capability in that it can trap this error directly within the LISTAGG function.
+Fortunately, Autonomous Data Warehouse has a unique capability in that it can trap this error directly within the `LISTAGG` function.
 
-Our LISTAGG function looks like this:
+Our `LISTAGG` function looks like this:
 
 <pre>LISTAGG(email, ',' ON OVERFLOW TRUNCATE '...' WITH COUNT) WITHIN GROUP (ORDER BY username) AS customer_list</pre>
 
@@ -84,7 +83,7 @@ Our LISTAGG function looks like this:
 
     ![Query result using LISTAGG](images/3038282317.png)
 
-## STEP 3 - Finding Rows That Are Too Long 
+## STEP 3 - Finding Rows That Are Too Long 
 
 1. That's it! It looks simple, but only Autonomous Data Warehouse can run this query without generating an error and aborting. To understand why, let's tweak the query to show the rows where our string concatenation gets too long. Run the following modified query:
 
@@ -103,7 +102,7 @@ Our LISTAGG function looks like this:
     ORDER BY 1;</copy>
     ```
 
-2. Notice that there is now a SUBSTR() function wrapped around our LISTAGG function. This additional function returns the last 50 characters of each row, which allows us to see that we have a lot of customers who achieved **High School** or **Bachelor** levels of education. For **High School** customers, our list could contain a possible 484 additional email addresses; and where the education level is **Bachelor**, then our list could contain an additional 255 email addresses. 
+2. Notice that there is now a `SUBSTR()` function wrapped around our `LISTAGG` function. This additional function returns the last 50 characters of each row, which allows us to see that we have a lot of customers who achieved **High School** or **Bachelor** levels of education. For **High School** customers, our list could contain a possible 484 additional email addresses; and where the education level is **Bachelor**, then our list could contain an additional 255 email addresses. 
 
     ![Result of query with SUBSTR() function wrapped around LISTAGG function](images/3038282316.png)
 

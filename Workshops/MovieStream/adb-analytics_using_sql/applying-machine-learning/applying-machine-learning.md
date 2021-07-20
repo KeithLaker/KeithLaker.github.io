@@ -9,7 +9,7 @@ Estimated Lab Time: 10 minutes
 
 ### Objectives
 
-- Learn how to use the  DBMS\_PREDICTIVE\_ANALYTICS.EXPLAIN procedure
+- Learn how to use the  `DBMS_PREDICTIVE_ANALYTICS.EXPLAIN` procedure
 
 - Learn how to interpret the results that are automatically generated
 
@@ -18,41 +18,41 @@ Estimated Lab Time: 10 minutes
 
 Autonomous Data Warehouse contains built-in machine learning algorithms. There is a separate workshop that can guide you through creating machine learning models to solve common business problems. In this short lab, the objective is to use one of these built-in algorithms to help us understand the demographic factors that can explain why a customer triggers an "insufficient funds" event against their account. If we can find a way to identify the key demographic attributes associated with this type of event, we can target customers to help them better manage their account and therefore have a better experience on MovieStream.
 
-To do this analysis, we are going to use a package called **DBMS\_PREDICTIVE\_ANALYTICS**. This package contains routines that perform an automated form of machine learning known as **predictive analytics**. With predictive analytics, we do not need to be aware of typical machine learning steps such as model building or model scoring. All machine learning activities are handled internally by the procedure. This makes it really easy for everyone to benefit from the power of machine learning-driven analytics.
+To do this analysis, we are going to use a package called **`DBMS_PREDICTIVE_ANALYTICS`**. This package contains routines that perform an automated form of machine learning known as **predictive analytics**. With predictive analytics, we do not need to be aware of typical machine learning steps such as model building or model scoring. All machine learning activities are handled internally by the procedure. This makes it really easy for everyone to benefit from the power of machine learning-driven analytics.
 
+In this example we are going to use the EXPLAIN procedure to identifies the attributes that are important in explaining the variation in values of a target column. Our input data contains some records where the target value is known (not NULL) and also unknown (NULL). The records where the target value is known are used by the procedure to train a model that calculates the attribute importance. The EXPLAIN procedure creates a result table that lists the attributes in order of their explanatory power.
 
 ## STEP 1 - Preparing Our customer Data Set
 
-1. The firsts step is to create a view which summarizes the main customer demographic attributes. This means removing the time attributes, transaction attributes and movie attributes from our movie sales data.  Copy and paste the following code into the SQL worksheet window:
+1. The firsts step is to create a view which summarizes the main customer demographic attributes. This means removing the time attributes, transaction attributes and movie attributes from our movie sales data.  Copy and paste the following code into the SQL worksheet window:
 
     ```
     <copy>CREATE OR REPLACE VIEW vw_cust_funds AS
     SELECT DISTINCT
-    customer_id,
-    segment_name,
-    credit_balance,
-    education,
-    full_time,
-    gender,
-    household_size,
-    insuff_funds_incidents,
-    job_type,
-    late_mort_rent_pmts,
-    marital_status,
-    mortgage_amt,
-    num_cars,
-    num_mortgages,
-    pet,
-    rent_own,
-    years_current_employer_band,
-    years_customer,
-    years_residence_band,
-    commute_distance,
-    commute_distance_band
-    FROM movie_sales_fact;</copy>
+    m.customer_id,
+    c.credit_balance,
+    c.education,
+    c.full_time,
+    c.gender,
+    c.household_size,
+    c.insuff_funds_incidents,
+    c.job_type,
+    c.late_mort_rent_pmts,
+    c.marital_status,
+    c.mortgage_amt,
+    c.num_cars,
+    c.num_mortgages,
+    c.pet,
+    c.rent_own,
+    c.yrs_current_employer,
+    c.yrs_residence,
+    c.commute_distance
+    FROM vw_movie_sales_fact m, customer c
+    WHERE m.customer_id = c.cust_id;
+    </copy>
     ```
 
-2. You should get a message in the log window saying "View VW\_CUST\_FUNDS created". Check the number of rows returned by the above query/view, by running the following query, which should show that there are 4,845 unique customers:
+2. You should get a message in the log window saying "View VW\_CUST\_FUNDS created". Check the number of rows returned by the above query/view, by running the following query, which should show that there are 4,845 unique customers:
 
     ```
     <copy>SELECT COUNT(*) FROM vw_cust_funds;</copy>
@@ -103,7 +103,7 @@ To run this analysis we need to provide the following information:
 
 - Name of the output table - this gets created automatically by the procedure so just needs a name of table that doesn't exist
 
-**NOTE:**  The input table contains the column ```CUSTOMER_ID``` to make the data easier to validate once we get a final result. However, under normal circumstances this column would not be included as an input to the machine learning model, since every row is unique. Fortunately, the machine learning features in Autonomous Data Warehouse are smart enough to automatically ignore these types of columns and focus on the other more "interesting" columns.
+**NOTE:**  The input table contains the column `CUSTOMER_ID` to make the data easier to validate once we get a final result. However, under normal circumstances this column would not be included as an input to the machine learning model, since every row is unique. Fortunately, the machine learning features in Autonomous Data Warehouse are smart enough to automatically ignore these types of columns and focus on the other more "interesting" columns.
 
 1. Now that we understand the required inputs, let's run the model:
 
@@ -135,11 +135,11 @@ This column contains a value that indicates how useful the column is for determi
 
 An individual column's explanatory value is independent of other columns in the input table. The values are based on how strong each individual column correlates with the explained column. The value is affected by the number of records in the input table, and the relations of the values of the column to the values of the explain column.
 
-An explanatory power value of 0 implies there is no useful correlation between the column's values and the explain column's values. An explanatory power of 1 implies perfect correlation; such columns should be eliminated from consideration for PREDICT. In practice, an explanatory power equal to 1 is rarely returned.
+An explanatory power value of 0 implies there is no useful correlation between the column's values and the explain column's values. An explanatory power of 1 implies perfect correlation; such columns should be eliminated from consideration for PREDICT. In practice, an explanatory power equal to 1 is rarely returned.
 
 ### Rank
 
-Simply shows the ranking of explanatory power. Rows with equal values for explanatory_value have the same rank. Rank values are not skipped in the event of ties.
+Simply shows the ranking of explanatory power. Rows with equal values for explanatory_value have the same rank. Rank values are not skipped in the event of ties.
 
 ## STEP 4 - Interpreting The Results
 
@@ -165,12 +165,12 @@ Conversely, we can say that demographic attributes such as job\_type, marital\_s
 
 ## Recap
 
-This lab has introduced you to the built-in capabilities of machine learning within Autonomous Data Warehouse. There are additional workshops in this series that will take you deeper into these unique capabilities. 
+This lab has introduced you to the built-in capabilities of machine learning within Autonomous Data Warehouse. There are additional workshops in this series that will take you deeper into these unique capabilities. 
 
 Within this lab we have examined:
 
-- How to use the ```DBMS_PREDICTIVE_ANALYTICS.EXPLAIN``` procedure and how to interpret the results that are automatically generated.
-- How to this built-in feature helps us understand the demographic factors that can explain why a customer mght trigger an "insufficient funds" event.
+- How to use the `DBMS_PREDICTIVE_ANALYTICS.EXPLAIN` procedure and how to interpret the results that are automatically generated.
+- How this built-in feature helps us understand the demographic factors that can explain why a customer might trigger an "insufficient funds" event.
 
 Now that we identified these key demographic attributes, we can do more analysis using SQL to go deeper. This type of analysis can allow us to identify and guide customers in better ways to manage their account and, therefore, have a better experience on our MovieStream platform.
 
@@ -178,4 +178,4 @@ Now that we identified these key demographic attributes, we can do more analysis
 
 - **Author** - Keith Laker, ADB Product Management
 - **Adapted for Cloud by** - Richard Green, Principal Developer, Database User Assistance
-- **Last Updated By/Date** - Richard Green, June 2021
+- **Last Updated By/Date** - Keith Laker, July 2021

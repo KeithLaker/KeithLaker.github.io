@@ -41,7 +41,7 @@ To make this workshop as realistic as possible, let us introduce the business sc
 
 ### Welcome to Oracle MovieStream
 
-Oracle MovieStream is a fictitious on-line movie streaming company. Customers log into Oracle MovieStream using their computers, tablets and phones where they are presented with a targeted list of movies based on their past viewing behavior. The company is now looking for better, smarter ways to track performance, identifying target customers with campaigns to promote new services, new movies and new viewing platforms. Many of the scenarios in the rest of this workshop will very likely match the challenges you are seeing in your business and we hope the following examples will give you some insight into how Oracle can help you solve these common everyday challenges.
+Oracle MovieStream is a fictitious on-line movie streaming company. Customers log into Oracle MovieStream using their computers, tablets and phones where they are presented with a targeted list of movies based on their past viewing behavior. The company is now looking for better, smarter ways to track performance, identifying target customers with campaigns to promote new services, new movies and new viewing platforms. Many of the scenarios in the rest of this workshop will very likely match the challenges you are seeing in your business and we hope the following examples will give you some insight into how Oracle can help you solve these common everyday challenges.
 
 ## Acknowledgements
 
