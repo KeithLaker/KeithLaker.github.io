@@ -114,7 +114,7 @@ Although queries on external data will not be as fast as queries on database tab
 </div>
 **Note** : In the step below we will use a SQL feature that allows us to define some variables that we can incorporate into the data load statement. This makes the data loading statement very flexible and we will use this technique again when we explain how to update the sales data.
 
-2. You will need to paste your regional URI string from the table above between the double quotes in the assignment that is part of the first define statement.
+2. You will need to paste your regional URI string from the table above between the single quotes in the assignment that is part of the first define statement.
 
     ```
     <copy>define uri_ms_oss_bucket = 'paste_in_your_regional_uri_string_between_the_single_quotes';
