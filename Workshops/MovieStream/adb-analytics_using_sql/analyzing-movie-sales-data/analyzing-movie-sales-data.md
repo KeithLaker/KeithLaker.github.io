@@ -57,29 +57,20 @@ The main advantages of star schemas are that they:
 
 One of the key dimensions in the MovieStream data warehouse is **TIME**. Currently the time dimension table has a single column containing just the ids for each day. When doing type data warehouse analysis there is a need to view data across different levels within the time dimension such as week, month, quarter and year. Therefore we need to expand the current time dimension to include these additional levels. 
 
-1. Create a more sophisticated time dimension using a view.
+1. View the time dimension table.
 
 
     ```
-    <copy>create or replace view vw_dense_time as
+    <copy>
     SELECT
-    DAY as day_id,
-    to_char(day, 'DAY') as day_name,
-    to_char(day, 'D') as day_dow,
-    to_char(day, 'DD') as day_dom,
-    to_char(day, 'DDD') as day_doy,
-    to_char(day, 'W') as week_wom,
-    to_char(day, 'WW') as week_woy,
-    to_char(day, 'MM') as month_moy,
-    to_char(day, 'MONTH') as month_name,
-    to_char(day, 'MON') as month_aname,  
-    'Q'||to_char(day, 'Q')||'-'||to_char(day, 'YYYY') as quarter_name,  
-    to_char(day, 'YYYY') as year_name  
-    FROM time;</copy>
+    *  
+    FROM times;</copy>
     ```
 
 
-**NOTE** Querying a data warehouse can involve working with a lot of repetitive SQL. This is where 'views' can be very helpful and very powerful. The code below is used to simplify the queries used throughout this workshop. The main focus here is to introduce the concept of joining tables together to returned a combined resultset.
+**NOTE** The TIMES dimension table has a typical calendar hierarchy where days aggregate to weeks, months, quarters and years.
+
+Querying a data warehouse can involve working with a lot of repetitive SQL. This is where 'views' can be very helpful and very powerful. The code below is used to simplify the queries used throughout this workshop. The main focus here is to introduce the concept of joining tables together to returned a combined resultset.
 
 The code below uses a technique called **INNER JOIN** to join the dimension tables to the fact table.
 
@@ -89,7 +80,7 @@ The code below uses a technique called **INNER JOIN** to join the dimension tabl
     ```
     <copy>CREATE OR REPLACE VIEW vw_movie_sales_fact AS
     SELECT 
-    m.day as day_id,
+    m.day_id,
     t.day_name,
     t.day_dow,
     t.day_dom, 
@@ -117,7 +108,7 @@ The code below uses a technique called **INNER JOIN** to join the dimension tabl
     m.genre_id,
     m.movie_id
     FROM custsales m 
-    INNER JOIN vw_dense_time t ON m.day = t.day_id 
+    INNER JOIN times t ON m.day_id = t.day_id 
     INNER JOIN customer c ON m.cust_id = c.cust_id
     INNER JOIN genre g ON m.genre_id = g.genre_id;
     </copy>
