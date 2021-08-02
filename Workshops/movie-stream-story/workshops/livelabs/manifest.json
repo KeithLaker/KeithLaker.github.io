@@ -1,0 +1,52 @@
+{
+    "workshoptitle": "Introduction to Autonomous Database Tools",
+    "help": "livelabs-help-db_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Getting Started",
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/cloud-login-livelabs2.md"
+        },
+        {
+          "title": "Introduction",
+          "filename": "../../introduction/introduction.md"
+        },
+        {
+          "title": "Lab 1: Provision an ADB Instance",
+          "type": "livelabs",
+          "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/data-management-library/autonomous-database/shared/adb-provision/adb-provision-conditional.md"
+        },
+        {
+            "title": "Lab 2: Guided Tour of ADW",
+            "filename": "../../guided-tour/guided-tour.md"
+        },
+        {
+            "title": "Lab 3: Create a database user",
+            "filename": "../../create-db-user/create-db-user.md"
+        },
+        {
+            "title": "Lab 4: Load data",
+            "filename": "../../load-data/load-data.md"
+        },
+        {
+            "title": "Lab 5: Analyze data with SQL",
+            "filename": "../../analyze-data/analyze-data.md"
+        },
+        {
+            "title": "Lab 6: Predict churn",
+            "filename": "../../predict-churn/predict-churn.md"
+        },
+        {
+            "title": "Lab 7: Apply Spatial",
+            "filename": "../../apply-spatial/apply-spatial.md"
+        },
+        {
+            "title": "Lab 8: Apply Graph",
+            "filename": "../../apply-graph/apply-graph.md"
+        },
+        {
+          "title": "Need Help?",
+          "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+          "filename":"https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
