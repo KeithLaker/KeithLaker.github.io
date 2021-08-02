@@ -29,7 +29,7 @@ Estimated time: 10 minutes
 
 2. This query should return relatively quickly, as shown below.
 
-    ![Initial query results grouping customer email addresses by level of education](images/3038282318.png)
+    ![Initial query results grouping customer email addresses by level of education](images/lab-5f-step-1-substep-2.png)
 
 Next, we need to group the email addresses by each attribute value of our Education column. The `LISTAGG` function will do this for us. It will take the email address in each row and concatenate it into a string in a similar way to the PIVOT function we used in the previous section. Now as it builds the string of email addresses, we might end up with too many values for a specific level of education.
 
@@ -38,14 +38,15 @@ Next, we need to group the email addresses by each attribute value of our Educat
     ```
     <copy>SELECT
     education,
-    LISTAGG(email, ',') WITHIN GROUP (ORDER BY username) AS customer_list
+    LISTAGG(email, ',') WITHIN GROUP (ORDER BY last_name, first_name) AS customer_list
     FROM
     (SELECT 
     c.education,
-    d.first_name||' '||d.last_name as username,
+    d.first_name,
+    d.last_name,
     d.email
     FROM customer c
-    WINNER JOIN customer_contact d ON d.cust_id = c.cust_id)
+    INNER JOIN customer_contact d ON d.cust_id = c.cust_id)
     GROUP BY education
     ORDER BY 1;</copy>
     ```
@@ -61,7 +62,7 @@ Fortunately, Autonomous Data Warehouse has a unique capability in that it can tr
 
 Our `LISTAGG` function looks like this:
 
-<pre>LISTAGG(email, ',' ON OVERFLOW TRUNCATE '...' WITH COUNT) WITHIN GROUP (ORDER BY username) AS customer_list</pre>
+<pre>LISTAGG(email, ',' ON OVERFLOW TRUNCATE '...' WITH COUNT) WITHIN GROUP (ORDER BY last_name, first_name) AS customer_list</pre>
 
 1. If we wrap this around our original query, we can use the following syntax to create the report we need:
 
@@ -69,21 +70,22 @@ Our `LISTAGG` function looks like this:
     <copy>
     SELECT
     education,
-    LISTAGG(email, ',' ON OVERFLOW TRUNCATE '...' WITH COUNT) WITHIN GROUP (ORDER BY username) AS customer_list
+    LISTAGG(email, ',' ON OVERFLOW TRUNCATE '...' WITH COUNT) WITHIN GROUP (ORDER BY last_name, first_name) AS customer_list
     FROM
     (SELECT 
     c.education,
-    d.first_name||' '||d.last_name as username,
+    d.first_name,
+    d.last_name,
     d.email
     FROM customer c
-    WINNER JOIN customer_contact d ON d.cust_id = c.cust_id)
+    INNER JOIN customer_contact d ON d.cust_id = c.cust_id)
     GROUP BY education
     ORDER BY 1;</copy>
     ```
 
 2. The results should look similar to the following:
 
-    ![Query result using LISTAGG](images/3038282317.png)
+    ![Query result using LISTAGG](images/lab-5f-step-2-substep-2.png)
 
 ## STEP 3 - Finding Rows That Are Too Long 
 
@@ -100,14 +102,14 @@ Our `LISTAGG` function looks like this:
     d.first_name||' '||d.last_name as username,
     d.email
     FROM customer c
-    WINNER JOIN customer_contact d ON d.cust_id = c.cust_id)
+    INNER JOIN customer_contact d ON d.cust_id = c.cust_id)
     GROUP BY education
     ORDER BY 1;</copy>
     ```
 
-2. Notice that there is now a `SUBSTR()` function wrapped around our `LISTAGG` function. This additional function returns the last 50 characters of each row, which allows us to see that we have a lot of customers who achieved **High School** or **Bachelor** levels of education. For **High School** customers, our list could contain a possible 484 additional email addresses; and where the education level is **Bachelor**, then our list could contain an additional 255 email addresses. 
+2. Notice that there is now a `SUBSTR()` function wrapped around our `LISTAGG` function. This additional function returns the last 50 characters of each row, which allows us to see that we have a lot of customers who achieved **High School** or **Bachelor** levels of education. For **High School** customers, our list could contain a possible 24,530 additional email addresses; and where the education level is **Bachelor**, then our list could contain an additional 23,153 email addresses. 
 
-    ![Result of query with SUBSTR() function wrapped around LISTAGG function](images/3038282316.png)
+    ![Result of query with SUBSTR() function wrapped around LISTAGG function](images/lab-5f-step-3-substep-2.png)
 
 We can send this initial report to the marketing team and see if they want us to extract the additional email addresses for them. Fortunately, Autonomous Data Warehouse has the tools to do this and we will explore one of those tools (MATCH_RECOGNIZE) later in this workshop.
 
