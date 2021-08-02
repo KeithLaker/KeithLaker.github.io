@@ -58,9 +58,8 @@ In this example we are going to use the EXPLAIN procedure to identifies the attr
     <copy>SELECT COUNT(*) FROM vw_cust_funds;</copy>
     ```
 
-    You should see that there are 4,845 unique customer rows:
+    You should see that there are 148,129 unique customer rows.
 
-    ![Query result showing 4,845 unique customer rows](images/3038282315.png)
 
 3. What does the data set in our table actually look like? Let's run another simple query:
 
@@ -72,7 +71,7 @@ In this example we are going to use the EXPLAIN procedure to identifies the attr
 
 4. This will return something like the following output:
 
-    ![Query result showing what the table data set looks like](images/analytics-lab-6-step-1-substep-4.png)
+    ![Query result showing what the table data set looks like](images/lab-5e-step-1-substep-4.png)
 
     **NOTE:** Unlike the movie sales data, we now have a single row per customer and you can see that in the column **insufficient\_funds\_incidents** there are single numeric values determining the status of this column.
 
@@ -85,7 +84,7 @@ In this example we are going to use the EXPLAIN procedure to identifies the attr
     order by 1;</copy>
     ```
 
-    ![Query result showing the column contains only four values](images/3038282313.png)
+    ![Query result showing the column contains only four values](images/lab-5e-step-1-substep-5.png)
 
     Obviously we are interested in all the values in this column, not just the non-zero values. From a machine learning perspective, it is important for this type of analysis to have situations where an event did occur, as well as situations where an event does not occur - we need data to cover both sides of the story. Now that we know we have the right data set in place, we can proceed to building our model.
 
@@ -113,19 +112,22 @@ To run this analysis we need to provide the following information:
 
 2. The package will return a "PL/SQL procedure successfully completed" message to the log window once it has finished processing - which should take around 20 seconds.
 
-    ![Query results showing procedure completed successfully](images/3038282312.png)
 
 ## STEP 3 - Reviewing The Output
 
 1. To view the results from our model, we simply need to view the result table -> customer\_explain\_result:
 
     ```
-    <copy>SELECT * FROM customer_explain_result;</copy>
+    <copy>SELECT 
+    attribute_name,
+    explanatory_value,
+    rank
+    FROM customer_explain_result;</copy>
     ```
 
 2. This should return the following results:
 
-    ![Query results from the model](images/3038282311.png)
+    ![Query results from the model](images/lab-5e-step-3-substep-2.png)
 
 What do the above columns mean?
 
@@ -157,11 +159,11 @@ Simply shows the ranking of explanatory power. Rows with equal values for explan
 
 2. The output from the above query should look something like this:
 
-    ![Query results showing enhanced output](images/3038282310.png)
+    ![Query results showing enhanced output](images/lab-5e-step-4-substep-2.png)
 
-What do the results tell us? The above results tell us that to understand why an insufficient funds event occurs, we need to examine the occurrence of late mortgage payments by a customer, their segment name and the mortgage amount. Note that the analysis doesn't focus on specific attribute values. The analysis shows that by using the top four attributes we could expect a better-than-average (53%) ability to predict the likelihood of an insufficient funds event based on the top three attributes identified by the EXPLAIN procedure.
+What do the results tell us? The above results tell us that to understand why an insufficient funds event occurs, we need to examine the occurrence of late mortgage payments by a customer, their years residence, mortgage amount and education. Note that the analysis doesn't focus on specific attribute values. The analysis shows that by using the top four attributes we could expect a better-than-average (53%) ability to predict the likelihood of an insufficient funds event based on the top three attributes identified by the EXPLAIN procedure.
 
-Conversely, we can say that demographic attributes such as job\_type, marital\_status and education have no impact on whether a customer is likely to incur an insufficient funds event.
+Conversely, we can say that demographic attributes such as job\_type, marital\_status and renting or owning a property have liitle to no impact on whether a customer is likely to incur an insufficient funds event.
 
 ## Recap
 
