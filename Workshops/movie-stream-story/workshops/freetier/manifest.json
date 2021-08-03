@@ -74,6 +74,10 @@
             "filename": "../../apply-graph/apply-graph.md"
         },
         {
+            "title": "Lab 9: Working with semi-structured data",
+            "filename": "../../working-with-semi-structured-data/working-with-semi-structured-data.md"
+        },
+        {
             "title": "Initialize Labs",
             "filename": "../../initialize-labs/initialize-labs.md"
         },
