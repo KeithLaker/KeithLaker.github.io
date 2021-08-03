@@ -63,7 +63,11 @@ During this part of the workshop, we will use the SQL Worksheet application that
 
 ## STEP 2 - Creating A New Table
 
-1. Below is the script to help you create the sales fact table, **"MOVIE\_SALES\_FACT"**. Simply copy and paste this code into your SQL Worksheet (**NOTE** the first column in the CREATE TABLE definition includes a NOT NULL clause which ensures that each row we load has an order number. There is more on this concept in the lab covering data integrity): 
+1. Below is the script to help you create the sales fact table, **"MOVIE\_SALES\_FACT"**. Simply copy and paste this code into your SQL Worksheet.
+
+    **NOTE**: The first column in the CREATE TABLE definition includes a NOT NULL clause which ensures that each row we load has an order number. There is more on this concept in the lab covering data integrity
+
+    *For copy/pasting, be sure to click the convenient __Copy__ button in the upper right corner of the following code snippet, and all subsequent code snippets*: 
 
 
     ```
@@ -262,7 +266,7 @@ A smarter and more efficient way to load all the data for 2018 to 2020 is to let
 </div>
 **Note** : In the step below we will use a SQL feature that allows us to define some variables that we can incorporate into the data load statement. This makes the data loading statement very flexible and we will use this technique again when we explain how to update the sales data.
 
-4. You will need to paste your regional URI string from the table above between the single quotes in the assignment that is part of the first define statement.
+4. You will need to paste your regional URI string from the table above between the double quotes in the assignment that is part of the first define statement.
 
     ```
     <copy>define uri_ms_oss_bucket = 'paste_in_your_regional_uri_string_between_the_single_quotes';
@@ -317,12 +321,12 @@ A smarter and more efficient way to load all the data for 2018 to 2020 is to let
     ```
 
 
-10. You should see from the column headed rows_loaded that 97,890,562 rows were loaded from the csv files that were located in our Object Storage bucket. 
+10. You should see from the column headed rows_loaded that 97,890,562 rows were loaded from the csv files that were located in our Object Storage bucket.
 
     ![Query to show result of data load](images/3054194687.png)
 
 
-11. Now let's confirm that information by finding out how many rows are actually in our fact table: 
+11. Now let's confirm that information by finding out how many rows are actually in our fact table:
 
     ```
     <copy>SELECT COUNT(*) FROM movie_sales_fact;</copy>
@@ -376,4 +380,4 @@ Please *proceed to the next lab*.
 
 * **Author** - Keith Laker, ADB Product Management
 * **Adapted for Cloud by** - Richard Green, Principal Developer, Database User Assistance
-* **Last Updated By/Date** - Brianna Ambler, July 2021
+* **Last Updated By/Date** - Richard Green, July 2021

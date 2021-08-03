@@ -15,7 +15,7 @@ Estimated time: 10 minutes
 
 ### Going A Little Deeper
 
-Sometimes we will find that the data is organized in just the way we want it to be! In many cloud-based data warehouses, we are locked in to only viewing data in terms of the way it is stored. Making changes to the structure and organization of our data when it's in a spreadsheet is really easy - we can insert new rows and new columns to add new content.
+Sometimes we will find that the data is organized in just the way we want it to be! In many cloud-based data warehouses, we are locked in to only viewing data in terms of the way it is stored. Making changes to the structure and organization of our data when it's in a spreadsheet is really easy - we can insert new rows and new columns to add new content.
 
 Wouldn't it be great if our data warehouse offered the flexibility to add completely new rows to our data set that were derived from existing rows - effectively giving us the chance to build our own  **dimension**  values. In general data warehousing terminology this is known as adding **custom aggregates** to our result set.
 
@@ -51,7 +51,7 @@ Estimated Lab Time: 20 minutes
 
     ![Query results showing week starting Sunday](images/3038282319.png)
 
-Now we know which day is the first day of the week we can move on. In spreadsheets, we can refer to values by referencing the row + column position such as A1 + B2. This would allow us to see more clearly the % contribution provided by each grouping so we can get some insight into the most heavily trafficked days for movie-watching. How can we do this?
+Now we know which day is the first day of the week we can move on. In spreadsheets, we can refer to values by referencing the row + column position such as A1 + B2. This would allow us to see more clearly the % contribution provided by each grouping so we can get some insight into the most heavily trafficked days for movie-watching. How can we do this?
 
 4. Autonomous Data Warehouse has a unique SQL feature called the **`MODEL`** clause which creates a spreadsheet-like modeling framework over our data. If we tweak and extend the last query we can use the MODEL clause to add completely new rows (**Weekday** and **Long Weekend**) into our results:
 

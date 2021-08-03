@@ -11,7 +11,7 @@ Estimated Workshop Duration: 1 hour, 30 minutes
 
 Everyone can benefit from doing the lab exercises in this workshop: database technical experts, LOB Developers, LOB analysts, data warehouse architects to database administrators, business users who want to focus on extracting meaning and insight from their own data, along with data scientists who want to build machine learning models within the context of a data warehouse project.
 
-### Objectives 
+### Objectives
 
 The aim of this lab is to introduce you to the overall workshop objectives and the movie streaming business scenario used in this workshop where you will take on a roll within a company called Oracle MovieStream. At the end of this specific lab, you will have learned how to do the following:
 
@@ -27,7 +27,7 @@ Before you launch into this workshop, you will need the following:
 
 2. Basic level of understanding of SQL query language
 
-3. ***You will need to have completed the related LiveLabs workshop***, **Autonomous Data Warehouse: Data Loading and Management Using SQL on the MovieStream Dataset**. The **Getting Started** section of that prerequisite workshop describes how to obtain an Oracle cloud account if you do not already have one. In that workshop you provision an Oracle Autonomous Database, and then load the MovieStream data needed for this analytics workshop.
+3. ***You will need to have completed the related LiveLabs workshop***, [**ADW: Data Loading and Management Using SQL on the MovieStream Dataset**](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=838&clear=180&session=102687399911158). The **Getting Started** section of that prerequisite workshop describes how to obtain an Oracle cloud account if you do not already have one. In that workshop you provision an Oracle Autonomous Database, and then load the MovieStream data needed for this analytics workshop.
 
 **Note:** The timings and screenshots in this workshop are based on using 8 OCPUs. If you obtain a 30-day trial license and opt to configure fewer OCPUs or opt for an “Always Free” instance with one OCPU, the response times and query times will be different to those shown in the various screenshots.
 
@@ -41,7 +41,7 @@ To make this workshop as realistic as possible, let us introduce the business sc
 
 ### Welcome to Oracle MovieStream
 
-Oracle MovieStream is a fictitious on-line movie streaming company. Customers log into Oracle MovieStream using their computers, tablets and phones where they are presented with a targeted list of movies based on their past viewing behavior. The company is now looking for better, smarter ways to track performance, identifying target customers with campaigns to promote new services, new movies and new viewing platforms. Many of the scenarios in the rest of this workshop will very likely match the challenges you are seeing in your business and we hope the following examples will give you some insight into how Oracle can help you solve these common everyday challenges.
+Oracle MovieStream is a fictitious on-line movie streaming company. Customers log into Oracle MovieStream using their computers, tablets and phones where they are presented with a targeted list of movies based on their past viewing behavior. The company is now looking for better, smarter ways to track performance, identifying target customers with campaigns to promote new services, new movies and new viewing platforms. Many of the scenarios in the rest of this workshop will very likely match the challenges you are seeing in your business and we hope the following examples will give you some insight into how Oracle can help you solve these common everyday challenges.
 
 ## Acknowledgements
 

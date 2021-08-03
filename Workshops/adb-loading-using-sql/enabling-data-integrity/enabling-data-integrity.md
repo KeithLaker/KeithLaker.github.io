@@ -41,7 +41,9 @@ This lab assumes you have:
     ```
     **NOTE:** This should return a value of **$160,365,556.83**.
 
-2. Now let's try to reload sales data for January 2018 using the following command (**Note**: *the command reuses the variables you created in Lab 2 that point to the location of the data file and the format strings used to parse the CSV file*): 
+2. Now let's try to reload sales data for January 2018 using the following command
+
+    (**Note**: *the command reuses the variables you created in Lab 2 that point to the location of the data file and the format strings used to parse the CSV file*): 
 
     ```
     <copy>BEGIN

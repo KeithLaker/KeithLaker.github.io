@@ -27,7 +27,9 @@ This lab assumes you have:
 ## Overview 
 MovieStream is a global business with finance departments distributed around the world. Each of these periodically generates a number of financial adjustments for customers in their respective countries. In practice, these will come in at various times and will need to be processed one-by-one. In this section we are going to process all the regional adjustment files altogether but it is important to bear in mind that each would usually be processed immediately on arrival (and therefore individually) so that we can always get the most up-to-date information from our warehouse. Below we will run the update process by creating an external table for each country’s adjustment file and then run the corresponding merge to update the sales data.
 
-The files for this data load process are stored in a series of regional buckets. Use one of the following **URI strings** in the next step based on the closest location to the region where you have created your ADW. *For example, if your ADW is located in our UK-London data center then you would select the first regional URI string for "Europe, Middle East, Africa" which is for a public bucket located in the London data center: 'https://objectstorage.uk-london-1.oraclecloud.com/n/dwcsprod/b/moviestream_data_load_workshop_20210709/o/'*
+The files for this data load process are stored in a series of regional buckets. Use one of the following **URI strings** in the next step based on the closest location to the region where you have created your ADW.
+
+*For example, if your ADW is located in our UK-London data center then you would select the first regional URI string for "Europe, Middle East, Africa" which is for a public bucket located in the London data center: 'https://objectstorage.uk-london-1.oraclecloud.com/n/dwcsprod/b/moviestream_data_load_workshop_20210709/o/'*
 
 <div style="margin-left: 80px;">
 <br>
@@ -120,7 +122,7 @@ The files for this data load process are stored in a series of regional buckets.
     define adj_column_names = '"ORDER_NUM" INTEGER,"COUNTRY" VARCHAR2(256),"DISCOUNT_PERCENT" NUMBER,"ACTUAL_PRICE" NUMBER';</copy>
     ```
 
-**Note**: in the above set of commands we have added an additional variable that contains the definitions of the columns within the table that we are going to create. Notice how using these variables makes the data loading code very easy to understand!
+		**Note**: in the above set of commands we have added an additional variable that contains the definitions of the columns within the table that we are going to create. Notice how using these variables makes the data loading code very easy to understand!
 
 2. Copy and paste the following code into your SQL worksheet and then run the code:
 
@@ -223,7 +225,7 @@ The files for this data load process are stored in a series of regional buckets.
 
 ## STEP 5 - Finding Out Space Usage For The Movie Sales Data
 
-1.  Now we can run the same space calculation query in our SQL worksheet
+1.  Now we can run the same space calculation query in our SQL worksheet.
 
     ```
     <copy>SELECT
@@ -241,13 +243,15 @@ The files for this data load process are stored in a series of regional buckets.
 
 <br><br>
 
-## STEP 6 – Adding External Tables For Other Country-Based Adjustments 
+## STEP 6 – Adding External Tables For Other Country-Based Adjustments
 
 #### Overview
 We have processed the financial adjustments for Argentina. Now we are going to process the adjustments from the other countries using the same approach. (Don't forget to use the 'Copy' button to make it easier to copy and paste the code below into the SQL Worksheet).
 
 
-1.  Now we are ready to load the remaining files containing the adjustments to our sales data. Use the following code to create the remaining tables for the other adjustments data files which reuses the subsitution variables created earlier in this lab. **Note**: the definitions for the substitution variables (csv\_format\_string, adj\_column\_names and uri\_ms\_oss\_bucket) can be found in the first part of Step 2 - Creating The Staging Table.
+1.  Now we are ready to load the remaining files containing the adjustments to our sales data. Use the following code to create the remaining tables for the other adjustments data files which reuses the subsitution variables created earlier in this lab.
+
+    **Note**: the definitions for the substitution variables (csv\_format\_string, adj\_column\_names and uri\_ms\_oss\_bucket) can be found in the first part of Step 2 - Creating The Staging Table.
 
     ```
     <copy>BEGIN
@@ -558,7 +562,7 @@ We have processed the financial adjustments for Argentina. Now we are going to p
     ```
     <copy>
 	BEGIN run_adj('austria'); END;
-	/ 
+	/
 	BEGIN run_adj('belarus'); END;
 	/
 	BEGIN run_adj('brazil'); END;
@@ -679,14 +683,16 @@ We have processed the financial adjustments for Argentina. Now we are going to p
     GROUP BY segment_name;</copy>
     ```
 
-6. This will return something similar to the results shown below: 8.504GB vs. the original value of 8.441 GB. A very, very slight increase in space usage!
+7. This will return something similar to the results shown below: 8.504GB vs. the original value of 8.441 GB. This is a very, very slight increase in space usage!
 
     ![Result of space calculation query showing slight increase in space usage](images/3054194682.png)
 <br><br>
 
 ## Summary
 
-Why is the lab important? This is a real-world scenario for the majority of data warehouse projects. Your data warehouse platform needs to efficiently manage updates to your data. The Oracle Database is built around a storage model that was designed from the start to efficiently manage data updates since will always be a must-have requirement for all data management projects. Obviously, Autonomous Database automatically manages the data storage process for you so there are no settings to monitor or tweak. You simply load your data, update your data, and let Autonomous Database efficiently manage how that data is stored.
+Why is the lab important? This is a real-world scenario for the majority of data warehouse projects. Your data warehouse platform needs to efficiently manage updates to your data. The Oracle Database is built around a storage model that was designed from the start to efficiently manage data updates since will always be a must-have requirement for all data management projects.
+
+Obviously, Autonomous Database automatically manages the data storage process for you so there are no settings to monitor or tweak. You simply load your data, update your data, and let Autonomous Database efficiently manage how that data is stored.
 
 ## Next Steps
 
