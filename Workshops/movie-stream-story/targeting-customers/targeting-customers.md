@@ -151,7 +151,7 @@ Now that we understand how our pattern matching query is working, we can extend 
     AND FIRST(family.quarter_name) = LAST(family.quarter_name)
     ```
 
-**Note:** We are defining "family-related" genres as comedy, crime and drama as you can see in the above definition. The above means we are now looking for rows with at least one comedy movie, at least one drama movie and at least one family movie within a given quarter. Essentially we are looking for a specific pattern of movie streaming.
+**Note:** We are defining "family-related" genres as comedy, crime and drama as you can see in the above definition. The above means we are now looking for rows with at least one comedy movie, a crime movie and at least one family movie within a given quarter. Essentially we are looking for a specific pattern of movie streaming.
 
 1. If we insert the above into our first pattern matching query, we can then paste the following code into our SQL Worksheet:
 
@@ -167,17 +167,17 @@ Now that we understand how our pattern matching query is working, we can extend 
     last(family.quarter_name) AS last_quarter,
     count(movie_id) AS count_movies
     ALL ROWS PER MATCH
-    PATTERN (comedy+ drama family+)
+    PATTERN (comedy+ crime family+)
     DEFINE
     comedy as genre = 'Comedy',
-    drama as genre = 'Drama',
+    crome as genre = 'Crime',
     family as genre = 'Family'
     AND family.quarter_name = LAST(comedy.quarter_name)
     ) mr
     order by mr.customer_id, match_number;</copy>
     ```
 
-2. This returns around 14,718 customers:
+2. This returns around 2,765 customers:
 
 Before we do any more work on this query, we should check-in with our marketing team to see if this number is within the range they were expecting.
 
@@ -185,14 +185,14 @@ Before we do any more work on this query, we should check-in with our marketing 
 
 A quick Zoom call with the marketing team reveals that they are really pleased to have the list of customers so quickly! However, they think the list needs more tweaking. Ideally, they want to target a much smaller list of customers with the first round of this campaign and they need to find customers who like sci-fi movies! So we need to identify only those customers that have more than a *specific* interest in watching family-related movies, but also like to watch sci-fi movies! 
 
-How can you adapt the previous query to pick out those customers that really enjoy family and sci-fi movies?  All we need to do is tweak our pattern statement! This means our pattern definition will now look like this:
+How can you adapt the previous query to pick out those customers that really enjoy family style movies and sci-fi movies?  All we need to do is tweak our pattern statement! This means our pattern definition will now look like this:
 
 
     ```
-    PATTERN (comedy+ drama+ family+ horror scifi+)
+    PATTERN (comedy+ crime family+ scifi+)
     DEFINE
     comedy as genre = 'Comedy',
-    drama as genre = 'Drama',
+    crime as genre = 'Crime',
     family as genre = 'Family',
     AND family.quarter_name = LAST(comedy.quarter_name)
     scifi as genre = 'Sci-Fi'
@@ -218,7 +218,7 @@ How can you adapt the previous query to pick out those customers that really enj
     );</copy>
     ```
 
-2. The answer is 424. This should be more in line with what the marketing team is expecting so they can run a quick test campaign to gauge the level of feedback.
+2. The answer is 314. This should be more in line with what the marketing team is expecting so they can run a quick test campaign to gauge the level of feedback.
 
 
 3. To help them validate this smaller list of customers, we will add some additional information into our results by showing whether a movie was matched by our pattern as a family or sci-fi movie (this is shown in the **`classifier`** column.)
@@ -227,7 +227,7 @@ How can you adapt the previous query to pick out those customers that really enj
     <copy>SELECT
     customer_id,
     comedy_movies,
-    drama_movies,
+    crime_movies,
     family_movies,
     sf_movies,
     first_quarter,
@@ -239,14 +239,14 @@ How can you adapt the previous query to pick out those customers that really enj
     first(family.quarter_name) AS first_quarter,
     last(scifi.quarter_name) AS last_quarter,
     count(comedy.movie_id) AS comedy_movies,
-    count(drama.movie_id) AS drama_movies,
+    count(crime.movie_id) AS crime_movies,
     count(family.movie_id) AS family_movies,
     count(scifi.movie_id) AS sf_movies
     ONE ROW PER MATCH
-    PATTERN (comedy+ drama+ family+  scifi+),
+    PATTERN (comedy+ crime family+  scifi+)
     DEFINE
     comedy as genre = 'Comedy',
-    drama as genre = 'Drama',
+    crime as genre = 'Crime',
     family as genre = 'Family'
     AND family.quarter_name = LAST(comedy.quarter_name),
     scifi as genre = 'Sci-Fi'
@@ -344,14 +344,14 @@ In this context, we need to search the column genre for a specific string such a
     first(family.quarter_name) AS first_quarter,
     last(scifi.quarter_name) AS last_quarter,
     count(comedy.movie_id) AS comedy_movies,
-    count(drama.movie_id) AS drama_movies,
+    count(crime.movie_id) AS crime_movies,
     count(family.movie_id) AS family_movies,
     count(scifi.movie_id) AS sf_movies
     ONE ROW PER MATCH
-    PATTERN (comedy+ drama+ family+  scifi+ quarter)
+    PATTERN (comedy+ crime family+  scifi+ quarter)
     DEFINE
     comedy AS INSTR(genre, 'Comedy',1,1) > 0,
-    drama AS INSTR(genre, 'Drama',1,1) > 0,
+    crime AS INSTR(genre, 'Crime',1,1) > 0,
     family AS INSTR(genre, 'Family',1,1) > 0
     AND family.quarter_name = LAST(comedy.quarter_name),
     scifi AS INSTR(genre,'Sci-Fi',1,1) > 0
