@@ -32,37 +32,38 @@
             "filename": "../../analyze-data/analyze-data.md"
         },
         {
-            "title": ".... 5a: Analyzing Movie Sales Data",
+            "title": "Lab 5a: Analyzing Movie Sales Data",
             "description": "Analyzing Movie Sales Data",
             "filename": "../../analyzing-movie-sales-data/analyzing-movie-sales-data.md"
           },
           {
-            "title": ".... 5b: Deeper Analysis Of Movie Sales Data",
+            "title": "Lab 5b: Deeper Analysis Of Movie Sales Data",
             "description": "Deeper Analysis Of Movie Sales Data",
             "filename": "../../deeper-analysis-movie-sales-data/deeper-analysis-movie-sales-data.md"
           },
          {
-            "title": ".... 5c: Finding Our Most Important Customers",
+            "title": "Lab 5c: Finding Our Most Important Customers",
             "description": "Finding Our Most Important Customers",
             "filename": "../../finding-most-important-customers/finding-most-important-customers.md"
           },
           {
-            "title": ".... 5d: Targeting Customers Based On Viewing Patterns",
+            "title": "Lab 5d: Targeting Customers Based On Viewing Patterns",
             "description": "Targeting Customers Based On Viewing Patterns",
             "filename": "../../targeting-customers/targeting-customers.md"
           },
           {
-            "title": ".... 5e: Applying Machine Learning To Customer Demographics",
+            "title": "Lab 5e: Applying Machine Learning To Customer Demographics",
             "description": "Applying Machine Learning To Customer Demographics",
             "filename": "../../applying-machine-learning/applying-machine-learning.md"
           },
          {
-            "title": ".... 5f: Managing Text Lists Using SQL",
+            "title": "Lab 5f: Managing Text Lists Using SQL",
             "description": "Managing Text Lists Using SQL",
             "filename": "../../managing-text-lists/managing-text-lists.md"
           },
         {
             "title": "Lab 6: Use OML to Predict Customer Churn",
+            "type": "freetier",
             "filename": "../../predict-churn/predict-churn.md"
         },
         {
@@ -74,11 +75,7 @@
             "filename": "../../apply-graph/apply-graph.md"
         },
         {
-            "title": "Lab 9: Working with semi-structured data",
-            "filename": "../../working-with-semi-structured-data/working-with-semi-structured-data.md"
-        },
-        {
-            "title": "Initialize Labs",
+            "title": "Initializing Labs",
             "filename": "../../initialize-labs/initialize-labs.md"
         },
         {

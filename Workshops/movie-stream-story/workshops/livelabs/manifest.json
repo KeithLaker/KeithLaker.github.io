@@ -33,6 +33,7 @@
         },
         {
             "title": "Lab 6: Predict churn",
+            "type": "livelabs",
             "filename": "../../predict-churn/predict-churn.md"
         },
         {

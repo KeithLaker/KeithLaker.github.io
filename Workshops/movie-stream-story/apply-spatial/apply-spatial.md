@@ -32,7 +32,7 @@ In this lab, you will:
 
 ## **STEP 1**: Prepare the Data
 
-To prepare your data for spatial analyses, you create function-based spatial indexes on the CUSTOMER and PIZZA_LOCATIONS tables. Function-based spatial indexes enable tables for spatial analysis without the need to create geometry columns. Tables with coordinate columns are always good candidates for a function-based spatial index.
+To prepare your data for spatial analyses, you create function-based spatial indexes on the CUSTOMER\_CONTACT and PIZZA\_LOCATION tables. Function-based spatial indexes enable tables for spatial analysis without the need to create geometry columns. Tables with coordinate columns are always good candidates for a function-based spatial index.
 
 
 1. As described in Lab 4 Step 3, navigate to a SQL Worksheet as user MOVIESTREAM.
@@ -66,7 +66,7 @@ To prepare your data for spatial analyses, you create function-based spatial ind
    </copy>
     ```
 
-2. Next test the function. Since the function returns a point geometry, you can perform a basic distance calculation using function calls to create the input geometries. Operations that do not involve spatial search or filtering, such as distance between 2 points, do not require a spatial index. Therefore you are able to perform this operation now, before spatial metadata and indexes are created. Run the following query to test the function by calculating the distance between a pair of coordinates.
+3. Next test the function. Since the function returns a point geometry, you can perform a basic distance calculation using function calls to create the input geometries. Operations that do not involve spatial search or filtering, such as distance between 2 points, do not require a spatial index. Therefore you are able to perform this operation now, before spatial metadata and indexes are created. Run the following query to test the function by calculating the distance between a pair of coordinates.
 
     ```
     <copy>
@@ -81,12 +81,12 @@ To prepare your data for spatial analyses, you create function-based spatial ind
 
     ![Image alt text](images/spatial-02.png "Test the function")
 
-3. Before creating a spatial index, you must insert a row of metadata for the geometry being indexed. This metadata is stored in a centralized spatial metadata table exposed to users through the view USER\_SDO\_GEOM\_METADATA available to all users. Instead of creating a spatial indexe on a geometry column, you will be creating function-based spatial indexes. Therefore you insert spatial metadata specifying the function instead of a column. It is required that the function name be prefixed with the owner name. Run the following commands to insert spatial metadata for the CUSTOMER and PIZZA_LOCATIONS tables.
+4. Before creating a spatial index, you must insert a row of metadata for the geometry being indexed. This metadata is stored in a centralized spatial metadata table exposed to users through the view USER\_SDO\_GEOM\_METADATA available to all users. Instead of creating a spatial indexe on a geometry column, you will be creating function-based spatial indexes. Therefore you insert spatial metadata specifying the function instead of a column. It is required that the function name be prefixed with the owner name. Run the following commands to insert spatial metadata for the CUSTOMER\_CONTACT and PIZZA\_LOCATION tables.
 
     ```
     <copy>
     INSERT INTO user_sdo_geom_metadata VALUES (
-     'CUSTOMER',
+     'CUSTOMER_CONTACT',
      user||'.LATLON_TO_GEOMETRY(loc_lat,loc_long)',
       sdo_dim_array(
           sdo_dim_element('X', -180, 180, 0.05), --longitude bounds and tolerance in meters
@@ -95,7 +95,7 @@ To prepare your data for spatial analyses, you create function-based spatial ind
         );
 
     INSERT INTO user_sdo_geom_metadata VALUES (
-     'PIZZA_LOCATIONS',
+     'PIZZA_LOCATION',
      user||'.LATLON_TO_GEOMETRY(lat,lon)',
       sdo_dim_array(
           sdo_dim_element('X', -180, 180, 0.05), 
@@ -105,17 +105,17 @@ To prepare your data for spatial analyses, you create function-based spatial ind
     </copy>
     ```
 
-4. Now that spatial metadata has been added, spatial indexes can be created. Spatial indexes are typically created on geometry columns. However here you are creating function-based spatial indexes, or in other words spatial indexes on geometries returned from a function. Run the following commands to create function-based spatial indexes for the CUSTOMER and PIZZA_LOCATIONS tables.
+5. Now that spatial metadata has been added, spatial indexes can be created. Spatial indexes are typically created on geometry columns. However here you are creating function-based spatial indexes, or in other words spatial indexes on geometries returned from a function. Run the following commands to create function-based spatial indexes for the CUSTOMER\_CONTACT and PIZZA\_LOCATION tables.
 
     ```
     <copy>
     CREATE INDEX customer_sidx 
-    ON customer (latlon_to_geometry(loc_lat,loc_long))
+    ON customer_contact (latlon_to_geometry(loc_lat,loc_long))
     INDEXTYPE IS mdsys.spatial_index_v2 
        PARAMETERS ('layer_gtype=POINT');
 
-    CREATE INDEX pizza_locations_sidx 
-    ON pizza_locations (latlon_to_geometry(lat,lon))
+    CREATE INDEX pizza_location_sidx 
+    ON pizza_location (latlon_to_geometry(lat,lon))
     INDEXTYPE IS mdsys.spatial_index_v2 
        PARAMETERS ('layer_gtype=POINT');
     </copy>
@@ -153,7 +153,7 @@ This lab is based on scenario 1.  Scenario 2 requires a slightly different synta
     ```
     <copy>
     SELECT b.chain, b.address, b.city, b.state
-    FROM customer a, pizza_locations b
+    FROM customer_contact a, pizza_location b
     WHERE a.cust_id = 1029765
     AND sdo_nn(
          latlon_to_geometry(b.lat, b.lon), 
@@ -169,7 +169,7 @@ This lab is based on scenario 1.  Scenario 2 requires a slightly different synta
     ```
     <copy>
     SELECT b.chain, b.address, b.city, b.state
-    FROM customer a, pizza_locations b
+    FROM customer_contact a, pizza_location b
     WHERE a.cust_id = 1029765
     AND sdo_nn(
          latlon_to_geometry(b.lat, b.lon), 
@@ -186,7 +186,7 @@ This lab is based on scenario 1.  Scenario 2 requires a slightly different synta
     <copy>
     SELECT b.chain, b.address, b.city, b.state, 
            round( sdo_nn_distance(1), 1 ) distance_km
-    FROM customer a, pizza_locations  b
+    FROM customer_contact a, pizza_location  b
     WHERE a.cust_id = 1029765
     AND sdo_nn(
          latlon_to_geometry(b.lat, b.lon), 
@@ -204,7 +204,7 @@ This lab is based on scenario 1.  Scenario 2 requires a slightly different synta
     <copy>
     SELECT b.chain, b.address, b.city, b.state,
            round( sdo_nn_distance(1), 1 ) distance_km
-    FROM customer a, pizza_locations  b
+    FROM customer_contact a, pizza_location  b
     WHERE a.cust_id = 1029765
     AND sdo_nn(
          latlon_to_geometry(b.lat, b.lon), 
@@ -224,7 +224,7 @@ This lab is based on scenario 1.  Scenario 2 requires a slightly different synta
     <copy>
     SELECT a.cust_id, b.chain, b.address, b.city, b.state, 
            round( sdo_nn_distance(1), 1 ) distance_km
-    FROM customer a, pizza_locations b
+    FROM customer_contact a, pizza_location b
     WHERE a.state_province = 'Rhode Island'
     AND sdo_nn(
          latlon_to_geometry(b.lat, b.lon), 
@@ -243,7 +243,7 @@ This lab is based on scenario 1.  Scenario 2 requires a slightly different synta
     SELECT a.cust_id, b.chain, b.address, b.city, b.state, 
           round( sdo_nn_distance(1), 1
           ) distance_km
-    FROM customer a, pizza_locations b
+    FROM customer_contact a, pizza_location b
     WHERE a.state_province = 'Rhode Island'
     AND sdo_nn(
          latlon_to_geometry(b.lat, b.lon), 
@@ -263,7 +263,7 @@ This lab is based on scenario 1.  Scenario 2 requires a slightly different synta
     <copy>
     SELECT a.cust_id, b.chain, b.address, b.city, b.state, 
            round( sdo_nn_distance(1), 1 ) distance_km
-    FROM customer a, pizza_locations b
+    FROM customer_contact a, pizza_location b
     WHERE a.state_province = 'Rhode Island'
     AND sdo_nn(
          latlon_to_geometry(b.lat, b.lon), 
@@ -281,7 +281,7 @@ This lab is based on scenario 1.  Scenario 2 requires a slightly different synta
     <copy>
     SELECT a.cust_id, b.chain, b.address, b.city, b.state, 
            round( sdo_nn_distance(1), 1 ) distance_km
-    FROM customer a, pizza_locations b
+    FROM customer_contact a, pizza_location b
     WHERE a.country = 'United States'
     AND sdo_nn(
          latlon_to_geometry(b.lat, b.lon), 
@@ -301,7 +301,7 @@ This lab is based on scenario 1.  Scenario 2 requires a slightly different synta
     AS
     SELECT a.cust_id, b.chain, b.address, b.city, b.state, 
            round( sdo_nn_distance(1), 1 ) distance_km
-    FROM customer a, pizza_locations b
+    FROM customer_contact a, pizza_location b
     WHERE a.country = 'United States'
     AND sdo_nn(
          latlon_to_geometry(b.lat, b.lon), 
@@ -323,10 +323,10 @@ If you would like to purge all changes made in this lab, run the following comma
     <copy>
     DROP INDEX customer_sidx;
 
-    DROP INDEX pizza_locations_sidx;
+    DROP INDEX pizza_location_sidx;
 
     DELETE FROM user_sdo_geom_metadata
-    WHERE TABLE_NAME in ('CUSTOMER','PIZZA_LOCATIONS');
+    WHERE TABLE_NAME in ('CUSTOMER_CONTACT','PIZZA_LOCATION');
 
     DROP TABLE customer_nearest_pizza ;
 

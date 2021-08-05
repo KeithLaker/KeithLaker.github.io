@@ -16,7 +16,7 @@ In this lab, you will:
 
 ## **Step 1**: Create a Database User
 
-When you create a new data warehouse, you automatically get an account called ADMIN that is your super administrator user. In the real world, you will definitely want to keep your data warehouse data completely separate from the administration processes. Therefore, you will need to know how to create separate new users and grant them access to your data warehouse. This section will guide you through this process using the "New User" wizard within the SQL Worksheet (one of the built-in tools in Autonomous Data Warehouse).
+When you create a new data warehouse, you automatically get an account called ADMIN that is your super administrator user. In the real world, you will definitely want to keep your data warehouse data completely separate from the administration processes. Therefore, you will need to know how to create separate new users and grant them access to your data warehouse. This section will guide you through this process using the "New User" wizard within the SQL tools.
 
 For this workshop we need to create one new user.
 
@@ -78,6 +78,8 @@ Now that you have created a user with several roles, let's see how easy it is to
 
 2. Click the **Granted Roles** tab at the top of the Edit User form and add the following roles under the **Granted** column: **CONSOLE\_DEVELOPER**, **DWROLE**, and **OML\_DEVELOPER**.
 
+    **Note:** You can use the *Filter by role* field to quickly find roles in this long list of roles. For example, filter by "OML".
+
     ![ALT text is not available for this image](images/2878884644.png)
 
     Notice that two additional roles have already been automatically assigned: **CONNECT** and **RESOURCE**. Click **Apply Changes**. 
@@ -110,6 +112,15 @@ In the next labs, you will use the SQL Worksheet application that is built in to
     This will open up a new window that should look something like the screenshot below. The first time you open SQL Worksheet, a series of pop-up informational boxes introduce you to the main features. Click Next to take a tour through the informational boxes.
 
     ![Screenshot of initial SQL Worksheet](images/Picture100-sql-worksheet.png)
+
+2. You don't have any tables yet, but let's run a query that selects the current user and today's date:
+
+    ```
+    <copy>select user, sysdate from dual;</copy>
+    ```
+    ![Run the query to select current user and today's date.](images/query-user-and-date.png)
+
+    In the query results, you'll see MOVIESTREAM and today's date.  You've successfully run your first Autonomous Database query!
 
 Please *proceed to the next lab*.
 

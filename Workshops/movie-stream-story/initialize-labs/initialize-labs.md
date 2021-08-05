@@ -1,17 +1,17 @@
-# Initialize Labs
+# Initializing Labs
 
 ## Introduction
-This page contains the scripts that can be used to initialize your labs.  
+This page contains the script that can be used to create and load the tables required for the labs.  
 
-The workshop has been designed to run from beginning to end.  However, you may want to skip certain labs - which means that you may have also skipped some prerequisites.  You can run the initialization script for any lab to get your database environment in the proper state.
+The workshop has been designed to run from beginning to end.  However, you may want to skip certain labs - which means that you may have also skipped some prerequisites.  You can run the initialization script to ensure that your database environment is in the proper state.  The script will drop and recreate tables required to run the labs.  These are the same tables that are defined in the data loading lab.
 
 Estimated Time: 5 minutes
 
-## **Lab 5 Initialization Script** 
+## **Initialization Script** 
 
 Go to SQL Worksheet in SQL Tools and login as the **moviestream** user.  Then, copy and paste the script below into the SQL Worksheet and click **Run Script**.
 
-The script will drop and recreate the MovieStream tables and load them from data in object storage.
+The script will drop and recreate the MovieStream tables and load them from files in object storage.  In addition, primary keys, foreign keys and IS JSON constraints are defined.  This helps ensure data quality as well as more sophisticated analytics using JSON and graph queries.
 
  ```
 <copy>
@@ -31,18 +31,17 @@ drop table ext_customer_extension;
 drop table ext_customer_segment;
 drop table ext_pizza_location;
 drop table ext_custsales;
-drop table customer;
+drop table custsales;
 drop table customer_contact;
 drop table customer_extension;
+drop table customer;
 drop table genre;
 drop table movie;
-drop table custsales;
 drop table customer_segment;
 drop table pizza_location;
 drop table time;
 drop view v_custsales;
  
-
  
 -- Test:  query object storage with the credential
 -- SELECT *
@@ -55,7 +54,7 @@ exec dbms_output.put_line(systimestamp || ' - create time table')
 create table time as
 select trunc (to_date('20210101','YYYYMMDD')-rownum) as day_id
 from dual connect by rownum < 732;
-comment on table time is ‘This is a densified time dimension table with the following hierarchy day-week-month-quarter-year’;
+comment on table time is 'This is a densified time dimension table with the following hierarchy day-week-month-quarter-year';
 
 alter table time
 add (
@@ -75,44 +74,34 @@ add (
  
 -- Using public buckets  so credentials are not required
 -- Create external tables then do a CTAS
-exec dbms_output.put_line(systimestamp || ' - create external tables')
-exec dbms_output.put_line(systimestamp || ' - ... ext_genre')
 
 begin
+    dbms_output.put_line(systimestamp || ' - create external tables');
+    dbms_output.put_line(systimestamp || ' - ... ext_genre');
     dbms_cloud.create_external_table(
         table_name => 'ext_genre',
         file_uri_list => '&uri_gold/genre/genre.csv',
         format => '&csv_format',
         column_list => 'genre_id number, name varchar2(30)'
         );
-end;
-/
 
-exec dbms_output.put_line(systimestamp || ' - ... ext_customer_segment') 
-begin
+    dbms_output.put_line(systimestamp || ' - ... ext_customer_segment');
     dbms_cloud.create_external_table(
         table_name => 'ext_customer_segment',
         file_uri_list => '&uri_landing/customer_segment/customer_segment.csv',
         format => '&csv_format',
         column_list => 'segment_id number, name varchar2(100), short_name varchar2(100)'
         );       
-end;
-/
 
-exec dbms_output.put_line(systimestamp || ' - ... ext_movie')  
-begin
+    dbms_output.put_line(systimestamp || ' - ... ext_movie'); 
     dbms_cloud.create_external_table(
         table_name => 'ext_movie',
         file_uri_list => '&uri_gold/movie/movies.json',
         format => '&json_format',
         column_list => 'doc varchar2(30000)'
         );
-end;
-/       
-
-exec dbms_output.put_line(systimestamp || ' - ... ext_custsales')  
-
-begin
+  
+    dbms_output.put_line(systimestamp || ' - ... ext_custsales');
     dbms_cloud.create_external_table(
         table_name => 'ext_custsales',
         file_uri_list => '&uri_gold/custsales/*.parquet',
@@ -130,12 +119,8 @@ begin
                         DAY_ID date,
                         APP VARCHAR2(4000 BYTE)'
     ); 
-end;
-/
- 
-exec dbms_output.put_line(systimestamp || ' - ... ext_pizza_location')  
-
-begin       
+    
+    dbms_output.put_line(systimestamp || ' - ... ext_pizza_location');       
     dbms_cloud.create_external_table(
         table_name => 'ext_pizza_location',
         file_uri_list => '&uri_landing/pizza_location/*.csv',
@@ -151,12 +136,8 @@ begin
                         POSTAL_CODE VARCHAR2(38 BYTE),
                         COUNTY VARCHAR2(250 BYTE)'
         ); 
-end;
-/
-
-exec dbms_output.put_line(systimestamp || ' - ... ext_customer_contact')  
-
-begin       
+    
+    dbms_output.put_line(systimestamp || ' - ... ext_customer_contact');  
     dbms_cloud.create_external_table(
         table_name => 'ext_customer_contact',
         file_uri_list => '&uri_gold/customer_contact/*.csv',
@@ -178,12 +159,8 @@ begin
                         LOC_LONG                 NUMBER' 
 
         ); 
-end;
-/
 
-exec dbms_output.put_line(systimestamp || ' - ... ext_customer_extension')  
-
-begin       
+    dbms_output.put_line(systimestamp || ' - ... ext_customer_extension');
     dbms_cloud.create_external_table(
         table_name => 'ext_customer_extension',
         file_uri_list => '&uri_landing/customer_extension/*.csv',
@@ -215,205 +192,200 @@ begin
                         YRS_CURRENT_EMPLOYER         NUMBER,         
                         YRS_RESIDENCE                NUMBER'
         ); 
-end;
-/
 
-exec dbms_output.put_line(systimestamp || ' - external tables created.')  
+    dbms_output.put_line(systimestamp || ' - external tables created.') ;
 
 
-/*
-    Create tables from external tables
-*/
-exec dbms_output.put_line(systimestamp || ' - create custsales')
-create table custsales as select * from ext_custsales;
+    --  Create tables from external tables
 
+    dbms_output.put_line(systimestamp || ' - create pizza_locations');
+    execute immediate 'create table pizza_location as select * from ext_pizza_location';
  
-exec dbms_output.put_line(systimestamp || ' - create pizza_locations')
-create table pizza_location as select * from ext_pizza_location;
+    dbms_output.put_line(systimestamp || ' - create genre');
+    execute immediate 'create table genre as select * from ext_genre';
  
-exec dbms_output.put_line(systimestamp || ' - create movie')
-create table movie as
-select
-    cast(m.doc.movie_id as number) as movie_id,
-    cast(m.doc.title as varchar2(200 byte)) as title,   
-    cast(m.doc.budget as number) as budget,
-    cast(m.doc.gross as number) gross,
-    cast(m.doc.list_price as number) as list_price,
-    cast(m.doc.genre as varchar2(4000)) as genres,
-    cast(m.doc.sku as varchar2(30 byte)) as sku,   
-    cast(m.doc.year as number) as year,
-    to_date(m.doc.opening_date, 'YYYY-MM-DD') as opening_date,
-    cast(m.doc.views as number) as views,
-    cast(m.doc.cast as varchar2(4000 byte)) as cast,
-    cast(m.doc.crew as varchar2(4000 byte)) as crew,
-    cast(m.doc.studio as varchar2(4000 byte)) as studio,
-    cast(m.doc.main_subject as varchar2(4000 byte)) as main_subject,
-    cast(m.doc.awards as varchar2(4000 byte)) as awards,
-    cast(m.doc.nominations as varchar2(4000 byte)) as nominations,
-    cast(m.doc.runtime as number) as runtime,
-    substr(cast(m.doc.summary as varchar2(4000 byte)),1, 4000) as summary
-from ext_movie m;
+    dbms_output.put_line(systimestamp || ' - create customer_segment');
+    execute immediate 'create table customer_segment as select * from ext_customer_segment';
  
-exec dbms_output.put_line(systimestamp || ' - create genre')
-create table genre as select * from ext_genre;
+    dbms_output.put_line(systimestamp || ' - create customer_contact');
+    execute immediate 'create table customer_contact as select * from ext_customer_contact';
+
+    dbms_output.put_line(systimestamp || ' - create customer_extension');
+    execute immediate 'create table customer_extension as select * from ext_customer_extension';
+
+    dbms_output.put_line(systimestamp || ' - create movie');
+    execute immediate 'create table movie as
+        select
+            cast(m.doc.movie_id as number) as movie_id,
+            cast(m.doc.title as varchar2(200 byte)) as title,   
+            cast(m.doc.budget as number) as budget,
+            cast(m.doc.gross as number) gross,
+            cast(m.doc.list_price as number) as list_price,
+            cast(m.doc.genre as varchar2(4000)) as genres,
+            cast(m.doc.sku as varchar2(30 byte)) as sku,   
+            cast(m.doc.year as number) as year,
+            to_date(m.doc.opening_date, ''YYYY-MM-DD'') as opening_date,
+            cast(m.doc.views as number) as views,
+            cast(m.doc.cast as varchar2(4000 byte)) as cast,
+            cast(m.doc.crew as varchar2(4000 byte)) as crew,
+            cast(m.doc.studio as varchar2(4000 byte)) as studio,
+            cast(m.doc.main_subject as varchar2(4000 byte)) as main_subject,
+            cast(m.doc.awards as varchar2(4000 byte)) as awards,
+            cast(m.doc.nominations as varchar2(4000 byte)) as nominations,
+            cast(m.doc.runtime as number) as runtime,
+            substr(cast(m.doc.summary as varchar2(4000 byte)),1, 4000) as summary
+        from ext_movie m';
  
-exec dbms_output.put_line(systimestamp || ' - create customer_segment')
-create table customer_segment as select * from ext_customer_segment;
+    dbms_output.put_line(systimestamp || ' - create custsales');
+    execute immediate 'create table custsales as select * from ext_custsales';
+
+    -- Table combining the two independent ones
+    dbms_output.put_line(systimestamp || ' - create combined customer');
+    execute immediate 'create table CUSTOMER
+            as
+            select  cc.CUST_ID,                
+                    cc.LAST_NAME,              
+                    cc.FIRST_NAME,             
+                    cc.EMAIL,                  
+                    cc.STREET_ADDRESS,         
+                    cc.POSTAL_CODE,            
+                    cc.CITY,                   
+                    cc.STATE_PROVINCE,         
+                    cc.COUNTRY,                
+                    cc.COUNTRY_CODE,           
+                    cc.CONTINENT,              
+                    cc.YRS_CUSTOMER,           
+                    cc.PROMOTION_RESPONSE,     
+                    cc.LOC_LAT,                
+                    cc.LOC_LONG,               
+                    ce.AGE,                    
+                    ce.COMMUTE_DISTANCE,       
+                    ce.CREDIT_BALANCE,         
+                    ce.EDUCATION,              
+                    ce.FULL_TIME,              
+                    ce.GENDER,                 
+                    ce.HOUSEHOLD_SIZE,         
+                    ce.INCOME,                 
+                    ce.INCOME_LEVEL,           
+                    ce.INSUFF_FUNDS_INCIDENTS, 
+                    ce.JOB_TYPE,               
+                    ce.LATE_MORT_RENT_PMTS,    
+                    ce.MARITAL_STATUS,         
+                    ce.MORTGAGE_AMT,           
+                    ce.NUM_CARS,               
+                    ce.NUM_MORTGAGES,          
+                    ce.PET,                    
+                    ce.RENT_OWN,    
+                    ce.SEGMENT_ID,           
+                    ce.WORK_EXPERIENCE,        
+                    ce.YRS_CURRENT_EMPLOYER,   
+                    ce.YRS_RESIDENCE
+            from CUSTOMER_CONTACT cc, CUSTOMER_EXTENSION ce
+            where cc.cust_id = ce.cust_id';
  
-exec dbms_output.put_line(systimestamp || ' - create customer_contact')
-create table customer_contact as select * from ext_customer_contact;
+    -- View combining data
+    dbms_output.put_line(systimestamp || ' - create view v_custsales');
+    execute immediate 'CREATE OR REPLACE VIEW v_custsales AS
+            SELECT
+                cs.day_id,
+                c.cust_id,
+                c.last_name,
+                c.first_name,
+                c.city,
+                c.state_province,
+                c.country,
+                c.continent,
+                c.age,
+                c.commute_distance,
+                c.credit_balance,
+                c.education,
+                c.full_time,
+                c.gender,
+                c.household_size,
+                c.income,
+                c.income_level,
+                c.insuff_funds_incidents,
+                c.job_type,
+                c.late_mort_rent_pmts,
+                c.marital_status,
+                c.mortgage_amt,
+                c.num_cars,
+                c.num_mortgages,
+                c.pet,
+                c.promotion_response,
+                c.rent_own,
+                c.work_experience,
+                c.yrs_current_employer,
+                c.yrs_customer,
+                c.yrs_residence,
+                c.loc_lat,
+                c.loc_long,   
+                cs.app,
+                cs.device,
+                cs.os,
+                cs.payment_method,
+                cs.list_price,
+                cs.discount_type,
+                cs.discount_percent,
+                cs.actual_price,
+                1 as transactions,
+                s.short_name as segment,
+                g.name as genre,
+                m.title,
+                m.budget,
+                m.gross,
+                m.genres,
+                m.sku,
+                m.year,
+                m.opening_date,
+                m.cast,
+                m.crew,
+                m.studio,
+                m.main_subject,
+                nvl(json_value(m.awards,''$.size()''),0) awards,
+                nvl(json_value(m.nominations,''$.size()''),0) nominations,
+                m.runtime
+            FROM
+                genre g, customer c, custsales cs, customer_segment s, movie m
+            WHERE
+                cs.movie_id = m.movie_id
+            AND  cs.genre_id = g.genre_id
+            AND  cs.cust_id = c.cust_id
+            AND  c.segment_id = s.segment_id';
 
-exec dbms_output.put_line(systimestamp || ' - create customer_extension')
-create table customer_extension as select * from ext_customer_extension;
+    -- Add constraints and indexes
+    dbms_output.put_line(systimestamp || ' - creating constraints and indexes');
 
+    execute immediate 'alter table genre add constraint pk_genre_id primary key("GENRE_ID")';
 
--- Table combining the two independent ones
-exec dbms_output.put_line(systimestamp || ' - create combined customer')
-create table CUSTOMER
-as
-select  cc.CUST_ID,                
-        cc.LAST_NAME,              
-        cc.FIRST_NAME,             
-        cc.EMAIL,                  
-        cc.STREET_ADDRESS,         
-        cc.POSTAL_CODE,            
-        cc.CITY,                   
-        cc.STATE_PROVINCE,         
-        cc.COUNTRY,                
-        cc.COUNTRY_CODE,           
-        cc.CONTINENT,              
-        cc.YRS_CUSTOMER,           
-        cc.PROMOTION_RESPONSE,     
-        cc.LOC_LAT,                
-        cc.LOC_LONG,               
-        ce.AGE,                    
-        ce.COMMUTE_DISTANCE,       
-        ce.CREDIT_BALANCE,         
-        ce.EDUCATION,              
-        ce.FULL_TIME,              
-        ce.GENDER,                 
-        ce.HOUSEHOLD_SIZE,         
-        ce.INCOME,                 
-        ce.INCOME_LEVEL,           
-        ce.INSUFF_FUNDS_INCIDENTS, 
-        ce.JOB_TYPE,               
-        ce.LATE_MORT_RENT_PMTS,    
-        ce.MARITAL_STATUS,         
-        ce.MORTGAGE_AMT,           
-        ce.NUM_CARS,               
-        ce.NUM_MORTGAGES,          
-        ce.PET,                    
-        ce.RENT_OWN,    
-        ce.SEGMENT_ID,           
-        ce.WORK_EXPERIENCE,        
-        ce.YRS_CURRENT_EMPLOYER,   
-        ce.YRS_RESIDENCE
-from CUSTOMER_CONTACT cc, CUSTOMER_EXTENSION ce
-where cc.cust_id = ce.cust_id;
- 
--- View combining data
-exec dbms_output.put_line(systimestamp || ' - create view v_custsales')
-CREATE OR REPLACE VIEW v_custsales AS
-SELECT
-    cs.day_id,
-    c.cust_id,
-    c.last_name,
-    c.first_name,
-    c.city,
-    c.state_province,
-    c.country,
-    c.continent,
-    c.age,
-    c.commute_distance,
-    c.credit_balance,
-    c.education,
-    c.full_time,
-    c.gender,
-    c.household_size,
-    c.income,
-    c.income_level,
-    c.insuff_funds_incidents,
-    c.job_type,
-    c.late_mort_rent_pmts,
-    c.marital_status,
-    c.mortgage_amt,
-    c.num_cars,
-    c.num_mortgages,
-    c.pet,
-    c.promotion_response,
-    c.rent_own,
-    c.work_experience,
-    c.yrs_current_employer,
-    c.yrs_customer,
-    c.yrs_residence,
-    c.loc_lat,
-    c.loc_long,   
-    cs.app,
-    cs.device,
-    cs.os,
-    cs.payment_method,
-    cs.list_price,
-    cs.discount_type,
-    cs.discount_percent,
-    cs.actual_price,
-    1 as transactions,
-    s.short_name as segment,
-    g.name as genre,
-    m.title,
-    m.budget,
-    m.gross,
-    m.genres,
-    m.sku,
-    m.year,
-    m.opening_date,
-    m.cast,
-    m.crew,
-    m.studio,
-    m.main_subject,
-    nvl(json_value(m.awards,'$.size()'),0) awards,
-    nvl(json_value(m.nominations,'$.size()'),0) nominations,
-    m.runtime
-FROM
-    genre g, customer c, custsales cs, customer_segment s, movie m
-WHERE
-     cs.movie_id = m.movie_id
-AND  cs.genre_id = g.genre_id
-AND  cs.cust_id = c.cust_id
-AND  c.segment_id = s.segment_id;
- 
+    execute immediate 'alter table customer add constraint pk_customer_cust_id primary key("CUST_ID")';
+    execute immediate 'alter table customer_extension add constraint pk_custextension_cust_id primary key("CUST_ID")';
+    execute immediate 'alter table customer_contact add constraint pk_custcontact_cust_id primary key("CUST_ID")';
+    execute immediate 'alter table customer_segment add constraint pk_custsegment_id primary key("SEGMENT_ID")';
 
--- Add constraints and indexes
-exec dbms_output.put_line(systimestamp || ' - creating constraints and indexes')
+    execute immediate 'alter table movie add constraint pk_movie_id primary key("MOVIE_ID")';
+    execute immediate 'alter table movie add CONSTRAINT movie_cast_json CHECK (cast IS JSON)';
+    execute immediate 'alter table movie add CONSTRAINT movie_genre_json CHECK (genres IS JSON)';
+    execute immediate 'alter table movie add CONSTRAINT movie_crew_json CHECK (crew IS JSON)';
+    execute immediate 'alter table movie add CONSTRAINT movie_studio_json CHECK (studio IS JSON)';
+    execute immediate 'alter table movie add CONSTRAINT movie_awards_json CHECK (awards IS JSON)';
+    execute immediate 'alter table movie add CONSTRAINT movie_nominations_json CHECK (nominations IS JSON)';
+    
+    execute immediate 'alter table pizza_location add constraint pk_pizza_loc_id primary key("PIZZA_LOC_ID")';
 
-alter table genre add constraint pk_genre_id primary key("GENRE_ID");
+    execute immediate 'alter table time add constraint pk_day primary key("DAY_ID")';
 
-alter table customer add constraint pk_customer_cust_id primary key("CUST_ID");
-alter table customer_extension add constraint pk_custextension_cust_id primary key("CUST_ID");
-alter table customer_contact add constraint pk_custcontact_cust_id primary key("CUST_ID");
-alter table customer_segment add constraint pk_custsegment_id primary key("SEGMENT_ID");
-
-alter table movie add constraint pk_movie_id primary key("MOVIE_ID");
-alter table movie add CONSTRAINT movie_cast_json CHECK (cast IS JSON);
-alter table movie add CONSTRAINT movie_genre_json CHECK (genres IS JSON);
-alter table movie add CONSTRAINT movie_crew_json CHECK (crew IS JSON);
-alter table movie add CONSTRAINT movie_studio_json CHECK (studio IS JSON);
-alter table movie add CONSTRAINT movie_awards_json CHECK (awards IS JSON);
-alter table movie add CONSTRAINT movie_nominations_json CHECK (nominations IS JSON);
-  
-alter table pizza_location add constraint pk_pizza_loc_id primary key("PIZZA_LOC_ID");
-
-alter table time add constraint pk_day primary key("DAY_ID");
+    -- foreign keys
+    execute immediate 'alter table custsales add constraint fk_custsales_movie_id foreign key("MOVIE_ID") references movie("MOVIE_ID")';
+    execute immediate 'alter table custsales add constraint fk_custsales_cust_id foreign key("CUST_ID") references customer("CUST_ID")';
+    execute immediate 'alter table custsales add constraint fk_custsales_day_id foreign key("DAY_ID") references time("DAY_ID")';
+    execute immediate 'alter table custsales add constraint fk_custsales_genre_id foreign key("GENRE_ID") references genre("GENRE_ID")';
+    dbms_output.put_line(systimestamp || 'Done.');
+ end;
+ /
 
 
--- foreign keys
-alter table custsales add constraint fk_custsales_movie_id foreign key("MOVIE_ID") references movie("MOVIE_ID");
-alter table custsales add constraint fk_custsales_cust_id foreign key("CUST_ID") references customer("CUST_ID");
-alter table custsales add constraint fk_custsales_day_id foreign key("DAY_ID") references time("DAY_ID");
-alter table custsales add constraint fk_custsales_genre_id foreign key("GENRE_ID") references genre("GENRE_ID");
-
-
-exec dbms_output.put_line(systimestamp || 'Done.')
-    </copy>
+</copy>
  ```
 
 

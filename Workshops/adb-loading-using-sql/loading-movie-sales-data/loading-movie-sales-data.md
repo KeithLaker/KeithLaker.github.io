@@ -139,8 +139,8 @@ During this part of the workshop, we will use the SQL Worksheet application that
     OS VARCHAR2(26),
     PAYMENT_METHOD VARCHAR2(26),
     DISCOUNT_TYPE VARCHAR2(26),
-    DISCOUNT_PERCENT NUMBER(38,1),
-    ACTUAL_PRICE NUMBER(38,2),
+    DISCOUNT_PERCENT NUMBER(38,3),
+    ACTUAL_PRICE NUMBER(38,3),
     QUANTITY_SOLD NUMBER(38,0));</copy>
     ```
 
@@ -380,4 +380,4 @@ Please *proceed to the next lab*.
 
 * **Author** - Keith Laker, ADB Product Management
 * **Adapted for Cloud by** - Richard Green, Principal Developer, Database User Assistance
-* **Last Updated By/Date** - Richard Green, July 2021
+* **Last Updated By/Date** - Keith Laker, August 5 2021

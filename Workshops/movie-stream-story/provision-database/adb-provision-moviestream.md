@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab walks you through the steps to get started using the Oracle Autonomous Database (Autonomous Data Warehouse [ADW] and Autonomous Transaction Processing [ATP]) on Oracle Cloud. In this lab, you provision a new ADW instance.
+This lab walks you through the steps to get started using the Oracle Autonomous Database (Autonomous Data Warehouse [ADW] and Autonomous Transaction Processing [ATP]) on Oracle Cloud Interface. In this lab, you provision a new ADW instance.
 
 Estimated Lab Time: 5 minutes
 
@@ -31,7 +31,7 @@ A compartment is a collection of cloud assets, like compute instances, load bala
 
 ## **Step 2:** Choose ADW from the Services Menu
 
-1. Login to the Oracle Cloud.
+1. Log in to the Oracle Cloud Interface.
 2. Once you are logged in, you are taken to the cloud services dashboard where you can see all the services available to you. Click the navigation menu in the upper left to show top level navigation choices.
 
      **Note:** You can also directly access your Autonomous Data Warehouse service in the __Quick Actions__ section of the dashboard.
@@ -42,7 +42,7 @@ A compartment is a collection of cloud assets, like compute instances, load bala
 
     ![Click Autonomous Data Warehouse.](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-adw.png " ")
 
-4. Make sure your workload type is __Data Warehouse__ or __All__ to see your Autonomous Data Warehouse instances. Use the __List Scope__ drop-down menu to select a compartment.
+4. Make sure your workload type is __Data Warehouse__ or __All__ to see your Autonomous Data Warehouse instances. Use the __List Scope__ drop-down menu to select the compartment you just created.
 
     ![Check the workload type on the left.](images/list-scope-freetier.png " ")
 

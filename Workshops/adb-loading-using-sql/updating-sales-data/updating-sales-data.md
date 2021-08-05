@@ -217,9 +217,9 @@ The files for this data load process are stored in a series of regional buckets.
     FROM movie_sales_fact;</copy>
     ```
 
-4. This shows that our revenue has gone down slightly since we are now reporting a figure of $160,364,274.19 (vs. the previous value of $160,365,556.83):
+4. This shows that our revenue has gone down slightly since we are now reporting a figure of $160,364,269.885 (vs. the previous value of $160,365,556.83):
 
-    ![Results of query to validate financial adjustments file processed successfuly](images/3054194694.png)
+    ![Results of query to validate financial adjustments file processed successfuly](images/lab-4-step-4-substep-4.png)
 
 <br><br>
 
@@ -667,9 +667,9 @@ We have processed the financial adjustments for Argentina. Now we are going to p
     SUM(actual_price)
     FROM movie_sales_fact;</copy>
     ```
-    This now shows that our revenue has changed slightly since we are now reporting a figure of $160,306,035.62 vs. the original value of $160,365,556.83.
+    This now shows that our revenue has changed slightly since we are now reporting a figure of $160,305,830.975 vs. the original value of $160,365,556.83.
 
-    ![Query result showing revenue has gone done slightly](images/3054194692.png)
+    ![Query result showing revenue has gone done slightly](images/lab-4-step-6-substep-4.png)
 
 6. Now we can run the same space calculation query in our SQL worksheet:
 
@@ -712,4 +712,4 @@ Please *proceed to the next lab*.
 
 * **Author** - Keith Laker, ADB Product Management
 * **Adapted for Cloud by** - Richard Green, Principal Developer, Database User Assistance
-* **Last Updated By/Date** - Brianna Ambler, July 2021
+* **Last Updated By/Date** - Keith Laker, August 5 2021
