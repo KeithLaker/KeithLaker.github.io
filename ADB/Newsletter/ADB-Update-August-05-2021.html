@@ -81,46 +81,14 @@
 }
 
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width:3096px) {
-
-#add_shadow {
-box-shadow: 14px 14px 14px #bfb4a5;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 90%;
-    max-width: 90%;
-  }
-
-#add_shadow {
-box-shadow: 14px 14px 14px #bfb4a5;
-}
-
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .column {
-    -ms-flex: 90%;
-    flex: 100%;
-    max-width: 90%;
-  }
-
-#add_shadow {
-box-shadow: 14px 14px 14px #bfb4a5;
-}
-
-}
-
-
-@media print {
-
-#add_shadow {
-box-shadow: 0px 0px 0px;
+.basic_text {
+    color: #1C1C1C !important; 
+	font-family: Helvetica, Arial, sans-serif; 
+	font-size: 14px; 
+	line-height:24px; 
+	letter-spacing:.5px; 
+	font-weight: 400;
+	text-align:left;
 }
 
 }
@@ -290,6 +258,48 @@ a:active {
   color: white;
   padding-left: 50px;
   padding-right: 200px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width:3096px) {
+
+#add_shadow {
+box-shadow: 14px 14px 14px #bfb4a5;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 90%;
+    max-width: 90%;
+  }
+
+#add_shadow {
+box-shadow: 14px 14px 14px #bfb4a5;
+}
+
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .column {
+    -ms-flex: 90%;
+    flex: 100%;
+    max-width: 90%;
+  }
+
+#add_shadow {
+box-shadow: 14px 14px 14px #bfb4a5;
+}
+
+}
+
+
+@media print {
+
+#add_shadow {
+box-shadow: 0px 0px 0px;
 }
 
 
@@ -519,7 +529,6 @@ a:active {
 																																</table>
 																															</td>
 																														</tr>
-
 																													</tbody>
 																												</table>
 																												<span class="tmpTabe"></span>
@@ -533,6 +542,21 @@ a:active {
 																											<td class="tmpTabs" data-tabname="Column 2" valign="top" align="left">
 																												<table cellspacing="0" cellpadding="0" align="left" border="0" width="100%">
 																													<tbody>
+																														<tr class="tmpMultistart">
+																															<td style="padding-bottom:10px;" valign="top" align="left">
+																																<table cellspacing="0" cellpadding="0" align="left" border="0" width="auto">
+																																	<tbody>
+																																		<tr class="text_CTA">
+																																			<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+																																			</td>
+																																			<td style="padding-right:16px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left"><a class="tmpLink" target="_self" style="text-decoration:none; font-family:Arial, Helvetica, sans-serif; color:grey;" href="#daload"><span class="tmpTextBtn"><b>&nbsp;&nbsp; Load Data with Oracle Database Actions</b></span></a>
+																																			</td>
+																																		</tr>
+																																	</tbody>
+																																</table>
+																															</td>
+																														</tr>
+
 																														<tr class="tmpMultistart">
 																															<td style="padding-bottom:10px;" valign="top" align="left">
 																																<table cellspacing="0" cellpadding="0" align="left" border="0" width="auto">
@@ -900,7 +924,7 @@ a:active {
 																															<td style="padding-bottom:20px;font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000000; font-weight:bold;" class="fs14 cb-center" valign="top" align="center">
 																																<div class="row">
 																																	<div class="column">
-																																		<img  moz-do-not-send="true" width="200" style="max-width:200px !important; width:200px !important;" src="https://keithlaker.github.io/Images/Newsletter/sql-gear-512.png" alt="Oracle Cloud SQL icon">
+																																		<img  moz-do-not-send="true" width="200" style="max-width:200px !important; width:200px !important;" src="https://keithlaker.github.io/Images/Newsletter/sql-gear-512.png" alt="SQL icon on top of a cog">
 																																	</div>
 																																</div>
 																															</td>
@@ -1051,7 +1075,7 @@ a:active {
 																						<tr class="tmpAddRemoveText">
 																							<td style="font-family:Arial, Helvetica, sans-serif; font-size:24px; background-color: #e28f3b; color:#4e5052; padding-bottom:20px;" class="fs22 pad-bsp15" valign="top" align="center">
 																								<span class="tmpTitle" data-font="mainTitle" data-personalization="false" disable-edtr-icon="Link,UnLink" style="color:white; font-weight:bold;">
-																									WALLET FILE
+																									WALLET README
 																								</span>
 																								<br>
 																								<span style="font-family:Arial, Helvetica, sans-serif; font-size:8pt; font-weight:bold; color:black !important;">
@@ -1088,7 +1112,7 @@ a:active {
 																														<tr class="tmpAddRemoveText">
 																															<td style="padding-bottom:20px;font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000000; font-weight:bold;" class="fs14 cb-center" valign="top" align="left">
 																																<span class="tmpTitle" etitle="Subtitle" data-personalization="false" disable-edtr-icon="Link,UnLink">
-																																	Links To Developer Tools Now In Wallet File
+																																	Links To Developer Tools Now In Wallet README File
 																																</span>
 																															</td>
 																														</tr>
@@ -1125,9 +1149,8 @@ a:active {
 																																			<td style="padding:12px 22px 12px 22px; border: 2px solid orange; background-color:white;border-radius: 0px 0px  15px 15px;" class="bdr-cta">
 																																				<span style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000;"  class="tmpTextedtr">
 																																					<p class="basic_text">
-																																						<strong>DOC</strong>: Overview of Wallet README file, <a href="https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/connect-download-wallet.html#GUID-2E7E8C07-5D5D-4BE7-ACE6-B47B58212DDD" target="_blank">click here</a>
+																																						<strong>DOC</strong>: Overview of Wallet README file, <a href="https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/connect-download-wallet.html#GUID-2E7E8C07-5D5D-4BE7-ACE6-B47B58212DDD" target="_blank">click here</a>.
 																																					</p>
-																																					
 																																					<br>
 																																					<br>
 																																				</span>
@@ -1137,7 +1160,6 @@ a:active {
 																																</table>
 																															</td>
 																														</tr>
-
 																													</tbody>
 																												</table>
 																											</td>
@@ -1286,7 +1308,7 @@ a:active {
 																																			<td style="padding:12px 22px 12px 22px; border: 2px solid orange; background-color:white;border-radius: 0px 0px  15px 15px;" class="bdr-cta">
 																																				<span style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000;"  class="tmpTextedtr">
 																																					<p class="basic_text">
-																																						<strong>DOC</strong>: View Patch Details, <a href="https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/maintenance-windows-patching.html#GUID-AFF19A13-6B82-4FCE-9272-A0F3F5B32CB4" target="_blank">click here</a>
+																																						<strong>DOC</strong>: View Patch Details, <a href="https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/maintenance-windows-patching.html#GUID-AFF19A13-6B82-4FCE-9272-A0F3F5B32CB4" target="_blank">click here</a>.
 																																					</p>
 																																					<br>
 																																					<br>
@@ -1297,7 +1319,6 @@ a:active {
 																																</table>
 																															</td>
 																														</tr>
-
 																														<tr class="tmpdynamiccta" multiplebtn="true" prm-sec-cta="true" ctatoggle="true">
 																															<td style="padding-top:20px;" valign="top" align="left">
 																																<table buttoncta="true" secbtncta="eml_sec1_btn_cta,eml_prm1_btn_cta" class="cb-btn-ctr" cellspacing="0" cellpadding="0" border="0" width="100%">
@@ -1436,20 +1457,14 @@ a:active {
 																																	<p class="basic_text">
 																																		When you provision or clone an Autonomous Database instance you can select a patch level to apply upcoming patches. There are two patch level options: <em><strong>Regular</strong></em> and <em><strong>Early</strong></em>. The Early patch level allows customers to test upcoming patches one week before they are applied as part of the regular patching program.
 																																	</p>
-																																	<br>
-																																	<br>
 																																	<div class="row">
 																																		<div class="column">
 																																			<img  moz-do-not-send="true" width="550" style="max-width:550px !important; width:550px !important; border: 2px solid grey; border-radius: 15px;" src="https://keithlaker.github.io/Images/Newsletter/access-to-patch-levels.png" alt="Screenshot of additional configuration menu option to set patch level for a new instance or clone.">
 																																		</div>
 																																	</div>
-																																	<br>
-																																	<br>
 																																	<p class="basic_text">
 																																		The console shows the patch level setting with the section headed <em><strong>Maintenance</strong></em>.
 																																	</p>
-																																	<br>
-																																	<br>
 																																	<div class="row">
 																																		<div class="column">
 																																			<img  moz-do-not-send="true" width="550" style="max-width:550px !important; width:550px !important; border: 2px solid grey; border-radius: 15px;" src="https://keithlaker.github.io/Images/Newsletter/adw-console-patch-level-info.png" alt="Screenshot of  ADW console page showing patch level - regular or early">
@@ -1483,7 +1498,7 @@ a:active {
 																																			<td style="padding:12px 22px 12px 22px; border: 2px solid orange; background-color:white;border-radius: 0px 0px  15px 15px;" class="bdr-cta">
 																																				<span style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000;"  class="tmpTextedtr">
 																																					<p class="basic_text">
-																																						<strong>DOC</strong>: Set the Patch Level, <a href="https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/maintenance-windows-patching.html#GUID-F8DFCA41-0FC4-4AD0-AFFC-B04ADCC39573" target="_blank">click here</a>
+																																						<strong>DOC</strong>: Set the Patch Level, <a href="https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/maintenance-windows-patching.html#GUID-F8DFCA41-0FC4-4AD0-AFFC-B04ADCC39573" target="_blank">click here</a>.
 																																					</p>
 																																					<br>
 																																					<br>
@@ -1494,7 +1509,6 @@ a:active {
 																																</table>
 																															</td>
 																														</tr>
-
 																														<tr class="tmpdynamiccta" multiplebtn="true" prm-sec-cta="true" ctatoggle="true">
 																															<td style="padding-top:20px;" valign="top" align="left">
 																																<table buttoncta="true" secbtncta="eml_sec1_btn_cta,eml_prm1_btn_cta" class="cb-btn-ctr" cellspacing="0" cellpadding="0" border="0" width="100%">
@@ -1521,6 +1535,190 @@ a:active {
 																																					</p>
 																																					<p class="basic_text">
 																																						Position with fleet and cloud admins who want early access to upcoming patches for testing purposes.
+																																					</p>
+																																					<br>
+																																					<br>
+																																				</span>
+																																			</td>
+																																		</tr>
+																																	</tbody>
+																																</table>
+																															</td>
+																														</tr>
+																													</tbody>
+																												</table>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>
+																												<br>
+																												<p class="basic_text" style="font-family:Arial, Helvetica, sans serif; font-size:13px; font-weight:bold; color:black; text-align:center; padding-right:20px; font-family:Arial, Helvetica, sans serif; font-size:13px; font-weight:bold; color:#939699  !important; text-align:right; padding-top:10px; padding-bottom:10px; height: 47px;">
+																													<a href="#btt" style="font-family:Arial, Helvetica, sans serif; font-size:13px; font-weight:bold; color:black; text-align:center; padding-right:20px; font-family:Arial, Helvetica, sans serif; font-size:13px; font-weight:bold; color:black !important; text-align:right; padding-top:10px; padding-bottom:10px; height: 47px;">&#8593; BACK TO TOP</a>
+																												</p>
+																											</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																							</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+<!-- Feature ends here -->
+
+<!-- Feature starts here -->
+						<tr>
+							<td align="left" valign="top" style="color:white; padding-left:10px; padding-right:10px;border-top: 0px; border-bottom: 0px; border-left: 0px; border-right:0px; border-style: solid; border-color: silver;">
+								<a name="daload"></a>
+								<table class="devicewidth" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" align="center" style="color:white;border-top: 0px; border-bottom: 0px; border-left: 0px; border-right:0px; border-style: solid; border-color: silver;">
+									<tbody>
+										<tr>
+											<td valign="top" style="padding-top: 20px;">
+												<table class="edtrBtnParent" cellspacing="0" cellpadding="0" align="center" border="0" width="100%" data-unique-id="UBE102" data-module-id="eml_ube102">
+													<tbody>
+														<tr>
+															<td style="padding-left:20px; padding-right:20px; padding-bottom:30px;" valign="top" align="left">
+																<table cellspacing="0" cellpadding="0" border="0" width="100%" style="color:white; border-top: 6px; border-bottom: 6px; border-left: 6px; border-right:6px; border-style: solid; border-color: #e28f3b; border-radius: 15px;" id="add_shadow">
+																	<tbody>
+																		<tr>
+																			<td style="padding-top:0px;" valign="top" align="left">
+																				<table class="devicewidthinner" cellspacing="0" cellpadding="0" border="0" width="100%">
+																					<tbody>
+																						<tr class="tmpAddRemoveText">
+																							<td style="font-family:Arial, Helvetica, sans-serif; font-size:24px; background-color: #e28f3b; color:#4e5052; padding-bottom:20px;" class="fs22 pad-bsp15" valign="top" align="center">
+																								<span class="tmpTitle" data-font="mainTitle" data-personalization="false" disable-edtr-icon="Link,UnLink" style="color:white; font-weight:bold;">
+																									<br>
+																									DATABASE ACTIONS
+																								</span>
+																								<br>
+																								<span style="font-family:Arial, Helvetica, sans-serif; font-size:8pt; font-weight:bold; color:black !important;">
+																									(Shared Infrastructure Only)
+																								</span>
+																								<br>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td valign="top" align="left" width="100%">
+																								<table class="devicewidthinner" cellspacing="0" cellpadding="0" align="left" border="0" width="auto">
+																									<tbody>
+																										<tr>
+																											<td style="padding-right:20px;" class="cb-center height0 pad-bsp20" valign="middle" align="center" height="55" width="58">
+																											</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																								<table class="devicewidthinner" cellspacing="0" cellpadding="0" align="left" border="0" width="84%">
+																									<tbody>
+																										<tr>
+																											<td valign="top" align="left">
+																												<table class="devicewidthinner" cellspacing="0" cellpadding="0" border="0" width="100%">
+																													<tbody>
+																														<tr class="tmpAddRemoveText">
+																															<td style="padding-bottom:20px;font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000000; font-weight:bold;" class="fs14 cb-center" valign="top" align="center">
+																																<div class="row">
+																																	<div class="column">
+																																		<img  moz-do-not-send="true" width="200" style="max-width:200px !important; width:200px !important;" src="https://keithlaker.github.io/Images/database-developer-tools-512.png" alt="Icon for ADB Database Actions Data Loading">
+																																	</div>
+																																</div>
+																															</td>
+																														</tr>
+																														<tr class="tmpAddRemoveText">
+																															<td style="padding-bottom:20px;font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000000; font-weight:bold;" class="fs14 cb-center" valign="top" align="left">
+																																<span class="tmpTitle" etitle="Subtitle" data-personalization="false" disable-edtr-icon="Link,UnLink">
+																																	Enhancements To Data Loading With Database Actions
+																																</span>
+																															</td>
+																														</tr>
+																														<tr>
+																															<td style="font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000000;" class="fs14 cb-center" valign="top" align="left">
+																																<span style="display:inline-block;" class="tmpTextedtr">
+																																	<p class="basic_text">
+																																		Oracle Database Actions provides a web-based interface with development tools, data tools, administration, and monitoring features and lets you load or access data from local files, from cloud storage, or from remote databases.
+																																	</p>
+																																	<p class="basic_text">
+																																		A number of enhancements have recently been released including support for folders within Object Storage buckets.
+																																	</p>
+																																	<div class="row">
+																																		<div class="column">
+																																			<img  moz-do-not-send="true" width="550" style="max-width:550px !important; width:550px !important; border: 2px solid grey; border-radius: 15px;" src="https://keithlaker.github.io/Images/Newsletter/ADW-Data-Loading-Tools.gif" alt="Animated gif of presentation on data loading with Database Actions">
+																																		</div>
+																																	</div>
+																																	<br>
+																																	<br>
+																																</span>
+																															</td>
+																														</tr>
+																														<tr class="tmpdynamiccta" multiplebtn="true" prm-sec-cta="true" ctatoggle="true">
+																															<td style="padding-top:20px;" valign="top" align="left">
+																																<table buttoncta="true" secbtncta="eml_sec1_btn_cta,eml_prm1_btn_cta" class="cb-btn-ctr" cellspacing="0" cellpadding="0" border="0" width="100%">
+																																	<tbody>
+																																		<tr>
+																																			<td style="padding:12px 22px 12px 22px; border: 2px solid orange; background-color:orange; border-radius: 15px 15px 0px 0px;" class="bdr-cta">
+																																				<table cellspacing="0" cellpadding="0" align="center" border="0" style="width:100% !important;">
+																																					<tbody>
+																																						<tr>
+																																							<td style="width:100% !important; padding-right:16px; font-family:Arial, Helvetica, sans-serif; font-size:18px; font-weight:bold;" class="box-cta-txt" valign="middle" align="center">
+																																								<span class="text_learn">
+																																									LEARN
+																																								</span>
+																																							</td>
+																																						</tr>
+																																					</tbody>
+																																				</table>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td style="padding:12px 22px 12px 22px; border: 2px solid orange; background-color:white;border-radius: 0px 0px  15px 15px;" class="bdr-cta">
+																																				<span style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000;"  class="tmpTextedtr">
+																																					<p class="basic_text">
+																																						<strong>PPT</strong>: Overview of data loading with Database Actions, <a href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDDED64E8395CB52BCB26CE256F38BA79E7C48B9A7A0/fileview/DE4C81BE5635E2EADAF9C51A074955A6F384F1026103/_ADW_Data_Loading_Tools.pptx" target="_blank">click here</a>.
+																																					</p>
+																																					<br>
+																																					<br>
+																																				</span>
+																																			</td>
+																																		</tr>
+																																	</tbody>
+																																</table>
+																															</td>
+																														</tr>
+																														<tr class="tmpdynamiccta" multiplebtn="true" prm-sec-cta="true" ctatoggle="true">
+																															<td style="padding-top:20px;" valign="top" align="left">
+																																<table buttoncta="true" secbtncta="eml_sec1_btn_cta,eml_prm1_btn_cta" class="cb-btn-ctr" cellspacing="0" cellpadding="0" border="0" width="100%">
+																																	<tbody>
+																																		<tr>
+																																			<td style="padding:12px 22px 12px 22px; border: 2px solid darkred; background-color:darkred;border-radius: 15px 15px 0px 0px;" class="bdr-cta">
+																																				<table cellspacing="0" cellpadding="0" align="center" border="0" style="width:100% !important;">
+																																					<tbody>
+																																						<tr>
+																																							<td style="width:100% !important; padding-right:16px; font-family:Arial, Helvetica, sans-serif; font-size:18px; font-weight:bold;" class="box-cta-txt" valign="middle" align="center">
+																																								<span class="text_position">
+																																									POSITION
+																																								</span>
+																																							</td>
+																																						</tr>
+																																					</tbody>
+																																				</table>
+																																			</td>
+																																		</tr>
+																																		<tr>
+																																			<td style="padding:12px 22px 12px 22px; border: 2px solid darkred; background-color:white;border-radius: 0px 0px 15px 15px;" class="bdr-cta">
+																																				<span style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000;">
+																																					<p class="basic_text">
+																																						Position Database Actions as a series of self-service features for LOB users, citizen data scientists and citizen developers. 
 																																					</p>
 																																					<br>
 																																					<br>
@@ -1616,7 +1814,7 @@ a:active {
 																															<td style="padding-bottom:20px;font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000000; font-weight:bold;" class="fs14 cb-center" valign="top" align="center">
 																																<div class="row">
 																																	<div class="column">
-																																		<img  moz-do-not-send="true" width="200" style="max-width:200px !important; width:200px !important;" src="https://apexapps.oracle.com/pls/apex/dbpm/r/133/files/static/v177/ll_rw_logo.png" alt="Icon for creating a standby dataabase">
+																																		<img  moz-do-not-send="true" width="200" style="max-width:200px !important; width:200px !important;" src="https://apexapps.oracle.com/pls/apex/dbpm/r/133/files/static/v177/ll_rw_logo.png" alt="Icon for Oracle LiveLabs">
 																																	</div>
 																																</div>
 																															</td>
@@ -1863,10 +2061,14 @@ a:active {
 																													Latest announcements and recordings from our Global Leaders program:
 																												</p>
 																												<ul  class="basic_text">
-																													<li class="basic_text" style="font-color:black !Important; color:black !Important;"><a href="#awards" style="font-color:darkblue !Important; color:darkblue !Important;">REGISTER - Global Leaders Awards Event 2021</a></li>
-																													<li class="basic_text" style="font-color:black !Important; color:black !Important;"><a href="#mestec" style="font-color:darkblue !Important; color:darkblue !Important;">REGISTER - MESTEC Lifts Factory Performance with ADB + OCI</a></li>
-																													<li class="basic_text" style="font-color:black !Important; color:black !Important;"><a href="#orange" style="font-color:darkblue !Important; color:darkblue !Important;">REPLAY - Orange Moves to ADW + OAC</a></li>
-																													<li class="basic_text" style="font-color:black !Important; color:black !Important;"><a href="#ukire" style="font-color:darkblue !Important; color:darkblue !Important;">REPLAY - UK & Ireland Customer Panel Event</a></li>
+																													<li class="basic_text" style="font-color:black !Important; color:black !Important;"><a href="#awards" style="font-color:darkblue !Important; color:darkblue !Important;">REGISTER - Global Leaders Awards Event 2021</a>
+																													</li>
+																													<li class="basic_text" style="font-color:black !Important; color:black !Important;"><a href="#mestec" style="font-color:darkblue !Important; color:darkblue !Important;">REGISTER - MESTEC Lifts Factory Performance with ADB + OCI</a>
+																													</li>
+																													<li class="basic_text" style="font-color:black !Important; color:black !Important;"><a href="#orange" style="font-color:darkblue !Important; color:darkblue !Important;">REPLAY - Orange Moves to ADW + OAC</a>
+																													</li>
+																													<li class="basic_text" style="font-color:black !Important; color:black !Important;"><a href="#ukire" style="font-color:darkblue !Important; color:darkblue !Important;">REPLAY - UK & Ireland Customer Panel Event</a>
+																													</li>
 																												</ul>
 																												<br>
 																												<br>
@@ -2082,7 +2284,7 @@ a:active {
 																															<td style="font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000000;" class="fs14 cb-center" valign="top" align="left">
 																																<span style="display:inline-block;" class="tmpTextedtr">
 																																	<p class="basic_text">
-																																		The replay for the UK and Ireland virtual event is now available, <a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/global-leaders-uk-ireland-july-2021.html" target="_blank">click here</a>. Our key customers talked about their real-life experiences on projects with Oracle Cloud Infrastructure, Autonomous Database, and Oracle Analytics Cloud during this event..
+																																		The replay for the UK and Ireland virtual event is now available, <a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/global-leaders-uk-ireland-july-2021.html" target="_blank">click here</a>. Our key customers talked about their real-life experiences on projects with Oracle Cloud Infrastructure, Autonomous Database, and Oracle Analytics Cloud during this event.
 																																	</p>
 																																	<br>
 																																	<br>
