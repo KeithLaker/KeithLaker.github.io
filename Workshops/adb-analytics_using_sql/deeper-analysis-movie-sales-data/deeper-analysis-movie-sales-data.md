@@ -65,7 +65,7 @@ Now we know which day is the first day of the week we can move on. In spreadshee
     (SELECT
     quarter_name,
     TO_CHAR(day, 'D') AS day_no,
-    SUM(actual_price * quantity_sold) AS revenue
+    ROUND(SUM(actual_price * quantity_sold),2) AS revenue
     FROM movie_sales_fact
     WHERE YEAR = '2020'
     GROUP BY quarter_name, to_char(day, 'D'), to_char(day, 'Day')

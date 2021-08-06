@@ -302,8 +302,7 @@ In this query, we are using the **JSON_TABLE** function again, to convert our JS
 
 2. This should return the following results:
 
-    ![Query results showing directors for each movie](images/sql-analytics-lab5-step4-substep2.png)
-
+    ![Query results showing directors for each movie](images/lab2-step-4-substep-2.png)
 ## STEP 5 - Combining JSON Data And Relational Data
 
 1. Assuming we want to know how much revenue each movie made in each of the years when it was available, we can use a much simpler query, somthing like this:
@@ -326,7 +325,7 @@ In this query, we are using the **JSON_TABLE** function again, to convert our JS
     jt.job,
     jt.crew,
     f.year,
-    sum(f.actual_price) as revenue
+    ROUND(SUM(f.actual_price),0) as revenue
     FROM movie_sales_fact f, json_movie_view jt
     WHERE jt.job = 'director'
     AND f.year = 2020
@@ -337,7 +336,7 @@ In this query, we are using the **JSON_TABLE** function again, to convert our JS
 
 3. the output will be shown in the Query Result window:
 
-    ![Query result of combining queries](images/sql-analytics-lab5-step5-substep3.png)
+    ![Query result of combining queries](images/lab-2-step-5-substep-3.png)
 
 ## STEP 6 - Ranking Directors Based On Quarterly Movie Revenue
 
@@ -351,7 +350,7 @@ In this query, we are using the **JSON_TABLE** function again, to convert our JS
     jt.title,
     jt.job,
     jt.crew,
-    sum(f.actual_price) as revenue,
+    ROUND(SUM(f.actual_price),0) as revenue,
     RANK() OVER (PARTITION BY f.quarter_name order by sum(f.actual_price) desc) as rank_rev
     FROM movie_sales_fact f, json_movie_view jt
     WHERE jt.job = 'director'
@@ -363,7 +362,7 @@ In this query, we are using the **JSON_TABLE** function again, to convert our JS
 
 2. The results should show that our top grossing directors in Q1 were Jennifer Lee and Chris Buck with the film Frozen II:
 
-    ![Query result showing top grossing directors](images/sql-analytics-lab5-step6-substep2.png)
+    ![Query result showing top grossing directors](images/lab-2-step-6-substep-2.png)
 
 ## STEP 7 - Finding The Top 5 Directors Based On Revenue
 
@@ -378,7 +377,7 @@ In this query, we are using the **JSON_TABLE** function again, to convert our JS
     jt.title,
     jt.job,
     jt.crew,
-    sum(f.actual_price) as revenue,
+    ROUND(SUM(f.actual_price),0) as revenue,
     RANK() OVER (PARTITION BY f.quarter_name order by sum(f.actual_price) desc) as rank_rev
     FROM movie_sales_fact f, json_movie_view jt
     WHERE jt.job = 'director'
@@ -394,7 +393,7 @@ In this query, we are using the **JSON_TABLE** function again, to convert our JS
 
 2. This should return the following results:
 
-    ![Query result returning top 5 directors in each year](images/sql-analytics-lab5-step7-substep2.png)
+    ![Query result returning top 5 directors in each year](images/lab-2-step-7-substep-2.png)
 
 ## Recap
 

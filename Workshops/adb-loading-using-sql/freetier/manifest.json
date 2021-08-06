@@ -28,10 +28,21 @@
         "filename": "../enabling-data-integrity/enabling-data-integrity.md"
       },
       {
-        "title": "Lab 4: Updating the Sales Data",
-        "description": "Finding Our Most Important Customers",
-        "filename": "../updating-sales-data/updating-sales-data.md"
+        "title": "Lab 4: Updating the Sales Data - Part 1",
+        "description": "Updating Sales Data - Part 1",
+        "filename": "../updating-sales-data-part-1/updating-sales-data-part-1.md"
       },      
+      {
+        "title": "Lab 5: Traveling Back In Time",
+        "description": "Finding Our Most Important Customers",
+        "filename": "../traveling-back-in-time/traveling-back-in-time.md"
+      },      
+      {
+        "title": "Lab 6: Updating the Sales Data - Part 2",
+        "description": "Updating Sales Data - Part 2",
+        "filename": "../updating-sales-data-part-2/updating-sales-data-part-2.md"
+      },      
+
       {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",

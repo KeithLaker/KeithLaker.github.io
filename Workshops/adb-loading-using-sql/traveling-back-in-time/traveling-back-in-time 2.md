@@ -3,12 +3,16 @@
 
 ## Introduction
 
-Autonomous Database has a built-in feature called  ***Flashback***. 
-Oracle Autonomous Data Warehouse includes a smart built-in featured called **Flashback**. This can help you go back in time when you query your data. It can help you to perform faster, easier, and convenient recovery from situations where you need to quickly backout recently loaded data or simply query a dataset to understand how it has changed over time .
+Autonomous Database has a built-in feature called  ***Flashback***. Flashback Query, the first Flashback feature added to Oracle Database, was introduced in Oracle 9i (2000). It provides a simple, powerful and completely non-disruptive way to query a table to view data at a previous point in time.
 
-Flashback is not a new feature in Autonomous Data Warehouse. It was added to the Oracle Database in Oracle 9i (2001), and it is used extensively by many Oracle Database customers. 
+This allows you to view past states of database objects or to return your ADB objects to a previous state With flashback features, you can:
+<ul>
+<li>Perform queries that return past data</li>
+<li>Recover tables or rows to a previous point in time</li>
+</ul>
 
-In this lab will propvide a brief introduction to flashback queries by showing how to view past states of our movie_sales_fact table before and after processing adjustments. 
+## What is Flashback?
+
 
 Estimated Lab Time: 15 minutes
 
@@ -23,13 +27,13 @@ In this lab, you will learn how to:
 
 This lab assumes you have:
 
-- loaded the movie sales data and applied the first country-based adjustment file as described in Updating the Sales Data - Part 1.
+- loaded the movie sales data and applied the country-based adjustments using the steps in previous labs which are part of this workshop.
 
 <br><br>
 
 ## STEP 1 - Setting the Point-In-Time For Historical Queries
 
-1. To use flashback queries we need to know the historical point-in-time that we want use. In this case it's the timestamp from before the adjustments for Argentina were processed (the time you noted in step 4 of the lab Updating the Sales Data - Part 1):
+1. To use flashback queries we need to know the historical point-in-time that we want use. In this case it's the timestamp from before the adjustments for Argentina were processed:
 
     ```
     <copy>define starting_pit_adjustments = 'enter_your_timestamp_in_here_the_format_YYYY-MM-DD_HH:MI:SS';</copy>
@@ -40,7 +44,6 @@ This lab assumes you have:
     ```
     <copy>define starting_pit_adjustments = '2021-08-05 10:07:00';</copy>
     ```
-
 
 
 ## STEP 2 - A Simple Query To Show Total Revenue
@@ -122,66 +125,12 @@ This lab assumes you have:
     This means that our table is not consuming any space within our database.
 <br><br>
 
-## STEP 6 - Recovering A Dropped Table
-
-It's easily done - someone accidently drops the table which contains all your data. Fortunately, Autonomous Data Warehouse has the ability to quickly recover the table and all its data.
-
-1. Run a simple SQL query to find the number of rows in the table movie_sales_fact:
-
-    ```
-    <copy>SELECT COUNT(*) FROM movie_sales_fact</copy>
-    ```
-
-2. This will return the a count of the number of rows in the table (97,890,562)
-
-    ![Query results show zero rows](images/lab-tt-step-6-substep-2.png)
-
-
-3. Drop the movie_sales_fact table  
-
-    ```
-    <copy>DROP TABLE movie_sales_fact</copy>
-    ```
-
-4. Now try to run a simple SQL query:
-
-    ```
-    <copy>SELECT COUNT(*) FROM movie_sales_fact</copy>
-    ```
-
-5. This will return the standard error message indicating the table or view does not exist.
-
-    ![Query results show zero rows](images/lab-tt-step-6-substep-5.png)
-
-6. To recover the table use the following command:
-    ```
-    <copy>flashback table movie_sales_fact to before drop;</copy>
-    ```
-7. Once the table has been recovered you will see the message **Flasback suceeded**
-
-    ![Query results show zero rows](images/lab-tt-step-6-substep-7.png)
-
-8. Now try to run a simple SQL query:
-
-    ```
-    <copy>SELECT COUNT(*) FROM movie_sales_fact</copy>
-    ```
-
-9. This will return the a count of the number of rows in the table (97,890,562)
-
-    ![Query results show zero rows](images/lab-tt-step-6-substep-9.png)
-
-
-
-<br><br>
-
-
 
 ## Summary
 
-The flashback capabilities of Autonomous Data Warehouse are very powerful allowing you to view data at different points in time and fully recover tables that have been recently deleted.
+Flashback first appeared in the Oracle Database back in 2001. 
 
-Obviously, Autonomous Data Warehouse automatically manages everything needed to suport flashback so there are no settings to monitor or tweak. You simply work with your your data and the Autonomous Data Warehouse will efficiently manage how to view historical versions of your data.
+Obviously, Autonomous Database automatically manages flashback so there are no settings to monitor or tweak. You simply work with your your data and the Autonomous Database will efficiently manage how to view historical versions of your data.
 
 
 Please *proceed to the next lab*.
