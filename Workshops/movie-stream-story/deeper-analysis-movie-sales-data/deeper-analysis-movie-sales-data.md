@@ -31,7 +31,7 @@ Estimated Lab Time: 20 minutes
 
  **NOTE:** Different regions organize their day numbers in different ways. Oracle Database provides session settings that allow you to control these types of regional differences. In Germany, for example, the week starts on Monday, so that day is assigned as day number one. 
 
-1. Set our territory as being “America” by using the following command:
+1. Set our territory as being “United Kingdom” by using the following command:
 
     ```
     <copy>ALTER SESSION SET NLS_TERRITORY = "United Kingom";</copy>
@@ -82,7 +82,7 @@ Now we know which day is the first day of the week we can move on. In spreadshee
     (SELECT
     quarter_name,
     day_dow,
-    SUM(actual_price) AS revenue
+    ROUND(SUM(actual_price),0) AS revenue
     FROM vw_movie_sales_fact
     WHERE year_name = '2020'
     GROUP BY quarter_name, day_name, day_dow

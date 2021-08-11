@@ -41,11 +41,11 @@ One of the key dimensions in the MovieStream data warehouse is **TIME**. Current
     <copy>
     SELECT
     *  
-    FROM times;</copy>
+    FROM time;</copy>
     ```
 
 
-**NOTE** The TIMES dimension table has a typical calendar hierarchy where days aggregate to weeks, months, quarters and years.
+**NOTE** The TIME dimension table has a typical calendar hierarchy where days aggregate to weeks, months, quarters and years.
 
 Querying a data warehouse can involve working with a lot of repetitive SQL. This is where 'views' can be very helpful and very powerful. The code below is used to simplify the queries used throughout this workshop. The main focus here is to introduce the concept of joining tables together to returned a combined resultset.
 
@@ -85,7 +85,7 @@ The code below uses a technique called **INNER JOIN** to join the dimension tabl
     m.genre_id,
     m.movie_id
     FROM custsales m 
-    INNER JOIN times t ON m.day_id = t.day_id 
+    INNER JOIN time t ON m.day_id = t.day_id 
     INNER JOIN customer c ON m.cust_id = c.cust_id
     INNER JOIN genre g ON m.genre_id = g.genre_id;
     </copy>
