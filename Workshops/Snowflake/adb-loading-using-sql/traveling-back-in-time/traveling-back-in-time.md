@@ -61,7 +61,7 @@ This lab assumes you have:
 
 ## STEP 3 - A Simple Flashback Query To Show Total Revenue
 
-1. To look at total revenue before the adjustments for Argentina were applied we simply extend the previous query with the keywords **AS OF**:
+1. To look at total revenue before the adjustments for Argentina were applied we simply extend the previous query with the keywords **AS OF** (*note - use the data-time information from Task 4, step 1 in the previous tab)*:
 
     ```
     <copy>SELECT

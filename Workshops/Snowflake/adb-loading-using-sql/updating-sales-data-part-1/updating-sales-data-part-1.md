@@ -188,7 +188,14 @@ The files for this data load process are stored in a series of regional buckets.
 
 ## TASK 4: Updating The Movie Sales Data Using MERGE
 
-1. Copy and paste the command below in SQL worksheet and run it:
+1. Make a note of the current date and time using this query * note - you will need this information in the next lab*: 
+
+    ```
+    <copy>SELECT TO_CHAR(CURRENT_TIMESTAMP, 'yyyy-mm-dd hh24:mi:ss') AS tod FROM dual;</copy>
+    ```
+
+2. Copy and paste the command below in SQL worksheet and run it:
+
     ```
     <copy>MERGE INTO movie_sales_fact a
 		USING (
@@ -205,11 +212,11 @@ The files for this data load process are stored in a series of regional buckets.
     ```
 
 
-2.  The update process should take about 2-3 seconds and then return the usual successfully completed message:
+3.  The update process should take about 2-3 seconds and then return the usual successfully completed message:
 
     ![Update process completes successfully](images/sql-data-loading-lab4-step4-substep2.png)
 
-3. Let's run the same simple query again to validate that our financial adjustments file has been successfully processed. Copy and paste the following query into your SQL worksheet:
+4. Let's run the same simple query again to validate that our financial adjustments file has been successfully processed. Copy and paste the following query into your SQL worksheet:
 
     ```
     <copy>SELECT
@@ -217,7 +224,7 @@ The files for this data load process are stored in a series of regional buckets.
     FROM movie_sales_fact;</copy>
     ```
 
-4. This shows that our revenue has gone down slightly since we are now reporting a figure of $160,364,269.885 (vs. the previous value of $160,365,556.83):
+5. This shows that our revenue has gone down slightly since we are now reporting a figure of $160,364,269.885 (vs. the previous value of $160,365,556.83):
 
     ![Results of query to validate financial adjustments file processed successfuly](images/lab-4-step-4-substep-4.png)
 
