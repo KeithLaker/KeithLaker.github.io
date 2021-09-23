@@ -81,6 +81,24 @@ table.events {
   width: 112%;
 }
 
+#circle {
+  position: relative;
+  background-color: blue;
+  margin: 20px auto;
+  width: 90px;
+  height: 90px;
+  border-radius: 20px;
+}
+#text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 44pt;
+}
+
 .icon-ff:before { content: "\23EF" }
 
 .grayscale { filter: grayscale(100%); }
@@ -129,7 +147,7 @@ table.events {
 				<section class="rc32 rc32v0 cpad rw-neutral-30bg rw-pattern10 rw-pattern-50p" data-ocomid="rc32" data-trackas="rc32">
 					<div class="rc32w0 cwidth">
 						<h2 class="rwaccent" style="font-family:Arial, Helvetica, sans-serif !important; font-weight:bold !important;">
-							Hidden Data Economy
+							Shining A Light On The Hidden Data Economy
 						</h2>
 						<div class="rc32w1 rw-neutral-00bg">
 							<div class="rc32w2">
@@ -162,7 +180,7 @@ table.events {
 							<div class="rc32w2" >
 								<div class="rc32w3">
 									<div style="padding-left:0px; padding-right: 90px;">
-										<h3>SEPERATE DATA ECONOMIES</h3>
+										<h3>SEPERATE DATA ECONOMIES INSIDE YOUR ORGANIZATION</h3>
 										<p>
 											This hidden data economy has a supply side where applications, sensors, and devices originate data in a wide variety of shapes and structures. And it has a demand side where analytics and AI try to use that data in a wide variety of shapes and models.
 											<br><br>
@@ -265,7 +283,7 @@ table.events {
 						<div class="rc32w1 rw-neutral-00bg">
 							<div class="rc32w2">
 								<div class="rc32w3">
-									<h3>ACTIVITY SYSTEMS TIE EVERYTHING TOGETHER</h3>
+									<h3>TYING EVERYTHING TOGETHER</h3>
 									<br>
 									<p>
 										Everything a firm does consists of activities. The way an organization designs its products or services, the way it markets them, distributes them, services them—all of these processes and decision points are the firm's activities. Sustainable competitive strategy comes from creating a unique system of activities.
@@ -289,42 +307,14 @@ table.events {
 										<br><br>
 										So, how can a data strategy reinforce this competitive strategy?
 										<br><br>
-										Take <strong>Southwest Airlines</strong> in the late 1990s. Southwest was a low-cost, no-frills, short haul carrier that shook up the airline industry. A unique set of interconnected activities allowed them to stake out a profitable position. Porter summarized the key activities in their system like this:
 									</p>
-									<ul style="list-style-position: inside; margin-left: 50px; list-style-type: circle;">
-										<li>- Limited passenger service</li>
-										<li>- Short-haul, point-to-point routes between midsize cities and secondary airports</li>
-										<li>- Very low ticket prices</li>
-										<li>- High aircraft utilization</li>
-										<li>- Lean, highly productive ground and gate crews</li>
-										<li>- Frequent, reliable departures</li>
-									</ul>
-									<br>
-									<p>
-										A typical business problem that Shouthwest Airlines used data to answer: <em>Can we use predictive maintenance to get to 10-minute turnarounds?</em>
-									</p>
-									<ul style="list-style-position: inside; margin-left: 50px; list-style-type: circle;">
-										<li>- Sensor data from engines, subsystems</li>
-										<li>- Operatioonal data - aircraft utilization, repair and maintenance, arrivals and departures</li>
-										<li>- Anonymize, mask employee (crew, engineers) records</li>
-										<li>- Monitor model for performance as planes ages</li>
-									</ul>
-									<br>
-									<p>
-										These activities fit together in a unique system that made Southwest's tagline, “Southwest, the low-fare airline.” not just a marketing slogan, but a defensible strategic position in a highly competitive industry.
-										<br><br>
-									</p>
-								</div>
-								<div class="rc32w4">
-									<span style="padding-top:400px;">
-										<img style="max-width:400px; border:20px solid white; border-radius: 25px; box-shadow: 5px 10px 20px #888888;" src="https://keithlaker.github.io/DataEconomy/Images/Hidden-Data-Economy-slide-11.gif">
-									</span>
 								</div>
 							</div>
 						</div>
 					</div>
 				</section>
 <!-- /RC32v0 -->
+
 
 
 <!-- /RC32v0 -->
@@ -369,6 +359,698 @@ table.events {
 					</div>
 				</section>
 <!-- /RC32v0 -->
+				<section class="rc32 rc32v0 cpad rw-neutral-30bg rw-pattern10 rw-pattern-50p" data-ocomid="rc32" data-trackas="rc32">
+					<div class="rc32w0 cwidth">
+						<div class="rc32w1 rw-neutral-00bg">
+							<div class="rc32w2">
+								<div class="rc32w3">
+									<h3>A TEXTBOOK EXAMPLE</h3>
+									<br>
+									<p>
+										Take <strong>Southwest Airlines</strong> in the late 1990s. Southwest was a low-cost, no-frills, short haul carrier that shook up the airline industry. A unique set of interconnected activities allowed them to stake out a profitable position. Porter summarized the key activities in their system like this:
+									</p>
+									<ul style="list-style-position: inside; margin-left: 50px; list-style-type: circle;">
+										<li>- Limited passenger service</li>
+										<li>- Short-haul, point-to-point routes between midsize cities and secondary airports</li>
+										<li>- Very low ticket prices</li>
+										<li>- High aircraft utilization</li>
+										<li>- Lean, highly productive ground and gate crews</li>
+										<li>- Frequent, reliable departures</li>
+									</ul>
+									<br>
+									<p>
+										A typical business problem that Shouthwest Airlines used data to answer: <em>Can we use predictive maintenance to get to 10-minute turnarounds?</em>
+									</p>
+									<ul style="list-style-position: inside; margin-left: 50px; list-style-type: circle;">
+										<li>- Sensor data from engines, subsystems</li>
+										<li>- Operatioonal data - aircraft utilization, repair and maintenance, arrivals and departures</li>
+										<li>- Anonymize, mask employee (crew, engineers) records</li>
+										<li>- Monitor model for performance as planes ages</li>
+									</ul>
+									<br>
+									<p>
+										These activities fit together in a unique system that made Southwest's tagline, “Southwest, the low-fare airline.” not just a marketing slogan, but a defensible strategic position in a highly competitive industry.
+										<br><br>
+									</p>
+								</div>
+								<div class="rc32w4">
+									<span style="padding-bottom:300px;">
+										<img style="max-width:400px; border:20px solid white; border-radius: 25px; box-shadow: 5px 10px 20px #888888;" src="https://keithlaker.github.io/DataEconomy/Images/Hidden-Data-Economy-slide-11.gif">
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+<!-- /RC32v0 -->
+
+<!-- /RC32v0 -->
+				<section class="rc32 rc32v0 cpad rw-neutral-30bg rw-pattern10 rw-pattern-50p" data-ocomid="rc32" data-trackas="rc32">
+					<div class="rc32w0 cwidth">
+						<div class="rc32w1 rw-neutral-00bg">
+							<div class="rc32w2">
+								<div class="rc32w3">
+									<h3>A UNIFIED DATA ECONOMY REQUIRES A NEW DATA BACKBONE</h3>
+									<br>
+									<p>
+										To create a unified data economy, enterprises need a new data backbone. You need an enterprise architecture that helps you shift more activity into your market data economy, connect to critical back-office and financial data assets from your command data economy and bring the informal data economy into the fold.
+									</p>
+									<div class="row">
+										<div class="column">
+											<img style="background-color: white; border: 25px solid white;" src="file:///Volumes/My%20PortableDisk/keith_laker/Documents/Projects/DW%20Cloud/Website/DataEconomy/Images/Slide11-v2.png">
+										</div>
+									</div>
+								</div>
+								<div class="rc32w4">
+									<img style="max-width:200px; border:20px solid white; border-radius: 25px; box-shadow: 5px 10px 20px #888888;" src="file:///Volumes/My%20PortableDisk/keith_laker/Documents/Projects/DW%20Cloud/Website/DataEconomy/Images/Slide11-key.png">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+<!-- /RC32v0 -->
+
+
+<!-- RC68v0 -->
+				<section class="rc68 rc68v0 cpad rw-neutral-30bg  rw-pattern10 rw-pattern-50p" data-trackas="rc68" data-ocomid="rc68" >
+					<div class="r328w0 cwidth">
+						<div class="rc32w1">
+							<h2 class="rwaccent" style="font-family:Arial, Helvetica, sans-serif !important; font-weight:bold !important;">
+								4 key pillars for translating strategy into architecture
+							</h2>
+							<br>
+							<br>
+							<div class="col-framework col-left col2 col-gutters">
+								<div class="col-w1">
+									<a href="placeholder.html" class="col-item rw-neutral-00bg rw-pine-100-beforebg">
+										<div class="col-item-w1" >
+											<div id="circle">
+												<div id="text">L</div>
+											</div>
+											<h3>DATA LIQUIDITY</h3>
+										</div>
+										<div class="col-item-w2">
+											<p>
+												Ease of data reuse and recombination<br><span style="font-size:10pt !important;">(see note 1)<span>
+											</p>
+										</div>
+									</a>
+									<a href="placeholder.html" class="col-item rw-neutral-00bg rw-rose-100-beforebg">
+										<div class="col-item-w1" >
+											<div id="circle">
+												<div id="text">P</div>
+											</div>
+											<h3>DATA PRODUCTIVITY</h3>
+										</div>
+										<div class="col-item-w2">
+											<p>
+												Value created as a result of data usage per unit of work, dollar invested or resource consumed
+											</p>
+										</div>
+									</a>
+									<a href="placeholder.html" class="col-item rw-neutral-00bg rw-plum-100-beforebg">
+										<div class="col-item-w1" >
+											<div id="circle">
+												<div id="text">S</div>
+											</div>
+											<h3>DATA SECURITY</h3>
+										</div>
+										<div class="col-item-w2">
+											<p>
+												Protections against external and internal threats
+											</p>
+										</div>
+									</a>
+									<a href="placeholder.html" class="col-item rw-neutral-00bg rw-lilac-100-beforebg">
+										<div class="col-item-w1" >
+											<div id="circle">
+												<div id="text">G</div>
+											</div>
+											<h3>DATA GOVERNANCE</h3>
+										</div>
+										<div class="col-item-w2">
+											<p>
+												Assurances of data quality, compliance, ethics
+											</p>
+										</div>
+									</a>
+								</div>
+							</div>
+							<br>
+							<br>
+							<p> Notes<br> 1. <a href="1. https://cisr.mit.edu/publication/2021_0501_DataLiquidity_WixomPiccoli"> https://cisr.mit.edu/publication/2021_0501_DataLiquidity_WixomPiccoli</a>
+							</p>
+						</div>
+					</div>
+				</section>
+<!-- /RC68v0 -->
+
+<!-- RC68v0 -->
+				<section class="rc68 rc68v0 rw-neutral-30bg cpad rw-pattern10 rw-pattern-50p" data-trackas="rc68" data-ocomid="rc68">
+					<div class="rc68w1 cwidth">
+						<div class="rc68w2" style="padding-left:100px;">
+							<h2 class="rwaccent" style="font-family:Arial, Helvetica, sans-serif !important; font-weight:bold !important;">
+								Learn more about building a new data backbone in the cloud
+							</h2>
+							<br>
+							<br>
+							<div class="col-framework col-left col2 col-gutters">
+								<div class="col-w1">
+									<a href="https://www.oracle.com/database/database-world" class="col-item rw-neutral-00bg rw-pine-100-beforebg">
+										<div class="col-item-w1" >
+											<h3>Shining a Light on the Hidden Data Economy</h3>
+											<p style="font-size:10.5pt !important;">
+												Paul Sonderegger<br>
+												Senior Data Strategist
+											</p>
+											<br>
+										</div>
+										<div class="col-item-w2">
+											<p>
+												Considering enterprise data in terms of supply, demand, and transaction costs enables companies to craft more effective data strategies and increase return on data capital. Join us to learn how the unique capabilities of Oracle technology can put these ideas into action.
+											</p>
+											<table>
+												<tr>
+													<td>
+														<img style="max-width:80px; " src="https://keithlaker.github.io/DataEconomy/Images/ic-Youtube_MinimumSize-gray.gif">
+													</td>
+													<td><strong>Click to watch</strong>
+													</td>
+												</tr>
+											</table>
+											<div class="row">
+												<div class="column">
+													<img style=" background-color: white; border: 25px solid white; box-shadow: 5px 10px 20px #888888;" src="https://keithlaker.github.io/DataEconomy/Images/Hidden%20Data%20Economy.gif">
+												</div>
+											</div>
+										</div>
+									</a>
+									<a href="https://www.oracle.com/database/database-world" class="col-item rw-neutral-00bg rw-rose-100-beforebg">
+										<div class="col-item-w1" >
+											<h3>Automating Data Management for All</h3>
+											<p style="font-size:10.5pt !important;">
+												Andy Mendelsohn<br>
+												Executive Vice President, Database Server Technologies
+											</p>
+											<br>
+										</div>
+										<div class="col-item-w2">
+											<p>
+												Oracle Autonomous Database has simplified the management of operational and analytical database workloads. This keynote discusses how the innovation continues to improve analyst, data scientist, and developer productivity.
+											</p>
+											<table>
+												<tr>
+													<td>
+														<img style="max-width:80px; " src="https://keithlaker.github.io/DataEconomy/Images/ic-Youtube_MinimumSize-gray.gif">
+													</td>
+													<td><strong>Click to watch</strong>
+													</td>
+												</tr>
+											</table>
+											<table style=" border-collapse: separate;border-spacing: 50px 50px;">
+												<tr>
+													<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+														L
+													</td>
+													<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999">
+														P
+													</td>
+												</tr>
+												<tr>
+													<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+														S
+													</td>
+													<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999">
+														G
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://www.oracle.com/database/database-world" class="col-item rw-neutral-00bg rw-lilac-100-beforebg">
+										<div class="col-item-w1">
+											<h3>Oracle Database: What’s New, What’s Next</h3>
+											<p style="font-size:10.5pt !important;">
+												Jenny Tsai-Smith<br>
+												Vice President, Product Management
+											</p>
+											<br>
+										</div>
+										<div class="col-item-w2">
+											<p>
+												Learn about recent Oracle Database news and developments and get a sneak peek of what’s coming next from the Oracle Database development team.
+											</p>
+											<table>
+												<tr>
+													<td>
+														<img style="max-width:80px; " src="https://keithlaker.github.io/DataEconomy/Images/ic-Youtube_MinimumSize-gray.gif">
+													</td>
+													<td><strong>Click to watch</strong>
+													</td>
+												</tr>
+											</table>
+											<table style=" border-collapse: separate;border-spacing: 50px 50px;">
+												<tr>
+													<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+														L
+													</td>
+													<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999">
+														P
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://www.oracle.com/database/database-world" class="col-item rw-neutral-00bg rw-plum-100-beforebg">
+										<div class="col-item-w1">
+											<h3>Oracle Cloud Infrastructure GoldenGate: Elastic, Real-Time Data Integration Service</h3>
+											<p style="font-size:10.5pt !important;">
+												Denis Gray<br>
+												Senior Director
+											</p>
+											<br>
+										</div>
+										<div class="col-item-w2">
+											<p>Learn more about how this innovative, real-time data integration service can help with use cases such as ground-to-cloud replication, multi-region replication, and real-time data staging for data warehouses.
+											</p>
+											<table>
+												<tr>
+													<td>
+														<img style="max-width:80px; " src="https://keithlaker.github.io/DataEconomy/Images/ic-Youtube_MinimumSize-gray.gif">
+													</td>
+													<td><strong>Click to watch</strong>
+													</td>
+												</tr>
+											</table>
+											<table style=" border-collapse: separate;border-spacing: 50px 50px;">
+												<tr>
+													<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+														L
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://www.oracle.com/database/database-world" class="col-item rw-neutral-00bg rw-sienna-100-beforebg">
+										<div class="col-item-w1">
+											<h3>Oracle Autonomous Database: Simplify Your Database Management</h3>
+											<p style="font-size:10.5pt !important;">
+												Yasin Baskin<br>
+												Director, Product Management
+											</p>
+											<br>
+										</div>
+										<div class="col-item-w2">
+											<p>Learn more about how this innovative, real-time data integration service can help with use cases such as ground-to-cloud replication, multi-region replication, and real-time data staging for data warehouses.
+											</p>
+											<table>
+												<tr>
+													<td>
+														<img style="max-width:80px; " src="https://keithlaker.github.io/DataEconomy/Images/ic-Youtube_MinimumSize-gray.gif">
+													</td>
+													<td><strong>Click to watch</strong>
+													</td>
+												</tr>
+											</table>
+											<table style=" border-collapse: separate;border-spacing: 50px 50px;">
+												<tr>
+													<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+														L
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://www.oracle.com/database/database-world" class="col-item rw-neutral-00bg rw-ocean-100-beforebg">
+										<div class="col-item-w1">
+											<h3>All About Graphs in Oracle Database</h3>
+											<p style="font-size:10.5pt !important;">
+												Melliyal Annamalai<br>
+												Distinguished Product Manager, Spatial and Graph
+											</p>
+											<br>
+										</div>
+										<div class="col-item-w2">
+											<p>Part of Oracle’s converged database offering, graph databases empower developers to build powerful applications that uncover connections in data. Learn about these query and analytic capabilities and see how easy it is to get started with graphs using Graph Studio in Oracle Autonomous Database.
+											</p>
+											<table>
+												<tr>
+													<td>
+														<img style="max-width:80px; " src="https://keithlaker.github.io/DataEconomy/Images/ic-Youtube_MinimumSize-gray.gif">
+													</td>
+													<td><strong>Click to watch</strong>
+													</td>
+												</tr>
+											</table>
+											<table style=" border-collapse: separate;border-spacing: 50px 50px;">
+												<tr>
+													<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+														P
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://www.oracle.com/database/database-world" class="col-item rw-neutral-00bg rw-teal-100-beforebg">
+										<div class="col-item-w1">
+											<h3>Oracle Autonomous Data Warehouse and the Data Lake</h3>
+											<p style="font-size:10.5pt !important;">
+												Marty Gubar<br>
+												Director of Product Management, Big Data
+											</p>
+											<br>
+										</div>
+										<div class="col-item-w2">
+											<p>Learn how to easily combine insights from your data lake and your data warehouse. Use Oracle Cloud Infrastructure Data Catalog to manage, search for, and understand all your data assets. Then, use Oracle Autonomous Database to analyze those assets at scale with no additional management.
+											</p>
+											<table>
+												<tr>
+													<td>
+														<img style="max-width:80px; " src="https://keithlaker.github.io/DataEconomy/Images/ic-Youtube_MinimumSize-gray.gif">
+													</td>
+													<td><strong>Click to watch</strong>
+													</td>
+												</tr>
+											</table>
+											<table style=" border-collapse: separate;border-spacing: 50px 50px;">
+												<tr>
+													<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+														L
+													</td>
+													<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+														P
+													</td>
+												</tr>
+												<tr>
+													<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+														G
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://www.oracle.com/database/database-world" class="col-item rw-neutral-00bg rw-slate-100-beforebg">
+										<div class="col-item-w1">
+											<h3>Self-Service Data Warehousing</h3>
+											<p style="font-size:10.5pt !important;">
+												Patrick Wheeler<br>
+												Vice President, Product Management
+											</p>
+											<br>
+										</div>
+										<div class="col-item-w2">
+											<p>Oracle Autonomous Data Warehouse comes bundled with a powerful suite of data tools for business analysts and data scientists. Learn how you can manage and analyze your data—with no development or IT experience required.
+											</p>
+											<table>
+												<tr>
+													<td>
+														<img style="max-width:80px; " src="https://keithlaker.github.io/DataEconomy/Images/ic-Youtube_MinimumSize-gray.gif">
+													</td>
+													<td><strong>Click to watch</strong>
+													</td>
+												</tr>
+											</table>
+											<table style=" border-collapse: separate;border-spacing: 50px 50px;">
+												<tr>
+													<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+														L
+													</td>
+													<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+														P
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://www.oracle.com/database/database-world" class="col-item rw-neutral-00bg rw-fog-100-beforebg">
+										<div class="col-item-w1">
+											<h3>Streamlining Security for Your Databases with Oracle Data Safe</h3>
+											<p style="font-size:10.5pt !important;">
+												Bettina Schaeumer<br>
+												Senior Principal Product Manager, Database Security
+											</p>
+											<br>
+										</div>
+										<div class="col-item-w2">
+											<p>Securing a database requires multiple technologies working together to reduce risk and improve compliance. Join us to learn how Oracle Data Safe combines the required capabilities into an easy-to-use cloud service that has you up and running in minutes.
+											</p>
+											<table>
+												<tr>
+													<td>
+														<img style="max-width:80px; " src="https://keithlaker.github.io/DataEconomy/Images/ic-Youtube_MinimumSize-gray.gif">
+													</td>
+													<td><strong>Click to watch</strong>
+													</td>
+												</tr>
+											</table>
+											<table style=" border-collapse: separate;border-spacing: 50px 50px;">
+												<tr>
+													<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+														S
+													</td>
+													<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+														G
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://www.oracle.com/database/database-world" class="col-item rw-neutral-00bg rw-pebble-100-beforebg">
+										<div class="col-item-w1">
+											<h3>In-Database Machine Learning: Automate, Scale, Deploy</h3>
+											<p style="font-size:10.5pt !important;">
+												Mark Hornick<br>
+												Senior Director, Data Science / Machine Learning
+											</p>
+											<br>
+										</div>
+										<div class="col-item-w2">
+											<p>Learn how Oracle Database and Oracle Autonomous Database deliver machine learning on database data using AutoML, scalable machine learning algorithms, and ease of deployment with SQL and REST interfaces, as well as open source R and Python integration.
+											</p>
+											<table>
+												<tr>
+													<td>
+														<img style="max-width:80px; " src="https://keithlaker.github.io/DataEconomy/Images/ic-Youtube_MinimumSize-gray.gif">
+													</td>
+													<td><strong>Click to watch</strong>
+													</td>
+												</tr>
+											</table>
+											<table style=" border-collapse: separate;border-spacing: 50px 50px;">
+												<tr>
+													<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+														L
+													</td>
+													<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+														P
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+<!-- /RC68v0 -->
+
+<!-- RC68v0 -->
+<section class="rc68 rc68v0 rw-neutral-30bg cpad rw-pattern10 rw-pattern-50p" data-trackas="rc68" data-ocomid="rc68">
+	<div class="rc68w1 cwidth">
+		<div class="rc68w2" style="padding-left:100px;">
+			<h2 class="rwaccent" style="font-family:Arial, Helvetica, sans-serif !important; font-weight:bold !important;">
+				Hands-on labs - explore how to build a data backbine
+			</h2>
+			<br>
+			<br>
+			<div class="col-framework col-left col2 col-gutters">
+				<div class="col-w1">
+					<a href="https://www.oracle.com/database/database-world" class="col-item rw-neutral-00bg rw-pine-100-beforebg">
+						<div class="col-item-w1" >
+							<h3>Important Tools for Everyone Using Oracle Autonomous Database Tools</h3>
+							<p style="font-size:10.5pt !important;">
+								Patrick Wheeler<br>
+								Vice President, Product Management
+							</p>
+							<br>
+						</div>
+						<div class="col-item-w2">
+							<p>
+								Oracle Autonomous Database comes equipped with a powerful suite of tools that you’ll get to use in this lab. First, provision a new Oracle Autonomous Data Warehouse and load data in just a few minutes. Next, profile, prepare, and transform that data—with insights, lineage, and impact analysis to follow.
+							</p>
+							<table>
+								<tr>
+									<td>
+										<img style="max-width:80px; " src="https://keithlaker.github.io/DataEconomy/Images/ic-Youtube_MinimumSize-gray.gif">
+									</td>
+									<td><strong>Launch workshop</strong>
+									</td>
+								</tr>
+							</table>
+							<table style=" border-collapse: separate;border-spacing: 50px 50px;">
+								<tr>
+									<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+										L
+									</td>
+									<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999">
+										P
+									</td>
+								</tr>
+							</table>
+						</div>
+					</a>
+					<a href="https://www.oracle.com/database/database-world" class="col-item rw-neutral-00bg rw-rose-100-beforebg">
+						<div class="col-item-w1" >
+							<h3>Boost Analytics Performance with Oracle Database In-Memory</h3>
+							<p style="font-size:10.5pt !important;">
+								Andy Rivenes<br>
+								Senior Principal Product Manager
+							</p>
+							<br>
+						</div>
+						<div class="col-item-w2">
+							<p>
+								Witness the incredible performance boost Oracle Database In-Memory provides for analytic SQL. The lab explores what happens within the database to make this performance lift possible and explains why no application changes are required.
+							</p>
+							<table>
+								<tr>
+									<td>
+										<img style="max-width:80px; " src="https://keithlaker.github.io/DataEconomy/Images/ic-Youtube_MinimumSize-gray.gif">
+									</td>
+									<td><strong>Launch workshop</strong>
+									</td>
+								</tr>
+							</table>
+							<table style=" border-collapse: separate;border-spacing: 50px 50px;">
+								<tr>
+									<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+										L
+									</td>
+								</tr>
+							</table>
+						</div>
+					</a>
+					<a href="https://www.oracle.com/database/database-world" class="col-item rw-neutral-00bg rw-lilac-100-beforebg">
+						<div class="col-item-w1">
+							<h3>Getting Started with Oracle Autonomous Database</h3>
+							<p style="font-size:10.5pt !important;">
+								Keith Laker<br>
+								Senior Principal Product Manager<br>
+								<br>
+								Nilay Panchal<br>
+								Principal Product Manager
+							</p>
+							<br>
+						</div>
+						<div class="col-item-w2">
+							<p>
+								The labs in this workshop walk you through all the steps to get you started using Oracle Autonomous Database. You will provision a new Autonomous Database instance, load data, query your data, and create visualizations for data analysis. Autonomous Database makes it quick and easy for you to load and analyze your data.
+							</p>
+							<table>
+								<tr>
+									<td>
+										<img style="max-width:80px; " src="https://keithlaker.github.io/DataEconomy/Images/ic-Youtube_MinimumSize-gray.gif">
+									</td>
+									<td><strong>Launch workshop</strong>
+									</td>
+								</tr>
+							</table>
+							<table style=" border-collapse: separate;border-spacing: 50px 50px;">
+								<tr>
+									<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+										L
+									</td>
+									<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999">
+										P
+									</td>
+								</tr>
+							</table>
+						</div>
+					</a>
+					<a href="https://www.oracle.com/database/database-world" class="col-item rw-neutral-00bg rw-plum-100-beforebg">
+						<div class="col-item-w1">
+							<h3>Oracle Cloud Data Lake House</h3>
+							<p style="font-size:10.5pt !important;">
+								Scott Wiesner<br>
+								Senior Director, Data Management Business Development<br><br>
+								Massimo Castelli<br>
+								Senior Director, Product Strategy
+							</p>
+							<br>
+						</div>
+						<div class="col-item-w2">
+							<p>
+								A data lake house is not a single product; it is a solution that spans a large number of individual products and services. To highlight this solution approach, this session showcases the cohesive integration between the relational and data lake worlds, including the role played by the data catalog
+							</p>
+							<table>
+								<tr>
+									<td>
+										<img style="max-width:80px; " src="https://keithlaker.github.io/DataEconomy/Images/ic-Youtube_MinimumSize-gray.gif">
+									</td>
+									<td><strong>Launch workshop</strong>
+									</td>
+								</tr>
+							</table>
+							<table style=" border-collapse: separate;border-spacing: 50px 50px;">
+								<tr>
+									<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+										L
+									</td>
+									<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+										P
+									</td>
+								</tr>
+								<tr>
+									<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+										S
+									</td>
+									<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+										G
+									</td>
+								</tr>
+							</table>
+						</div>
+					</a>
+					<a href="https://www.oracle.com/database/database-world" class="col-item rw-neutral-00bg rw-pebble-100-beforebg">
+						<div class="col-item-w1">
+							<h3>Get Started with Graph Analytics on Oracle Autonomous Database</h3>
+							<p style="font-size:10.5pt !important;">
+								Melliyal Annamalai<br>
+								Distinguished Product Manager
+							</p>
+							<br>
+						</div>
+						<div class="col-item-w2">
+							<p>Learn how Graph Studio makes it easy to explore relationships and discover connections in data to detect fraud or hidden dependencies. Get acquainted with its support for graph structures, comprehensive analytics, and intuitive
+							</p>
+							<table>
+								<tr>
+									<td>
+										<img style="max-width:80px; " src="https://keithlaker.github.io/DataEconomy/Images/ic-Youtube_MinimumSize-gray.gif">
+									</td>
+									<td><strong>Launch workshop</strong>
+									</td>
+								</tr>
+							</table>
+							<table style=" border-collapse: separate;border-spacing: 50px 50px;">
+								<tr>
+									<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+										L
+									</td>
+									<td style="max-width:120px; max-height: 120px; width:120px; height: 120px; background-color:blue !important; border: 15px solid blue; border-radius: 15px; color:white !important; font-weight:bold; text-align:center; font-family:arial; font-size:64pt; box-shadow: 10px 10px 13px 1px #999;">
+										P
+									</td>
+								</tr>
+							</table>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /RC68v0 -->
 
 <!-- /RH01v0 -->
 				<section class="rc11 rc11v0 rw-theme-160bg" data-trackas="rc11" data-ocomid="rc11">
