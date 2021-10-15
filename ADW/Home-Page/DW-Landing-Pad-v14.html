@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html>
+<!-- start : Framework/Generic -->
+<!-- start : ocom/common/global/components/framework/head -->
+	<head>
+    <!-- start : ocom/common/global/components/head -->
+    <!-- BEGIN OCOM CSS/JS -->
+		<title>Data Warehousing and Big Data</title>
+
+<!-- Container/Display Start -->
+
+<!-- _Raw-Text -->
+	<!-- css / js files start -->
+	<script>
+	!function(){
+		var d=document.documentElement;d.className=d.className.replace(/no-js/,'js');
+		if(document.location.href.indexOf('betamode=') > -1) document.write('<script src="https://www.oracle.com/asset/web/js/ocom-betamode.js"><\/script>');
+	}();
+	</script>
+		<link data-wscss href="https://www.oracle.com/asset/web/css/ocom-v1-base.css" rel="stylesheet">
+		<link data-wscss href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="preload" as="style" onload="this.rel='stylesheet'" onerror="this.rel='stylesheet'">
+		<noscript>
+			<link href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="stylesheet">
+		</noscript>
+	<script data-wsjs src="https://www.oracle.com/asset/web/js/jquery-min.js" async onload="$('head link[data-reqjq][rel=preload]').each(function(){var a = document.createElement('script');a.async=false;a.src=$(this).attr('href');this.parentNode.insertBefore(a, this);});$(function(){$('script[data-reqjq][data-src]').each(function(){this.async=true;this.src=$(this).data('src');});});"></script>
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/ocom-v1-base.js" rel="preload" as="script">
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/ocom-v1-lib.js" rel="preload" as="script">
+	<!-- end css / js files start -->
+<!-- / _Raw-Text -->
+
+<!-- _Raw-Text -->
+<!-- www-us HeadAdminContainer -->
+<script async="async" type="text/javascript" src='//consent.truste.com/notice?domain=oracle.com&c=teconsent&js=bb&noticeType=bb&text=true&gtm=1&cdn=1&pcookie' crossorigin></script>
+		<style>
+#oReactiveChatContainer1 { display:none;}
+		</style>
+<!--DTM embed code - Header -->
+<script src="https://assets.adobedtm.com/6f37a0dc9cdbe818dc4979828b58b88e3f060ea4/satelliteLib-e598c5b61e39a10b402e048e87dd27b0f1cd2d4c.js"></script>
+
+<!-- Truste for RU -->
+<script type="text/javascript">
+ if (location.pathname.indexOf("/ru/") == 0){
+ document.write('\x3Cscript async="async" src=//consent.truste.com/notice?domain=oracleru.com&c=teconsent&js=bb&noticeType=bb&text=true&gtm=1&cdn=1&pcookie crossorigin="">\x3C/script>');
+ }
+ </script>
+<!--End-->
+
+<!-- / _Raw-Text -->
+
+<!-- Container/Display end -->
+		<style>
+    #oReactiveChatContainer1 {
+        display: none;
+    }
+		</style>
+    <!--DTM embed code - Header -->
+    <script src="//assets.adobedtm.com/6f37a0dc9cdbe818dc4979828b58b88e3f060ea4/satelliteLib-e598c5b61e39a10b402e048e87dd27b0f1cd2d4c.js"></script>
+	<!-- FOR WEBSTANDARDS ONLY -->
+		<link href="https://www.oracle.com/ws-assets/ws-comp.css" media="print, screen" rel="Stylesheet" type="text/css" />
+
+    <!--End-->
+	</head>
+<!-- end : ocom/common/global/components/framework/head -->
+<!-- start : ocom/common/global/components/framework/layoutAssetStartBodyInfo -->
+	<body>
+		<link data-wscss href="https://www.oracle.com/asset/web/css/redwood-base.css" rel="stylesheet">
+		<link data-wscss href="https://www.oracle.com/asset/web/css/redwood-styles.css" rel="preload" as="style" onload="this.rel='stylesheet'" onerror="this.rel='stylesheet'">
+		<style>
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 30%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+.col_di {
+vertical-align: top;
+text-align: center;
+}
+
+.hover02 {
+border-style:solid; 
+border-color: black; 
+border-width:2px;
+border-radius:10px; 
+text-align:center; 
+height:190px; 
+width: 150px; 
+padding-top:20px;
+position:relative;
+top:0px;    
+left:0px;
+box-shadow: 20px 20px 10px 5px #888888;
+
+}
+
+.hover02:not(:hover) {
+
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+/* Zoom In #2 */
+.hover02_img {
+	positio:absolute;
+	width: 130px;
+	height: auto;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    padding-left:14px;	
+}
+
+.hover02:hover {
+box-shadow: 00px 0px 0px 0px white;
+position:relative;
+top:5px; 
+left:5px;   
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+
+}
+
+.hover_dl{
+border-style:solid; 
+border-color: black; 
+border-width:2px;
+border-radius:10px; 
+text-align:center; 
+height:190px; 
+width: 150px; 
+padding-top:20px;
+position:relative;
+box-shadow: 20px 20px 10px 5px #888888;
+    padding-bottom: 125px;	
+
+}
+
+.hover_dl:not(:hover) {
+
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+/* Zoom In #dl */
+.hover_dl_img {
+	positio:absolute;
+	width: 230px;
+	height: auto;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    padding-left:14px;
+}
+
+.hover_dl:hover {
+box-shadow: 00px 0px 0px 0px white;
+position:relative;
+top:5px; 
+left:5px;   
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+
+}
+
+
+.hover03 {
+border-style:solid; 
+border-color: white; 
+border-width:2px;
+border-radius:10px; 
+text-align:center; 
+height:220px; 
+width: 310px; 
+box-shadow: 20px 20px 10px 5px #888888;
+
+}
+
+.hover03:not(:hover) {
+
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+/* Zoom In #2 */
+.hover03_img {
+	positio:absolute;
+	width: 130px;
+	height: auto;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    padding-left:14px;	
+}
+
+.hover03:hover {
+box-shadow: 00px 0px 0px 0px white;
+position:relative;
+top:5px; 
+left:5px;   
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+
+}
+
+
+.data-tools-link{
+padding:20px;
+}
+
+#data-bgimg0 {
+-webkit-font-smoothing: antialiased;
+}
+
+
+
+/* 1. Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. Make nav sticky */
+main > nav {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+
+/* 3. ScrollSpy active styles (see JS tab for activation) */
+.section-nav li.active > a {
+  color: #333;
+  font-weight: 500;
+}
+
+/* Sidebar Navigation */
+.section-nav {
+  padding-left: 0;
+  border-left: 1px solid #efefef;
+}
+
+.section-nav a {
+  text-decoration: none;
+  display: block;
+  padding: .125rem 0;
+  color: #ccc;
+  transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+  color: #666;
+}
+
+/** Poor man's reset **/
+* {
+  box-sizing: border-box;
+}
+
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  margin-left: 1rem;
+  font-family: monospace !important; 
+  font-size:18px !important; 
+ font-weight:normal !important;
+}
+
+
+/** page layout **/
+main {
+  display: grid;
+  grid-template-columns: auto auto;
+  max-width: 150em;
+  width: 99%;
+  margin: 0 auto;
+}
+
+.feature-title{
+font-family: monospace !important;
+font-size: 22px !important;
+font-weight: bold !important;
+}
+
+.td-border{
+width: 7px !important; 
+border-left: 20px; 
+border-right:0px; 
+border-top: 0px; 
+border-bottom: 0px; 
+border-style:solid;
+border-color: slategrey;
+}
+
+.td-dot{
+background-color:white;
+text-align:right;
+}
+
+
+.grayscale { filter: grayscale(70%); background-color: #4A5553;}
+.brightness { filter: brightness(0.82); }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip span img {
+  float:left;
+  margin:0px 8px 8px 0;
+}
+
+.tooltip img {
+  width: 250px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: black;
+  border: 20px solid black;
+  box-shadow: 15px 15px 25px black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 95%;
+  left: 50%;
+  margin-left: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.tooltipadb {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltipadb span img {
+  float:left;
+  margin:0px 8px 8px 0;
+}
+
+.tooltipadb  img {
+  width:450px;
+}
+
+
+.tooltipadb  .tooltiptext {
+  visibility: hidden;
+  width: 500px;
+  background-color: black;
+  border: 20px solid black;
+  box-shadow: 15px 15px 25px black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 85%;
+  left: 50%;
+  margin-left: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+
+.tooltipadb:hover .tooltiptext{
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltipdl {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltipdl span img {
+  float:left;
+  margin:0px 8px 8px 0;
+}
+
+.tooltipdl  img {
+  width:350px;
+}
+
+
+.tooltipdl  .tooltiptext {
+  visibility: hidden;
+  width: 400px;
+  background-color: black;
+  border: 20px solid black;
+  box-shadow: 15px 15px 25px black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 105%;
+  left: 50%;
+  margin-left: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+
+.tooltipdl:hover .tooltiptext{
+  visibility: visible;
+  opacity: 1;
+}
+		</style>
+		
+<!-- / _Raw-Text -->
+		<div class="f20 f20v0 rwtheme-slate ready ochat_slideout_loaded yui-skin-sam masked">
+<!-- _Raw-Text -->
+			<span class="f20 f20v0 rwtheme-slate ready ochat_slideout_loaded yui-skin-sam masked" style="opacity:0">
+				<section class="rh03 rh03v1 rw-theme-150bg bgimgw1" data-trackas="rh03" data-ocomid="rh03">
+					<div style="background-image:url(https://www.oracle.com/a/ocom/img/bgimg02-bgne-overlay-01.png)" class="bgimg bgimgw2 bgimg-rhalf bgimg-hsize bgimg-overlay"></div>
+					<div style="background-image:url(https://www.oracle.com/a/ocom/img/bgimg02-bgsw-overlay-01.png)" class="bgimg bgimgw2 bgimg-lhalf bgimg-bottom bgimg-hsize bgimg-overlay"></div>
+					<div class="rh03w1 cwidth">
+						<div class="rh03bc">
+			<!--BREADCRUMBS-->
+
+			
+
+				<!--Call to action-->
+							<div class="rh03bc2">
+
+				
+	<!-- Dispatcher:null -->
+	
+<!-- BEGIN: oWidget_C/_Raw-Text/Display -->
+<!--Call to action-->
+								<div class="rh03bc2">
+									<div class="obttns">
+										<div> <a href="/uk/cloud/free/?source=:ow:o:p:nav:082120CloudInfraNetworkingHero_uk&amp;intcmp=:ow:o:p:nav:082120CloudInfraNetworkingHero_uk" data-cxdtrack=":ow:o:p:nav:082120CloudInfraNetworkingHero" data-lbl="hero-cta:try-oracle-cloud-free-tier">Try Oracle Cloud Free Tier</a>
+										</div>
+									</div>
+								</div> 
+<!--Call to action-->
+
+
+
+<!-- END: oWidget_C/_Raw-Text/Display -->
+							</div>
+						</div>
+						<div class="herotitle">
+							<h1 class="rwaccent" style="color: white; font-weight:bold; font-family: arial;">Oracle Cloud-Native<br>
+								Data Warehouse Technologies</h1>
+							<p style="color: white; font-weight: normal; font-family: arial;">
+								Utilize data warehousing on-premises or in the cloud. Data Warehousing and analytics technologies such as zero-downtime scaling, Autonomous Data Guard, Oracle Database In-Memory, Oracle Multitenant, machine learning, spatial and graph capabilities enable analytics teams to deliver deeper richer insights in less time.
+							</p>
+						</div>
+						<img class="rh03img1 grayscale brightness" src="https://www.oracle.com/a/ocom/img/rh03-oci-networking-hero.png">
+					</div>
+				</section>
+
+<!-- / _Raw-Text -->
+
+<!-- _Raw-Text -->
+<!-- RC59v0 -->
+				<section class="rc59 rc59v0" data-trackas="rc59" data-ocomid="rc59" style="background-color: #cccccc !important;">
+					<div class="rc59w1 cwidth">
+						<div class="rc59w2">
+							<div class="rc59w3">
+								<strong>VIDEO: Autonomous Data Warehouse – Under The Hood, How It Works</strong>
+								<p>Oracle VP, George Lumpkin discusses difference between automation vs. autonomous and delivers a deep dive into hands-free data warehousing on Oracle Cloud
+								</p>
+								<div class="obttns">
+									<div class="obttn2">
+										<a href="https://www.youtube.com/watch?v=5zBeNGxBAnQ">Watch the video</a>
+									</div>
+								</div>
+							</div>
+							<div class="rc59w3">
+								<strong>LINK: Global Leaders Program</strong>
+								<p>An elite program for our global big data warehousing and cloud customers. It gives our customers an open communication channel for providing product insights, solution planning and implementation reviews between Oracle Development and customers who are at the leading-edge of big data warehousing initiatives
+								</p>
+								<div class="obttns">
+									<div class="obttn2">
+										<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/global-leaders.html">Learn more</a>
+									</div>
+								</div>
+							</div>
+							<div class="rc59w3">
+								<strong>VIDEO: New Autonomous Data Warehouse Innovations</strong>
+								<p>Andrew Mendelsohn, Executive Vice President, Oracle Database Server Technologies, talks about the latest innovations in the industry’s first and only self-driving cloud data warehouse
+								</p>
+								<div class="obttns">
+									<div class="obttn2">
+										<a href="https://www.youtube.com/watch?v=3YaDxl7xZzc">Watch Highlights</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+<!-- /RC59v0 -->
+
+<!-- / _Raw-Text -->
+
+<!-- _Raw-Text -->
+<!-- /RH01v0 -->
+				<section class="rc11 rc11v0 rw-theme-160bg" data-trackas="rc11" data-ocomid="rc11">
+					<div class="rc11w1 cwidth">
+						<div class="rc11w2 rc11bttns">
+							<p style="font-weight: normal;">See how to build a data warehouse faster in the cloud.</p>
+							<div class="obttns">
+								<div  style="width:150px; height:100px;" class="obttn2">
+									<a href="https://www.oracle.com/goto/abds-tools/tutorial" data-lbl="oml-launch-workshop">Launch<br>a<br>workshop</a>
+								</div>
+								<div style="width:140px; height:100px; font-weight:bold;" class="obttn1"><a href="?ytid=5zBeNGxBAnQ" rel="vbox" data-lbl="view-interactive-product-overview" data-trackas="lightbox" style="font-weight:bold;">Watch<br>data warehouse<br>overview<br>(16:37)</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<br>
+				<br>
+
+<!-- /RH01v0 -->
+				<section class="rc11 rc11v0 rw-theme-120bg" data-trackas="rc11" data-ocomid="rc11">
+					<div class="rc11w1 cwidth" style="background-image:url(https://www.oracle.com/a/ocom/img/bgimg02-bgne-overlay-01.png);   background-position: top right;">
+						<div class="rc11w2 rc11bttns">
+							<p style="font-weight: normal; color:white; font-weight:normal; margin-right:150px;">There are many benefits in being part of the Oracle Global Leaders program - get expert guidance and support for developing leading-edge data management strategies.
+							</p>
+							<div class="obttns" style="fill-colour:white !important;">
+								<div style="width:140px; height:100px; font-weight:bold; border-style: solid; border-color: grey; border-width:11px; fill-colour:white !important;" class="obttn2"><a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/global-leaders.html" style="font-weight:bold; fill-colour:white !important;">Learn More..</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<br>
+				<br>
+
+<!-- / _Raw-Text -->
+
+<!-- _Raw-Text -->
+				<section class="rc13 " style="color:black !important">
+					<div class="rc13w1 cwidth">
+						<div class="rc13w2">
+							<div class="rc13w3">
+								<h2 class="rw-ptitle">Empowering Business Innovators With Self-Servive Cloud Data Ecosystem</h2>
+								<br>
+								<br>
+							</div>
+						</div>
+						<div class="rc13w5" style="color:black !important">
+							<div class="col-w1">
+								<div class="col-item">
+									<div class="col-item-w1" style="text-align:center;">
+										<img src="https://keithlaker.github.io/ADW/Images/dap.png" width="150px">
+									</div>
+								</div>
+								<div class="col-item">
+									<div class="col-item-w1" style="text-align:center;">
+										<img src="https://keithlaker.github.io/ADW/Images/dsp.png" width="130px">
+									</div>
+								</div>
+								<div class="col-item">
+									<div class="col-item-w1" style="text-align:center;">
+										<img src="https://keithlaker.github.io/ADW/Images/lobdp.png" width="120px">
+									</div>
+								</div>
+							</div>
+						</div>
+						<table width="100%">
+							<tr>
+								<td style="width:10px;"></td>
+								<td style="border-top: 5px solid slategrey;">
+									<td style="width:10px;"></td>
+								</td>
+							</tr>
+						</table>
+						<br>
+						<div class="rc13w5" style="color:black !important">
+							<div class="col-w1" >
+								<a class="data-tools-link tooltip" href="https://blogs.oracle.com/database/announcing-new-data-tools-in-autonomous-data-warehouse">
+									<span class="tooltiptext">
+										<img src="https://blogs.oracle.com/content/published/api/v1.1/assets/CONTF2A9913BCBD640D89CB8497A69417B60/native?cb=_cache_3be2&channelToken=af5d837e3d34400dbe9ae6cec73ee9b7">
+										Data Loading:<br>Select data from your local computer, from tables in other databases, or from cloud storage and then add that data to new or existing tables or views in, or link to the data from, your Oracle Autonomous Database.<br><br>Click on Data Load button for more information.<br><br>
+									</span>
+									<div class="col-item-w1 hover02">
+										<div class="column">
+											<table width="100%">
+												<tr>
+													<td align="center" valign="center">
+														<img class="hover02_img" src="https://keithlaker.github.io/ADW/Images/dl.png" style="width:135px !important;">
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</a>
+								<a class="data-tools-link tooltip"  href="https://blogs.oracle.com/database/announcing-new-data-tools-in-autonomous-data-warehouse">
+									<span class="tooltiptext">
+										<img src="https://blogs.oracle.com/content/published/api/v1.1/assets/CONT626B8CD844A54E46B32F46E8942094FF/native?cb=_cache_3be2&channelToken=af5d837e3d34400dbe9ae6cec73ee9b7">
+										Data Transformations:<br>Simple "drag-and-drop" data transformation built-in recognized leader ELT tool Oracle Data Integrator.<br><br>Click on Transform button for more information.<br><br>
+									</span>
+									<div class="col-item-w1 hover02">
+										<div class="column">
+											<table width="100%">
+												<tr>
+													<td align="center" valign="center">
+														<img class="hover02_img" src="https://keithlaker.github.io/ADW/Images/transform.png" style="width:125px !important;">
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</a>
+								<a class="data-tools-link tooltip"  href="https://blogs.oracle.com/database/announcing-new-data-tools-in-autonomous-data-warehouse">
+									<span class="tooltiptext">
+										<img src="https://blogs.oracle.com/content/published/api/v1.1/assets/CONT11C2111A187D45CE84DCCCBC27EA2360/native?cb=_cache_3be2&channelToken=af5d837e3d34400dbe9ae6cec73ee9b7">
+										Business Models:<br>Aims to describe the business entities that are derived from data in an Oracle Autonomous Database schema or other sources; in this way, you can create a semantic model on top of your data identifying hierarchies, measures and dimensions.<br><br>Click on Business Model button for more information.<br><br>
+									</span>
+									<div class="col-item-w1 hover02">
+										<div class="column">
+											<table width="100%">
+												<tr>
+													<td align="center" valign="center">
+														<img class="hover02_img" src="https://keithlaker.github.io/ADW/Images/bm.png" style="width:115px !important;">
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</a>
+								<a class="data-tools-link tooltip"  href="https://blogs.oracle.com/database/announcing-new-data-tools-in-autonomous-data-warehouse">
+									<span class="tooltiptext">
+										<img src="https://blogs.oracle.com/content/published/api/v1.1/assets/CONT6057495FBECA48519A3AF72537BAF14A/native?cb=_cache_3be2&channelToken=af5d837e3d34400dbe9ae6cec73ee9b7">
+										Data Insights:<br>Crawls over business model and discovers hidden patterns, anomalies and outliers in your data.<br><br>Click on Data Insights button for more information.<br><br>
+									</span>
+									<div class="col-item-w1 hover02">
+										<div class="column">
+											<table width="100%">
+												<tr>
+													<td align="center" valign="center">
+														<img class="hover02_img" src="https://keithlaker.github.io/ADW/Images/di.png"  style="width:115px !important;">
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</a>
+								<a class="data-tools-link tooltip"  href="https://blogs.oracle.com/database/announcing-new-data-tools-in-autonomous-data-warehouse">
+									<span class="tooltiptext">
+										<img src="https://i.ytimg.com/vi/zfefKdNfAY4/maxresdefault.jpg">
+										Graph Analysis:<br>Oracle Autonomous Database includes Graph Studio, with one-click provisioning, integrated tooling, and security. Graph Studio automates graph data management and simplifies modeling, analysis, and visualization across the graph analytics lifecycle.<br><br>Click on Graph Analysis button for more information.<br><br>
+									</span>
+									<div class="col-item-w1 hover02">
+										<div class="column">
+											<table width="100%">
+												<tr>
+													<td align="center" valign="top">
+														<img class="hover02_img" src="https://keithlaker.github.io/ADW/Images/ga.png" style="width:110px">
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</a>
+								<a class="data-tools-link tooltip"  href="https://blogs.oracle.com/database/announcing-new-data-tools-in-autonomous-data-warehouse">
+									<span class="tooltiptext">
+										<img src="https://www.oracle.com/us/assets/cw20v1-big-data-spatial-1-2550053.jpg">
+										Spatial Analysis:<br>Spatial allows developers and analysts to get started easily with location intelligence analytics and mapping services. It makes it easy to manage different types of geospatial data, perform hundreds of spatial analytic operations, and use interactive map visualization tools.<br><br>Click on Spatial Analysis button for more information.<br><br>
+									</span>
+									<div class="col-item-w1 hover02">
+										<div class="column">
+											<table width="100%">
+												<tr>
+													<td align="center" valign="center">
+														<img class="hover02_img" src="https://keithlaker.github.io/ADW/Images/sa.png"  style="width:115px;">
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</a>
+								<a class="data-tools-link tooltip"  href="https://blogs.oracle.com/database/announcing-new-data-tools-in-autonomous-data-warehouse">
+									<span class="tooltiptext">
+										<img src="https://www.oracle.com/technetwork/database/options/advanced-analytics/omlnotebook-5596017.jpg">
+										Machine Learning:<br>Oracle accelerates machine learning (ML) with powerful algorithms that run inside the database so you can build and run ML models without having to move or reformat data. Data scientists can leverage Python, R, SQL, and other tools to integrate ML capabilities into database applications and deliver analytics results in easy-to-use dashboards.<br><br>Click on Machine Learning button for more information.<br><br>
+									</span>
+									<div class="col-item-w1 hover02">
+										<div class="column">
+											<table width="100%">
+												<tr>
+													<td align="center" valign="center">
+														<img class="hover02_img" src="https://keithlaker.github.io/ADW/Images/ml.png" style="width:135px !important;">
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="rc13w5" style="color:black !important">
+							<div class="col-w1" style="padding-left:42.5%;">
+								<a class="data-tools-link tooltip"  href="https://blogs.oracle.com/database/announcing-new-data-tools-in-autonomous-data-warehouse">
+									<span class="tooltiptext">
+										<img src="https://docs.oracle.com/en/cloud/paas/exadata-express-cloud/csdbp/img/packaged_apps_gallery-1.jpg">
+										APEX:<br>Using APEX, developers can quickly develop and deploy compelling apps that solve real problems and provide immediate value. You won't need to be an expert in a vast array of technologies to deliver sophisticated solutions. Focus on solving the problem and let APEX take care of the rest.<br><br>Click on Low Code button for more information.<br><br>
+									</span>
+									<div class="col-item-w1 hover02">
+										<div class="column">
+											<table width="100%">
+												<tr>
+													<td align="center" valign="center">
+														<img class="hover02_img" src="https://keithlaker.github.io/ADW/Images/lca.png" style="width:135px !important;">
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<br>
+						<br>
+						<br>
+						<div class="rc13w5" style="color:black !important">
+							<div class="col-w1">
+								<div class="col-item">
+									<div class="col-item-w1" style="text-align:center;">
+									</div>
+								</div>
+								<div class="col-item">
+									<div class="col-item-w1" style="text-align:center;">
+									</div>
+								</div>
+								<a class="col-item hover_dl tooltipdl"  href="https://blogs.oracle.com/database/announcing-new-data-tools-in-autonomous-data-warehouse">
+									<span class="tooltiptext">
+										<img src="https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/02957a8f-8dff-42d7-8891-30b185935d2f/Image/dcbeb3fa2040f6f3c0a7c8eb7fd9cd92/01_rashmi.JPG">
+										Data Catalog:<br>Oracle Cloud Infrastructure (OCI) Data Catalog is a metadata management service that helps data professionals discover data and support data governance. Designed specifically to work well with the Oracle ecosystem, it provides an inventory of assets, a business glossary, and a common metastore for data lakes.<br><br>Click on Data Catalog button for more information.<br><br>
+									</span>
+									<div class="col-item">
+										<div class="col-item-w1" style="text-align:center;">
+											<img class="hover_dl_img" src="file:///Users/keithlaker/Desktop/My%20Screenshots/Latest%20Screenshots/oci_data_catalog_icon.png" style="width:140px !important;">
+										</div>
+									</div>
+								</a>
+								<div class="col-item">
+									<div class="col-item-w1" style="text-align:center;">
+									</div>
+								</div>
+								<div class="col-item">
+									<div class="col-item-w1" style="text-align:center;">
+									</div>
+								</div>
+								<div class="col-item">
+									<div class="col-item-w1" style="text-align:center;">
+									</div>
+								</div>
+								<div class="col-item">
+									<div class="col-item-w1" style="text-align:center;">
+									</div>
+								</div>
+								<div class="col-item">
+									<div class="col-item-w1" style="text-align:center;">
+									</div>
+								</div>
+								<a class="tooltipadb"  href="https://blogs.oracle.com/database/announcing-new-data-tools-in-autonomous-data-warehouse">
+									<span class="tooltiptext">
+										<img src="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/manage-monitor-autonomous-database/adw-managing-monitoring/images/click-performance-hub.jpg">
+										Autonomous Data Warehouse:<br>Oracle Autonomous Data Warehouse is a cloud-native data warehouse service that eliminates all the complexities of operating a data warehouse. It automates provisioning, configuring, securing, tuning, scaling, and backups. It includes tools for self-service data loading, data transformations, business models, automatic insights, and built-in converged database capabilities that enable simpler queries across multiple data types and machine learning analysis. It’s available in both the Oracle public cloud and customers' data centers with Oracle Cloud@Customer.<br><br>Click on warehouse icon for more information.<br><br>
+									</span>
+									<div class="col-item">
+										<div class="col-item-w1" style="text-align:center;">
+											<img src="https://www.oracle.com/a/tech/img/autonomous-data-warehouse-cloud.svg" style="width:350px !important;">
+										</div>
+									</div>
+								</a>
+								<div class="col-item">
+									<div class="col-item-w1" style="text-align:center;">
+									</div>
+								</div>
+								<div class="col-item">
+									<div class="col-item-w1" style="text-align:center;">
+									</div>
+								</div>
+								<div class="col-item">
+									<div class="col-item-w1" style="text-align:center;">
+									</div>
+								</div>
+								<div class="col-item">
+									<div class="col-item-w1" style="text-align:center;">
+									</div>
+								</div>
+								<div class="col-item">
+									<div class="col-item-w1" style="text-align:center;">
+									</div>
+								</div>
+								<a class="col-item hover_dl tooltipdl"  href="https://blogs.oracle.com/database/announcing-new-data-tools-in-autonomous-data-warehouse">
+									<span class="tooltiptext">
+										<img src="https://www.oracle.com/a/tech/img/dbsec/data-safe/datasafe-dashboard.png">
+										Data Safe:<br>Data Safe empowers organizations to understand data sensitivity, evaluate data risks, mask sensitive data, implement and monitor security controls, assess user security, and monitor user activity—all in a single, unified console. These capabilities help to manage the day-to-day security and compliance requirements of Oracle Databases, both on-premises and in the cloud.<br><br>Click on Data Dafe button for more information.<br><br>
+									</span>
+									<div class="col-item">
+										<div class="col-item-w1" style="text-align:center;">
+											<img class="hover_dl_img" src="file:///Users/keithlaker/Desktop/My%20Screenshots/Latest%20Screenshots/oci_data_safe_icon.png" style="width:160px !important;">
+										</div>
+									</div>
+								</a>
+								<div class="col-item">
+									<div class="col-item-w1" style="text-align:center;">
+									</div>
+								</div>
+								<div class="col-item">
+									<div class="col-item-w1" style="text-align:center;">
+									</div>
+								</div>
+							</div>
+							<div class="rc13w5" style="color:black !important">
+								<div class="col-w1">
+									<br>
+									<div class="col-item">
+										<div class="col-item-w1" style="text-align:center;">
+										</div>
+									</div>
+									<div class="col-item">
+										<div class="col-item-w1" style="text-align:center;">
+										</div>
+									</div>
+									<div class="col-item">
+										<div class="col-item-w1" style="text-align:center;">
+										</div>
+									</div>
+									<div class="col-item hover_dl">
+										<div class="col-item-w1" style="text-align:center;">
+											<img class="hover_dl_img" src="file:///Users/keithlaker/Desktop/My%20Screenshots/Latest%20Screenshots/oci_object_storage_icon.png"  style="width:180px !important;">
+										</div>
+									</div>
+									<div class="col-item">
+										<div class="col-item-w1" style="text-align:center;">
+										</div>
+									</div>
+									<div class="col-item hover_dl">
+										<div class="col-item-w1" style="text-align:center;">
+											<img class="hover_dl_img" src="file:///Users/keithlaker/Desktop/My%20Screenshots/Latest%20Screenshots/oci_batch_processing_icon.png" style="width:180px !important;">
+										</div>
+									</div>
+									<div class="col-item">
+										<div class="col-item-w1" style="text-align:center;">
+										</div>
+									</div>
+									<div class="col-item">
+										<div class="col-item-w1" style="text-align:center;">
+										</div>
+									</div>
+									<div class="col-item">
+										<div class="col-item-w1" style="text-align:center;">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br>
+						<br>
+						<br>
+						<div class="rc13w5" style="color:black !important;">
+							<div class="col-w1" style="padding-left:39.9%;">
+								<div class="col-item">
+									<br>
+									<div class="obttns">
+										<div class="obttn2" >
+											<a href="https://blogs.oracle.com/database/announcing-new-data-tools-in-autonomous-data-warehouse" style="background-color:darkgreen; font-weight:bold; width:300px; color:white !important; border-radius: 15px;">LEARN MORE ABOUT<br>DATA WAREHOUSING IN THE CLOUD<br>WITH ORACLE</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-item">
+									<div class="col-item-w1">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<br>
+				<br>
+
+<!-- / _Raw-Text -->
+
+<!-- _Raw-Text -->
+				<section class="rc11 rc11v1 rw-neutral-30bg" data-trackas="rc11" data-ocomid="rc11" data-lbl="upgrade-or-migrate-your-database:">
+					<div class="rc11w1 cwidth">
+						<div class="rc11w2 rc11bttns">
+							<div class="rc11w3">
+								<h3>Upgrade and/or migrate your existing data warehouse today</h3>
+								<p>Upgrade to the latest Oracle Database technology to benefit from market-leading performance, availability, analytics and security. Migrate your data warehouse to Oracle Cloud Infrastructure to combine low cost with high performance.
+								</p>
+							</div>
+							<div class="obttns">
+								<div style="width:170px; height:100px;" class="obttn2">
+									<a href="/database/technologies/upgrades.html" data-lbl="learn-more">Learn more about<br>upgrades and migrations</a>
+								</div>
+								<div style="width:170px; height:100px;" class="obttn1">
+									<a href="https://go.oracle.com/LP=104972?elqCampaignId=282652" data-lbl="webcast">Webcast: Upgrade to<br>Oracle Database 19c</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<br>
+				<br>
+
+<!-- / _Raw-Text -->
+
+<!-- _Raw-Text -->
+<!-- RC13v1 -->
+				<section class="rc13 rc13v1 cpad rw-theme-20bg rw-pattern-theme1w rw-pattern-28p rw-pattern-load" data-trackas="rc13" data-ocomid="rc13"  style="color:black !important">
+					<div class="rc13w1 cwidth">
+						<div class="rc13w2">
+							<div class="rc13w3">
+								<br>
+								<h2 class="rw-ptitle">Leaarn why so many customers rely on Oracle for all their data warehouse needs</h2>
+								<br>
+								<br>
+							</div>
+						</div>
+						<div class="rc13w5 col-framework col-justified col3 col-gutters col-multi" style="color:black !important">
+							<div class="col-w1">
+								<div class="col-item" style="border-style:solid; border-top-width:0px; border-left-width:0px; border-right-width:2px; border-bottom-width:0px; padding:10px; border-color:lightgrey">
+									<div class="col-item-w1">
+										<h4>Oracle is #1</h4>
+										<p>
+											Oracle Autonomous Database scores highest in all Use Cases in 2020 Gartner Critical Capabilities for Cloud Database Management Systems for Operational Use Cases
+										</p>
+									</div>
+									<div style="border-style:solid; border-width:6px; width:150px; background-color:black; border-radius:5px; text-align: center; padding: 5px;">
+										<a style="color: white; text_decoration: none" href="https://www.oracle.com/emea/news/announcement/oracle-recognized-gartner-cloud-database-market-reports-2020-12-14.html">Learn more</a>
+									</div>
+								</div>
+								<div class="col-item" style="border-style:solid; border-top-width:0px; border-left-width:0px; border-right-width:0px; border-bottom-width:0px; padding:10px; border-color:lightgrey">
+									<div class="col-item-w1">
+										<h4>Smarter, faster analytic queries</h4>
+										<p>Database In-Memory delivers speed-of-thought processing for sophisticated analytic queries. Database In-Memory implements leading-edge columnar data processing to accelerate your data warehouse analytics by orders of magnitude. Answers that used to take minutes to obtain are now available instantly. Questions that you used to dream about asking can now be quickly and easy answered.
+										</p>
+									</div>
+									<div style="border-style:solid; border-width:6px; width:150px; background-color:black; border-radius:5px; text-align: center; padding: 5px;">
+										<a style="color: white; text_decoration: none" href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/analytical-sql.html">Learn more</a>
+									</div>
+								</div>
+								<div class="col-item" style="border-style:solid; border-top-width:0px; border-left-width:2px; border-right-width:0px; border-bottom-width:0px; padding:10px; border-color:lightgrey">
+									<div class="col-item-w1">
+										<h4>Easier, faster management</h4>
+										<p>Oracle Multitenant is the architecture for the next-generation data warehouse in the cloud. It delivers easier consolidation of data marts and data warehouses by offering complete isolation, agility and economies of scale. Oracle Multitenant offers additional benefits by providing a fast and efficient management framework for delivering sandboxes and data discovery platforms within the overall Oracle Big Data Management System.
+										</p>
+									</div>
+									<div style="border-style:solid; border-width:6px; width:150px; background-color:black; border-radius:5px; text-align: center; padding: 5px;">
+										<a style="color: white; text_decoration: none" href="https://www.oracle.com/database/multitenant/">Learn more</a>
+									</div>
+								</div>
+								<div class="col-item" style="border-style:solid; border-top-width:0px; border-left-width:0px; border-right-width:2px; border-bottom-width:0px; padding:10px; border-color:lightgrey">
+									<div class="col-item-w1">
+										<h4>Consistently high performance</h4>
+										<p>
+											As data warehouse grows with Oracle Partitioning which enhances the manageability, performance, and availability of large data marts and data warehouses. It increases query performance by only working on the data that is relevant, improves availability through individual partition manageability and decreases costs by storing data in the most appropriate manner.
+										</p>
+									</div>
+									<div style="border-style:solid; border-width:6px; width:150px; background-color:black; border-radius:5px; text-align: center; padding: 5px;">
+										<a style="color: white; text_decoration: none" href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/partitioning.html">Learn more</a>
+									</div>
+								</div>
+								<div class="col-item" style="border-style:solid; border-top-width:0px; border-left-width:0px; border-right-width:0px; border-bottom-width:0px; padding:10px; border-color:lightgrey">
+									<div class="col-item-w1">
+										<h4>Temperature-based data optimization</h4>
+										<p>
+											Made possible with Automatic Data Optimization (ADO), which allows you to create policies for smart data compression and data movement making it possible to implement storage and compression tiering. ADO works in conjunction with Oracle Partitioning.
+										</p>
+									</div>
+									<div style="border-style:solid; border-width:6px; width:150px; background-color:black; border-radius:5px; text-align: center; padding: 5px;">
+										<a style="color: white; text_decoration: none" href="https://docs.oracle.com/en/database/oracle/oracle-database/19/vldbg/ilm-strategy-heatmap-ado.html#GUID-1E510486-2ED8-467A-A5BA-045F4F3AC324">Learn more</a>
+									</div>
+								</div>
+								<div class="col-item" style="border-style:solid; border-top-width:0px; border-left-width:2px; border-right-width:0px; border-bottom-width:0px; padding:10px; border-color:lightgrey">
+									<div class="col-item-w1">
+										<h4>Optimized Hardware</h4>
+										<p>
+											Oracle Database is able to efficiently leverage all hardware resources - multiple CPUs, multiple IO channels, multiple storage units, multiple nodes in a cluster. The Oracle Optimizer can automatically decide if a query should run in parallel and the degree of parallelism to use based on the resource requirements of the statement.
+										</p>
+									</div>
+									<div style="border-style:solid; border-width:6px; width:150px; background-color:black; border-radius:5px; text-align: center; padding: 5px;">
+										<a style="color: white; text_decoration: none" href="https://www.oracle.com/database/technologies/exadata.html">Learn more</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<br>
+				<br>
+<!-- /RC13v1 -->
+
+<!-- / _Raw-Text -->
+
+<!-- _Raw-Text -->
+				<section class="rc34 rc34v1 cpad rw-theme-130bg rw-pattern-theme1w rw-pattern-8p rw-pattern-load" data-trackas="rc34" data-ocomid="rc34" data-lbl="deployment-options:">
+					<div class="rc34w1 cwidth">
+						<br>
+						<h2 class="rw-ptitle" style="color:white; font-weight: 800;">Deployment options to fit your needs</h2>
+						<br>
+						<div class="col-framework col3 col-multi col-gutters inview">
+							<div class="col-w1">
+								<div class="col-item" style="border-style:solid; border-width:2px; border-radius:10px; text-align:left;">
+									<div class="col-item-w1 rw-neutral-00bg">
+										<div class="col-item-w2" style="height: 259px;">
+											<h4>At your location<br><br></h4>
+											<div class="col-item-w1" style="border-style:solid; border-width:2px;border-radius:10px; text-align:center; box-shadow: 5px 5px 15px 3px #888888; height:120px; width: 250px; padding-top:10px;">
+												<img src="https://keithlaker.github.io/ADW/Images/Exadata.jpg" width="85px">
+											</div>
+											<p style="font-size: 10pt;">Run Oracle Database at your own location on your own hardware. Or, use Oracle Exadata in your data center for best performance, flexibility, and robustness.
+												<br><br><br>
+											</p>
+										</div>
+										<div style="margin-top: 150px"><br></div>
+										<div class="col-item-w3" style="height: 59px;">
+											<div class="obttns">
+												<div>
+													<a href="https:/www.oracle.com/engineered-systems/exadata/" data-lbl="oracle-exadata">Oracle Exadata</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-item" style="border-style:solid; border-width:2px; border-radius:10px; text-align:left;">
+									<div class="col-item-w1 rw-neutral-00bg">
+										<div class="col-item-w2" style="height: 259px;">
+											<h4>Oracle Cloud at your location<br><br></h4>
+											<div class="col-item-w1" style="border-style:solid; border-width:2px;border-radius:10px; text-align:center; box-shadow: 5px 5px 15px 3px #888888; height:120px; width: 250px; padding-top:5px;">
+												<img src="https://keithlaker.github.io/ADW/Images/Oracle-CC.jpg" width="175px">
+											</div>
+											<p style="font-size: 10pt;">The best platform for your data warehouse projects, delivered securely behind your firewall and managed by Oracle.
+												<br><br><br><br>
+											</p>
+										</div>
+										<div style="margin-top: 150px"><br></div>
+										<div class="col-item-w3" style="height: 59px;">
+											<div class="obttns">
+												<div>
+													<a href="https:/www.oracle.com/cloud/cloud-at-customer/" data-lbl="oracle-cloud@customer">Cloud@Customer</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-item" style="border-style:solid; border-width:2px; border-radius:10px; text-align:left;">
+									<div class="col-item-w1 rw-neutral-00bg">
+										<div class="col-item-w2" style="height: 259px;">
+											<h4>Oracle public cloud<br><br></h4>
+											<div class="col-item-w1" style="border-style:solid; border-width:2px;border-radius:10px; text-align:center; box-shadow: 5px 5px 15px 3px #888888; height:120px; width: 250px; padding-top:20px;">
+												<img src="https://keithlaker.github.io/ADW/Images/db-cloud.jpg" width="155px">
+											</div>
+											<p style="font-size: 10pt;">Benefit from the computing power, physical storage, and tooling in the cloud that simplify routine database management operations by using Oracle’s highest-performance engineered system, designed specifically for enterprise-scale cloud workloads.
+												<br>
+											</p>
+										</div>
+										<div style="margin-top: 150px"><br></div>
+										<div class="col-item-w3" style="height: 59px;">
+											<div class="obttns">
+												<div>
+													<a href="https://www.oracle.com/autonomous-database/" data-lbl="database-cloud-services">Oracle Public Cloud</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+<!-- / _Raw-Text -->
+				<section class="rc68 rc68v0 rw-neutral-30bg cpad rw-pattern10 rw-pattern-50p" data-trackas="rc68" data-ocomid="rc68">
+					<div class="rc68w1 cwidth">
+						<div class="rc68w2" style="padding-left:100px;">
+							<h3 class="rw-ptitle"><br>Learn more about Oracle's unique data warehouse features</h3>
+							<h2 class="rw-ptitle">Get more in-depth details...</h2>
+							<br>
+							<br>
+							<div class="col-framework col-left col2 col-gutters">
+								<div class="col-w1">
+									<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/partitioning.html" class="col-item rw-neutral-00bg rw-rose-100-beforebg">
+										<div class="col-item-w1" >
+											<h4>Partitioning</h4><br>
+											<br>
+										</div>
+										<div class="col-item-w2">
+											<table>
+												<tr>
+													<td>
+														<p >Partitioning is powerful functionality that allows tables, indexes, and index-organized tables to be subdivided into smaller pieces, enabling these database objects to be managed and accessed at a finer level of granularity.<br><br>Oracle provides a comprehensive range of partitioning schemes to address every business requirement.
+														</p>
+													</td>
+													<td valign="top">
+														<img src="https://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2529774.png" style="width:120px;">
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<br>
+														<br>
+														<div class="obttns">
+															<div class="obttn1" style="background-color:white !important;">
+																<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/partitioning.html">Learn more...</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/analytical-sql.html" class="col-item rw-neutral-00bg rw-lilac-100-beforebg">
+										<div class="col-item-w1">
+											<h4>Analytic SQL</h4><br>
+										</div>
+										<div class="col-item-w2">
+											<table>
+												<tr>
+													<td>
+														<p>The in-database analytical functions and features that are embedded inside the Oracle Database can be used to answer a wide variety of business problems.<br><br>Developers and business users can access a wide range of analytic features and combine their results with other SQL queries and analytical pipelines to gain deeper insights.
+														</p>
+													</td>
+													<td valign="top">
+														<img src="https://www.oracle.com/technetwork/database/bi-datawarehousing/sql-machine-512-3310761.png" style="width:120px;">
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<br><br>
+														<div class="obttns">
+															<div class="obttn1" style="background-color:white !important;">
+																<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/analytical-sql.html">Learn more...</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/query-optimization.html" class="col-item rw-neutral-00bg rw-plum-100-beforebg">
+										<div class="col-item-w1">
+											<h4>Query Optimizer</h4>
+										</div>
+										<div class="col-item-w2">
+											<table>
+												<tr>
+													<td>
+														<p>The Optimizer is one of the most fascinating components of the Oracle Database, since it is essential to the processing of every SQL statement.<br><br>The Optimizer determines the most efficient execution plan for each SQL statement based on the structure of the query, the available statistical information about the underlying objects, and all the relevant optimizer and execution features.
+														</p>
+													</td>
+													<td valign="top">
+														<img src="https://www.oracle.com/a/tech/img/query-optimization.svg" style="width:120px;">
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<br><br>
+														<div class="obttns">
+															<div class="obttn1" style="background-color:white !important;">
+																<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/query-optimization.html">Learn more...</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://www.oracle.com/database/technologies/in-memory.html" class="col-item rw-neutral-00bg rw-pebble-100-beforebg">
+										<div class="col-item-w1">
+											<h4>In-Memory</h4>
+										</div>
+										<div class="col-item-w2">
+											<table>
+												<tr>
+													<td>
+														<p>Database In-Memory provides a unique dual-format architecture that enables tables to be simultaneously represented in memory using traditional row format and a new in-memory column format.<br><br>The Oracle Optimizer automatically routes analytic queries to the column format and OLTP queries to the row format, transparently delivering best-of-both-worlds performance.
+														</p>
+													</td>
+													<td valign="top">
+														<img src="https://www.oracle.com/a/tech/img/in-memory.svg" style="width:120px;">
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<br><br>
+														<div class="obttns">
+															<div class="obttn1" style="background-color:white !important;">
+																<a href="https://www.oracle.com/database/technologies/in-memory.html">Learn more...</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://www.oracle.com/data-science/machine-learning/" class="col-item rw-neutral-00bg rw-sienna-100-beforebg">
+										<div class="col-item-w1">
+											<h4>Machine Learning</h4>
+										</div>
+										<div class="col-item-w2">
+											<table>
+												<tr>
+													<td>
+														<p>Oracle Machine Learning accelerates the creation and deployment of machine learning models for data scientists using reduced data movement, AutoML technology, and simplified deployment.<br><br>Simplify and accelerate the creation of machine learning models for both expert and non-expert data scientists alike, using familiar SQL and PL/SQL for data preparation, model building, evaluation, and deployment.
+														</p>
+													</td>
+													<td valign="top">
+														<img src="https://www.oracle.com/a/tech/img/machine-learning/oml-brain-icon-cloud.svg" style="width:120px;">
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<br><br>
+														<div class="obttns">
+															<div class="obttn1" style="background-color:white !important;">
+																<a href="https://www.oracle.com/data-science/machine-learning/">Learn more...</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/bigdata-sql.html" class="col-item rw-neutral-00bg rw-lilac-100-beforebg">
+										<div class="col-item-w1">
+											<h4>Big Data SQL</h4><br>
+										</div>
+										<div class="col-item-w2">
+											<table>
+												<tr>
+													<td>
+														<p>Fast, secure SQL queries over all your data. Extends Oracle SQL processing to and the security of Oracle Autonomous Database to all your data.<br><br>It also includes a unique Smart Scan service that minimizes data movement and maximizes performance, by parsing and intelligently filtering data where it reside.
+														</p>
+													</td>
+													<td valign="top">
+														<img src="https://www.oracle.com/technetwork/database/bi-datawarehousing/sql-machine-512-3310761.png" style="width:120px;">
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<br><br>
+														<div class="obttns" >
+															<div class="obttn1" style="background-color:white !important;">
+																<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/bigdata-sql.html">Learn more...</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://www.oracle.com/database/spatial/" class="col-item rw-neutral-00bg rw-teal-100-beforebg">
+										<div class="col-item-w1">
+											<h4>Spatial</h4><br>
+										</div>
+										<div class="col-item-w2">
+											<table>
+												<tr>
+													<td>
+														<h4>Spatial</h4><br>
+														<p>Oracle Spatial allows developers and analysts to get started easily with location intelligence analytics and mapping services. Organizations can manage different types of geospatial data, perform hundreds of spatial analytic operations, and use interactive map visualization tools.
+														</p>
+													</td>
+													<td valign="top">
+														<img src="https://www.oracle.com/a/tech/img/obic-spatial.svg" style="width:120px;">
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<br><br>
+														<div class="obttns">
+															<div class="obttn1" style="background-color:white !important;">
+																<a href="https://www.oracle.com/database/spatial/">Learn more...</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://www.oracle.com/database/graph/" class="col-item rw-neutral-00bg rw-pine-100-beforebg">
+										<div class="col-item-w1">
+											<h4>Graph</h4><br>
+										</div>
+										<div class="col-item-w2">
+											<table>
+												<tr>
+													<td>
+														<p>Graph allows analysts and developers to perform fraud detection in banking, find connections and link to data, and improve traceability in smart manufacturing, all while gaining enterprise-grade security, ease of data ingestion, and strong support for data workloads.
+														</p>
+													</td>
+													<td valign="top">
+														<img src="https://www.oracle.com/a/tech/img/obic-property-graph.svg" style="width:120px;">
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<br><br>
+														<div class="obttns">
+															<div class="obttn1" style="background-color:white !important;">
+																<a href="https://www.oracle.com/database/graph/">Learn more...</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://www.oracle.com/database/technologies/security/data-safe.html" class="col-item rw-neutral-00bg rw-rose-100-beforebg">
+										<div class="col-item-w1">
+											<h4>Data Safe</h4>
+										</div>
+										<div class="col-item-w2">
+											<table>
+												<tr>
+													<td>
+														<p>Data Safe is a unified control center which helps you understand the sensitivity of your data, evaluate risks to data, mask sensitive data, implement and monitor security controls, assess user security, monitor user activity, and address data security compliance requirements.
+														</p>
+													</td>
+													<td valign="top">
+														<img src="https://www.oracle.com/a/tech/docs/dbsec/data-safe/datasafe.svg" style="width:120px;">
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<br><br>
+														<div class="obttns">
+															<div class="obttn1" style="background-color:white !important;">
+																<a href="https://www.oracle.com/database/technologies/security/data-safe.html">Learn more...</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/parallel-execution.html" class="col-item rw-neutral-00bg rw-plum-100-beforebg">
+										<div class="col-item-w1">
+											<h4>Parallel Execution</h4>
+										</div>
+										<div class="col-item-w2">
+											<table>
+												<tr>
+													<td>
+														<p>Parallel execution is a commonly used method of speeding up operations by splitting a task into smaller sub tasks.<br><br>The more effectively the database can leverage all hardware resources-multiple CPUs, multiple IO channels, multiple storage units, multiple nodes in a cluster—the more efficiently queries and other database operations will be processed.
+														</p>
+													</td>
+													<td valign="top">
+														<img src="https://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/2611384.png" style="width:120px;">
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<br><br>
+														<div class="obttns">
+															<div class="obttn1" style="background-color:white !important;">
+																<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/parallel-execution.html">Learn more...</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+<!-- /RC68v0 -->
+
+<!-- / _Raw-Text -->
+				<section class="rc68 rc68v0 rw-neutral-30bg cpad rw-pattern10 rw-pattern-50p" data-trackas="rc68" data-ocomid="rc68">
+					<div class="rc68w1 cwidth">
+						<div class="rc68w2" style="padding-left:100px;">
+							<h3 class="rw-ptitle"><br>Data Warehouse Workshops</h3>
+							<h2 class="rw-ptitle">Get hands-on experience with free workshops on Oracle LiveLabs...</h2>
+							<br>
+							<br>
+							<div class="col-framework col-left col2 col-gutters">
+								<div class="col-w1">
+									<a href="https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=865" class="col-item rw-neutral-00bg rw-pine-100-beforebg">
+										<div class="col-item-w1" >
+											<h4>Oracle MovieStream</h4><br>
+											<br>
+										</div>
+										<div class="col-item-w2">
+											<table>
+												<tr>
+													<td>
+														<p>Oracle MovieStream is a fictitious movie streaming service. They face challenges that are typical to many organizations across industries.
+														<br>
+														<br>
+														Most workshops focus on teaching you about a cloud service or performing a series of tasks. This workshop is different. You will learn how to deliver high value solutions using Oracle Cloud data platform services. And, the workshop will do this in the context of a company that we all can relate to and understand.
+													</td>
+													<td valign="top">
+														<img src="https://www.oracle.com/a/tech/docs/technical-resources/banner-image.png" style="width:120px;">
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<br>
+														<br>
+														<div class="obttns">
+															<div class="obttn1" style="background-color:white !important;">
+																<a href="https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=865">Learn more...</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=582" class="col-item rw-neutral-00bg rw-rose-100-beforebg">
+										<div class="col-item-w1" >
+											<h4>ADB Quick Start</h4><br>
+											<br>
+										</div>
+										<div class="col-item-w2">
+											<table>
+												<tr>
+													<td>
+														<p>
+															The labs in this workshop walk you through all the steps to get started using the Oracle Autonomous Database on Shared Infrastructure (ADB-S). You will provision a new ADB instance, load data from the object store and troubleshoot data loads, query external data residing on the object store, and create rich data visualizations using Oracle Analytics Desktop.
+														</p>
+													</td>
+													<td valign="top">
+														<img src="https://www.oracle.com/a/tech/docs/technical-resources/slide5.jpeg" style="width:120px;">
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<br>
+														<br>
+														<div class="obttns">
+															<div class="obttn1" style="background-color:white !important;">
+																<a href="https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=582">Learn more...</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=789" class="col-item rw-neutral-00bg rw-lilac-100-beforebg">
+										<div class="col-item-w1">
+											<h4>Important Tools for Everyone Using Oracle Autonomous Database Workshop</h4><br>
+										</div>
+										<div class="col-item-w2">
+											<table>
+												<tr>
+													<td>
+														<p>
+															The purpose of this workshop is to introduce you to the suite of data tools built into the Oracle Autonomous Data Warehouse. The workshop is designed to be used alongside your own cloud account (paid or Bring-Your-Own-License) or you can register and claim free trial credits which provides up to 3,300 hours of cloud time, and 2 TB of storage, which is more than enough time and storage space to run this workshop.
+														</p>
+													</td>
+													<td valign="top">
+														<img src="https://www.oracle.com/a/tech/docs/technical-resources/slide12.jpeg" style="width:120px;">
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<br><br>
+														<div class="obttns">
+															<div class="obttn1" style="background-color:white !important;">
+																<a href="https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=789">Learn more...</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=770" class="col-item rw-neutral-00bg rw-plum-100-beforebg">
+										<div class="col-item-w1">
+											<h4>Get Started with Graph Analytics on Oracle Autonomous Database Workshop</h4>
+										</div>
+										<div class="col-item-w2">
+											<table>
+												<tr>
+													<td>
+														<p>
+															This workshop covers how to load data in CSV files into the database and introduces key graph data modeling and analysis concepts and the interactive Graph Studio for working with graphs in an Autonomous Database. It shows you how to use graph queries to find circular payments which may indicate fraudulent transactions. You will load data from CSV files containing (artificial) Account and Transaction information. Then create a graph and finally query it and visualize the results.
+														</p>
+													</td>
+													<td valign="top">
+														<img src="https://www.oracle.com/a/tech/docs/technical-resources/slide17.jpg" style="width:120px;">
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<br><br>
+														<div class="obttns">
+															<div class="obttn1" style="background-color:white !important;">
+																<a href="https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=770">Learn more...</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=586" class="col-item rw-neutral-00bg rw-pebble-100-beforebg">
+										<div class="col-item-w1">
+											<h4>Introduction to Machine Learning Algorithms on ADB</h4>
+										</div>
+										<div class="col-item-w2">
+											<table>
+												<tr>
+													<td>
+														<p>
+															In this lab, you will use the Oracle Machine Learning (OML) SQL notebook application provided with your Autonomous Data Warehouse. This browser-based application provides a web interface to run SQL queries and scripts, which can be grouped together within a notebook. Notebooks can be used to build single reports, collections of reports, and even dashboards. OML provides a simple way to share workbooks and collections of workbooks with other OML users.
+														</p>
+													</td>
+													<td valign="top">
+														<img src="https://www.oracle.com/a/tech/docs/technical-resources/slide9.jpeg" style="width:120px;">
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<br><br>
+														<div class="obttns">
+															<div class="obttn1" style="background-color:white !important;">
+																<a href="https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=586">Learn more...</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+									<a href="https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=800" class="col-item rw-neutral-00bg rw-sienna-100-beforebg">
+										<div class="col-item-w1">
+											<h4>Introduction to Oracle Spatial Studio Workshop</h4>
+										</div>
+										<div class="col-item-w2">
+											<table>
+												<tr>
+													<td>
+														<p>
+															In this workshop you will explore the features of Spatial Studio for self-service spatial analysis and visualization. Using datasets of traffic accidents, police stations, and police station service areas, you will load and visualize spatial data, and analyze their spatial relationships as shown below.
+														</p>
+													</td>
+													<td valign="top">
+														<img src="http://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/f4a5b21d-66fa-4885-92bf-c4e81c06d916/Image/e8e7bb8b03704cfd0b291b7c968ebf4c/spatial_data_in_property_graph2.PNG" style="width:120px;">
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<br><br>
+														<div class="obttns">
+															<div class="obttn1" style="background-color:white !important;">
+																<a href="https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=800">Learn more...</a>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+<!-- /RC68v0 -->
+<!-- _Raw-Text -->
+		<!-- /RC13v1 -->
+				<section class="rc34 rc34v1 cpad rw-theme-90bg rw-pattern-theme1w rw-pattern-12p rw-pattern-load" data-trackas="rc34" data-ocomid="rc34" data-lbl="deployment-options:">
+					<div class="rc34w1 cwidth">
+						<br>
+						<br>
+						<br>
+						<h2 class="rw-ptitle">Want to learn more - use our guided learning paths</h2>
+						<br>
+						<div class="col-framework col4 col-multi col-gutters inview">
+							<div class="col-w1">
+								<div class="col-item" style="border-style:solid; border-width:2px; border-radius:10px; text-align:left; box-shadow: 5px 10px 10px #888888;">
+									<div class="col-item-w1 rw-red-30bg">
+										<div class="col-item-w2" style="height: 259px;">
+											<h4>Quick Start</h4>
+											<p>
+												Perform basic tasks on ADB. Everything from provisioning to loading data to writing queries.
+											</p>
+										</div>
+										<div class="col-item-w3" style="height: 59px;">
+											<div class="obttns">
+												<div>
+													<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/adw-training-plans.html#lgsl">Learn More</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-item" style="border-style:solid; border-width:2px; border-radius:10px; text-align:left; box-shadow: 5px 10px 10px #888888;">
+									<div class="col-item-w1 rw-blue-50bg">
+										<div class="col-item-w2" style="height: 259px;">
+											<h4>Visualizing Data</h4>
+											<p>Working with data visualization tools such as Oracle Analytics Desktop
+											</p>
+										</div>
+										<div class="col-item-w3" style="height: 59px;">
+											<div class="obttns">
+												<div>
+													<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/adw-training-plans.html#vibi">Learn More</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-item" style="border-style:solid; border-width:2px; border-radius:10px; text-align:left; box-shadow: 5px 10px 10px #888888;">
+									<div class="col-item-w1 rw-orange-70bg">
+										<div class="col-item-w2" style="height: 259px;">
+											<h4>Machine Learning</h4>
+											<p>
+												Use Oracle Machine Learning SQL Notebooks to build reports, dashboards and workbooks on Autonomous Database.
+											</p>
+										</div>
+										<div class="col-item-w3" style="height: 59px;">
+											<div class="obttns">
+												<div>
+													<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/adw-training-plans.html#wwml">Learn More</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-item" style="border-style:solid; border-width:2px; border-radius:10px; text-align:left; box-shadow: 5px 10px 10px #888888;">
+									<div class="col-item-w1 rw-purple-40bg">
+										<div class="col-item-w2" style="height: 259px;">
+											<h4>Developing Apps</h4>
+											<p>Create an APEX workspace then learn how to extend it using spatial, machine learning and security features.
+											</p>
+										</div>
+										<div class="col-item-w3" style="height: 59px;">
+											<div class="obttns">
+												<div>
+													<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/adw-training-plans.html#dapp">Learn More</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-item" style="border-style:solid; border-width:2px; border-radius:10px; text-align:left; box-shadow: 5px 10px 10px #888888;">
+									<div class="col-item-w1 rw-yellow-50bg">
+										<div class="col-item-w2" style="height: 259px;">
+											<h4>Managing and Monitoring</h4>
+											<p>Provision an Autonomous Database, load sample data and manage and monitor the environment using the Service Console.
+											</p>
+										</div>
+										<div class="col-item-w3" style="height: 59px;">
+											<div class="obttns">
+												<div>
+													<a href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/adw-training-plans.html#mmon">Learn More</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+<!-- / _Raw-Text -->
+<!-- RC05v1 -->
+				<section class="rc05 rc05v1" data-trackas="rc05" data-ocomid="rc05">
+					<div class="rc05w1 cwidth">
+						<div class="rc05link">
+							<br>
+							<br>
+							<br>
+							<br>
+							<a href="https://www.oracle.com/customers/?product=mpd-cld-infra:auto-db" data-lbl="see-more">See more data warehouse customer successes</a>
+						</div>
+						<br>
+						<br>
+						<br>
+						<br>
+						<h3 class="rw-ptitle"><br>Featured Data Warehouse Customers</h3>
+						<p class="rwaccent-2">Learn how Oracle customers are using Oracle's data warehouse platform to transform their businesses by helping them to reduce costs and complexity and allowing them to engage with their data in new smarter, better ways.
+						</p>
+						<div class="col-framework col-gutters col4 col-multi">
+							<div class="col-w1">
+								<a href="https://www.oracle.com/customers/siemens-mobility/" data-lbl="siemens-mobility" class="rc05w3 col-item" style="background-position: left bottom; background-image:url('https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/bc160bb0-9058-4c0e-b5c1-a4cbad838e7d/Image/ae80a9efa7d1d15d585359f6e975241f/150417_siem_smart_mobility_kv_isocv2.jpg');">
+									<div class="rc05w4">
+										<div class="rc05logo" style="background-image:url('https://oracle.com/a/ocom/img/customerlogo-siemens.png');"></div>
+										<div class="rc05contentarea">
+											<div class="rc05heading">Siemens Mobility tames project complexity using Oracle Cloud</div>
+											<div class="rc05subcopy">For a vital project to digitize European railroad operations, Siemens Mobility is automating its processes with Oracle Autonomous Database and Oracle APEX.
+											</div>
+											<div class="rc05refs">
+												<div class="rc05cat">Oracle Autonomous Database</div>
+												<div class="rc05detail"><span class="rc05lbl">Industry:</span><span class="rc05def">Travel and Transportation</span></div>
+												<div class="rc05detail"><span class="rc05lbl">Location:</span><span class="rc05def">Germany</span></div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="https://www.oracle.com/customers/infrastructure/outfront-media/" data-lbl="outfront-media-expands-data-analysis" class="rc05w3 col-item" style="background-image:url('https://www.oracle.com/oce/customers/assets/images/CONT060876985C844C9E9D4C5145C586FABE/native/rc05-outfront-media.jpg');">
+									<div class="rc05w4">
+										<div class="rc05logo" style="background-image:url('https://www.oracle.com/oce/customers/assets/images/CONTB7590886CFF44F479EA9723FC49905BD/native/rc05-logo-outfront media.svg')";></div>
+										<div class="rc05contentarea">
+											<div class="rc05heading">OUTFRONT Media expands data analysis with Oracle Cloud</div>
+											<div class="rc05subcopy">Outdoor media company uses Oracle Autonomous Data Warehouse to advise customers on where to spend their ad dollars.
+											</div>
+											<div class="rc05refs">
+												<div class="rc05cat">Oracle Autonomous Database<br />
+													Oracle Analytics
+												</div>
+												<div class="rc05detail"><span class="rc05lbl">Industry:</span><span class="rc05def">MEDIA AND ENTERTAINMENT</span></div>
+												<div class="rc05detail"><span class="rc05lbl">Location:</span><span class="rc05def">UNITED STATES</span></div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="https://www.oracle.com/customers/pianoforte/" data-lbl="mestec-factory-performance" class="rc05w3 col-item" style="background-image:url('https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/8d9e3f14-bbd5-4ed5-a905-59c6009c87c7/File/cffb75bc31e65e5c13cec16fb9a47ea0/fashion.PNG');">
+									<div class="rc05w4">
+										<div class="rc05logo" style="background-image:url('https://www.oracle.com/node/oce/storyhub/prod/api/v1.1/assets/CONTBBCA8F99ADFA41B382A6BFDF670A9F89/native');"></div>
+										<div class="rc05contentarea">
+											<div class="rc05heading">Pianoforte gains real-time insights with Oracle Cloud</div>
+											<div class="rc05subcopy">he retail fashion group deployed Oracle Analytics Cloud on Oracle Autonomous Database to improve operational decision-making and boost agility..
+											</div>
+											<div class="rc05refs">
+												<div class="rc05cat">Oracle Autonomous Database</div>
+												<div class="rc05detail"><span class="rc05lbl">Industry:</span><span class="rc05def">Retail</span></div>
+												<div class="rc05detail"><span class="rc05lbl">Location:</span><span class="rc05def">Italy</span></div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="https://www.oracle.com/customers/infrastructure/vodafone-fiji/" data-lbl="vodafone-fiji-speeds-decision-making" class="rc05w3 col-item" style="background-image:url('https://www.oracle.com/oce/customers/assets/images/CONT95CFF96B27C54408985D167B299413EE/native/rc05-vodafone-fiji.jpg');">
+									<div class="rc05w4">
+										<div class="rc05logo" style="background-image:url('https://www.oracle.com/oce/customers/assets/images/CONTFB4A735056954CF69B0C42D41BA6F9B9/native/rc05-vodafone-fiji-logo.svg');"></div>
+										<div class="rc05contentarea">
+											<div class="rc05heading">Vodafone Fiji speeds decision-making with Oracle Cloud</div>
+											<div class="rc05subcopy">Pacific island carrier uses Oracle Autonomous Data Warehouse to analyze data consolidated from multiple acquisitions.
+											</div>
+											<div class="rc05refs">
+												<div class="rc05cat">Oracle Autonomous Database<br />
+													Oracle Analytics
+												</div>
+												<div class="rc05detail"><span class="rc05lbl">Industry:</span><span class="rc05def">COMMUNICATIONS</span></div>
+												<div class="rc05detail"><span class="rc05lbl">Location:</span><span class="rc05def">FIJI</span></div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="https://www.oracle.com/customers/unicomer/" data-lbl="unicomer" class="rc05w3 col-item" style="background-image:url('https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/5f83c976-296d-4063-8c1e-3fcde07d2347/File/9fa320e1d79149e06422694ded778f75/unicomer.jpg');">
+									<div class="rc05w4">
+										<div class="rc05logo" data-bgimg=""></div>
+										<div class="rc05contentarea">
+											<div class="rc05heading">Unicomer runs its retail empire with help from Oracle Cloud</div>
+											<div class="rc05subcopy">A move to Oracle Autonomous Database gave El Salvador-based retail giant, Unicomer, better control of its diverse operations in 27 countries.
+											</div>
+											<div class="rc05refs">
+												<div class="rc05cat">Oracle Cloud Infrastructure<br />
+													Oracle Autonomous Database
+												</div>
+												<div class="rc05detail"><span class="rc05lbl">Industry:</span><span class="rc05def">Retail</span></div>
+												<div class="rc05detail"><span class="rc05lbl">Location:</span><span class="rc05def">El Salvador</span></div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="https://www.oracle.com/customers/infrastructure/minesense/" data-lbl="minesense-help-mines-tap-efficiency" class="rc05w3 col-item" style="background-image:url('https://www.oracle.com/oce/customers/assets/images/CONTEA830DD1C9864F21A6D892BD77522A5C/native/rc05-minesense.jpg');">
+									<div class="rc05w4">
+										<div class="rc05logo" style="background-image:url('https://www.oracle.com/oce/customers/assets/images/CONT34F9CCDA75EC4EDC8DB87D4FF3CEAD73/native/rc05-logo-minesense.svg');"></div>
+										<div class="rc05contentarea">
+											<div class="rc05heading">MineSense and Oracle Cloud help mines tap vein of efficiency</div>
+											<div class="rc05subcopy">Using x-ray sensors on huge power shovels, MineSense sends IoT data to Oracle Autonomous Database, which helps mines run more precise operations.
+											</div>
+											<div class="rc05refs">
+												<div class="rc05cat">Oracle Autonomous Database</div>
+												<div class="rc05detail"><span class="rc05lbl">Industry:</span><span class="rc05def">Natural Resources</span></div>
+												<div class="rc05detail"><span class="rc05lbl">Location:</span><span class="rc05def">Canada</span></div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="https://www.oracle.com/customers/sensa-analytics/" data-lbl="sensa-speeds-healthcare" class="rc05w3 col-item" style="background-position: right;background-image:url('https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/38b3ddd6-44b1-44f3-b502-de23ce654a72/Image/32d5a25bb91a3805f43e98bf146d367f/healthcare.jpg');">
+									<div class="rc05w4">
+										<div class="rc05logo" style="background-image:url('https://www.oracle.com/node/oce/storyhub/prod/api/v1.1/assets/CONT58F94F51C2BA4E47834CF9CA2B3D4FB8/native');"></div>
+										<div class="rc05contentarea">
+											<div class="rc05heading">Sensa Analytics speeds healthcare data insights</div>
+											<div class="rc05subcopy">By using an integrated set of Oracle Autonomous Database cloud services, Sensa Analytics was able to quickly build an application that gathers data for COVID-19 patients.
+											</div>
+											<div class="rc05refs">
+												<div class="rc05cat">Oracle Autonomous Database<br />
+													Oracle Cloud Infrastructure<br>
+													Oracle Analytics
+												</div>
+												<div class="rc05detail"><span class="rc05lbl">Industry:</span><span class="rc05def">Medical</span></div>
+												<div class="rc05detail"><span class="rc05lbl">Location:</span><span class="rc05def">United States</span></div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="https://www.oracle.com/customers/infrastructure/dlight/" data-lbl="au-small-finance-bank-brings-banking-rural-india" class="rc05w3 col-item" style="background-image:url('https://www.oracle.com/a/ocom/img/rc05-dlight.jpg');">
+									<div class="rc05w4">
+										<div class="rc05logo" style="background-image:url('https://www.oracle.com/oce/customers/assets/images/CONT329E417D0CAC4ED193F9E9C1951B7E6D/native/rc05-logo-dlight.svg');"></div>
+										<div class="rc05contentarea">
+											<div class="rc05heading">With Oracle Cloud, d.light empowers the underprivileged</div>
+											<div class="rc05subcopy">Solar energy tech provider is improving more than 100 million lives thanks in part to Oracle Autonomous Data Warehouse.
+											</div>
+											<div class="rc05refs">
+												<div class="rc05cat">Oracle Autonomous Database<br />
+													Oracle Analytics
+												</div>
+												<div class="rc05detail"><span class="rc05lbl">Industry:</span><span class="rc05def">High Technology</span></div>
+												<div class="rc05detail"><span class="rc05lbl">Location:</span><span class="rc05def">Kenya</span></div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<br>
+				<br>
+<!-- /RH01v0 -->
+				<section class="rc11 rc11v0 rw-theme-160bg" data-trackas="rc11" data-ocomid="rc11">
+					<div class="rc11w1 cwidth">
+						<div class="rc11w2 rc11bttns">
+							<p style="font-weight: normal;">Check out the latest new features in Autonomous Database..</p>
+							<div class="obttns">
+								<div  style="width:150px; height:100px;" class="obttn2">
+									<a href="Checkout Latest Autonomous Data Warehouse New Features">Autonomous Database<br><br><strong>NEW<br>FEATURES</strong></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<br>
+				<br>
+
+<!-- / _Raw-Text -->
+<!-- CB89v0 -->
+				<section class="cb89 cb89v0 cpad" data-trackas="cb89" data-ocomid="cb89">
+					<div class="cb89w1 cwidth">
+						<div class="col-framework col2 col-gutters col-justified">
+							<div class="col-w1">
+								<div class="col-item" href="">
+									<div class="col-item-w1">
+										<h5>Resources</h5>
+										<ul>
+											<li style="font-family:arial !important;"><a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/data-warehousing.html">Data Warehousing with 19c</a>
+											</li>
+											<li style="font-family:arial !important;"><a href="https://education.oracle.com/searchresults?Nr=product.active%3A1&amp;Ntt=warehousing&amp;Nty=1&amp;No=0&amp;Nrpp=12&amp;Rdm=322&amp;searchType=simple&amp;type=search">Data Warehousing Training and Certification</a>
+											</li>
+											<li style="font-family:arial !important;"><a href="https://education.oracle.com/searchresults?Nr=product.active%3A1&amp;Ntt=19c&amp;Nty=1&amp;No=0&amp;Nrpp=12&amp;Rdm=89&amp;searchType=simple&amp;type=search">Oracle Database 19c Training Curriculum</a>
+											</li>
+											<li style="font-family:arial !important;"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:50:105661262070804:::50:P50_COURSE_ID,P50_EVENT_ID:460,6353">Apply Oracle Database 19c New Features</a>
+											</li>
+											<li style="font-family:arial !important;"><a href="https://education.oracle.com/oracle-database/data-warehouse/product_835?certPage=true">Certification for Data Warehouse/Database Administrators</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-item" href="">
+									<div class="col-item-w1">
+										<h5>Blogs</h5>
+										<ul>
+											<li style="font-family:arial !important;"><a href="https://oracle-big-data.blogspot.com/">Analytic SQL Blog</a></li>
+											<li style="font-family:arial !important;"><a href="https://blogs.oracle.com/datawarehousing/">Data Warehouse Insider Blog</a></li>
+											<li style="font-family:arial !important;"><a href="https://blogs.oracle.com/datamining/">Machine Learning Blog</a></li>
+											<li style="font-family:arial !important;"><a href="https://blogs.oracle.com/optimizer/">Optimizer Blog</a></li>
+											<li style="font-family:arial !important;"><a href="https://blogs.oracle.com/oraclespatial/">Spatial and Graph Blog</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+<!-- /CB89v0 -->
+				<section class="rc31 rc31v0 cpad rw-theme-150bg rw-pattern-theme1w rw-pattern-12p rw-pattern-load">
+					<div class="rc31w1 cwidth">
+						<h2 style="color: white; font-weight:bold; font-family:arial; font-size:2.4em !important;">Get started with Oracle Database</h2>
+						<div class="col-framework col-justified col4 col-gutters inview">
+							<div class="col-w1">
+								<div class="col-item">
+									<div class="col-item-w1 rw-slate-180bg" style="height: 203px;">
+										<div class="icn-img icn-cloud" style="color:white";><br>
+										</div>
+										<h3 style="color:white;">Try Oracle Cloud Free Tier</h3>
+									</div>
+									<div class="col-item-w2">
+										<p style="color: black;">Build, test, and deploy applications on Oracle Cloud for free.</p>
+										<div class="obttns">
+											<div class="obttn1"> <a href="/cloud/free/?source=:ow:o:p:gts:0620DBHomeStart&amp;intcmp=:ow:o:p:gts:0620DBHomeStart" data-cxdtrack=":ow:o:p:gts:0620DBHomeStart" data-adbtrack=":ow:o:p:gts:0620DBHomeStart" data-lbl="try-it-for-free">Try it for free</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-item">
+									<div class="col-item-w1 rw-slate-180bg" style="height: 203px;">
+										<div class="icn-img icn-beaker"><br>
+										</div>
+										<h3 style="color:white;">Run a workshop</h3>
+									</div>
+									<div class="col-item-w2">
+										<p style="color: black;">Run a wide variety of labs and workshops and experience our best technology live.</p>
+										<div class="obttns">
+											<div class="obttn1"> <a href="https://apexapps.oracle.com/pls/apex/f?p=133:1" data-lbl="workshop-learn-more">Learn more</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-item">
+									<div class="col-item-w1 rw-slate-180bg" style="height: 203px;">
+										<div class="icn-img icn-education"><br>
+										</div>
+										<h3 style="color:white;">Get certified</h3>
+									</div>
+									<div class="col-item-w2">
+										<p style="color: black;">Access online training and certifications for Oracle Database cloud services.</p>
+										<div class="obttns">
+											<div class="obttn1"> <a href="https://education.oracle.com/database/oracle-database/pFamily_32" data-lbl="get-training-and-certification">Get training and certification</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-item">
+									<div class="col-item-w1 rw-slate-180bg" style="height: 203px;">
+										<div class="icn-img icn-message"><br>
+										</div>
+										<h3 style="color:white;">Contact sales</h3>
+									</div>
+									<div class="col-item-w2">
+										<p style="color: black;">Interested in learning more? Contact one of our industry-leading experts.</p>
+										<div class="obttns">
+											<div class="obttn1"> <a href="/database/database-cloud-services-contact-form.html" data-width="640" rel="lightbox" title="Get in touch" data-lbl="get-in-touch-lightbox-open" data-trackas="rc31-lightbox">Get in touch</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+<!-- /CB100v0 -->
+			</span>
+		</div>
+
+<!-- /RC30v0 -->
+	</body>
+</html>
+					
+			
