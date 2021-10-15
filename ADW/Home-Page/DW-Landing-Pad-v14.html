@@ -434,6 +434,48 @@ text-align:right;
   visibility: visible;
   opacity: 1;
 }
+
+
+.tooltipos {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltipos span img {
+  float:left;
+  margin:0px 8px 8px 0;
+}
+
+.tooltipos  img {
+  width: 430px;
+}
+
+
+.tooltipos  .tooltiptext {
+  visibility: hidden;
+  width: 500px;
+  background-color: black;
+  border: 20px solid black;
+  box-shadow: 15px 15px 25px black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5%;
+  left: 100%;
+  margin-left: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+
+.tooltipos:hover .tooltiptext{
+  visibility: visible;
+  opacity: 1;
+}
+
 		</style>
 		
 <!-- / _Raw-Text -->
@@ -822,7 +864,7 @@ text-align:right;
 								<a class="col-item hover_dl tooltipdl"  href="https://blogs.oracle.com/database/announcing-new-data-tools-in-autonomous-data-warehouse">
 									<span class="tooltiptext">
 										<img src="https://www.oracle.com/a/tech/img/dbsec/data-safe/datasafe-dashboard.png">
-										Data Safe:<br>Data Safe empowers organizations to understand data sensitivity, evaluate data risks, mask sensitive data, implement and monitor security controls, assess user security, and monitor user activity—all in a single, unified console. These capabilities help to manage the day-to-day security and compliance requirements of Oracle Databases, both on-premises and in the cloud.<br><br>Click on Data Dafe button for more information.<br><br>
+										Data Safe:<br>Data Safe empowers organizations to understand data sensitivity, evaluate data risks, mask sensitive data, implement and monitor security controls, assess user security, and monitor user activity—all in a single, unified console. These capabilities help to manage the day-to-day security and compliance requirements of Oracle Databases, both on-premises and in the cloud.<br><br>Click on Data Safe button for more information.<br><br>
 									</span>
 									<div class="col-item">
 										<div class="col-item-w1" style="text-align:center;">
@@ -854,20 +896,17 @@ text-align:right;
 										<div class="col-item-w1" style="text-align:center;">
 										</div>
 									</div>
-									<div class="col-item hover_dl">
-										<div class="col-item-w1" style="text-align:center;">
-											<img class="hover_dl_img" src="file:///Users/keithlaker/Desktop/My%20Screenshots/Latest%20Screenshots/oci_object_storage_icon.png"  style="width:180px !important;">
+									<a class="col-item hover_dl tooltipos"  href="https://blogs.oracle.com/database/announcing-new-data-tools-in-autonomous-data-warehouse">
+										<span class="tooltiptext">
+											<img src="https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/img/6_click_upload_object_with%20red_callout.jpg">
+											OCI Object Storage:<br>The OCI Object Storage service is an internet-scale, high-performance storage platform that offers reliable and cost-efficient data durability. It can store an unlimited amount of unstructured data of any content type, including analytic data and rich content, like images and videos.<br><br>You can safely and securely store or retrieve data directly from the internet or from within the cloud platform.<br><br>Click on Object Storage button for more information.<br><br>
+										</span>
+										<div class="col-item">
+											<div class="col-item-w1" style="text-align:center;">
+												<img class="hover_dl_img" src="http://keithlaker.github.io/ADW/Home-Page/icons/oci_object_storage_icon.png"  style="width:180px !important;">
+											</div>
 										</div>
-									</div>
-									<div class="col-item">
-										<div class="col-item-w1" style="text-align:center;">
-										</div>
-									</div>
-									<div class="col-item hover_dl">
-										<div class="col-item-w1" style="text-align:center;">
-											<img class="hover_dl_img" src="file:///Users/keithlaker/Desktop/My%20Screenshots/Latest%20Screenshots/oci_batch_processing_icon.png" style="width:180px !important;">
-										</div>
-									</div>
+									</a>
 									<div class="col-item">
 										<div class="col-item-w1" style="text-align:center;">
 										</div>
