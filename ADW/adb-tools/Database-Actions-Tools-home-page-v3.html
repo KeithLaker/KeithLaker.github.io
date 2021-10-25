@@ -41,30 +41,6 @@
 		<link data-wscss href="https://www.oracle.com/asset/web/css/redwood-styles.css" rel="preload" as="style" onload="this.rel='stylesheet'" onerror="this.rel='stylesheet'">
 		<style type="text/css">
 
-table.events {
-	    border-top: 2px !important;
-	    border-left: 2px !important;
-	    border-right: 2px !important;
-	    border-bottom: 2px !important;
-	    border-style: solid !important;
-	    border-color: white !important;
-	    cellpadding:10px !important;
-	    cellspacing:10px !important; 
-	    width:100% !important;
-	    padding: 5px !important;
-	    background-color:grey;
-	    color:white;
-	    text-decoration:none;
-	   }
-	
-
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
 
 /* Create four equal columns that sits next to each other */
 .row {
@@ -116,7 +92,7 @@ table.events {
     right: 0;
     bottom: 0px;
     width: 100%;
-    height: auto%;
+    height: auto;
     z-index: 1;
     opacity: 0.9;
 }
@@ -125,73 +101,72 @@ table.events {
 .brightness { filter: brightness(0.82); }
 
 
-.youtube-iframe {
- border: 10px yellow solid;
- border-radius: 15px;
- box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.5);
-
-table.td p {
-font-family: arial;
-font-size: 1.2rem;
-}
-
-
-
 #td-taba{
-  background-color: purple; 
-  color:black;
   background-position: bottom 0px right 0px;; /* Center the image */
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   font-weight: bold;
   font-family:arial;
   opacity: 1;
   cursor: pointer;
   text-align: center;
-  background-color:white;
 }
 
 #td-tabb{
-  background-color: blue; 
-  color:black;
   background-position: bottom 0px right 0px;; /* Center the image */
   background-repeat: no-repeat;
-  color:white;
   font-weight: bold;
   font-family:arial;
-  opacity: 0.5;
+  opacity: 1;
   cursor: pointer;
   text-align: center;
 }
 
 
 #td-tabc{
-  background-color: red; 
-  color:black;
   background-position: bottom 0px right 0px;; /* Center the image */
   background-repeat: no-repeat;
-  color:white;
   font-weight: bold;
   font-family:arial;
-  opacity: 0.5;
+  opacity: 1;
   cursor: pointer;
   text-align: center;
 }
+
+
+#td-tabd{
+  background-position: bottom 0px right 0px;; /* Center the image */
+  background-repeat: no-repeat;
+  font-weight: bold;
+  font-family:arial;
+  opacity: 1;
+  cursor: pointer;
+  text-align: center;
+}
+
+#td-tabe{
+  background-position: bottom 0px right 0px;; /* Center the image */
+  background-repeat: no-repeat;
+  font-weight: bold;
+  font-family:arial;
+  opacity: 1;
+  cursor: pointer;
+  text-align: center;
+}
+
 
 
 #taba{
   width: 100%;
   padding: 50px 0;
   text-align: center;
-  background-color: lightblue;
   margin-top: 20px;
-  display: visible;
+  display: block;
 }
 
 #tabb{
   width: 100%;
   padding: 50px 0;
   text-align: center;
-  background-color: darkblue;
   margin-top: 20px;
   display: none;
 }
@@ -200,49 +175,95 @@ font-size: 1.2rem;
   width: 100%;
   padding: 50px 0;
   text-align: center;
-  background-color: darkred;
   margin-top: 20px;
   display: none;
 }
 
+#tabd{
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+}
+
+#tabe{
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+}
+
+
 .tab-active{
-height: 55px; 
-border-top: 5pt solid darkgrey; 
-border-left: 5pt solid darkgrey; 
-border-right: 5pt solid darkgrey; 
-border-radius: 10px 10px 0 0;  
-}
-
-.tab-inactive{
-height: 55px; 
-border-top: 5pt solid lightgrey; 
-border-left: 5pt solid lightgrey; 
-border-right: 5pt solid lightgrey; 
-border-radius: 10px 10px 0 0;  
-}
-
-#greenglass{
 	/* background styles */
+     height: 115px; 
 	position: relative;
 	display: inline-block;
 	padding: 15px 25px;
-	background-color: green; /*for compatibility with older browsers*/
-	background-image: linear-gradient(green,lightgreen);
+	background-color: DimGray; /*for compatibility with older browsers*/
+	background-image: linear-gradient(darkgrey,DimGray);
+	color:white;
 
 	/* text styles */
 	text-decoration: none;
 	color: #fff;
-	font-size: 25px;
+	font-size: 22px;
 	font-family: sans-serif;
-	font-weight: 100;
+	font-weight:bold;
 
-    border-radius: 3px;
-    box-shadow: 0px 1px 4px -2px #333;
-    text-shadow: 0px -1px #333;
+    border-top: 5pt solid DimGray;    
+    border-left: 5pt solid DimGray; 
+    border-right: 5pt solid DimGray; 
+    border-radius: 10px 10px 0 0;  
+    box-shadow: 5px px 14px -12px #333;
+    text-shadow: 0px -0.9px #333;
+	z-order:1;
 }
 
 
-#greenglass:after{
+.tab-active:after{
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: calc(100% - 4px);
+	height: 50%;
+	background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.1));
+	z-order:-1;
+    pointer-events: none;
+}
+
+
+.tab-inactive{
+	/* background styles */
+     height: 115px; 
+	position: relative;
+	display: inline-block;
+	padding: 15px 25px;
+	background-color: darkgrey; /*for compatibility with older browsers*/
+	background-image: linear-gradient(white,darkgrey);
+
+	/* text styles */
+	text-decoration: none;
+	color: black;
+	font-size: 22px;
+	font-family: sans-serif;
+	font-weight:bold;
+
+    border-top: 5pt solid lightgrey;    
+    border-left: 5pt solid lightgrey; 
+    border-right: 5pt solid lightgrey; 
+    border-radius: 10px 10px 0 0;  
+    box-shadow: 0px 1px 4px -2px #333;
+    text-shadow: 0px -0.9px #333;
+	z-order:1;
+
+}
+
+
+.tab-inactive:after{
 	content: '';
 	position: absolute;
 	top: 2px;
@@ -250,8 +271,10 @@ border-radius: 10px 10px 0 0;
 	width: calc(100% - 4px);
 	height: 50%;
 	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
-}		</style>
-		
+	z-order:-1;
+    pointer-events: none;
+}
+		</style>
 		<div class="gl-container">
 			<table width="50%">
 				<tr>
@@ -290,7 +313,7 @@ border-radius: 10px 10px 0 0;
 								Autonomous Data Warehouse comes complete with a built-in suite of powerful self-service tools that can help you with many of the typical data warehouse tasks, such as the following:
 							</p>
 							<ul style="margin-top:10px; margin-bottom:10px; margin-left:50px; list-style-type: circle; list-style-position: inside;">
-								<li style="list-style-type: circle; list-style-position: inside;">
+								<li style="list-style-type: circle; list-style-position: inside; ">
 									Load or access data from local files or remote databases.
 								</li>
 								<li style="list-style-type: circle; list-style-position: inside;">
@@ -346,34 +369,33 @@ border-radius: 10px 10px 0 0;
 				</div>
 			</div>
 		</section>
-		<table width="100%" style="padding-left:150px; padding-right:150px;">
+		<table width="100%" style="padding-left:150px; padding-right:150px;" cellspacing="5" cellpadding="5">
 			<tr>
-				<td id="td-taba" class="tab-active" width="20%" style="background-color: white; color:black;font-weight: bold;font-family:arial;opacity: 1; cursor: pointer;text-align: center;height:55px; border-top: 5pt solid darkgrey; border-left: 5pt solid darkgrey; border-right: 5pt solid darkgrey; border-radius: 10px 10px 0 0;">
+				<td id="td-taba" class="tab-active" width="20%">
 					<div onclick="tabaFunction()">
-						WIZARD-DRIVEN<br>DATA LOADING
+						WIZARD-DRIVEN<br>DATA<br>LOADING
 					</div>
 				</td>
-				<td id="td-tabb greenglass" width="20%" style="background-color: blue; color:black;color:white;font-weight: bold;font-family:arial;opacity: 0.5; cursor: pointer;text-align: center;height:55px; border-top: 1pt solid darkgrey; border-left: 1pt solid darkgrey; border-right: 1pt solid lightgrey; border-radius: 10px 10px 0 0;">
+				<td id="td-tabb" class="tab-inactive" width="20%">
 					<div onclick="tabbFunction()">
-						ZERO-CODE DATA<br>TRANSFORMS
+						ZERO-CODE<br> DATA<br>TRANSFORMS
 					</div>
 				</td>
-				<td id="td-tabc" class="tab-inactive" width="20%" style="background-color: orange; color:black;color:white;font-weight: bold;font-family:arial;opacity: 0.5; cursor: pointer;text-align: center;height:55px; border-top: 1pt solid darkgrey; border-left: 1pt solid darkgrey; border-right: 1pt solid lightgrey; border-radius: 10px 10px 0 0;">
+				<td id="td-tabc"  class="tab-inactive" width="20%">
 					<div onclick="tabcFunction()">
-						SMART BUSINESS<br>MODELS
+						SMART<br>BUSINESS<br>MODELS
 					</div>
 				</td>
-				<td id="td-tabd" class="tab-inactive" width="20%" style="background-color: green; color:black;color:white;font-weight: bold;font-family:arial;opacity: 0.5; cursor: pointer;text-align: center;height:55px; border-top: 1pt solid darkgrey; border-left: 1pt solid darkgrey; border-right: 1pt solid lightgrey; border-radius: 10px 10px 0 0;">
+				<td id="td-tabd"  class="tab-inactive" width="20%">
 					<div onclick="tabdFunction()">
-						AUTOMATED DATA INSIGHTS
+						AUTOMATED<br>DATA<br>INSIGHTS
 					</div>
 				</td>
-				<td id="td-tabe" class="tab-inactive" width="20%" style="background-color:darkred; color:black;color:white;font-weight: bold;font-family:arial;opacity: 0.5; cursor: pointer;text-align: center;height:55px; border-top: 1pt solid darkgrey; border-left: 1pt solid darkgrey; border-right: 1pt solid lightgrey; border-radius: 10px 10px 0 0;">
+				<td id="td-tabe" class="tab-inactive" width="20%">
 					<div onclick="tabeFunction()">
-						CATALOG
+						CATALOG<br><br>
 					</div>
 				</td>
-
 			</tr>
 			<tr style="">
 				<td colspan="5" style="border-bottom: 17pt solid white;">
@@ -452,8 +474,8 @@ border-radius: 10px 10px 0 0;
 								<img style="max-width:250px; border:20px solid white; border-radius: 25px" src="https://keithlaker.github.io/ADW/adb-tools/icons/adbt-data-loading-banner.png">
 							</div>
 						</div>
-						<div>
-						</div>
+					</div>
+				</div>
 			</section>
 		</div>
 		<div id="tabb" style="display:none;">
@@ -489,7 +511,6 @@ border-radius: 10px 10px 0 0;
 			</section>
 		</div>
 		<div id="tabc"  style="display:none;">
-
 <!-- / _Raw-Text -->
 			<section class="rc32 rc32v0 cpad rw-neutral-30bg rw-pattern10 rw-pattern-50p" data-ocomid="rc32" data-trackas="rc32">
 				<div class="rc32w0 cwidth">
@@ -533,6 +554,45 @@ border-radius: 10px 10px 0 0;
 			</section>
 		</div>
 
+		<div id="tabd"  style="display:none;">
+<!-- / _Raw-Text -->
+			<section class="rc32 rc32v0 cpad rw-neutral-30bg rw-pattern10 rw-pattern-50p" data-ocomid="rc32" data-trackas="rc32">
+				<div class="rc32w0 cwidth">
+					<div class="rc32w1 rw-neutral-00bg">
+						<div class="rc32w2">
+							<div class="rc32w3">
+								<h3>DATA INSIGHTS</h3>
+								<p>
+								</p>
+								<br>
+							</div>
+							<div class="rc32w4" style="valign:top; padding-bottom:1150px;">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div id="tabe"  style="display:none;">
+<!-- / _Raw-Text -->
+			<section class="rc32 rc32v0 cpad rw-neutral-30bg rw-pattern10 rw-pattern-50p" data-ocomid="rc32" data-trackas="rc32">
+				<div class="rc32w0 cwidth">
+					<div class="rc32w1 rw-neutral-00bg">
+						<div class="rc32w2">
+							<div class="rc32w3">
+								<h3>CATALOG</h3>
+								<p>
+								</p>
+								<br>
+							</div>
+							<div class="rc32w4" style="valign:top; padding-bottom:1150px;">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
 
 <!-- /RC32v0 -->
 <!-- /RH01v0 -->
@@ -548,6 +608,7 @@ border-radius: 10px 10px 0 0;
 				</div>
 			</div>
 		</section>
+
 <!-- RC32v0 -->
 <script>
 function tabaFunction() {
@@ -557,34 +618,26 @@ function tabaFunction() {
   var tdtabb = document.getElementById("td-tabb");
   var tabc = document.getElementById("tabc");
   var tdtabc = document.getElementById("td-tabc");
+  var tabd = document.getElementById("tabd");
+  var tdtabd = document.getElementById("td-tabd");
+  var tabe = document.getElementById("tabe");
+  var tdtabe = document.getElementById("td-tabe");
+
 
     taba.style.display = "block";
-    tdtaba.style.color = "black";
-    tdtaba.style.backgroundColor = "white";
-    tdtaba.style.opacity = 1;    
-    tdtaba.style.borderTop="5pt solid darkgrey"; 
-    tdtaba.style.borderLeft="5pt solid darkgrey"; 
-    tdtaba.style.borderRight="5pt solid darkgrey";
-    tdtaba.style.borderRadius= "10px 10px 0 0";  
+    tdtaba.className = "tab-active";
 
     tabb.style.display = "none";
-    tdtabb.style.color = "white";
-    tdtabb.style.backgroundColor = "blue";
-    tdtabb.style.opacity = 0.5;    
-    tdtabb.style.borderTop="1pt solid darkgrey"; 
-    tdtabb.style.borderLeft="1pt solid darkgrey"; 
-    tdtabb.style.borderRight="1pt solid darkgrey";
-    tdtabb.style.borderRadius= "10px 10px 0 0";  
+    tdtabb.className = "tab-inactive";
 
     tabc.style.display = "none";
-    tdtabc.style.color = "white";
-    tdtabc.style.backgroundColor = "red";
-    tdtabc.style.opacity = 0.5;    
-    tdtabc.style.borderTop="1pt solid darkgrey"; 
-    tdtabc.style.borderLeft="1pt solid darkgrey"; 
-    tdtabc.style.borderRight="1pt solid darkgrey";
-    tdtabc.style.borderRadius= "10px 10px 0 0";  
+    tdtabc.className = "tab-inactive";
 
+    tabd.style.display = "none";
+    tdtabd.className = "tab-inactive";
+
+    tabe.style.display = "none";
+    tdtabe.className = "tab-inactive";
 
 }
 
@@ -595,33 +648,27 @@ function tabbFunction() {
   var tdtabb = document.getElementById("td-tabb");
   var tabc = document.getElementById("tabc");
   var tdtabc = document.getElementById("td-tabc");
+  var tabd = document.getElementById("tabd");
+  var tdtabd = document.getElementById("td-tabd");
+  var tabe = document.getElementById("tabe");
+  var tdtabe = document.getElementById("td-tabe");
+
 
     taba.style.display = "none";
-    tdtaba.style.color = "white";
-    tdtaba.style.backgroundColor = "purple";
-    tdtaba.style.opacity = 0.5;    
-    tdtaba.style.borderTop="1pt solid darkgrey"; 
-    tdtaba.style.borderLeft="1pt solid darkgrey"; 
-    tdtaba.style.borderRight="1pt solid darkgrey";
-    tdtaba.style.borderRadius= "10px 10px 0 0";  
+    tdtaba.className = "tab-inactive";
 
     tabb.style.display = "block";
-    tdtabb.style.color = "black";
-    tdtabb.style.backgroundColor = "white";
-    tdtabb.style.opacity = 1;    
-    tdtabb.style.borderTop="5pt solid darkgrey"; 
-    tdtabb.style.borderLeft="5pt solid darkgrey"; 
-    tdtabb.style.borderRight="5pt solid darkgrey";
-    tdtabb.style.borderRadius= "10px 10px 0 0";  
+    tdtabb.className = "tab-active";
 
     tabc.style.display = "none";
-    tdtabc.style.color = "white";
-    tdtabc.style.backgroundColor = "red";
-    tdtabc.style.opacity = 0.5;    
-    tdtabc.style.borderTop="1pt solid darkgrey"; 
-    tdtabc.style.borderLeft="1pt solid darkgrey"; 
-    tdtabc.style.borderRight="1pt solid darkgrey";
-    tdtabc.style.borderRadius= "10px 10px 0 0";  
+    tdtabc.className = "tab-inactive";
+
+    tabd.style.display = "none";
+    tdtabd.className = "tab-inactive";
+
+    tabe.style.display = "none";
+    tdtabe.className = "tab-inactive";
+
 
 }
 
@@ -633,39 +680,86 @@ function tabcFunction() {
   var tdtabb = document.getElementById("td-tabb");
   var tabc = document.getElementById("tabc");
   var tdtabc = document.getElementById("td-tabc");
+  var tabd = document.getElementById("tabd");
+  var tdtabd = document.getElementById("td-tabd");
+  var tabe = document.getElementById("tabe");
+  var tdtabe = document.getElementById("td-tabe");
 
-    taba.style.display = "none";
-    tdtaba.style.color = "white";
-    tdtaba.style.backgroundColor = "purple";
-    tdtaba.style.opacity = 0.5;    
-    tdtaba.style.borderTop="1pt solid darkgrey"; 
-    tdtaba.style.borderLeft="1pt solid darkgrey"; 
-    tdtaba.style.borderRight="1pt solid darkgrey";
-    tdtaba.style.borderRadius= "10px 10px 0 0";  
+   taba.style.display = "none";
+    tdtaba.className = "tab-inactive";
 
     tabb.style.display = "none";
-    tdtabb.style.color = "white";
-    tdtabb.style.backgroundColor = "blue";
-    tdtabb.style.opacity = 0.5;    
-    tdtabb.style.borderTop="1pt solid darkgrey"; 
-    tdtabb.style.borderLeft="1pt solid darkgrey"; 
-    tdtabb.style.borderRight="1pt solid darkgrey";
-    tdtabb.style.borderRadius= "10px 10px 0 0";  
-
+    tdtabb.className = "tab-inactive";
 
     tabc.style.display = "block";
-    tdtabc.style.color = "black";
-    tdtabc.style.backgroundColor = "white";
-    tdtabc.style.opacity = 1;    
-    tdtabc.style.borderTop="5pt solid darkgrey"; 
-    tdtabc.style.borderLeft="5pt solid darkgrey"; 
-    tdtabc.style.borderRight="5pt solid darkgrey";
-    tdtabc.style.borderRadius= "10px 10px 0 0";  
+    tdtabc.className = "tab-active";
+
+    tabd.style.display = "none";
+    tdtabd.className = "tab-inactive";
+
+    tabe.style.display = "none";
+    tdtabe.className = "tab-inactive";
+
+}
+
+function tabdFunction() {
+  var taba = document.getElementById("taba");
+  var tdtaba = document.getElementById("td-taba");
+  var tabb = document.getElementById("tabb");
+  var tdtabb = document.getElementById("td-tabb");
+  var tabc = document.getElementById("tabc");
+  var tdtabc = document.getElementById("td-tabc");
+  var tabd = document.getElementById("tabd");
+  var tdtabd = document.getElementById("td-tabd");
+  var tabe = document.getElementById("tabe");
+  var tdtabe = document.getElementById("td-tabe");
+
+   taba.style.display = "none";
+    tdtaba.className = "tab-inactive";
+
+    tabb.style.display = "none";
+    tdtabb.className = "tab-inactive";
+
+    tabc.style.display = "none";
+    tdtabc.className = "tab-inactive";
+
+    tabd.style.display = "block";
+    tdtabd.className = "tab-active";
+
+    tabe.style.display = "none";
+    tdtabe.className = "tab-inactive";
+
+}
+
+function tabeFunction() {
+  var taba = document.getElementById("taba");
+  var tdtaba = document.getElementById("td-taba");
+  var tabb = document.getElementById("tabb");
+  var tdtabb = document.getElementById("td-tabb");
+  var tabc = document.getElementById("tabc");
+  var tdtabc = document.getElementById("td-tabc");
+  var tabd = document.getElementById("tabd");
+  var tdtabd = document.getElementById("td-tabd");
+  var tabe = document.getElementById("tabe");
+  var tdtabe = document.getElementById("td-tabe");
+
+   taba.style.display = "none";
+    tdtaba.className = "tab-inactive";
+
+    tabb.style.display = "none";
+    tdtabb.className = "tab-inactive";
+
+    tabc.style.display = "none";
+    tdtabc.className = "tab-inactive";
+
+    tabd.style.display = "none";
+    tdtabd.className = "tab-inactive";
+
+    tabe.style.display = "block";
+    tdtabe.className = "tab-active";
 
 }
 
 </script>
-
-
 	</body>
 </html>
