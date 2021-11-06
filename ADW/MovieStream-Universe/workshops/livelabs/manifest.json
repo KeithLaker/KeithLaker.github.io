@@ -1,0 +1,10 @@
+{
+    "workshoptitle": "A handy guide to the MovieStream Universe",
+    "help": "livelabs-help-db_us@oracle.com",
+    "tutorials": [
+        {
+          "title": "Welcome",
+          "filename": "../../workshop-intro/workshop-intro.md"
+        }
+     ]
+}
