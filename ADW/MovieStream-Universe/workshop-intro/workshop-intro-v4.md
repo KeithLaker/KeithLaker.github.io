@@ -20,7 +20,7 @@ There is an ever expanding list of MoiveStream workshops so we have created this
 <br><br>
 
 
-## <strong>MovieStream Part I</strong> - Exploring the basics of data management and SQL analytics
+## MovieStream Part I - Exploring the basics of data management and SQL analytics
 
 <br>
 <br>
@@ -161,7 +161,7 @@ This is the high level touraround the world of MovieStream. The workshop will ta
 
 <br><br>
 
-## <STRONG>MovieStream Part II</STRONG> - Exploring the complete data-to-dashboard story
+## MovieStream Part II - Exploring the complete data-to-dashboard story
 
 <br>
 <br>
