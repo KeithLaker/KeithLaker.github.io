@@ -280,7 +280,7 @@
 												<tr>
 													<td align="left" style="padding-top: 15px;">
 														<span style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#ffffff; font-weight: normal; text-decoration:none;">
-															<strong>WARNING:</strong> – Upgrading to Oracle Client Library with Version 19.3 (or later) strongly recommended for your Oracle Autonomous Database
+															<strong>ALERT:</strong> Upgrading your Oracle Client Library to Version 19.3 (or later) is strongly recommended for your Oracle Autonomous Database
 														</span>
 														<br>
 														<br>
@@ -300,15 +300,8 @@
 														<table border="0" cellpadding="0" cellspacing="0" width="100%">
 															<tbody>
 																<tr>
-																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left; font-weight: bold; padding-bottom:25px;">Later this year, in August, there will be changes to the authorization process for client connections to Autonomous Database
-																	</td>
-																</tr><!-- <tr>
-                                <td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#83817f; font-weight:bold; text-align: left; padding-bottom:15px;">
-                                  Subheading
-                                </td>
-                              </tr> -->
-																<tr>
-																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left;">Hello<br><br>
+																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left;">
+																		Hello<br><br>
 																	</td>
 																</tr>
 																<tr>
@@ -321,7 +314,13 @@
 																							<tbody>
 																								<tr>
 																									<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left;">
-																										You are receiving this email regarding an upcoming change that will affect your Oracle Autonomous Database {{database_name}} in tenancy {{tenant_name}}, region {{region_name}}. DigiCert has recently <a href="https://knowledge.digicert.com/alerts/ou-removal.html">announced</a> a change in the format of the TLS/SSL certificates that are issued after August 24th, 2022. For your connections to support this new format, we strongly recommend using Oracle client library with version 19.3 or later. You can download the latest versions of these clients from the links provided below:
+																										You are receiving this email regarding an upcoming change that will affect your Oracle Autonomous Database {{database_name}} in tenancy {{tenant_name}}, region {{region_name}}.
+																										<br>
+																										<br>
+																										DigiCert, an American digital security technology company, recently <a href="https://knowledge.digicert.com/alerts/ou-removal.html" style="color:#3C6974;text-decoration: underline; font-weight:bold;">announced</a> a change to the format of the TLS/SSL certificates issued after August 24, 2022.
+																										<br>
+																										<br>
+																										For your connections to support this new format, we strongly recommend using Oracle client library with version 19.3 or later. You can download the latest versions of these clients from the links provided below:
 																										<ul>
 																											<li><a href="https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html" style="color:#3C6974;text-decoration: underline;" target="_blank">Oracle JDBC Downloads Page</a>
 																											</li>
@@ -331,7 +330,6 @@
 																											</li>
 																										</ul>
 																										<br>
-																										<br>
 																									</td>
 																								</tr>
 																								<tr>
@@ -339,10 +337,10 @@
 																								</tr>
 																								<tr>
 																									<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left;">
-																										According to the recent <a href="https://knowledge.digicert.com/alerts/ou-removal.html">announcement</a> made by DigiCert, the public TLS/SSL certificates that are issued after August 24th, 2022 will not contain the Organizational Unit (OU) field.
+																										According to the recent <a href="https://knowledge.digicert.com/alerts/ou-removal.html" style="color:#3C6974;text-decoration: underline; font-weight:bold;">announcement</a> made by DigiCert, the public TLS/SSL certificates that are issued after August 24, 2022 will not contain the Organizational Unit (OU) field.
 																										<br>
 																										<br>
-																										The TLS/SSL certificates that are used on the server-side of Autonomous Database are issued by DigiCert and are subject to renewal before they expire. The certificates that are renewed after August 24th, 2022 will not have the Organizational Unit (OU) field.
+																										The TLS/SSL certificates that are used on the server-side of Autonomous Database are issued by DigiCert and are subject to renewal before they expire. The certificates that are renewed after August 24, 2022 will not have the Organizational Unit (OU) field.
 																										<br>
 																										<br>
 																										<br>
@@ -353,10 +351,41 @@
 																								</tr>
 																								<tr>
 																									<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left;">
-																										Autonomous Database does server DN matching by default based on the ssl_server_cert_dn property of your connection string, which contains the OU field today. Once the OU field is retired from the server-side certificates, DN matching will not succeed. To avoid any disruptions to existing client connections, Autonomous Database will support doing DN matching based on the host property of your connection string. Since the host name based DN matching is currently supported on clients with version 19.3 or later, we strongly recommend you to upgrade your clients (e.g. JDBC, .NET, Instant Client) to version 19.3 (or later) in preparation for this upcoming change.
+																										Autonomous Database does server DN matching by default based on the ssl_server_cert_dn property of your connection string, which contains the OU field today. Once the OU field is retired from the server-side certificates, DN matching will not succeed.
 																										<br>
 																										<br>
-																										Please expect to hear further communication from us regarding next steps as we approach the deadline set by DigiCert.
+																										To avoid any disruptions to existing client connections, Autonomous Database will support doing DN matching based on the host property of your connection string. Since the host name based DN matching is currently supported on clients with version 19.3 or later, we strongly recommend you to upgrade your clients (e.g. JDBC, .NET, Instant Client) to version 19.3 (or later) in preparation for this upcoming change.
+																										<br>
+																										<br>
+																										<br>
+																									</td>
+																								</tr>
+																								<tr>
+																									<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left; font-weight: bold; padding-bottom:5px;">
+																										More information to come
+																									</td>
+																								</tr>
+																								<tr>
+																									<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left;">
+																										Please expect to receive further emails from Oracle regarding this change as we approach the deadline set by DigiCert. These emails will help you ensure this necessary change does not impact your ability to connect to your Autonomous Database.
+																										<br>
+																										<br>
+																										<br>
+																									</td>
+																								</tr>
+																								<tr>
+																									<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left; font-weight: bold; padding-bottom:5px;">How can I contact Oracle with further questions regarding this announcement?</td>
+																								</tr>
+																								<tr>
+																									<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left;">
+																										If you have general questions about preparing for this change, please contact us through the following forums:
+																										<a href="https://oracle.com/goto/adw/forum" style="color:#3C6974;text-decoration: underline;">
+																											Autonomous Database for Data Warehousing customer forum
+																										</a>
+																										or
+																										<a href="https://oracle.com/goto/atp/forum" style="color:#3C6974;text-decoration: underline;">
+																											Autonomous Database for Transaction Processing customer forum</a>
+																										, respectively. We will reply as soon as possible.<br>
 																										<br>
 																										<br>
 																										Best regards,<br>
