@@ -338,7 +338,7 @@
 																											DigiCert recently <a href="https://knowledge.digicert.com/alerts/ou-removal.html">announced</a> a change in the format of the TLS/SSL certificates issued after August 24, 2022. The change in structure removes the <em>Organizational Unit</em> (OU) field from the TLS/SSL certificates.
 																											<br>
 																											<br>
-																											Oracle Autonomous Database currently uses server DN matching based around the OU field.
+																											Autonomous Database currently uses server DN matching based on the ssl_server_cert_dn property of your connection string, which contains the OU field.
 																											<br>
 																											<br>
 																										</td>
@@ -364,10 +364,7 @@
 																									</tr>
 																									<tr>
 																										<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left;">
-																											The deadline for switching to the most recent version of Oracle client library is August 24, 2022.
-																											<br>
-																											<br>
-																											Oracle strongly recommends that all client tools connecting to Autonomous Database use Oracle client library version 19.3 or later by the deadline of August 24, 2022. Using version 19.3 or later will guarantee that connections from your client tools will support this new format.
+																											Oracle strongly recommends that all client tools connecting to Autonomous Database switch to using Oracle client library version 19.3 or later as soon as possible. Using version 19.3 or later will guarantee that connections from your client tools will support this new format.
 																											<br>
 																											<br>
 																											You can download the latest versions of the Oracle client library using these links:
@@ -381,7 +378,7 @@
 																											</ul>
 																											<br>
 																											<br>
-																											The last step in this process will begin closer to the August deadline. The final step will involve downloading new wallets for your Autonomous Database. However, we will notify you by email when it is time for you to start this last step. 
+																											The last step in this process will begin closer to the August deadline. The final step will involve downloading new wallets for your Autonomous Database. However, we will notify you by email when it is time for you to start this last step.
 																										</td>
 																									</tr>
 																									<tr>
@@ -389,7 +386,7 @@
 																									</tr>
 																									<tr>
 																										<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left;">
-																											Please expect to receive further emails from Oracle regarding this change as we approach the deadline set by DigiCert – August 24, 2022. These emails will help you ensure this necessary change does not impact your ability to connect to your Autonomous Database.
+																											Please expect to receive further emails from Oracle regarding this change as we approach the deadline set by DigiCert. These emails will help you ensure this necessary change does not impact your ability to connect to your Autonomous Database.
 																											<br>
 																											<br>
 																											<br>
