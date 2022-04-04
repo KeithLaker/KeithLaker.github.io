@@ -4,12 +4,9 @@
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 		<meta content="width=device-width, initial-scale=1.0" name="viewport">
 		<meta name="x-apple-disable-message-reformatting">
-		
-		<meta name="oci-description" content="Oracle Autonomous Database - AJD Welcome Email Template">
-		<meta name="oci-version" content="Version 04.22">
-
-		
-		<title>Oracle Cloud Operations Announcement - Welcome To Autonomous JSON Database</title>
+		<meta name="oci-description" content="Oracle Autonomous Database - OML Welcome Email Template">
+		<meta name="oci-version" content="Version 02.21">
+		<title>Oracle Cloud Operations Announcement - Oracle Machine Learning</title>
 		<link href="https://www.oracle.com/a/ocom/docs/dc/tb/src/oracle-sans-font.css?family=Oracle+Sans" rel="stylesheet" type="text/css">
 		
 <!--[if mso]>
@@ -67,7 +64,6 @@
   		  -webkit-hyphens: auto;
           hyphens: auto;
 		}
-
 
 	.ii a[href] { color: #FFFFFF; }
 
@@ -371,7 +367,7 @@
 												<tr>
 													<td align="left" valign="middle">
 														<a id="top" name="top"></a>
-														<img moz-do-not-send="true" alt="Oracle" border="0" src="https://www.oracle.com/a/ocom/img/dc/tb/rwd/oracle-white-123x16px.png" style="display:block;" width="92">
+														<img alt="Oracle" border="0" src="https://www.oracle.com/a/ocom/img/dc/tb/rwd/oracle-white-123x16px.png" style="display:block;" width="92">
 													</td>
 												</tr>
 											</tbody>
@@ -379,7 +375,7 @@
 										<table align="right" border="0" cellpadding="0" cellspacing="0" class="devicewidth" width="auto">
 											<tbody>
 												<tr>
-													<td align="right" class="txt-left pad-t6" valign="middle"><img moz-do-not-send="true" alt="Cloud Platform" border="0" class="proLogoTagImage" src="https://www.oracle.com/a/ocom/img/dc/tb/rwd/oracle-identifier-cloud-platform.png" style="display:block;" width="auto">
+													<td align="right" class="txt-left pad-t6" valign="middle"><img alt="Cloud Platform" border="0" class="proLogoTagImage" src="https://www.oracle.com/a/ocom/img/dc/tb/rwd/oracle-identifier-cloud-platform.png" style="display:block;" width="auto">
 													</td>
 												</tr>
 											</tbody>
@@ -417,7 +413,7 @@
 												<tr>
 													<td align="left" style="padding-top: 15px;">
 														<span style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:20px; color:#ffffff; font-weight: bold; text-decoration:none">
-															Oracle Autonomous JSON Database on Shared Exadata Infrastructure
+															Oracle Autonomous Database
 														</span>
 													</td>
 												</tr><!-- // Heading -->
@@ -436,7 +432,7 @@
 												<tr>
 													<td align="left" style="padding-top: 15px;">
 														<span style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:36px; color:#ffffff; font-weight: normal; text-decoration:none;">
-															Welcome to Oracle Cloud!
+															Welcome to<br>Oracle Machine Learning!
 														</span>
 														<br>
 														<br>
@@ -457,51 +453,62 @@
 																<tr>
 																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left;">
 																		<p style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color: #000000; font-weight: normal;">
-																			Hello,
+																			Hello <b>{{oml_username}}</b>,
 																			<br>
 																			<br>
-																			Congratulations, a new Autonomous JSON Database was just provisioned in your tenancy <b>{{oci_tenancy}}</b>.
+																			A new Oracle Machine Learning account has been created for you. Here are the details about your new OML account:
 																			<br>
-																			<br> 
-																			It is called <b> {{database_name_string}} </b> and was successfully provisioned in the <b>{{service_region}}</b> data center with <b> {{cpu_count_string}} </b> and <b> {{storage_string}} </b> of usable database storage.
-																			<br>
-																			<br>
-																			Use the following link to go directly to the built-in Database Actions landing page, where you can begin loading, processing and working with your data.
 																		</p>
 																	</td>
 																</tr>
-															</tbody>
-														</table>
-														<table width="100%" cellspacing="0" cellpadding="10" border="0">
-															<tbody>
 																<tr>
-																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left; vertical-align:top !important;">
-																		<table class="left"  width="auto" cellspacing="0" cellpadding="0" border="0">
-																			<tbody>
-																				<tr>
-																					<td style="text-align:center; max-width:600px; width:600; width:600px; max-height: 50px; height: 50; height: 50px; -webkit-border-radius: 18px; -moz-border-radius: 18px; border-radius: 18px; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; color:#ffffff !important; background-color:  #235467; ">
-																					<a class="tbfooter" href="https://{{tenant_id}}-{{database_name}}.adb.{{service_region}}.oraclecloudapps/ords/sql-developer" style="text-decoration:none; word-break:break-all; white-space: nowrap; color: #FFFFFF! important;" target="_self">
-																							<span style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#ffffff; font-weight: bold;">
-																								Database Actions
-																							</span>
-																						</a>
-																					</td>
-																				</tr>
-																			</tbody>
+																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left; background-color:#dee7ed;">
+																		<p style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:26px; color: #000000; font-weight: bold; margin-left:20px;">
+																			Account Details
+																			<br>
+																		</p>
+																		<p style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color: #000000; font-weight: normal; margin-left:20px; line-height:32px;">	Username:	<b>{{oml_username}}</b>
+																			<br>
+																			Password:	<b>******************************</b>
+																			<br>
+																			First Name:	<b>{{oml_firstname}}</b>
+																			<br>
+																			Last Name:	<b>{{oml_lastname}}</b>
+																				<br>
+																				Email:	<b>{{oml_user_email}}</b>
+																		</p>
+																		<br>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<br>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<table width="100%">
+																			<tr>
+																				<td style="padding:10px 26px 10px 26px; -webkit-border-radius: 18px; -moz-border-radius: 18px; border-radius: 18px; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; color:#ffffff !important; background-color: #56504B; text-align:center;">
+																					<a class="tbfooter" href="{{oml_login_page_link}}" style="text-decoration:none; word-break:break-all; white-space: nowrap; color: #FFFFFF! important;" target="_self">
+																						<span style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#ffffff; font-weight: bold;">
+																							<b>Access Oracle Machine Learning</b>
+																						</span>
+																					</a>
+																				</td>
+																			</tr>
 																		</table>
 																	</td>
 																</tr>
-															</tbody>
-														</table>
-														<table width="100%" cellspacing="0" cellpadding="0" border="0">
-															<tbody>
+																<tr>
+																	<td>
+																		<br>
+																	</td>
+																</tr>
 																<tr>
 																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left;">
-																		<p style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color: #000000; font-weight: normal;">
-																			You can <b>log in</b> using the database <b>admin username/password</b> which you entered during database provisioning.
-																		</p>
-																		<p style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color: #000000; font-weight: normal;">
-																			Below are some additional links to help you explore your new Autonomous Database...<br>
+																		<p style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color: #000000;">
+																			Below are some additional links to help you learn more about Oracle Machine Learning...<br>
 																		</p>
 																		<br>
 																	</td>
@@ -522,7 +529,7 @@
   </v:roundrect>
   <![endif]-->
 																			<![if !mso]>
-																			<div class="circle_orange" style="border-radius: 50%; width: 34px; height: 34px; padding: 10px; background: #FFA500; border: 0px solid #FFA500; color: #FFFFFF; text-align: center; font: 32px Arial, sans-serif; font-weight: bold; ">
+																			<div class="circle_orange" style="border-radius: 50%; width: 34px; height: 34px; padding: 10px; background: #FFA500; border: 0px solid #FFA500; color: #FFFFFF; text-align: center; font: 32px Arial, sans-serif; font-weight: bold;">
 																				1
 																			</div>
 																			<![endif]>
@@ -530,15 +537,58 @@
 																	</td>
 																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left; vertical-align:top !important;">
 																		<p style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color: #000000; font-weight: normal;">
-																			The first step is to get familiar with the capabilities of your new service. Our <b>Quick Start</b> workshop shows you how to perform basic tasks - everything from loading, indexing to querying JSON Data.
+																			The first step is to get familiar with the capabilities of your new machine learning service. Our <b>Quick Start</b> workshop shows you how to get started with Oracle Machine Learning and how to build a machine learning algorithm.
 																		</p>
-																		<table border="0" cellpadding="0" cellspacing="0" class="left"  width="auto">
+																		<table border="0" cellpadding="0" cellspacing="0" class="left" style="mso-hide: all !important;" width="auto">
 																			<tbody>
 																				<tr>
-																					<td style="text-align:center; max-width:400px; width:400; width:400px; max-height: 50px; height: 50; height: 50px; -webkit-border-radius: 18px; -moz-border-radius: 18px; border-radius: 18px; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; color:#ffffff !important; background-color: #FFA500; ">
-																						<a class="tbfooter" href="https://docs.oracle.com/en/cloud/paas/autonomous-json-database/tutorials.html" style="text-decoration:none; word-break:break-all; white-space: nowrap; color: #FFFFFF! important;" target="_self">
+																					<td style="text-align:center; max-width:400px; width:400; width:400px; max-height: 30px; height: 30; height: 30px; padding:10px 0px 10px 0px; -webkit-border-radius: 18px; -moz-border-radius: 18px; border-radius: 18px; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; color:#ffffff !important; background-color: #FFA500;">
+																						<a class="tbfooter" href="https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?p180_id=586" style="text-decoration:none; word-break:break-all; white-space: nowrap; color: #FFFFFF! important;" target="_self">
 																							<span style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#ffffff; font-weight: bold;">
 																								Quick start lab
+																							</span>
+																						</a>
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<br>
+														<br>
+														<table border="0" cellpadding="10" cellspacing="0" width="100%">
+															<tbody>
+																<tr>
+																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; vertical-align: text-top; text-align: left;">
+																		<div>
+<!--[if mso]>
+ <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:55px;v-text-anchor:middle;width:55px;" arcsize="100%" strokecolor="#708090" fillcolor="#708090">
+                    <w:anchorlock/>
+    <v:textbox style="mso-fit-shape-to-text:true" height="55" width="55">
+        <center style="color:#ffffff;font-family:sans-serif;font-size:34px;font-weight:bold;">2</center>
+    </v:textbox>
+  </v:roundrect>
+  <![endif]-->
+																			<![if !mso]>
+																			<div class="circle_grey" style="border-radius: 50%; width: 34px; height: 34px; padding: 10px; background: #708090; border: 0px solid #708090; color: #FFFFFF; text-align: center; font: 32px Arial, sans-serif; font-weight: bold;">
+																				2
+																			</div>
+																			<![endif]>
+																		</div>
+																	</td>
+																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left; vertical-align:top !important;">
+																		<p style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color: #000000; font-weight: normal;">
+																			<b>Oracle LiveLabs</b> helps you learn about cutting-edge skills for getting the most from machine learning with Autonomous Database.
+																		</p>
+																		<table border="0" cellpadding="0" cellspacing="0" class="left" style="mso-hide: all !important;" width="auto">
+																			<tbody>
+																				<tr>
+																					<td style="text-align:center; max-width:400px; width:400; width:400px; max-height: 30px; height: 30; height: 30px; padding:10px 0px 10px 0px; -webkit-border-radius: 18px; -moz-border-radius: 18px; border-radius: 18px; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; color:#ffffff !important; background-color: #708090;">
+																						<a class="tbfooter" href="https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/home" style="text-decoration:none; word-break:break-all; white-space: nowrap; color: #FFFFFF! important;" target="_self">
+																							<span style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#ffffff; font-weight: bold;">
+																								Oracle LiveLabs
 																							</span>
 																						</a>
 																					</td>
@@ -565,23 +615,66 @@
   </v:roundrect>
   <![endif]-->
 																			<![if !mso]>
-																			<div class="circle_purple" style="border-radius: 50%; width: 34px; height: 34px; padding: 10px; background: #800080; border: 0px solid #800080; color: #FFFFFF; text-align: center; font: 32px Arial, sans-serif; font-weight: bold; ">
-																				2
+																			<div class="circle_purple" style="border-radius: 50%; width: 34px; height: 34px; padding: 10px; background: #800080; border: 0px solid #800080; color: #FFFFFF; text-align: center; font: 32px Arial, sans-serif; font-weight: bold;">
+																				3
 																			</div>
 																			<![endif]>
 																		</div>
 																	</td>
 																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left; vertical-align:top !important;">
 																		<p style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color: #000000; font-weight: normal;">
-																			View our online guide to <b>Getting Started</b> with Autonomous JSON Database.
+																			View our online guide to <b>Getting Started</b> with Oracle Machine Learning.
 																		</p>
-																		<table border="0" cellpadding="0" cellspacing="0" class="left"  width="auto">
+																		<table border="0" cellpadding="0" cellspacing="0" class="left" style="mso-hide: all !important;" width="auto">
 																			<tbody>
 																				<tr>
-																					<td style="text-align:center; max-width:400px; width:400; width:400px; max-height: 50px; height: 50; height: 50px; -webkit-border-radius: 18px; -moz-border-radius: 18px; border-radius: 18px; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; color:#ffffff !important; background-color: #800080; ">
-																						<a class="tbfooter" href="https://docs.oracle.com/en/cloud/paas/autonomous-json-database/ajdug/get-started1.html" style="text-decoration:none; word-break:break-all; white-space: nowrap; color: #FFFFFF! important;" target="_self">
+																					<td style="text-align:center; max-width:400px; width:400; width:400px; max-height: 30px; height: 30; height: 30px; padding:10px 0px 10px 0px; -webkit-border-radius: 18px; -moz-border-radius: 18px; border-radius: 18px; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; color:#ffffff !important; background-color: #800080;">
+																						<a class="tbfooter" href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/omlug/get-started-oracle-machine-learning.html#GUID-2AEC56A4-E751-48A3-AAA0-0659EDD639BA" style="text-decoration:none; word-break:break-all; white-space: nowrap; color: #FFFFFF! important;" target="_self">
 																							<span style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#ffffff; font-weight: bold;">
 																								Getting started guide
+																							</span>
+																						</a>
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<br>
+														<br>
+														<table border="0" cellpadding="10" cellspacing="0" width="100%">
+															<tbody>
+																<tr>
+																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; vertical-align: text-top; text-align: left;">
+																		<div>
+<!--[if mso]>
+ <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:55px;v-text-anchor:middle;width:55px;" arcsize="100%" strokecolor="#008000" fillcolor="#008000">
+                    <w:anchorlock/>
+    <v:textbox style="mso-fit-shape-to-text:true" height="55" width="55">
+        <center style="color:#ffffff;font-family:sans-serif;font-size:34px;font-weight:bold;">4</center>
+    </v:textbox>
+  </v:roundrect>
+  <![endif]-->
+																			<![if !mso]>
+																			<div class="circle_green" style="border-radius: 50%; width: 34px; height: 34px; padding: 10px; background: #008000; border: 0px solid #008000; color: #FFFFFF; text-align: center; font: 32px Arial, sans-serif; font-weight: bold;">
+																				4
+																			</div>
+																			<![endif]>
+																		</div>
+																	</td>
+																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left; vertical-align:top !important;">
+																		<p style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color: #000000; font-weight: normal;">
+																			Our range of reference architecture patterns in the <b>Oracle Solution Center</b> will help you design and deploy a flexible, modern framework for running machine learning algorithms in the cloud.
+																		</p>
+																		<table border="0" cellpadding="0" cellspacing="0" class="left" style="mso-hide: all !important;" width="auto">
+																			<tbody>
+																				<tr>
+																					<td style="text-align:center; max-width:400px; width:400; width:400px; max-height: 30px; height: 30; height: 30px; padding:10px 0px 10px 0px; -webkit-border-radius: 18px; -moz-border-radius: 18px; border-radius: 18px; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; color:#ffffff !important; background-color:#008000;">
+																						<a href="https://docs.oracle.com/en/solutions/index.html?product=Autonomous%20Data%20Warehouse%2CAutonomous%20Transaction%20Processing&search=machine%20learning&page=0&is=true&sort=0" style="text-decoration:none; word-break:break-all; white-space: nowrap; color: #FFFFFF! important;" target="_self">
+																							<span style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#ffffff; font-weight: bold;">
+																								Solution Center
 																							</span>
 																						</a>
 																					</td>
@@ -608,32 +701,23 @@
   </v:roundrect>
   <![endif]-->
 																			<![if !mso]>
-																			<div class="circle_teal" style="border-radius: 50%; width: 34px; height: 34px; padding: 10px; background: teal; border: 0px solid teal; color: #FFFFFF; text-align: center; font: 32px Arial, sans-serif; font-weight: bold; ">
-																				3
+																			<div class="circle_teal" style="border-radius: 50%; width: 34px; height: 34px; padding: 10px; background: teal; border: 0px solid teal; color: #FFFFFF; text-align: center; font: 32px Arial, sans-serif; font-weight: bold;">
+																				5
 																			</div>
 																			<![endif]>
 																		</div>
 																	</td>
 																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left; vertical-align:top !important;">
 																		<p style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color: #000000; font-weight: normal;">
-																			<b>Got a question?</b> Visit our online forums to post a question and collaborate with experts in the area of Autonomous JSON Database.
+																			<b>Got a question?</b> Visit our online forum to post a question and collaborate with machine learning experts in the area of Autonomous Database.
 																		</p>
-																		<table border="0" cellpadding="0" cellspacing="0" class="left"  width="auto">
+																		<table class="left"  width="auto" cellspacing="0" cellpadding="0" border="0">
 																			<tbody>
 																				<tr>
-																					<td style="text-align:center; max-width:200px; width:200; width:200px; max-height: 50px; height: 50; height: 50px; -webkit-border-radius: 18px; -moz-border-radius: 18px; border-radius: 18px; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; color:#ffffff !important; background-color:#008080;  text-align: center !important; align: center !important;">
-																						<a class="tbfooter" href="https://www.oracle.com/goto/atp/forum" style="text-decoration:none; word-break:break-all; white-space: nowrap; color: #FFFFFF! important;" target="_self">
+																					<td style="text-align:center; max-width:400px; width:400; width:400px; max-height: 50px; height: 50; height: 50px; -webkit-border-radius: 18px; -moz-border-radius: 18px; border-radius: 18px; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; color:#ffffff !important; background-color:#008080; text-align: center !important; align: center !important;">
+																						<a class="tbfooter" href="https://community.oracle.com/customerconnect/search?query=machine%20learning&scope=site" style="text-decoration:none; word-break:break-all; white-space: nowrap; color: #FFFFFF! important;" target="_self">
 																							<span style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#ffffff; font-weight: bold; text-align: center !important; align: center !important;">
-																								General<br>Q & A  forum
-																							</span>
-																						</a>
-																					</td>
-																					<td style="text-align:center; max-width:60px; width:60; width:60px; max-height: 50px; height: 50; height: 50px;">
-																					</td>
-																					<td style="text-align:center; max-width:200px; width:200; width:200px; max-height: 50px; height: 50; height: 50px; -webkit-border-radius: 18px; -moz-border-radius: 18px; border-radius: 18px; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; color:#ffffff !important; background-color:#008080;  text-align: center !important; align: center !important;">
-																						<a class="tbfooter" href="https://stackoverflow.com/questions/tagged/oracle-autonomous-db" style="text-decoration:none; word-break:break-all; white-space: nowrap; color: #FFFFFF! important;" target="_self">
-																							<span style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#ffffff; font-weight: bold; text-align: center !important; align: center !important;">
-																								Technical<br>Q &amp; A forum
+																								Machine Learning forum
 																							</span>
 																						</a>
 																					</td>
@@ -644,40 +728,6 @@
 																</tr>
 															</tbody>
 														</table>
-														<br>
-														<br>
-														<table width="100%" cellspacing="0" cellpadding="10" border="0">
-															<tbody>
-																<tr>
-																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; vertical-align: text-top; text-align: left;">
-																		<div style="width:50px; height:50px;">                                      <!--[if mso]> <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://example.com" style="height:55px;v-text-anchor:middle;width:55px;" arcsize="100%" strokecolor="#00008B" fillcolor="#00008B">                    <w:anchorlock/>    <v:textbox style="mso-fit-shape-to-text:true" height="55" width="55">        <center style="color:#ffffff;font-family:sans-serif;font-size:34px;font-weight:bold;">4</center>    </v:textbox>  </v:roundrect>  <![endif]-->                                      <!--[if !mso]-->
-																			<div class="circle_teal" style="border-radius: 50%; width: 34px; height: 34px; padding: 10px; background: #00008B; border: 0px solid #00008B; color: #FFFFFF; text-align: center; font: 32px Arial, sans-serif; font-weight: bold; ">
-																				4
-																			</div>                                      <!--[endif]-->
-																		</div>
-																	</td>
-																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left; vertical-align:top !important;">
-																		<p style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color: #000000; font-weight: normal;">
-																			<b>What's new?</b> Autonomous JSON Database is updated with new features every 2-3 weeks. Keep up to date with all the new features by bookmarking the link below.
-																		</p>
-																		<table class="left" width="auto" cellspacing="0" cellpadding="0" border="0">
-																			<tbody>
-																				<tr>
-																					<td style="text-align:center; max-width:420px; width:420; width:420px; max-height: 50px; height: 50; height: 50px;-webkit-border-radius: 18px; -moz-border-radius: 18px; border-radius: 18px; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; color:#ffffff !important; background-color: darkblue; ">
-																						<a class="tbfooter" href="https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsn/index.html" style="text-decoration:none; word-break:break-all; white-space: nowrap; color: #FFFFFF! important;" target="_self">
-																							<span style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#ffffff; font-weight: bold;">
-																								What's new guide
-																							</span>
-																						</a>
-																					</td>
-																				</tr>
-																			</tbody>
-																		</table>
-																	</td>
-																</tr>
-															</tbody>
-														</table>
-														
 													</td>
 												</tr>
 											</tbody>
@@ -692,11 +742,10 @@
 																	<td style="font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color:#161513; text-align: left;">
 																		<p style="text-decoration:none; font-family:'Oracle Sans', Noto Sans, Helvetica, Arial, Sans; font-size:16px; color: #000000; font-weight: normal;">
 																			<br>
-																			Put your new Autonomous JSON Database to work!
+																			Put your new Oracle Machine Learning account to work!
 																			<br><br>
-																			Best regards,
-																			<br><br>
-																			Autonomous JSON Database Product Management Team
+																			Best regards,<br><br>
+																			Oracle Machine Learning Product Management Team
 																		</p>
 																	</td>
 																</tr>
@@ -731,14 +780,14 @@
 												<tr>
 													<td align="left" class="pad-lr24" id="copyrightLabel" style="padding: 15px 55px 0; margin-left: -148px; width: 738px;">
 														<p style="font-family: 'Oracle Sans', Noto Sans,Helvetica,Arial,Sans; font-size: 10px; color: #FFFFFF!important;">
-															Copyright © 2018, 2022, Oracle and/or its affiliates. Oracle Corporation - Worldwide Headquarters, 2300 Oracle Way, Austin, TX 78741. United States.
+															Copyright © 2018, 2021, Oracle and/or its affiliates. Oracle Corporation - Worldwide Headquarters, 2300 Oracle Way, Austin, TX 78741. United States.
 														</p>
 													</td>
 												</tr>
 												<tr>
 													<td align="right" class="pad-t20 pad-l24" style="padding:4px 36px 0 55px;" valign="bottom">
 														<a href="http://www.oracle.com/us/corporate/index.html" target="_blank">
-															<img moz-do-not-send="true" alt="Oracle" border="0" height="36" src="https://www.oracle.com/a/ocom/img/dc/tb/rwd/o-red-tag.png" style="display:block;" width="36">
+															<img alt="Oracle" border="0" height="36" src="https://www.oracle.com/a/ocom/img/dc/tb/rwd/o-red-tag.png" style="display:block;" width="36">
 														</a>
 													</td>
 												</tr>
@@ -755,6 +804,6 @@
 		<br>
 		<br>
 		<br>
-		<br>						
+		<br>
 	</body>
 </html>
