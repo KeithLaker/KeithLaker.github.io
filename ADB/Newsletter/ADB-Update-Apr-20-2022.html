@@ -360,6 +360,7 @@ box-shadow: 0px 0px 0px white;}
 													<ul style="color: #312D2A; font-family: 'Oracle Sans', 'Helvetica Neue', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 14px; font-weight:400">
 														<li>Service level objectives published</li>
 														<li>Create wallet-free database links within a PE to other Oracle databases</li>
+														<li>Connection and latency test tool - adbping</li>
 													</ul>
 													<li style="font-weight: bold;">
 														<a style="text-decoration:none; font-family:Arial, Helvetica, sans-serif; color:black;" href="#fi" target="_self">Faster Innovation</a>
@@ -622,6 +623,80 @@ box-shadow: 0px 0px 0px white;}
 																					<a href="https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/plan-for-disaster-recovery-dr.html" target="_blank">AWS offers range of RPO/RTO scenarios from +24 hours to near-zero</a>, depending on different deployment scenarios and customer’s budget
 																					<br><br>
 																					<a href="https://azure.microsoft.com/en-gb/support/legal/sla/azure-sql-database/v1_7/" target="_blank">SQL Server has documented RPO/RTO</a> but requires Business Critical tier and geo-replication to provide a guarantee of RPO of 5 sec and RTO of 30 sec for 100% of deployed hours.
+																				</p>
+																				<br>
+																				<br>
+																			</span>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr bgcolor="#e7e7e6">
+															<td>
+																<p style="padding-top:5px">&nbsp;</p>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+<!-- Feature ends here -->
+<!-- Feature starts here -->
+										<tr bgcolor="#e7e7e6" style="padding-right:33px">
+											<td colspan="3" align="center">
+												<table cellpadding="0" cellspacing="0" role="presentation" style="margin: 0px 33px 0px 33px; padding-right:13px" >
+													<tbody>
+														<tr>
+												<!-- card color header row -->
+															<td style="margin:25px 20px -15px 0x;padding: 0px 20px 0px 20px; background-color: #e28f3b; min-height:100%; border-radius: 10px 0px 0px 0px;" valign="top" width="70%" >
+													<!-- card header cell spotlight -->
+																<p style="margin:5px 0px 15px 0px; padding: 0px 5px 0px 0px; color: #FFFFFF;font-family: 'Oracle Sans', 'Helvetica Neue', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight:600"><br>TESTING CONNECTIONS</p>
+																<p style="padding: 0px 5px 0px 0px; margin-top:-10px; margin-bottom: 10px; font-family: 'Oracle Sans', 'Helvetica Neue', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 14px; font-weight:400">
+																	<strong>NEW</strong> - Connection and latency test tool
+																</p>
+															</td>
+															<td style="padding: 0px 20px 0px 20px; background-color: #e28f3b; min-height:100%; border-radius: 0px 10px 0px 0px;" valign="top" align="center" width="150px">
+																<br>
+																<span style="font-size:8pt; font-weight: bold; font-family: 'Oracle Sans', 'Helvetica Neue', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: white !important;"><strong>SIMPLER MANAGEMENT</strong></span><br>
+																<img moz-do-not-send="true" width="90" style="max-width:90px !important; width:90px !important;" src="https://keithlaker.github.io/Images/managability.png" alt="icon for managing Autonomous Database">
+																<br>
+																<br>
+															</td>
+														</tr>
+														<tr>
+												<!-- card body row -->
+															<td colspan="2" style="padding-top: 20px; padding-left: 20px; padding-right: 20px; background-color: #FFFFFF; min-height:100%; vertical-align: top; border-radius: 0px 0px 10px 10px;" width="50%">
+													<!-- card header cell -->
+																<p style="color: #1C1C1C !important; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height:20px; letter-spacing:.5px; font-weight: 400; text-align:left;">
+																	<strong>CHALLENGE</strong><br> It is a common requirement to determine the latency while connecting to a particular service. A typical use case is when a workload is running with an unusual high latency and the cloud admin needs to ensure if the database service used by the workload, is healthy and is not having inherent latency issues impacting the workload / queries.
+																	<br>
+																	<br>
+																	<strong>SOLUTION</strong><br>
+																	<strong>adbping</strong> is an easy to use command line tool that can easily help end users determine the connection and SQL execution latency to benchmark the performance outside of their business workload.
+																	<br>
+																	<br>
+																	The tool allows admins to run the benchmark test with different options including multi client support, multi threaded, configurable connection characteristics like pool size and other options.
+																</p>
+																<br>
+																<br>
+																<table cellpadding="0" cellspacing="0" role="presentation" style="margin: 0px 33px 0px 33px; width:90%">
+																	<tr>
+																		<td style="padding-left: 20px; padding-right: 20px; background-color: orange; min-height:100%; vertical-align: top; border-radius: 10px 10px 10px 10px;" width="100%">
+																			<p style="color: #1C1C1C !important; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height:20px; letter-spacing:.5px; font-weight: 400; text-align:center;">
+																				<br>
+																				<strong>LEARN MORE</strong>
+																				<br>
+																				<br>
+																			</p>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td style="padding-top: 20px; padding-left: 20px; padding-right: 20px; background-color: #FFFFFF; min-height:100%; vertical-align: top; border-radius: 0px 0px 10px 10px;" width="100%">
+																			<span style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000;"  class="tmpTextedtr">
+																				<p style="color: #1C1C1C !important; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height:20px; letter-spacing:.5px; font-weight: 400; text-align:left;">
+																					<strong>MOS NOTE</strong> 2863450.1 : Connection and latency test tool - adbping, <a href="https://mosemp.us.oracle.com/epmos/faces/DocumentDisplay?_afrLoop=227603662428685&id=2863450.1&_afrWindowMode=0&_adf.ctrl-state=rsflhg4tx_53">click here</a><br><br>
+																					 <em>this command line tool supports macOS and Linux.X64. Support for Windows is planned in an upcoming release.</em>
 																				</p>
 																				<br>
 																				<br>
