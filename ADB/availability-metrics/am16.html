@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<!-- start : oOTNPageDetail_C/Technology/Redwood2 -->
+	<head>
+
+	<!-- oOTNPageDetail_C/Technology/Head -->
+		<title>Autonomous Database Regional Availability Metrics</title>
+		<meta name="Title" content="Autonomous Database Regional Availability Metrics">
+		<meta name="Description" content="Autonomous Database Regional Availability Metrics">
+		<meta name="Keywords" content="regional availability metrics, oci, cloud, autonomous database">
+
+	<!-- Container/Display Start -->
+
+	<!-- _Raw-Text -->
+	<!-- css / js files start -->
+	<script>
+		!function () {
+			var d = document.documentElement; d.className = d.className.replace(/no-js/, 'js');
+			if (document.location.href.indexOf('betamode=') > -1) document.write('<script src="https://www.oracle.com/asset/web/js/ocom-betamode.js"><\/script>');
+		}();
+	</script>
+		<link data-wscss href="https://www.oracle.com/asset/web/css/ocom-v1-base.css" rel="stylesheet">
+		<link data-wscss href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="preload" as="style"
+		onload="this.rel='stylesheet'" onerror="this.rel='stylesheet'">
+		<noscript>
+			<link href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="stylesheet">
+		</noscript>
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/ocom-v1-base.js" rel="preload" as="script">
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/ocom-v1-lib.js" rel="preload" as="script">
+	<!-- @todo - removed async  and removed duplicate jqury lib -->
+	<script data-wsjs src="https://www.oracle.com/asset/web/js/jquery-min.js" async
+		onload="$('head link[data-reqjq][rel=preload]').each(function(){var a = document.createElement('script');a.async=false;a.src=$(this).attr('href');this.parentNode.insertBefore(a, this);});$(function(){$('script[data-reqjq][data-src]').each(function(){this.async=true;this.src=$(this).data('src');});});"></script>
+	<!-- end css / js files start -->
+	<!-- / _Raw-Text -->
+
+	<!-- Container/Display end -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="siteid" content="us">
+		<meta name="countryid" content="US">
+		<meta name="robots" content="index, follow">
+		<meta name="country" content="United States">
+		<meta name="Language" content="en">
+		<meta name="Updated Date" content="2022-03-14T16:23:28Z">
+
+	<script type="text/javascript">
+		var pageData = pageData || {};
+		//page info
+		pageData.pageInfo = pageData.pageInfo || {};
+		pageData.pageInfo.language = "en";
+		pageData.pageInfo.country = "United States";
+		pageData.pageInfo.pageTitle = "Autonomous Database Regional Availability Metrics";
+		pageData.pageInfo.description = "Autonomous Database Regional Availability Metrics";
+		pageData.pageInfo.keywords = "regional availability metrics, oci, cloud, autonomous database";
+		pageData.pageInfo.siteId = "us";
+		pageData.pageInfo.countryId = "US";
+		pageData.pageInfo.updatedDate = "2022-03-14T16:23:28Z";
+	</script>
+	<!-- start : ocom/common/global/components/seo-taxonomy-meta-data-->
+
+	<script type="text/javascript">
+		var pageData = pageData || {};
+		//taxonmy
+		pageData.taxonomy = pageData.taxonomy || {};
+		pageData.taxonomy.productServices = [];
+		pageData.taxonomy.industry = [];
+		pageData.taxonomy.region = [];
+		pageData.taxonomy.contentType = [];
+		pageData.taxonomy.buyersJourney = [];
+		pageData.taxonomy.revenue = [];
+		pageData.taxonomy.title = [];
+		pageData.taxonomy.audience = [];
+		pageData.taxonomy.persona = [];
+	</script>
+	<!-- end : ocom/common/global/components/seo-taxonomy-meta-data-->
+	<!-- start : ocom/common/global/components/social-media-meta-tags -->
+	<!-- end : ocom/common/global/components/social-media-meta-tags -->
+	<!-- start : ocom/common/global/components/seo-hreflang-meta-tags -->
+		<link rel="canonical"
+		href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/adb-availability-metrics.html" />
+		<link rel="alternate" hreflang="en-US"
+		href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/adb-availability-metrics.html" />
+	<!-- end : ocom/common/global/components/seo-hreflang-meta-tags -->
+
+	<!-- Container/Display Start -->
+
+	<!-- _Raw-Text -->
+	<!-- www-us HeadAdminContainer -->
+		<link rel="icon" href="https://www.oracle.com/asset/web/favicons/favicon-32.png" sizes="32x32">
+		<link rel="icon" href="https://www.oracle.com/asset/web/favicons/favicon-128.png" sizes="128x128">
+		<link rel="icon" href="https://www.oracle.com/asset/web/favicons/favicon-192.png" sizes="192x192">
+		<link rel="apple-touch-icon" href="https://www.oracle.com/asset/web/favicons/favicon-120.png" sizes="120x120">
+		<link rel="apple-touch-icon" href="https://www.oracle.com/asset/web/favicons/favicon-152.png" sizes="152x152">
+		<link rel="apple-touch-icon" href="https://www.oracle.com/asset/web/favicons/favicon-180.png" sizes="180x180">
+		<meta name="msapplication-TileColor" content="#fcfbfa" />
+		<meta name="msapplication-square70x70logo" content="favicon-128.png" />
+		<meta name="msapplication-square150x150logo" content="favicon-270.png" />
+		<meta name="msapplication-TileImage" content="favicon-270.png" />
+		<meta name="msapplication-config" content="none" />
+		<meta name="referrer" content="no-referrer-when-downgrade" />
+	<script async="async" type="text/javascript"
+		src='//consent.truste.com/notice?domain=oracle.com&c=teconsent&js=bb&noticeType=bb&text=true&gtm=1&cdn=1&pcookie'
+		crossorigin></script>
+		<style>
+		#oReactiveChatContainer1 {
+			display: none;
+		}
+		</style>
+	<!-- Truste for RU -->
+	<script type="text/javascript">
+		if (location.pathname.indexOf("/ru/") == 0) {
+			document.write('\x3Cscript async="async" src=//consent.truste.com/notice?domain=oracleru.com&c=teconsent&js=bb&noticeType=bb&text=true&gtm=1&cdn=1&pcookie crossorigin="">\x3C/script>');
+		}
+	</script>
+	<!--Tealium embed code -->
+	<script src="https://tms.oracle.com/main/prod/utag.sync.js"></script>
+	<!-- Loading script asynchronously -->
+	<script type="text/javascript">
+		(function (a, b, c, d) {
+			if (location.href.indexOf("tealium=dev") == -1) {
+				a = 'https://tms.oracle.com/main/prod/utag.js';
+			} else {
+				a = 'https://tms.oracle.com/main/dev/utag.js';
+			}
+			b = document; c = 'script'; d = b.createElement(c); d.src = a; d.type = 'text/java' + c; d.async = true;
+			a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a);
+		})();
+	</script>
+	<!--End-->
+
+	<!-- / _Raw-Text -->
+
+	<!-- Container/Display end -->
+
+	<script>
+
+		const MANIFEST_URL = 'https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/dwcsprod/adb_public_metrics/regional_metrics_manifest_file.json';
+			
+		async function loadData(requestURL) {
+			let request = new Request(requestURL);
+			let response = await fetch(request, {
+				referrerPolicy: 'no-referrer',
+				cache: "no-store", 
+				headers: {
+					'Content-Type': 'application/octet-stream',
+				}});
+			//console.log(...response.headers);
+			var ctype = response.headers.get('Content-Type')
+			if(ctype.indexOf('text/html') != -1) {
+				// invalid response
+				return {data: []};
+			}
+			else { 
+				return await response.json();
+			}
+		}
+
+		function prepareHeaders(header_labels, table) {
+			var header = $('<tr/>');
+			var th = [];
+			th[th.length] = '<td class="dc_header">Data Center</td>';
+			$.each(header_labels, function(rowIndex, title) {
+				th[th.length] = '<td class="am_header">'+ title +'</td>';
+			});
+			header.append(th.join(''));
+			table.append(header);
+		}
+
+		function addRow(region_name, datajson, keys, parent, rowIdx) {
+			console.log(datajson);
+			var row = $('<tr id="rIdx_'+ rowIdx +'" />');
+			var td = [];
+			td[td.length] = '<td id="dc_' + rowIdx + '"class="dc_column">'+ region_name +'</td>';
+			$.each(keys, function(colIdx, key) {
+				var id =  key + '_' + rowIdx;
+				td[td.length] = '<td id="'+ id + '" class="am_column"';
+				if(datajson.data[key]) {
+					var val = datajson.data[key].value;
+					val = val.replace(/%/g, "");
+					val = val * 100;
+					val = val.toFixed(3);
+					
+					if (val < 99.99) {
+						td[td.length] = 'style="background: hsla(89, 43%, 51%, 0.15)"';
+					}
+					else if (val < 99.999) {
+						td[td.length] = 'style="background: hsla(89, 43%, 51%, 0.3)"';
+					}
+					else if (val < 99.9999) {
+						td[td.length] = 'style="background: hsla(89, 43%, 51%, 0.5)"';
+					}
+					else if (val > 99.999) {
+						td[td.length] = 'style="background: hsla(89, 43%, 51%, 0.9)"';
+					}
+					td[td.length] = ' >'+ val +'</td>';
+				}
+				else {
+					td[td.length] = ' >&nbsp;</td>';
+				}
+			});
+			row.append(td.join(''));
+			parent.append(row);
+		}
+
+		function updateRowData(region_name, datajson, keys, row, rowIdx) {
+			console.log(datajson);
+			if(datajson.data.length === 0) {
+				return;
+			}
+
+			$.each(keys, function(colIdx, key) {
+				var td = [];
+				var id =  key + '_' + rowIdx;
+				td[td.length] = '<td id="'+ id + '" class="am_column"';
+				if(datajson.data[key]) {
+					var val = datajson.data[key].value;
+					val = val.replace(/%/g, "");
+					val = val * 100;
+					val = val.toFixed(3);
+					
+					if (val < 99.99) {
+						td[td.length] = 'style="background: hsla(89, 43%, 51%, 0.15)"';
+					}
+					else if (val < 99.999) {
+						td[td.length] = 'style="background: hsla(89, 43%, 51%, 0.3)"';
+					}
+					else if (val < 99.9999) {
+						td[td.length] = 'style="background: hsla(89, 43%, 51%, 0.5)"';
+					}
+					else if (val > 99.999) {
+						td[td.length] = 'style="background: hsla(89, 43%, 51%, 0.9)"';
+					}
+					td[td.length] = ' >'+ val +'</td>';
+				}
+				else {
+					td[td.length] = ' >&nbsp;</td>';
+				}
+				row.find('#' + id).replaceWith(td.join(''));
+			});
+			row.show();
+		}
+
+		function addRowEmptyCols(keys, row, rowIdx) {
+			var td = [];
+			$.each(keys, function(colIdx, key) {
+				td[td.length] = '<td id="'+ key + '_' + rowIdx + '" class="am_column" ';
+				td[td.length] = ' >&nbsp;</td>';
+			});
+			row.append(td.join(''));
+		}
+
+		function makeTable(container) {
+			//create table
+			var table = $('<table class="table-am-style" />');
+			container.append(table);
+
+			//load manifest file
+			loadData(MANIFEST_URL).then(function(mfjson){
+				console.log(mfjson);
+				//get region count
+				var regionsCount = mfjson[0].data.length;
+				if(regionsCount == 0) {
+					$("#metricsDataLoader").html("No Data Found");
+				}
+				else {
+					//sort regions by display_name
+					let regionObjs = mfjson[0].data;
+					regionObjs.sort( function( a, b ) {
+						if ( a.display_name < b.display_name ){
+							return -1;
+						}
+						if ( a.display_name > b.display_name ){
+							return 1;
+						}
+						return 0;
+					} );
+
+					//headers titles
+					const header_labels = regionObjs[0].keys_display_values;
+					prepareHeaders(header_labels, table);
+					//data keys
+					const data_keys = regionObjs[0].keys;
+                    var swapcol = 1;
+
+					//rows
+					for(var j=0; j<regionsCount; j++) {
+						//create and append row
+						var row = $('<tr id="rIdx_'+ j +'"  style="display:none" />');
+						var str1 = regionObjs[j].display_name;
+						
+						if (j == regionsCount-1) {
+							var str2 = regionObjs[j].display_name;
+						}
+						else {
+							var str2 = regionObjs[(j+1)].display_name;
+						}
+						
+						str1 = str1.substring(0,1);	
+						str2 = str2.substring(0,1);						
+						
+						if (str1 == str2) {
+							row.append('<td id="dc_' + j + '"class="dc_column' + swapcol + '">'+ regionObjs[j].display_name +'</td>');
+						}
+						else {
+							row.append('<td id="dc_' + j + '"class="dc_column' + swapcol + '">'+ regionObjs[j].display_name +'</td>');
+							swapcol = swapcol + 1;
+							
+							if (swapcol > 2) {
+							   swapcol = 1;
+							}
+						}
+												
+						
+						table.append(row);
+						addRowEmptyCols(data_keys, row, j);
+
+						(function(region_name, data_file, data_keys, row, rowIdx) {
+							loadData(data_file).then(function(datajson){
+								//console.log(datajson);
+								//addRow(region_name, datajson, data_keys, row, rowIdx);
+								updateRowData(region_name, datajson, data_keys, row, rowIdx);
+							}); //end data load
+						})(regionObjs[j].display_name, regionObjs[j].file_name, data_keys, row, j); 
+					} //end for
+
+					$("#metricsDataLoader").hide()
+					$("#metricsData").show()
+				} //else
+			}); // end manifest load
+		}
+
+		var waitForJQuery = setInterval(function () {
+			//check for jquery loaded or not because it is loaded async
+			if (typeof $ != 'undefined') {
+				clearInterval(waitForJQuery);
+				makeTable($("#metricsData"));
+			}
+		}, 10);
+	</script>
+	</head>
+	<body class="f11 f11v6 rwtheme-pebble">
+		<div class="f11w1">
+
+		<!-- start Common/Header -->
+
+		<!-- Dispatcher:null -->
+
+		<!-- BEGIN: oWidget_C/_Raw-Text/Display -->
+		<!-- U30v3 -->
+			<style>
+			#u30 {
+				opacity: 1 !important;
+				filter: opacity(100%) !important;
+				position: sticky;
+				top: 0
+			}
+
+			.u30v3 {
+				background: #3a3632;
+				height: 50px;
+				overflow: hidden;
+				border-top: 5px solid #3a3632;
+				border-bottom: 5px solid #3a3632
+			}
+
+			#u30nav,
+			#u30tools {
+				visibility: hidden
+			}
+
+			.u30v3 #u30logo {
+				width: 121px;
+				height: 44px;
+				display: inline-flex;
+				justify-content: flex-start;
+			}
+
+			#u30:not(.u30mobile) .u30-oicn-mobile,
+			#u30.u30mobile .u30-oicn {
+				display: none
+			}
+
+			#u30logo svg {
+				height: auto;
+				align-self: center
+			}
+
+			.u30brand {
+				height: 50px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
+				max-width: 1344px;
+				padding: 0 48px;
+				margin: 0 auto
+			}
+
+			.u30brandw1 {
+				display: flex;
+				flex-direction: row;
+				color: #fff;
+				text-decoration: none;
+				align-items: center
+			}
+
+			@media (max-width:1024px) {
+				.u30brand {
+					padding: 0 24px
+				}
+			}
+
+			#u30skip2,
+			#u30skip2content {
+				transform: translateY(-100%);
+				position: fixed
+			}
+
+			.rtl #u30 {
+				direction: rtl
+			}
+			</style>
+			<style>
+			.font-am-banner {
+				font-size: 4.7rem !important;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-weight: 300;
+			}
+
+			.font-show-date {
+				font-size: 3.1rem;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-weight: 300;
+			}
+
+			.font-explain {
+				font-size: 2.7rem;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-weight: 300;
+				margin-left: 50px;
+				margin-right: 150px;
+				margin-bottom: 50px;
+			}
+
+			.font-footnote {
+				font-size: 2.1rem;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-weight: 300;
+				margin-left: 50px;
+				margin-right: 150px;
+				margin-bottom: 50px;
+			}
+
+			/* @todo change id based to class bassed */
+			.table-am-style {
+				width: 100%;
+				/* float: left; */
+				padding: 1px;
+				line-height: 21px;
+				text-align: left;
+				vertical-align: bottom !important;
+				overflow-wrap: break-word;
+				border-width: 2px !important;
+				border-style: solid !important;
+				border-color: rgb(224, 224, 224) !important;
+				font-size: 1 rem;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-weight: 300;
+				border-collapse: collapse;
+			}
+
+			.div-banner {
+				margin-left: 50px;
+				margin-right: 50px;
+			}
+
+			.div-table {
+				padding: 40px 50px;
+				display:inline-block;
+				width:100%;
+			}
+
+			.dc_column {
+				background-color: #F0F3F4;
+				border: 2px solid #e0e0e0 !important;
+				border-color: rgb(224, 224, 224) !important;
+				font-size: 22px !important;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-weight: 200;
+				/* width: 220px; */
+				padding-left: 20px;
+			}
+
+			.dc_column1 {
+				background-color: #F0F3F4;
+				border: 2px solid #e0e0e0 !important;
+				border-color: rgb(224, 224, 224) !important;
+				font-size: 22px !important;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-weight: 200;
+				/* width: 220px; */
+				padding-left: 20px;
+			}
+
+			.dc_column2 {
+				background-color: #FFFFFF;
+				border: 2px solid #e0e0e0 !important;
+				border-color: rgb(224, 224, 224) !important;
+				font-size: 22px !important;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-weight: 200;
+				/* width: 220px; */
+				padding-left: 20px;
+			}
+
+			.dc_header {
+				background-color: #ECF0F1;
+				border: 2px solid #e0e0e0 !important;
+				border-color: rgb(224, 224, 224) !important;
+				font-size: 22px !important;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-weight: 400;
+				text-align: center;
+				/* width: 220px; */
+				padding: 5px;
+			}
+
+			.am_header {
+				background-color: #ECF0F1;
+				border: 2px solid #e0e0e0 !important;
+				border-color: rgb(224, 224, 224) !important;
+				font-size: 22px !important;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-weight: 400;
+				text-align: center;
+				width: 165px;
+				padding: 3px;
+			}
+
+			.am_column {
+				border-width: 2px !important;
+				border-style: solid !important;
+				border-color: rgb(224, 224, 224) !important;
+				font-size: 22px !important;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-weight: 300;
+				text-align: right;
+				/* width: 80px; */
+				/*padding-right: 15px;*/
+				padding: 3px 15px 3px 0;
+			}
+
+			.heatmap1 {
+				background: rgba(0, 128, 0, 0.3);
+				border-right: 15px solid green;
+			}
+			</style>
+			<section class="cb83 cb83v2 cpad bggrey" data-trackas="cb83" data-ocomid="cb83">
+				<div class="cb83w7 cwidth">
+					<div class="cb83w5">
+						<div class="svgimg" style="background-color: white;">
+						</div>
+					</div>
+					<div class="cb83w3">
+						<h2>Regional Average Availability Metrics for Autnomous Database</h2>
+						<p>
+							This page shows the regional average availability metrics by data center for Autonomous Database
+						</p>
+						<br>
+						<br>
+					</div>
+				</div>
+			</section>
+			<br>
+			<br>
+			<br>
+			<div class="div-banner">
+				<img src="https://dka575ofm4ao0.cloudfront.net/pages-transactional_logos/retina/41865/Z9Ik6huVSQC0sSJf8To4">
+				<p class="font-am-banner"></p>
+				<setDate></setDate>
+				<p class="font-explain">
+					The availability data below, which is updated daily, shows a list of average availability percentages
+					across our data centers (<em>see note below table for more information</em>).
+				</p>
+			</div>
+			<div id="metricsDataLoader" class="div-table" style="text-align:center;">
+				Loading Metrics...
+			</div>
+			<div id="metricsData" class="div-table" style="display:none;">
+			</div>
+			<br>
+			<br>
+			<div class="div-footnote">
+				<p class="font-footnote">
+					<strong>NOTE</strong><br> The data shown above was collected by observing the availability of Autonomous
+					Databases across a set of pods in each data center. The test process continuously opens connections to
+					each canary database and then runs simple queries. The data in the table above provides a real-world
+					example of the average availability that a customer would expect to see with Autonomous Database.
+				</p>
+			</div>
+			<br>
+			<br>
+			<br>
+			<div>
+				<h4 style="font-size:20px; margin-left: 55px;">Get started with Autonomous Database</h4>
+				<table width="100%" cellpadding="20px" cellspacing="20px">
+					<tr>
+						<td width="30%">
+							<div class="col-item-w1 rw-blue-40bg" style="height: 183px; border-radius: 15px 15px 0px 0px; margin-left: 25px; border: 1px solid grey;">
+								<div class="icn-img icn-cloud" style="margin-left: 25px;">
+									<h5 style="font-size:16px; margin-left: 25px;">Try Oracle Autonomous Database</h5>
+								</div>
+							</div>
+							<div class="col-item-w1 rw-white-40bg" style="height: 183px; margin-left: 25px; border-radius: 0px 0px 15px 15px; margin-left: 25px; border: 1px solid grey;">
+								<p style="font-size:16px; margin-left: 25px; margin-right: 25px; margin-top: 25px;">
+									Oracle Cloud offers a Free Tier with a 30-day free trial and always-free services.
+								</p>
+								<br>
+								<div class="obttns">
+									<div class="obttn2" style="margin-left: 25px;">
+										<a href="/autonomous-database/free-trial/">
+											Try it for free
+										</a>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td width="30%">
+							<div class="col-item-w1 rw-blue-40bg" style="height: 183px; border-radius: 15px 15px 0px 0px; margin-left: 25px; border: 1px solid grey;">
+								<div class="icn-img" style="margin-left: 25px;">
+									<img style="max-width:80px; width:80px; margin-left:25px;" width="80" src="https://docs.oracle.com/cd/E84502_01/learnjde/images/twitter.png">
+									<br>
+									<h5 style="font-size:16px; margin-left: 25px;">Follow us @AutonomousDW</h5>
+								</div>
+							</div>
+							<div class="col-item-w1 rw-white-40bg" style="height: 183px; margin-left: 25px; border-radius: 0px 0px 15px 15px; margin-left: 25px; border: 1px solid grey;">
+								<p style="font-size:16px; margin-left: 25px; margin-right: 25px; margin-top: 25px;">
+									Get the latest Oracle Database news, events, and community resources.
+								</p>
+								<br>
+								<div class="obttns">
+									<div class="obttn2"  style="margin-left: 25px;">
+										<a href="https://twitter.com/AutonomousDW">
+											Follow us
+										</a>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td width="30%">
+							<div class="col-item-w1 rw-blue-40bg" style="height: 183px; border-radius: 15px 15px 0px 0px; margin-left: 25px; border: 1px solid grey;">
+								<div class="icn-img" style="margin-left: 25px;">
+									<img style="max-width:80px; width:80px; margin-left:25px;" width="80" src="https://docs.oracle.com/cd/E97085_01/10313572.png">
+									<br>
+									<h5 style="font-size:16px; margin-left: 25px;">Ask a question</h5>
+								</div>
+							</div>
+							<div class="col-item-w1 rw-white-40bg" style="height: 183px; margin-left: 25px; border-radius: 0px 0px 15px 15px; margin-left: 25px; border: 1px solid grey;">
+								<p style="font-size:16px; margin-left: 25px; margin-right: 25px; margin-top: 25px;">
+									Have a question about Autonomous Database? Join our community of industry-leading experts on stackoverflow.
+								</p>
+								<div class="obttns">
+									<div class="obttn2"  style="margin-left: 25px;">
+										<a href="https://stackoverflow.com/questions/tagged/oracle-autonomous-db">
+											Get in touch
+										</a>
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+	
+	<!-- Added from here -->
+		</div>
+	</body>
+</html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
