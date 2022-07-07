@@ -250,9 +250,13 @@
 		}
 
 		function makeTable(container) {
+			//Set the information text with the timestamp information
+			populateTime();
+
 			//create table
 			var table = $('<table class="table-am-style" />');
 			container.append(table);
+
 
 			//load manifest file
 			loadData(MANIFEST_URL).then(function(mfjson){
@@ -336,6 +340,22 @@
 				makeTable($("#metricsData"));
 			}
 		}, 10);
+		   function populateTime() {
+
+    const newTSstamp = document.querySelector('setDate');
+
+	const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+
+    var currentdate = new Date(); 
+    var datetime = 'The following data is for informational purposes only and was last refreshed on ' + ( monthNames[currentdate.getMonth()+1]) + " " + currentdate.getDate()   + ", " + currentdate.getFullYear();
+
+    const myTstamp = document.createElement('p');
+    myTstamp.textContent = (datetime); 
+    myTstamp.classList.add('font-show-date');
+    newTSstamp.appendChild(myTstamp);
+
+    }
+		
 	</script>
 	</head>
 	<body class="f11 f11v6 rwtheme-pebble">
