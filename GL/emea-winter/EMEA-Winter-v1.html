@@ -1,0 +1,534 @@
+<style>
+a[href="place-holder.html"] { 
+   pointer-events: none; 
+}
+
+.video_header {
+    color: #3a6f86 !Important;
+	text-align: center;
+}
+
+.close {
+	background: #3a6f86 !Important;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 74px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+	align:right;
+}
+
+.modalPopWindow:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalPopWindow > div {
+    position: relative;
+    height: 85%;
+   	padding-bottom: 75%;
+    overflow: hidden;
+    position: relative;
+	margin: 5% auto;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+	text-align:center !important;
+}
+
+
+.modalPopWindow {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0px;
+	right: 10px;
+	bottom: 10px;
+	left: 10px;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+
+.modalPopWindow iframe {
+    top: 175px;
+    left: 20%;
+	margin-bottom:50px;
+    right: 20%;
+    align:center;
+    width: 60%;
+    height: 30%;
+    position: absolute;
+}
+
+.embedded-video-16-9 {
+  width:  80%;
+  height: 70%;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+@media (min-width: 893px) {
+  .embedded-video-16-9 {
+    width: 80%;
+    height: 70%;
+    margin-left: 1vw;
+    margin-right: 1vw
+  }
+}
+
+
+#gl-wallpaper{
+ background-image: url('https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/7a2d6581d70adae0e2c414d28c05f2d8/abstracts_blue_3.png');
+}
+
+.gl-container {
+    position: relative;
+    background: #C9C1B8;
+    overflow: hidden;
+    align-items: flex-end;
+    display: flex;
+    background-image: url('https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/3f1f9085-e459-4b23-85f7-ed09e21ffb29/Image/6d7c200b980728507271e5a83f66c74e/wah_4.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    height:auto;
+}
+
+.gl-container h2 {
+    padding: 10px;
+    text-align: left;
+    z-index: 2;
+    position: relative;
+    color: black;
+} 
+
+.gl-container p {
+    padding: 10px;
+    text-align: left;
+    z-index: 3;
+    position: relative;
+    color: darkslategrey;
+}
+</style>
+<style type="text/css">
+      /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+</style>
+<style type="text/css">
+      *,:after,:before{box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:transparent}body{font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857;color:#333;background-color:#fff}button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:focus,a:hover{color:#23527c;text-decoration:underline}a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857;background-color:#fff;border:1px solid #ddd;border-radius:4px;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role=button]{cursor:pointer}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.container:after,.container:before{display:table;content:" "}.container:after{clear:both}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.container-fluid:after,.container-fluid:before{display:table;content:" "}.container-fluid:after{clear:both}.row{margin-right:-15px;margin-left:-15px}.row:after,.row:before{display:table;content:" "}.row:after{clear:both}.row-no-gutters{margin-right:0;margin-left:0}.row-no-gutters [class*=col-]{padding-right:0;padding-left:0}.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px}.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12{float:left}.col-xs-1{width:8.33333%}.col-xs-2{width:16.66667%}.col-xs-3{width:25%}.col-xs-4{width:33.33333%}.col-xs-5{width:41.66667%}.col-xs-6{width:50%}.col-xs-7{width:58.33333%}.col-xs-8{width:66.66667%}.col-xs-9{width:75%}.col-xs-10{width:83.33333%}.col-xs-11{width:91.66667%}.col-xs-12{width:100%}.col-xs-pull-0{right:auto}.col-xs-pull-1{right:8.33333%}.col-xs-pull-2{right:16.66667%}.col-xs-pull-3{right:25%}.col-xs-pull-4{right:33.33333%}.col-xs-pull-5{right:41.66667%}.col-xs-pull-6{right:50%}.col-xs-pull-7{right:58.33333%}.col-xs-pull-8{right:66.66667%}.col-xs-pull-9{right:75%}.col-xs-pull-10{right:83.33333%}.col-xs-pull-11{right:91.66667%}.col-xs-pull-12{right:100%}.col-xs-push-0{left:auto}.col-xs-push-1{left:8.33333%}.col-xs-push-2{left:16.66667%}.col-xs-push-3{left:25%}.col-xs-push-4{left:33.33333%}.col-xs-push-5{left:41.66667%}.col-xs-push-6{left:50%}.col-xs-push-7{left:58.33333%}.col-xs-push-8{left:66.66667%}.col-xs-push-9{left:75%}.col-xs-push-10{left:83.33333%}.col-xs-push-11{left:91.66667%}.col-xs-push-12{left:100%}.col-xs-offset-0{margin-left:0}.col-xs-offset-1{margin-left:8.33333%}.col-xs-offset-2{margin-left:16.66667%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-4{margin-left:33.33333%}.col-xs-offset-5{margin-left:41.66667%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-7{margin-left:58.33333%}.col-xs-offset-8{margin-left:66.66667%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-10{margin-left:83.33333%}.col-xs-offset-11{margin-left:91.66667%}.col-xs-offset-12{margin-left:100%}@media (min-width:768px){.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12{float:left}.col-sm-1{width:8.33333%}.col-sm-2{width:16.66667%}.col-sm-3{width:25%}.col-sm-4{width:33.33333%}.col-sm-5{width:41.66667%}.col-sm-6{width:50%}.col-sm-7{width:58.33333%}.col-sm-8{width:66.66667%}.col-sm-9{width:75%}.col-sm-10{width:83.33333%}.col-sm-11{width:91.66667%}.col-sm-12{width:100%}.col-sm-pull-0{right:auto}.col-sm-pull-1{right:8.33333%}.col-sm-pull-2{right:16.66667%}.col-sm-pull-3{right:25%}.col-sm-pull-4{right:33.33333%}.col-sm-pull-5{right:41.66667%}.col-sm-pull-6{right:50%}.col-sm-pull-7{right:58.33333%}.col-sm-pull-8{right:66.66667%}.col-sm-pull-9{right:75%}.col-sm-pull-10{right:83.33333%}.col-sm-pull-11{right:91.66667%}.col-sm-pull-12{right:100%}.col-sm-push-0{left:auto}.col-sm-push-1{left:8.33333%}.col-sm-push-2{left:16.66667%}.col-sm-push-3{left:25%}.col-sm-push-4{left:33.33333%}.col-sm-push-5{left:41.66667%}.col-sm-push-6{left:50%}.col-sm-push-7{left:58.33333%}.col-sm-push-8{left:66.66667%}.col-sm-push-9{left:75%}.col-sm-push-10{left:83.33333%}.col-sm-push-11{left:91.66667%}.col-sm-push-12{left:100%}.col-sm-offset-0{margin-left:0}.col-sm-offset-1{margin-left:8.33333%}.col-sm-offset-2{margin-left:16.66667%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-4{margin-left:33.33333%}.col-sm-offset-5{margin-left:41.66667%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-7{margin-left:58.33333%}.col-sm-offset-8{margin-left:66.66667%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-10{margin-left:83.33333%}.col-sm-offset-11{margin-left:91.66667%}.col-sm-offset-12{margin-left:100%}}@media (min-width:992px){.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12{float:left}.col-md-1{width:8.33333%}.col-md-2{width:16.66667%}.col-md-3{width:25%}.col-md-4{width:33.33333%}.col-md-5{width:41.66667%}.col-md-6{width:50%}.col-md-7{width:58.33333%}.col-md-8{width:66.66667%}.col-md-9{width:75%}.col-md-10{width:83.33333%}.col-md-11{width:91.66667%}.col-md-12{width:100%}.col-md-pull-0{right:auto}.col-md-pull-1{right:8.33333%}.col-md-pull-2{right:16.66667%}.col-md-pull-3{right:25%}.col-md-pull-4{right:33.33333%}.col-md-pull-5{right:41.66667%}.col-md-pull-6{right:50%}.col-md-pull-7{right:58.33333%}.col-md-pull-8{right:66.66667%}.col-md-pull-9{right:75%}.col-md-pull-10{right:83.33333%}.col-md-pull-11{right:91.66667%}.col-md-pull-12{right:100%}.col-md-push-0{left:auto}.col-md-push-1{left:8.33333%}.col-md-push-2{left:16.66667%}.col-md-push-3{left:25%}.col-md-push-4{left:33.33333%}.col-md-push-5{left:41.66667%}.col-md-push-6{left:50%}.col-md-push-7{left:58.33333%}.col-md-push-8{left:66.66667%}.col-md-push-9{left:75%}.col-md-push-10{left:83.33333%}.col-md-push-11{left:91.66667%}.col-md-push-12{left:100%}.col-md-offset-0{margin-left:0}.col-md-offset-1{margin-left:8.33333%}.col-md-offset-2{margin-left:16.66667%}.col-md-offset-3{margin-left:25%}.col-md-offset-4{margin-left:33.33333%}.col-md-offset-5{margin-left:41.66667%}.col-md-offset-6{margin-left:50%}.col-md-offset-7{margin-left:58.33333%}.col-md-offset-8{margin-left:66.66667%}.col-md-offset-9{margin-left:75%}.col-md-offset-10{margin-left:83.33333%}.col-md-offset-11{margin-left:91.66667%}.col-md-offset-12{margin-left:100%}}@media (min-width:1200px){.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12{float:left}.col-lg-1{width:8.33333%}.col-lg-2{width:16.66667%}.col-lg-3{width:25%}.col-lg-4{width:33.33333%}.col-lg-5{width:41.66667%}.col-lg-6{width:50%}.col-lg-7{width:58.33333%}.col-lg-8{width:66.66667%}.col-lg-9{width:75%}.col-lg-10{width:83.33333%}.col-lg-11{width:91.66667%}.col-lg-12{width:100%}.col-lg-pull-0{right:auto}.col-lg-pull-1{right:8.33333%}.col-lg-pull-2{right:16.66667%}.col-lg-pull-3{right:25%}.col-lg-pull-4{right:33.33333%}.col-lg-pull-5{right:41.66667%}.col-lg-pull-6{right:50%}.col-lg-pull-7{right:58.33333%}.col-lg-pull-8{right:66.66667%}.col-lg-pull-9{right:75%}.col-lg-pull-10{right:83.33333%}.col-lg-pull-11{right:91.66667%}.col-lg-pull-12{right:100%}.col-lg-push-0{left:auto}.col-lg-push-1{left:8.33333%}.col-lg-push-2{left:16.66667%}.col-lg-push-3{left:25%}.col-lg-push-4{left:33.33333%}.col-lg-push-5{left:41.66667%}.col-lg-push-6{left:50%}.col-lg-push-7{left:58.33333%}.col-lg-push-8{left:66.66667%}.col-lg-push-9{left:75%}.col-lg-push-10{left:83.33333%}.col-lg-push-11{left:91.66667%}.col-lg-push-12{left:100%}.col-lg-offset-0{margin-left:0}.col-lg-offset-1{margin-left:8.33333%}.col-lg-offset-2{margin-left:16.66667%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-4{margin-left:33.33333%}.col-lg-offset-5{margin-left:41.66667%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-7{margin-left:58.33333%}.col-lg-offset-8{margin-left:66.66667%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-10{margin-left:83.33333%}.col-lg-offset-11{margin-left:91.66667%}.col-lg-offset-12{margin-left:100%}}
+</style>
+<style type="text/css">
+      .embed-responsive{position:relative;display:block;height:0;padding:0;overflow:hidden}.embed-responsive .embed-responsive-item,.embed-responsive embed,.embed-responsive iframe,.embed-responsive object,.embed-responsive video{position:absolute;top:0;bottom:0;left:0;width:100%;height:100%;border:0}.embed-responsive-16by9{padding-bottom:56.25%}.embed-responsive-4by3{padding-bottom:75%}.clearfix:after,.clearfix:before{display:table;content:" "}.clearfix:after{clear:both}.center-block{display:block;margin-right:auto;margin-left:auto}.pull-right{float:right!important}.pull-left{float:left!important}.hide{display:none!important}.show{display:block!important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none!important}.affix{position:fixed}
+</style>
+<style type="text/css">
+      /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */@media print{*,:after,:before{color:#000!important;text-shadow:none!important;background:transparent!important;box-shadow:none!important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}a[href^="#"]:after,a[href^="javascript:"]:after{content:""}blockquote,pre{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}img,tr{page-break-inside:avoid}img{max-width:100%!important}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}.navbar{display:none}.btn>.caret,.dropup>.btn>.caret{border-top-color:#000!important}.label{border:1px solid #000}.table{border-collapse:collapse!important}.table td,.table th{background-color:#fff!important}.table-bordered td,.table-bordered th{border:1px solid #ddd!important}}
+</style>
+<style type="text/css">
+        /* overrides for Eloqua */
+        body .container, body .container-fluid,
+        body .col-xs-1, body .col-xs-2, body .col-xs-3, body .col-xs-4, body .col-xs-5, body .col-xs-6, body .col-xs-7, body .col-xs-8, body .col-xs-9, body .col-xs-10, body .col-xs-11, body .col-xs-12 {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        body .elq-form-cell .container, body .elq-form-cell .container-fluid,
+        body .elq-form-cell .col-xs-1, body .elq-form-cell .col-xs-2, body .elq-form-cell .col-xs-3, body .elq-form-cell .col-xs-4, body .elq-form-cell .col-xs-5, body .elq-form-cell .col-xs-6, body .elq-form-cell .col-xs-7, body .elq-form-cell .col-xs-8, body .elq-form-cell .col-xs-9, body .elq-form-cell .col-xs-10, body .elq-form-cell .col-xs-11, body .elq-form-cell .col-xs-12 {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+</style>
+<style type="text/css">html, body { min-width:260px; min-height:100%; padding:0; margin:0 auto;}a img { border:none; }.button { word-wrap: break-word; }@media screen and (max-width:480px) {@-ms-viewport { width:320px; }@viewport { width:320px; }}.elq-form .field-style._50, .elq-form .field-style._50_left{min-width: 46%; max-width: 96%; width: calc((25em - 100%) * 1000);}.elq-form .field-style._25{min-width: 21%; max-width: 96%; width: calc((25em - 100%) * 1000);}ul { padding: 0 !important; margin: 0 0 0 40px !important; }li { margin-bottom: 10px !important; }.elq-form .sc-static-layout,.elq-form .sc-view.sc-static-layout {position: relative;}.elq-form .sc-view {overflow: hidden;}
+      a{
+        color: #145c9e;}.hovered:hover { filter: brightness(80%); }@media screen and (max-width:480px) {.elq-form .field-style { width: 96%!important; }}.hide-in-desktop {  display: none;  max-height: 0px;}
+</style>
+<style id="media-query" type="text/css">@media (max-width: 520px) {.hide-in-mobile {  min-height: 0px;  max-height: 0px;  max-width: 0px;  display: none;  overflow: hidden;  font-size: 0px;}.hide-in-desktop {  display: block !important;  max-height: none !important;}}.show-in-preview { display:none;height:auto;width:100%; }.elq-preview-mode .show-in-preview { display: inline-block !important; }.elq-preview-mode .hide-in-preview { display: none !important; }
+</style>
+<style type="text/css">
+          .popup-modal{visibility:hidden;opacity:0;position:fixed;z-index:20;padding-top:30px;padding-bottom:30px;left:276px;top:62px;width:calc(100% - 276px);height:calc(100% - 60px);overflow:auto;background-color:#000;background-color:rgba(0,0,0,.4)}.popup-modal.popup-show{visibility:visible;opacity:1;transition:opacity .2s linear}.popup-modal.popup-hide{visibility:hidden;opacity:0;transition:visibility .2s .2s,opacity .2s linear .2s}.modal-header{padding:0 10px;color:#000;border-bottom:none;height:18px}.modal-header>.close{margin-top:0;float:right;font-size:18px;font-weight:700;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.2}.close:focus,.close:hover{text-decoration:none;cursor:pointer}.modal-body{width:100%;padding:2px 20px;margin:0 auto;padding-bottom:10px}.modal-body .expanded-clickable-area{margin:0 -20px}.modal-body a{text-decoration:none}.modal-form form{pointer-events:none}.modal-footer{padding:2px 16px;background-color:#fefefe;color:#000}.modal-content{position:relative;background-color:#fff;margin:auto;padding:0;border:1px solid #888;box-shadow:none;border-radius:0;z-index:22}.modal-content.popup-show{animation-name:slide-in;animation-duration:.4s}.modal-content.popup-hide{animation-name:slide-out;animation-duration:.4s}@keyframes slide-in{0%{top:-300px;opacity:0}to{top:0;opacity:1}}@keyframes slide-out{0%{top:0;opacity:1}to{top:-300px;opacity:0}}@media screen and (max-width:480px){.popup-modal .modal-body{width:calc(98% - 40px)!important}.popup-modal>.modal-content{width:98%!important}}.modal-content.dialog{border-radius:7px 7px 5px 5px;background-color:#fff;box-shadow:0 0 10px 0 rgba(0,0,0,.24)}.modal-content.dialog .modal-header{height:61px;background:#8d909b;color:#fff;font-size:24px;font-weight:300;letter-spacing:.29px;line-height:29px}.modal-content.dialog .modal-header .title{margin-top:16px;margin-left:15px;width:90%;display:inline-block}.modal-content.dialog .modal-body{padding:21px 21px 0}.modal-content.dialog .modal-footer{position:absolute;bottom:0;width:100%;border:none}.modal-content.dialog .modal-footer.btn-group{padding:21px 25px 21px 0}.modal-content.dialog .modal-footer.btn-group .btn{float:right;margin-left:9px;padding:8px 20px;font-size:14px;font-weight:400}.do-not-save-cancel-warning{top:0;left:0;width:100%;height:100%}.do-not-save-cancel-warning .modal-content{top:calc(50% - 107px)}.do-not-save-cancel-warning .modal-content .dialog-text{font-size:14px;line-height:16px}.do-not-save-cancel-warning .modal-content .dialog-text .heading{font-weight:500}.do-not-save-cancel-warning .modal-content .modal-footer.btn-group{padding-left:25px}.do-not-save-cancel-warning .modal-content .modal-footer.btn-group .btn-left{float:left;margin-left:0}
+</style>
+<style id="asset-specific-css">.elq-lp, div, .elq-text-cell {
+    font-family: 'Oracle Sans', Noto Sans, Helvetica, Arial, Sans;
+}
+.ochat_panel{width:88% !important;}
+.container row-0:first-child
+{display:none}
+.tbg-container {
+   height:100%;
+  width:100% !important;
+  }
+@media screen and (max-width: 575px){
+.tbg-container {
+   height:100%;
+  width:100% !important;
+  }
+}
+
+.icn-sec .icn-img {
+    width: 32px !important;
+    background-size: contain !important;
+    height: 32px !important;
+}
+.sc-share{display:block !important}
+.rw-footer .logo-img {
+  margin-right:50px;
+  padding-right:0 !important;
+  }
+@media screen and (max-width: 575px){
+.rw-footer .logo-img {
+  margin-right:0;
+  }
+}
+.gov-disclaimer{line-height:normal}
+.modal-content.popup-show{border-radius:10px;}
+#formElement9{display:none;}
+
+.custBlock > div > {display:none;}
+
+.ppLB_popup ul#buttons{padding: 32px 0px 32px 0px !important; margin: 0 !important}
+
+ul#form-fields{ padding: 0 32px 0 32px !important;margin: 16px 0 16px 0 !important; width:auto;}
+
+ul#form-fields li{margin-bottom: 0px !important;}
+* {box-sizing: inherit !important;}
+.color-wrap{max-width:1440px !important;}
+.tbg-container{padding-left:0 !important; padding-right:0 !important}
+
+li#event-list::before {
+  content: "•"; /* Insert content that looks like bullets */
+  padding-right: 8px;
+  color: black; /* Or a color you prefer */
+
+</style>
+<div class="f11w1">
+	<div class="row row-4" style="background:#312D2A;margin:0 auto;">
+		<div class="column col-xs-12 col-sm-1 col-0" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="height:5px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-0"></div>
+		</div>
+		<div class="column col-xs-12 col-sm-7 col-1" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="background-color:transparent;line-height:18px;padding:30px 20px 15px 20px;" class="elq-text-cell cell cell-0">
+				<div style="display:inline-block;width:100%;">
+					<div data-lineheight="1.15" style="line-height: 35.7px;"><strong style="color: white; font-size: 28px;">EMEA Oracle Global Leaders Meeting in Malaga<br>Nov 30 - Dec 1</strong>
+					</div>
+					<div data-lineheight="1.15" style="line-height: 13.8px;"><br></div>
+					<div data-lineheight="1.15" style="line-height: 13.8px;"><br></div>
+					<div data-lineheight="1.15" style="line-height: 20.7px;"><strong style="color: rgb(153, 194, 166); font-size: 18px;">Learn from and interact with other customers to share experiences and best practices</strong>
+					</div>
+					<div data-lineheight="1.15" style="line-height: 13.8px;"><br></div>
+					<div data-lineheight="1.15" style="line-height: 13.8px;"><br></div>
+					<div data-lineheight="1.15" style="line-height: 18.4px;"><span style="color: rgb(255, 255, 255); font-size: 16px;">A unique and interactive event for Oracle Customers using Oracle Data Management Products and Services to share the details of their success, illustrate new and planned ideas as well as inspire innovative applications and powerful use-cases.&nbsp;</span>
+					</div>
+					<div data-lineheight="1.15" style="line-height: 13.8px;"><br></div>
+					<div data-lineheight="1.15" style="line-height: 13.8px;"><br></div>
+					<div data-lineheight="1.15" style="line-height: 18.4px;"><span style="color: rgb(255, 255, 255); font-size: 16px;">All this, and a brief update on Oracle Data Management Strategy and Roadmap from Oracle Product Management. </span>
+					</div>
+					<div data-lineheight="1.15" style="line-height: 13.8px;"><br></div>
+					<div data-lineheight="1.15" style="margin-left: 0em; line-height: 18.4px;"><span style="color: rgb(255, 255, 255); font-size: 16px;">Sign up to the community for further networking opportunities, knowledge and experience sharing.</span>
+					</div>
+					<div data-lineheight="1.15" style="margin-left: 0em; line-height: 13.8px;"><br></div>
+				</div>
+			</div>
+		</div>
+		<div class="column col-xs-12 col-sm-4 col-2" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div class="elq-image-cell  cell cell-0" style="background-color:transparent;line-height:0;padding:0px 0px 0px 0px;text-align:right;">
+				<img src="https://images.response.oracle-mail.com/EloquaImages/clients/OracleAmericaInc/%7B77578562-0c72-4155-b8d8-6e2058c96df3%7D_tb-landing-top-right-desktop-500-data-1.png" alt="illustration" style="width:100%;height:auto;max-width:500px"/>
+			</div>
+		</div>
+	</div>
+	<div class="row row-10" style="background:#ffffff;margin:0 auto;">
+		<div class="column col-xs-12 col-sm-12 col-0" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="height:30px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-0"></div>
+			<div style="background-color:transparent;line-height:18px;padding:20px 10px 10px 0px;" class="elq-text-cell cell cell-1">
+				<div style="display:inline-block;width:100%;">
+					<div style="margin-left: 6em;"><strong style="color: rgb(22, 21, 41); font-size: 28px;">Registration</strong></div>
+				</div>
+			</div>
+			<div style="height:30px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-2"></div>
+		</div>
+	</div>
+	<div class="row row-11" style="background:#ffffff;margin:0 auto;">
+		<div class="column col-xs-12 col-sm-4 col-2" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div class="elq-image-cell  cell cell-0" style="background-color:transparent;line-height:0;padding:20px 0px 0px 0px;text-align:center;">
+				<img src="https://images.response.oracle-mail.com/EloquaImages/clients/OracleAmericaInc/%7B17abbe8f-cbdc-450e-bc7e-377ee44d3090%7D_Reiner_Zimmermann.png" style="width:40%;height:auto;max-width:40%; border-radius: 50%;"/>
+			</div>
+			<div style="background-color:transparent;line-height:18px;padding:10px 10px 10px 10px;" class="elq-text-cell cell cell-1">
+				<div style="display:inline-block;width:100%;">
+					<div style="text-align: center;"><strong style="font-size: 14px;">Reiner Zimmermann</strong><span style="font-size: 14px;"><br>Vice President Product Management<br>Oracle Global Leaders&nbsp;&nbsp;Program</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="column col-xs-12 col-sm-4 col-2" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="background-color:transparent;line-height:18px;padding:10px 10px 10px 10px;" class="elq-text-cell cell cell-1">
+				<div style="display:inline-block;width:100%; text-align: left;">
+					I am so excited to invite you to our latest Global Leaders event for EMEA. Come and meet your peers and Oracle people from all around Europe and share your experiences and stories.
+					<br>
+					<br>
+					We will have a welcome reception on November 29 at 8 pm and then 2 full days of sharing information and collaboration.
+					<br>
+					<br>
+					Please contact me directly to register for this event using the button below.
+					<br>
+					<br>
+					<div class="obttns">
+						<div class="obttn2">
+							<a href="mailto:reiner.zimmermann@oracle.com?subject=I%20would%20like%20to%20register%20to%20the%20EMEA%20Oracle%20Global%20Leaders%20Meeting%20in%Malaga%20,Spain%20-%20Nov%2029%20-%20Dec%201" style="color:white !important; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;CLICK TO REGISTER&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</div>
+					</div>
+					<div style="text-align: left; padding-left: 0px; padding-right:20px;">
+						<span style="font-size: 12px; font-style: italic;">
+							if the above link does not work in your browser please send an email to reiner.zimmermann@oracle.com to register for this event, set the subject line as "I would like to register for the EMEA Oracle Global Leaders Meeting in Malaga, Spain - Nov 29 - Dec 1"
+							<br>
+							<br>
+							<br>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="column col-xs-12 col-sm-4 col-2" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="background-color:transparent;line-height:18px;padding:10px 10px 10px 10px;" class="elq-text-cell cell cell-1">
+				<div style="display:inline-block;width:100%;">
+					<div style="text-align: left;">
+						<span style="font-size: 14px;">
+							<table width="400" style="background-color:#f1efed; border:solid 0px grey; border-radius: 25px; max-width: 400px; width: 400px;">
+								<tr>
+									<td width="250" align="center" style=" max-width: 250px; width: 250px;">
+										<br>
+										<img moz-do-not-send="true" width="80" style="max-width:80px !important; width:80px !important;" src="https://keithlaker.github.io/Images/Newsletter/calendar.png">
+									</td>
+									<td width="250" align="center" style=" max-width: 250px; width: 250px;">
+										<br>
+										<img moz-do-not-send="true" width="80" style="max-width:80px !important; width:80px !important;"src="https://keithlaker.github.io/Images/Newsletter/clock.png">
+									</td>
+								</tr>
+								<tr>
+									<td align="center">
+										
+										<p  style="font-family: 'Oracle Sans', 'Helvetica Neue', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important; font-size: 14px !important; font-weight:300 !important;text-align: center !important;">NOV 30 - DEC 1</p>
+										<br>
+									</td>
+									<td align="center">
+										<p  style="font-family: 'Oracle Sans', 'Helvetica Neue', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important; font-size: 14px !important; font-weight:300 !important; center !important;">9:00AM - 5:00PM</p>
+										<br>
+									</td>
+								</tr>
+							</table>
+							<br>
+							<table width="400" style="background-color:#f1efed; border:solid 0px grey; border-radius: 25px; max-width: 400px; width: 400px;">
+								<tr>
+									<td style="width:50%; padding-left:10px;">
+										<br>
+										<img src="https://higueronhotel.com/wp-content/uploads/2019/08/Exterior-Hotel-1-150x150.jpg" style="max-width: 220px; width:220px; border-radius:15px;">
+										<br>
+									</td>
+									<td style="width:50%; padding-left:0px;">
+										<br>
+										<div style="font-size: 14px; font-style: normal; text-align:left !important; padding-left:10px; padding-top:10px;">
+											<a href="https://www.uhcollection.si/grand-hotel-union">Higueron Hotel Malaga<br>Av. del Higuerón,<br> 48,<br>29640 Fuengirola,<br>Málaga,<br>Spain</a>
+											<br><br>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2" style="width:100%; padding-left:10px; padding-right:20px;">
+										<div style="font-size: 14px; font-style: normal; text-align:left !important; padding-left:10px; padding-right:15px; padding-top:10px;">
+											<a href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=AGPRHQQ&arrivalDate=2022-11-29&departureDate=2022-12-01&room1NumAdults=1" target="_blank">Use this link</a> to book your accommodation at the Higueron Hotel Malaga for this event.
+										</div>
+										<br>
+									</td>
+								</tr>
+							</table>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row row-5" style="background:#ffffff url(https://images.response.oracle-mail.com/EloquaImages/clients/OracleAmericaInc/%7B88e0f0a2-b0e2-4735-aaea-f8093e7a52f1%7D_tb-agenda-bg-texture.png);background-repeat:no-repeat;background-size:100% auto;margin:0 auto;">
+		<div class="column col-xs-12 col-sm-12 col-0" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="background-color:transparent;line-height:18px;padding:10px 10px 10px 30px;" class="elq-text-cell cell cell-0">
+				<div style="display:inline-block;width:100%;">
+					<div data-lineheight="1.5" style="line-height: 42px; "><strong style="font-size: 28px;padding-left:70px;">Agenda</strong></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row row-6" style="background:#ffffff url(https://images.response.oracle-mail.com/EloquaImages/clients/OracleAmericaInc/%7B88e0f0a2-b0e2-4735-aaea-f8093e7a52f1%7D_tb-agenda-bg-texture.png);background-repeat:no-repeat;background-size:100% auto;margin:0 auto;">
+		<div class="column col-xs-12 col-sm-1 col-0" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="height:5px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-0"></div>
+		</div>
+		<div class="column col-xs-12 col-sm-3 col-1" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="background-color:#697778;line-height:18px;padding:20px 10px 20px 10px;" class="elq-text-cell cell cell-0">
+				<div style="display:inline-block;width:100%;">
+					<div style="text-align: center;"><strong style="color: rgb(255, 255, 255);">NOVEMBER  29<br>8:00pm</strong></div>
+				</div>
+			</div>
+		</div>
+		<div class="column col-xs-12 col-sm-7 col-2" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="background-color:#FFFFFF;line-height:18px;padding:20px 10px 20px 10px; border: 10px solid #FFFFFF;" class="elq-text-cell cell cell-0">
+				<div style="display:inline-block;width:100%;">
+					<div style="line-height: 21px;"><strong style="font-size: 14px;">Welcome Reception</strong>
+					</div>
+					<div style="line-height: 21px;"><span style="font-size: 14px;">Reiner Zimmermann<br>Vice President of Product Management <br>Oracle Global Leaders Program</span>
+					</div>
+				</div>
+			</div>
+			<div style="height:30px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-1"></div>
+		</div>
+		<div class="column col-xs-12 col-sm-1 col-3" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="height:5px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-0"></div>
+		</div>
+	</div>
+	<div class="row row-7" style="background:#ffffff url(https://images.response.oracle-mail.com/EloquaImages/clients/OracleAmericaInc/%7B88e0f0a2-b0e2-4735-aaea-f8093e7a52f1%7D_tb-agenda-bg-texture.png);background-repeat:no-repeat;background-size:100% auto;margin:0 auto;">
+		<div class="column col-xs-12 col-sm-1 col-0" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="height:5px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-0"></div>
+		</div>
+		<div class="column col-xs-12 col-sm-3 col-1" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="background-color:#697778;line-height:18px;padding:20px 10px 20px 10px;" class="elq-text-cell cell cell-0">
+				<div style="display:inline-block;width:100%;">
+					<div style="text-align: center;"><strong style="color: rgb(255, 255, 255);">NOVEMBER  30<br></strong></div>
+				</div>
+			</div>
+		</div>
+		<div class="column col-xs-12 col-sm-7 col-2" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="background-color:#FFFFFF;line-height:18px;padding:20px 10px 20px 10px;" class="elq-text-cell cell cell-0">
+				<div style="display:inline-block;width:100%;">
+					<div data-lineheight="1.5" style="line-height: 21px;">
+						<div style="font-size: 14px;">
+							<strong>Agenda for Day 1</strong>:<br><br>
+							<ul style="font-size: 14px;">
+								<li id="event-list" style="font-size: 14px;">Product updates from Oracle product management and product development.</li>
+								<li id="event-list" style="font-size: 14px;">Customer & partner presentations covering Oracle Cloud implementations with a focus on data management and analytics:
+								</li>
+							</ul>
+							<br>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="height:30px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-1"></div>
+		</div>
+		<div class="column col-xs-12 col-sm-1 col-3" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="height:5px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-0"></div>
+		</div>
+	</div>
+	<div class="row row-7" style="background:#ffffff url(https://images.response.oracle-mail.com/EloquaImages/clients/OracleAmericaInc/%7B88e0f0a2-b0e2-4735-aaea-f8093e7a52f1%7D_tb-agenda-bg-texture.png);background-repeat:no-repeat;background-size:100% auto;margin:0 auto;">
+		<div class="column col-xs-12 col-sm-1 col-0" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="height:5px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-0"></div>
+		</div>
+		<div class="column col-xs-12 col-sm-3 col-1" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="background-color:#697778;line-height:18px;padding:20px 10px 20px 10px;" class="elq-text-cell cell cell-0">
+				<div style="display:inline-block;width:100%;">
+					<div style="text-align: center;"><strong style="color: rgb(255, 255, 255);">End of Day 1</strong></div>
+				</div>
+			</div>
+		</div>
+		<div class="column col-xs-12 col-sm-7 col-2" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="background-color:#FFFFFF;line-height:18px;padding:20px 10px 20px 10px;" class="elq-text-cell cell cell-0">
+				<div style="display:inline-block;width:100%;">
+					<div data-lineheight="1.5" style="line-height: 21px;"><strong style="font-size: 14px;">Evening event</strong></div>
+				</div>
+			</div>
+			<div style="height:30px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-1"></div>
+		</div>
+		<div class="column col-xs-12 col-sm-1 col-3" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="height:5px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-0"></div>
+		</div>
+	</div>
+	<div class="row row-7" style="background:#ffffff url(https://images.response.oracle-mail.com/EloquaImages/clients/OracleAmericaInc/%7B88e0f0a2-b0e2-4735-aaea-f8093e7a52f1%7D_tb-agenda-bg-texture.png);background-repeat:no-repeat;background-size:100% auto;margin:0 auto;">
+		<div class="column col-xs-12 col-sm-1 col-0" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="height:5px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-0"></div>
+		</div>
+		<div class="column col-xs-12 col-sm-3 col-1" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="background-color:#697778;line-height:18px;padding:20px 10px 20px 10px;" class="elq-text-cell cell cell-0">
+				<div style="display:inline-block;width:100%;">
+					<div style="text-align: center;"><strong style="color: rgb(255, 255, 255);">DECEMBER 1<br></strong></div>
+				</div>
+			</div>
+		</div>
+		<div class="column col-xs-12 col-sm-7 col-2" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="background-color:#FFFFFF;line-height:18px;padding:20px 10px 20px 10px;" class="elq-text-cell cell cell-0">
+				<div style="display:inline-block;width:100%;">
+					<div data-lineheight="1.5" style="line-height: 21px;">
+						<div style="font-size: 14px;">
+							<strong>Agenda for Day 2</strong>:<br><br>
+							<ul style="font-size: 14px;">
+								<li id="event-list" style="font-size: 14px;">Product updates from Oracle product management and product development.</li>
+								<li id="event-list" style="font-size: 14px;">Customer & Partner Presentations covering Oracle Cloud implementations with a focus on SaaS implementations:
+								</li>
+								<li id="event-list" style="font-size: 14px;">Oracle technology workshop</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="height:30px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-1"></div>
+		</div>
+		<div class="column col-xs-12 col-sm-1 col-3" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="height:5px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-0"></div>
+		</div>
+	</div>
+	<div class="row row-9" style="background:#ffffff url(https://images.response.oracle-mail.com/EloquaImages/clients/OracleAmericaInc/%7B88e0f0a2-b0e2-4735-aaea-f8093e7a52f1%7D_tb-agenda-bg-texture.png);background-repeat:no-repeat;background-size:100% auto;margin:0 auto;">
+		<div class="column col-xs-12 col-sm-1 col-0" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="height:5px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-0"></div>
+		</div>
+		<div class="column col-xs-12 col-sm-3 col-1" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="background-color:#697778;line-height:18px;padding:20px 10px 20px 10px;" class="elq-text-cell cell cell-0">
+				<div style="display:inline-block;width:100%;">
+					<div style="text-align: center;"><strong style="color: rgb(255, 255, 255);">End of Day 2</strong></div>
+				</div>
+			</div>
+		</div>
+		<div class="column col-xs-12 col-sm-7 col-2" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="background-color:#FFFFFF;line-height:18px;padding:20px 10px 20px 10px;" class="elq-text-cell cell cell-0">
+				<div style="display:inline-block;width:100%;">
+					<div><strong style="font-size: 14px;">Wrap-up &amp; closing remarks</strong></div>
+				</div>
+			</div>
+			<div style="height:30px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-1"></div>
+		</div>
+		<div class="column col-xs-12 col-sm-1 col-3" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="height:5px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-0"></div>
+		</div>
+	</div>
+	<div class="row row-12" style="background:#ffffff;margin:0 auto;">
+		<div class="column col-xs-12 col-sm-12 col-0" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="height:30px;background-color:transparent;line-height:18px;" class="elq-space-cell cell cell-0"></div>
+		</div>
+	</div>
+	<div class="row row-13" style="background:#FCFBFA;margin:0 auto;">
+		<div class="column col-xs-12 col-sm-6 col-0" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div style="background-color:transparent;line-height:18px;padding:30px 30px 10px 20px;" class="elq-text-cell cell cell-0">
+				<div style="display:inline-block;width:100%;">
+					<div data-lineheight="1.5" style="margin-left: 0em; line-height: 42px; text-align: center;"><strong style="font-size: 28px; color: rgb(22, 21, 41);">Thanks to our sponsor</strong></div>
+					<div style="text-align: center;"><br></div>
+					<div style="text-align: center; margin-left: 3em;"><br></div>
+				</div>
+			</div>
+		</div>
+		<div class="column col-xs-12 col-sm-6 col-1" style="vertical-align:top;background:transparent;text-align:left;font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#000000;">
+			<div class="elq-image-cell  cell cell-0" style="background-color:#F1EFED;line-height:0;padding:10px 0px 10px 0px;text-align:center;">
+				<img src="https://images.response.oracle-mail.com/EloquaImages/clients/OracleAmericaInc/%7B88a0a177-303c-42a9-90b1-a5afdec4b105%7D_logo-classicblue-fullcolor-210x160px.png" style="width:100%;height:auto;max-width:210px"/>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+<br>
+<br>
