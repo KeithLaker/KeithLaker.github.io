@@ -205,7 +205,12 @@ function readTotals(obj) {
 						td[td.length] = 'style="background: hsla(89, 43%, 51%, 0.9)"';
 					}
 					td[td.length] = ' >'+ val +'</td>';
-					tdq[tdq.length] = ' >'+ val*1000 +'</td>';
+					
+					nfObject = new Intl.NumberFormat('en-US');
+    				output = nfObject.format(Number(val * (6* Math.floor(Math.random() * 100))).toFixed(0));
+
+					
+					tdq[tdq.length] = ' >'+ output +'</td>';
 				}
 				else {
 					td[td.length] = ' >&nbsp;</td>';
@@ -285,7 +290,9 @@ function readTotals(obj) {
 							gr_row.append('<td id="gc_' + j + '"class="dc_column_group" colspan="1">'+ regionObjs[j].Geographical_region +'</td>');
 							table.append(gr_row);
 
+						if(regionObjs[j].Geographical_region == "APAC") {
 							gr_row.append('<td id="am_1" class="dc_column_m" align="center">'+ "Availability<br>Metrics" +'</td>' + '<td id="qm_1" class="dc_column_m" align="center">'+ "Query<br>Metrics" +'</td>' + '<td id="am_2" class="dc_column_m" align="center">'+ "Availability<br>Metrics" +'</td>' + '<td id="qm_2" class="dc_column_m" align="center">'+ "Query<br>Metrics" +'</td>' + '<td id="am_3" class="dc_column_m" align="center">'+ "Availability<br>Metrics" +'</td>' + '<td id="qm_3" class="dc_column_m" align="center">'+ "Query<br>Metrics" +'</td>');
+						}
 							
 							
 							
