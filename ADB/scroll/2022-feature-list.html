@@ -1,0 +1,1999 @@
+<style>
+
+#target{
+    position:relative;
+    top:-2500px;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+    font-size:130px;
+    text-align:center;
+    font-family:sans-serif;
+}
+#target>div{
+    padding-top:3500px;
+    animation:autoscroll 250s linear;
+}
+scroll-body:after{
+    content:'';
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0) 400%);
+    background:linear-gradient(to bottom,rgba(255,255,255,1),rgba(255,255,255,0) 100%);
+    pointer-events:none;
+}
+
+#scroll-body{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    transform-origin:50% 100%;
+    transform:perspective(700px) rotateX(15deg);
+    color:yellow;
+    background:white;
+
+}
+
+@keyframes autoscroll{
+    to{
+        margin-top:-50000px;
+    }    
+}
+
+#p-scroll {
+    font-size: 80px !important;
+    color: grey;
+}
+
+.tmpTextBtn {
+    font-size: 80px !important;
+    color: grey;
+}
+
+#text-scroll {
+    font-size: 80px !important;
+}
+
+.box-tick {
+height:133px; 
+width: 133px;
+
+}
+</style>
+<div id="scroll-body">
+	<div id="target">
+		<div>
+			<br><br><br><br><br>
+			<table cellpadding="0" cellspacing="0" width="100%">
+				<tbody>
+					<tr>
+						<td style="color: white !important; margin: 0px 0px 0px 0px; padding: 0px 20px 0px 20px; background-color: #e28f3b; min-height:100%; border-radius: 40px 0px 0px 0px;" valign="top" width="70%" align="left">
+							<p style="color: white !important; margin:5px 0px 15px 0px; padding: 0px 5px 0px 0px; color: #FFFFFF;font-family: 'Oracle Sans', 'Helvetica Neue', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 140px; font-weight:730"><br>AUTONOMOUS DATABASE</p>
+							<p style="color: white !important; padding: 0px 5px 0px 0px; margin-top:-10px; margin-bottom: 10px; font-family: 'Oracle Sans', 'Helvetica Neue', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 80px; font-weight:400">
+								Everything you need is built-in
+								<br>
+								<br>
+							</p>
+						</td>
+						<td style="color: white !important; padding: 0px 20px 0px 20px; background-color: #e28f3b; min-height:100%; border-radius: 0px 40px 0px 0px;" valign="top" align="center" width="150">
+							<span style="font-size:8pt; font-weight: bold; font-family: 'Oracle Sans', 'Helvetica Neue', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: white !important;"><strong></strong></span>
+							<img moz-do-not-send="true" width="550" style="max-width:550px !important; width:550px !important;" src="https://keithlaker.github.io/ADB/Newsletter/Images/ODBIC-products-adb.png" alt="New data transforms UI in Database Actions">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h1 style="font-size:340pt; color: grey; font-weight: bold;">2022</h1>
+			<p id="p-scroll">
+				Here is the full list of new features added during 2022 to help you lead with Autonomous Database. During 2022 we have simplified the management and administration of Autonomous Database, made it easier to lift & shift existing workloads to Autonomous Database, and delivered a smarter, richer analytical experience for data warehouse and data lake projects.
+			</p>
+			<br>
+			<br>
+			<table cellspacing="0" cellpadding="0" align="left" border="0" width="100%">
+				<tbody>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%" colspan="2">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right">
+											<img src="https://keithlaker.github.io/ADB/Newsletter/Images/dingbat-check-green.png" alt="cta-arrow" style="display:block;" class="box-tick tmpMultiend" border="0" height="30" width="30">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<p class="tmpTextBtn" style="font-weight: bold; color: grey; font-size: 18pt;"><b>SIMPLER MANAGEMENT</b></p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px;font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD7AD133FC1D0454B6C3BF251F1E04E5846FF94D0CFF/fileview/D1BDC3418301A4D2CD2D88CB55E6F779A924DEF730F0/_ADB-Update-Jan-18-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Support for walletless connections
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD7AD133FC1D0454B6C3BF251F1E04E5846FF94D0CFF/fileview/D1BDC3418301A4D2CD2D88CB55E6F779A924DEF730F0/_ADB-Update-Jan-18-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Support for blockchain and immutable tables
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD7AD133FC1D0454B6C3BF251F1E04E5846FF94D0CFF/fileview/D1BDC3418301A4D2CD2D88CB55E6F779A924DEF730F0/_ADB-Update-Jan-18-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Support for DBMS_LDAP, DBMS_PIPE, and UTL_TCP packages
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD7AD133FC1D0454B6C3BF251F1E04E5846FF94D0CFF/fileview/D1BDC3418301A4D2CD2D88CB55E6F779A924DEF730F0/_ADB-Update-Jan-18-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Integration with OCI Database Management
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD7AD133FC1D0454B6C3BF251F1E04E5846FF94D0CFF/fileview/D1BDC3418301A4D2CD2D88CB55E6F779A924DEF730F0/_ADB-Update-Jan-18-2022.pdf" style="font-weight: bold!important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Track table and partition scan access
+													</a>
+												</b></span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Autonomous Database now available in US Governmental Clouds
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Wallet-less connections on Linux
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Button to add IP address to network security settings
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Reconnect a refreshable clone
+													</a>
+												</b></span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Cross-Region cloning
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Schedule start and stop times
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														PL/SQL API for switching consumer groups
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB1A6CD938F168968E8762D97AEDA0ABC6E31D174ED/fileview/D26D67EBAA41ADC6D0DA82E51321F20F45D06C8CCDB1/_ADB-Update-Mar-3-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Auto-scaling for storage
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB1A6CD938F168968E8762D97AEDA0ABC6E31D174ED/fileview/D26D67EBAA41ADC6D0DA82E51321F20F45D06C8CCDB1/_ADB-Update-Mar-3-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Track OCI resources, cost, and usage
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB1A6CD938F168968E8762D97AEDA0ABC6E31D174ED/fileview/D26D67EBAA41ADC6D0DA82E51321F20F45D06C8CCDB1/_ADB-Update-Mar-3-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Auto-Partitioning with ADB workshop
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB1A6CD938F168968E8762D97AEDA0ABC6E31D174ED/fileview/D26D67EBAA41ADC6D0DA82E51321F20F45D06C8CCDB1/_ADB-Update-Mar-3-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Critical events for customer-managed keys
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left"><span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD691CFD361910372AFDA714A7151D4E5835478A189E/fileview/D96BCAF8F36A49A1478D7E46BB2BF2AE98FE11E3996B/_ADB-Update-Mar-29-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Update sizing tool
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD691CFD361910372AFDA714A7151D4E5835478A189E/fileview/D96BCAF8F36A49A1478D7E46BB2BF2AE98FE11E3996B/_ADB-Update-Mar-29-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Create links to non-Oracle databases (Redshift, MySQL, PostgreSQL, Snowflake)
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD691CFD361910372AFDA714A7151D4E5835478A189E/fileview/D96BCAF8F36A49A1478D7E46BB2BF2AE98FE11E3996B/_ADB-Update-Mar-29-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Enhancements to partitioned external tables
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD08C068CBE27A2418ACB36BFA0C98ACB11C30D2D7C6/fileview/D8CA8C161B6A7A775947EE604529B467E069589E9A98/_ADB-Update-Apr-20-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Service level objectives published
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD08C068CBE27A2418ACB36BFA0C98ACB11C30D2D7C6/fileview/D8CA8C161B6A7A775947EE604529B467E069589E9A98/_ADB-Update-Apr-20-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Create wallet-free database links within a PE to other Oracle databases
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD08C068CBE27A2418ACB36BFA0C98ACB11C30D2D7C6/fileview/D8CA8C161B6A7A775947EE604529B467E069589E9A98/_ADB-Update-Apr-20-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Connection and latency test tool - adbping
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD25C4FEA4BF1F631FB9C19046B78D1FC58AC937183A/fileview/DDAED56A23A9859D23E57F8D37ED7B719FB1E56C4799/_ADB-Update-May-19-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													View monthly database availability
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD25C4FEA4BF1F631FB9C19046B78D1FC58AC937183A/fileview/DDAED56A23A9859D23E57F8D37ED7B719FB1E56C4799/_ADB-Update-May-19-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Simplified access to resources on Azure
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD25C4FEA4BF1F631FB9C19046B78D1FC58AC937183A/fileview/DDAED56A23A9859D23E57F8D37ED7B719FB1E56C4799/_ADB-Update-May-19-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Connect to Azure SQL and Azure Synapse Analytics
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD25C4FEA4BF1F631FB9C19046B78D1FC58AC937183A/fileview/DDAED56A23A9859D23E57F8D37ED7B719FB1E56C4799/_ADB-Update-May-19-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Create longer database names
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD9025BF9ECC685795ADDA5390C2C92343813016AC33/fileview/D4B5E99D78C99798B8395E4571DA4783471624575291/_ADB-Update-may-25-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													New Database Actions functionality
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD9025BF9ECC685795ADDA5390C2C92343813016AC33/fileview/D4B5E99D78C99798B8395E4571DA4783471624575291/_ADB-Update-may-25-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Terraform support for Autonomous Data Guard
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD1AEB89CBFFF0B16ED2FD445E46B178F06C9D037146/fileview/D372927470AC7424A490ABC829945ED6CF7EAD2B787F/_ADB-Update-june-16-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													New licensing rules for BYOL
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDDC2A84B54B87B7699B5ECBC2CE837481CBBED153FD/fileview/D4CBB10E1F585D429168F57AD010755D81C9B52593BE/_ADB-Update-july-28-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Regional availability metrics for Autonomous Database
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD48544ECD7DA6095366A445EC5437415819E0F51381/fileview/D7861A3D5C2ED6BCE91FCED6DCEBEDF64EEB5BE68154/_ADB-Update-mc-Aug-3-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													New ADB on Oracle Database Service for Microsoft Azure
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD6351542F458CBE0367B2984538C556A7EC7F72307A/fileview/DFC5F4A3E50DB5155CBD787C5464435F82FDFF516ADE/_ADB-Update-Sept-14-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Updated SLA - now 99.995% with Autonomous Data Guard
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD6351542F458CBE0367B2984538C556A7EC7F72307A/fileview/DFC5F4A3E50DB5155CBD787C5464435F82FDFF516ADE/_ADB-Update-Sept-14-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Support for resolving in-doubt Microsoft Transaction Server transactions
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD6351542F458CBE0367B2984538C556A7EC7F72307A/fileview/DFC5F4A3E50DB5155CBD787C5464435F82FDFF516ADE/_ADB-Update-Sept-14-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Quick access to database metrics, audit data, and logs from OCI console
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD6351542F458CBE0367B2984538C556A7EC7F72307A/fileview/DFC5F4A3E50DB5155CBD787C5464435F82FDFF516ADE/_ADB-Update-Sept-14-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Change the display name for a database
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB4C1076EA8BAE65F711D251561A0CF5A69F333B467/fileview/DD7C34ADFCAED7A8830711CFFCB5658E104B9F1A7632/_ADB-Update-Nov-22-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Cross-region refreshable clones
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB4C1076EA8BAE65F711D251561A0CF5A69F333B467/fileview/DD7C34ADFCAED7A8830711CFFCB5658E104B9F1A7632/_ADB-Update-Nov-22-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Clone from latest backup
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDCE4219710F681327D288FA4EBD7E955378AF4D1D20/fileview/D7BDA4F4E4105C67CF5E58B2EE49E96A355EE58FD4F1/_ADB-Update-Dec-12-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Log file prefix and retention options
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;">
+												<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDCE4219710F681327D288FA4EBD7E955378AF4D1D20/fileview/D7BDA4F4E4105C67CF5E58B2EE49E96A355EE58FD4F1/_ADB-Update-Dec-12-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+													Simplified wallets for cross-region Autonomous Data Guard
+												</a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b></b></span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px; padding-top:50px;" valign="top" align="left" width="50%" colspan="2">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://keithlaker.github.io/ADB/Newsletter/Images/dingbat-check-green.png" alt="cta-arrow" style="display:block;" class="box-tick tmpMultiend" border="0" height="30" width="30">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<p class="tmpTextBtn" style="font-weight: bold; color: grey; font-size: 18pt;"><b>SIMPLER MIGRATIONS</b></p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD7AD133FC1D0454B6C3BF251F1E04E5846FF94D0CFF/fileview/D1BDC3418301A4D2CD2D88CB55E6F779A924DEF730F0/_ADB-Update-Jan-18-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Support for DBMS_LDAP, DBMS_PIPE, and UTL_TCP
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Availability in US Governmental Clouds
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Wallet-less connections on Linux x64
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB1A6CD938F168968E8762D97AEDA0ABC6E31D174ED/fileview/D26D67EBAA41ADC6D0DA82E51321F20F45D06C8CCDB1/_ADB-Update-Mar-3-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Updated sizing tool
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD08C068CBE27A2418ACB36BFA0C98ACB11C30D2D7C6/fileview/D8CA8C161B6A7A775947EE604529B467E069589E9A98/_ADB-Update-Apr-20-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Create wallet-free database links within a PE to other Oracle databases
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD08C068CBE27A2418ACB36BFA0C98ACB11C30D2D7C6/fileview/D8CA8C161B6A7A775947EE604529B467E069589E9A98/_ADB-Update-Apr-20-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Connection and latency test tool - adbping
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD691CFD361910372AFDA714A7151D4E5835478A189E/fileview/D96BCAF8F36A49A1478D7E46BB2BF2AE98FE11E3996B/_ADB-Update-Mar-29-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Create links to non-Oracle databases (Redshift, MySQL, PostgreSQL, Snowflake)
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD25C4FEA4BF1F631FB9C19046B78D1FC58AC937183A/fileview/DDAED56A23A9859D23E57F8D37ED7B719FB1E56C4799/_ADB-Update-May-19-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														FMW12.2.1.4.0 Certification matrix
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD9025BF9ECC685795ADDA5390C2C92343813016AC33/fileview/D4B5E99D78C99798B8395E4571DA4783471624575291/_ADB-Update-may-25-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Terraform support for Autonomous Data Guard
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD1AEB89CBFFF0B16ED2FD445E46B178F06C9D037146/fileview/D372927470AC7424A490ABC829945ED6CF7EAD2B787F/_ADB-Update-june-16-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														New licensing rules for BYOL
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDDC2A84B54B87B7699B5ECBC2CE837481CBBED153FD/fileview/D4CBB10E1F585D429168F57AD010755D81C9B52593BE/_ADB-Update-july-28-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														ADB now supports Real Application Testing - Database Replay
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left"><span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDDC2A84B54B87B7699B5ECBC2CE837481CBBED153FD/fileview/D4CBB10E1F585D429168F57AD010755D81C9B52593BE/_ADB-Update-july-28-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														ADB now supports embedded JVM
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB4C1076EA8BAE65F711D251561A0CF5A69F333B467/fileview/DD7C34ADFCAED7A8830711CFFCB5658E104B9F1A7632/_ADB-Update-Nov-22-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Access NFS directories
+													</a>
+												</b></span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left"><span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b></b></span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px; padding-top:50px;" valign="top" align="left" width="50%" colspan="2">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://keithlaker.github.io/ADB/Newsletter/Images/dingbat-check-green.png" alt="cta-arrow" style="display:block;" class="box-tick tmpMultiend" border="0" height="30" width="30">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<p class="tmpTextBtn" style="font-weight: bold; color: grey; font-size: 18pt;"><b>MORE AGILE DEVELOPMENT</b></p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%"></td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD7AD133FC1D0454B6C3BF251F1E04E5846FF94D0CFF/fileview/D1BDC3418301A4D2CD2D88CB55E6F779A924DEF730F0/_ADB-Update-Jan-18-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														APEX upgraded to version 21.1
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD7AD133FC1D0454B6C3BF251F1E04E5846FF94D0CFF/fileview/D1BDC3418301A4D2CD2D88CB55E6F779A924DEF730F0/_ADB-Update-Jan-18-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Support for blockchain and immutable tables
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Support for GitHub Raw URLs
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														PL/SQL API for switching consumer groups
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB1A6CD938F168968E8762D97AEDA0ABC6E31D174ED/fileview/D26D67EBAA41ADC6D0DA82E51321F20F45D06C8CCDB1/_ADB-Update-Mar-3-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Support for cloud code repositories
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDDC2A84B54B87B7699B5ECBC2CE837481CBBED153FD/fileview/D4CBB10E1F585D429168F57AD010755D81C9B52593BE/_ADB-Update-july-28-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														APEX upgraded to version 22.1
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB4C1076EA8BAE65F711D251561A0CF5A69F333B467/fileview/DD7C34ADFCAED7A8830711CFFCB5658E104B9F1A7632/_ADB-Update-Nov-22-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														More control over APEX upgrade process
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB4C1076EA8BAE65F711D251561A0CF5A69F333B467/fileview/DD7C34ADFCAED7A8830711CFFCB5658E104B9F1A7632/_ADB-Update-Nov-22-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														APEX upgraded to version 22.2
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Oracle Database API for MongoDB
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b></b></span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px; padding-top:50px;" valign="top" align="left" width="50%" colspan="2">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://keithlaker.github.io/ADB/Newsletter/Images/dingbat-check-green.png" alt="cta-arrow" style="display:block;" class="box-tick tmpMultiend" border="0" height="30" width="30">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<p class="tmpTextBtn" style="font-weight: bold; color: grey; font-size: 18pt;"><b>STRONGER SECURITY</b></p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD7AD133FC1D0454B6C3BF251F1E04E5846FF94D0CFF/fileview/D1BDC3418301A4D2CD2D88CB55E6F779A924DEF730F0/_ADB-Update-Jan-18-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Support for walletless connections
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Use database links to private endpoints
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Using IAM For Authentication
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Wallet-less connections on Linux x64
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB1A6CD938F168968E8762D97AEDA0ABC6E31D174ED/fileview/D26D67EBAA41ADC6D0DA82E51321F20F45D06C8CCDB1/_ADB-Update-Mar-3-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Critical events for customer-managed keys
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB1A6CD938F168968E8762D97AEDA0ABC6E31D174ED/fileview/D26D67EBAA41ADC6D0DA82E51321F20F45D06C8CCDB1/_ADB-Update-Mar-3-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Enhancements to Data Safe
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD691CFD361910372AFDA714A7151D4E5835478A189E/fileview/D96BCAF8F36A49A1478D7E46BB2BF2AE98FE11E3996B/_ADB-Update-Mar-29-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Identity and Access Management authentication additional features
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD08C068CBE27A2418ACB36BFA0C98ACB11C30D2D7C6/fileview/D8CA8C161B6A7A775947EE604529B467E069589E9A98/_ADB-Update-Apr-20-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Create wallet-free database links within a PE to other Oracle databases
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD1AEB89CBFFF0B16ED2FD445E46B178F06C9D037146/fileview/D372927470AC7424A490ABC829945ED6CF7EAD2B787F/_ADB-Update-june-16-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Using Azure Active Directory for authentication
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDDC2A84B54B87B7699B5ECBC2CE837481CBBED153FD/fileview/D4CBB10E1F585D429168F57AD010755D81C9B52593BE/_ADB-Update-july-28-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Support for wallet rotation with a grace period
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB4C1076EA8BAE65F711D251561A0CF5A69F333B467/fileview/DD7C34ADFCAED7A8830711CFFCB5658E104B9F1A7632/_ADB-Update-Nov-22-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Use customer-managed encryption keys in a different tenancy
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0" >
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB4C1076EA8BAE65F711D251561A0CF5A69F333B467/fileview/DD7C34ADFCAED7A8830711CFFCB5658E104B9F1A7632/_ADB-Update-Nov-22-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Use customer-managed keys with cross-region remote standby
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB4C1076EA8BAE65F711D251561A0CF5A69F333B467/fileview/DD7C34ADFCAED7A8830711CFFCB5658E104B9F1A7632/_ADB-Update-Nov-22-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Use Google service account to access GCP resources
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDCE4219710F681327D288FA4EBD7E955378AF4D1D20/fileview/D7BDA4F4E4105C67CF5E58B2EE49E96A355EE58FD4F1/_ADB-Update-Dec-12-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Simplified wallets for cross-region Autonomous Data Guard
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px; padding-top:50px;" valign="top" align="left" width="50%" colspan="2">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://keithlaker.github.io/ADB/Newsletter/Images/dingbat-check-green.png" alt="cta-arrow" style="display:block;" class="box-tick tmpMultiend" border="0" height="30" width="30">
+										</td>
+										<td style="padding-right:16px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<p class="tmpTextBtn" style="font-weight: bold; color: grey; font-size: 18pt;"><b>&nbsp;&nbsp; SMARTER DATA LAKES AND RICHER ANALYTICS</b></p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD7AD133FC1D0454B6C3BF251F1E04E5846FF94D0CFF/fileview/D1BDC3418301A4D2CD2D88CB55E6F779A924DEF730F0/_ADB-Update-Jan-18-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														New Snowflake competitive workshop
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left" width="50%">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														LiveLabs: Getting started with ADB
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Schedule start and stop times
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Cross-region cloning
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Availability in US Governmental Clouds
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDE5BD6C4686257D91C4A5F630E137BAE9DCBB65C840/fileview/DC53DF058FEA27F704878A9DBA173A66F278668FF3AC/_ADB-Update-Feb-01-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Reconnect a refreshable clone
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB1A6CD938F168968E8762D97AEDA0ABC6E31D174ED/fileview/D26D67EBAA41ADC6D0DA82E51321F20F45D06C8CCDB1/_ADB-Update-Mar-3-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Enhancements to Database Actions - Data Analysis tool
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD08C068CBE27A2418ACB36BFA0C98ACB11C30D2D7C6/fileview/D8CA8C161B6A7A775947EE604529B467E069589E9A98/_ADB-Update-Apr-20-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Smarter options for synchronization with OCI Data Catalog
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD48544ECD7DA6095366A445EC5437415819E0F51381/fileview/D7861A3D5C2ED6BCE91FCED6DCEBEDF64EEB5BE68154/_ADB-Update-mc-Aug-3-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Microsoft Excel Plugin for Autonomous Database Shared
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LD6351542F458CBE0367B2984538C556A7EC7F72307A/fileview/DFC5F4A3E50DB5155CBD787C5464435F82FDFF516ADE/_ADB-Update-Sept-14-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Explore, prepare, build, score, and deploy solutions using R using OML4R
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDFCBFD424042BB2720A52861C2F7500DA7D65F316DA/fileview/DD0D3C515C2E6647AA2CC72C764EF4852ADBCBFDCA06/_ADB-Update-Oct-27-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Overview of planned data sharing feature
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDFCBFD424042BB2720A52861C2F7500DA7D65F316DA/fileview/DD0D3C515C2E6647AA2CC72C764EF4852ADBCBFDCA06/_ADB-Update-Oct-27-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														E-Business Analytics Accelerator
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDFCBFD424042BB2720A52861C2F7500DA7D65F316DA/fileview/DD0D3C515C2E6647AA2CC72C764EF4852ADBCBFDCA06/_ADB-Update-Oct-27-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														PPT: How to position ADB within data lake projects
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDFCBFD424042BB2720A52861C2F7500DA7D65F316DA/fileview/DD0D3C515C2E6647AA2CC72C764EF4852ADBCBFDCA06/_ADB-Update-Oct-27-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														New Database Actions- Data Studio feature
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDFCBFD424042BB2720A52861C2F7500DA7D65F316DA/fileview/DD0D3C515C2E6647AA2CC72C764EF4852ADBCBFDCA06/_ADB-Update-Oct-27-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														New Database Actions - Data Transforms feature
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDFCBFD424042BB2720A52861C2F7500DA7D65F316DA/fileview/DD0D3C515C2E6647AA2CC72C764EF4852ADBCBFDCA06/_ADB-Update-Oct-27-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Updated Database Actions - Data Analysis feature
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB4C1076EA8BAE65F711D251561A0CF5A69F333B467/fileview/DD7C34ADFCAED7A8830711CFFCB5658E104B9F1A7632/_ADB-Update-Nov-22-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Build text indexes over data in object storage
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDB4C1076EA8BAE65F711D251561A0CF5A69F333B467/fileview/DD7C34ADFCAED7A8830711CFFCB5658E104B9F1A7632/_ADB-Update-Nov-22-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Use Google service account to access GCP resources
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tmpMultistart">
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"><img src="https://www.oracle.com/a/ocom/img/dc/tb/blue-arw28x22.png" alt="cta-arrow" style="display:block;" class="box-cta-arrow tmpMultiend" border="0" height="10" width="20">
+										</td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+													<a id="text-scroll" href="https://oradocs-prodapp.cec.ocp.oraclecloud.com/documents/link/LDCE4219710F681327D288FA4EBD7E955378AF4D1D20/fileview/D7BDA4F4E4105C67CF5E58B2EE49E96A355EE58FD4F1/_ADB-Update-Dec-12-2022.pdf" style="font-weight: bold !important; color: grey !important; text-decoration: none !important;" target="_blank">
+														Connecting to multiple instances of OCI Data Catalog
+													</a>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td style="padding-bottom:10px;" valign="top" align="left">
+							<table cellspacing="0" cellpadding="0" align="left" border="0">
+								<tbody>
+									<tr class="text_CTA">
+										<td valign="middle" align="right"></td>
+										<td style="padding-right:16px; padding-left:5px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" valign="middle" align="left">
+											<span class="tmpTextBtn" style="font-weight: bold; color: grey;"><b>
+												</b>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+<!-- review block ends here -->
+			<p style="line-height:20px;"><br> &nbsp;<br></p>
+			<p>
+				<br><br>
+				Thanks to the ADB development team, QA team, documentation team, and product management team for their tremendous work over the last 12 months.
+			</p>
+			<br>
+			<br>
+		</div>
+	</div>
+</div>
