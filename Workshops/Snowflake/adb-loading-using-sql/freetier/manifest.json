@@ -1,0 +1,52 @@
+{
+    "workshoptitle": "Autonomous Data Warehouse: Data Loading and Management Using SQL on the MovieStream Dataset",
+    "help": "livelabs-help-db_us@oracle.com",
+	"tutorials": [
+      {
+        "title": "Workshop Introduction",
+        "description": "Inroduction to this workshop",
+        "filename": "../workshop-intro/workshop-intro.md"
+      },
+      {
+        "title": "Getting Started",
+        "description": "Getting an OCI Account",
+        "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/pre-register-free-tier-account.md"
+      },
+      {
+        "title": "Lab 1: Provisioning an Autonomous Database",
+        "description": "Provisioning an Autonomous Database",
+        "filename": "../adb-provision-8ocpu/adb-provision-8ocpu.md"
+      },
+      {
+        "title": "Lab 2: Loading Movie Sales Data",
+        "description": "Loading Movie Sales Data",
+        "filename": "../loading-movie-sales-data/loading-movie-sales-data.md"
+      },
+      {
+        "title": "Lab 3: Enabling Data Integrity",
+        "description": "Enabling Data Integrity",
+        "filename": "../enabling-data-integrity/enabling-data-integrity.md"
+      },
+      {
+        "title": "Lab 4: Updating the Sales Data - Part 1",
+        "description": "Updating Sales Data - Part 1",
+        "filename": "../updating-sales-data-part-1/updating-sales-data-part-1.md"
+      },      
+      {
+        "title": "Lab 5: Traveling Back In Time",
+        "description": "Finding Our Most Important Customers",
+        "filename": "../traveling-back-in-time/traveling-back-in-time.md"
+      },      
+      {
+        "title": "Lab 6: Updating the Sales Data - Part 2",
+        "description": "Updating Sales Data - Part 2",
+        "filename": "../updating-sales-data-part-2/updating-sales-data-part-2.md"
+      },      
+
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename":"https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

@@ -1,0 +1,673 @@
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<style>
+
+@import url('https://www.oracle.com/a/ocom/docs/dc/tb/src/oracle-sans-font.css?family=Oracle+Sans');@font-face {	font-family: "Oracle Sans";	src: url("https://static.oracle.com/cdn/fonts/oraclesans.woff") format("woff"), url("https://static.oracle.com/cdn/fonts/oraclesans.woff2") format("woff2");	font-weight: 300;	font-style: normal;	-webkit-font-smoothing: antialiased;	-moz-font-smoothing: antialiased;	font-smoothing: antialiased;	-moz-osx-font-smoothing: grayscale;
+}
+#pointer {
+  display: inline-block;
+  font-size: 20pt;
+  width: 200px;
+  height: 4em;
+  position: relative;
+  background: gray;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0.6em;
+  box-shadow: 8px 8px 8px 3px #888888;
+
+}
+
+#pointer:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 1.25em solid white;
+  border-top: 2em solid transparent;
+  border-bottom: 2em solid transparent;
+
+}
+
+#pointer:before {
+  content: "";
+  position: absolute;
+  right: -1.20em;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 1.25em solid gray;
+  border-top: 2em solid transparent;
+  border-bottom: 2em solid transparent;
+}
+
+.cnt {
+  position: relative;
+  top: 0.25em;
+  left: 1em;
+  color: white;
+  font-weight:bold;
+
+}
+
+.top-main, .top_futures {
+  margin-left:30px;
+  font-weight: 600;  font-style: normal;  font-size:18px;  
+  margin-top: 20px;  
+}
+
+.top-minor {
+  margin-left:30px;
+  font-weight: 300;  font-style: normal;  font-size:14px;
+  margin-top: 20px;  
+
+}
+
+.jan2020h, .jan2021h, .futuresh {
+padding:10px;
+box-shadow: 8px 8px 8px 3px #888888;
+vertical-align: top;
+text-align:left;
+background-color: slategray;
+border:solid; border-color:white;
+}
+
+
+.jan2020t {
+border-bottom:0px solid gray;
+border-left:0px;
+border-right:0px;
+border-top:0px solid gray;
+padding:10px;
+box-shadow: 8px 8px 8px 3px #888888;
+vertical-align: top;
+text-align:left;
+}
+
+.col_main, .col_futures {
+border-bottom:0px solid gray;
+border-left:0px;
+border-right:0px;
+border-top:0px solid gray;
+padding:10px;
+box-shadow: 8px 8px 8px 3px #888888;
+vertical-align: top;
+text-align:left;
+}
+
+.col_minor {
+border-bottom:0px solid gray;
+border-left:0px;
+border-right:0px;
+border-top:0px solid gray;
+padding:10px;
+box-shadow: 8px 8px 8px 3px #888888;
+vertical-align: top;
+text-align:left;
+}
+
+}
+		</style>
+	</head>
+	<body>
+		<br>
+		<br>
+		<form name="checkboxform">
+			<input type="checkbox" name="checkbox1" onclick="myMainFunction();" checked="checked" />
+			<span style="font-weight:bold">Show/Hide Main Features </span><br>
+			<input type="checkbox" name="checkbox2" onclick="myMinorFunction();" checked="checked" />
+			<span style="font-weight:bold">Show/Hide Minor Features</span><br>
+			<input type="checkbox" name="checkbox3" onclick="myFuturesFunction();" checked="checked" />
+			<span style="font-weight:bold">Show/Hide Roadmap Features</span><br>
+		</form>
+		<br>
+		<br>
+		<h1>TIMELINE SHOWING RELEASE OF AUTONOMOUS DATABASE NEW FEATURES</h1>
+		<br>
+		<br>
+		<table width="100%">
+			<tr>
+				<td class="futuresh" style="" colspan="12">
+					<h1 style="color:white; font-weight:bold; margin-left: 40px;">
+						2021 Feature Roadmap
+					</h1>
+				</td>
+			</tr>
+			<tr>
+				<td><br></td>
+			</tr>
+			<tr>
+				<td class="top_futures" width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>Q2-FY22</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_futures" width="420px" height="50px" colspan="2">
+					<p class="top-main">
+					</p>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="top_futures" width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>Q1-FY22</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_futures" width="420px" height="50px" colspan="2">
+					<p class="top-main">
+						Cross-region Autonomous Data Guard<br>
+						Access to private IP addresses from ADB-S<br>
+						Walletless connections with private endpoints<br>
+						Early Access to Upcoming Patches for Dev/Test Instances<br>
+						Auto-refresh Refreshable Clones<br>
+					</p>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><br><br></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="jan2020h" style="" colspan="12">
+					<h1 style="color:white; font-weight:bold; margin-left: 40px;">
+						2021
+					</h1>
+				</td>
+			</tr>
+			<tr>
+				<td><br></td>
+			</tr>
+			<tr>
+				<td width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>JUN</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_main" width="420px" height="50px">
+					<p class="top-main">
+						Customer Managed Keys<br>
+					</p>
+				</td>
+				<td class="col_minor" width="420px" height="50px">
+					<p class="top-minor">
+						ADB as an RMAN Recovery Catalog
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>MAY</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_main" width="420px" height="50px">
+					<p class="top-main">
+						External Processing in LA mode<br>
+						PCI Compliance for ADB-Shared<br>
+					</p>
+				</td>
+				<td class="col_minor" width="420px" height="50px">
+					<p class="top-minor">
+						Support for Transparent Application Continuity<br>
+						Support for OCI Resource Principal<br>
+						Suport AWS Resource Names<br>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>APR</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_main" width="420px" height="50px">
+					<p class="top-main">
+						Always Free JSON Database<br>
+						Always Free APEX Service<br>
+						PeopleSoft Certification<br>
+						Graph Studio on OCI Console<br>
+					</p>
+				</td>
+				<td class="col_minor" width="420px" height="50px">
+					<p class="top-minor">
+						Manage customer contacts for operational issues/announcements
+						Enhancements to Data Pump Support
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>MAR</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_main" width="420px" height="50px">
+					<p class="top-main">
+						Oracle Machine Learning for Python<br>
+						AutoML UI in OML Notebooks<br>
+						Oracle Machine Learning Services<br>
+					</p>
+				</td>
+				<td class="col_minor" width="420px" height="50px">
+					<p class="top-minor">
+						ADMIN password expiration-warning event
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>FEB</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_main" width="420px" height="50px">
+					<p class="top-main">
+						Database Actions landing page<br>
+						Query Big Data Service Hadoop Data
+					</p>
+				</td>
+				<td class="col_minor" width="420px" height="50px">
+					<p class="top-minor">
+						<br>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>JAN</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_main" width="420px" height="50px">
+					<p class="top-main">
+						New ADB events<br>
+						PE support for OML Notebooks
+					</p>
+				</td>
+				<td class="col_minor" width="420px" height="50px">
+					<p class="top-minor">
+						Manual Backup Enhancements
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td><br><br></td>
+			</tr>
+			<tr>
+				<td class="jan2020h" style="" colspan="12">
+					<h1 style="color:white; font-weight:bold; margin-left: 40px;">
+						2020
+					</h1>
+				</td>
+			</tr>
+			<tr>
+				<td><br></td>
+			</tr>
+			<tr>
+				<td width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>DEC</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_main" width="420px" height="50px">
+					<p class="top-main">
+						APEX 20.2<br>
+						Replicate and capture data with GoldenGate<br>
+						Database 21c on Always Free<br>
+						Oracle APEX Cloud Service
+						<br>
+					</p>
+				</td>
+				<td class="col_minor" width="420px" height="50px">
+					<p class="top-minor">
+						<br>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>NOV</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_main" width="420px" height="50px">
+					<p class="top-main">
+						S3 presigned URLs<br>
+						Azure Blob Storage shared-access-signatures URLs
+					</p>
+				</td>
+				<td class="col_minor" width="420px" height="50px">
+					<p class="top-minor">
+						<br>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>OCT</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_main" width="420px" height="50px">
+					<p class="top-main">
+						Autonomous Database Events<br>
+						PL/SQL SDK for OCI resources
+					</p>
+				</td>
+				<td class="col_minor" width="420px" height="50px">
+					<p class="top-minor">
+						User-Defined profiles minimum password length
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>SEP</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_main" width="420px" height="50px">
+					<p class="top-main">
+						Private Endpoint support for tools<br>
+						Refreshable Clones
+					</p>
+				</td>
+				<td class="col_minor" width="420px" height="50px">
+					<p class="top-minor">
+						Read-Only and Restricted Modes
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>AUG</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_main" width="420px" height="50px">
+					<p class="top-main">
+						Autonomous JSON Database
+					</p>
+				</td>
+				<td class="col_minor" width="420px" height="50px">
+					<p class="top-minor">
+						Amazon S3-Compatible Object Stores<br>
+						Asynchronous Requests using SEND_REQUEST<br>
+						Rename database
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>JUL</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_main" width="420px" height="50px">
+					<p class="top-main">
+						<i class="material-icons">&#xe22b;</i> APEX 20.1<br>
+						<i class="material-icons">&#xe14d;</i> Autonomous Data Guard<br>
+						<i class="material-icons">&#xe250;</i> DB links via Database Gateways
+					</p>
+				</td>
+				<td class="col_minor" width="420px" height="50px">
+					<p class="top-minor">
+						Create and Alter User Profiles<br>
+						Manage Time Zone File Versions<br>
+						Switch network access Public and PEs
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>JUN</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_main" width="420px" height="50px">
+					<p class="top-main">
+						<i class="material-icons">&#xe320;</i> Customer Managed Oracle REST Data Services
+					</p>
+				</td>
+				<td class="col_minor" width="420px" height="50px">
+					<p class="top-minor">
+						PUT_OBJECT maximum file transfer size increased<br>
+						ORC Format and complex types<br>
+						Oracle Extensions for IDEs<br>
+						Stateful Rule Support in Private Endpoints
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>MAY</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_main" width="420px" height="50px">
+					<p class="top-main">
+						<i class="material-icons">&#xe42e;</i> Upgrade ADB to Database 19c<br>
+						<br>
+					</p>
+				</td>
+				<td class="col_minor" width="420px" height="50px">
+					<p class="top-minor">
+						Move Selective Data to Object Store<br>
+						Obtain Tenancy Details for SRs
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>APR</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_main" width="420px" height="50px">
+					<p class="top-main">
+						<i class="material-icons">&#xe30a;</i> SODA Documents and Collections<br>
+						<i class="material-icons">&#xe263;</i> Per-Second Billing<br>
+						<i class="material-icons">&#xe850;</i> Wallet file contains README
+					</p>
+				</td>
+				<td class="col_minor" width="420px" height="50px">
+					<p class="top-minor">
+						Load Data with Data Pump files<br>
+						External Tables support for Data Pump Files<br>
+						Oracle Extensions for IDEs<br>
+						Stateful Rule Support in Private Endpoints
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>MAR</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_main" width="420px" height="50px">
+					<p class="top-main">
+						<i class="material-icons">&#xe7f1;</i> ADB version by region<br>
+						<i class="material-icons">&#xe02f;</i> Upgrade to 19c doc
+					</p>
+				</td>
+				<td class="col_minor" width="420px" height="50px">
+					<p class="top-minor">
+						Restart ADB instance<br>
+						Data Pump direct Export to Object Store<br>
+						Data Pump Pre-authenticated URLs
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>FEB</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_main" width="420px" height="50px">
+					<p class="top-main">
+						<i class="material-icons">&#xe8be;</i> Support for Private Endpoints<br>
+						<i class="material-icons">&#xe32a;</i> Added Database Vault<br>
+						<i class="material-icons">&#xe22b;</i> APEX 19.2 Released
+					</p>
+				</td>
+				<td class="col_minor" width="420px" height="50px">
+					<p class="top-minor">
+						Database Resident Connection Pool added
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="350px">
+					<div id="pointer" style="width:300px; ">
+						<div class="cnt" style="width:300px;">
+							<p>JAN</p>
+						</div>
+					</div>
+				</td>
+				<td class="col_main" width="420px" height="50px">
+					<p class="top-main">
+						<i class="material-icons">&#xe14d;</i> Clone from backup<br>
+						<i class="material-icons">&#xe0b2;</i> REST API functions<br>
+						<i class="material-icons">&#xe32a;</i> ACLs to control access for tools
+					</p>
+				</td>
+				<td class="col_minor" width="420px" height="50px">
+					<p class="top-minor">
+						UTL_SMTP added<br>
+						#concurrent statements increased<br>
+						Option to set MAX_STRING_SIZE value
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td><br><br></td>
+			</tr>
+			<tr>
+				<td width="350px">
+				</td>
+				<td width="420px" height="50px">
+				</td>
+				<td width="420px" height="50px">
+				</td>
+			</tr>
+		</table>
+		<br>
+		<br>
+<script>
+function myMainFunction() {
+
+    let allContent = document.querySelectorAll('.col_main');
+
+    // loop through all content classes
+    for (let content of allContent) {
+ 		 if (content.style.display === "none") {
+    			content.style.display = "block";
+  			} else {
+    		content.style.display = "none";
+  		}
+	}
+}
+</script>
+
+<script>
+function myMinorFunction() {
+    let allContent = document.querySelectorAll('.col_minor');
+
+    // loop through all content classes
+    for (let content of allContent) {
+ 		 if (content.style.display === "none") {
+    			content.style.display = "block";
+  			} else {
+    		content.style.display = "none";
+  		}
+	}
+}
+</script>
+
+<script>
+function myFuturesFunction() {
+	
+  
+ let allContent2 = document.querySelectorAll('.col_futures');
+
+    // loop through all content classes
+    for (let content2 of allContent2) {
+ 		 if (content2.style.display === "none") {
+    			content2.style.display = "block";
+  			} else {
+    		content2.style.display = "none";
+  		}
+	}
+	
+ let allContent3 = document.querySelectorAll('.futuresh');
+
+    // loop through all content classes
+    for (let content3 of allContent3) {
+ 		 if (content3.style.display === "none") {
+    			content3.style.display = "block";
+  			} else {
+    		content3.style.display = "none";
+  		}
+	}
+
+ let allContent4 = document.querySelectorAll('.top_futures');
+
+    // loop through all content classes
+    for (let content4 of allContent4) {
+ 		 if (content4.style.display === "none") {
+    			content4.style.display = "block";
+  			} else {
+    		content4.style.display = "none";
+  		}
+	}
+
+
+}
+</script>
+	</body>
+</html>

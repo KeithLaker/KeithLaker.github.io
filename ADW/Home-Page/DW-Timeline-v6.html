@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="no-js">
+<!-- start : Framework/Generic -->
+<!-- start : ocom/common/global/components/framework/head -->
+	<head>
+    <!-- start : ocom/common/global/components/head -->
+    <!-- BEGIN OCOM CSS/JS -->
+		<style>
+
+.year-label
+{
+color: #C6C1BD;
+font-size: 3.5rem;
+line-height: 1;
+margin-left:10px;
+margin-right:10px;
+font-family: Courier New;
+font-weight: normal;
+}
+
+
+.scroll-timeline{
+		background-color: lightgrey;
+		height: 1200px;
+		width:98%;
+		padding: 8px 8px 8px;
+		position: relative;
+		margin:15px auto;
+		display: inline-block;
+		box-sizing: border-box;
+	}
+	.scroll-timeline-text{
+		overflow-y: auto;
+		height: 1181px;
+		overflow-x: hidden;
+		background-color: white;
+		text-align: left;
+		padding: 5px;
+	}
+	
+	
+/* 1. Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. Make nav sticky */
+main > nav {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+
+/* 3. ScrollSpy active styles (see JS tab for activation) */
+.section-nav li.active > a {
+  color: #333;
+  font-weight: 500;
+}
+
+/* Sidebar Navigation */
+.section-nav {
+  padding-left: 0;
+  border-left: 1px solid #efefef;
+}
+
+.section-nav a {
+  text-decoration: none;
+  display: block;
+  padding: .125rem 0;
+  color: #ccc;
+  transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+  color: #666;
+}
+
+/** Poor man's reset **/
+* {
+  box-sizing: border-box;
+}
+
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  margin-left: 1rem;
+  font-family: monospace !important; 
+  font-size:18px !important; 
+ font-weight:normal !important;
+}
+
+
+/** page layout **/
+main {
+  display: grid;
+  grid-template-columns: auto auto;
+  max-width: 150em;
+  width: 99%;
+  margin: 0 auto;
+}
+
+.feature-title{
+font-family: monospace !important;
+font-size: 22px !important;
+font-weight: bold !important;
+}
+
+.td-border{
+width: 5px !important; 
+border-left: 20px; 
+border-right:0px; 
+border-top: 0px; 
+border-bottom: 0px; 
+border-style:solid;
+border-color: slategrey;
+}
+
+.td-dot{
+padding:0px; 
+background-color:slategrey;
+text-align:right;
+}
+
+		</style>
+
+    <!--End-->
+	</head>
+<!-- end : ocom/common/global/components/framework/head -->
+<!-- start : ocom/common/global/components/framework/layoutAssetStartBodyInfo -->
+	<body >
+		<h1 style="font-family: arial !important; font-size:26px !important; font-weight:normal !important">A history of data warehousing possibilities...<br><br></h1>
+		<main>
+			<div class="scroll-timeline" style="box-shadow: 8px 12px 8px 1px slategrey;">
+				<div class="scroll-timeline-text" id="data">
+					<table style="width:100%; padding:0px; padding-left:10px; padding-right:50px;" cellspacing="0" cellpadding="0">
+						<tr>
+							<td style="width:350px;">&#160;</td>
+							<td style="width:150px;">&#160;</td>
+							<td style="width:25px;">&#160;</td>
+							<td class="td-dot">
+								<a name="1977"></a>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ2UlAiTRue_DGiGWGWWyDKBPci18MuR1m2g&usqp=CAU" width="20px">
+							</td>
+							<td style="width:25px;">&#160;</td>
+							<td style="width:150px;">&#160;</td>
+							<td style="width:350px;">&#160;</td>
+						</tr>
+						<tr id="row_image">
+							<td style="width:350px;">&#160;</td>
+							<td style="width:150px;">&#160;</td>
+							<td style="width:25px;">&#160;</td>
+							<td class="td-border"></td>
+							<td width="25px">
+								<div>
+									<div class="year-label">1977</div>
+								</div>
+							</td>
+							<td style="width:150px;">
+								<div style="padding: 20px; text-align:left;">
+									<img src="https://www.oracle.com/a/ocom/img/rc08-1977a.jpg" alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td style="width:350px;">
+								<h3 class="feature-title">Birth of a Silicon Valley startup</h3>
+								<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">Engineers Larry Ellison, Bob Miner, and Ed Oates found Software Development Laboratories. Their first office is in Santa Clara, California.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-border"></td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-border"></td>
+							<td></td>
+							<td class="td-dot">
+								<div style="padding:20px; !important; text-align:left;">
+									<img src="https://www.oracle.com/a/ocom/img/sql.svg" alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td>
+								<h3 class="feature-title">SQL Arrives<br>
+									<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">Multiversion read consistency is launched - data returned by a query is now committed and consistent with respect to a single point in time.
+									</p>
+								</h3>
+							</td>
+						</tr>
+						<tr id="row_image">
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-dot">
+								<a name="1984"></a>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ2UlAiTRue_DGiGWGWWyDKBPci18MuR1m2g&usqp=CAU" width="20px">
+							</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>
+								<h3 class="feature-title">Data Consistency</h3>
+								<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">Multiversion read consistency is launched - data returned by a query is now committed and consistent with respect to a single point in time.
+								</p>
+							</td>
+							<td>
+								<div style="padding: 20px;">
+									<img src="https://www.oracle.com/a/tech/img/query-optimization.svg" alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td>
+								<div>
+									<div class="year-label">1984</div>
+								</div>
+							</td>
+							<td class="td-border"></td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-dot">
+								<a name="1988"></a>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ2UlAiTRue_DGiGWGWWyDKBPci18MuR1m2g&usqp=CAU" width="20px">
+							</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-border"></td>
+							<td width="30px">
+								<div>
+									<div class="year-label">1988</div>
+								</div>
+							</td>
+							<td width="120px">
+								<div style="padding:20px;text-align:left;">
+									<img src="https://keithlaker.github.io/ADW/Images/backup-doc.png"  alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td>
+								<h3 class="feature-title">Online Backup and Recovery<br>
+									<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">An online (hot) backup is performed while the database is online and available for read/write operations - not interruption to service.
+									</p>
+								</h3>
+							</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-border"></td>
+							<td width="30px"></td>
+							<td width="120px">
+								<div style="padding:20px; !important; text-align:left;">
+									<img src="https://keithlaker.github.io/ADW/Images/badge_plsql_red.png"  alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td>
+								<h3 class="feature-title">PL/SQL Arrives<br>
+									<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">Developers can now use a procedural language designed specifically to embrace SQL statements within its syntax.
+									</p>
+								</h3>
+							</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-border"></td>
+							<td width="30px"></td>
+							<td width="120px">
+								<div style="padding:20px; text-align:left;">
+									<img src="https://keithlaker.github.io/ADW/Images/px-server.png"  alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td>
+								<h3 class="feature-title">Oracle Parallel Server<br>
+									<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">Software and a collection of hardware known as a "cluster", unites the processing power of each component to become a single, robust computing environment. A cluster generally comprises two or more computers, or "nodes".
+									</p>
+								</h3>
+							</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-dot">
+								<a name="1992"></a>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ2UlAiTRue_DGiGWGWWyDKBPci18MuR1m2g&usqp=CAU" width="20px">
+							</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>
+								<h3 class="feature-title">PL/SQL Stored Procedure</h3>
+								<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">Developers can now create reusable units of code that encapsulate specific business logic within data transformation workflows.
+								</p>
+							</td>
+							<td>
+								<div style="padding: 20px;">
+									<img src="https://keithlaker.github.io/ADW/Images/badge_plsql_red.png" alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td>
+								<div>
+									<div class="year-label">1992</div>
+								</div>
+							</td>
+							<td class="td-border"></td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>
+								<h3 class="feature-title">Cost-Based Optimizer</h3>
+								<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">The optimizer's job is to determine the best execution plan—the fastest way to get the desired result. The optimizer’s choice is based on the expected cost of execution. The optimizer balances the cost of taking each alternative.
+								</p>
+							</td>
+							<td>
+								<div style="padding: 20px;">
+									<img src="https://keithlaker.github.io/ADW/Images/optimizer.png" alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td></td>
+							<td class="td-border"></td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-dot">
+								<a name="1994">
+									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ2UlAiTRue_DGiGWGWWyDKBPci18MuR1m2g&usqp=CAU" width="20px">
+							</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-border"></td>
+							<td width="30px">
+								<div>
+									<div class="year-label">1994</div>
+								</div>
+							</td>
+							<td width="120px">
+								<div style="padding:10px; text-align:left;">
+									<img src="https://keithlaker.github.io/ADW/Images/px-server.png"  alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td>
+								<h3 class="feature-title">Parallel SQL Execution<br>
+									<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">Dramatically reduces response time for data-intensive operations on large databases typically associated with a data warehouse.
+									</p>
+								</h3>
+							</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-dot">
+								<a name="1997"></a>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ2UlAiTRue_DGiGWGWWyDKBPci18MuR1m2g&usqp=CAU" width="20px">
+							</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>
+								<h3 class="feature-title">Partitioning Added</h3>
+								<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">A powerful features that allows tables to be subdivided into smaller pieces, enabling them to be managed and accessed at a finer level of granularity. Result is much faster queries
+								</p>
+							</td>
+							<td>
+								<div style="padding: 20px;">
+									<img src="https://keithlaker.github.io/ADW/Images/partitioning.png" alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td>
+								<div>
+									<div class="year-label">1997
+									</div>
+								</div>
+							</td>
+							<td class="td-border"></td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-dot">
+								<a name="1998">
+									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ2UlAiTRue_DGiGWGWWyDKBPci18MuR1m2g&usqp=CAU" width="20px">
+							</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-border"></td>
+							<td width="30px">
+								<div>
+									<div class="year-label">1998</div>
+								</div>
+							</td>
+							<td width="120px">
+								<div style="padding:20px; text-align:left;">
+									<img src="https://keithlaker.github.io/ADW/Images/vpd.png"  alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td>
+								<h3 class="feature-title">Virtual Private Database Added<br>
+									<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">Oracle Virtual Private Database enforces security, to a fine level of granularity. It enables you to create security policies to control database access at the row and column level.
+									</p>
+								</h3>
+							</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-dot">
+								<a name="2001"></a>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ2UlAiTRue_DGiGWGWWyDKBPci18MuR1m2g&usqp=CAU" width="20px">
+							</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>
+								<h3 class="feature-title">Real Application Clusters (RAC)</h3>
+								<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">Oracle Real Application Clusters (RAC) allow customers to run a single Oracle Database across multiple servers in order to maximize availability and enable horizontal scalability, while accessing shared storage.
+								</p>
+							</td>
+							<td>
+								<div style="padding: 20px;">
+									<img src="https://keithlaker.github.io/ADW/Images/rac.jpg" alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td>
+								<div>
+									<div class="year-label">2001
+									</div>
+								</div>
+							</td>
+							<td class="td-border"></td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>
+								<h3 class="feature-title">XML Datatype</h3>
+								<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">XML stands for eXtensible Markup Language. It can be best described as portable data. XML was recommended by the World Wide Web Consortium (W3C).
+								</p>
+							</td>
+							<td>
+								<div style="padding: 20px;">
+									<img src="https://keithlaker.github.io/ADW/Images/xml.png" alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td>
+							</td>
+							<td class="td-border"></td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-dot">
+								<a name="2002">
+									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ2UlAiTRue_DGiGWGWWyDKBPci18MuR1m2g&usqp=CAU" width="20px">
+							</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-border"></td>
+							<td width="30px">
+								<div>
+									<div class="year-label">2002</div>
+								</div>
+							</td>
+							<td width="120px">
+								<div style="padding:20px; text-align:right;">
+									<img src="https://keithlaker.github.io/ADW/Images/oml.png"  alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td>
+								<h3 class="feature-title">Data Mining Added<br>
+									<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">Data mining is the practice of automatically searching large stores of data to discover patterns and trends that go beyond simple analysis. Data mining uses sophisticated mathematical algorithms to segment the data and to predict the likelihood of future events based on past events.
+									</p>
+								</h3>
+							</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-dot">
+								<a name="2003"></a>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ2UlAiTRue_DGiGWGWWyDKBPci18MuR1m2g&usqp=CAU" width="20px">
+							</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>
+								<h3 class="feature-title">Flashback Database</h3>
+								<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">Flashback Database is similar to conventional point-in-time recovery in its effects. It enables you to return a database to its state at a time in the recent past.
+								</p>
+							</td>
+							<td>
+								<div style="padding: 20px;">
+									<img src="https://keithlaker.github.io/ADW/Images/flashback.png" alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td>
+								<div>
+									<div class="year-label">2003
+									</div>
+								</div>
+							</td>
+							<td class="td-border"></td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-dot">
+								<a name="2005">
+									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ2UlAiTRue_DGiGWGWWyDKBPci18MuR1m2g&usqp=CAU" width="20px">
+							</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-border"></td>
+							<td width="30px">
+								<div>
+									<div class="year-label">2005</div>
+								</div>
+							</td>
+							<td width="120px">
+								<div style="padding:20px; text-align:left;">
+									<img src="https://keithlaker.github.io/ADW/Images/dbvault.png"  alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td>
+								<h3 class="feature-title">Database Vault<br>
+									<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">Oracle Database Vault implements powerful security controls. These unique security controls restrict access to application data by privileged database users, reducing the risk of insider and outside threats and addressing common compliance requirements.
+									</p>
+								</h3>
+							</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-border"></td>
+							<td width="30px">
+							</td>
+							<td width="120px">
+								<div style="padding:20px; text-align:left;">
+									<img src="https://keithlaker.github.io/ADW/Images/dataguard.png"  alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td>
+								<h3 class="feature-title">Data Guard<br>
+									<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">Oracle Data Guard ensures high availability, data protection, and disaster recovery for enterprise data. Data Guard provides a comprehensive set of services that create, maintain, manage, and monitor one or more standby databases to enable production Oracle databases to survive disasters and data corruptions.
+									</p>
+								</h3>
+							</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-border"></td>
+							<td width="30px">
+							</td>
+							<td width="120px">
+								<div style="padding:20px; text-align:left;">
+									<img src="https://keithlaker.github.io/ADW/Images/tde.jpg"  alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td>
+								<h3 class="feature-title">Transparent Data Encryption<br>
+									<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">Transparent Data Encryption (TDE) enables you to encrypt sensitive data that you store in tables and tablespaces. After the data is encrypted, this data is transparently decrypted for authorized users or applications when they access this data.
+									</p>
+								</h3>
+							</td>
+						</tr>
+						<tr>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td class="td-dot">
+								<a name="2007"></a>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ2UlAiTRue_DGiGWGWWyDKBPci18MuR1m2g&usqp=CAU" width="20px">
+							</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>
+								<h3 class="feature-title">Active Data Guard</h3>
+								<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">Active Data Guard is a comprehensive solution to eliminate single points of failure for mission critical Oracle Databases. It prevents data loss and downtime simply and economically by maintaining a synchronized physical replica (standby) of a production database (primary).
+								</p>
+							</td>
+							<td>
+								<div style="padding: 20px;">
+									<img src="https://keithlaker.github.io/ADW/Images/adg.png" alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td>
+								<div>
+									<div class="year-label">2007
+									</div>
+								</div>
+							</td>
+							<td class="td-border"></td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+						<tr>
+							<td>
+								<h3 class="feature-title">Exadata Arrives</h3>
+								<p style="font-family: monospace !important; margin-bottom: 30px; font-size:12px; font-weight:normal;">Oracle Exadata is engineered to deliver dramatically better performance, cost effectiveness, and availability for Oracle Databases. With high-performance database servers, scale-out intelligent storage servers with leading-edge storage caching technologies, and cloud scale RDMA-enabled internal network fabric, it is the best platform to run the Oracle Database.
+								</p>
+							</td>
+							<td>
+								<div style="padding: 20px;">
+									<img src="https://keithlaker.github.io/ADW/Images/exadata.png" alt="" style="width:120px !important">
+								</div>
+							</td>
+							<td></td>
+							<td class="td-border"></td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+							<td>&#160;</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<nav class="section-nav">
+				<ol>
+					<li><a href="#1977">1977</a></li>
+					<li><a href="#1984">1984</a></li>
+					<li><a href="#1988">1988</a></li>
+					<li><a href="#1992">1992</a></li>
+					<li><a href="#1994">1994</a></li>
+					<li><a href="#1997">1997</a></li>
+					<li><a href="#1998">1998</a></li>
+					<li><a href="#2001">2001</a></li>
+					<li><a href="#2002">2002</a></li>
+					<li><a href="#2003">2003</a></li>
+					<li><a href="#2005">2005</a></li>
+					<li><a href="#2007">2007</a></li>
+					<li><a href="#2009">2009</a></li>
+					<li><a href="#2013">2013</a></li>					
+					<li><a href="#2016">2016</a></li>					
+					<li><a href="#2018">2018</a></li>					
+					<li><a href="#2019">2019</a></li>					
+					<li><a href="#2020">2020</a></li>
+					<li><a href="#2021">2021</a></li>															
+				</ol>
+			</nav>
+		</main>
+	</body>
+</html>
+					
+			

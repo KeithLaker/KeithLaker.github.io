@@ -1,0 +1,610 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<rss version="2.0">
+<channel>
+<title>datawarehousing RSS</title>
+<description/>
+<link>https://blogs.oracle.com/datawarehousing</link>
+<lastBuildDate>Thu, 11 Aug 2022 00:43:51 +0000 </lastBuildDate>
+<pubDate>Thu, 11 Aug 2022 00:43:51 +0000</pubDate>
+<item>
+<title>Getting Started with Autonomous Database on Oracle Database Service for Microsoft Azure </title>
+<description>Oracle and Microsoft have recently announced the general availability of Oracle Database Service for Microsoft Azure (ODSA). This new service allows Microsoft Azure customers to build their applications on Azure by easily integrating with high-performance and high-availability enabled Oracle Database Service offerings on Oracle Cloud Infrastructure (OCI), such as Autonomous Database.</description>
+<link>https://blogs.oracle.com/datawarehousing/post/getting-started-autonomous-database-oracle-database-service-microsoft-azure</link>
+<pubDate>2022-08-02T21:12:00.000Z</pubDate>
+</item>
+<item>
+<title>How to Use Gradual Wallet Rotation in Autonomous Database</title>
+<description>Learn how to rotate your wallets with zero connection interruptions.</description>
+<link>https://blogs.oracle.com/datawarehousing/post/gradual-wallet-rotation-in-autonomous-database</link>
+<pubDate>2022-08-02T20:42:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - July 28 2022</title>
+<description>Latest newsletter for Autonomous Database on Shared Exadata Infrastructure</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter---july-28-2022</link>
+<pubDate>2022-07-28T14:40:00.000Z</pubDate>
+</item>
+<item>
+<title>Oracle CloudWorld 22: The Unthinkable Becomes the Unmissable</title>
+<description>High-level blog-post promoting CloudWorld 22</description>
+<link>https://blogs.oracle.com/datawarehousing/post/oracle-cloudworld-22-the-unthinkable-becomes-the-unmissable</link>
+<pubDate>2022-07-20T21:40:00.000Z</pubDate>
+</item>
+<item>
+<title>Using the Excel Add-in to Query Autonomous Database</title>
+<description>Excel add-in that allows users to query Autonomous Database directly from Excel and perform data analysis. The add-in enables users to run native SQL queries and a wizard to query Analytic Views created by the Data Analysis tool.</description>
+<link>https://blogs.oracle.com/datawarehousing/post/using-the-excel-add-in-to-query-autonomous-database</link>
+<pubDate>2022-07-20T13:40:00.000Z</pubDate>
+</item>
+<item>
+<title>Data Loading Made Easy for Oracle Autonomous Database</title>
+<description>Autonomous Database includes a collection of easy to use, no-code tools for loading data in a variety of formats from local computers and cloud stores. Learn how to get started today!</description>
+<link>https://blogs.oracle.com/datawarehousing/post/data-loading-made-easy-for-autonomous-database</link>
+<pubDate>2022-07-14T20:00:00.000Z</pubDate>
+</item>
+<item>
+<title>OML Notebooks + APEX, for Fast/Easy Deployment of Machine Learning Models</title>
+<description>Fast easy development, validation, and deployment of machine learning models on Oracle’s Autonomous Data Warehouse (ADW) using Oracle Machine Learning (OML) Notebooks, and productionization of those models using Application Express (APEX), all in the Oracle cloud.</description>
+<link>https://blogs.oracle.com/datawarehousing/post/apex-and-oml-notebooks-for-easy-deployment-of-machine-learning-models-draft</link>
+<pubDate>2022-07-12T22:11:00.000Z</pubDate>
+</item>
+<item>
+<title>Working with Object Store data from Autonomous Database now became easier</title>
+<description>Do you have a challenge running a SQL on top of Object Store? Are you looking for simplified API to work with metadata in Object Store from Autonomous Database? If answer is yes, this post for Autonomous Database</description>
+<link>https://blogs.oracle.com/datawarehousing/post/querying-object-store-data-from-autonomous-database-now-become-easier</link>
+<pubDate>2022-06-30T18:57:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - June 17 2022</title>
+<description>Autonomous Database Newsletter - June 17 2022</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter---june-17-2022</link>
+<pubDate>2022-06-17T13:32:00.000Z</pubDate>
+</item>
+<item>
+<title>3 Simple Steps to Query REST endpoints with Oracle SQL in Autonomous Database</title>
+<description>There are so many interesting and potentially useful data sets available today via REST: social, financial, science, weather, traffic … the list goes on and on. Autonomous Database makes it really easy to integrate these sources using SQL queries – eliminating the need for intermediate processing and storage and making that data available to any SQL client.</description>
+<link>https://blogs.oracle.com/datawarehousing/post/3-simple-steps-to-query-rest-endpoints-with-oracle-sql</link>
+<pubDate>2022-06-13T17:53:00.000Z</pubDate>
+</item>
+<item>
+<title>VIDEO: What's New in Autonomous Database - May 2022</title>
+<description>What's New in Autonomous Database - May 2022 1. Review of latest feature announcements - Simpler management - Faster innovation 2. Global Leaders program events 3. Oracle runs on Autonomous Database 4. Customer spotlight: Thomson Reuters </description>
+<link>https://blogs.oracle.com/datawarehousing/post/video-whats-new-in-autonomous-database---may-2022</link>
+<pubDate>2022-05-30T08:48:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - May 26, 2022</title>
+<description>Latest new features just added to Autonomous Database as of May 26 2022</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter---may-26-2022</link>
+<pubDate>2022-05-25T14:24:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - May 20, 2022</title>
+<description>Latest new features for Autonomous Database Shared - May 20, 2022.</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter---may-20-2022</link>
+<pubDate>2022-05-20T08:34:00.000Z</pubDate>
+</item>
+<item>
+<title>Essbase 19c on OCI Marketplace - Announcement</title>
+<description>Essbase 19c on OCI Marketplace - Announcement</description>
+<link>https://blogs.oracle.com/datawarehousing/post/essbase-19c-on-oci-marketplace---announcement</link>
+<pubDate>2022-05-11T17:19:00.000Z</pubDate>
+</item>
+<item>
+<title>How to Easily Access Azure Resources from Your Autonomous Database</title>
+<description>ADB-S now supports Azure service principal authentication!</description>
+<link>https://blogs.oracle.com/datawarehousing/post/how-to-easily-access-azure-resources-from-your-autonomous-database</link>
+<pubDate>2022-05-10T21:52:00.000Z</pubDate>
+</item>
+<item>
+<title>Relive Autonomous Database at Database World 2022</title>
+<description>All the Autonomous Database sessions and workshops from Database World 2022</description>
+<link>https://blogs.oracle.com/datawarehousing/post/relive-autonomous-database-at-database-world-2022</link>
+<pubDate>2022-04-29T11:05:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - April 29, 2022</title>
+<description>Latest new features and announcements for Autonomous Database.</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter---april-29-2022</link>
+<pubDate>2022-04-29T10:34:00.000Z</pubDate>
+</item>
+<item>
+<title>Learn to manage cloud code repositories (GitHub, Azure Repos, AWS CodeCommit) with Autonomous Database</title>
+<description>Dive into learning how to manage version control cloud code repositories with Autonomous Database</description>
+<link>https://blogs.oracle.com/datawarehousing/post/cloud-code-repositories-in-autonomous-database</link>
+<pubDate>2022-04-18T07:51:00.000Z</pubDate>
+</item>
+<item>
+<title>Welcome to Autonomous Database on Oracle Cloud Infrastructure</title>
+<description>Landing page for getting started with Oracle Autonomous Database </description>
+<link>https://blogs.oracle.com/datawarehousing/post/welcome-to-autonomous-database-on-oracle-cloud</link>
+<pubDate>2022-04-12T14:36:00.000Z</pubDate>
+</item>
+<item>
+<title>Building Intelligence into Modern Applications: Simplifying the Architecture</title>
+<description>Merging the individual microservice data stores into the converged Autonomous Database results in a drastically simplified, lower cost solution. It's agile; responding to customer behavior and feeding insights into the application is immediate.</description>
+<link>https://blogs.oracle.com/datawarehousing/post/building-intelligence-into-modern-applications-simplifying-the-architecture</link>
+<pubDate>2022-04-08T18:10:00.000Z</pubDate>
+</item>
+<item>
+<title>Step-by-Step guide to querying data in Snowflake using Autonomous Database</title>
+<description>Oracle recently announced a new feature that allows you to directly query data in Snowflake from Autonomous Database, without any additional driver installs or compute/storage to manage. Oracle Autonomous Databases use Oracle-managed heterogeneous connectivity to accomplish this. Here is the link Oracle-Managed Heterogeneous Connectivity</description>
+<link>https://blogs.oracle.com/datawarehousing/post/querying-data-in-snowflake-using-autonomous-database</link>
+<pubDate>2022-04-04T16:10:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - March 30, 2022</title>
+<description>Latest newsletter for Autonomous Database Shared from the ADB product management teams</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter---march-30-2022</link>
+<pubDate>2022-03-30T13:03:00.000Z</pubDate>
+</item>
+<item>
+<title>Dealing with very very long string lists using Database 12.2 and beyond</title>
+<description>Oracle RDBMS 11gR2 introduced the LISTAGG function for working with string values. It can be used to aggregate values from groups of rows and return a concatenated string where the values are typically separated by a comma or semi-colon - you can determine this yourself within the code by supplying ...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/dealing-with-very-very-long-string-lists-using-database-122</link>
+<pubDate>2022-03-30T07:00:00.000Z</pubDate>
+</item>
+<item>
+<title>Creating and managing Partitioned External Tables just got simple</title>
+<description>New APIs simplify creation and management of partitioned external tables over object storage sources.</description>
+<link>https://blogs.oracle.com/datawarehousing/post/simplified-partitioning-xt</link>
+<pubDate>2022-03-28T19:57:00.000Z</pubDate>
+</item>
+<item>
+<title>Access Amazon Redshift, Snowflake and Other Non-Oracle Databases from Your Autonomous Database</title>
+<description>Access Amazon Redshift, Snowflake and Other Non-Oracle Databases from Your Autonomous Database</description>
+<link>https://blogs.oracle.com/datawarehousing/post/access-amazon-redshift-snowflake-and-other-non-oracle-databases-from-your-autonomous-database</link>
+<pubDate>2022-03-22T17:45:00.000Z</pubDate>
+</item>
+<item>
+<title>Notification based Live Feed in Autonomous Database</title>
+<description>Learn how to automatically load a table in Autonomous Database every time an object is created in the Oracle Object Store bucket. This blog will go through the notification and subscription steps in the object store and linking it to the live feed of Autonomous Database table.</description>
+<link>https://blogs.oracle.com/datawarehousing/post/notification-based-live-feed-in-autonomous-database</link>
+<pubDate>2022-03-07T23:44:00.000Z</pubDate>
+</item>
+<item>
+<title>Auto scale your Autonomous Database storage</title>
+<description>Introducing storage auto scale for Autonomous Database, with which you can automatically use up to 3 times your reserved base storage.</description>
+<link>https://blogs.oracle.com/datawarehousing/post/storage-auto-scale</link>
+<pubDate>2022-03-07T19:00:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - March 08, 2022</title>
+<description>Latest newsletter covering the new features for Autonomous Database on Shared Exadata Infrastructure - March 08, 2022. Covers auto scaling for storage, Track OCI resources, cost, and usage, Auto-Partitioning with ADB workshop, updates to Data Safe, events for customer managed keys, support for cloud code repositories, new data analysis tool</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter---march-08-2022</link>
+<pubDate>2022-03-07T18:10:00.000Z</pubDate>
+</item>
+<item>
+<title>Automatic Partitioning with Autonomous Database</title>
+<description>Finding an appropriate partitioning strategies requires deep knowledge of the application workload and the data distribution. Instead, why not let Autonomous Database do it for you?</description>
+<link>https://blogs.oracle.com/datawarehousing/post/automatic-partitioning-autonomous-database</link>
+<pubDate>2022-02-22T10:25:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - Feb 1, 2022</title>
+<description>Latest newsletter covering the new features for Autonomous Database on Shared Exadata Infrastructure - February 01, 2022</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter---feb-1-2022</link>
+<pubDate>2022-02-01T14:07:00.000Z</pubDate>
+</item>
+<item>
+<title>Useful new cloning features in ADB - Clone across regions, and making Refreshable Clones read/write for 24 hours</title>
+<description>This post describes two recently released cloning features and how to use them. The ability to clone a database across regions, as well as the ability to reconnect a refreshable clone to its source, that had been disconnected within a 24 hour period.</description>
+<link>https://blogs.oracle.com/datawarehousing/post/new-cloning-features</link>
+<pubDate>2022-01-31T12:48:00.000Z</pubDate>
+</item>
+<item>
+<title>Check out the new LiveLabs ADB Workshop Series!</title>
+<description>Oracle LiveLabs has hundreds of workshops to help you learn about Oracle Cloud services. We've curated a dozen Autonomous Database workshops across a variety of topics that will help you get started using the service.</description>
+<link>https://blogs.oracle.com/datawarehousing/post/check-out-the-new-livelabs-adb-workshop-series</link>
+<pubDate>2022-01-28T15:44:00.000Z</pubDate>
+</item>
+<item>
+<title>Creating Database Links from Autonomous Database to Databases with Private Endpoints</title>
+<description>ADB-S now supports creating database links to the target databases that are on a private endpoint.</description>
+<link>https://blogs.oracle.com/datawarehousing/post/creating-database-links-from-autonomous-database-to-databases-with-private-endpoints</link>
+<pubDate>2021-12-15T06:19:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database enhances data lake analytics</title>
+<description>New Autonomous Database capabilities lower management costs, simplify discovery and enhance performance</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-enhances-data-lake-analytics</link>
+<pubDate>2021-10-13T20:33:00.000Z</pubDate>
+</item>
+<item>
+<title>Connecting to Your Autonomous Database Has Never Been Easier</title>
+<description>Find out about the different connectivity options in Oracle Autonomous Database and how easily you can take advantage of them in your applications.</description>
+<link>https://blogs.oracle.com/datawarehousing/post/connecting-your-autonomous-database-has-never-been-easier</link>
+<pubDate>2021-10-05T21:08:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - September 7, 2021</title>
+<description>Autonomous Database Shared development and product management teams are pleased to announce the following updates have been rolled during September </description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter-sept-7-2021</link>
+<pubDate>2021-09-06T16:07:00.000Z</pubDate>
+</item>
+<item>
+<title>How to Create a Database Link from Your Autonomous Database to a Database Cloud Service Instance</title>
+<description>Autonomous Database on Shared Exadata Infrastructure (ADB-S) now supports outgoing database links to other Oracle databases. </description>
+<link>https://blogs.oracle.com/datawarehousing/post/how-to-create-a-database-link-from-an-autonomous-data-warehouse-to-a-database-cloud-service-instance-v2</link>
+<pubDate>2021-09-01T17:16:00.000Z</pubDate>
+</item>
+<item>
+<title>VCN Peering for ADBs with Private Endpoints and Cross-Region Autonomous Data Guard</title>
+<description>VCN Peering for ADBs with Private Endpoints and Cross-Region Autonomous Data Guard.</description>
+<link>https://blogs.oracle.com/datawarehousing/post/vcn-peering-for-adbs-with-private-endpoints-and-cross-region-autonomous-data-guard</link>
+<pubDate>2021-08-31T21:28:00.000Z</pubDate>
+</item>
+<item>
+<title>Cross-Region Autonomous Data Guard - Your complete Autonomous Database disaster recovery solution!</title>
+<description>Beginning today, with the same ease of use in local Autonomous Data Guard, you will be able to protect your database instance from true disaster, complete region failure type scenarios (earthquakes, fires, floods etc.) with a standby database running in a different (ie. remote) region than the source, primary database.</description>
+<link>https://blogs.oracle.com/datawarehousing/post/cross-region-autonomous-data-guard-your-complete-autonomous-database-disaster-recovery-solution</link>
+<pubDate>2021-08-20T11:04:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - August 5, 2021</title>
+<description>August 09, 2021 Autonomous Database Shared development and product management teams are pleased to announce the following updates: Automatic Partitioning Changing Concurrency Levels Changes to wallet README View Patch Details Early Access To Patches Global Leaders Update New Customer Profiles To wat...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter-august-5-2021</link>
+<pubDate>2021-08-09T08:55:13.000Z</pubDate>
+</item>
+<item>
+<title>VIDEO: What's New In Autonomous Database ForJuly 2021</title>
+<description>Get our regular customer newsletter for Autonomous Database in video format via our YouTube Channel. You can read the latest newsletter and sign-up for new editions by visiting our dedicated newsletter page - https://blogs.oracle.com/datawarehousing/newsletter. Oracle Data Warehouse Solutions YouTub...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/video-whats-new-in-autonomous-database-forjuly-2021</link>
+<pubDate>2021-08-04T11:39:00.000Z</pubDate>
+</item>
+<item>
+<title>VIDEO: What's New In Autonomous Database For June 2021</title>
+<description>Get our regular customer newsletter for Autonomous Database in video format via our YouTube Channel. You can read the latest newsletter and sign-up for new editions by visiting our dedicated newsletter page - https://blogs.oracle.com/datawarehousing/newsletter. Oracle Data Warehouse Solutions YouTub...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/video-whats-new-in-autonomous-database-for-june-2021</link>
+<pubDate>2021-08-04T11:35:00.000Z</pubDate>
+</item>
+<item>
+<title>Getting Started With Autonomous Data Warehouse - Part 1 Oracle MovieStream</title>
+<description>I have decided to write a series of blog posts to help everyone get familiar with some very common data warehouse and analytical concepts. Oracle Autonomous Data Warehouse is a very powerful cloud database engine that automates many typical day-to-day management operations. That makes it very easy t...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/getting-started-with-autonomous-data-warehouse-part-1-oracle-moviestream</link>
+<pubDate>2021-08-03T14:23:00.000Z</pubDate>
+</item>
+<item>
+<title>Announcing Customer-Managed Encryption Keys in Autonomous Database</title>
+<description>I’d like to share the exciting news that Autonomous Database on Shared Exadata Infrastructure (ADB-S) now supports customer-managed keys thanks to the integration with Oracle Cloud Infrastructure (OCI) Vault service. You can use OCI Vault to centrally manage the Transparent Data Encryption (TDE) mas...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/announcing-customer-managed-encryption-keys-in-autonomous-database</link>
+<pubDate>2021-06-16T20:32:00.000Z</pubDate>
+</item>
+<item>
+<title>Using role Amazon Resource Names (ARNs) to securely access AWS Resources from your Autonomous Database</title>
+<description>As Oracle continues its journey toward being the most inter-operable cloud platform out there, we recently released support for accessing your Amazon Web Services (AWS) resources (such as S3 object storage) from Autonomous Database on Shared Infrastructure (ADB-S) using AWS IAM policies and roles, i...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/using-role-amazon-resource-names-arns-to-securely-access-aws-resources-from-your-autonomous-database</link>
+<pubDate>2021-06-09T23:26:00.000Z</pubDate>
+</item>
+<item>
+<title>VIDEO: What's New In Autonomous Database For May 2021</title>
+<description>Get our regular customer newsletter for Autonomous Database in video format via our YouTube Channel. You can read the latest newsletter and sign-up for new editions by visiting our dedicated newsletter page - https://blogs.oracle.com/datawarehousing/newsletter. Oracle Data Warehouse Solutions YouTub...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/video-whats-new-in-autonomous-database-for-may-2021</link>
+<pubDate>2021-06-08T12:00:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - June 7, 2021</title>
+<description>June 7, 2021 Autonomous Database Shared development and product management teams are pleased to announce the following updates: Customer Managed Keys for TDE Graph Studio Now GA PCI Compliance Attestation for ADB Support for Transparent Application Continuity Support For OCI Resource Principals Supp...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter-june-7-2021</link>
+<pubDate>2021-06-07T16:19:00.000Z</pubDate>
+</item>
+<item>
+<title>Accessing Oracle Cloud Infrastructure Resources from Your Autonomous Database using Resource Principal</title>
+<description>As we covered in a previous blog post, Autonomous Database on Shared Infrastructure (ADB-S) users often interact with other Oracle Cloud Infrastructure (OCI) resources to perform various common operations such as loading data from the Object Storage or creating an external table. The main goal of th...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/accessing-oracle-cloud-infrastructure-resources-from-your-autonomous-database-using-resource-principal</link>
+<pubDate>2021-05-13T15:59:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - April 27, 2021</title>
+<description>April 26, 2021 Autonomous Database Shared development and product management teams are pleased to announce the following updates: PeopleSoft on Autonomous Database Oracle Forms for OCI supports Autonomous Database Always Free Autonomous JSON Database Always Free APEX Application Development Oracle G...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter-april-27-2021</link>
+<pubDate>2021-04-27T09:35:00.000Z</pubDate>
+</item>
+<item>
+<title>How To: Download all files from an export to object store job in Autonomous Database using cURL</title>
+<description>A good portion of Autonomous Database (ADB) users export and store their data in Oracle Cloud Object Storage. Last year, I had written this guide to help users export database dump files, using the Data Pump tool, to Oracle's object-store. Once completed, an export, depending on the export filesize ...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/how-to-download-all-files-from-an-export-to-object-store-job-in-autonomous-database-using-curl</link>
+<pubDate>2021-04-12T15:06:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - March 8, 2021</title>
+<description>March 8, 2021 Newsletter For Autonomous Database on Shared Exadata Infrastructure Welcome to our latest customer newsletter for Autonomous Database on Shared Exadata Infrastructure. This newsletter covers the following new features and topics: Graph Studio for ADB OML for Python AES256 encryption En...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter-march-8-2021</link>
+<pubDate>2021-03-08T08:09:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - January 8, 2021</title>
+<description>January 7, 2021 Newsletter For Autonomous Database on Shared Exadata Infrastructure Welcome to our latest customer newsletter for Autonomous Database on Shared Exadata Infrastructure. This newsletter covers the following new features and topics: Connect ADB To Data In Hadoop GoldenGate Capture For A...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter-january-8-2021</link>
+<pubDate>2021-01-08T09:58:11.000Z</pubDate>
+</item>
+<item>
+<title>Analyze Data in Hadoop with Autonomous Database</title>
+<description>There is incredible value to being able to go to a single place and query data across relational, Hadoop, and object storage. When you access that data, you don't need to be concerned about its source. You can have a single, integrated database to correlate information from multiple data stores. It'...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/analyze-data-in-hadoop-with-autonomous-database</link>
+<pubDate>2020-12-22T17:29:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - December 9, 2020</title>
+<description>December 9, 2020 Latest Newsletter For Autonomous Database on Shared Exadata Infrastructure Welcome to our latest customer newsletter for Autonomous Database on Shared Exadata Infrastructure. This newsletter covers the following new features and topics: Release of APEX 20.2 Accessing Object Store Fi...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter-december-9-2020</link>
+<pubDate>2020-12-09T12:29:00.000Z</pubDate>
+</item>
+<item>
+<title>Loading XML data from your object store into Autonomous Database</title>
+<description>The Oracle Autonomous Database (ADB) is truly a multi-model database, making it the ideal place to store and retrieve all types of data your business may use. Last year, I wrote a post about data loading, walking through examples of moving various types of unstructured and semi-structured data, lyin...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/loading-xml-data-from-your-object-store-into-autonomous-database</link>
+<pubDate>2020-11-10T21:24:21.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - October 28, 2020</title>
+<description>October 28, 2020 Latest Newsletter For Autonomous Database on Shared Exadata Infrastructure Welcome to our latest customer newsletter for Autonomous Database on Shared Exadata Infrastructure. This newsletter covers the following new features and topics: Autonomous Data Guard For Autonomous JSON Data...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter-october-28-2020</link>
+<pubDate>2020-10-28T13:56:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database adds PL/SQL to its arsenal of OCI native SDKs</title>
+<description>Earlier this year I introduced our new functionality in Autonomous Database on Shared infrastructure (ADB-S) which made it possible to call most cloud REST APIs by simply running scripts right in your database, without the need to stand up your own server. We now went the extra mile and built a fami...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-adds-plsql-to-its-arsenal-of-oci-native-sdks</link>
+<pubDate>2020-10-26T23:41:52.000Z</pubDate>
+</item>
+<item>
+<title>Use any AWS S3 compatible object store with Autonomous Database</title>
+<description>In keeping with our mission to be an open and interoperable cloud platform, recently we added the ability to use any object store of your choosing that supports AWS S3 compatible URLs, in Autonomous Database on Shared Infrastructure (ADB-S). While I recommend using Oracle Object Storage since it is ...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/use-any-aws-s3-compatible-object-store-with-autonomous-database</link>
+<pubDate>2020-09-24T21:45:23.000Z</pubDate>
+</item>
+<item>
+<title>SQL Macros Have Arrived in Autonomous Database</title>
+<description>If you saw last week's Autonomous Database newsletter you will have noticed that one of the new features that I announced was support for SQL Macros), see here and if you want to sign-up for the Autonomous Database newsletter then see here. Whilst the newsletter included a link to the SQL documentat...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/sql-macros-have-arrived-in-autonomous-database</link>
+<pubDate>2020-09-07T14:48:00.000Z</pubDate>
+</item>
+<item>
+<title>Keep your clone's data up-to-date with Refreshable Clones in Autonomous Database</title>
+<description>One of the most widely used features in Autonomous Database on Shared Infrastructure (ADB-S) today is the ability to clone your database, no matter how big or small, with little to no effort. This week, we are souping up ADB's cloning abilities to include Refreshable Clones! A refreshable clone is a...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/keep-your-clones-data-up-to-date-with-refreshable-clones-in-autonomous-database</link>
+<pubDate>2020-09-04T21:47:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - September 03, 2020</title>
+<description>September 03, 2020 Latest Newsletter For Autonomous Database on Shared Exadata Infrastructure Welcome to our latest customer newsletter for Autonomous Database on Shared Exadata Infrastructure. This newsletter covers the following new features and topics: Refreshable Clones SQL Developer Web Enhance...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter-september-03-2020</link>
+<pubDate>2020-09-03T09:51:00.000Z</pubDate>
+</item>
+<item>
+<title>Optimize the Orchestration of Your DevTest Lifecycle with the New Autonomous Database Rename Feature</title>
+<description>One of the key advantages of Autonomous Database on Shared Exadata Infrastructure (ADB-S) is to be able to provision or clone a database with the click of a button. This is especially important in the context of agile development and testing (DevTest) in which the teams often need a fresh copy of th...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/optimize-the-orchestration-of-your-devtest-lifecycle-with-the-new-autonomous-database-rename-feature</link>
+<pubDate>2020-08-20T17:20:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - August 20 2020</title>
+<description>August 20, 2020 Latest Newsletter For Autonomous Database on Shared Exadata Infrastructure Welcome to our latest customer newsletter for Autonomous Database on Shared Exadata Infrastructure. This newsletter covers the following new features and topics: Launch of Autonomous JSON Database Rename Auton...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter-august-20-2020</link>
+<pubDate>2020-08-20T10:00:00.000Z</pubDate>
+</item>
+<item>
+<title>Continuous ETL, Realtime Analytics, and Realtime Decisions in Oracle Big Data Service using GoldenGate Stream Analytics</title>
+<description>Many thanks to Prabhu Thukkaram from the GoldenGate Streaming Analytics team for this post :). GoldenGate Stream Analytics is a Spark-based platform for building stream processing applications. One of the key differentiators is productivity or time-to-value, which is a direct result of the following...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/continuous-etl-realtime-analytics-and-realtime-decisions-in-oracle-big-data-service-using-goldengate-stream-analytics</link>
+<pubDate>2020-08-13T13:36:00.000Z</pubDate>
+</item>
+<item>
+<title>How To Manually Upgrade Your Autonomous Database from 18c to 19c</title>
+<description>In a recent newsletter (April 08, 2020) I mentioned that Oracle Database 19c is now available on Autonomous Database for all regions. The default version for all new databases is 19c and going forward, most new Autonomous Database features will only be available for databases using Oracle Database 1...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/how-to-manually-upgrade-your-autonomous-database-from-18c-to-19c</link>
+<pubDate>2020-08-05T12:39:00.000Z</pubDate>
+</item>
+<item>
+<title>How to Access Non-Oracle Databases from Autonomous Database using Oracle Database Gateway</title>
+<description>Being able to create database links from Autonomous Database on Shared Infrastructure (ADB-S) to other ADB-S instances or Oracle databases has been one of the most sought-after features that we introduced. ADB-S now supports creating database links to Oracle Database Gateways in order to access non-...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/how-to-access-non-oracle-databases-from-autonomous-database-using-oracle-database-gateway</link>
+<pubDate>2020-07-24T15:44:00.000Z</pubDate>
+</item>
+<item>
+<title>Using OCI Resource Manage to deploy a complete end-to-end data warehouse</title>
+<description>A while back, I announced in the Autonomous Database Newsletter (June 24 edition) that we now had a series of reference architecture patterns for Autonomous Data Warehouse. Currently, the following patterns are available (note: more patterns are being built and will be added shortly): Departmental d...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/using-oci-resource-manage-to-deploy-a-complete-end-to-end-data-warehouse</link>
+<pubDate>2020-07-23T13:04:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - July 22 2020</title>
+<description>Autonomous Database on Shared Exadata Infrastructure July 22, 2020 Welcome to our latest customer newsletter for Autonomous Database on Shared Exadata Infrastructure. This newsletter covers the following new features and topics: Using Autonomous Data Guard MDW Patterns in OCI Resource Manager Note: ...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter-july-22-2020</link>
+<pubDate>2020-07-22T11:25:00.000Z</pubDate>
+</item>
+<item>
+<title>Announcing Autonomous Data Guard!</title>
+<description>Just over a week ago, you may have heard Larry mention Autonomous Data Guard at the live-streamed Oracle Live event. Today, I am happy to announce this much-awaited disaster recovery (DR) feature in Autonomous Database on Shared Infrastructure (ADB-S). Autonomous Data Guard (ADG) gives users the abi...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/announcing-autonomous-data-guard</link>
+<pubDate>2020-07-21T20:36:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - July 15 2020</title>
+<description>Autonomous Database on Shared Exadata Infrastructure July 15, 2020 Welcome to our latest customer newsletter for Autonomous Database on Shared Exadata Infrastructure. This newsletter covers the following new features and topics: Connecting to non-Oracle Databases Modify Network Configuration Timezon...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter-july-15-2020</link>
+<pubDate>2020-07-15T11:01:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - June 24 2020</title>
+<description>Autonomous Database on Shared Exadata Infrastructure June 24, 2020 Welcome to our latest customer newsletter for Autonomous Database on Shared Exadata Infrastructure. This newsletter covers the following new features and topics: Support for ORC files Automatic upgrade to 19c AWR Reports in Performan...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter-june-24-2020</link>
+<pubDate>2020-06-24T09:00:00.000Z</pubDate>
+</item>
+<item>
+<title>Query ORC files and complex data types in Object Storage with Autonomous Database</title>
+<description>Apache ORC is a columnar file type that is common to the Hadoop ecosystem. It is similar in concept to Apache Parquet; Hortonworks Hadoop clusters often leveraged ORC – while Cloudera clusters utilized Parquet. Like parquet, ORC is a database file designed for efficient reads. Files embed a schema, ...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/query-orc-files-and-complex-data-types-in-object-storage-with-autonomous-database</link>
+<pubDate>2020-06-10T17:57:00.000Z</pubDate>
+</item>
+<item>
+<title>Oracle Database Vault on Autonomous Database: Quickly and Easily</title>
+<description>We often talk about how to protect our data from external threats by implementing various practices such as encrypting our data, only allowing connections via TCPS authentication or even further, deploying our databases in a private network. However, these security practices might not be sufficient ...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/oracle-database-vault-on-autonomous-database-quickly-and-easily</link>
+<pubDate>2020-06-04T15:56:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - June 4-2020</title>
+<description>Autonomous Database on Shared Exadata Infrastructure June 04, 2020 Welcome to our latest customer newsletter for Autonomous Database on Shared Exadata Infrastructure. This newsletter covers the following new features and topics: Customer Managed Oracle REST Data Services Workload metrics on performa...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter-june-4-2020</link>
+<pubDate>2020-06-04T11:29:00.000Z</pubDate>
+</item>
+<item>
+<title>Oracle Big Data SQL 4.1 is now available</title>
+<description>I'm pleased to announce that Oracle Big Data SQL 4.1 is now available. This is a significant release that enables you to take advantage of new Oracle Database 19c capabilities plus core Big Data SQL enhancements. Big Data SQL enables organizations to easily analyze data across Apache Hadoop, Apache ...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/oracle-big-data-sql-41-is-now-available</link>
+<pubDate>2020-05-02T17:06:10.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - April 30-2020</title>
+<description>Autonomous Database on Shared Exadata Infrastructure April 30, 2020 Welcome to our latest customer newsletter for Autonomous Database on Shared Exadata Infrastructure. This newsletter covers the following new features and topics: Service Level Agreement for ADB Per-second billing Support for SODA do...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter-april-30-2020</link>
+<pubDate>2020-04-30T10:38:00.000Z</pubDate>
+</item>
+<item>
+<title>The simplest guide to exporting data from Autonomous Database directly to Object Storage</title>
+<description>One of the best ways to export data out of your Autonomous Database (ADB), whether to transfer data to a database lying in a different region or even keep a copy of the data in a single place for other teams in your organization to access, is via Oracle Data Pump. Recently we released a much request...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/the-simplest-guide-to-exporting-data-from-autonomous-database-directly-to-object-storage</link>
+<pubDate>2020-04-16T14:39:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - April 08-2020</title>
+<description>Autonomous Database on Shared Exadata Infrastructure April 08, 2020 Welcome to our latest customer newsletter for Autonomous Database on Shared Exadata Infrastructure. This newsletter covers the following new features and topics: Don't forget to checkout our "What's New" page for a comprehensive arc...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter-april-08-2020</link>
+<pubDate>2020-04-08T10:31:54.000Z</pubDate>
+</item>
+<item>
+<title>Now Available! Oracle Big Data Service</title>
+<description>After a successful controlled GA, we are excited to announce general availability for Oracle Big Data Service in the following regions: Ashburn, Sao Paulo, Frankfurt, Tokyo, Seoul, London and Phoenix. Oracle Big Data Service is an automated cloud platform service designed for a diverse set of big da...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/now-available-oracle-big-data-service</link>
+<pubDate>2020-04-06T14:30:49.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - February 26-2020</title>
+<description>Autonomous Database on Shared Exadata Infrastructure February 26, 2020 Welcome to our latest customer newsletter for Autonomous Database on Shared Exadata Infrastructure. This newsletter covers the following new features and topics: Support for Private Endpoints Global Leaders Program - Update Quick...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter-february-26-2020</link>
+<pubDate>2020-02-26T08:10:00.000Z</pubDate>
+</item>
+<item>
+<title>Announcing Private Endpoints in Autonomous Database on Shared Exadata Infrastructure</title>
+<description>Access to a database using private IP addresses has been one of the most common requests for Autonomous Database on Shared Exadata Infrastructure, especially from enterprise customers. Today, we are announcing support for private IP addresses in Autonomous Database on Shared Exadata Infrastructure. ...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/announcing-private-endpoints-in-autonomous-database-on-shared-exadata-infrastructure</link>
+<pubDate>2020-02-25T22:44:21.000Z</pubDate>
+</item>
+<item>
+<title>How to level up and invoke an Oracle Function (or any Cloud REST API) from within your Autonomous Database</title>
+<description>October '20 Edit: We recently released a pre-installed PL/SQL native SDK that makes calling Oracle Cloud (OCI) REST APIs even simpler. I recommend using that SDK for calls to OCI; continue with the method below if you need to call REST APIs in other cloud platforms. Recently, we released functionali...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/how-to-level-up-and-invoke-an-oracle-function-or-any-cloud-rest-api-from-within-your-autonomous-database</link>
+<pubDate>2020-02-19T15:08:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Newsletter - February 18-2020</title>
+<description>Autonomous Database on Shared Exadata Infrastructure February 18, 2020 Welcome to our first customer newsletter for Autonomous Database on Shared Exadata Infrastructure. This first newsletter covers the following new features and topics: Database Vault now available APEX 19.2 now available in Always...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-newsletter-february-18-2020</link>
+<pubDate>2020-02-18T12:39:00.000Z</pubDate>
+</item>
+<item>
+<title>Announcing Our New Customer Newsletter for Autonomous Database - Don't Miss Out!</title>
+<description>Welcome I am happy to announce that I will be posting a regular customer newsletter for Autonomous Database (on Shared Exadata Infrastructure) on this blog. It will cover the latest features added to Autonomous Database with links to additional collateral such as specific doc pages, videos, whitepapers...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/announcing-our-new-customer-newsletter-for-autonomous-database-dont-miss-out</link>
+<pubDate>2020-02-18T11:56:00.000Z</pubDate>
+</item>
+<item>
+<title>How to Send an Email using UTL_SMTP in Autonomous Database</title>
+<description>Autonomous Database now supports UTL_HTTP and UTL_SMTP PL/SQL packages. You may already be familiar with these as they are commonly used in various scenarios. In this blog post, we will focus on how to send an email using the UTL_SMTP package. Before we dive into the details, it's worth noting that ...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/how-to-send-an-email-using-utl_smtp-in-autonomous-database</link>
+<pubDate>2020-01-10T00:07:00.000Z</pubDate>
+</item>
+<item>
+<title>How to Launch a Virtual Cloud Network Using the Networking Quickstart Wizard and Connect to Your Autonomous Database</title>
+<description>A virtual cloud network (VCN) is a virtual, private network you set up in Oracle data centers. It is very similar to a traditional network with firewall rules and various gateways. When you work with Oracle Cloud Infrastructure (OCI), setting up a VCN for your cloud resources is usually one of the f...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/how-to-launch-a-virtual-cloud-network-using-the-networking-quickstart-wizard-and-connect-to-your-autonomous-database</link>
+<pubDate>2019-12-17T19:15:03.000Z</pubDate>
+</item>
+<item>
+<title>Announcing easier, faster access to all your favorite tools</title>
+<description>Quick announcement from our Cloud Team... We just made a very subtle change to the UI on the Oracle Cloud Infrastructure Console for Autonomous Data Warehouse and Autonomous Transaction Processing. Just in case you missed it: the console has been updated with the addition of a new Tools tab alongsid...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/announcing-easier-faster-access-to-all-your-favorite-tools</link>
+<pubDate>2019-11-22T12:32:00.000Z</pubDate>
+</item>
+<item>
+<title>Is your data in parts and lying in other object stores? No worries, Autonomous Database has you covered!</title>
+<description>Whether you personally believe in the multi-cloud lifestyle that’s in vogue or not, the reality is you may be dealing with different departments or orgs within your company that store their data in their cloud of choice, and partitioned in various ways. Autonomous DB doesn't judge, we support queryi...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/is-your-data-in-parts-and-lying-in-other-object-stores-no-worries-autonomous-database-has-you-covered</link>
+<pubDate>2019-11-15T04:29:00.000Z</pubDate>
+</item>
+<item>
+<title>Keeping Your Autonomous Data Warehouse Secure with Data Safe - Part 2</title>
+<description>In the part 1 of this series we looked at how to get your ADW and OCI environment ready for using Data Safe. If you missed part 1 or need a quick refresher then the blog post is here: https://blogs.oracle.com/datawarehousing/keeping-your-autonomous-data-warehouse-secure-with-data-safe-part-1. In thi...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/keeping-your-autonomous-data-warehouse-secure-with-data-safe-part-2</link>
+<pubDate>2019-11-13T14:03:00.000Z</pubDate>
+</item>
+<item>
+<title>Keeping Your Autonomous Data Warehouse Secure with Data Safe - Part 1</title>
+<description>One of the big announcements at OpenWorld 2019 in San Francisco was Oracle Data Safe - a totally new cloud-based security control center for your Oracle Data Warehouse (ADW) and it's completely FREE! So what exactly does it do? Well, in summary Data Safe delivers essential data security capabilities...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/keeping-your-autonomous-data-warehouse-secure-with-data-safe-part-1</link>
+<pubDate>2019-11-11T12:50:00.000Z</pubDate>
+</item>
+<item>
+<title>Getting A Sneak Preview into the Autonomous World Of 19c</title>
+<description>If you have been autonomous data warehouse for a while now you will know that when you create a new data warehouse your instance will be based on Database 18c. But you also probably spotted that Database 19c is also available via some of our other cloud services and LiveSQL also runs Database 19c. W...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/getting-a-sneak-preview-into-the-autonomous-world-of-19c</link>
+<pubDate>2019-10-15T14:44:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Data Warehouse + Oracle Analytics Cloud Hands-on Lab at #OOW19</title>
+<description>If you are at Moscone Center for this week's OpenWorld conference then don't miss your chance to get some free hands-on time with Oracle Analytics Cloud querying Autonomous Data Warehouse. We have three sessions left to go this week: Tuesday, September 17, 03:45 PM - 04:45 PM | Moscone West - Room 3...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-data-warehouse-oracle-analytics-cloud-hands-on-lab-at-oow19</link>
+<pubDate>2019-09-17T02:36:00.000Z</pubDate>
+</item>
+<item>
+<title>Need to Query Autonomous Data Warehouse directly in Slack?</title>
+<description>We have one of THE coolest demos ever in the demogrounds area at OpenWorld (head straight to the developer tools area and look for the Chatbot and Digital Assistant demo booths. My colleagues in the Oracle Analytics team have combined Oracle Analytics Cloud with the new Digital Assistant tool to cre...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/need-to-query-autonomous-data-warehouse-directly-in-slack</link>
+<pubDate>2019-09-17T01:15:00.000Z</pubDate>
+</item>
+<item>
+<title>Where to find us in the demogrounds at #oow19....</title>
+<description>If you are OpenWorld tomorrow then I expect that you have lots of questions that need answering. Well, the demogrounds is this place for that! Our development teams will be at the demogrounds all week ready to answer all your questions. The demo area is located in the base of Moscone South and it wi...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/where-to-find-us-in-the-demogrounds-at-oow19</link>
+<pubDate>2019-09-16T01:36:00.000Z</pubDate>
+</item>
+<item>
+<title>Autonomous Database Now Supports Accessing the Object Storage with OCI Native Authentication</title>
+<description>Loading and querying external data from Oracle Cloud Object Storage are amongst some of the common operations performed in Autonomous Database. Accessing Object Storage requires users to have credentials that they can create via the CREATE_CREDENTIAL procedure of DBMS_CLOUD package. Object Storage c...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/autonomous-database-now-supports-accessing-the-object-storage-with-oci-native-authentication</link>
+<pubDate>2019-08-08T14:04:00.000Z</pubDate>
+</item>
+<item>
+<title>Oracle Big Data SQL 4.0 – Query Server</title>
+<description>One of the popular new Big Data SQL features is its Query Server. You can think of Query Server as an Oracle Database 18c query engine that uses the Hive metastore to capture table definitions. Data isn’t stored in Query Server; it allows you to access data in Hadoop, NoSQL, Kafka and Object Stores ...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/oracle-big-data-sql-40-query-server</link>
+<pubDate>2019-07-08T20:31:00.000Z</pubDate>
+</item>
+<item>
+<title>Oracle Big Data SQL 4.0 is Now Available</title>
+<description>I’m excited to announce the availability of Big Data SQL 4.0. This release is packed with new capabilities: Query more sources – including Oracle Object Store and S3 Query data without requiring an Oracle Database using Big Data SQL Query Server Enhanced query processing – pushing aggregations to th...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/oracle-big-data-sql-40-is-now-available</link>
+<pubDate>2019-07-08T20:30:57.000Z</pubDate>
+</item>
+<item>
+<title>Oracle Big Data SQL 4.0 - Great New Performance Feature</title>
+<description>Big Data SQL 4.0 introduces a data processing enhancement that can have a dramatic impact on query performance: distributed aggregation using in-memory capabilities. Big Data SQL has always done a great job of filtering data on the Hadoop cluster. It does this using the following optimizations: 1) c...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/oracle-big-data-sql-40-great-new-performance-feature</link>
+<pubDate>2019-07-08T20:30:28.000Z</pubDate>
+</item>
+<item>
+<title>SQL Developer Web comes to Autonomous Data Warehouse - oh YES!</title>
+<description>If you login into your cloud console and create a new autonomous data warehouse, or if you have an existing data warehouse instance, then there is great news - you can now launch SQL Developer Web direct from the service console. There is no need to download and install the full desktop version of S...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/sql-developer-web-comes-to-autonomous-data-warehouse-oh-yes</link>
+<pubDate>2019-07-05T11:40:00.000Z</pubDate>
+</item>
+<item>
+<title>APEX comes to Autonomous Data Warehouse - oh YES!</title>
+<description>A big "Autonomous Welcome" to all our APEX developers because your favorite low-code development environment is now built in Autonomous Data Warehouse. And before you ask - YES, if you have existing autonomous data warehouse instances you will find an APEX launch button got added to the Admin tab on...</description>
+<link>https://blogs.oracle.com/datawarehousing/post/apex-comes-to-autonomous-data-warehouse-oh-yes</link>
+<pubDate>2019-07-02T14:22:00.000Z</pubDate>
+</item>
+</channel>
+</rss>
