@@ -270,8 +270,8 @@ a.btt:active {
 }
 
 
-   /* On larger resolutions, hide the text for Small screens */
-    @media only screen and (min-width: 960px) {
+  /* On larger resolutions, hide the text for Small screens */
+    @media only screen and (min-width: 1930px) {
        .coreTable {
 		max-width:1280px;
 		min-width:1180px;
@@ -292,6 +292,32 @@ a.btt:active {
 		background-color:#D2E0D6;
 		}
    }
+
+
+
+   /* On larger resolutions, hide the text for Small screens */
+    @media only screen and (min-width: 961px) and (max-width: 1929px) {
+       .coreTable {
+		max-width:980px;
+		min-width:880px;
+		margin:0 auto;
+		}
+
+		.banner-image {
+		width:100%;
+		height:auto;
+		max-width:980px;
+		background-color:#D2E0D6;
+		}
+		
+		.thin-banner{
+		width:100%;
+		height:auto;
+		max-width: 980px;
+		background-color:#D2E0D6;
+		}
+   }
+
 
     @media only screen and (max-width: 960px) {
        .coreTable {
