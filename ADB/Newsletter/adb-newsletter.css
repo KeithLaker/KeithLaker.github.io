@@ -251,21 +251,19 @@ a.btt:active {
 }
 
 
-
 .libutton, .substack, .twitter, .mastodon {
    display: flex;
    flex-direction: column;
    justify-content: center;
    padding: 7px;
    text-align: center;
-   outline: none;
    text-decoration: none !important;
    color: #ffffff !important;
    width: 200px;
    height: 40px;
    border-radius: 16px;
    background-color: #0A66C2;
-   font-family: "SF Pro Text", Helvetica, sans-serif;
+   font-family: Helvetica, sans-serif;
    box-shadow: 2px 2px 10px slategrey;
 }
 
@@ -282,44 +280,44 @@ a.btt:active {
 		width:100%;
 		height:auto;
 		max-width:1280px;
-		background-color:#D2E0D6;
+		background-color:yellow;
 		}
 		
 		.thin-banner{
 		width:100%;
 		height:auto;
 		max-width: 1280px;
-		background-color:#D2E0D6;
+		background-color:yellow;
 		}
    }
 
 
 
    /* On larger resolutions, hide the text for Small screens */
-    @media only screen and (min-width: 961px) and (max-width: 1929px) {
+    @media only screen and (min-width: 1481px) and (max-width: 1929px) {
        .coreTable {
-		max-width:980px;
-		min-width:880px;
+		max-width:900px;
+		min-width:800px;
 		margin:0 auto;
 		}
 
 		.banner-image {
 		width:100%;
 		height:auto;
-		max-width:980px;
-		background-color:#D2E0D6;
+		max-width:900px;
+		background-color:green;
 		}
 		
 		.thin-banner{
 		width:100%;
 		height:auto;
-		max-width: 980px;
-		background-color:#D2E0D6;
+		max-width: 900px;
+		background-color:green;
 		}
    }
 
 
-    @media only screen and (max-width: 960px) {
+    @media only screen and (max-width: 1480px) {
        .coreTable {
 		max-width:600px;
 		min-width:500px;
@@ -330,14 +328,14 @@ a.btt:active {
 		width:100%;
 		height:auto;
 		max-width:600px;
-		background-color:#D2E0D6;
+		background-color:blue;
 		}
 
 		.thin-banner{
 		width:100%;
 		height:auto;
 		max-width:600px;
-		background-color:#D2E0D6;
+		background-color:blue;
 		}
    }
 
