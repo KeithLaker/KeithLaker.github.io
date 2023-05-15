@@ -289,6 +289,11 @@ a.btt:active {
 		max-width: 1280px;
 		background-color:yellow;
 		}
+		
+		.newsletter-panel {
+		width:90%;
+		}
+
    }
 
 
@@ -314,6 +319,10 @@ a.btt:active {
 		max-width: 900px;
 		background-color:green;
 		}
+		
+		.newsletter-panel {
+		width:85%;
+		}
    }
 
 
@@ -337,6 +346,11 @@ a.btt:active {
 		max-width:600px;
 		background-color:blue;
 		}
+
+		.newsletter-panel {
+		width:80%;
+		}
+
    }
 
 
