@@ -79,6 +79,23 @@ cursor: pointer;
 cursor: pointer;
 }
 
+.mig-flow-image-off{
+background-color:white; 
+vertical-align: middle; 
+padding-top:15px; 
+padding: 10px;
+cursor: pointer;
+}
+
+.mig-flow-text-off{
+background-color:#F5F5F5; 
+vertical-align: middle; 
+padding-top:15px; 
+padding: 10px;
+cursor: pointer;
+}
+
+
 
 .mig-flow-on{
 background-color:darkgrey; 
@@ -86,10 +103,30 @@ vertical-align: middle;
 padding-top:15px; 
 border: 5px solid darkgrey; 
 border-top-left-radius: 10px; 
-border-top-right-radius: 10px;
+border-top-right-radius: 20px;
 padding: 10px;
 cursor: pointer;
+box-shadow: 10px 10px 10px darkgrey;
 }
+
+.mig-flow-image-on{
+background-color:white; 
+vertical-align: middle; 
+padding-top:15px; 
+padding: 10px;
+cursor: pointer;
+box-shadow: 10px 10px 10px darkgrey;
+}
+
+.mig-flow-text-on{
+background-color:white; 
+vertical-align: middle; 
+padding-top:15px; 
+padding: 10px;
+cursor: pointer;
+box-shadow: 10px 10px 10px darkgrey;
+}
+
 
 .mig-flow-on:hover {
 cursor: pointer;
@@ -116,7 +153,18 @@ function ShowAndHide1() {
 		x2text.style.backgroundColor ='#F5F5F5';
 
        document.getElementById("mig-flow-1-banner").className = "mig-flow-on";
+       document.getElementById("mig-flow-1-image").className = "mig-flow-image-on";
+       document.getElementById("mig-flow-1-text").className = "mig-flow-text-on";
+
        document.getElementById("mig-flow-2-banner").className = "mig-flow-off";
+       document.getElementById("mig-flow-2-image").className = "mig-flow-image-off";
+       document.getElementById("mig-flow-2-text").className = "mig-flow-text-off";
+
+
+       document.getElementById("mig-flow-3-banner").className = "mig-flow-off"; 
+       document.getElementById("mig-flow-3-image").className = "mig-flow-image-off";
+       document.getElementById("mig-flow-3-text").className = "mig-flow-text-off";
+
        document.getElementById("mig-flow-3-banner").className = "mig-flow-off";
        document.getElementById("mig-flow-4-banner").className = "mig-flow-off";
        document.getElementById("mig-flow-5-banner").className = "mig-flow-off";
@@ -151,8 +199,18 @@ function ShowAndHide2() {
 		x5text.style.backgroundColor = '#F5F5F5';
 
        document.getElementById("mig-flow-1-banner").className = "mig-flow-off";
+       document.getElementById("mig-flow-1-image").className = "mig-flow-image-off";
+       document.getElementById("mig-flow-1-text").className = "mig-flow-text-off";
+
        document.getElementById("mig-flow-2-banner").className = "mig-flow-on";
-       document.getElementById("mig-flow-3-banner").className = "mig-flow-off";
+       document.getElementById("mig-flow-2-image").className = "mig-flow-image-on";
+       document.getElementById("mig-flow-2-text").className = "mig-flow-text-on";
+
+       document.getElementById("mig-flow-3-banner").className = "mig-flow-off"; 
+       document.getElementById("mig-flow-3-image").className = "mig-flow-image-off";
+       document.getElementById("mig-flow-3-text").className = "mig-flow-text-off";
+
+
        document.getElementById("mig-flow-4-banner").className = "mig-flow-off";
        document.getElementById("mig-flow-5-banner").className = "mig-flow-off";        
 }
@@ -179,10 +237,20 @@ function ShowAndHide3() {
 		x3text.style.backgroundColor ='white';
 
        document.getElementById("mig-flow-1-banner").className = "mig-flow-off";
+       document.getElementById("mig-flow-1-image").className = "mig-flow-image-off";
+       document.getElementById("mig-flow-1-text").className = "mig-flow-text-off";
+
        document.getElementById("mig-flow-2-banner").className = "mig-flow-off";
-       document.getElementById("mig-flow-3-banner").className = "mig-flow-on";
+       document.getElementById("mig-flow-2-image").className = "mig-flow-image-off";
+       document.getElementById("mig-flow-2-text").className = "mig-flow-text-off";
+
+
+       document.getElementById("mig-flow-3-banner").className = "mig-flow-on"; 
+       document.getElementById("mig-flow-3-image").className = "mig-flow-image-on";
+       document.getElementById("mig-flow-3-text").className = "mig-flow-text-on";
+
        document.getElementById("mig-flow-4-banner").className = "mig-flow-off";
-       document.getElementById("mig-flow-5-banner").className = "mig-flow-off";        
+       document.getElementById("mig-flow-5-banner").className = "mig-flow-off";
 }
 
 </SCRIPT>
@@ -258,7 +326,7 @@ function ShowAndHide3() {
 						</td>
 					</tr>
 					<tr>
-						<td align="center" style="background-color: white; border-left: 5px solid silver;" style="cursor: pointer;" onclick="ShowAndHide1('1')">
+						<td align="center" id="mig-flow-1-image" class="mig-flow-image-on" style="background-color: white; border-left: 5px solid silver; cursor: pointer;" onclick="ShowAndHide1('1')">
 							<div onclick="ShowAndHide1('1')" style="cursor: pointer;">
 								<br>
 								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuCsx59mVl-PRFVo-mCFTP5p14pAZE657Q98PyTIP-33j7_33gPz1I7BTZknXkpqOhzBs&usqp=CAU" style="max-width: 150px; width: 150px;">
@@ -267,13 +335,13 @@ function ShowAndHide3() {
 							</div>
 						</td>
 						<td width="2px"></td>
-						<td align="center" style="background-color: white;" style="cursor: pointer;" onclick="ShowAndHide2('2')">
+						<td align="center"  id="mig-flow-2-image" class="mig-flow-image-off"  style="background-color: white;" style="cursor: pointer;" onclick="ShowAndHide2('2')">
 							<div onclick="ShowAndHide2('2')" style="cursor: pointer;">
 								<img src="https://docs.oracle.com/en-us/iaas/Content/Resources/Images/OCI_icon_Autonomous.png" style="max-width: 150px; width: 150px;">
 							</div>
 						</td>
 						<td width="12px"><br> <br></td>
-						<td align="center" style="background-color: white;" style="cursor: pointer;" onclick="ShowAndHide3('3')">
+						<td align="center"  id="mig-flow-3-image" class="mig-flow-image-off" style="background-color: white; cursor: pointer;" onclick="ShowAndHide3('3')">
 							<img src="https://cdn-icons-png.flaticon.com/512/158/158236.png" style="max-width: 150px; width: 150px;">
 						</td>
 						<td width="2px"></td>
@@ -286,7 +354,7 @@ function ShowAndHide3() {
 						</td>
 					</tr>
 					<tr>
-						<td valign="top" id="mig-flow-1-text" style="padding-top: 10px; padding-left: 10px; padding-right: 10px; background-color: white; border-left: 5px solid silver;">
+						<td valign="top" id="mig-flow-1-text" class="mig-flow-text-on" style="padding-top: 10px; padding-left: 10px; padding-right: 10px; background-color: white; border-left: 5px solid silver;">
 							<div onclick="ShowAndHide1('1')" style="cursor: pointer;">
 								<p>
 									Use our free online guide to help you select the best tool for your migration project.
@@ -295,7 +363,7 @@ function ShowAndHide3() {
 							</div>
 						</td>
 						<td width="2px"></td>
-						<td valign="top" id="mig-flow-2-text" style="padding-top: 10px; padding-left: 10px; padding-right: 10px;">
+						<td valign="top" id="mig-flow-2-text" class="mig-flow-text-off" style="padding-top: 10px; padding-left: 10px; padding-right: 10px;">
 							<div onclick="ShowAndHide2('2')" style="cursor: pointer;">
 								<p>
 									Provision your new Autonomous Database instance.<br><br>Prepare your source database
@@ -303,7 +371,7 @@ function ShowAndHide3() {
 							</div>
 						</td>
 						<td width="2px"></td>
-						<td valign="top" id="mig-flow-3-text" style="padding-top: 10px; padding-left: 10px; padding-right: 10px;">
+						<td valign="top" id="mig-flow-3-text" class="mig-flow-text-off" style="padding-top: 10px; padding-left: 10px; padding-right: 10px;">
 							<div onclick="ShowAndHide3('3')" style="cursor: pointer;">
 								<p>
 									Using the selected migration tool, run a test migration process.
@@ -311,7 +379,7 @@ function ShowAndHide3() {
 							</div>
 						</td>
 						<td width="2px"></td>
-						<td valign="top" id="mig-flow-4-text" style="padding-top: 10px; padding-left: 10px; padding-right: 10px;">
+						<td valign="top" id="mig-flow-4-text" class="mig-flow-text-off" style="padding-top: 10px; padding-left: 10px; padding-right: 10px;">
 							<div onclick="ShowAndHide3('3')" style="cursor: pointer;">
 								<p>
 									Validate the migration process to confirm your migration process completed successfully.
@@ -319,7 +387,7 @@ function ShowAndHide3() {
 							</div>
 						</td>
 						<td width="2px"></td>
-						<td valign="top" id="mig-flow-5-text" style="padding-top: 10px; padding-left: 10px; padding-right: 10px; border-right: 5px solid silver;">
+						<td valign="top" id="mig-flow-5-text" class="mig-flow-text-off" style="padding-top: 10px; padding-left: 10px; padding-right: 10px; border-right: 5px solid silver;">
 							<div onclick="ShowAndHide3('3')" style="cursor: pointer;">
 								<p>
 									Perform the production migration process to Autonomous Database.
@@ -332,14 +400,14 @@ function ShowAndHide3() {
 							<br>
 							<br>
 							<div id="mig-flow-1" >
-								<h2 class="rw-ptitle">STEP 1: Oracle Database Migration Methods Advisor</h2>
+								<h2 class="rw-ptitle">Oracle Database Migration Methods Advisor</h2>
 								<p>
 									Discover the best way migrate your on-premises Oracle Database to Oracle Cloud.
 								</p>
 								<table width="100%">
 									<tr>
 										<td style=" padding: 20px;" valign="top">
-											<img src="https:://KeithLaker.github.io/ADB/migration/Images/db-migration-advisor.png" width="500" style="width: 500px; max-width: 500px; border: 3px solid silver; box-shadow: 10px 10px 20px darkgrey; border-radius: 15px;">
+											<img src="https://KeithLaker.github.io/ADB/migration/Images/db-migration-advisor.png" width="500" style="width: 500px; max-width: 500px; border: 3px solid silver; box-shadow: 10px 10px 20px darkgrey; border-radius: 15px;">
 										</td>
 										<td valign="top">
 											<br>
@@ -353,7 +421,7 @@ function ShowAndHide3() {
 								</table>
 							</div>
 							<div id="mig-flow-2" style="display: none;">
-								<h2 class="rw-ptitle">STEP 2: Deploy a new autonomous database</h2>
+								<h2 class="rw-ptitle">PART 1: Deploy a new autonomous database</h2>
 								<p>Autonomous Database is a fully automated service that makes it easy for all organizations to deploy application workloads in Oracle Cloud Infrastructure (OCI). Autonomous Database delivers the highest performance, availability, and security for OLTP, analytics, batch, and Internet of Things (IoT) workloads.
 									<br>
 									<br>
@@ -364,7 +432,7 @@ function ShowAndHide3() {
 								<br>
 								<br>
 								<br>
-								<h2 class="rw-ptitle">STEP 3: Prepare your source database using the Oracle best practice guides</h2>
+								<h2 class="rw-ptitle">PART 2: Prepare your source database using the Oracle best practice guides</h2>
 								<p>
 									<h3>OCI Database Migration Service Guide</h3>
 									The OCI Database Migration service empowers customers to easily migrate their databases into Oracle Cloud Infrastructure (OCI). This hands-on lab will walk you through all the steps to get started using OCI Database Migration Service (DMS). You will provision a Virtual Cloud Network (VCN), an Oracle Database 19c instance, deploy a GoldenGate marketplace instance, and an Oracle Autonomous Database (ADB) instance to perform a database migration using DMS.
@@ -385,12 +453,14 @@ function ShowAndHide3() {
 								<br>
 							</div>
 							<div id="mig-flow-3" style="display: none;">
-								<h2 class="rw-ptitle">STEP 4: Test,validate, and run your migration</h2>
+								<h2 class="rw-ptitle">Test,validate, and run your migration</h2>
 								<p>
 								</p>
 								<p>
 								</p>
 								<iframe width="360" src="https://www.youtube.com/embed/1qHjaRFlPUo?si=7A9e57u6KQldky-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								<br>
+								<br>
 							</div>
 							<div id="mig-flow-4" style="display: none;">
 							</div>
