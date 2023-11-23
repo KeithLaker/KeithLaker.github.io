@@ -140,6 +140,13 @@ cursor: pointer;
 		</style>
 		
 <SCRIPT>
+
+function forceClick(flowPointer) {
+	document.getElementById("mig-flow-" + flowPointer + "-banner").click();
+    console.log("Click Event triggered")
+}
+
+
 function ShowAndHide(flowPointer) {
 
 for (let i = 1; i < 5; i++) {
@@ -311,6 +318,13 @@ for (let i = 1; i < 5; i++) {
 										</td>
 									</tr>
 								</table>
+								<br>
+								<br>
+								<div onclick="forceClick('2')"  style="cursor: pointer;">
+									<h3>MOVE TO NEXT STEP</h3>
+								</div>
+								<br>
+								<br>
 							</div>
 							<div id="mig-flow-2" style="display: none;">
 								<h2 class="rw-ptitle">PART 1: Before you being, learn more about how to work with Oracle Cloud</h2>
@@ -365,17 +379,42 @@ for (let i = 1; i < 5; i++) {
 								</p>
 								<br>
 								<br>
+								<div onclick="forceClick('3')"  style="cursor: pointer;">
+									<h3>MOVE TO NEXT STEP</h3>
+								</div>
+								<br>
+								<br>
+								
 							</div>
 							<div id="mig-flow-3" style="display: none;">
 								<h2 class="rw-ptitle">Test your migration process</h2>
+								<p>
+									Now you are ready to run a test migration to move your existing database schemas to Autonomous Database. The following videos will help guide you through the migration process:
+								</p>
+								<h3>If you are using Oracle Database Migration Service...</h3>
 								<p>
 									The following video walks you through a typical migration process using Oracle Database Migration Service.
 								</p>
 								<p>
 								</p>
-								<iframe width="360" src="https://www.youtube.com/embed/1qHjaRFlPUo?si=7A9e57u6KQldky-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								<iframe width="560" height="315"  src="https://www.youtube.com/embed/1qHjaRFlPUo?si=7A9e57u6KQldky-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 								<br>
 								<br>
+								<h3>If you are using Oracle Zero Downtime Migration Service...</h3>
+								<p>
+									The following video walks you through a typical migration process using Oracle Zero Downtime Migration Service.
+								</p>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/SXb7KVZjpV8?si=R5rtFynxD2BG9IYx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								<br>
+								<br>
+								<br>
+								<br>
+								<div onclick="forceClick('4')"  style="cursor: pointer;">
+									<h3>MOVE TO NEXT STEP</h3>
+								</div>
+								<br>
+								<br>
+								
 							</div>
 							<div id="mig-flow-4" style="display: none;">
 								<h2 class="rw-ptitle">PART 1: Validate the migrated schemas in your Autonomous Database</h2>
@@ -392,10 +431,18 @@ for (let i = 1; i < 5; i++) {
 								</p>
 								<h4>Schema Comparison Tools</h4>
 								<p>
-									<strong>Oracle Enterprise Manager</strong> - If you are familiar with Enterprise Manager and are licensed for the specific for the change management pack.
+									<strong>Oracle Enterprise Manager</strong> - If you are familiar with Enterprise Manager and are licensed for the specific for the change management pack. For more information, <a href="https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emlcm/using-schema-comparisons.html#GUID-A9DFC88B-9AF0-4AFC-B617-2586DD16DED9" target="_blank">click here</a>.
 								</p>
 								<p>
 									<strong>SQL Developer</strong> Desktop edition contains a free database schema comparison tool.
+								</p>
+								<img src="https://www.thatjeffsmith.com/wp-content/uploads/2012/09/32_diff.png" style="max-width: 550px; width: 400px;" width="400">
+								<img src="https://www.thatjeffsmith.com/wp-content/uploads/2012/09/multi_schema_diff1.png" style="max-width: 550px; width: 400px;" width="400">
+								<p>
+									For more information, read the following blog post: <a href="https://www.thatjeffsmith.com/archive/2012/09/sql-developer-database-diff-compare-objects-from-multiple-schemas/" target="_blank">SQL Developer Database Diff - Compare Objects From Multiple Schemas</a>
+									<br>
+									<br>
+									To download the latest version of SQL Developer Desktop, <a href="https://www.oracle.com/database/sqldeveloper/technologies/download/" target="_blank">click here</a>.
 								</p>
 								<br>
 								<br>
@@ -403,6 +450,12 @@ for (let i = 1; i < 5; i++) {
 								<p>
 									Everything is now ready for you to run the migration process for your production database.
 								</p>
+								<br>
+								<br>
+								<h1>All Done!</h1>
+								<br>
+								<br>
+								<br>
 							</div>
 						</td>
 					</tr>
