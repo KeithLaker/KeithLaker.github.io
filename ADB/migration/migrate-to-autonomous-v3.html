@@ -163,6 +163,9 @@ for (let i = 1; i < 5; i++) {
     document.getElementById("mig-flow-" + flowPointer + "-image").className = "mig-flow-image-on";
     document.getElementById("mig-flow-" + flowPointer + "-text").className = "mig-flow-text-on";
 
+
+var element_to_scroll_to = document.getElementById('migrate-heading');
+element_to_scroll_to.scrollIntoView();
 }
 
 </SCRIPT>
@@ -208,7 +211,7 @@ for (let i = 1; i < 5; i++) {
 <!-- RC24v0 -->
 		<section class="rc24 rc24v0 cpad" data-a11y="true" data-lbl="migrate-with-confidence:">
 			<div class="rc24w1 cwidth">
-				<h2 id="migrate-heading">Migrate to Autonomous Database with confidence in 4 easy steps</h2>
+				<h2 id="migrate-heading" class="migrate-heading">Migrate to Autonomous Database with confidence in 4 easy steps</h2>
 				<br>
 				<br>
 				<table width="100%" cellspacing="0" style="background-color: #F5F5F5; border-colapse: collapse;" valign="top">
