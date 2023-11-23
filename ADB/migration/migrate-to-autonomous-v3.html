@@ -73,6 +73,7 @@ border-top-left-radius: 10px;
 border-top-right-radius: 10px;
 padding: 10px;
 cursor: pointer;
+vertical-aign: top;
 }
 
 .mig-flow-off:hover {
@@ -85,6 +86,7 @@ vertical-align: middle;
 padding-top:15px; 
 padding: 10px;
 cursor: pointer;
+vertical-aign: top;
 }
 
 .mig-flow-text-off{
@@ -93,11 +95,11 @@ vertical-align: middle;
 padding-top:15px; 
 padding: 10px;
 cursor: pointer;
+vertical-aign: top;
 }
 
 
-
-.mig-flow-on{
+.mig-flow-on {
 background-color:darkgrey; 
 vertical-align: middle; 
 padding-top:15px; 
@@ -107,6 +109,7 @@ border-top-right-radius: 20px;
 padding: 10px;
 cursor: pointer;
 box-shadow: 10px 10px 10px darkgrey;
+vertical-aign: top;
 }
 
 .mig-flow-image-on{
@@ -116,6 +119,7 @@ padding-top:15px;
 padding: 10px;
 cursor: pointer;
 box-shadow: 10px 10px 10px darkgrey;
+vertical-aign: top;
 }
 
 .mig-flow-text-on{
@@ -125,6 +129,8 @@ padding-top:15px;
 padding: 10px;
 cursor: pointer;
 box-shadow: 10px 10px 10px darkgrey;
+vertical-aign: top;
+}
 }
 
 
@@ -134,139 +140,22 @@ cursor: pointer;
 		</style>
 		
 <SCRIPT>
-function ShowAndHide1() {
-    var x1 = document.getElementById('mig-flow-1');
-    var x1text = document.getElementById('mig-flow-1-text');
-    var x2 = document.getElementById('mig-flow-2');
-    var x2text = document.getElementById('mig-flow-2-text');
-    var x3 = document.getElementById('mig-flow-3');
-    var x3text = document.getElementById('mig-flow-3-text');
-    var x4 = document.getElementById('mig-flow-4');
-    var x4text = document.getElementById('mig-flow-4-text');
-    var x5 = document.getElementById('mig-flow-5');
-    var x5text = document.getElementById('mig-flow-5-text');
+function ShowAndHide(flowPointer) {
 
-        x1.style.display = 'block';
-		x1text.style.backgroundColor = 'white';
-
-        x2.style.display = 'none';
-		x2text.style.backgroundColor ='#F5F5F5';
-
-        x3.style.display = 'none';
-		x3text.style.backgroundColor = '#F5F5F5';
- 
-        x4.style.display = 'none';
-		x4text.style.backgroundColor = '#F5F5F5';
-
-        x5.style.display = 'none';
-		x5text.style.backgroundColor = '#F5F5F5';
-
-       document.getElementById("mig-flow-1-banner").className = "mig-flow-on";
-       document.getElementById("mig-flow-1-image").className = "mig-flow-image-on";
-       document.getElementById("mig-flow-1-text").className = "mig-flow-text-on";
-
-       document.getElementById("mig-flow-2-banner").className = "mig-flow-off";
-       document.getElementById("mig-flow-2-image").className = "mig-flow-image-off";
-       document.getElementById("mig-flow-2-text").className = "mig-flow-text-off";
-
-
-       document.getElementById("mig-flow-3-banner").className = "mig-flow-off"; 
-       document.getElementById("mig-flow-3-image").className = "mig-flow-image-off";
-       document.getElementById("mig-flow-3-text").className = "mig-flow-text-off";
-
-       document.getElementById("mig-flow-3-banner").className = "mig-flow-off";
-       document.getElementById("mig-flow-4-banner").className = "mig-flow-off";
-       document.getElementById("mig-flow-5-banner").className = "mig-flow-off";
-
+for (let i = 1; i < 5; i++) {
+ 	document.getElementById("mig-flow-" + i).style.display = 'none';
+	document.getElementById("mig-flow-" + i).style.backgroundColor = '#F5F5F5';
+	document.getElementById("mig-flow-" + i + "-banner").className = "mig-flow-off";
+    document.getElementById("mig-flow-" + i + "-image").className = "mig-flow-image-off";
+    document.getElementById("mig-flow-" + i + "-text").className = "mig-flow-text-off";
 }
 
-function ShowAndHide2() {
-    var x1 = document.getElementById('mig-flow-1');
-    var x1text = document.getElementById('mig-flow-1-text');
-    var x2 = document.getElementById('mig-flow-2');
-    var x2text = document.getElementById('mig-flow-2-text');
-    var x3 = document.getElementById('mig-flow-3');
-    var x3text = document.getElementById('mig-flow-3-text');
-    var x4 = document.getElementById('mig-flow-4');
-    var x4text = document.getElementById('mig-flow-4-text');
-    var x5 = document.getElementById('mig-flow-5');
-    var x5text = document.getElementById('mig-flow-5-text');
+ 	document.getElementById("mig-flow-" + flowPointer).style.display = 'block';
+	document.getElementById("mig-flow-" + flowPointer).style.backgroundColor = 'white';
+	document.getElementById("mig-flow-" + flowPointer + "-banner").className = "mig-flow-on";
+    document.getElementById("mig-flow-" + flowPointer + "-image").className = "mig-flow-image-on";
+    document.getElementById("mig-flow-" + flowPointer + "-text").className = "mig-flow-text-on";
 
-        x1.style.display = 'none';
-		x1text.style.backgroundColor = '#F5F5F5';
-
-        x2.style.display = 'block';
-		x2text.style.backgroundColor ='white';
-
-        x3.style.display = 'none';
-		x3text.style.backgroundColor = '#F5F5F5';
- 
-        x4.style.display = 'none';
-		x4text.style.backgroundColor = '#F5F5F5';
-
-        x5.style.display = 'none';
-		x5text.style.backgroundColor = '#F5F5F5';
-
-       document.getElementById("mig-flow-1-banner").className = "mig-flow-off";
-       document.getElementById("mig-flow-1-image").className = "mig-flow-image-off";
-       document.getElementById("mig-flow-1-text").className = "mig-flow-text-off";
-
-       document.getElementById("mig-flow-2-banner").className = "mig-flow-on";
-       document.getElementById("mig-flow-2-image").className = "mig-flow-image-on";
-       document.getElementById("mig-flow-2-text").className = "mig-flow-text-on";
-
-       document.getElementById("mig-flow-3-banner").className = "mig-flow-off"; 
-       document.getElementById("mig-flow-3-image").className = "mig-flow-image-off";
-       document.getElementById("mig-flow-3-text").className = "mig-flow-text-off";
-
-
-       document.getElementById("mig-flow-4-banner").className = "mig-flow-off";
-       document.getElementById("mig-flow-5-banner").className = "mig-flow-off";        
-}
-
-function ShowAndHide3() {
-    var x1 = document.getElementById('mig-flow-1');
-    var x1text = document.getElementById('mig-flow-1-text');
-    var x2 = document.getElementById('mig-flow-2');
-    var x2text = document.getElementById('mig-flow-2-text');
-    var x3 = document.getElementById('mig-flow-3');
-    var x3text = document.getElementById('mig-flow-3-text');
-    var x4 = document.getElementById('mig-flow-4');
-    var x4text = document.getElementById('mig-flow-4-text');
-    var x5 = document.getElementById('mig-flow-5');
-    var x5text = document.getElementById('mig-flow-5-text');
-
-        x1.style.display = 'none';
-		x1text.style.backgroundColor = '#F5F5F5';
-
-        x2.style.display = 'none';
-		x2text.style.backgroundColor = '#F5F5F5';
-
-        x3.style.display = 'block';
-		x3text.style.backgroundColor ='white';
-
- 
-        x4.style.display = 'none';
-		x4text.style.backgroundColor = '#F5F5F5';
-
-        x5.style.display = 'none';
-		x5text.style.backgroundColor = '#F5F5F5';
-
-       document.getElementById("mig-flow-1-banner").className = "mig-flow-off";
-       document.getElementById("mig-flow-1-image").className = "mig-flow-image-off";
-       document.getElementById("mig-flow-1-text").className = "mig-flow-text-off";
-
-       document.getElementById("mig-flow-2-banner").className = "mig-flow-off";
-       document.getElementById("mig-flow-2-image").className = "mig-flow-image-off";
-       document.getElementById("mig-flow-2-text").className = "mig-flow-text-off";
-
-
-       document.getElementById("mig-flow-3-banner").className = "mig-flow-on"; 
-       document.getElementById("mig-flow-3-image").className = "mig-flow-image-on";
-       document.getElementById("mig-flow-3-text").className = "mig-flow-text-on";
-
-       document.getElementById("mig-flow-4-banner").className = "mig-flow-off";
-       document.getElementById("mig-flow-5-banner").className = "mig-flow-off";
 }
 
 </SCRIPT>
@@ -312,38 +201,37 @@ function ShowAndHide3() {
 <!-- RC24v0 -->
 		<section class="rc24 rc24v0 cpad" data-a11y="true" data-lbl="migrate-with-confidence:">
 			<div class="rc24w1 cwidth">
-				<h2 id="migrate-heading">Migrate to Autonomous Database with confidence in 5 easy steps</h2>
-				<table width="100%" cellspacing="0" style="background-color: #F5F5F5; border-colapse: collapse;">
+				<h2 id="migrate-heading">Migrate to Autonomous Database with confidence in 4 easy steps</h2>
+				<br>
+				<br>
+				<table width="100%" cellspacing="0" style="background-color: #F5F5F5; border-colapse: collapse;" valign="top">
 					<tr>
-						<td width="20%"  align="center"  id="mig-flow-1-banner" class="mig-flow-on" style="cursor: pointer;">
-							<div onclick="ShowAndHide1('1')">
+						<td width="20%"  align="center"  id="mig-flow-1-banner" class="mig-flow-on" style="cursor: pointer;" onclick="ShowAndHide('1')">
+							<div onclick="ShowAndHide('1')">
 								<h3>SELECT TOOL</h3>
 							</div>
 						</td>
 						<td width="1%"></td>
-						<td width="20%"  align="center"  id="mig-flow-2-banner" class="mig-flow-off" style="cursor: pointer;">
-							<div onclick="ShowAndHide2('2')">
+						<td width="20%"  align="center"  id="mig-flow-2-banner" class="mig-flow-off" style="cursor: pointer;" onclick="ShowAndHide('2')">
+							<div onclick="ShowAndHide('2')">
 								<h3>PREPARE</h3>
 							</div>
 						</td>
 						<td width="1%"></td>
-						<td width="20%"  align="center" id="mig-flow-3-banner" class="mig-flow-off" style="cursor: pointer;" onclick="ShowAndHide3('3')">
-							<div onclick="ShowAndHide3('3')">
+						<td width="20%"  align="center" id="mig-flow-3-banner" class="mig-flow-off" style="cursor: pointer;" onclick="ShowAndHide('3')">
+							<div onclick="ShowAndHide('3')">
 								<h3>TEST</h3>
 							</div>
 						</td>
 						<td width="1%"></td>
-						<td width="20%"  align="center"  id="mig-flow-4-banner" class="mig-flow-off" style="cursor: pointer;" onclick="ShowAndHide3('4')">
-							<h3>VALIDATE</h3>
+						<td width="20%"  align="center"  id="mig-flow-4-banner" class="mig-flow-off" style="cursor: pointer;" onclick="ShowAndHide('4')">
+							<h3>VALIDATE<br>AND RUN</h3>
 						</td>
 						<td width="1%"></td>
-						<td width="20%"  align="center" id="mig-flow-5-banner" class="mig-flow-off" style="cursor: pointer;" onclick="ShowAndHide3('5')">
-							<h3>RUN</h3>
-						</td>
 					</tr>
 					<tr>
-						<td align="center" id="mig-flow-1-image" class="mig-flow-image-on" style="background-color: white; border-left: 5px solid silver; cursor: pointer;" onclick="ShowAndHide1('1')">
-							<div onclick="ShowAndHide1('1')" style="cursor: pointer;">
+						<td align="center" id="mig-flow-1-image" class="mig-flow-image-on" style="background-color: white; border-left: 5px solid silver; cursor: pointer;" onclick="ShowAndHide('1')">
+							<div onclick="ShowAndHide('1')" style="cursor: pointer;">
 								<br>
 								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuCsx59mVl-PRFVo-mCFTP5p14pAZE657Q98PyTIP-33j7_33gPz1I7BTZknXkpqOhzBs&usqp=CAU" style="max-width: 150px; width: 150px;">
 								<br>
@@ -351,65 +239,52 @@ function ShowAndHide3() {
 							</div>
 						</td>
 						<td width="2px"></td>
-						<td align="center"  id="mig-flow-2-image" class="mig-flow-image-off"  style="background-color: white;" style="cursor: pointer;" onclick="ShowAndHide2('2')">
-							<div onclick="ShowAndHide2('2')" style="cursor: pointer;">
+						<td align="center"  id="mig-flow-2-image" class="mig-flow-image-off"  style="background-color: white;" style="cursor: pointer;" onclick="ShowAndHide('2')">
+							<div onclick="ShowAndHide('2')" style="cursor: pointer;">
 								<img src="https://docs.oracle.com/en-us/iaas/Content/Resources/Images/OCI_icon_Autonomous.png" style="max-width: 150px; width: 150px;">
 							</div>
 						</td>
 						<td width="12px"><br> <br></td>
-						<td align="center"  id="mig-flow-3-image" class="mig-flow-image-off" style="background-color: white; cursor: pointer;" onclick="ShowAndHide3('3')">
-							<img src="https://cdn-icons-png.flaticon.com/512/158/158236.png" style="max-width: 150px; width: 150px;">
+						<td align="center"  id="mig-flow-3-image" class="mig-flow-image-off" style="background-color: white; cursor: pointer;" onclick="ShowAndHide('3')">
+							<div onclick="ShowAndHide('3')" style="cursor: pointer;">
+								<img src="https://cdn-icons-png.flaticon.com/512/158/158236.png" style="max-width: 150px; width: 150px;">
+							</div>
 						</td>
 						<td width="2px"></td>
-						<td align="center" style="background-color: white;" style="cursor: pointer;" onclick="ShowAndHide3('3')">
-							<img src="https://cdn-icons-png.flaticon.com/512/1541/1541444.png" style="max-width: 150px; width: 150px;">
-						</td>
-						<td width="2px"></td>
-						<td align="center" style="background-color: white; border-right: 5px solid silver;" style="cursor: pointer;" onclick="ShowAndHide3('3')">
-							<img src="https://cdn3.iconfinder.com/data/icons/computer-science-1/100/Computer_Icon_Pack-22-512.png" style="max-width: 150px; width: 150px;">
+						<td align="center" id="mig-flow-4-image" style="background-color: white;" style="cursor: pointer;" onclick="ShowAndHide('4')">
+							<div onclick="ShowAndHide('4')" style="cursor: pointer;">
+								<img src="https://cdn-icons-png.flaticon.com/512/1541/1541444.png" style="max-width: 150px; width: 150px;">
+							</div>
 						</td>
 					</tr>
 					<tr>
-						<td valign="top" id="mig-flow-1-text" class="mig-flow-text-on" style="padding-top: 10px; padding-left: 10px; padding-right: 10px; background-color: white; border-left: 5px solid silver;">
-							<div onclick="ShowAndHide1('1')" style="cursor: pointer;">
-								<p>
-									Use our free online guide to help you select the best tool for your migration project.
-									<br>
-								</p>
-							</div>
+						<td valign="top" id="mig-flow-1-text" class="mig-flow-text-on" style="vertical-align: top; padding-left: 10px; padding-right: 10px; border-left: 5px solid silver;">
+							<p onclick="ShowAndHide('1')" style="cursor: pointer;">
+								Use our free online guide to help you select the best tool for your migration project.
+							</p>
 						</td>
 						<td width="2px"></td>
-						<td valign="top" id="mig-flow-2-text" class="mig-flow-text-off" style="padding-top: 10px; padding-left: 10px; padding-right: 10px;">
-							<div onclick="ShowAndHide2('2')" style="cursor: pointer;">
-								<p>
-									Provision your new Autonomous Database instance.<br><br>Prepare your source database
-								</p>
-							</div>
+						<td valign="top" id="mig-flow-2-text" class="mig-flow-text-off" style="vertical-align: top; padding-left: 10px; padding-right: 10px;">
+							<p onclick="ShowAndHide('2')" style="cursor: pointer;">
+								Provision your new Autonomous Database instance.<br><br>Prepare your source database
+							</p>
 						</td>
 						<td width="2px"></td>
-						<td valign="top" id="mig-flow-3-text" class="mig-flow-text-off" style="padding-top: 10px; padding-left: 10px; padding-right: 10px;">
-							<div onclick="ShowAndHide3('3')" style="cursor: pointer;">
-								<p>
-									Using the selected migration tool, run a test migration process.
-								</p>
-							</div>
+						<td valign="top" id="mig-flow-3-text" class="mig-flow-text-off" style="vertical-align: top; padding-left: 10px; padding-right: 10px;">
+							<p onclick="ShowAndHide('3')" style="cursor: pointer;">
+								Using the selected migration tool, run a test migration process.
+							</p>
 						</td>
 						<td width="2px"></td>
-						<td valign="top" id="mig-flow-4-text" class="mig-flow-text-off" style="padding-top: 10px; padding-left: 10px; padding-right: 10px;">
-							<div onclick="ShowAndHide3('3')" style="cursor: pointer;">
-								<p>
-									Validate the migration process to confirm your migration process completed successfully.
-								</p>
-							</div>
+						<td valign="top" id="mig-flow-4-text" class="mig-flow-text-off" style="vertical-align: top; padding-left: 10px; padding-right: 10px;">
+							<p onclick="ShowAndHide('4')" style="cursor: pointer;">
+								Validate the migration process to confirm your migration process completed successfully.
+								<br>
+								<br>
+								Run the production migration process to move your database to Oracle Autonomous Database.
+							</p>
 						</td>
 						<td width="2px"></td>
-						<td valign="top" id="mig-flow-5-text" class="mig-flow-text-off" style="padding-top: 10px; padding-left: 10px; padding-right: 10px; border-right: 5px solid silver;">
-							<div onclick="ShowAndHide3('3')" style="cursor: pointer;">
-								<p>
-									Perform the production migration process to Autonomous Database.
-								</p>
-							</div>
-						</td>
 					</tr>
 					<tr>
 						<td colspan="10" style="background-color: white; border-left: 5px solid silver;  border-bottom: 5px solid silver; border-right: 5px solid silver; padding: 20px;">
@@ -431,46 +306,70 @@ function ShowAndHide3() {
 												Use Oracle's free online database migration advisor to help you identify your options to migrate an on-premises Oracle Database to Oracle AAutonomous Database in Oracle Cloud. The advisor tool allows you to select the characteristics of the source database and the requirements for the migration to identify the most suitable migration methods.
 											</p>
 											<p>
-											To launch the free online database migration advisor, <a href="https://apexadb.oracle.com/ords/r/dbexpert/migration-methods/home" target="_blank">click here.</a>
+												To launch the free online database migration advisor, <a href="https://apexadb.oracle.com/ords/r/dbexpert/migration-methods/home" target="_blank">click here.</a>
+											</p>
 										</td>
 									</tr>
 								</table>
 							</div>
 							<div id="mig-flow-2" style="display: none;">
-								<h2 class="rw-ptitle">PART 1: Deploy a new autonomous database</h2>
+								<h2 class="rw-ptitle">PART 1: Before you being, learn more about how to work with Oracle Cloud</h2>
+								<p>
+									Oracle Cloud Infrastructure (OCI) is a set of complementary cloud services that enable you to build and run a range of applications and services in a highly available hosted environment. OCI provides high-performance compute capabilities (as physical hardware instances) and storage capacity in a flexible overlay virtual network that is securely accessible from your on-premises network.
+								</p>
+								<ul style="list-style-type: circle;  list-style-position: outside; padding-left: 20px;">
+									<li style="margin: 5px;">Learn About Oracle Cloud basics</li>
+									<li style="margin: 5px;">Get to know the OCI Console</li>
+									<li style="margin: 5px;">Find adminstrator and developer tools and resources</li>
+								</ul>
+								<p>
+									To learn more about OCI, <a href="https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/baremetalintro.htm" target="_blank">click here.</a>
+								</p>
+								<br>
+								<br>
+								<h2 class="rw-ptitle">PART 2: Deploy your new autonomous database</h2>
 								<p>Autonomous Database is a fully automated service that makes it easy for all organizations to deploy application workloads in Oracle Cloud Infrastructure (OCI). Autonomous Database delivers the highest performance, availability, and security for OLTP, analytics, batch, and Internet of Things (IoT) workloads.
 									<br>
 									<br>
 									With Oracle Autonomous Database, it takes just a few clicks and about two minutes to create a complete data management platform of any size that supports any type of workload. Use your new database for departmental reporting, enterprise analytics or sophisticated transaction processing. Or anything in between! It couldn't be easier.
 								</p>
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/5BUXoBewZbQ?si=jlEI2n6g6qLIjH0G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								<table width="100%">
+									<tr>
+										<td align="center" width="100%">
+											<iframe width="560" height="315" src="https://www.youtube.com/embed/5BUXoBewZbQ?si=jlEI2n6g6qLIjH0G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+										</td>
+									</tr>
+								</table>
 								<br>
 								<br>
 								<br>
 								<br>
-								<h2 class="rw-ptitle">PART 2: Prepare your source database using the Oracle best practice guides</h2>
+								<h2 class="rw-ptitle">PART 3: Prepare your source database using the Oracle best practice guides</h2>
 								<p>
-									<h3>OCI Database Migration Service Guide</h3>
+									The Oracle Database Migration Methods Advisor will have recommended one of the following services to manage your migration to Autonomous Database. Please read the appropriare service guide to help you correctly configure your source database for the migration process:
+								</p>
+								<h3>OCI Database Migration Service Guide</h3>
+								<p style="margin-left: 30px;">
 									The OCI Database Migration service empowers customers to easily migrate their databases into Oracle Cloud Infrastructure (OCI). This hands-on lab will walk you through all the steps to get started using OCI Database Migration Service (DMS). You will provision a Virtual Cloud Network (VCN), an Oracle Database 19c instance, deploy a GoldenGate marketplace instance, and an Oracle Autonomous Database (ADB) instance to perform a database migration using DMS.
 									<br>
 									<br>
-									OCI Database Migration Service End-To-End Online Migration Tutorial, <a href="https://www.oracle.com/a/ocom/docs/oci-database-migration-service-end-to-end-online-migration-tutorial.pdf" target="_blank">click here.</a>
+									<strong>OCI Database Migration Service End-To-End Online Migration Guide</strong>, <a href="https://www.oracle.com/a/ocom/docs/oci-database-migration-service-end-to-end-online-migration-tutorial.pdf" target="_blank">click here.</a>
 								</p>
 								<br>
-								<br>
-								<p>
-									<h3>Oracle Zero Downtime Migration Service Guide</h3>
+								<h3>Oracle Zero Downtime Migration Service Guide</h3>
+								<p style="margin-left: 30px;">
 									Oracle Zero Downtime Migration (ZDM) is a simple, automated solution for moving Oracle Databases into Oracle Cloud Infrastructure (OCI). Oracle Zero Downtime Migration supports direct and seamless migration of Oracle Databases to any Oracle-owned infrastructure, including Exadata Database Machine on-premises, Exadata Cloud at Customer, and Oracle Cloud Infrastructure.
 									<br>
 									<br>
-									Oracle Zero Downtime Migration: Step-by-Step Guide - Logical Online Migration from On-Premises to Oracle Autonomous Database, <a href="https://www.oracle.com/a/ocom/docs/oci-database-migration-service-end-to-end-online-migration-tutorial.pdf" target="_blank">click here.</a>
+									<strong>Oracle Zero Downtime Migration: Step-by-Step Guide - Logical Online Migration from On-Premises to Oracle Autonomous Database</strong>, <a href="https://www.oracle.com/a/ocom/docs/oci-database-migration-service-end-to-end-online-migration-tutorial.pdf" target="_blank">click here.</a>
 								</p>
 								<br>
 								<br>
 							</div>
 							<div id="mig-flow-3" style="display: none;">
-								<h2 class="rw-ptitle">Test,validate, and run your migration</h2>
+								<h2 class="rw-ptitle">Test your migration process</h2>
 								<p>
+									The following video walks you through a typical migration process using Oracle Database Migration Service.
 								</p>
 								<p>
 								</p>
@@ -479,12 +378,44 @@ function ShowAndHide3() {
 								<br>
 							</div>
 							<div id="mig-flow-4" style="display: none;">
-							</div>
-							<div id="mig-flow-5" style="display: none;">
+								<h2 class="rw-ptitle">PART 1: Validate the migrated schemas in your Autonomous Database</h2>
+								<p>
+									After running a test migration, the next step is to do a schema comparison. This will help you identifiy differences in database object definitions between your source database your newly populated Autonomous.
+									<br>
+									<br>
+									Various tools are available to help you compare your tow databases and identify differences in any attribute values between objects of any type. You can run the comparison process times and store the results as versions of a comparison.
+									<br>
+									<br>
+									Comparisons show differences between definitions in the original baseline for your application and those in your current database. After creating a new comparison version, you will be to identifiy the differences between the original definitions in your source database and those same definitions in your new Autonomous Database.
+									<br>
+									<br>
+								</p>
+								<h4>Schema Comparison Tools</h4>
+								<p>
+									<strong>Oracle Enterprise Manager</strong> - If you are familiar with Enterprise Manager and are licensed for the specific for the change management pack.
+								</p>
+								<p>
+									<strong>SQL Developer</strong> Desktop edition contains a free database schema comparison tool.
+								</p>
+								<br>
+								<br>
+								<h2 class="rw-ptitle">PART 2: Run your production migration</h2>
+								<p>
+									Everything is now ready for you to run the migration process for your production database.
+								</p>
 							</div>
 						</td>
 					</tr>
 				</table>
+				<br>
+				<br>
+				<br>
+				<h2 id="migrate-heading">Next Steps....</h2>
+				<p>Here are some additional Oracle Cloud services for you to deploying alongside your new Autonomous Database....
+				<p>Oracle Enterprise Manager</p>
+				<p>Oracle Operational Insights</p>
+				<p>Oracle Database Management Service</p>
+				<p>Oracle Data Safe</p>
 			</div>
 		</section>
 		
