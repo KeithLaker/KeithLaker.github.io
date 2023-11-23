@@ -215,7 +215,7 @@ for (let i = 1; i < 5; i++) {
 					<tr>
 						<td width="20%"  align="center"  id="mig-flow-1-banner" class="mig-flow-on" style="cursor: pointer;" onclick="ShowAndHide('1')">
 							<div onclick="ShowAndHide('1')">
-								<h3>SELECT TOOL</h3>
+								<h3>PLAN</h3>
 							</div>
 						</td>
 						<td width="1%"></td>
@@ -227,12 +227,12 @@ for (let i = 1; i < 5; i++) {
 						<td width="1%"></td>
 						<td width="20%"  align="center" id="mig-flow-3-banner" class="mig-flow-off" style="cursor: pointer;" onclick="ShowAndHide('3')">
 							<div onclick="ShowAndHide('3')">
-								<h3>TEST</h3>
+								<h3>TEST<br>AND VALIDATE</h3>
 							</div>
 						</td>
 						<td width="1%"></td>
 						<td width="20%"  align="center"  id="mig-flow-4-banner" class="mig-flow-off" style="cursor: pointer;" onclick="ShowAndHide('4')">
-							<h3>VALIDATE<br>AND RUN</h3>
+							<h3>EXECUTE</h3>
 						</td>
 						<td width="1%"></td>
 					</tr>
@@ -273,22 +273,24 @@ for (let i = 1; i < 5; i++) {
 						<td width="2px"></td>
 						<td valign="top" id="mig-flow-2-text" class="mig-flow-text-off" style="vertical-align: top; padding-left: 10px; padding-right: 10px;">
 							<p onclick="ShowAndHide('2')" style="cursor: pointer;">
-								Provision your new Autonomous Database instance.<br><br>Prepare your source database
+								Provision your new Autonomous Database instance.<br><br>Prepare your source database.
 							</p>
 						</td>
 						<td width="2px"></td>
 						<td valign="top" id="mig-flow-3-text" class="mig-flow-text-off" style="vertical-align: top; padding-left: 10px; padding-right: 10px;">
 							<p onclick="ShowAndHide('3')" style="cursor: pointer;">
-								Using the selected migration tool, run a test migration process.
+								Run a test migration using the selected migration tool.
+								<br>
+								<br>
+								Validate the migration process to confirm your migration process completed successfully.
+								<br>
+								<br>
 							</p>
 						</td>
 						<td width="2px"></td>
 						<td valign="top" id="mig-flow-4-text" class="mig-flow-text-off" style="vertical-align: top; padding-left: 10px; padding-right: 10px;">
 							<p onclick="ShowAndHide('4')" style="cursor: pointer;">
-								Validate the migration process to confirm your migration process completed successfully.
-								<br>
-								<br>
-								Run the production migration process to move your database to Oracle Autonomous Database.
+								Run the production migration process to move your existing database to Oracle Autonomous Database.
 							</p>
 						</td>
 						<td width="2px"></td>
@@ -389,10 +391,9 @@ for (let i = 1; i < 5; i++) {
 								<table width="100%">
 									<tr>
 										<td align="left" style="padding-left: 20px;" width="50%">
-										<div onclick="forceClick('1')"  style="cursor: pointer;">
+											<div onclick="forceClick('1')"  style="cursor: pointer;">
 												<h3>GO TO PREVIOUS STEP</h3>
 											</div>
-										</td>
 										</td>
 										<td align="right" style="padding-right: 20px;" width="50%">
 											<div onclick="forceClick('3')"  style="cursor: pointer;">
@@ -405,7 +406,7 @@ for (let i = 1; i < 5; i++) {
 								<br>
 							</div>
 							<div id="mig-flow-3" style="display: none;">
-								<h2 class="rw-ptitle">Test your migration process</h2>
+								<h2 class="rw-ptitle">PART 1: Test your migration process</h2>
 								<p>
 									Now you are ready to run a test migration to move your existing database schemas to Autonomous Database. The following videos will help guide you through the migration process:
 								</p>
@@ -425,28 +426,7 @@ for (let i = 1; i < 5; i++) {
 								<iframe width="560" height="315" src="https://www.youtube.com/embed/SXb7KVZjpV8?si=R5rtFynxD2BG9IYx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 								<br>
 								<br>
-								<br>
-								<br>
-								<table width="100%">
-									<tr>
-										<td align="left" style="padding-left: 20px;" width="50%">
-										<div onclick="forceClick('2')"  style="cursor: pointer;">
-												<h3>GO TO PREVIOUS STEP</h3>
-											</div>
-										</td>
-										</td>
-										<td align="right" style="padding-right: 20px;" width="50%">
-											<div onclick="forceClick('4')"  style="cursor: pointer;">
-												<h3>GO TO NEXT STEP</h3>
-											</div>
-										</td>
-									</tr>
-								</table>
-								<br>
-								<br>
-							</div>
-							<div id="mig-flow-4" style="display: none;">
-								<h2 class="rw-ptitle">PART 1: Validate the migrated schemas in your Autonomous Database</h2>
+								<h2 class="rw-ptitle">PART 2: Validate the migrated schemas in your Autonomous Database</h2>
 								<p>
 									After running a test migration, the next step is to do a schema comparison. This will help you identifiy differences in database object definitions between your source database your newly populated Autonomous.
 									<br>
@@ -475,43 +455,62 @@ for (let i = 1; i < 5; i++) {
 								</p>
 								<br>
 								<br>
-								<h2 class="rw-ptitle">PART 2: Run your production migration</h2>
-								<p>
-									Everything is now ready for you to run the migration process for your production database.
-								</p>
+								<table width="100%">
+									<tr>
+										<td align="left" style="padding-left: 20px;" width="50%">
+											<div onclick="forceClick('2')"  style="cursor: pointer;">
+												<h3>GO TO PREVIOUS STEP</h3>
+											</div>
+										</td>
+										<td align="right" style="padding-right: 20px;" width="50%">
+											<div onclick="forceClick('4')"  style="cursor: pointer;">
+												<h3>GO TO NEXT STEP</h3>
+											</div>
+										</td>
+									</tr>
+								</table>
+								<br>
+								<br>
+							</div>
+							<div id="mig-flow-4" style="display: none;">
 								<br>
 								<br>
 								<h1>All Done!</h1>
 								<br>
 								<br>
+								<h2 class="rw-ptitle">Run your production migration</h2>
+								<p>
+									Everything is now ready for you to run the migration process for your production database.
+								</p>
+								<br>
+								<br>
 								<table width="100%">
 									<tr>
 										<td align="left" style="padding-left: 20px;" width="50%">
-										<div onclick="forceClick('3')"  style="cursor: pointer;">
+											<div onclick="forceClick('3')"  style="cursor: pointer;">
 												<h3>GO TO PREVIOUS STEP</h3>
 											</div>
 										</td>
-										</td>
-										<td align="right" style="padding-right: 20px;" width="50%">
-										</td>
-									</tr>
-								</table>
-								
-								<br>
-								<br>
-							</div>
+						</td>
+						<td align="right" style="padding-right: 20px;" width="50%">
 						</td>
 					</tr>
 				</table>
 				<br>
 				<br>
-				<br>
-				<h2 id="migrate-heading">Other Services To Help You Get More From Your Autonomous Database....</h2>
-				<p>Here are some additional Oracle Cloud services for you to deploying alongside your new Autonomous Database....
-				<p>Oracle Enterprise Manager</p>
-				<p>Oracle Operational Insights</p>
-				<p>Oracle Database Management Service</p>
-				<p>Oracle Data Safe</p>
+			</div>
+			</td>
+			</tr>
+			</table>
+			<br>
+			<br>
+			<br>
+			<h2 id="migrate-heading">Other Services To Help You Get More From Your Autonomous Database....</h2>
+			<p>Here are some additional Oracle Cloud services for you to deploying alongside your new Autonomous Database....
+			<p>Oracle Enterprise Manager</p>
+			<p>Oracle Operational Insights</p>
+			<p>Oracle Database Management Service</p>
+			<p>Oracle Data Safe</p>
 			</div>
 		</section>
 		
