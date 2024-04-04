@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<!-- saved from url=(0093)https://objectstorage.us-phoenix-1.oraclecloud.com/n/dwcsdev/b/adb_public_metrics/o/am11.html -->
+<html lang="en-US" class="js history hashchange cssgradients rgba no-touch boxshadow ishttps retina w11ready"><!-- start : oOTNPageDetail_C/Technology/Redwood2 -->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<style type="text/css">.truste_cursor_pointer {cursor: pointer;}.truste_border_none {border: none;}</style>
+
+	<!-- oOTNPageDetail_C/Technology/Head -->
+		<title>Autonomous Database Regional Availability Metrics</title>
+		<meta name="Title" content="Autonomous Database Regional Availability Metrics">
+		<meta name="Description" content="Autonomous Database Regional Availability Metrics">
+		<meta name="Keywords" content="regional availability metrics, oci, cloud, autonomous database">
+
+	<!-- Container/Display Start -->
+
+	<!-- _Raw-Text -->
+	<!-- css / js files start -->
+	<script src="./am14-regions_files/utag.js" type="text/javascript" async=""></script><script>
+		!function () {
+			var d = document.documentElement; d.className = d.className.replace(/no-js/, 'js');
+			if (document.location.href.indexOf('betamode=') > -1) document.write('<script src="https://www.oracle.com/asset/web/js/ocom-betamode.js"><\/script>');
+		}();
+	</script>
+		<link data-wscss="" href="./am14-regions_files/ocom-v1-base.css" rel="stylesheet">
+		<link data-wscss="" href="./am14-regions_files/ocom-v1-styles.css" rel="stylesheet" as="style" onload="this.rel=&#39;stylesheet&#39;" onerror="this.rel=&#39;stylesheet&#39;">
+		<noscript>
+			<link href="https://www.oracle.com/asset/web/css/ocom-v1-styles.css" rel="stylesheet">
+		</noscript>
+	<script src="./am14-regions_files/ocom-v1-base.js"></script>
+		<link data-wsjs="" data-reqjq="" href="./am14-regions_files/ocom-v1-base.js" rel="preload" as="script">
+	<script src="./am14-regions_files/ocom-v1-lib.js"></script>
+		<link data-wsjs="" data-reqjq="" href="./am14-regions_files/ocom-v1-lib.js" rel="preload" as="script">
+	<!-- @todo - removed async  and removed duplicate jqury lib -->
+	<script data-wsjs="" src="./am14-regions_files/jquery-min.js" async="" onload="$(&#39;head link[data-reqjq][rel=preload]&#39;).each(function(){var a = document.createElement(&#39;script&#39;);a.async=false;a.src=$(this).attr(&#39;href&#39;);this.parentNode.insertBefore(a, this);});$(function(){$(&#39;script[data-reqjq][data-src]&#39;).each(function(){this.async=true;this.src=$(this).data(&#39;src&#39;);});});"></script>
+	<!-- end css / js files start -->
+	<!-- / _Raw-Text -->
+
+	<!-- Container/Display end -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="siteid" content="us">
+		<meta name="countryid" content="US">
+		<meta name="robots" content="index, follow">
+		<meta name="country" content="United States">
+		<meta name="Language" content="en">
+		<meta name="Updated Date" content="2022-03-14T16:23:28Z">
+
+	<script type="text/javascript">
+		var pageData = pageData || {};
+		//page info
+		pageData.pageInfo = pageData.pageInfo || {};
+		pageData.pageInfo.language = "en";
+		pageData.pageInfo.country = "United States";
+		pageData.pageInfo.pageTitle = "Autonomous Database Regional Availability Metrics";
+		pageData.pageInfo.description = "Autonomous Database Regional Availability Metrics";
+		pageData.pageInfo.keywords = "regional availability metrics, oci, cloud, autonomous database";
+		pageData.pageInfo.siteId = "us";
+		pageData.pageInfo.countryId = "US";
+		pageData.pageInfo.updatedDate = "2022-03-14T16:23:28Z";
+	</script>
+	<!-- start : ocom/common/global/components/seo-taxonomy-meta-data-->
+
+	<script type="text/javascript">
+		var pageData = pageData || {};
+		//taxonmy
+		pageData.taxonomy = pageData.taxonomy || {};
+		pageData.taxonomy.productServices = [];
+		pageData.taxonomy.industry = [];
+		pageData.taxonomy.region = [];
+		pageData.taxonomy.contentType = [];
+		pageData.taxonomy.buyersJourney = [];
+		pageData.taxonomy.revenue = [];
+		pageData.taxonomy.title = [];
+		pageData.taxonomy.audience = [];
+		pageData.taxonomy.persona = [];
+	</script>
+	<!-- end : ocom/common/global/components/seo-taxonomy-meta-data-->
+	<!-- start : ocom/common/global/components/social-media-meta-tags -->
+	<!-- end : ocom/common/global/components/social-media-meta-tags -->
+	<!-- start : ocom/common/global/components/seo-hreflang-meta-tags -->
+		<link rel="canonical" href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/adb-availability-metrics.html">
+		<link rel="alternate" hreflang="en-US" href="https://www.oracle.com/database/technologies/datawarehouse-bigdata/adb-availability-metrics.html">
+	<!-- end : ocom/common/global/components/seo-hreflang-meta-tags -->
+
+	<!-- Container/Display Start -->
+
+	<!-- _Raw-Text -->
+	<!-- www-us HeadAdminContainer -->
+		<link rel="icon" href="https://www.oracle.com/asset/web/favicons/favicon-32.png" sizes="32x32">
+		<link rel="icon" href="https://www.oracle.com/asset/web/favicons/favicon-128.png" sizes="128x128">
+		<link rel="icon" href="https://www.oracle.com/asset/web/favicons/favicon-192.png" sizes="192x192">
+		<link rel="apple-touch-icon" href="https://www.oracle.com/asset/web/favicons/favicon-120.png" sizes="120x120">
+		<link rel="apple-touch-icon" href="https://www.oracle.com/asset/web/favicons/favicon-152.png" sizes="152x152">
+		<link rel="apple-touch-icon" href="https://www.oracle.com/asset/web/favicons/favicon-180.png" sizes="180x180">
+		<meta name="msapplication-TileColor" content="#fcfbfa">
+		<meta name="msapplication-square70x70logo" content="favicon-128.png">
+		<meta name="msapplication-square150x150logo" content="favicon-270.png">
+		<meta name="msapplication-TileImage" content="favicon-270.png">
+		<meta name="msapplication-config" content="none">
+		<meta name="referrer" content="no-referrer-when-downgrade">
+
+
+	<!-- / _Raw-Text -->
+
+	<!-- Container/Display end -->
+
+<script>
+
+        const MANIFEST_URL = 'https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/dwcsprod/adb_public_metrics/regional_metrics_manifest_file.json';
+		var isYesterday = new Date();
+		isYesterday.setDate(isYesterday.getDate() - 1);
+		isYesterday.setHours(0,0,0,0)
+		console.log(isYesterday.toUTCString());
+		var DAQTOTAL = 0;
+			
+		async function loadData(requestURL) {
+			let request = new Request(requestURL);
+			let response = await fetch(request, {
+				referrerPolicy: 'no-referrer',
+				cache: "no-store", 
+				headers: {
+					'Content-Type': 'application/octet-stream',
+				}});
+			//console.log(...response.headers);
+			var ctype = response.headers.get('Content-Type')
+			if(ctype.indexOf('text/html') != -1) {
+				// invalid response
+				return {data: []};
+			}
+			else { 
+				return await response.json();
+			}
+		}
+
+		function setCounter(output, rawOutput, dqDays) {
+			var myQC =  document.querySelector("span.setCounter");
+			myQC.innerHTML = output + '<span class="tooltipbox"><span class="tooltipnumber">' + rawOutput + '<br><span class="tooltiptext">queries per hour</span></span></span>';
+
+			var myDays2 =  document.querySelector("span.showDays2");
+			myDays2.innerHTML = 'queries per hour<br>globally across all data centers, averaged over the last ' + dqDays + ' days';
+			populateqTime();
+
+		}
+
+		function convertToQueryMetrics (queryValue) {
+			  // format quey metric for Billions
+			    return Math.abs(Number(queryValue)) >= 1.0e+9
+			    ? 'Over '+ ((Math.abs(Number(queryValue)) / 1.0e+9).toFixed(1)) + ' Billion'
+			    // format quey metric for Millions 
+			    : Math.abs(Number(queryValue)) >= 1.0e+6
+			    ? 'Over '+ ((Math.abs(Number(queryValue)) / 1.0e+6).toFixed(1)) + 'M'
+			    // format quey metric  for Thousands
+			    : Math.abs(Number(queryValue)) >= 1.0e+3
+			    ? 'Over '+ ((Math.abs(Number(queryValue)) / 1.0e+3).toFixed(1)) + 'K'
+			    : Math.abs(Number(queryValue));
+		}
+
+
+		function setDAQData(datajson, region_name) {
+		
+			if(!datajson || datajson.data ===0) {
+				return;
+			}
+		
+			var dqDays = 0;
+			for (const key in datajson.data) {
+			
+				if (datajson.data.hasOwnProperty(key))
+				{					
+					DAQTOTAL = Number(datajson.data[key].value) + Number(DAQTOTAL);
+					dqDays ++;
+				}	
+			}
+		
+			DAQTOTAL = DAQTOTAL / dqDays;
+			var nfObject = new Intl.NumberFormat('en-US');
+			//output = nfObject.format(Number(DAQTOTAL/24).toFixed(1));
+			//output = nfObject.format((Math.abs(Number(DAQTOTAL/24)) / 1.0e+9).toFixed(1)) + " Billion";
+			output = convertToQueryMetrics(Number(DAQTOTAL/24));
+			rawOutput = nfObject.format(Number(DAQTOTAL/24).toFixed(2));
+			
+			setCounter(output, rawOutput, dqDays);			
+		}
+
+
+		function processDAQ(daqs) {
+			//console.log(daqs);
+			var regionsCount = daqs[0].data.length;
+			if(regionsCount == 0) {
+				console.log("No DAQ Data Found");
+			}
+			else {
+				let regionObjs = daqs[0].data;
+				for(var j=0; j<regionsCount; j++) {
+					(function(region_name, data_file) {
+						loadData(data_file).then(function(datajson){
+							//console.log(datajson);
+							setDAQData(datajson, region_name);
+						}); //end data load
+					})(regionObjs[j].display_name, regionObjs[j].file_name); 
+				} //end for
+			}
+		}
+
+
+
+
+
+		function makeTable(container) {
+		
+			populateTime();
+
+			//load manifest file
+			loadData(MANIFEST_URL).then(function(mfjson){
+				//console.log(mfjson);
+				const daq = mfjson.filter(met => met.metric_display_name === 'DAQ');
+
+				//process daq data
+				if(daq && daq.length == 1) {
+					processDAQ(daq);
+				}
+
+			}); // end manifest load
+			
+			
+		}
+
+		var waitForJQuery = setInterval(function () {
+			//check for jquery loaded or not because it is loaded async
+			if (typeof $ != 'undefined') {
+				clearInterval(waitForJQuery);
+				makeTable($("#metricsData"));
+			}
+		}, 10);
+
+		window.onload = async function populateParUrlUiSource() {
+			var primUrl = 'http://phoenix297612.dev3sub3phx.databasede3phx.oraclevcn.com:8080/broker/p/OPLkQAghvHBlFxPFwOzSwWOwmYJuxmzuxEpRdbN1KEZ4aRQ3LbTUnfTzbH7qyhej_5qDRVmrKVE/data?view=table&ui_type=regional_availability&color_range=1-98:%23E88F96,98-99.9999:%23F3DF9E,99.9999-100:%2391BF61';
+			var secUrl = 'http://phoenix297612.dev3sub3phx.databasede3phx.oraclevcn.com:8080/broker/p/RuzJELsI2YDbYxI5Czle-Y-n8G_m4wgxAx01lZvV9wLS7hyFc4VXhD3TT023s1Ud_5qDRVmrKVE/data?view=table&ui_type=regional_availability&color_range=1-98:%23E88F96,98-99.9999:%23F3DF9E,99.9999-100:%2391BF61';
+			var parUrlUi = document.getElementById('parUrlUi');
+			try {
+				let request = new Request(primUrl);
+				const response = await fetch(request,
+					{
+						headers: {
+							'Request-Id': 'regional_availability_metrics_page'
+						}
+					});
+				if (!response.ok) {
+					parUrlUi.src = secUrl;
+					console.log("Using standby PAR URL UI link");
+				} else {
+					parUrlUi.src = primUrl;
+				}
+			} catch (error) {
+				parUrlUi.src = secUrl;
+				console.log("Using standby PAR URL UI link");
+			}
+		}
+		
+				
+		function populateTime() {
+			const newTSstamp = document.querySelector('setdate');
+
+			const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+
+			var currentdate = new Date(); 
+			currentdate.setDate(currentdate.getDate() -1);
+
+			var datetime = 'The following data is for informational purposes only and was last collected on ' + ( monthNames[currentdate.getMonth()]) + " " + currentdate.getDate()   + ", " + currentdate.getFullYear() + ".";
+
+			const myTstamp = document.createElement('span');
+			myTstamp.textContent = (datetime); 
+			myTstamp.classList.add('font-show-date');
+			newTSstamp.appendChild(myTstamp);
+		}
+
+
+		function populateqTime() {
+
+			const newTSstamp2 = document.querySelector('qsetdate');
+
+			const qmonthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+
+			var qcurrentdate = new Date(); 
+			qcurrentdate.setDate(qcurrentdate.getDate() -1);
+
+			var qdatetime = ' as of ' + ( qmonthNames[qcurrentdate.getMonth()]) + " " + qcurrentdate.getDate()   + ", " + qcurrentdate.getFullYear() + ".";
+
+			const myTstamp2 = document.createElement('span');
+			myTstamp2.textContent = (qdatetime); 
+			myTstamp2.classList.add('font-show-date');
+			newTSstamp2.appendChild(myTstamp2);
+
+		}
+
+
+
+</script>
+	</head>
+	<body class="f11 f11v6 rwtheme-pebble ready">
+		<style>
+ 
+
+
+.font-am-banner, .showDays2 {
+     font-size: 2.7rem;
+     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+     font-weight: 300;
+     line-height:normal !important;
+     text-decoration: none;
+     letter-spacing: normal;
+}
+
+ .font-show-date {
+     font-size: 2.7rem;
+     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+     font-weight: 300;
+     line-height:normal !important;
+}
+ .font-explain {
+     font-size: 2.7rem;
+     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+     font-weight: 300;
+     margin-left: 50px;
+     margin-right: 150px;
+     margin-bottom: 50px;
+     line-height:normal !important;
+}
+ .font-footnote {
+     font-size: 2.1rem;
+     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+     font-weight: 300;
+     margin-left: 50px;
+     margin-right: 150px;
+     margin-bottom: 50px;
+}
+/* @todo change id based to class bassed */
+ .table-am-style {
+     width: 80%;
+    /* float: left;
+     */
+     padding: 1px;
+     line-height: 21px;
+     text-align: left;
+     vertical-align: bottom !important;
+     overflow-wrap: break-word;
+     border-width: 2px !important;
+     border-style: solid !important;
+     border-color: rgb(224, 224, 224) !important;
+     font-size: 1 rem;
+     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+     font-weight: 300;
+     border-collapse: collapse;
+}
+ .div-banner {
+     margin-left: 50px;
+     margin-right: 50px;
+}
+ .div-table {
+     padding: 40px 50px;
+     display:inline-block;
+     width:100%;
+}
+ .dc_column_group {
+    /* background-color: #F0F3F4;
+    */
+     border: 2px solid #e0e0e0 !important;
+     border-color: rgb(224, 224, 224) !important;
+     font-size: 24px !important;
+     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+     font-weight: 400;
+    /* width: 220px;
+     */
+     padding-left: 20px;
+}
+ .dc_column {
+     background-color: #F0F3F4;
+     border: 2px solid #e0e0e0 !important;
+     border-color: rgb(224, 224, 224) !important;
+     font-size: 22px !important;
+     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+     font-weight: 200;
+    /* width: 220px;
+     */
+     padding-left: 35px;
+}
+ .dc_header {
+     background-color: #ECF0F1;
+     border: 2px solid #e0e0e0 !important;
+     border-color: rgb(224, 224, 224) !important;
+     font-size: 22px !important;
+     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+     font-weight: 400;
+     text-align: center;
+    /* width: 220px;
+     */
+     padding: 5px;
+     line-height: 200%;
+}
+ .am_header {
+     background-color: #ECF0F1;
+     border: 2px solid #e0e0e0 !important;
+     border-color: rgb(224, 224, 224) !important;
+     font-size: 22px !important;
+     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+     font-weight: 400;
+     text-align: center;
+     width: 165px;
+     padding: 3px;
+}
+ .am_column {
+     border-width: 2px !important;
+     border-style: solid !important;
+     border-color: rgb(224, 224, 224) !important;
+     font-size: 22px !important;
+     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+     font-weight: 300;
+     text-align: right;
+    /* width: 80px;
+     */
+    /*padding-right: 15px;
+    */
+     padding: 3px 15px 20px 20px;
+}
+ .heatmap1 {
+     background: rgba(0, 128, 0, 0.3);
+     border-right: 15px solid green;
+}
+
+.setCounter{
+    font-family: "Oracle Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+	margin-bottom: 15px;
+	color: #312D2A;
+	font-size: 2.8em;
+	font-weight:800;
+	line-height: 1;
+	
+}
+
+/*  Attributes for tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+/* Set style attribute for text */
+.tooltip .tooltipbox {
+  visibility: hidden;
+  background-color: slategrey;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  border-radius: 6px;
+  width: auto;
+  box-shadow: 5px 10px 15px #888888;
+  opacity: .95;
+  top: 60%;
+  left: 30%;
+  position: absolute;
+  z-index: 1;
+}
+
+
+/* Set style attribute for text */
+.tooltip .tooltiptext {
+  background-color: slategrey;
+  color: white;
+  text-align: center;
+  text-decoration: none !important;
+  font-size:0.8em;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: normal;     
+}
+
+
+
+.tooltip .tooltipnumber{
+  background-color: slategrey;
+  color: white;
+  text-align: center;
+  text-decoration: none !important;
+  font-size:0.8em;
+  font-family: courier;
+  font-weight: bold;
+  letter-spacing: normal;     
+}
+
+/* Make tooltip visible when over tooltip container */
+.tooltip:hover .tooltipbox {
+  visibility: visible;
+}
+
+.seamless {
+  display: block;
+  border: none; 
+  height: calc(100% + 17px);
+  width: calc(100% + 17px);
+}
+		</style>
+		
+<!-- Added from here -->
+		<section class="cb83 cb83v2 cpad bggrey" data-trackas="cb83" data-ocomid="cb83">
+			<div class="cb83w7 cwidth">
+				<div class="cb83w5">
+					<div class="svgimg" style="background-color: white;">
+					</div>
+				</div>
+				<div class="cb83w3">
+					<h2>Global Database Metrics for Autonomous Database</h2>
+					<p style="line-height:normal !important;">
+						This page shows the regional average availability and the hourly average database queries metrics for Autonomous Database across our global data centers.
+					</p>
+					<br>
+					<br>
+				</div>
+			</div>
+		</section>
+		<div style="background-color: white;">
+			<div style="background-color: white;">
+				<div class="div-banner" style="background-color: white; padding-left: 30px; padding-right: 10px; width: 89%; line-height:normal !important;">
+					<table>
+						<tr>
+							<td>
+								<img style="max-width: 150px;" src="data:image/png;base64,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">
+							</td>
+							<td>
+								<p class="font-am-banner">
+									GLOBAL QUERY METRICS
+								</p>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<table width="90%" height="40px" style="margin-left:50px; margin-right:50px; text-align: center; background-color: white; border: 0px solid #98AFC7; border-radius: 25px; text-align: center; align: center; filter; vertical-align: top;" align="center">
+						<tr>
+							<td height="50px" valign="top" width="100%" style="text-align: center; align: center; vertical-align: middle; text-decoration: none !important;">
+								<p class="tooltip" style="font-family: "Oracle Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif; font-size: 2.7rem; color: slategrey; text-decoration: none !important;">
+									<span class="setCounter" style="text-align: center;">Loading Metrics...</span>
+									<span>
+										<span class="showDays2"></span>
+										<qsetdate></qsetdate>
+									</span>
+								</p>
+								<br>
+								<br>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<br>
+			<div style="margin-left: 50px; margin-right: 50px; background-color: white;">
+				<table width="100%" style=" background-color: white;">
+					<tr>
+						<td width="100%" style="border-top: 2px solid silver;  background-color: white;">
+							<br>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<br>
+			<div style="background-color: white;">
+				<div class="div-banner" style="background-color: white; padding-left: 30px; padding-right: 10px; width: 89%; line-height:normal !important;">
+					<table>
+						<tr>
+							<td>
+								<img style="max-width: 150px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrIY7kNXaL3mrXiqvlPTL0f8OLxz92lYlxQg&usqp=CAU">
+								<td>
+									<p class="font-am-banner">
+										GLOBAL AVAILABILITY METRICS
+									</p>
+								</td>
+						</tr>
+					</table>
+					<p class="font-am-banner">
+						The stated <strong>Service Level Agreement</strong> (SLA) for Oracle Autonomous Database is <strong>> 99.95% for availability</strong>. An even higher level of availability is possible by enabling <strong>Autonomous Data Guard</strong> to create a standby database, for details <strong><a href="https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/autonomous-data-guard-about.html#GUID-045AD017-8120-4BDC-AF58-7430FFE28D2B" target="_blank">click here</a></strong>.
+						<br>
+						<br>
+						For more information about the Oracle Cloud Infrastructure Service Level Agreement <strong><a href="https://www.oracle.com/cloud/sla/" target="_blank">click here</a></strong>.
+						<setdate></setdate>
+						<br>
+						<br>
+						The availability data, which is updated daily, shows a list of average availability percentages across our data centers in each of the regions shown (<em>see the note following the table for more information</em>).
+					</p>
+				</div>
+				<div id="iframeMetricsData" style="width:100%; height: 100%;">
+					<iframe id="parUrlUi" class="seamless" id="seamless" style="display: block; 
+                           overflow: hidden scroll; height:calc(100vh + 1465px); width: 100%" frameborder="0">
+					</iframe>
+					<br>
+					<br>
+					<div class="div-footnote">
+						<p class="font-footnote" style="line-height: normal !important;">
+							<strong>NOTE</strong><br> The data above was collected by observing the availability of a series of Autonomous Databases within each region. These availability numbers cover the whole month including the maintenance windows with no exclusions. It provides a real-world example of the general level of availability that a customer should expect to see for their own Autonomous Databases within a specific region.
+							<br>
+							<br>
+							The data assumes that Autonomous Data Guard is not enabled.
+						</p>
+					</div>
+					<br>
+					<br>
+					<br>
+				</div>
+			</div>
+			<div>
+				<h4 style="font-size:20px; margin-left: 55px;">Get started with Autonomous Database</h4>
+				<table width="100%" cellpadding="20px" cellspacing="20px">
+					<tr>
+						<td width="30%">
+							<div class="col-item-w1 rw-blue-40bg" style="height: 183px; border-radius: 15px 15px 0px 0px; margin-left: 25px; border: 1px solid grey;">
+								<div class="icn-img" style="margin-left: 25px;">
+									<img style="max-width:80px; width:80px; margin-left:25px;" width="80" src="https://www.oracle.com/webfolder/s/assets/ebook/cloud-strategy-transformation/assets/icon-cloud.png">
+									<br>
+									<h5 style="font-size:16px; margin-left: 25px;">Try Oracle Autonomous Database</h5>
+								</div>
+							</div>
+							<div class="col-item-w1 rw-white-40bg" style="height: 183px; margin-left: 25px; border-radius: 0px 0px 15px 15px; margin-left: 25px; border: 1px solid grey;">
+								<p style="font-size:16px; margin-left: 25px; margin-right: 25px; margin-top: 25px;">
+									Oracle Cloud offers a Free Tier with a 30-day free trial and always-free services.
+								</p>
+								<br>
+								<div class="obttns">
+									<div class="obttn2" style="margin-left: 25px;">
+										<a href="/autonomous-database/free-trial/">
+											Try it for free
+										</a>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td width="30%">
+							<div class="col-item-w1 rw-blue-40bg" style="height: 183px; border-radius: 15px 15px 0px 0px; margin-left: 25px; border: 1px solid grey;">
+								<div class="icn-img" style="margin-left: 25px;">
+									<img style="max-width:80px; width:80px; margin-left:25px;" width="80" src="https://docs.oracle.com/cd/E84502_01/learnjde/images/twitter.png">
+									<br>
+									<h5 style="font-size:16px; margin-left: 25px;">Follow us @AutonomousDW</h5>
+								</div>
+							</div>
+							<div class="col-item-w1 rw-white-40bg" style="height: 183px; margin-left: 25px; border-radius: 0px 0px 15px 15px; margin-left: 25px; border: 1px solid grey;">
+								<p style="font-size:16px; margin-left: 25px; margin-right: 25px; margin-top: 25px;">
+									Get the latest Oracle Database news, events, and community resources.
+								</p>
+								<br>
+								<div class="obttns">
+									<div class="obttn2"  style="margin-left: 25px;">
+										<a href="https://twitter.com/AutonomousDW">
+											Follow us
+										</a>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td width="30%">
+							<div class="col-item-w1 rw-blue-40bg" style="height: 183px; border-radius: 15px 15px 0px 0px; margin-left: 25px; border: 1px solid grey;">
+								<div class="icn-img" style="margin-left: 25px;">
+									<img style="max-width:80px; width:80px; margin-left:25px;" width="80" src="https://docs.oracle.com/cd/E97085_01/10313572.png">
+									<br>
+									<h5 style="font-size:16px; margin-left: 25px;">Ask a question</h5>
+								</div>
+							</div>
+							<div class="col-item-w1 rw-white-40bg" style="height: 183px; margin-left: 25px; border-radius: 0px 0px 15px 15px; margin-left: 25px; border: 1px solid grey;">
+								<p style="font-size:16px; margin-left: 25px; margin-right: 25px; margin-top: 25px;">
+									Have a question about Autonomous Database? Join our community of industry-leading experts on Stackoverflow.
+								</p>
+								<div class="obttns">
+									<div class="obttn2"  style="margin-left: 25px;">
+										<a href="https://stackoverflow.com/questions/tagged/oracle-autonomous-db">
+											Get in touch
+										</a>
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<br>
+			<br>
+			<br>
+	
+<!-- Added to here -->
+	</body>
+</html>
