@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js"><!-- start : Framework/Redwood2 -->
+<!-- start : ocom/common/global/components/framework/head -->
+	<head>
+<!-- start : ocom/common/global/components/head -->
+		<title>Autonomous Database | Oracle</title>
+<!-- start : ocom/common/global/components/framework/layoutAssetHeadInfo -->
+<!-- Container/Display Start -->
+<!-- BEGIN: oWidget_C/_Raw-Text/Display -->
+		<link rel="preload" href="https://www.oracle.com/asset/web/fonts/oraclesansvf.woff2" as="font" crossOrigin="anonymous" type="font/woff2" />
+		<link rel="preload" href="https://www.oracle.com/asset/web/fonts/redwoodicons.woff2" as="font" crossorigin="anonymous" type="font/woff2">
+<!-- END: oWidget_C/_Raw-Text/Display -->
+<!-- Container/Display end -->
+<!-- Container/Display Start -->
+<!-- BEGIN: oWidget_C/_Raw-Text/Display -->
+<!-- BEGIN CSS/JS -->
+		<style>
+body{margin:0}
+.f20w1 > section{opacity:0;filter:opacity(0%)}
+.f20w1 > div{opacity:0;filter:opacity(0%)}
+.f20w1 > nav{opacity:0;filter:opacity(0%)}
+		</style>
+<script>
+!function(){
+var d=document.documentElement;d.className=d.className.replace(/no-js/,'js');
+if(document.location.href.indexOf('betamode=') > -1) document.write('<script src="https://www.oracle.com/asset/web/js/ocom-betamode.js"><\/script>');
+}();
+</script>
+		<link data-wscss href="https://www.oracle.com/asset/web/css/redwood-base.css" rel="preload" as="style" onload="this.rel='stylesheet';" onerror="this.rel='stylesheet'">
+		<link data-wscss href="https://www.oracle.com/asset/web/css/redwood-styles.css" rel="preload" as="style" onload="this.rel='stylesheet';" onerror="this.rel='stylesheet'">
+		<link href="https://www.oracle.com/asset/web/css/redwood-base.css" rel="stylesheet">
+		<link href="https://www.oracle.com/asset/web/css/redwood-styles.css" rel="stylesheet">
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/redwood-base.js" rel="preload" as="script">
+		<link data-wsjs data-reqjq href="https://www.oracle.com/asset/web/js/redwood-lib.js" rel="preload" as="script">
+
+<script data-wsjs src="https://www.oracle.com/asset/web/js/jquery-min.js" async onload="$('head link[data-reqjq][rel=preload]').each(function(){var a = document.createElement('script');a.async=false;a.src=$(this).attr('href');this.parentNode.insertBefore(a, this);});$(function(){$('script[data-reqjq][data-src]').each(function(){this.async=true;this.src=$(this).data('src');});});"></script>
+		<style>
+#oReactiveChatContainer1 { display:none;}
+		</style>
+<!--Tealium embed code Start -->
+<script src="https://tms.oracle.com/main/prod/utag.sync.js"></script>
+<!-- Loading script asynchronously -->
+<script type="text/javascript">
+(function(a,b,c,d){
+if(location.href.indexOf("tealium=dev") == -1) {
+a='https://tms.oracle.com/main/prod/utag.js';
+} else {
+a='https://tms.oracle.com/main/dev/utag.js';
+}
+b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+})();
+</script>
+	</head><!-- end : ocom/common/global/components/framework/head -->
+	<body class="f20 f20v0 rwtheme-oci">
+		<div class="f20w1">
+			<style>
+			h3 {font-family:sans-serif;font-size:16px;position:relative;margin-left:0px; font-weight: bold;;white-space:nowrap;text-decoration:none}
+#u30{opacity:1 !important;filter:opacity(100%) !important;position:sticky;top:0}
+.u30v0{background:#3a3632;height:50px;overflow:hidden;border-top:5px solid #3a3632;border-bottom:5px solid #3a3632}
+#u30nav,#u30tools{visibility:hidden}
+.u30brand{height:50px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;max-width:1344px;padding:0 48px;margin:0 auto}
+.u30brandw1{display:flex;flex-direction:row;color:#fff;text-decoration:none;align-items:center}
+#u30btxt{font-family:sans-serif;font-size:14px;position:relative;margin-left:12px;padding-left:16px;white-space:nowrap;color:#fff;text-decoration:none}
+#u30btxt:before{content:'';position:absolute;left:0;width:1px;opacity:0.3;height:44px;top:60%;margin-top:-22px;background:#FBF9F8}
+#u30brandtxt{display:block}
+@media (max-width:1024px){.u30brand{padding:0 24px}}
+@media (max-width:400px){#u30btxt{display:none}}
+#u30skip2,#u30skip2content{transform:translateY(-100%);position:fixed}
+.rtl #u30{direction:rtl}
+.rtl #u30btxt{margin-right:12px;margin-left:0;padding-right:16px;;padding-left:0}
+.rtl #u30btxt:before{left:auto;right:0}
+
+.overview-row-on {border-bottom: 2px solid green; font-weight:norma;}
+.overview-row-off {border-bottom: 2px solid silver; font-weight:normal;}
+.bp-row-on {border-bottom: 2px solid green; font-weight:normal;}
+.bp-row-off {border-bottom: 2px solid silver; font-weight:normal;}
+.ap-row-on {border-bottom: 2px solid green; font-weight:normal;}
+.ap-row-off {border-bottom: 2px solid silver; font-weight:normal;}
+.htsu-row-on {border-bottom: 2px solid green; font-weight:normal;}
+.htsu-row-off {border-bottom: 2px solid silver; font-weight:normal;}
+			</style>
+			<section class="rh03 rh03v3 rw-slate-150bg" data-a11y="true" data-bgimg="https://www.oracle.com/a/ocom/img/bgimg02-bgsw-overlay-events.png,/a/ocom/img/bgimg02-bgne-overlay-rw-pattern.png" data-trackas="rh03" data-ocomid="rh03">
+				<div class="rh03w1 cwidth">
+					<div class="rh03bc">
+					</div>
+<!-- CONTENT -->
+					<div class="herotitle rh03twocol">
+						<div class="rh03col1">
+							<h1 class="rwaccent-6">Autonomous Database</h1>
+							<h4>Automated patching and enterprise best practices</h4>
+							<p class="rh03btxt"> Oracle uses a fully-automated process to keep Autonomous Databases secure and updated with the very latest patch levels. The patching process involves <b>zero-downtime</b> and is backed by a <b>zero-regression</b> service level objective commitment.
+							</p>
+						</div>
+						<div class="rh03col1">
+							<figure>
+								<img style="max-width: 350px; border-radius: 50%; padding-left: 50px;" src="https://KeithLaker.github.io/ADB/Designer.jpeg" alt="">
+							</figure>
+						</div>
+					</div>
+				</div>
+<!-- /CONTENT -->
+			</section>
+<!-- /RH03v3 -->
+<!-- END: oWidget_C/_Raw-Text/Display -->
+<!-- start : ocom/common/global/components/compass/related-widgets -->
+<!-- Dispatcher:null -->
+<!-- BEGIN: oWidget_C/_Raw-Text/Display -->
+<!-- RT01v0 -->
+			<section class="rt01 rt01v0 cpad">
+				<div class="cw77w1 cwidth">
+					<table width="50%" cellspacing="0">
+						<tr>
+							<td id="overview-row" class="overview-row-on">
+								<p  style="cursor: pointer;" onclick="showOverview()">Overview of Patching</p>
+							</td>
+							<td id="bp-row" class="bp-row-off">
+								<p style="cursor: pointer;" onclick="showBP()">Best Practices</p>
+							</td>
+							<td id="ap-row" class="ap-row-off">
+								<p style="cursor: pointer;" onclick="showAP()">Aviator Program</p>
+							</td>
+							<td id="htsu-row"  class="htsu-row-off">
+								<p style="cursor: pointer;" onclick="showSU()">How to sign-up</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<div id="showOverviewPanel">
+				<table width="80%">
+					<tr>
+						<td style="max-width: 10%; width:10%;" width="10%" align="center">
+						</td>
+						<td style="max-width: 80%; width:80%;" width="80%" align="center">
+							<table width="100%">
+								<tr>
+									<td  width="100%" align="left">
+										<h1>Overview of Oracle's zero-downtime patching</h1>
+										<br>
+										<br>
+										<div class="col-item cw77w4">
+											<div class="col-item-w1">
+
+						<!-- CW77 CONTENT -->
+												<div class="cw77w5  col-framework col2 col1-third-col2 col-justified col-gutters">
+													<div class="col-w1">
+														<div class="col-item cw77img">
+															<div class="col-item-w1">
+																<img style="max-width: 450px; width: 60%; valign: middle; border-radius: 20px;" width="60%" src="https://www.oracle.com/a/ocom/img/rh03-hero-cloud@customer.png">
+															</div>
+														</div>
+														<div class="col-item cw77txt">
+															<div class="col-item-w1">
+																<h3>Automated Patching Process - why is it important?</h3>
+																<p>
+																	Autonomous Database instances are automatically patched on a regular bi-weekly cycle. The patches include new features, bug fixes, and security patches. By automating the patching process Oracle can ensure that your databases are always up-to-date with the latest security patches, which helps to protect your data from unauthorized access.
+																	<br>
+																	<br>
+																	Automated patching is important for the following key reasons:
+																	<br>
+																	<div style="margin-left: 20px;">
+																		<b>Security</b>: Fully automated patching transparently fixes vulnerabilities that might be susceptible to cyberattacks, helping your organization reduce its security risk.
+																		<br>
+																		<br>
+																		<b>Database uptime</b>: Fully automated patching  ensures all software (database, O/S, storage servers etc) is kept up-to-date and runs smoothly, supporting system uptime requirements.
+																		<br>
+																		<br>
+																		<b>Compliance</b>: With the continued rise in cyber-attacks, organizations are often required by regulatory bodies to maintain a certain level of compliance. Patch management is a necessary piece of adhering to compliance standards.
+																		<br>
+																		<br>
+																		<b>Feature and enhancements</b>: Patching typically goes beyond delivering fixes and includes new feature/functionality updates. ADB Patches are critical to ensuring that you have the latest and greatest the database has to offer.
+																	</div>
+																</p>
+															</div>
+														</div>
+													</div>
+													<br>
+													<div class="col-w1">
+														<div class="col-item cw77img">
+															<div class="col-item-w1">
+															</div>
+														</div>
+														<div class="col-item cw77txt">
+															<div class="col-item-w1">
+																<h3>Oracle's Security-First Mindset</h3>
+																<p>
+																	Securing your data is essential. Oracle's automated end-to-end patching process ensures instances are up-to-date with the latest security patches. This helps to protect your data from known security vulnerabilities and prevents attackers from exploiting them.
+																</p>
+															</div>
+														</div>
+													</div>
+													<br>
+													<div class="col-w1">
+														<div class="col-item cw77img">
+															<div class="col-item-w1">
+															</div>
+														</div>
+														<div class="col-item cw77txt">
+															<div class="col-item-w1">
+																<h3>Backed by a Zero-Regression SLO</h3>
+																<p>
+																	Oracle provides a service level objective of zero regressions in your production database due to these patches.
+																	<br>
+																	<br>
+																	After a patch is applied to a database on the Early patch level, if an issue is found and reported through a service request, Oracle will use commercially reasonable efforts to address the problem so that the same issue does not occur when the patch is applied to the production database.
+																</p>
+															</div>
+														</div>
+													</div>
+													<br>
+													<br>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="showBestPracticesPanel" style="display:none">
+				<table width="80%">
+					<tr>
+						<td style="max-width: 10%; width:10%;" width="10%" align="center"></td>
+						<td style="max-width: 80%; width:80%;" width="80%" align="center">
+							<table width="100%">
+								<tr>
+									<td  width="100%" align="left">
+										<h1>Is there any need to test upcoming patches?</h1>
+										<br>
+										<br>
+										<div class="col-item cw77w4">
+											<div class="col-item-w1">
+
+						<!-- CW77 CONTENT -->
+												<div class="cw77w5  col-framework col2 col1-third-col2 col-justified col-gutters">
+													<div class="col-w1">
+														<div class="col-item cw77img">
+															<div class="col-item-w1">
+																<img style="max-width: 450px; width: 60%; valign: middle; border-radius: 20px;" width="60%" src="https://www.oracle.com/a/ocom/img/rc58-apps-demo-image.jpg" alt="imagescw77-code-explore1.jpg">
+															</div>
+														</div>
+														<div class="col-item cw77txt">
+															<div class="col-item-w1">
+																<h3>Why test patches?</h3>
+																<p>
+																	Even with the extreme levels of automated monitoring and testing along with the decades if best practices used by Autonomous Database there is no way to provide a 100% guaranteed that a patchset is ever going to be completely bug free. That's why we have a pre-release patching cycle update that provides 7-days advanced access to an upcoming patchset so cusomters can run and validate their workloads.
+																	<br>
+																	<br>
+																	The high level aim of patch testing is to determine if a patch will cause any problems for a specific workload. The best way to do so is to create a test environment that mirrors the production environment. In the past this has been seen as an expensive operation because it entailed building and maintaining a duplicate real-world environment. Due to operational complexities and costs, most IT teams have resorted to using smaller data sets and sample production workloads for testing which provided only very limited reassurances.
+																	<br>
+																	<br>
+																</p>
+															</div>
+														</div>
+													</div>
+													<br>
+													<div class="col-w1">
+														<div class="col-item cw77img">
+															<div class="col-item-w1">
+															</div>
+														</div>
+														<div class="col-item cw77txt">
+															<div class="col-item-w1">
+																<h3>What's involved patch testing?</h3>
+																<p>
+																	Patch testing involves more than just ensuring that your database is up and running and your tools can connect. Typical best practices recommend running running smoke tests to determine if all the main functions of a workload appear to operate correctly.
+																	<br>
+																	<br>
+																	Tests involve comparing application performance before and after patch deployment and ensuring that other applications running on the target environment are not negatively affected. It requires simulating usage cycles and seasonal peak workloads because some problems only appear above a certain threshold or when certain functions are executed -- monthly payroll, for example.
+																</p>
+															</div>
+														</div>
+													</div>
+													<br>
+													<br>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td  width="100%" align="left">
+										<h1>How ADB simplifies and automates patch testing?</h1>
+										<br>
+										<br>
+										<div class="col-item cw77w4">
+											<div class="col-item-w1">
+
+						<!-- CW77 CONTENT -->
+												<div class="cw77w5  col-framework col2 col1-third-col2 col-justified col-gutters">
+													<div class="col-w1">
+														<div class="col-item cw77img">
+															<div class="col-item-w1">
+																<img style="max-width: 450px; width: 80%; valign: middle; border-radius: 20px;" width="80%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1ifi_9bligL-DUE_v2zOHxAw7SVBYtMwi1v5Z-G2mdaiTgQCl50p70rR5vhv2RkJJxXs&usqp=CAU">
+															</div>
+														</div>
+														<div class="col-item cw77txt">
+															<div class="col-item-w1">
+																<h3>Get early access to upcoming patches</h3>
+																<p>
+																	When you provision or clone an Autonomous Database instance you can select a patch level to apply to upcoming patches. There are two patch level options: <b>Regular</b> and <b>Early</b>.
+																</p>
+																<p>
+																	Provisioning or cloning an instance and setting the patch level to <b>Early</b> allows you to use and to test upcoming patches before they are applied to all systems.
+																</p>
+															</div>
+														</div>
+													</div>
+													<br>
+													<div class="col-w1">
+														<div class="col-item cw77img">
+															<div class="col-item-w1">
+															</div>
+														</div>
+														<div class="col-item cw77txt">
+															<div class="col-item-w1">
+																<h3>Caputure production workloads using Real Application Testing</h3>
+																<p>
+																	Oracle's unique Real Application Testing provides an extremely cost-effective and easy-to-use proactive management solution that enables businesses teams to quickly and easily fully assess the outcome of an planned patching cycle.
+																</p>
+																<p>
+																	Real Application Testing captures a workload on the production system and then replays it on a separate test system with the exact timing, concurrency, and transaction characteristics of the original workload.
+																	<br>
+																	<br>
+																	This allows teams to test the effects of the next patchset on a workload without affecting the production system. It provides a simple and accurate method for patchset testing.
+																	<br>
+																	<br>
+																</p>
+															</div>
+														</div>
+													</div>
+													<br>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="showAviatorProgramPanel" style="display:none"></div>
+			<div id="showSignupPanel" style="display:none"></div>
+
+<script type="text/javascript" data-reqjq data-src="https://www.oracle.com/asset/web/analytics/ora_ocom.js"></script>
+
+<script>
+function showOverview() {
+  var x = document.getElementById("showOverviewPanel");
+  var y = document.getElementById("showBestPracticesPanel");
+  var z = document.getElementById("showAviatorProgramPanel");
+  var a = document.getElementById("showSignupPanel");
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+    z.style.display = "none";
+    a.style.display = "none";
+
+	document.getElementById("overview-row").classList.remove("overview-row-off");
+	document.getElementById("overview-row").classList.add("overview-row-on");
+	document.getElementById("bp-row").classList.remove("bprow-on");
+	document.getElementById("bp-row").classList.add("bp-row-off");
+	document.getElementById("ap-row").classList.remove("ap-row-on");
+	document.getElementById("ap-row").classList.add("ap-row-off");
+	document.getElementById("htsu-row").classList.remove("htsu-row-on");
+	document.getElementById("htsu-row").classList.add("htsu-row-off");
+	
+  } else {
+    x.style.display = "none";
+  }
+
+}
+
+function showBP() {
+  var x = document.getElementById("showOverviewPanel");
+  var y = document.getElementById("showBestPracticesPanel");
+  var z = document.getElementById("showAviatorProgramPanel");
+  var a = document.getElementById("showSignupPanel");
+
+  if (y.style.display === "none") {
+    y.style.display = "block";
+    x.style.display = "none";
+    z.style.display = "none";
+    a.style.display = "none";
+
+	document.getElementById("overview-row").classList.remove("overview-row-on");
+	document.getElementById("overview-row").classList.add("overview-row-off");
+	document.getElementById("bp-row").classList.remove("bp-row-off");
+	document.getElementById("bp-row").classList.add("bp-row-on");
+	document.getElementById("ap-row").classList.remove("ap-row-on");
+	document.getElementById("ap-row").classList.add("ap-row-off");
+	document.getElementById("htsu-row").classList.remove("htsu-row-on");
+	document.getElementById("htsu-row").classList.add("htsu-row-off");
+	
+  } else {
+    y.style.display = "none";
+  }
+}
+
+function showAP() {
+  var x = document.getElementById("showOverviewPanel");
+  var y = document.getElementById("showBestPracticesPanel");
+  var z = document.getElementById("showAviatorProgramPanel");
+  var a = document.getElementById("showSignupPanel");
+
+  if (z.style.display === "none") {
+    z.style.display = "block";
+    x.style.display = "none";
+    y.style.display = "none";
+    a.style.display = "none";
+
+	document.getElementById("overview-row").classList.remove("overview-row-on");
+	document.getElementById("overview-row").classList.add("overview-row-off");
+	document.getElementById("bp-row").classList.remove("bp-row-on");
+	document.getElementById("bp-row").classList.add("bp-row-off");
+	document.getElementById("ap-row").classList.remove("ap-row-off");
+	document.getElementById("ap-row").classList.add("ap-row-on");
+	document.getElementById("htsu-row").classList.remove("htsu-row-on");
+	document.getElementById("htsu-row").classList.add("htsu-row-off");
+	
+  } else {
+    z.style.display = "none";
+  }
+}
+
+function showSU() {
+  var x = document.getElementById("showOverviewPanel");
+  var y = document.getElementById("showBestPracticesPanel");
+  var z = document.getElementById("showAviatorProgramPanel");
+  var a = document.getElementById("showSignupPanel");
+
+  if (a.style.display === "none") {
+    a.style.display = "block";
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "none";
+
+	document.getElementById("overview-row").classList.remove("overview-row-on");
+	document.getElementById("overview-row").classList.add("overview-row-off");
+	document.getElementById("bp-row").classList.remove("bp-row-on");
+	document.getElementById("bp-row").classList.add("bp-row-off");
+	document.getElementById("ap-row").classList.remove("ap-row-on");
+	document.getElementById("ap-row").classList.add("ap-row-off");
+	document.getElementById("htsu-row").classList.remove("htsu-row-off");
+	document.getElementById("htsu-row").classList.add("htsu-row-on");
+	
+  } else {
+    a.style.display = "none";
+  }
+}
+
+
+</script>
+	</body>
+</html>
+
