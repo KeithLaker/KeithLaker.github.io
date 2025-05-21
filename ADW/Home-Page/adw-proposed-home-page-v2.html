@@ -313,7 +313,7 @@ if(document.location.href.indexOf('betamode=') > -1) document.write('<script src
 											</td>
 										</tr>
 									</table>
-									<table width="100%" style="background-color: white;">
+									<table width="100%" style="background-color: white;" onmouseout="showOnly(0)">
 										<tr>
 											<td width="30%" valign="top">
 												<br>
@@ -376,14 +376,25 @@ if(document.location.href.indexOf('betamode=') > -1) document.write('<script src
 												</table>
 											</td>
 											<td width="70%" valign="top" style="padding-top: 40px;">
-												<div id="FeatureItem0" style="display: block;">
-													<img src="https://keithlaker.github.io/ADW/Home-Page/icons/adw-complete-platform.png" style="max-width: 100%;">
+												<div id="FeatureItem0" style="display: none;">
+													<img src="https://www.oracle.com/node/oce/storyhub/prod/api/v1.1/assets/CONT22FE0E76CEA141D7A03D0265950C356F/native/customer-logo-rosendin-color.png" style="max-width: 10%"><br>
+													<p style="font-style: italic; font-size: 0.8em;">“Autonomous Database has become the central repository of data, enabling ease of access to data, through multiple tools, making data analysis simple for us, improving operations and saving money for us,”
+													<br>
+													<br>
+													<p style="text-align: right; font-size: 0.7em;">Cathye Pendley, Business Intelligence manager at Rosendin.</p>
+													<img src="https://keithlaker.github.io/ADW/Home-Page/icons/adw-complete-platform.png" style="max-width: 60%;">
 												</div>
 												<div id="FeatureItem1" style="display: none;">
 													<table width="100%">
 														<tr>
 															<td width="95%" valign="top">
-																<h3>Database Actions - Data Modeler</h3>
+																<img src="https://enlyft.com/tech/static/images/enlyft-logo-139.svg" style="max-width: 10%"><br>
+																<p style="font-style: italic; font-size: 0.8em;">
+																Oracle SQL Developer Data Modeler is used by a variety of companies across different industries. Some notable users include EPAM Systems Inc., Accenture PLC, Cognizant Technology Solutions Corp, CGI Inc., and Rabobank. In terms of industry distribution, the largest segments using Oracle SQL Developer Data Modeler are Information Technology and Services (24%), Computer Software (10%), and Higher Education (7%).
+																</p>
+																<br>
+																<br>
+																<h4>Database Actions - Data Modeler</h4>
 																<p>
 																	Data Modeler is a built-in graphical tool that enhances productivity and simplifies data modeling tasks. Using Data Modeler users can create, browse and edit, logical, relational, physical, multi-dimensional, and data type models.
 																	<br>
@@ -399,43 +410,145 @@ if(document.location.href.indexOf('betamode=') > -1) document.write('<script src
 														</tr>
 													</table>
 												</div>
-												<div id="FeatureItem2" style="display: none;" valign="top">
+												<div id="FeatureItem2" style="display: block;" valign="top">
 													<table width="100%">
 														<tr>
 															<td width="95%" valign="top">
+																<img src="https://www.oracle.com/node/oce/storyhub/prod/api/v1.1/assets/CONT0549F9DC8E4C4126AF706EEDD21BB837/native/customer-logo-outfrontlogo.png" style="max-width: 10%"><br>
+																<p style="font-style: italic; font-size: 0.8em;">"As well as simplifying our data management architecture with Autonomous Database, we have been moving generally towards a data franchise ownership within our business—following a modern data platform architecture using Autonomous Database, and tools like Data Studio makes that move even simpler and enable us to partner with our business faster and more easily,”</p>
+																<p style="text-align: right; font-size: 0.7em;">Derek Hayden, senior vice president of data strategy and analytics at OUTFRONT Media.</p>
+																<br>
+																<br>																
 																<h4>Data Engineering With Data Studio</h4>
 																<p>
 																	Data Studio is bundled with each Autonomous Database instance and encompasses several key data engineering tools:
 																	<br>
 																	<br>
-																	<strong>Data Load:</strong><br>
-																	This tool allows users to load data from various sources into their Autonomous Database. Supported sources include local files, remote databases (via database links), and cloud storage buckets in Oracle Cloud Infrastructure (OCI), Amazon S3, Azure Blob Storage/Data Lake Storage, and Google Cloud Storage. It supports numerous file formats like CSV, XLS, JSON, Parquet, GeoJSON, and more. It also facilitates creating Live Feeds for repeated data loads. Data Load integrates with OCI Language Service capabilities to perform sentiment analysis, key phrase extraction, language detection, and text translation on data during the loading process.
-																	<br>
-																	<br>
-																	<strong>Catalog:</strong><br>
-																	The Catalog tool enables users to understand data dependencies and the impact of changes. It supports multi-catalog capabilities, allowing discovery and use of data across a wide range of external systems, including other Autonomous Databases, on-premises databases, cloud storage, shared data, and other data catalogs like OCI Data Catalog and AWS Glue. Users can browse, search, and manage entities and register cloud links.
-																	<br>
-																	<br>
-																	<strong>Data Insights:</strong><br>
-																	This page helps users discover anomalies, outliers, and hidden patterns within their data.
-																	<br>
-																	<br>
-																	<strong>Data Analysis:</strong><br>
-																	This tool focuses on analysing data and creating Analytic Views and reports. It allows creating Analytic Views with multidimensional metadata on fact tables, defining hierarchies and measures. Users can analyse and visualize data, inspect data with pivot tables, find errors, generate insights, and perform hierarchical aggregation and drill-down. Natural Language Query is supported, allowing users to ask questions in plain language instead of writing SQL. It also supports Vector Search. Analytic Views can be exported to tools like Tableau and Oracle Analytics Cloud (OAC) for visualization, and some benefits can be gained by mapping Power BI to transparency views.
-																	<br>
-																	<br>
-																	<strong>Data Transforms:</strong><br>
-																	Providing a graphical user interface, this tool allows users to design data transformations for data integration without writing code. It supports creating data loads, data flows (defining movement and transformation), and workflows (sequencing data flows). Data Transforms is available as part of the Data Studio suite and also as a separate Marketplace listing (Data Integrator: Web Edition). It requires ADMIN or DATA_TRANSFORM_USER role. It can connect to various technologies and supports building data warehouses from sources like NetSuite.
-																	<br>
-																	<br>
-																	<strong>Table AI Assist:</strong><br>
-																	This AI-powered tool helps users augment and correct data in local tables using natural language prompts. Users can ask the tool to add, rename, or remove columns using natural language, and it generates the corresponding SQL expressions. It uses a Large Language Model (LLM) configured via the Data Studio settings and an AI profile.
 																</p>
-															</td>
-														</tr>
-														<tr>
-															<td width="40%" style="max-width: 40%">
-																<img src="https://docs.oracle.com/en-us/iaas/autonomous-database-serverless/doc/img/add-step-new-column.png" width="90%" style="max-width: 90%;">
+																<table width="100%">
+																	<tr>
+																		<td width="80%" valign="top">
+																			<p>
+																				<strong>Data Load:</strong><br />
+																				This tool allows users to load data from various sources into their Autonomous Database.
+																				Supported sources include local files, remote databases (via database links), and cloud
+																				storage buckets in Oracle Cloud Infrastructure (OCI), Amazon S3, Azure Blob Storage/Data
+																				Lake Storage, and Google Cloud Storage. It supports numerous file formats like CSV, XLS,
+																				JSON, Parquet, GeoJSON, and more. It also facilitates creating Live Feeds for repeated
+																				data loads. Data Load integrates with OCI Language Service capabilities to perform
+																				sentiment analysis, key phrase extraction, language detection, and text translation on
+																				data during the loading process.
+																				<br />
+																				<br />
+																			</p>
+																		</td>
+																		<td width="20%" style="padding-left: 20px; max-width: 20%; text-align: center" valign="middle">
+																			<a href="https://www.youtube.com/embed/fO7FQWtSMKs" valign="middle">
+																				<img
+																					src="http://img.youtube.com/vi/fO7FQWtSMKs/mqdefault.jpg"
+																					style="max-width: 90%; width: 90%"
+																					width="90%" />
+																				<p style="font-style: italic; font-size: 10.5pt">Click to watch video</p>
+																			</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="80%">
+																			<p>
+																				<strong>Data Transforms:</strong><br />
+																				Providing a graphical user interface, this tool allows users to design data
+																				transformations for data integration without writing code. It supports creating data
+																				loads, data flows (defining movement and transformation), and workflows (sequencing data
+																				flows). Data Transforms is available as part of the Data Studio suite and also as a
+																				separate Marketplace listing (Data Integrator: Web Edition). It requires ADMIN or
+																				DATA_TRANSFORM_USER role. It can connect to various technologies and supports building
+																				data warehouses from sources like NetSuite.
+																				<br />
+																				<br />
+																			</p>
+																		</td>
+																		<td width="20%" style="padding-left: 20px; max-width: 20%; text-align: center" valign="middle">
+																			<a href="https://www.youtube.com/embed/cy5_E4LHs2g" valign="middle">
+																				<img
+																					src="http://img.youtube.com/vi/cy5_E4LHs2g/mqdefault.jpg"
+																					style="max-width: 90%; width: 90%"
+																					width="90%" />
+																				<p style="font-style: italic; font-size: 10.5pt">Click to watch video</p>
+																			</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="80%">
+																			<p>
+																				<strong>Catalog:</strong><br />
+																				The Catalog tool enables users to understand data dependencies and the impact of
+																				changes. It supports multi-catalog capabilities, allowing discovery and use of data
+																				across a wide range of external systems, including other Autonomous Databases,
+																				on-premises databases, cloud storage, shared data, and other data catalogs like OCI Data
+																				Catalog and AWS Glue. Users can browse, search, and manage entities and register cloud
+																				links.
+																			</p>
+																			<br />
+																			<br />
+																		</td>
+																		<td width="20%" style="padding-left: 20px; max-width: 20%; text-align: center" valign="middle">
+																			<a href="https://www.youtube.com/embed/EKaoHvVfzGQ" valign="middle">
+																				<img
+																					src="http://img.youtube.com/vi/EKaoHvVfzGQ/mqdefault.jpg"
+																					style="max-width: 90%; width: 90%"
+																					width="90%" />
+																				<p style="font-style: italic; font-size: 10.5pt">Click to watch video</p>
+																			</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="80%">
+																			<p>
+																				<strong>Data Insights:</strong><br />
+																				This page helps users discover anomalies, outliers, and hidden patterns within their
+																				data.
+																				<br />
+																				<br />
+																			</p>
+																		</td>
+																		<td width="20%" style="padding-left: 20px; max-width: 20%; text-align: center" valign="middle">
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="80%">
+																			<p>
+																				<strong>Data Analysis:</strong><br />
+																				This tool focuses on analysing data and creating Analytic Views and reports. It allows
+																				creating Analytic Views with multidimensional metadata on fact tables, defining
+																				hierarchies and measures. Users can analyse and visualize data, inspect data with pivot
+																				tables, find errors, generate insights, and perform hierarchical aggregation and
+																				drill-down. Natural Language Query is supported, allowing users to ask questions in
+																				plain language instead of writing SQL. It also supports Vector Search. Analytic Views
+																				can be exported to tools like Tableau and Oracle Analytics Cloud (OAC) for
+																				visualization, and some benefits can be gained by mapping Power BI to transparency
+																				views.
+																				<br />
+																				<br />
+																			</p>
+																		</td>
+																		<td width="20%" style="padding-left: 20px; max-width: 20%; text-align: center" valign="middle">
+
+																		</td>
+																	</tr>
+																	<tr>
+																		<td width="80%">
+																			<p>
+																				<strong>Table AI Assist:</strong><br />
+																				This AI-powered tool helps users augment and correct data in local tables using natural
+																				language prompts. Users can ask the tool to add, rename, or remove columns using natural
+																				language, and it generates the corresponding SQL expressions. It uses a Large Language
+																				Model (LLM) configured via the Data Studio settings and an AI profile.
+																			</p>
+																		</td>
+																		<td width="20%" style="padding-left: 20px; max-width: 20%; text-align: center" valign="middle">
+																		</td>
+																	</tr>
+																</table>
 															</td>
 														</tr>
 													</table>
@@ -500,7 +613,13 @@ if(document.location.href.indexOf('betamode=') > -1) document.write('<script src
 												</div>
 												<div id="FeatureItem11" style="display: none;" valign="top">
 													<h4>Fusion Data Intelligence Platform</h4>
-													<p>11. TBD</p>
+													<br>
+													<br>
+													<img src="https://www.beyonics.com/wp-content/uploads/2022/03/Beyonics-Manufacturing-Logo.png" style="max-width: 10%"><br>
+													<p style="font-style: italic; font-size: 0.8em;">“Oracle provided a comprehensive project plan while using best practices and implementation methodology. We are one of the first manufacturers in Asia to go live with an end-to-end Oracle Cloud solution comprising both applications and infrastructure on a single instance and single data model.”</p>
+													<p style="text-align: right; font-size: 0.7em;">Robert Heese, CFO, Beyonics</p>
+													<br>
+													<br>	
 												</div>
 											</td>
 										</tr>
@@ -512,7 +631,97 @@ if(document.location.href.indexOf('betamode=') > -1) document.write('<script src
 				</td>
 			</tr>
 		</table>
-
+		<section class="rc56 rc56v0 cpad" data-trackas="rc56" data-ocomid="rc56" data-a11y="true" style="width: 100%;">
+			<div class="rc56w1" style="width: 100%;">
+					<div style="text-align: center; width: 100%;">
+						<h4 class="rw-ptitle" id="rc56-adb-label" style="text-align: center;">OUR CUSTOMERS</h4>
+					<br>
+					<br>
+						<h2 class="rw-ptitle" id="rc56-adb-label">INNOVATIVE COMPANIES<br><br>
+						INNOVATE WITH ORACLE</h2><br>
+						<p>Learn how our customers are using Oracle Autonomous Data Warehouse to modernize their businesses through data lakes, machine learning, generative AI, graph, data sharing, and automation... <a href="/autonomous-database/customers/" data-lbl="see-more-customer-successes">See more customer successes</a>...</p>
+					</div>
+					<br>
+					<div style="text-align: center; width: 100%;">
+						
+					</div>
+			</div>
+			<div class="rc56w1" style="width: 100%;">
+				<ul class="rc56w2" aria-labelledby="rc56-adb-label">
+					<li class="rc56w3 rc56xlg">
+						<a href="/customers/vodafone-uses-oracle-cloud/" data-lbl="vodafone">
+							<div class="rw-logo rw-logo-centered">
+								<img
+									alt="Vodafone logo"
+									src="https://www.oracle.com/a/ocom/img/customerlogo-vodafone-clr.svg"
+									class="srcloaded imgW" />
+							</div>
+						</a>
+					</li>
+					<li class="rc56w3">
+						<a href="/customers/siemens-mobility/" data-lbl="siemens">
+							<div class="rw-logo rw-logo-centered">
+								<img
+									alt="Siemens logo"
+									src="https://www.oracle.com/a/ocom/img/customerlogo-siemens-clr.svg"
+									class="srcloaded imgW" />
+							</div>
+						</a>
+					</li>
+					<li class="rc56w3 rc56lg">
+						<a href="/customers/lyft/" data-lbl="lyft">
+							<div class="rw-logo rw-logo-centered">
+								<img
+									alt="Lyft logo"
+									src="https://www.oracle.com/a/ocom/img/customerlogo-lyft-color.svg"
+									class="srcloaded imgW" />
+							</div>
+						</a>
+					</li>
+					<li class="rc56w3">
+						<a href="/customers/fedex/" data-lbl="fedex">
+							<div class="rw-logo rw-logo-centered">
+								<img
+									alt="Fedex logo"
+									src="https://www.oracle.com/a/ocom/img/customerlogo-fedex-color.svg"
+									class="srcloaded imgW" />
+							</div>
+						</a>
+					</li>
+					<li class="rc56w3 rc56lg">
+						<a href="/customers/schneider-electric/" data-lbl="schneider-electric">
+							<div class="rw-logo rw-logo-centered">
+								<img
+									alt="Schneider Electric logo"
+									src="https://www.oracle.com/a/ocom/img/customerlogo-schneider-electric-clr.svg"
+									class="srcloaded imgW" />
+							</div>
+						</a>
+					</li>
+					<li class="rc56w3 rc56lg">
+						<a href="/premier-league/uk-football-data-analysis/" data-lbl="premier-league">
+							<div class="rw-logo rw-logo-centered">
+								<img
+									alt="Premier League logo"
+									src="https://www.oracle.com/a/ocom/img/customerlogo-premierleague-clr.svg"
+									class="srcloaded imgW" />
+							</div>
+						</a>
+					</li>
+					<li class="rc56w3">
+						<a href="/customers/xerox/" data-lbl="xerox/">
+							<div class="rw-logo rw-logo-centered">
+								<img
+									alt="Xerox logo"
+									src="https://www.oracle.com/a/ocom/img/customerlogo-xerox-clr.svg"
+									class="srcloaded imgW" />
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		
 <script type="text/javascript" data-reqjq data-src="https://www.oracle.com/asset/web/analytics/ora_ocom.js"></script>
 
 <script>
