@@ -16,7 +16,7 @@
   --shadow: 0 18px 50px rgba(5, 50, 65, .12);
   --radius: 22px;
   --font-body: Arial, Helvetica, sans-serif;
-  --font-display: Georgia, 'Times New Roman', serif;
+  --font-display: Arial, Helvetica, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -47,7 +47,7 @@ button, input { font: inherit; }
   backdrop-filter: blur(14px);
 }
 .brand-lockup { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; }
-.brand-mark { display: grid; place-items: center; width: 29px; height: 29px; border: 2px solid var(--gold); border-radius: 50%; color: var(--gold); font-weight: 700; font-size: 11px; letter-spacing: -.06em; }
+.brand-mark { display: grid; place-items: center; width: 29px; height: 29px; border: 2px solid var(--white); border-radius: 50%; color: var(--white); font-weight: 700; font-size: 11px; letter-spacing: -.06em; }
 .brand-copy { display: grid; gap: 1px; line-height: 1.05; }
 .brand-copy strong { font-family: var(--font-display); font-size: 15px; font-weight: 700; }
 .brand-copy span { color: rgba(255,255,255,.68); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
@@ -68,7 +68,7 @@ button, input { font: inherit; }
 .hero::before { inset: 0 0 0 62%; background: radial-gradient(circle at 50% 36%, rgba(240,204,114,.36), transparent 31%), radial-gradient(circle at 60% 65%, rgba(129,178,195,.25), transparent 32%); }
 .hero::after { top: 9%; right: 7%; width: 37vw; height: 37vw; min-width: 250px; min-height: 250px; max-width: 550px; max-height: 550px; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; box-shadow: 0 0 0 26px rgba(255,255,255,.04), 0 0 0 52px rgba(255,255,255,.03); }
 .hero-inner { position: relative; z-index: 1; max-width: 850px; }
-.eyebrow { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 20px; color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 20px; color: var(--red); font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 .eyebrow::before { content: ''; display: inline-block; width: 25px; height: 1px; background: currentColor; }
 .hero h1 { max-width: 920px; margin: 0; font-family: var(--font-display); font-size: clamp(42px, 6vw, 88px); font-weight: 400; letter-spacing: -.045em; line-height: .98; }
 .hero p { max-width: 700px; margin: 24px 0 0; color: rgba(255,255,255,.76); font-size: clamp(16px, 2vw, 21px); }
