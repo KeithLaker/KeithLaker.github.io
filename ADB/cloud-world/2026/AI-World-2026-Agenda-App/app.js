@@ -23,6 +23,7 @@
       <nav class="topbar-links" aria-label="Day navigation">
         <a href="${href('index.html')}" ${active === 'home' ? 'aria-current="page"' : ''}>Overview</a>
         ${data.days.map((item) => `<a href="${dayHref(item.id)}" ${active === item.id ? 'aria-current="page"' : ''}>${item.label}</a>`).join('')}
+        <a href="${href('demo-hub.html')}" ${active === 'demo-hub' ? 'aria-current="page"' : ''}>Demo Hub</a>
       </nav>
     </header>`;
   }
@@ -67,12 +68,18 @@
     </div>`;
   }
 
+  function hubBanner(dayId) {
+    const item = day(dayId);
+    const hours = data.demoHub.hours[dayId];
+    return `<div class="hub-strip"><div><p class="micro-label">${esc(data.demoHub.name)}</p><strong>${esc(data.demoHub.location)}</strong><span>${esc(data.demoHub.booths)}</span></div><div><p class="micro-label">${esc(item.label)} hours</p><strong>${esc(hours)}</strong><span>Demo Hub opening times</span></div><a class="btn btn-light" href="${href('demo-hub.html')}">Explore the Demo Hub</a></div>`;
+  }
+
   function renderAgenda(dayId) {
     const item = day(dayId);
     const daySessions = sessionsFor(dayId);
     document.title = `${item.label} Agenda · Oracle AI World 2026`;
     app.innerHTML = `${topbar(dayId)}${dayHero(item, daySessions)}
-      <main class="agenda-wrap"><section class="section">
+      <main class="agenda-wrap">${hubBanner(dayId)}<section class="section">
         <div class="section-head"><div><p class="micro-label">Session lineup</p><h2>Choose your next deep dive</h2></div><p>Each card opens a full session view with the session details and the linked Oracle AI World catalog entry.</p></div>
         <div class="agenda-tools">
           <label class="search-box"><span class="search-icon">⌕</span><input id="session-search" type="search" placeholder="Search titles, topics, or locations" aria-label="Search sessions"></label>
@@ -117,7 +124,14 @@
     const total = data.sessions.length;
     app.innerHTML = `${topbar('home')}
       <section class="hero"><div class="hero-inner"><p class="eyebrow">${esc(data.event.kicker)}</p><h1>Data Deep Dive, mapped for your week.</h1><p>A visual agenda for the Oracle Autonomous AI Database sessions in the supplied AI World 2026 guide — with every session detail one click away.</p><div class="hero-actions"><a class="btn btn-primary" href="${dayHref('sunday')}">Start with Sunday →</a><a class="btn btn-secondary" href="#days">Browse all days</a></div>${statStrip([{ value: total, label: 'sessions mapped' }, { value: data.days.length, label: 'agenda days' }, { value: '1 click', label: 'to AI World details' }])}</div></section>
-      <main><section class="section"><div class="home-intro"><div><p class="micro-label">One guide, four focused days</p><div class="section-head" style="margin-bottom:12px"><h2>Build the right AI foundation.</h2></div><p>Use this companion to scan the schedule, compare formats, and jump directly to the official Oracle AI World catalog entry for each session. The interface follows the supplied PowerPoint’s dark teal, sky blue, Oracle red, warm gold, Georgia, and Oracle Sans-inspired visual system.</p></div><aside class="callout"><h3>Go beyond the prompt.</h3><p>From trusted data foundations and vector search to multicloud operations and production-ready agents, the program is organized around the decisions that make enterprise AI real.</p></aside></div></section><section class="section tight" id="days"><div class="section-head"><div><p class="micro-label">The week at a glance</p><h2>Choose a day</h2></div><p>Jump into a day to filter by session type or search the entire lineup.</p></div>${dayCards()}</section></main>${footer()}`;
+      <main><section class="section"><div class="home-intro"><div><p class="micro-label">One guide, four focused days</p><div class="section-head" style="margin-bottom:12px"><h2>Build the right AI foundation.</h2></div><p>Use this companion to scan the schedule, compare formats, and jump directly to the official Oracle AI World catalog entry for each session. The interface follows the supplied PowerPoint’s dark teal, sky blue, Oracle red, warm gold, Georgia, and Oracle Sans-inspired visual system.</p></div><aside class="callout"><h3>Go beyond the prompt.</h3><p>From trusted data foundations and vector search to multicloud operations and production-ready agents, the program is organized around the decisions that make enterprise AI real.</p></aside></div></section><section class="section tight" id="days"><div class="section-head"><div><p class="micro-label">The week at a glance</p><h2>Choose a day</h2></div><p>Jump into a day to filter by session type or search the entire lineup.</p></div>${dayCards()}</section><section class="section tight hub-section" id="demo-hub"><div class="section-head"><div><p class="micro-label">Explore, try, talk</p><h2>AI World Demo Hub</h2></div><p>The place to meet Oracle development and product management experts, explore demos, and talk through the capabilities behind meaningful business outcomes.</p></div><div class="hub-layout"><div class="hub-card hub-location"><p class="micro-label">Location</p><strong>${esc(data.demoHub.location)}</strong><span>${esc(data.demoHub.booths)}</span></div><div class="hub-card"><p class="micro-label">Opening times</p><div class="hub-hours">${data.days.map((item) => `<div><strong>${esc(item.label)}</strong><span>${esc(data.demoHub.hours[item.id])}</span></div>`).join('')}</div></div></div><a class="btn btn-ghost hub-link" href="${href('demo-hub.html')}">Explore the four demo booths →</a></section></main>${footer()}`;
+  }
+
+  function renderDemoHub() {
+    document.title = 'AI World Demo Hub · Oracle AI World 2026';
+    app.innerHTML = `${topbar('demo-hub')}
+      <section class="hero compact"><div class="hero-inner"><div class="crumbs"><a href="${href('index.html')}">Overview</a><span>/</span><span>Demo Hub</span></div><p class="eyebrow">${esc(data.event.kicker)}</p><h1>AI World Demo Hub</h1><p>Explore the latest Autonomous AI Database capabilities, meet Oracle experts, and see how trusted data becomes meaningful business outcomes.</p></div></section>
+      <main><section class="section hub-section"><div class="section-head"><div><p class="micro-label">Plan your visit</p><h2>Location and opening times</h2></div><p>The Demo Hub is where everyone comes together to see, try, and talk through the technologies powering enterprise AI.</p></div><div class="hub-layout"><div class="hub-card hub-location"><p class="micro-label">Location</p><strong>${esc(data.demoHub.location)}</strong><span>${esc(data.demoHub.booths)}</span></div><div class="hub-card"><p class="micro-label">Opening times</p><div class="hub-hours">${data.days.map((item) => `<div><strong>${esc(item.label)}</strong><span>${esc(data.demoHub.hours[item.id])}</span></div>`).join('')}</div></div></div></section><section class="section tight"><div class="section-head"><div><p class="micro-label">Four ways to explore</p><h2>Demo booths</h2></div><p>Use the booth code numbers to find each experience in the AI World Hub.</p></div><div class="booth-grid">${data.demoHub.demoBooths.map((booth) => `<article class="booth-card"><div class="booth-code">${esc(booth.code)}</div><div><h3>${esc(booth.title)}</h3><p>${esc(booth.description)}</p></div></article>`).join('')}</div></section></main>${footer()}`;
   }
 
   function metaBlock(label, value) {
@@ -138,4 +152,5 @@
   if (view === 'home') renderHome();
   if (view === 'agenda') renderAgenda(app.dataset.day);
   if (view === 'session') renderSession(app.dataset.session);
+  if (view === 'demo-hub') renderDemoHub();
 })();

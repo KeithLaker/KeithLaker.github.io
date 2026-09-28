@@ -6,6 +6,39 @@ window.AI_WORLD_DATA = {
     kicker: 'Oracle AI World · Las Vegas',
     source: 'Autonomous-AI-Database-Deep-Dive-AI-World-2026.pdf'
   },
+  demoHub: {
+    name: 'AI World Hub',
+    location: 'AI World Hub',
+    booths: 'Demo booths 2A, 2B, 7C, and 7D',
+    hours: {
+      sunday: 'Not listed in the guide',
+      monday: '11:00 AM – 7:00 PM',
+      tuesday: '8:00 AM – 6:00 PM',
+      wednesday: '9:00 AM – 2:00 PM'
+    },
+    demoBooths: [
+      {
+        code: '2a',
+        title: 'Autonomous AI Database: SQL, JSON, Graph, Spatial, AI/ML',
+        description: 'See how Oracle Autonomous AI Database and Autonomous AI Lakehouse use automation and a converged data architecture to further reduce database management, data sprawl, fragmented pipelines, and infrastructure complexity.'
+      },
+      {
+        code: '2b',
+        title: 'Autonomous AI Lakehouse: open standards-based lakehouse',
+        description: 'See how Oracle Autonomous AI Lakehouse unifies data warehousing, data lakes, and AI analytics in one managed platform—helping teams simplify data management, accelerate insights, run AI/ML workloads, and reduce infrastructure complexity through automation and scalability.'
+      },
+      {
+        code: '7c',
+        title: 'Live Data for AI, Analytics, and Modern Apps',
+        description: 'See what happens when Oracle data and your hyperscaler’s AI and analytics tools come together. See Oracle AI Vector Search, Select AI, GoldenGate, and Autonomous AI Lakehouse in action—and discover how bringing AI and analytics to live Oracle data can reduce data movement, simplify integration, and turn trusted business data into AI-powered insights.'
+      },
+      {
+        code: '7d',
+        title: 'Migrate to Simplify and Save',
+        description: 'See how moving Oracle databases to the cloud can simplify operations and reduce costs up to 30%. See how Oracle Autonomous AI Database and Autonomous AI Lakehouse use automation and a converged data architecture to further reduce database management, data sprawl, fragmented pipelines, and infrastructure complexity.'
+      }
+    ]
+  },
   days: [
     { id: 'sunday', label: 'Sunday', date: 'October 25', pages: '26–30', accent: 'blue' },
     { id: 'monday', label: 'Monday', date: 'October 26', pages: '32–42', accent: 'red' },

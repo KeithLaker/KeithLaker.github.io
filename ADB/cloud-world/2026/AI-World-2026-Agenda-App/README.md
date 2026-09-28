@@ -7,3 +7,5 @@ The app is static HTML/CSS/JavaScript: no build step, framework, font download, 
 The supplied guide’s cover pages are represented by the day navigation but not duplicated as sessions. The Global Leaders event is represented once, using the live event link from the event detail in the guide.
 
 Visual system: the interface follows the supplied OAIW-26-v2.5 template palette and hierarchy — deep teal, sky blue, Oracle red, warm gold, Georgia display text, and an Oracle Sans-inspired sans-serif fallback.
+
+Demo Hub details are included in the overview and day pages, with a dedicated `demo-hub.html` page covering the location, opening times, and booth descriptions for 2a, 2b, 7c, and 7d.
