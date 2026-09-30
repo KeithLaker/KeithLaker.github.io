@@ -47,7 +47,7 @@ button, input { font: inherit; }
   backdrop-filter: blur(14px);
 }
 .brand-lockup { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; }
-.brand-mark { display: grid; place-items: center; width: 29px; height: 29px; border: 2px solid var(--gold); border-radius: 50%; color: var(--gold); font-weight: 700; font-size: 11px; letter-spacing: -.06em; }
+.brand-mark { display: grid; place-items: center; width: 29px; height: 29px; border: 2px solid var(--white); border-radius: 50%; color: var(--white); font-weight: 700; font-size: 11px; letter-spacing: -.06em; }
 .brand-copy { display: grid; gap: 1px; line-height: 1.05; }
 .brand-copy strong { font-family: var(--font-display); font-size: 15px; font-weight: 700; }
 .brand-copy span { color: rgba(255,255,255,.68); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }

@@ -39,9 +39,37 @@ window.AI_WORLD_DATA = {
       }
     ]
   },
+  globalLeaders: {
+    title: 'Global Leaders Meeting at Oracle AI World',
+    date: 'Wednesday, October 28, 2026',
+    time: '1:00 PM – 7:30 PM',
+    location: 'Ghostbar, The Palms Hotel',
+    address: '4321 W Flamingo Rd, Las Vegas, NV 89103',
+    overview: 'Join Oracle Global Leaders customers, partners, guests, Oracle staff, and Database Executive Management to close out AI World week, hear database news, provide feedback, and connect with peers and product leaders. The afternoon begins with light fare and meetings, followed by an evening reception.',
+    attendFor: ['Open-door feedback panel with Database Executive Management', 'Presentations from Oracle customers and partners sharing successful data management implementations', 'Recognition of exceptional individuals through the Oracle Global Leaders Awards 2026'],
+    agenda: [
+      { time: '1:00 PM – 1:30 PM', title: 'Networking and Light Refreshments' },
+      { time: '1:30 PM – 1:45 PM', title: 'Welcome and Introduction', detail: 'Reiner Zimmermann · Vice President, Product Management, Oracle Global Leaders Program' },
+      { time: '1:45 PM – 2:45 PM', title: 'Customer Presentations', detail: 'Moderated by Laura McKechnie · Director, Product Management, Oracle Global Leaders Program' },
+      { time: '2:45 PM – 3:00 PM', title: 'Customer Recognition' },
+      { time: '3:00 PM – 3:30 PM', title: 'Break' },
+      { time: '3:30 PM – 4:30 PM', title: 'Open Feedback Panel & Comments', detail: 'Juan Loaiza · Çetin Özbütün · Hasan Rizvi' },
+      { time: '4:30 PM – 7:30 PM', title: 'Reception and Networking' }
+    ],
+    speakers: [
+      { name: 'Juan Loaiza', role: 'Executive Vice President, Mission-Critical Database Technologies, Oracle', image: 'assets/speakers/juan-loaiza.png' },
+      { name: 'Çetin Özbütün', role: 'Executive Vice President – Data Warehouse and Autonomous Database Technologies', image: 'assets/speakers/cetin-ozbutin.jpg' },
+      { name: 'Hasan Rizvi', role: 'Executive Vice President, Database Engineering', image: 'assets/speakers/hasan-rizvi.jpg' },
+      { name: 'Reiner Zimmermann', role: 'Vice President, Product Management, Oracle Global Leaders Program, Oracle', image: 'assets/speakers/reiner-zimmermann.jpg' },
+      { name: 'Laura McKechnie', role: 'Director, Product Management, Oracle Global Leaders Program, Oracle', image: 'assets/speakers/laura-mckechnie.png' }
+    ],
+    overviewUrl: 'https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x977019abcd#Overview',
+    agendaUrl: 'https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x977019abcd#Agenda',
+    speakersUrl: 'https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x977019abcd#Speakers'
+  },
   days: [
     { id: 'sunday', label: 'Sunday', date: 'October 25', pages: '26–30', accent: 'blue' },
-    { id: 'monday', label: 'Monday', date: 'October 26', pages: '32–42', accent: 'red' },
+    { id: 'monday', label: 'Monday', date: 'October 26', pages: '31–42', accent: 'red' },
     { id: 'tuesday', label: 'Tuesday', date: 'October 27', pages: '44–52', accent: 'gold' },
     { id: 'wednesday', label: 'Wednesday', date: 'October 28', pages: '54–64', accent: 'slate' }
   ],
@@ -97,7 +125,15 @@ window.AI_WORLD_DATA = {
       note: 'Bring your laptop to follow along for the best hands-on experience. Laptops are not provided.',
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1783637746024001BdnA'
     },
-
+    {
+      id: 'dba-in-the-driving-seat', day: 'monday', page: 31, kind: 'Session',
+      title: 'DBA in the Drivers Seat: Operating Autonomous AI Database', time: '8:15 AM – 9:00 AM', location: 'Titian 2206, Level 2',
+      description: 'This session explains what Oracle automates, what remains under DBA control, and where expertise delivers the greatest value.',
+      learn: ['How the DBA role changes in an autonomous operating model', 'Which tasks Oracle automates and which remain under DBA control', 'How to govern access and protect sensitive information', 'How to manage environments, workloads, performance, and resources', 'How to support business continuity and higher-value decisions'],
+      speakers: [{ name: 'Yasin Baskan', role: 'Vice President, Product Management, Autonomous AI Database, Oracle' }, { name: 'Mark Carleton', role: 'CEO Mestec'}],
+      area: 'AI Lakehouse, Architecture, Autonomous AI Database, Multicloud Data Platform, Oracle AI Database', audience: 'Beginner', job: 'Developer',
+      aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1784671949704001eaNB'
+    },
     {
       id: 'your-first-enterprise-agent', day: 'monday', page: 32, kind: 'Lab',
       title: 'Your First Enterprise Agent Needs More Than a Prompt: Build It with Select AI', time: '12:00 PM – 1:30 PM', location: 'Casanova 504, Level 1',
