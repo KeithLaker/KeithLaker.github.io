@@ -127,7 +127,7 @@ window.AI_WORLD_DATA = {
     },
     {
       id: 'dba-in-the-driving-seat', day: 'monday', page: 31, kind: 'Session',
-      title: 'DBA in the Drivers Seat: Operating Autonomous AI Database', time: '8:15 AM – 9:00 AM', location: 'Titian 2206, Level 2',
+      title: 'DBA in the Driver\'s Seat: Operating Autonomous AI Database', time: '8:15 AM – 9:00 AM', location: 'Titian 2206, Level 2',
       description: 'This session explains what Oracle automates, what remains under DBA control, and where expertise delivers the greatest value.',
       learn: ['How the DBA role changes in an autonomous operating model', 'Which tasks Oracle automates and which remain under DBA control', 'How to govern access and protect sensitive information', 'How to manage environments, workloads, performance, and resources', 'How to support business continuity and higher-value decisions'],
       speakers: [{ name: 'Yasin Baskan', role: 'Vice President, Product Management, Autonomous AI Database, Oracle' }, { name: 'Mark Carleton', role: 'General Manager, MESTEC division, Eyelit Technologies'}],
