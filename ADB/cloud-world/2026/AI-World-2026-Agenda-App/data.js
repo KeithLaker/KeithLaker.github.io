@@ -69,7 +69,7 @@ window.AI_WORLD_DATA = {
   },
   days: [
     { id: 'sunday', label: 'Sunday', date: 'October 25', pages: '26–30', accent: 'blue' },
-    { id: 'monday', label: 'Monday', date: 'October 26', pages: '31–42', accent: 'red' },
+    { id: 'monday', label: 'Monday', date: 'October 26', pages: '32–42', accent: 'red' },
     { id: 'tuesday', label: 'Tuesday', date: 'October 27', pages: '44–52', accent: 'gold' },
     { id: 'wednesday', label: 'Wednesday', date: 'October 28', pages: '54–64', accent: 'slate' }
   ],
@@ -125,15 +125,7 @@ window.AI_WORLD_DATA = {
       note: 'Bring your laptop to follow along for the best hands-on experience. Laptops are not provided.',
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1783637746024001BdnA'
     },
-    {
-      id: 'dba-in-the-driving-seat', day: 'monday', page: 31, kind: 'Session',
-      title: 'DBA in the Driver\'s Seat: Operating Autonomous AI Database', time: '8:15 AM – 9:00 AM', location: 'Titian 2206, Level 2',
-      description: 'This session explains what Oracle automates, what remains under DBA control, and where expertise delivers the greatest value.',
-      learn: ['How the DBA role changes in an autonomous operating model', 'Which tasks Oracle automates and which remain under DBA control', 'How to govern access and protect sensitive information', 'How to manage environments, workloads, performance, and resources', 'How to support business continuity and higher-value decisions'],
-      speakers: [{ name: 'Yasin Baskan', role: 'Vice President, Product Management, Autonomous AI Database, Oracle' }, { name: 'Mark Carleton', role: 'General Manager, MESTEC division, Eyelit Technologies'}],
-      area: 'AI Lakehouse, Architecture, Autonomous AI Database, Multicloud Data Platform, Oracle AI Database', audience: 'Beginner', job: 'Developer',
-      aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1784671949704001eaNB'
-    },
+
     {
       id: 'your-first-enterprise-agent', day: 'monday', page: 32, kind: 'Lab',
       title: 'Your First Enterprise Agent Needs More Than a Prompt: Build It with Select AI', time: '12:00 PM – 1:30 PM', location: 'Casanova 504, Level 1',
@@ -182,8 +174,8 @@ window.AI_WORLD_DATA = {
     {
       id: 'ai-can-build-it-but-can-you-trust-it', day: 'monday', page: 37, kind: 'Session',
       title: 'AI Can Build It, But Can You Trust It? Data Is the Key', time: '2:00 PM – 2:45 PM', location: 'Venetian Ballroom G, Level 2',
-      description: 'AI can now build solutions in minutes. Discover how Oracle AI Database’s Deep-Trust AI Architecture accelerates AI innovation while ensuring security, accuracy, and governance are not bypassed or compromised.',
-      learn: [],
+      description: 'AI can now build solutions in minutes. But how can enterprises trust them?',
+      learn: ['Join Juan to discover how Oracle AI Database’s Deep-Trust AI Architecture accelerates AI innovation while ensuring security, accuracy, and governance are not bypassed or compromised.'],
       speakers: [{ name: 'Juan Loaiza', role: 'EVP, Oracle Database Technologies' }],
       area: 'AI trust, security, accuracy, governance', audience: 'General audience', job: 'Technology leaders and AI decision-makers',
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1788897463251001HMSd'

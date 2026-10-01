@@ -1,0 +1,22 @@
+/* Small additions for the two ready-to-drop session pages. The shared styles.css
+   is copied from the existing AI World agenda app. */
+.session-page .topbar { position: relative; }
+.session-page .hero-session { min-height: 370px; }
+.session-page .hero-session p.session-lead { max-width: 850px; margin-top: 21px; color: rgba(255,255,255,.78); font-size: 16px; line-height: 1.45; }
+.session-page .detail-layout { grid-template-columns: minmax(0, 1.45fr) minmax(260px, .68fr); }
+.session-page .speaker-feature { display: grid; grid-template-columns: minmax(220px, 300px) 1fr; align-items: center; gap: 30px; padding: 5px 0 0; }
+.session-page .speaker-feature img { width: 100%; aspect-ratio: 1 / 1; border-radius: 2px; object-fit: cover; object-position: center top; background: var(--mist); }
+.session-page .speaker-feature-copy { display: grid; gap: 8px; }
+.session-page .speaker-feature-copy .speaker-name { margin: 0; color: var(--deep); font-size: clamp(24px, 3vw, 36px); font-weight: 700; line-height: 1.08; }
+.session-page .speaker-feature-copy .speaker-role { margin: 0; color: var(--muted); font-size: 18px; line-height: 1.35; }
+.session-page .profile-card .meta-block dd { line-height: 1.4; }
+.session-page .source-link { min-height: 58px; }
+.session-page .footer { margin-top: 10px; }
+@media (max-width: 900px) {
+  .session-page .speaker-feature { grid-template-columns: minmax(180px, 260px) 1fr; }
+}
+@media (max-width: 640px) {
+  .session-page .hero-session { min-height: 440px; }
+  .session-page .speaker-feature { grid-template-columns: 1fr; gap: 20px; }
+  .session-page .speaker-feature img { max-width: 290px; }
+}

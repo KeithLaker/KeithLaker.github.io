@@ -10,7 +10,11 @@
   const initials = (name) => name.split(/\s+/).filter(Boolean).slice(0, 2).map((part) => part[0]).join('').toUpperCase();
   const href = (path) => `${root}${path}`;
   const dayHref = (dayId) => href(`${dayId}.html`);
-  const sessionHref = (sessionId) => href(`sessions/${sessionId}/index.html`);
+
+  const specialSessionRoutes = {'production-ai-starts-with-the-data-foundation': 'cetin-ozbutun-session.html','ai-can-build-it-but-can-you-trust-it': 'juan-loaiza-session.html'};
+  const sessionHref = (sessionId) => href(specialSessionRoutes[sessionId] ?? `sessions/${sessionId}/index.html`);
+
+  const sessionHref2 = (sessionId) => sessionId === 'oracle-global-leaders-ai-world-event' ? href('global-leaders.html') : href(`sessions/${sessionId}/index.html`);
   const day = (dayId) => dayMap[dayId];
   const sessionsFor = (dayId) => data.sessions.filter((session) => session.day === dayId);
 
@@ -18,7 +22,7 @@
     return `<header class="topbar">
       <a class="brand-lockup" href="${href('index.html')}">
         <span class="brand-mark">AI</span>
-        <span class="brand-copy"><strong>Oracle AI World</strong></span>
+        <span class="brand-copy"><strong>Oracle AI World</strong><span>Deep Data Dive Guide</span></span>
       </a>
       <nav class="topbar-links" aria-label="Day navigation">
         <a href="${href('index.html')}" ${active === 'home' ? 'aria-current="page"' : ''}>Overview</a>
@@ -44,7 +48,7 @@
         <div class="crumbs"><a href="${href('index.html')}">Overview</a><span>/</span><span>${esc(item.label)}</span></div>
         <p class="eyebrow">${esc(item.date)} · AI World 2026</p>
         <h1>${esc(item.label)} agenda</h1>
-        <p>Plan a focused day of hands-on labs, architecture sessions, customer stories, and AI database demos.</p>
+        <p>Plan a focused day of hands-on labs, architecture sessions, customer stories, and AI database demos.</p><p style="font-size: 0.8em !important; color: gold!important;"><trong>Note</strong>: session times and locations can be subject to last minute changes so use the built-in links to check the official online page for each session.</p>
         ${statStrip([
           { value: daySessions.length, label: 'sessions' },
           { value: first, label: 'first start' },
@@ -123,7 +127,7 @@
     document.title = 'Autonomous AI Database Data Deep Dive · AI World 2026';
     const total = data.sessions.length;
     app.innerHTML = `${topbar('home')}
-      <section class="hero"><div class="hero-inner"><p class="eyebrow">${esc(data.event.kicker)}</p><h1>Data Deep Dive, mapped for your week.</h1><p>A visual agenda for the Oracle Autonomous AI Database sessions in the supplied AI World 2026 guide — with every session detail one click away.</p><div class="hero-actions"><a class="btn btn-primary" href="${dayHref('sunday')}">Start with Sunday →</a><a class="btn btn-secondary" href="#days">Browse all days</a><a class="btn btn-secondary" href="https://objectstorage.uk-london-1.oraclecloud.com/p/e9BiGj_0hmSJy03G0KuBjhX1QrEFhhMk3gUKpfEbXImUx98nDdRgkGxevWX305Gn/n/adwc4pm/b/AIW-2026/o/Autonomous-AI-Database-Deep-Dive-AI-World-2026.pdf">Download PDF Guide</a></div>${statStrip([{ value: total, label: 'sessions mapped' }, { value: data.days.length, label: 'agenda days' }, { value: '1 click', label: 'to AI World details' }])}</div></section>
+      <section class="hero"><div class="hero-inner"><p class="eyebrow">${esc(data.event.kicker)}</p><h1>Data Deep Dive, mapped for your week.</h1><p>A visual agenda for the Oracle Autonomous AI Database sessions in the supplied AI World 2026 guide — with every session detail one click away.</p><div class="hero-actions"><a class="btn btn-primary" href="${dayHref('sunday')}">Start with Sunday →</a><a class="btn btn-secondary" href="#days">Browse all days</a></div>${statStrip([{ value: total, label: 'sessions mapped' }, { value: data.days.length, label: 'agenda days' }, { value: '1 click', label: 'to AI World details' }])}</div></section>
       <main><section class="section"><div class="home-intro"><div><p class="micro-label">One guide, four focused days</p><div class="section-head" style="margin-bottom:12px"><h2>Build the right AI foundation.</h2></div><p>Use this companion to scan the schedule, compare formats, and jump directly to the official Oracle AI World catalog entry for each session. The interface follows the supplied PowerPoint’s dark teal, sky blue, Oracle red, warm gold, and Arial typography.</p></div><aside class="callout"><h3>Go beyond the prompt.</h3><p>From trusted data foundations and vector search to multicloud operations and production-ready agents, the program is organized around the decisions that make enterprise AI real.</p></aside></div></section><section class="section tight" id="days"><div class="section-head"><div><p class="micro-label">The week at a glance</p><h2>Choose a day</h2></div><p>Jump into a day to filter by session type or search the entire lineup.</p></div>${dayCards()}</section><section class="section tight hub-section" id="demo-hub"><div class="section-head"><div><p class="micro-label">Explore, try, talk</p><h2>AI World Demo Hub</h2></div><p>The place to meet Oracle development and product management experts, explore demos, and talk through the capabilities behind meaningful business outcomes.</p></div><div class="hub-layout"><div class="hub-card hub-location"><p class="micro-label">Location</p><strong>${esc(data.demoHub.location)}</strong><span>${esc(data.demoHub.booths)}</span></div><div class="hub-card"><p class="micro-label">Opening times</p><div class="hub-hours">${data.days.map((item) => `<div><strong>${esc(item.label)}</strong><span>${esc(data.demoHub.hours[item.id])}</span></div>`).join('')}</div></div></div><a class="btn btn-ghost hub-link" href="${href('demo-hub.html')}">Explore the four demo booths →</a></section></main>${footer()}`;
   }
 
@@ -152,7 +156,7 @@
     const dayItem = day(session.day);
     document.title = `${session.title} · Oracle AI World 2026`;
     app.innerHTML = `${topbar(session.day)}
-      <section class="hero compact hero-session"><div class="hero-inner"><div class="crumbs"><a href="${href('index.html')}">Overview</a><span>/</span><a href="${dayHref(session.day)}">${esc(dayItem.label)} agenda</a><span>/</span><span>Session detail</span></div><span class="badge">${esc(session.kind)}</span><h1>${esc(session.title)}</h1><div class="hero-meta"><span><b>◷</b>${esc(session.time)}</span><span><b>⌖</b>${esc(session.location)}</span></div></div></section>
+      <section class="hero compact hero-session"><div class="hero-inner"><div class="crumbs"><a href="${href('index.html')}">Overview</a><span>/</span><a href="${dayHref(session.day)}">${esc(dayItem.label)} agenda</a><span>/</span><span>Session detail</span></div><span class="badge">${esc(session.kind)}</span><h1>${esc(session.title)}</h1><div class="hero-meta"><span><b>◷</b>${esc(session.time)}</span><span><b>⌖</b>${esc(session.location)}</span></div><p style="font-size: 0.8em !important; color: gold !important;">Note: session times and locations can be subject to last minute changes so use the built-in links to check the official online page for each session.</p></div></section>
       <main class="section"><div class="detail-layout"><div class="detail-main"><article class="detail-card"><p class="micro-label">Session highlights</p><h2>What this session is about</h2><p>${esc(session.description)}</p></article>${session.learn.length ? `<article class="detail-card"><h3>What you will learn</h3><ul>${session.learn.map((item) => `<li>${esc(item)}</li>`).join('')}</ul></article>` : ''}${session.note ? `<article class="detail-card note-box"><h3>Good to know</h3><p>${esc(session.note)}</p></article>` : ''}</div><aside class="detail-side"><div class="detail-card"><h3>Speakers</h3><div class="speaker-list">${session.speakers.map((speaker) => `<div class="speaker"><div class="speaker-avatar">${esc(initials(speaker.name))}</div><div><strong>${esc(speaker.name)}</strong><span>${esc(speaker.role)}</span></div></div>`).join('')}</div></div><div class="detail-card"><h3>Session profile</h3><dl class="meta-grid">${metaBlock('Area of interest', session.area)}${metaBlock('Audience level', session.audience)}${metaBlock('Job role', session.job)}</dl></div><div class="detail-card"><h3>Continue to Oracle AI World</h3><a class="source-link" href="${esc(session.aiWorldUrl)}" target="_blank" rel="noopener">Open official session page <span>↗</span></a></div></aside></div></main>${footer()}`;
   }
 
