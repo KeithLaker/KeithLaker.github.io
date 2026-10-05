@@ -1,7 +1,7 @@
 window.AI_WORLD_DATA = {
   event: {
-    name: 'Autonomous AI Database Data Deep Dive',
-    shortName: 'Data Deep Dive',
+    name: 'Global Leaders Autonomous AI Database Data Deep Dive',
+    shortName: 'Global Leaders Data Deep Dive',
     edition: 'AI World 2026',
     kicker: 'Oracle AI World · Las Vegas',
     source: 'Autonomous-AI-Database-Deep-Dive-AI-World-2026.pdf'
