@@ -68,9 +68,9 @@ window.AI_WORLD_DATA = {
     speakersUrl: 'https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x977019abcd#Speakers'
   },
   days: [
-    { id: 'sunday', label: 'Sunday', date: 'October 25', pages: '26–30', accent: 'blue' },
+    { id: 'sunday', label: 'Sunday', date: 'October 25', pages: '26–31', accent: 'blue' },
     { id: 'monday', label: 'Monday', date: 'October 26', pages: '32–42', accent: 'red' },
-    { id: 'tuesday', label: 'Tuesday', date: 'October 27', pages: '44–52', accent: 'gold' },
+    { id: 'tuesday', label: 'Tuesday', date: 'October 27', pages: '43–52', accent: 'gold' },
     { id: 'wednesday', label: 'Wednesday', date: 'October 28', pages: '54–64', accent: 'slate' }
   ],
   sessions: [
@@ -125,7 +125,16 @@ window.AI_WORLD_DATA = {
       note: 'Bring your laptop to follow along for the best hands-on experience. Laptops are not provided.',
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1783637746024001BdnA'
     },
-
+    {
+      id: 'make-document-answers-traceable', day: 'sunday', page: 31, kind: 'Lab',
+      title: 'Make Document Answers Traceable: Build AI Agents with Knowledge Graphs', time: '4:00 PM – 5:30 PM', location: 'Casanova 602, Level 1',
+      description: 'Document analysis for regulatory review can be time-consuming, difficult to validate, and hard to explain. Large language models can process long documents quickly, but their answers may not be reproducible without traceable evidence.',
+      learn: ['How to extract an RDF knowledge graph from a document', 'How to represent document content and structure for traceable analysis', 'How to query a graph for precise, repeatable review results', 'How knowledge graphs support security and governance workflows'],
+      speakers: [{ name: 'Siva Ravada', role: 'VP, Data Systems Engineering, Oracle'}, { name: 'Matt Perry', role: 'Lead Principal Data Systems Engineer, Oracle'}],
+      area: 'AI, AI Agents, Autonomous AI Database, Oracle AI Database', audience: 'Beginner (New user of Oracle)', job: 'Developer',
+      note: 'Bring your laptop to follow along for the best hands-on experience. Laptops are not provided.',
+      aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1783457519407001Rcco'
+    },
     {
       id: 'your-first-enterprise-agent', day: 'monday', page: 32, kind: 'Lab',
       title: 'Your First Enterprise Agent Needs More Than a Prompt: Build It with Select AI', time: '12:00 PM – 1:30 PM', location: 'Casanova 504, Level 1',
@@ -227,13 +236,22 @@ window.AI_WORLD_DATA = {
     },
 
     {
-      id: 'unified-intelligence-with-federated-data', day: 'tuesday', page: 44, kind: 'Session',
+      id: 'unified-intelligence-with-federated-data', day: 'tuesday', page: 43, kind: 'Session',
       title: 'Unified Intelligence with Federated Data: Introducing Live AI Hub', time: '8:00 AM – 8:45 AM', location: 'Marco Polo 705, Level 1',
       description: 'Through practical examples, see how to federate and enrich enterprise data with metadata and business semantics, create a trusted foundation for AI, and design AI products for enterprise security, scalability, and resilience.',
       learn: ['How Live AI Hub accelerates the path from AI idea to production', 'How to work with data across distributed environments', 'How to enrich data with metadata and business semantics', 'How to establish a trusted foundation for enterprise AI', 'How to design AI products for security, scalability, and resilience'],
       speakers: [{ name: 'Massimo Castelli', role: 'Vice President, AI & Data Platform Strategy, Oracle' }, { name: 'Jose Cruz', role: 'Senior Product Management Director, Data Strategy and Architecture, Oracle' }],
       area: 'AI, AI Agents, AI Lakehouse, Architecture, Autonomous AI Database, Oracle AI Database', audience: 'Intermediate (1–5 yrs user of Oracle)', job: 'Business Manager, Developer, Tech IT',
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1785278613329001KiKc'
+    },
+    {
+      id: 'unify-fragmented-enterprise-data', day: 'tuesday', page: 44, kind: 'Session',
+      title: 'Customer Success: Unifying Fragmented Enterprise Data at a Fraction of the Cost', time: '8:00 AM – 8:45 AM', location: 'Marco Polo 807, Level 1',
+      description: 'Learn how Industrial Scientific, a global leader in gas detection and worker safety, uses Oracle\'s converged database to solve complex data integration challenges while reducing cost and accelerating application development.',
+      learn: ['How a converged database can simplify complex data integration', 'How graph, vector, and spatial capabilities work together', 'How unified data can improve governance and customer outcomes', 'How to reduce platform costs while accelerating delivery', 'How to reconcile business data after a merger'],
+      speakers: [{ name: 'Melli Annamalai', role: 'Product Management Architect, Oracle' }, { name: 'Korbi Schmid', role: 'Director of Software Development, Oracle'}, { name: 'Phani Chilakapati', role: 'Global Data Architecture Leader, Industrial Scientific'}],
+      area: 'AI, AI Agents, AI Lakehouse, Architecture, Autonomous AI Database, Oracle AI Database', audience: 'Beginner', job: 'Business Manager, Developer, Tech IT',
+      aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1785279231069001Pjw3'
     },
     {
       id: 'put-oracle-operational-data-to-work', day: 'tuesday', page: 45, kind: 'Session',
@@ -380,8 +398,8 @@ window.AI_WORLD_DATA = {
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1783540984440001Gsjo'
     },
     {
-      id: 'analytical-ai-build-the-model', day: 'wednesday', page: 62, kind: 'Theater',
-      title: 'Analytical AI: Build the Model. Ask the Lakehouse', time: '12:20 AM – 12:40 PM', location: 'Theater 2, Oracle AI World Hub',
+      id: 'learn-how-agents-reason', day: 'wednesday', page: 62, kind: 'Theater',
+      title: 'This session explores how AI agents can help evaluate candidate locations by combining the factors experienced teams consider while reducing manual analysis', time: '1:00 PM – 1:20 PM', location: 'Theater 3, Oracle AI World Hub',
       description: 'Follow a sales scenario in which AI-assisted modeling creates Analytic Views and Essbase cubes, then use conversational questions to explore a multidimensional what-if analysis.',
       learn: ['How to extend Oracle data and reporting investments with AI', 'How AI-assisted modeling creates Analytic Views and Essbase cubes', 'How to use conversational analytics for multidimensional what-if analysis', 'How semantic models preserve business meaning', 'How MCP and A2A patterns connect and coordinate analytical agents'],
       speakers: [{ name: 'Ekrem Soylemez', role: 'VP, Data Systems Engineering, Oracle' }],
@@ -390,7 +408,17 @@ window.AI_WORLD_DATA = {
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1789534256917001loWV'
     },
     {
-      id: 'oracle-global-leaders-ai-world-event', day: 'wednesday', page: 64, kind: 'Event',
+      id: 'agents-reason-with-location', day: 'wednesday', page: 63, kind: 'Theater',
+      title: 'Learn How Agents Reason with Location and Other Data Types in AI Lakehouse', time: '1:00 PM – 1:20 PM', location: 'Theater 3, Oracle AI World Hub',
+      description: 'Join us to learn how AI agents can help evaluate candidate locations by bringing together many of the factors an experienced team would consider, while reducing manual effort',
+      learn: ['How AI agents support data-driven site selection', 'How to combine business, spatial, and market data', 'How to analyze information across multiple formats and sources', 'How agents compare candidate locations and surface trade-offs', 'How supporting evidence strengthens location decisions'],
+      speakers: [{ name: 'Melli Annamalai', role: 'Product Management Architect, Oracle'}, { name: 'David Lapp', role: 'Product Management Architect, Oracle'}],
+      area: 'AI, AI Agents, AI Lakehouse, Analytics', audience: 'Intermediate (1–5 yrs user of Oracle)', job: 'Business End User, Business Manager, Database Administrator, Tech IT',
+      note: 'Time is shown as printed in the source guide.',
+      aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1785279050873001W9cR'
+    },
+   {
+      id: 'oracle-global-leaders-ai-world-event', day: 'wednesday', page: 65, kind: 'Event',
       title: 'Oracle Global Leaders AI World Event', time: '1:00 PM – 7:30 PM', location: 'Ghostbar, The Palms Hotel',
       description: 'Join Oracle Global Leaders customers, partners, guests, Oracle staff, and Database Executive Management to sum up the week, hear database news, provide feedback, and connect with peers and product leaders.',
       learn: ['Open-door feedback panel with Database Executive Management', 'Presentations from customers and partners sharing successful data management implementations', 'Recognition of exceptional individuals through the Oracle Global Leaders Awards 2026', 'Time to reflect, unwind, and liaise with Oracle development and product management teams'],
