@@ -246,7 +246,7 @@ window.AI_WORLD_DATA = {
     },
     {
       id: 'no-need-to-move-your-data', day: 'tuesday', page: 46, kind: 'Session',
-      title: 'No Need to Move Your Data for AI Agents: Build Them with Autonomous AI Lakehouse', time: '1:00 PM – 1:45 PM', location: 'Location not listed in source',
+      title: 'Autonomous AI Lakehouse: What\'s New and What\'s Different', time: '1:00 PM – 1:45 PM', location: 'Location not listed in source',
       description: 'Explore how Autonomous AI Lakehouse connects private enterprise data to agentic AI across live sources, including object stores, databases, other clouds, and SaaS applications.',
       learn: ['Why context, semantics, governance, and reliable pipelines matter for agents', 'How to connect agentic AI to live enterprise data sources', 'How catalogs and semantic layers improve data discovery and meaning', 'How open Iceberg support and unified security support interoperability and control', 'How Exadata performance can support AI workloads across multicloud environments'],
       speakers: [{ name: 'Nipun Argarwal', role: 'SVP, Software Engineering, Database' }],
@@ -300,14 +300,13 @@ window.AI_WORLD_DATA = {
     },
     {
       id: 'production-ai-starts-with-the-data-foundation', day: 'tuesday', page: 52, kind: 'Session',
-      title: 'Production AI Starts with the Data Foundation!', time: '2:15 PM – 3:00 PM', location: 'Marco Polo 705, Level 1',
-      description: 'Discover how Oracle Autonomous AI Database provides a trusted foundation for mission-critical AI with built-in AI capabilities, vector indexing, and the new Autonomous AI Vector Database service.',
-      learn: ['How Oracle Autonomous AI Database combines high performance, deep data security, resilience, and automated operations', 'How to dynamically scale resources for changing workloads', 'How to modernize existing data platforms or develop next-generation AI applications', 'How to build, deploy, and scale AI-powered applications with confidence'],
-      speakers: [{ name: 'Cetin Ozbutun', role: 'EVP, Product and Research, Data Lakehouse and Autonomous AI Database' }],
+      title: 'Autonomous AI Database: The Mission-Critical Backbone for Enterprise AI', time: '2:15 PM – 3:00 PM', location: 'Marco Polo 705, Level 1',
+      description: 'AI is transforming how organizations build applications, make decisions, and operate. Agentic AI is reshaping how enterprises design, deploy and run modern applications.',
+      learn: ['How Autonomous AI Database provides enterprise-grade security, resilience, elastic scaling,for mission-critical workloads', 'How to simplify and automate the process of move existing workloads to Autonomous AI Database', 'How Autonomous AI Database helps organizations run modern AI-driven mission-critical applications on a trusted cost-effective enterprise backbone ', 'How to build, deploy, and scale AI-powered applications with confidence', 'How to you can deploy Autonomous AI Database in any cloud or even your own data center'],
+      speakers: [{ name: 'Cetin Ozbutun', role: 'EVP, Product and Research, Data Lakehouse and Autonomous AI Database' }, { name: 'Erich Steiger', role: 'Lead Database Architect, TWINT AG' }],
       area: 'Autonomous AI Database, AI foundation, security, resilience, scale', audience: 'General Audience', job: 'Technology leaders and AI builders',
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1785277712412001oJcW'
     },
-
     {
       id: 'what-should-you-migrate-first', day: 'wednesday', page: 54, kind: 'Session',
       title: 'What Should You Migrate First? Find It, Move It, Modernize It', time: '9:00 AM – 9:45 AM', location: 'Galileo 904, Level 1',
