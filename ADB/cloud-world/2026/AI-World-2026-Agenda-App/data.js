@@ -69,8 +69,8 @@ window.AI_WORLD_DATA = {
   },
   days: [
     { id: 'sunday', label: 'Sunday', date: 'October 25', pages: '26–31', accent: 'blue' },
-    { id: 'monday', label: 'Monday', date: 'October 26', pages: '32–42', accent: 'red' },
-    { id: 'tuesday', label: 'Tuesday', date: 'October 27', pages: '43–52', accent: 'gold' },
+    { id: 'monday', label: 'Monday', date: 'October 26', pages: '32–43', accent: 'red' },
+    { id: 'tuesday', label: 'Tuesday', date: 'October 27', pages: '44–52', accent: 'gold' },
     { id: 'wednesday', label: 'Wednesday', date: 'October 28', pages: '54–64', accent: 'slate' }
   ],
   sessions: [
@@ -145,7 +145,17 @@ window.AI_WORLD_DATA = {
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1783538699580001OA1t'
     },
     {
-      id: 'customer-panel-from-automation-to-autonomy', day: 'monday', page: 33, kind: 'Session',
+      id: 'no-need-to-move-your-data', day: 'monday', page: 33, kind: 'Session',
+      title: 'Autonomous AI Lakehouse: What\'s New and What\'s Different', time: '11:30 AM – 12:15 PM', location: 'Titian 2204, Level 2',
+      description: 'Explore how Autonomous AI Lakehouse connects private enterprise data to agentic AI across live sources, including object stores, databases, other clouds, and SaaS applications.',
+      learn: ['Why context, semantics, governance, and reliable pipelines matter for agents', 'How to connect agentic AI to live enterprise data sources', 'How catalogs and semantic layers improve data discovery and meaning', 'How open Iceberg support and unified security support interoperability and control', 'How Exadata performance can support AI workloads across multicloud environments'],
+      speakers: [{ name: 'Nipun Argarwal', role: 'SVP, Software Engineering, Database' }],
+      area: 'AI, AI Agents, Autonomous AI Database, Oracle AI Database', audience: 'Intermediate (1–5 yrs user of Oracle)', job: 'Business Manager, Database Administrator, Developer, Tech IT',
+      aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1785276532180001RVMt'
+    },
+  
+  {
+      id: 'customer-panel-from-automation-to-autonomy', day: 'monday', page: 34, kind: 'Session',
       title: 'Customer Panel: From Automation to Autonomy, Real Transformation Journey', time: '12:45 PM – 1:30 PM', location: 'Bellini 2002, Level 2',
       description: 'Hear from senior technology leaders as they share how their organizations are rethinking enterprise cloud strategies with AI and autonomous operations. A moderated discussion explores architecture, governance, risk, skills, and organizational change, followed by audience Q&A.',
       learn: [],
@@ -154,7 +164,7 @@ window.AI_WORLD_DATA = {
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1785276949202001nDuf'
     },
     {
-      id: 'let-coding-agents-talk-to-the-database', day: 'monday', page: 34, kind: 'Session',
+      id: 'let-coding-agents-talk-to-the-database', day: 'monday', page: 35, kind: 'Session',
       title: 'Let Coding Agents Talk to the Database: Faster Development with MCP', time: '12:45 PM – 1:30 PM', location: 'Marco Polo 806, Level 1',
       description: 'A product roadmap, live demonstration, and customer case study focused on productivity gains and lessons learned from connecting AI coding agents to Oracle AI Database.',
       learn: ['How MCP Servers connect AI coding agents to Oracle AI Database', 'How database context improves debugging and SQL optimization', 'How to streamline code changes with operational insights', 'Practical lessons from Oracle and MineSense', 'What’s next on the product roadmap'],
@@ -163,7 +173,7 @@ window.AI_WORLD_DATA = {
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1781166155400001GO5L'
     },
     {
-      id: 'building-a-foundation-for-ai-world-bank', day: 'monday', page: 35, kind: 'Theater',
+      id: 'building-a-foundation-for-ai-world-bank', day: 'monday', page: 36, kind: 'Theater',
       title: 'Building a Foundation for AI: The World Bank Modernization Journey', time: '12:50 PM – 1:10 PM', location: 'Theater 2, Customer Success Central, The Hub',
       description: 'Practical guidance for improving operational agility and preparing for what comes next with a scalable data foundation.',
       learn: ['How to align technology performance with business outcomes using SLOs', 'How OCI and Customer Success Services support modernization', 'How Oracle AI Data Platform and OCI Lakehouse enable scalable data foundations', 'Practical approaches to improving operational agility', 'How to prepare data and technology environments for future AI use cases'],
@@ -172,7 +182,7 @@ window.AI_WORLD_DATA = {
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1784400038648001pmY6'
     },
     {
-      id: 'modernizing-at-scale-mitratech', day: 'monday', page: 36, kind: 'Theater',
+      id: 'modernizing-at-scale-mitratech', day: 'monday', page: 37, kind: 'Theater',
       title: 'Modernizing at Scale: MitraTech’s Journey to an AI-Ready Platform', time: '1:30 PM – 1:50 PM', location: 'Theater 1, Customer Success Central, The Hub',
       description: 'Practical lessons and strategies for building a resilient, AI-ready platform.',
       learn: ['How OCI and OKE support scalable cloud-native operations', 'How Oracle AI Data Platform and AI Lakehouse enable a unified data foundation', 'How to optimize cloud costs while improving operational efficiency', 'How to prepare enterprise platforms for analytics, automation, and AI', 'Strategies for building resilience and accelerating modernization'],
@@ -181,7 +191,7 @@ window.AI_WORLD_DATA = {
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1784407703270001I2NO'
     },
     {
-      id: 'ai-can-build-it-but-can-you-trust-it', day: 'monday', page: 37, kind: 'Session',
+      id: 'ai-can-build-it-but-can-you-trust-it', day: 'monday', page: 38, kind: 'Session',
       title: 'AI Can Build It, But Can You Trust It? Data Is the Key', time: '2:00 PM – 2:45 PM', location: 'Venetian Ballroom G, Level 2',
       description: 'AI can now build solutions in minutes. But how can enterprises trust them?',
       learn: ['Join Juan to discover how Oracle AI Database’s Deep-Trust AI Architecture accelerates AI innovation while ensuring security, accuracy, and governance are not bypassed or compromised.'],
@@ -190,7 +200,7 @@ window.AI_WORLD_DATA = {
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1788897463251001HMSd'
     },
     {
-      id: 'modernizing-airline-operations', day: 'monday', page: 38, kind: 'Theater',
+      id: 'modernizing-airline-operations', day: 'monday', page: 39, kind: 'Theater',
       title: 'Modernizing Airline Operations with Exadata Cloud@Customer and AI', time: '2:10 PM – 2:30 PM', location: 'Theater 4, Customer Success Central, The Hub',
       description: 'See how Oracle AI Data Platform and AI Lakehouse capabilities unify operational and analytical data to support predictive maintenance, operational intelligence, and future AI initiatives.',
       learn: ['How to modernize critical database infrastructure while maintaining reliability', 'How Exadata Cloud@Customer, Customer Success Services, and ExaCare support transformation', 'How OCI can improve performance, availability, and operational efficiency', 'How a unified data foundation enables predictive maintenance and operational intelligence', 'How to prepare for scalable enterprise AI'],
@@ -199,7 +209,7 @@ window.AI_WORLD_DATA = {
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1784344974059001WqoY'
     },
     {
-      id: 'ai-and-ml-in-your-database', day: 'monday', page: 39, kind: 'Session',
+      id: 'ai-and-ml-in-your-database', day: 'monday', page: 40, kind: 'Session',
       title: 'AI and ML in your database: What’s New and What’s Next', time: '3:15 PM – 4:00 PM', location: 'Marco Polo 803, Level 1',
       description: 'Explore what’s new and next for AI and machine learning in Oracle Autonomous AI Database and Oracle AI Database.',
       learn: ['What’s new in Oracle Database AI and machine learning capabilities', 'How to use Select AI and the Select AI Agent Framework', 'How built-in MCP and A2A Servers support connected AI applications', 'How Oracle Machine Learning enables in-database development', 'How security and governance support responsible AI adoption', 'When keeping sensitive data in the database can improve control and compliance'],
@@ -208,7 +218,7 @@ window.AI_WORLD_DATA = {
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1784567626679001aOex'
     },
     {
-      id: 'building-a-data-fabric-with-goldengate', day: 'monday', page: 40, kind: 'Session',
+      id: 'building-a-data-fabric-with-goldengate', day: 'monday', page: 41, kind: 'Session',
       title: 'Building a Data Fabric with GoldenGate, an AI Truth Layer for Data', time: '3:15 PM – 4:00 PM', location: 'Galileo 902, Level 1',
       description: 'Explore how Oracle GoldenGate supports a multicloud Data Fabric by connecting distributed data sources and moving changes across supported hybrid and multicloud environments.',
       learn: ['How Oracle GoldenGate connects distributed data sources', 'How change data movement supports hybrid and multicloud environments', 'Key capabilities and architecture of a multicloud Data Fabric', 'How timely data can support analytics, AI, and operational decision-making', 'Practical ways to build a more connected data foundation'],
@@ -217,7 +227,7 @@ window.AI_WORLD_DATA = {
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1785278825118001tmuE'
     },
     {
-      id: 'build-trusted-apps-faster-with-apex', day: 'monday', page: 41, kind: 'Session',
+      id: 'build-trusted-apps-faster-with-apex', day: 'monday', page: 42, kind: 'Session',
       title: 'Build Trusted Apps Faster with New AI Features in Oracle APEX', time: '3:15 PM – 4:00 PM', location: 'Galileo 907, Level 1',
       description: 'Explore how Oracle APEX 26.2 brings built-in AI capabilities to applications, enabling more natural and intelligent interactions with enterprise data.',
       learn: ['How to add natural-language and conversational AI to APEX apps', 'How AI agents and tools securely access enterprise data', 'How to build intelligent dashboards, summaries, widgets, and reports', 'How agentic workflows can automate tasks and interactions', 'How RAG and AI Vector Search improve responses using private enterprise data'],
@@ -226,7 +236,7 @@ window.AI_WORLD_DATA = {
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1785276266114001jmHT'
     },
     {
-      id: 'build-ai-agents-on-enterprise-data', day: 'monday', page: 42, kind: 'Lab',
+      id: 'build-ai-agents-on-enterprise-data', day: 'monday', page: 43, kind: 'Lab',
       title: 'Build AI Agents on Enterprise Data with Oracle AI Lakehouse', time: '4:00 PM – 5:30 PM', location: 'Casanova 507, Level 1',
       description: 'Explore how Oracle AI Lakehouse brings together data from Oracle databases and other supported sources while preserving the context needed for accurate analytics and AI-powered insights.',
       learn: ['How to discover and work with data from multiple sources', 'How a unified catalog supports data management and governance', 'How to build an AI agent grounded in enterprise data', 'How to create AI-powered analytics using trusted business data', 'How Oracle AI Lakehouse connects data while retaining relevant business context'],
@@ -236,7 +246,7 @@ window.AI_WORLD_DATA = {
     },
 
     {
-      id: 'unified-intelligence-with-federated-data', day: 'tuesday', page: 43, kind: 'Session',
+      id: 'unified-intelligence-with-federated-data', day: 'tuesday', page: 44, kind: 'Session',
       title: 'Unified Intelligence with Federated Data: Introducing Live AI Hub', time: '8:00 AM – 8:45 AM', location: 'Marco Polo 705, Level 1',
       description: 'Through practical examples, see how to federate and enrich enterprise data with metadata and business semantics, create a trusted foundation for AI, and design AI products for enterprise security, scalability, and resilience.',
       learn: ['How Live AI Hub accelerates the path from AI idea to production', 'How to work with data across distributed environments', 'How to enrich data with metadata and business semantics', 'How to establish a trusted foundation for enterprise AI', 'How to design AI products for security, scalability, and resilience'],
@@ -245,7 +255,7 @@ window.AI_WORLD_DATA = {
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1785278613329001KiKc'
     },
     {
-      id: 'unify-fragmented-enterprise-data', day: 'tuesday', page: 44, kind: 'Session',
+      id: 'unify-fragmented-enterprise-data', day: 'tuesday', page: 45, kind: 'Session',
       title: 'Customer Success: Unifying Fragmented Enterprise Data at a Fraction of the Cost', time: '8:00 AM – 8:45 AM', location: 'Marco Polo 807, Level 1',
       description: 'Learn how Industrial Scientific, a global leader in gas detection and worker safety, uses Oracle\'s converged database to solve complex data integration challenges while reducing cost and accelerating application development.',
       learn: ['How a converged database can simplify complex data integration', 'How graph, vector, and spatial capabilities work together', 'How unified data can improve governance and customer outcomes', 'How to reduce platform costs while accelerating delivery', 'How to reconcile business data after a merger'],
@@ -254,22 +264,13 @@ window.AI_WORLD_DATA = {
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1785279231069001Pjw3'
     },
     {
-      id: 'put-oracle-operational-data-to-work', day: 'tuesday', page: 45, kind: 'Session',
+      id: 'put-oracle-operational-data-to-work', day: 'tuesday', page: 46, kind: 'Session',
       title: 'Put Oracle Operational Data to Work for AI', time: '10:30 AM – 11:15 AM', location: 'Galileo 904, Level 1',
       description: 'Practical approaches for securely enabling governed analysis and AI while Oracle Database remains the system of record.',
       learn: ['How Oracle AI Lakehouse extends analytics and AI to existing Oracle data', 'How to avoid unnecessary database migration or application changes', 'How to apply governance and security to Oracle data used for AI', 'How to keep Oracle Database as the system of record', 'Practical strategies for modernizing analytics while protecting operational stability'],
       speakers: [{ name: 'Ashish Mittal', role: 'Vice president, Oracle' }, { name: 'Ekrem Soylemez', role: 'VP, Data Systems Engineering, Oracle' }],
       area: 'AI, AI Lakehouse, Oracle AI Database', audience: 'Intermediate (1–5 yrs user of Oracle)', job: 'Database Administrator, Tech End User, Tech IT',
       aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1786024465392001kgWk'
-    },
-    {
-      id: 'no-need-to-move-your-data', day: 'tuesday', page: 46, kind: 'Session',
-      title: 'Autonomous AI Lakehouse: What\'s New and What\'s Different', time: '1:00 PM – 1:45 PM', location: 'Location not listed in source',
-      description: 'Explore how Autonomous AI Lakehouse connects private enterprise data to agentic AI across live sources, including object stores, databases, other clouds, and SaaS applications.',
-      learn: ['Why context, semantics, governance, and reliable pipelines matter for agents', 'How to connect agentic AI to live enterprise data sources', 'How catalogs and semantic layers improve data discovery and meaning', 'How open Iceberg support and unified security support interoperability and control', 'How Exadata performance can support AI workloads across multicloud environments'],
-      speakers: [{ name: 'Nipun Argarwal', role: 'SVP, Software Engineering, Database' }],
-      area: 'AI, AI Agents, Autonomous AI Database, Oracle AI Database', audience: 'Intermediate (1–5 yrs user of Oracle)', job: 'Business Manager, Database Administrator, Developer, Tech IT',
-      aiWorldUrl: 'https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1785276532180001RVMt'
     },
     {
       id: 'ai-without-cloud-boundaries', day: 'tuesday', page: 47, kind: 'Session',
