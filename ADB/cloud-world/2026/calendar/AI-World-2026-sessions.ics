@@ -1,0 +1,1099 @@
+BEGIN:VCALENDAR
+PRODID:-//Oracle//AI World 2026 Agenda//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:AI World 2026 - Autonomous AI Database Data Deep Dive
+X-WR-TIMEZONE:America/Los_Angeles
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+X-LIC-LOCATION:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:top-10-must-have-enterprise-agents@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261025T120000
+DTEND;TZID=America/Los_Angeles:20261025T133000
+SUMMARY:Top 10 Must-Have Enterprise Agents: Design\, Build\, and Productize
+  Them Today
+LOCATION:Casanova 603\, Level 1
+DESCRIPTION:Move from promising ideas to production-ready solutions through
+  a repeatable approach to enterprise agent design.\n\nSession type: Bootca
+ mp\nArea of interest: AI\, AI Agents\, Autonomous AI Database\, Oracle AI 
+ Database\nAudience: General Audience\nJob role: Developer\, Tech Executive
+ \, Tech End User\, Tech IT Manager\, Business Manager\, Business Executive
+ \n\nWhat you will learn:\n• How to map business processes and identify h
+ igh-value agent opportunities\n• How to integrate enterprise data and sy
+ stems\n• How to build in governance\, human-in-the-loop workflows\, and 
+ observability\n• How to manage agent lifecycles and design for reuse\n
+ • How to prioritize use cases and scale governed enterprise AI across yo
+ ur organization\n\nSpeakers:\nAllen Hosler — Principal Product Manager\,
+  Oracle\nKumar Varun — Lead Principal Product Manager\, Oracle\n\nNote: 
+ Bring your laptop to follow along for the best hands-on experience. Laptop
+ s are not provided.\n\nOfficial session page: https://reg.rf.oracle.com/fl
+ ow/oracle/oaiw26/catalog/page/catalog/session/1787352570066001WLZe
+CATEGORIES:Bootcamp,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1787352570066001WLZe
+END:VEVENT
+BEGIN:VEVENT
+UID:oracle-ai-data-platform-hackathon@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261025T123000
+DTEND;TZID=America/Los_Angeles:20261025T170000
+SUMMARY:Oracle AI Data Platform Hackathon
+LOCATION:Galileo 903\, Level 1
+DESCRIPTION:With guidance from Oracle experts\, design and build an end-to-
+ end AI agent using governed data and business context.\n\nSession type: Ha
+ ckathon\nArea of interest: AI\, Oracle Cloud Infrastructure\, Systems & In
+ frastructure\, AI Data Platform\, AI Agents\, AI Lakehouse\, Autonomous AI
+  Database\, Analytics\, Developer Technologies\, Oracle AI Database\nAudie
+ nce: Intermediate (1–5 yrs user of Oracle)\nJob role: Developer\, Execut
+ ives\, Tech End User\, Tech IT Manager\, Business End User\, DBA\n\nWhat y
+ ou will learn:\n• How to design and build an end-to-end AI agent\n• Ho
+ w to use governed data and business context effectively\n• How Oracle AI
+  Data Platform capabilities work together\n• How to turn business challe
+ nges into practical AI solutions\n• How to experiment and prototype coll
+ aboratively with expert guidance\n\nSpeakers:\nSiva Harinath — Group Vic
+ e President\, Software Development\, Analytics Service Excellence\, Oracle
+ \nSrikant Gokulmatha — SVP\, AI Data Platform\, Oracle\nBenjamin Arnulf 
+ — Senior Director\, Product Strategy\, Analytics and AI\, Oracle\nJamie 
+ Anderson — Senior Principal Product Manager\, Product Strategy\, Analyti
+ cs\, Oracle\nAlex Hudak — Oracle GTM and Alliance Manager\, NVIDIA\n\nNo
+ te: Space is limited\; register when enrollment opens September 8 with pri
+ ority registration acceptance for customers.\n\nOfficial session page: htt
+ ps://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/178
+ 3357227921001fM8g
+CATEGORIES:Hackathon,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1783357227921001fM8g
+END:VEVENT
+BEGIN:VEVENT
+UID:building-and-innovating-with-oracle-autonomous-ai-lakehouse@oracle-ai-w
+ orld-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261025T143000
+DTEND;TZID=America/Los_Angeles:20261025T163000
+SUMMARY:Building and Innovating with Oracle Autonomous AI Lakehouse
+LOCATION:Casanova 605\, Level 1
+DESCRIPTION:An interactive session with guided exercises on querying Iceber
+ g tables\, writing natural language queries\, catalog integration\, and sc
+ aling AI workloads.\n\nSession type: Bootcamp\nArea of interest: AI\, Inte
+ gration\, AI Agents\, AI Lakehouse\nAudience: Intermediate (1–5 yrs user
+  of Oracle)\nJob role: Developer\, Tech IT Manager\n\nSpeakers:\nEkrem Soy
+ lemez — VP\, Data Systems Engineering\, Oracle\nGaurav Chadha — Senior
+  Manager\, Data Systems Engineering\, Oracle\nAlexey Filanovskii — Lead 
+ Principal Product Manager\, Oracle\nAshish Jain — Lead Principal Product
+  Manager\, Oracle\n\nNote: This is a 2-hour live interactive demo session.
+ \n\nOfficial session page: https://reg.rf.oracle.com/flow/oracle/oaiw26/ca
+ talog/page/catalog/session/1785193828614001ePNf
+CATEGORIES:Bootcamp,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1785193828614001ePNf
+END:VEVENT
+BEGIN:VEVENT
+UID:ask-search-generate-protect@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261025T160000
+DTEND;TZID=America/Los_Angeles:20261025T173000
+SUMMARY:Ask\, Search\, Generate\, Protect: Hands-On AI in Autonomous AI Dat
+ abase
+LOCATION:Casanova 504\, Level 1
+DESCRIPTION:Through hands-on exercises with Select AI and a simple Oracle A
+ PEX application\, see how these capabilities work together to support your
+  data strategy and create secure\, intelligent experiences.\n\nSession typ
+ e: Lab\nArea of interest: Autonomous AI Database\, Security\nAudience: Int
+ ermediate (1–5 yrs user of Oracle)\nJob role: Developer\n\nWhat you will
+  learn:\n• How to use Select AI for natural-language-to-SQL (NL2SQL)\n
+ • How to implement RAG with enterprise data\n• How to generate and use
+  synthetic data\n• How to combine database AI capabilities in an Oracle 
+ APEX app\n• How to apply layered security when using Select AI\n• How 
+ to extend your data strategy with an integrated AI platform\n\nSpeakers:\n
+ Michelle Malcher — Director\, Product Management\, Oracle\nKaren Cannell
+  — CTHO\, TH Technology\n\nNote: Bring your laptop to follow along for t
+ he best hands-on experience. Laptops are not provided.\n\nOfficial session
+  page: https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/s
+ ession/1785193146287001cv0Y
+CATEGORIES:Lab,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1785193146287001cv0Y
+END:VEVENT
+BEGIN:VEVENT
+UID:tell-the-report-what-you-need@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261025T160000
+DTEND;TZID=America/Los_Angeles:20261025T173000
+SUMMARY:Tell the Report What You Need: Natural-Language Analytics in Oracle
+  APEX
+LOCATION:Casanova 505\, Level 1
+DESCRIPTION:Build and test AI-driven report interactions to see how natural
+  language makes report customization faster and more intuitive.\n\nSession
+  type: Lab\nArea of interest: AI\, AI Agents\, Autonomous AI Database\, Or
+ acle AI Database\nAudience: Beginner (New user of Oracle)\nJob role: Devel
+ oper\, Tech End User\, Business End User\, Database Administrator\n\nWhat 
+ you will learn:\n• How APEX AI Interactive Reports interpret natural-lan
+ guage requests\n• How to configure report features using AI\n• How to 
+ build and test AI-driven report interactions\n• How to improve data expl
+ oration and usability in APEX\n\nSpeakers:\nMartin D’Souza — Director\
+ , Platform Software Engineering\, Oracle\nJayson Hanes — Senior Principa
+ l Product Manager\, Oracle\n\nNote: Bring your laptop to follow along for 
+ the best hands-on experience. Laptops are not provided.\n\nOfficial sessio
+ n page: https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/
+ session/1783637746024001BdnA
+CATEGORIES:Lab,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1783637746024001BdnA
+END:VEVENT
+BEGIN:VEVENT
+UID:make-document-answers-traceable@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261025T160000
+DTEND;TZID=America/Los_Angeles:20261025T173000
+SUMMARY:Make Document Answers Traceable: Build AI Agents with Knowledge Gra
+ phs
+LOCATION:Casanova 602\, Level 1
+DESCRIPTION:Document analysis for regulatory review can be time-consuming\,
+  difficult to validate\, and hard to explain. Large language models can pr
+ ocess long documents quickly\, but their answers may not be reproducible w
+ ithout traceable evidence.\n\nSession type: Lab\nArea of interest: AI\, AI
+  Agents\, Autonomous AI Database\, Oracle AI Database\nAudience: Beginner 
+ (New user of Oracle)\nJob role: Developer\n\nWhat you will learn:\n• How
+  to extract an RDF knowledge graph from a document\n• How to represent d
+ ocument content and structure for traceable analysis\n• How to query a g
+ raph for precise\, repeatable review results\n• How knowledge graphs sup
+ port security and governance workflows\n\nSpeakers:\nSiva Ravada — VP\, 
+ Data Systems Engineering\, Oracle\nMatt Perry — Lead Principal Data Syst
+ ems Engineer\, Oracle\n\nNote: Bring your laptop to follow along for the b
+ est hands-on experience. Laptops are not provided.\n\nOfficial session pag
+ e: https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1783457519407001Rcco
+CATEGORIES:Lab,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1783457519407001Rcco
+END:VEVENT
+BEGIN:VEVENT
+UID:your-first-enterprise-agent@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261026T120000
+DTEND;TZID=America/Los_Angeles:20261026T133000
+SUMMARY:Your First Enterprise Agent Needs More Than a Prompt: Build It with
+  Select AI
+LOCATION:Casanova 504\, Level 1
+DESCRIPTION:In this hands-on lab\, build and refine agents and tools using 
+ PL/SQL\, Python APIs\, and the Ask Oracle Select AI APEX app.\n\nSession t
+ ype: Lab\nArea of interest: AI\, AI Agents\, Autonomous AI Database\, Orac
+ le AI Database\nAudience: Intermediate (1–5 yrs user of Oracle)\nJob rol
+ e: Developer\n\nWhat you will learn:\n• How to create and configure AI a
+ gents and tools\n• How to use PL/SQL and Python APIs for agent developme
+ nt\n• How to build tools\, tasks\, and agents for enterprise scenarios\n
+ • How to support multi-turn conversations and retain context\n• How to
+  enable permission-based sharing across users\n• How to test and refine 
+ agents in the Ask Oracle Select AI APEX app\n\nSpeakers:\nMark Hornick —
+  Senior Director\, Machine Learning and AI Product Management\, Oracle\nMa
+ rcos Arancibia — Lead Principal Product Manager\, Oracle\n\nNote: This i
+ s a 2-hour live interactive demo session.\n\nOfficial session page: https:
+ //reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/178353
+ 8699580001OA1t
+CATEGORIES:Lab,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1783538699580001OA1t
+END:VEVENT
+BEGIN:VEVENT
+UID:customer-panel-from-automation-to-autonomy@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261026T124500
+DTEND;TZID=America/Los_Angeles:20261026T133000
+SUMMARY:Customer Panel: From Automation to Autonomy\, Real Transformation J
+ ourney
+LOCATION:Bellini 2002\, Level 2
+DESCRIPTION:Hear from senior technology leaders as they share how their org
+ anizations are rethinking enterprise cloud strategies with AI and autonomo
+ us operations. A moderated discussion explores architecture\, governance\,
+  risk\, skills\, and organizational change\, followed by audience Q&A.\n\n
+ Session type: Session\nArea of interest: AI Lakehouse\, Architecture\, Aut
+ onomous AI Database\, Multicloud Data Platform\, Oracle AI Database\nAudie
+ nce: Beginner\nJob role: Developer\n\nSpeakers:\nSohan DeMel — SVP\, Pro
+ duct Management\, Database\, Oracle\nSanjay Apte — Vodafone\nOliver Tacc
+ oni Oliveta — Gerente de Suporte TI\, B3\nMurali Bandaru — Chief Infor
+ mation & Digital Officer\, American Tire Distributors Inc.\nRama Raghavan 
+ — Assistant Vice President\, AT&T\nAdnan Kashwani — Vice President / E
+ 2E Cloud & Infrastructure Management\, E&UAE\n\nOfficial session page: htt
+ ps://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/178
+ 5276949202001nDuf
+CATEGORIES:Session,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1785276949202001nDuf
+END:VEVENT
+BEGIN:VEVENT
+UID:let-coding-agents-talk-to-the-database@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261026T124500
+DTEND;TZID=America/Los_Angeles:20261026T133000
+SUMMARY:Let Coding Agents Talk to the Database: Faster Development with MCP
+LOCATION:Marco Polo 806\, Level 1
+DESCRIPTION:A product roadmap\, live demonstration\, and customer case stud
+ y focused on productivity gains and lessons learned from connecting AI cod
+ ing agents to Oracle AI Database.\n\nSession type: Session\nArea of intere
+ st: AI\, AI Agents\, AI Lakehouse\, Autonomous AI Database\, Developer Tec
+ hnologies\, Oracle AI Database\nAudience: Intermediate (1–5 yrs user of 
+ Oracle)\nJob role: Developer\n\nWhat you will learn:\n• How MCP Servers 
+ connect AI coding agents to Oracle AI Database\n• How database context i
+ mproves debugging and SQL optimization\n• How to streamline code changes
+  with operational insights\n• Practical lessons from Oracle and MineSens
+ e\n• What’s next on the product roadmap\n\nSpeakers:\nJeff Smith — D
+ istinguished Product Manager\, Oracle\nKris Rice — SVP\, Software Engine
+ ering\, Oracle\nAdrian Png — Principal Solutions Architect\, Miracle Fin
+ land Oy\nPawan Litt — Lead Data Engineering\, Minesense\n\nOfficial sess
+ ion page: https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalo
+ g/session/1781166155400001GO5L
+CATEGORIES:Session,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1781166155400001GO5L
+END:VEVENT
+BEGIN:VEVENT
+UID:building-a-foundation-for-ai-world-bank@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261026T125000
+DTEND;TZID=America/Los_Angeles:20261026T131000
+SUMMARY:Building a Foundation for AI: The World Bank Modernization Journey
+LOCATION:Theater 2\, Customer Success Central\, The Hub
+DESCRIPTION:Practical guidance for improving operational agility and prepar
+ ing for what comes next with a scalable data foundation.\n\nSession type: 
+ Theater\nArea of interest: AI Data Platform\, AI Lakehouse\, Migration and
+  Modernization\nAudience: Intermediate (1–5 yrs user of Oracle)\nJob rol
+ e: Tech Executive\, Tech IT Manager\, Business Executive\n\nWhat you will 
+ learn:\n• How to align technology performance with business outcomes usi
+ ng SLOs\n• How OCI and Customer Success Services support modernization\n
+ • How Oracle AI Data Platform and OCI Lakehouse enable scalable data fou
+ ndations\n• Practical approaches to improving operational agility\n• H
+ ow to prepare data and technology environments for future AI use cases\n\n
+ Speakers:\nAther Khan — VP\, Technical Account Management\, Oracle\nSwam
+ y Kiran — Sr Data and Information Management – Cloud & Data Engineer\,
+  The World Bank Group\n\nOfficial session page: https://reg.rf.oracle.com/
+ flow/oracle/oaiw26/catalog/page/catalog/session/1784400038648001pmY6
+CATEGORIES:Theater,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1784400038648001pmY6
+END:VEVENT
+BEGIN:VEVENT
+UID:modernizing-at-scale-mitratech@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261026T133000
+DTEND;TZID=America/Los_Angeles:20261026T135000
+SUMMARY:Modernizing at Scale: MitraTech’s Journey to an AI-Ready Platform
+LOCATION:Theater 1\, Customer Success Central\, The Hub
+DESCRIPTION:Practical lessons and strategies for building a resilient\, AI-
+ ready platform.\n\nSession type: Theater\nArea of interest: AI Data Platfo
+ rm\, AI Lakehouse\, Migration and Modernization\nAudience: Intermediate (1
+ –5 yrs user of Oracle)\nJob role: Tech Executive\, Tech IT Manager\, Bus
+ iness Executive\n\nWhat you will learn:\n• How OCI and OKE support scala
+ ble cloud-native operations\n• How Oracle AI Data Platform and AI Lakeho
+ use enable a unified data foundation\n• How to optimize cloud costs whil
+ e improving operational efficiency\n• How to prepare enterprise platform
+ s for analytics\, automation\, and AI\n• Strategies for building resilie
+ nce and accelerating modernization\n\nSpeakers:\nAther Khan — VP\, Techn
+ ical Account Management\, Oracle\nPremjith Padmanabhan — Senior Director
+ \, DevOps\, Mitratech\n\nOfficial session page: https://reg.rf.oracle.com/
+ flow/oracle/oaiw26/catalog/page/catalog/session/1784407703270001I2NO
+CATEGORIES:Theater,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1784407703270001I2NO
+END:VEVENT
+BEGIN:VEVENT
+UID:ai-can-build-it-but-can-you-trust-it@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261026T140000
+DTEND;TZID=America/Los_Angeles:20261026T144500
+SUMMARY:AI Can Build It\, But Can You Trust It? Data Is the Key
+LOCATION:Venetian Ballroom G\, Level 2
+DESCRIPTION:AI can now build solutions in minutes. But how can enterprises 
+ trust them?\n\nSession type: Session\nArea of interest: AI trust\, securit
+ y\, accuracy\, governance\nAudience: General audience\nJob role: Technolog
+ y leaders and AI decision-makers\n\nWhat you will learn:\n• Join Juan to
+  discover how Oracle AI Database’s Deep-Trust AI Architecture accelerate
+ s AI innovation while ensuring security\, accuracy\, and governance are no
+ t bypassed or compromised.\n\nSpeakers:\nJuan Loaiza — EVP\, Oracle Data
+ base Technologies\n\nOfficial session page: https://reg.rf.oracle.com/flow
+ /oracle/oaiw26/catalog/page/catalog/session/1788897463251001HMSd
+CATEGORIES:Session,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1788897463251001HMSd
+END:VEVENT
+BEGIN:VEVENT
+UID:modernizing-airline-operations@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261026T141000
+DTEND;TZID=America/Los_Angeles:20261026T143000
+SUMMARY:Modernizing Airline Operations with Exadata Cloud@Customer and AI
+LOCATION:Theater 4\, Customer Success Central\, The Hub
+DESCRIPTION:See how Oracle AI Data Platform and AI Lakehouse capabilities u
+ nify operational and analytical data to support predictive maintenance\, o
+ perational intelligence\, and future AI initiatives.\n\nSession type: Thea
+ ter\nArea of interest: AI Data Platform\, AI Lakehouse\, Migration and Mod
+ ernization\nAudience: Intermediate (1–5 yrs user of Oracle)\nJob role: T
+ ech Executive\, Tech IT Manager\, Business Executive\n\nWhat you will lear
+ n:\n• How to modernize critical database infrastructure while maintainin
+ g reliability\n• How Exadata Cloud@Customer\, Customer Success Services\
+ , and ExaCare support transformation\n• How OCI can improve performance\
+ , availability\, and operational efficiency\n• How a unified data founda
+ tion enables predictive maintenance and operational intelligence\n• How 
+ to prepare for scalable enterprise AI\n\nSpeakers:\nAther Khan — VP\, Te
+ chnical Account Management\, Oracle\nHitesh Shah — Director\, Database E
+ ngineering and Operations – Digital Technology\, United Airlines\n\nOffi
+ cial session page: https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/pa
+ ge/catalog/session/1784344974059001WqoY
+CATEGORIES:Theater,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1784344974059001WqoY
+END:VEVENT
+BEGIN:VEVENT
+UID:ai-and-ml-in-your-database@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261026T151500
+DTEND;TZID=America/Los_Angeles:20261026T160000
+SUMMARY:AI and ML in your database: What’s New and What’s Next
+LOCATION:Marco Polo 803\, Level 1
+DESCRIPTION:Explore what’s new and next for AI and machine learning in Or
+ acle Autonomous AI Database and Oracle AI Database.\n\nSession type: Sessi
+ on\nArea of interest: AI\, AI Agents\, Autonomous AI Database\, Oracle AI 
+ Database\nAudience: Intermediate (1–5 yrs user of Oracle)\nJob role: Bus
+ iness Manager\, Database Administrator\, Developer\, Tech IT\n\nWhat you w
+ ill learn:\n• What’s new in Oracle Database AI and machine learning ca
+ pabilities\n• How to use Select AI and the Select AI Agent Framework\n
+ • How built-in MCP and A2A Servers support connected AI applications\n
+ • How Oracle Machine Learning enables in-database development\n• How s
+ ecurity and governance support responsible AI adoption\n• When keeping s
+ ensitive data in the database can improve control and compliance\n\nSpeake
+ rs:\nMark Hornick — Senior Director\, Machine Learning and AI Product Ma
+ nagement\, Oracle\nHeli K. Helskyaho — CEO\, Miracle Finland Oy\nSherry 
+ LaMonica — Lead Principal Product Manager\, Oracle\n\nOfficial session p
+ age: https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/ses
+ sion/1784567626679001aOex
+CATEGORIES:Session,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1784567626679001aOex
+END:VEVENT
+BEGIN:VEVENT
+UID:building-a-data-fabric-with-goldengate@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261026T151500
+DTEND;TZID=America/Los_Angeles:20261026T160000
+SUMMARY:Building a Data Fabric with GoldenGate\, an AI Truth Layer for Data
+LOCATION:Galileo 902\, Level 1
+DESCRIPTION:Explore how Oracle GoldenGate supports a multicloud Data Fabric
+  by connecting distributed data sources and moving changes across supporte
+ d hybrid and multicloud environments.\n\nSession type: Session\nArea of in
+ terest: AI\, AI Agents\, AI Lakehouse\, Analytics\, Architecture\, Develop
+ er Technologies\, Integration\, Multicloud Data Platform\nAudience: Genera
+ l Audience\nJob role: Developer\, Tech Executive\, Tech IT\n\nWhat you wil
+ l learn:\n• How Oracle GoldenGate connects distributed data sources\n•
+  How change data movement supports hybrid and multicloud environments\n•
+  Key capabilities and architecture of a multicloud Data Fabric\n• How ti
+ mely data can support analytics\, AI\, and operational decision-making\n
+ • Practical ways to build a more connected data foundation\n\nSpeakers:\
+ nAlex Kotopoulis — Director\, Product Management\, Oracle\nJeffrey Pollo
+ ck — VP\, Product Management\, Oracle\n\nOfficial session page: https://
+ reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/17852788
+ 25118001tmuE
+CATEGORIES:Session,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1785278825118001tmuE
+END:VEVENT
+BEGIN:VEVENT
+UID:build-trusted-apps-faster-with-apex@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261026T151500
+DTEND;TZID=America/Los_Angeles:20261026T160000
+SUMMARY:Build Trusted Apps Faster with New AI Features in Oracle APEX
+LOCATION:Galileo 907\, Level 1
+DESCRIPTION:Explore how Oracle APEX 26.2 brings built-in AI capabilities to
+  applications\, enabling more natural and intelligent interactions with en
+ terprise data.\n\nSession type: Session\nArea of interest: AI\, Autonomous
+  AI Database\, Developer Technologies\, Vector Search\nAudience: Intermedi
+ ate (1–5 yrs user of Oracle)\nJob role: Business End User\, Business Exe
+ cutive\, Developer\, Tech Executive\n\nWhat you will learn:\n• How to ad
+ d natural-language and conversational AI to APEX apps\n• How AI agents a
+ nd tools securely access enterprise data\n• How to build intelligent das
+ hboards\, summaries\, widgets\, and reports\n• How agentic workflows can
+  automate tasks and interactions\n• How RAG and AI Vector Search improve
+  responses using private enterprise data\n\nSpeakers:\nMarc Sewtz — Seni
+ or Director\, Platform Software Engineering\, Oracle\n\nOfficial session p
+ age: https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/ses
+ sion/1785276266114001jmHT
+CATEGORIES:Session,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1785276266114001jmHT
+END:VEVENT
+BEGIN:VEVENT
+UID:build-ai-agents-on-enterprise-data@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261026T160000
+DTEND;TZID=America/Los_Angeles:20261026T173000
+SUMMARY:Build AI Agents on Enterprise Data with Oracle AI Lakehouse
+LOCATION:Casanova 507\, Level 1
+DESCRIPTION:Explore how Oracle AI Lakehouse brings together data from Oracl
+ e databases and other supported sources while preserving the context neede
+ d for accurate analytics and AI-powered insights.\n\nSession type: Lab\nAr
+ ea of interest: AI\, AI Agents\, AI Lakehouse\, Analytics\nAudience: Inter
+ mediate (1–5 yrs user of Oracle)\nJob role: Developer\n\nWhat you will l
+ earn:\n• How to discover and work with data from multiple sources\n• H
+ ow a unified catalog supports data management and governance\n• How to b
+ uild an AI agent grounded in enterprise data\n• How to create AI-powered
+  analytics using trusted business data\n• How Oracle AI Lakehouse connec
+ ts data while retaining relevant business context\n\nSpeakers:\nAshish Mit
+ tal — Vice president\, Oracle\nAlexey Filanovskii — Lead Principal Pro
+ duct Manager\, Oracle\nOnur Kocberber — Director of Development\, Oracle
+ \n\nNote: Bring your laptop to follow along for the best hands-on experien
+ ce. Laptops are not provided.\n\nOfficial session page: https://reg.rf.ora
+ cle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1786657109646001fl
+ dF
+CATEGORIES:Lab,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1786657109646001fldF
+END:VEVENT
+BEGIN:VEVENT
+UID:unified-intelligence-with-federated-data@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261027T080000
+DTEND;TZID=America/Los_Angeles:20261027T084500
+SUMMARY:Unified Intelligence with Federated Data: Introducing Live AI Hub
+LOCATION:Marco Polo 705\, Level 1
+DESCRIPTION:Through practical examples\, see how to federate and enrich ent
+ erprise data with metadata and business semantics\, create a trusted found
+ ation for AI\, and design AI products for enterprise security\, scalabilit
+ y\, and resilience.\n\nSession type: Session\nArea of interest: AI\, AI Ag
+ ents\, AI Lakehouse\, Architecture\, Autonomous AI Database\, Oracle AI Da
+ tabase\nAudience: Intermediate (1–5 yrs user of Oracle)\nJob role: Busin
+ ess Manager\, Developer\, Tech IT\n\nWhat you will learn:\n• How Live AI
+  Hub accelerates the path from AI idea to production\n• How to work with
+  data across distributed environments\n• How to enrich data with metadat
+ a and business semantics\n• How to establish a trusted foundation for en
+ terprise AI\n• How to design AI products for security\, scalability\, an
+ d resilience\n\nSpeakers:\nMassimo Castelli — Vice President\, AI & Data
+  Platform Strategy\, Oracle\nJose Cruz — Senior Product Management Direc
+ tor\, Data Strategy and Architecture\, Oracle\n\nOfficial session page: ht
+ tps://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/17
+ 85278613329001KiKc
+CATEGORIES:Session,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1785278613329001KiKc
+END:VEVENT
+BEGIN:VEVENT
+UID:unify-fragmented-enterprise-data@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261027T080000
+DTEND;TZID=America/Los_Angeles:20261027T084500
+SUMMARY:Customer Success: Unifying Fragmented Enterprise Data at a Fraction
+  of the Cost
+LOCATION:Marco Polo 807\, Level 1
+DESCRIPTION:Learn how Industrial Scientific\, a global leader in gas detect
+ ion and worker safety\, uses Oracle's converged database to solve complex 
+ data integration challenges while reducing cost and accelerating applicati
+ on development.\n\nSession type: Session\nArea of interest: AI\, AI Agents
+ \, AI Lakehouse\, Architecture\, Autonomous AI Database\, Oracle AI Databa
+ se\nAudience: Beginner\nJob role: Business Manager\, Developer\, Tech IT\n
+ \nWhat you will learn:\n• How a converged database can simplify complex 
+ data integration\n• How graph\, vector\, and spatial capabilities work t
+ ogether\n• How unified data can improve governance and customer outcomes
+ \n• How to reduce platform costs while accelerating delivery\n• How to
+  reconcile business data after a merger\n\nSpeakers:\nMelli Annamalai — 
+ Product Management Architect\, Oracle\nKorbi Schmid — Director of Softwa
+ re Development\, Oracle\nPhani Chilakapati — Global Data Architecture Le
+ ader\, Industrial Scientific\n\nOfficial session page: https://reg.rf.orac
+ le.com/flow/oracle/oaiw26/catalog/page/catalog/session/1785279231069001Pjw
+ 3
+CATEGORIES:Session,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1785279231069001Pjw3
+END:VEVENT
+BEGIN:VEVENT
+UID:put-oracle-operational-data-to-work@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261027T103000
+DTEND;TZID=America/Los_Angeles:20261027T111500
+SUMMARY:Put Oracle Operational Data to Work for AI
+LOCATION:Galileo 904\, Level 1
+DESCRIPTION:Practical approaches for securely enabling governed analysis an
+ d AI while Oracle Database remains the system of record.\n\nSession type: 
+ Session\nArea of interest: AI\, AI Lakehouse\, Oracle AI Database\nAudienc
+ e: Intermediate (1–5 yrs user of Oracle)\nJob role: Database Administrat
+ or\, Tech End User\, Tech IT\n\nWhat you will learn:\n• How Oracle AI La
+ kehouse extends analytics and AI to existing Oracle data\n• How to avoid
+  unnecessary database migration or application changes\n• How to apply g
+ overnance and security to Oracle data used for AI\n• How to keep Oracle 
+ Database as the system of record\n• Practical strategies for modernizing
+  analytics while protecting operational stability\n\nSpeakers:\nAshish Mit
+ tal — Vice president\, Oracle\nEkrem Soylemez — VP\, Data Systems Engi
+ neering\, Oracle\n\nOfficial session page: https://reg.rf.oracle.com/flow/
+ oracle/oaiw26/catalog/page/catalog/session/1786024465392001kgWk
+CATEGORIES:Session,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1786024465392001kgWk
+END:VEVENT
+BEGIN:VEVENT
+UID:no-need-to-move-your-data@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261027T130000
+DTEND;TZID=America/Los_Angeles:20261027T134500
+SUMMARY:Autonomous AI Lakehouse: What's New and What's Different
+LOCATION:Location not listed in source
+DESCRIPTION:Explore how Autonomous AI Lakehouse connects private enterprise
+  data to agentic AI across live sources\, including object stores\, databa
+ ses\, other clouds\, and SaaS applications.\n\nSession type: Session\nArea
+  of interest: AI\, AI Agents\, Autonomous AI Database\, Oracle AI Database
+ \nAudience: Intermediate (1–5 yrs user of Oracle)\nJob role: Business Ma
+ nager\, Database Administrator\, Developer\, Tech IT\n\nWhat you will lear
+ n:\n• Why context\, semantics\, governance\, and reliable pipelines matt
+ er for agents\n• How to connect agentic AI to live enterprise data sourc
+ es\n• How catalogs and semantic layers improve data discovery and meanin
+ g\n• How open Iceberg support and unified security support interoperabil
+ ity and control\n• How Exadata performance can support AI workloads acro
+ ss multicloud environments\n\nSpeakers:\nNipun Argarwal — SVP\, Software
+  Engineering\, Database\n\nOfficial session page: https://reg.rf.oracle.co
+ m/flow/oracle/oaiw26/catalog/page/catalog/session/1785276532180001RVMt
+CATEGORIES:Session,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1785276532180001RVMt
+END:VEVENT
+BEGIN:VEVENT
+UID:ai-without-cloud-boundaries@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261027T130000
+DTEND;TZID=America/Los_Angeles:20261027T134500
+SUMMARY:AI Without Cloud Boundaries: Autonomous AI Database on AWS\, Azure\
+ , Google Cloud
+LOCATION:Titian 2206\, Level 2
+DESCRIPTION:Explore how a fully managed\, self-securing\, and self-scaling 
+ Oracle Autonomous AI Database can accelerate AI development and reduce ope
+ rational complexity.\n\nSession type: Session\nArea of interest: Autonomou
+ s AI Database\, Multicloud Data Platform\nAudience: Intermediate (1–5 yr
+ s user of Oracle)\nJob role: Database Administrator\n\nWhat you will learn
+ :\n• How to build AI applications across your preferred cloud\n• How A
+ utonomous AI Database Serverless simplifies database operations\n• How t
+ o use Select AI and Oracle AI Vector Search\n• How to implement RAG with
+  enterprise data\n• How autonomous capabilities support secure\, scalabl
+ e AI development\n\nSpeakers:\nCan Tuzla — Lead Principal Product Manage
+ r\, Oracle\nNilay Panchal — Principal Product Manager – Autonomous Dat
+ abase\, Oracle\n\nOfficial session page: https://reg.rf.oracle.com/flow/or
+ acle/oaiw26/catalog/page/catalog/session/1785442327087001c9qC
+CATEGORIES:Session,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1785442327087001c9qC
+END:VEVENT
+BEGIN:VEVENT
+UID:build-a-rag-app-in-90-minutes@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261027T130000
+DTEND;TZID=America/Los_Angeles:20261027T143000
+SUMMARY:Build a RAG App in 90 Minutes: AI Vector Search Meets Your Favorite
+  LLM
+LOCATION:Casanova 605\, Level 1
+DESCRIPTION:Build a working retrieval-augmented generation (RAG) applicatio
+ n from scratch using Oracle Autonomous AI Database and AI Vector Search wi
+ th the LLM of your choice on AWS\, Azure\, or Google Cloud.\n\nSession typ
+ e: Lab\nArea of interest: AI\, Multicloud\, Autonomous AI Database\nAudien
+ ce: Intermediate (1–5 yrs user of Oracle)\nJob role: Developer\, Tech Ex
+ ecutive\, Tech End User\, Tech IT Manager\n\nWhat you will learn:\n• How
+  to load documents and generate vector embeddings\n• How to store embedd
+ ings in Oracle Autonomous Database\n• How to write semantic search queri
+ es with AI Vector Search\n• How to connect search and an LLM for a RAG a
+ pplication\n• How to build a natural-language Q&A experience\n\nSpeakers
+ :\nRajib Sadhu — Director\, Product Management\, Oracle\n\nNote: Walk ou
+ t with working code you can deploy back at the office. Participants must b
+ ring their own standard Windows or Mac laptop with at least 8GB of RAM\, C
+ hrome installed. Optional: Python3\, Codex or other Coding Agent\, VSCode.
+ \n\nOfficial session page: https://reg.rf.oracle.com/flow/oracle/oaiw26/ca
+ talog/page/catalog/session/1786490483554001X0gj
+CATEGORIES:Lab,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1786490483554001X0gj
+END:VEVENT
+BEGIN:VEVENT
+UID:from-embeddings-to-agent-memory@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261027T130000
+DTEND;TZID=America/Los_Angeles:20261027T143000
+SUMMARY:From Embeddings to Agent Memory: Build on Autonomous AI Vector Data
+ base
+LOCATION:Marco Polo 707\, Level 1
+DESCRIPTION:In this hands-on lab\, build vector-powered AI applications wit
+ h Oracle Autonomous AI Vector Database.\n\nSession type: Lab\nArea of inte
+ rest: AI\, Oracle Cloud Infrastructure\, AI Agents\, AI Lakehouse\, Archit
+ ecture\, Autonomous AI Database\, Developer Technologies\, Oracle AI Datab
+ ase\nAudience: General Audience\nJob role: Developer\n\nWhat you will lear
+ n:\n• How to import and use an ONNX embedding model\n• How to generate
+  and store vector embeddings\n• How to perform semantic similarity searc
+ hes\n• How vector and metadata indexes improve retrieval\n• How to use
+  Python SDKs and REST APIs\n• How Oracle AI Agent Memory supports conver
+ sational applications\n\nSpeakers:\nGirdhari Ghantiyala — Senior Directo
+ r\, Data Systems Engineering\, Oracle\nBrian Macdonald — Senior Principa
+ l Product Manager\, Oracle\n\nNote: Bring your laptop to follow along for 
+ the best hands-on experience. Laptops are not provided.\n\nOfficial sessio
+ n page: https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/
+ session/1782927646060001DKqJ
+CATEGORIES:Lab,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1782927646060001DKqJ
+END:VEVENT
+BEGIN:VEVENT
+UID:ai-without-data-movement-live-ai-hub@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261027T131000
+DTEND;TZID=America/Los_Angeles:20261027T133000
+SUMMARY:AI Without Data Movement: Meet Live AI Hub
+LOCATION:Theater 1\, Oracle AI World Hub
+DESCRIPTION:Explore how Live AI Hub unlocks enterprise AI capabilities acro
+ ss existing data while reducing the need for data movement\, copying\, and
+  lengthy transformation projects.\n\nSession type: Theater\nArea of intere
+ st: AI\, Multicloud\, AI Agents\, AI Lakehouse\, Architecture\, Autonomous
+  AI Database\, Oracle AI Database\nAudience: Intermediate (1–5 yrs user 
+ of Oracle)\nJob role: Developer\, Tech Executive\, Tech IT Manager\, Busin
+ ess Manager\, Business Executive\, Business End User\n\nWhat you will lear
+ n:\n• How to build agents across existing enterprise data\n• How to re
+ duce data movement and transformation effort\n• How to apply security\, 
+ governance\, permissions\, and AI guardrails\n• How to enable natural-la
+ nguage access to data\n• How to accelerate machine learning and deliver 
+ value faster\n\nSpeakers:\nJose Cruz — Director of Product Management\, 
+ Data Strategy and Architecture\, Oracle\n\nOfficial session page: https://
+ reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/17852785
+ 92644001veNi
+CATEGORIES:Theater,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1785278592644001veNi
+END:VEVENT
+BEGIN:VEVENT
+UID:building-the-foundation-for-ai-cbp@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261027T135000
+DTEND;TZID=America/Los_Angeles:20261027T141000
+SUMMARY:Building the Foundation for AI: CBP’s Cloud Modernization Strateg
+ y
+LOCATION:Theater 2\, Customer Success Central\, The Hub
+DESCRIPTION:U.S. Customs and Border Protection and Oracle Customer Success 
+ Services share lessons from building a secure\, resilient cloud environmen
+ t that supports a vital national mission.\n\nSession type: Theater\nArea o
+ f interest: AI Data Platform\, AI Lakehouse\, Migration and Modernization\
+ nAudience: Intermediate (1–5 yrs user of Oracle)\nJob role: Tech Executi
+ ve\, Tech IT Manager\, Business Executive\n\nWhat you will learn:\n• How
+  to approach modernization of mission-critical workloads\n• How to build
+  security and resilience into a cloud environment\n• How OCI and Oracle 
+ Customer Success Services support transformation\n• How AI Data Platform
+  and AI Lakehouse enable analytics and AI readiness\n• Strategies for re
+ ducing risk and improving operational agility\n\nSpeakers:\nAther Khan —
+  VP\, Technical Account Management\, Oracle\nSunil Maghugiri — CTO\, U.S
+ . Customs and Border Protection\n\nOfficial session page: https://reg.rf.o
+ racle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1784345497286001
+ mvVE
+CATEGORIES:Theater,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1784345497286001mvVE
+END:VEVENT
+BEGIN:VEVENT
+UID:production-ai-starts-with-the-data-foundation@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261027T141500
+DTEND;TZID=America/Los_Angeles:20261027T150000
+SUMMARY:Autonomous AI Database: The Mission-Critical Backbone for Enterpris
+ e AI
+LOCATION:Marco Polo 705\, Level 1
+DESCRIPTION:AI is transforming how organizations build applications\, make 
+ decisions\, and operate. Agentic AI is reshaping how enterprises design\, 
+ deploy and run modern applications.\n\nSession type: Session\nArea of inte
+ rest: Autonomous AI Database\, AI foundation\, security\, resilience\, sca
+ le\nAudience: General Audience\nJob role: Technology leaders and AI builde
+ rs\n\nWhat you will learn:\n• How Autonomous AI Database provides enterp
+ rise-grade security\, resilience\, elastic scaling\,for mission-critical w
+ orkloads\n• How to simplify and automate the process of move existing wo
+ rkloads to Autonomous AI Database\n• How Autonomous AI Database helps or
+ ganizations run modern AI-driven mission-critical applications on a truste
+ d cost-effective enterprise backbone \n• How to build\, deploy\, and sca
+ le AI-powered applications with confidence\n• How to you can deploy Auto
+ nomous AI Database in any cloud or even your own data center\n\nSpeakers:\
+ nCetin Ozbutun — EVP\, Product and Research\, Data Lakehouse and Autonom
+ ous AI Database\nErich Steiger — Lead Database Architect\, TWINT AG\n\nO
+ fficial session page: https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog
+ /page/catalog/session/1785277712412001oJcW
+CATEGORIES:Session,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1785277712412001oJcW
+END:VEVENT
+BEGIN:VEVENT
+UID:what-should-you-migrate-first@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261028T090000
+DTEND;TZID=America/Los_Angeles:20261028T094500
+SUMMARY:What Should You Migrate First? Find It\, Move It\, Modernize It
+LOCATION:Galileo 904\, Level 1
+DESCRIPTION:Modernization starts with understanding where the greatest oppo
+ rtunities lie. Explore how Oracle Estate Explorer maps database environmen
+ ts\, then see how AutoMigrate executes unattended\, monitored\, highly par
+ allel migrations to Oracle Autonomous AI Database.\n\nSession type: Sessio
+ n\nArea of interest: Autonomous AI Database\, Multicloud Data Platform\nAu
+ dience: Intermediate (1–5 yrs user of Oracle)\nJob role: Database Admini
+ strator\n\nWhat you will learn:\n• How to assess a diverse database esta
+ te\n• How to identify and prioritize migration candidates\n• How AutoM
+ igrate simplifies parallel database migrations\n• How monitoring and log
+ ging support unattended execution\n• How to measure migration outcomes a
+ nd business value\n\nSpeakers:\nSimon Griffiths — VP Product Management\
+ , Oracle\nMike Dietrich — VP Product Management\, Oracle\n\nOfficial ses
+ sion page: https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catal
+ og/session/1784673539121001bJfr
+CATEGORIES:Session,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1784673539121001bJfr
+END:VEVENT
+BEGIN:VEVENT
+UID:build-a-real-ai-data-foundation@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261028T090000
+DTEND;TZID=America/Los_Angeles:20261028T094500
+SUMMARY:Build a Real AI Data Foundation: Architectural Patterns for AI Lake
+ house
+LOCATION:Titian 2206\, Level 2
+DESCRIPTION:Explore the architectural patterns behind Oracle AI Lakehouse\,
+  including decoupled storage and compute\, open table formats\, federated 
+ query execution\, distributed metadata\, and cross-cloud data access.\n\nS
+ ession type: Session\nArea of interest: AI\, AI Lakehouse\, Oracle AI Data
+ base\nAudience: Intermediate (1–5 yrs user of Oracle)\nJob role: Databas
+ e Administrator\, Developer\, Tech IT\n\nWhat you will learn:\n• Key arc
+ hitectural patterns for AI-ready data platforms\n• How to separate stora
+ ge and compute for flexibility and scale\n• How open formats and federat
+ ed queries support interoperability\n• How to enable cross-cloud and on-
+ premises data access\n• Design considerations for governance\, performan
+ ce\, and operations\n\nSpeakers:\nJacco Draaijer — VP\, Data Systems Eng
+ ineering\, Oracle\nGaurav Chadha — Director\, Application Software Engin
+ eering\, Oracle\n\nOfficial session page: https://reg.rf.oracle.com/flow/o
+ racle/oaiw26/catalog/page/catalog/session/1786024621758001Yjx0
+CATEGORIES:Session,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1786024621758001Yjx0
+END:VEVENT
+BEGIN:VEVENT
+UID:data-events-to-data-actions@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261028T090000
+DTEND;TZID=America/Los_Angeles:20261028T103000
+SUMMARY:Go from Data Events to Data Actions with AI and GoldenGate
+LOCATION:Marco Polo 703\, Level 1
+DESCRIPTION:Move beyond dashboards and put AI to work on live enterprise da
+ ta. In this hands-on lab\, use a conversational chat experience to operate
+  Oracle GoldenGate.\n\nSession type: Lab\nArea of interest: AI\, Integrati
+ on\, AI Agents\, AI Lakehouse\nAudience: General Audience\nJob role: Devel
+ oper\, Database Administrator\n\nWhat you will learn:\n• How to manage a
+ nd troubleshoot GoldenGate with natural language\n• How to work with cha
+ nge data capture events\n• How to build an event-aware AI agent\n• How
+  agents can interpret updates and trigger recommendations or alerts\n• H
+ ow conversational operations and real-time data support agentic AI\n\nSpea
+ kers:\nPete Inzana — Director\, Product Management\, Oracle\nDenis Gray 
+ — VP\, Product Management\, Oracle\nAlex Lima — Director\, Product Man
+ agement\, Oracle\n\nNote: Bring your laptop to follow along for the best h
+ ands-on experience. Laptops are not provided.\n\nOfficial session page: ht
+ tps://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/17
+ 85277424913001XJvE
+CATEGORIES:Lab,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1785277424913001XJvE
+END:VEVENT
+BEGIN:VEVENT
+UID:one-database-experience@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261028T090000
+DTEND;TZID=America/Los_Angeles:20261028T110000
+SUMMARY:One Database Experience: Your Choice of Clouds
+LOCATION:Casanova 603\, Level 1
+DESCRIPTION:Explore how Oracle Autonomous AI Database provides a consistent
+ \, fully managed experience across OCI\, AWS\, Microsoft Azure\, and Googl
+ e Cloud\, with integration into native cloud services.\n\nSession type: Bo
+ otcamp\nArea of interest: Multicloud\, Autonomous AI Database\nAudience: G
+ eneral Audience\nJob role: Database Administrator\n\nWhat you will learn:\
+ n• How to run a consistent database experience across multiple clouds\n
+ • How autonomous automation reduces operational effort\n• How to suppo
+ rt security\, high availability\, and disaster recovery\n• How to scale\
+ , clone\, migrate\, and access data across clouds\n• How monitoring and 
+ alerts simplify database operations\n\nSpeakers:\nMichelle Malcher — Dir
+ ector\, Product Management\, Oracle\nNilay Panchal — Principal Product M
+ anager\, Oracle\nCan Tuzla — Lead Principal Product Manager\, Oracle\nMa
+ rcos Arancibia — Lead Principal Product Manager\, Oracle\n\nNote: This i
+ s a 2-hour live interactive demo session.\n\nOfficial session page: https:
+ //reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/178638
+ 1671582001f4g1
+CATEGORIES:Bootcamp,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1786381671582001f4g1
+END:VEVENT
+BEGIN:VEVENT
+UID:developer-demo-production-ready-agents@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261028T101500
+DTEND;TZID=America/Los_Angeles:20261028T110000
+SUMMARY:Developer Demo: Building Production-Ready AI Agents
+LOCATION:Galileo 902\, Level 1
+DESCRIPTION:In this all-demo session\, build a Spring Boot support-ticket w
+ orkflow on Oracle AI Database.\n\nSession type: Session\nArea of interest:
+  AI\, Autonomous AI Database\, Developer Technologies\, Oracle AI Database
+ \nAudience: Beginner\nJob role: Developer\n\nWhat you will learn:\n• How
+  to design resilient\, event-driven AI workflows\n• How to combine summa
+ ries\, embeddings\, caching\, and vector search\n• How to handle retries
+  and partial failures\n• How to manage regional data and approval histor
+ y\n• How MicroTx supports distributed workflows\n\nSpeakers:\nAnders Swa
+ nson — Developer Evangelist\, Oracle\n\nOfficial session page: https://r
+ eg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/session/178533871
+ 8537001iyrl
+CATEGORIES:Session,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1785338718537001iyrl
+END:VEVENT
+BEGIN:VEVENT
+UID:no-need-to-pick-a-data-model@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261028T101500
+DTEND;TZID=America/Los_Angeles:20261028T110000
+SUMMARY:No Need to Pick a Data Model: Build Apps That Can Use Any Model
+LOCATION:Galileo 1002\, Level 1
+DESCRIPTION:Explore how developers can build faster\, adapt as requirements
+  change\, and rely on a platform designed for mission-critical workloads.\
+ n\nSession type: Session\nArea of interest: AI\, Autonomous AI Database\, 
+ Developer Technologies\, Oracle AI Database\nAudience: Beginner\nJob role:
+  Developer\n\nWhat you will learn:\n• How to work with diverse data type
+ s in one application\n• How JSON and relational duality views support ch
+ anging requirements\n• How AI Vector Search enables semantic retrieval\n
+ • How enterprise data management supports secure\, scalable AI\n• How 
+ to accelerate development on a mission-critical database platform\n\nSpeak
+ ers:\nBeda Hammerschmidt — Vice President\, Oracle\nJosh Spiegel — Dat
+ a Systems Engineering Architect\, Oracle\nAyush Soni — Oracle Cloud Arch
+ itect\, TEKsystems Global Services\, LLC\nShawn Moon — Senior Director\,
+  Ticketmaster\n\nOfficial session page: https://reg.rf.oracle.com/flow/ora
+ cle/oaiw26/catalog/page/catalog/session/1785276786683001A8cg
+CATEGORIES:Session,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1785276786683001A8cg
+END:VEVENT
+BEGIN:VEVENT
+UID:build-a-medallion-data-pipeline@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261028T110000
+DTEND;TZID=America/Los_Angeles:20261028T123000
+SUMMARY:Build a Medallion Data Pipeline with Oracle AI Lakehouse
+LOCATION:Casanova 507\, Level 1
+DESCRIPTION:Build an end-to-end medallion data pipeline with Oracle AI Lake
+ house and Apache Iceberg.\n\nSession type: Lab\nArea of interest: AI\, AI 
+ Agents\, AI Lakehouse\, Analytics\nAudience: Intermediate (1–5 yrs user 
+ of Oracle)\nJob role: Developer\n\nWhat you will learn:\n• How to ingest
+  and organize data using Apache Iceberg\n• How to design medallion layer
+ s for progressive data refinement\n• How to apply governance throughout 
+ the data pipeline\n• How to prepare data for analytics\, sharing\, and A
+ I use cases\n• How Oracle AI Lakehouse supports cross-cloud pipeline man
+ agement\n\nSpeakers:\nGaurav Chadha — Director\, Application Software En
+ gineering\, Oracle\nJay Sardhara — Consulting Member of Technical Staff\
+ , Oracle\nVishal Singh — Senior Director\, Product Management\, Autonomo
+ us AI Lakehouse\, Oracle\n\nNote: Bring your laptop to follow along for th
+ e best hands-on experience. Laptops are not provided.\n\nOfficial session 
+ page: https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/se
+ ssion/1786657094342001UM8k
+CATEGORIES:Lab,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1786657094342001UM8k
+END:VEVENT
+BEGIN:VEVENT
+UID:one-data-model-every-app-experience@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261028T110000
+DTEND;TZID=America/Los_Angeles:20261028T123000
+SUMMARY:One Data Model\, Every App Experience: Build on a Converged Databas
+ e
+LOCATION:Casanova 602\, Level 1
+DESCRIPTION:In this hands-on workshop\, build an application on Oracle AI D
+ atabase using one canonical data model projected into the formats differen
+ t consumers need. Work with JSON Relational Duality Views\, SQL\, Spatial\
+ , Oracle Graph\, and Oracle AI Vector Search while applying appropriate da
+ ta access controls.\n\nSession type: Lab\nArea of interest: Developer Tech
+ nologies\, Oracle AI Database\nAudience: Beginner\nJob role: Developer\n\n
+ What you will learn:\n• How one data model can support multiple applicat
+ ion needs\n• How to serve operational data as JSON\, SQL\, graph\, and v
+ ector representations\n• How to use Duality Views\, Spatial\, Graph\, an
+ d AI Vector Search\n• How to build AI-ready applications without duplica
+ te data pipelines\n• How to apply data access controls across use cases\
+ n\nSpeakers:\nHermann Baer — Senior Director Product Management\, Oracle
+ \nJosh Spiegel — Data Systems Engineering Architect\, Oracle\n\nNote: Br
+ ing your laptop to follow along for the best hands-on experience. Laptops 
+ are not provided.\n\nOfficial session page: https://reg.rf.oracle.com/flow
+ /oracle/oaiw26/catalog/page/catalog/session/1783540984440001Gsjo
+CATEGORIES:Lab,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1783540984440001Gsjo
+END:VEVENT
+BEGIN:VEVENT
+UID:learn-how-agents-reason@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261028T130000
+DTEND;TZID=America/Los_Angeles:20261028T132000
+SUMMARY:This session explores how AI agents can help evaluate candidate loc
+ ations by combining the factors experienced teams consider while reducing 
+ manual analysis
+LOCATION:Theater 3\, Oracle AI World Hub
+DESCRIPTION:Follow a sales scenario in which AI-assisted modeling creates A
+ nalytic Views and Essbase cubes\, then use conversational questions to exp
+ lore a multidimensional what-if analysis.\n\nSession type: Theater\nArea o
+ f interest: AI\, AI Agents\, AI Lakehouse\, Analytics\nAudience: Intermedi
+ ate (1–5 yrs user of Oracle)\nJob role: Business End User\, Business Man
+ ager\, Database Administrator\, Tech IT\n\nWhat you will learn:\n• How t
+ o extend Oracle data and reporting investments with AI\n• How AI-assiste
+ d modeling creates Analytic Views and Essbase cubes\n• How to use conver
+ sational analytics for multidimensional what-if analysis\n• How semantic
+  models preserve business meaning\n• How MCP and A2A patterns connect an
+ d coordinate analytical agents\n\nSpeakers:\nEkrem Soylemez — VP\, Data 
+ Systems Engineering\, Oracle\n\nNote: Time is shown as printed in the sour
+ ce guide.\n\nOfficial session page: https://reg.rf.oracle.com/flow/oracle/
+ oaiw26/catalog/page/catalog/session/1789534256917001loWV
+CATEGORIES:Theater,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1789534256917001loWV
+END:VEVENT
+BEGIN:VEVENT
+UID:agents-reason-with-location@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261028T130000
+DTEND;TZID=America/Los_Angeles:20261028T132000
+SUMMARY:Learn How Agents Reason with Location and Other Data Types in AI La
+ kehouse
+LOCATION:Theater 3\, Oracle AI World Hub
+DESCRIPTION:Join us to learn how AI agents can help evaluate candidate loca
+ tions by bringing together many of the factors an experienced team would c
+ onsider\, while reducing manual effort\n\nSession type: Theater\nArea of i
+ nterest: AI\, AI Agents\, AI Lakehouse\, Analytics\nAudience: Intermediate
+  (1–5 yrs user of Oracle)\nJob role: Business End User\, Business Manage
+ r\, Database Administrator\, Tech IT\n\nWhat you will learn:\n• How AI a
+ gents support data-driven site selection\n• How to combine business\, sp
+ atial\, and market data\n• How to analyze information across multiple fo
+ rmats and sources\n• How agents compare candidate locations and surface 
+ trade-offs\n• How supporting evidence strengthens location decisions\n\n
+ Speakers:\nMelli Annamalai — Product Management Architect\, Oracle\nDavi
+ d Lapp — Product Management Architect\, Oracle\n\nNote: Time is shown as
+  printed in the source guide.\n\nOfficial session page: https://reg.rf.ora
+ cle.com/flow/oracle/oaiw26/catalog/page/catalog/session/1785279050873001W9
+ cR
+CATEGORIES:Theater,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://reg.rf.oracle.com/flow/oracle/oaiw26/catalog/page/catalog/sessi
+ on/1785279050873001W9cR
+END:VEVENT
+BEGIN:VEVENT
+UID:oracle-global-leaders-ai-world-event@oracle-ai-world-2026
+DTSTAMP:20261020T115929084Z
+DTSTART;TZID=America/Los_Angeles:20261028T130000
+DTEND;TZID=America/Los_Angeles:20261028T193000
+SUMMARY:Oracle Global Leaders AI World Event
+LOCATION:Ghostbar\, The Palms Hotel
+DESCRIPTION:Join Oracle Global Leaders customers\, partners\, guests\, Orac
+ le staff\, and Database Executive Management to sum up the week\, hear dat
+ abase news\, provide feedback\, and connect with peers and product leaders
+ .\n\nSession type: Event\nArea of interest: Oracle AI World\, Global Leade
+ rs\, customer and partner community\nAudience: Global Leaders customers\, 
+ partners\, guests\, and Oracle teams\nJob role: Technology leaders\, datab
+ ase executives\, product and engineering leaders\n\nWhat you will learn:\n
+ • Open-door feedback panel with Database Executive Management\n• Prese
+ ntations from customers and partners sharing successful data management im
+ plementations\n• Recognition of exceptional individuals through the Orac
+ le Global Leaders Awards 2026\n• Time to reflect\, unwind\, and liaise w
+ ith Oracle development and product management teams\n\nSpeakers:\nJuan Loa
+ iza — Executive Vice President\, Mission-Critical Database Technologies\
+ , Oracle\nÇetin Özbütün — Executive Vice President\, DW and Autonomo
+ us Database Technologies\nHasan Rizvi — Executive Vice President\, Datab
+ ase Engineering\nReiner Zimmermann — Vice President\, Product Management
+ \, Oracle Global Leaders Program\nLaura McKechnie — Director\, Product M
+ anagement\, Oracle Global Leaders Program\n\nNote: Space is limited\, so p
+ lease register today.\n\nOfficial session page: https://eventreg.oracle.co
+ m/profile/web/index.cfm?PKwebID=0x977019abcd
+CATEGORIES:Event,AI World 2026,Oracle AI Database
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://eventreg.oracle.com/profile/web/index.cfm?PKwebID=0x977019abcd
+END:VEVENT
+END:VCALENDAR

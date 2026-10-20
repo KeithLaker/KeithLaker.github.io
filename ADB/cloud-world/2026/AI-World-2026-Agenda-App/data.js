@@ -11,7 +11,7 @@ window.AI_WORLD_DATA = {
     location: 'AI World Hub',
     booths: 'Demo booths 2A, 2B, 7C, and 7D',
     hours: {
-      sunday: 'Not listed in the guide',
+      sunday: 'CLOSED',
       monday: '11:00 AM – 7:00 PM',
       tuesday: '8:00 AM – 6:00 PM',
       wednesday: '9:00 AM – 2:00 PM'
