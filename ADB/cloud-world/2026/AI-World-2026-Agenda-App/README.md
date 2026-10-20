@@ -13,3 +13,9 @@ Demo Hub details are included in the overview and day pages, with a dedicated `d
 The Wednesday Global Leaders event has its own `global-leaders.html` page with the official overview, agenda, speaker list, venue details, and links back to the supplied Oracle event sections.
 
 The Global Leaders speaker headshots are the official images from the Oracle event page and are stored locally under `assets/speakers/`. The stylesheet uses Arial throughout.
+
+## v2 enhancements
+
+Each day agenda now supports combined filtering by session type, audience, and topic area, plus free-text search. Use **Reset filters** to return to the full day lineup.
+
+Each session detail page now includes a **Sessions you may also like** panel. Recommendations are ranked from shared topic areas, audience level, job roles, and session format. Every recommended session title links directly to its session page, including the dedicated Juan Loaiza, Çetin Özbütün, and Global Leaders pages.

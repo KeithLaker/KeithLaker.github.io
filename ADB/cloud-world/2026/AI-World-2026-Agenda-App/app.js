@@ -11,12 +11,43 @@
   const href = (path) => `${root}${path}`;
   const dayHref = (dayId) => href(`${dayId}.html`);
 
-  const specialSessionRoutes = {'production-ai-starts-with-the-data-foundation': 'cetin-ozbutun-session.html','ai-can-build-it-but-can-you-trust-it': 'juan-loaiza-session.html'};
+  const specialSessionRoutes = {'oracle-global-leaders-ai-world-event': 'global-leaders.html','production-ai-starts-with-the-data-foundation': 'cetin-ozbutun-session.html','ai-can-build-it-but-can-you-trust-it': 'juan-loaiza-session.html'};
   const sessionHref = (sessionId) => href(specialSessionRoutes[sessionId] ?? `sessions/${sessionId}/index.html`);
 
-  const sessionHref2 = (sessionId) => sessionId === 'oracle-global-leaders-ai-world-event' ? href('global-leaders.html') : href(`sessions/${sessionId}/index.html`);
   const day = (dayId) => dayMap[dayId];
   const sessionsFor = (dayId) => data.sessions.filter((session) => session.day === dayId);
+  const normalize = (value) => String(value ?? '').trim().toLowerCase();
+  const splitValues = (value) => String(value ?? '').split(',').map((item) => item.trim()).filter(Boolean);
+  const topicsFor = (session) => splitValues(session.area);
+  const audienceBand = (value) => {
+    const normalized = normalize(value);
+    if (normalized.includes('beginner')) return 'beginner';
+    if (normalized.includes('intermediate')) return 'intermediate';
+    if (normalized.includes('general')) return 'general';
+    return normalized;
+  };
+
+  function relatedSessionsFor(currentSession, limit = 4) {
+    const currentTopics = new Set(topicsFor(currentSession).map(normalize));
+    const currentJobs = new Set(splitValues(currentSession.job).map(normalize));
+    const currentAudience = audienceBand(currentSession.audience);
+    return data.sessions
+      .filter((candidate) => candidate.id !== currentSession.id)
+      .map((candidate) => {
+        const sharedTopics = topicsFor(candidate).filter((topic) => currentTopics.has(normalize(topic)));
+        const sharedJobs = splitValues(candidate.job).filter((job) => currentJobs.has(normalize(job)));
+        const sameAudience = audienceBand(candidate.audience) === currentAudience;
+        const score = (sharedTopics.length * 7) + (sharedJobs.length * 2) + (sameAudience ? 5 : 0) + (candidate.kind === currentSession.kind ? 1 : 0);
+        const reasons = [];
+        if (sharedTopics.length) reasons.push(`Shared topic: ${sharedTopics[0]}`);
+        if (sameAudience) reasons.push(`For ${candidate.audience.toLowerCase()}`);
+        else if (sharedJobs.length) reasons.push('Relevant to related roles');
+        if (!reasons.length) reasons.push(`Another ${candidate.kind.toLowerCase()} to explore`);
+        return { session: candidate, score, reasons: reasons.slice(0, 2) };
+      })
+      .sort((left, right) => right.score - left.score || left.session.title.localeCompare(right.session.title))
+      .slice(0, limit);
+  }
 
   function topbar(active) {
     return `<header class="topbar">
@@ -48,7 +79,7 @@
         <div class="crumbs"><a href="${href('index.html')}">Overview</a><span>/</span><span>${esc(item.label)}</span></div>
         <p class="eyebrow">${esc(item.date)} · AI World 2026</p>
         <h1>${esc(item.label)} agenda</h1>
-        <p>Plan a focused day of hands-on labs, architecture sessions, customer stories, and AI database demos.</p><p style="font-size: 0.8em !important; color: gold!important;"><trong>Note</strong>: session times and locations can be subject to last minute changes so use the built-in links to check the official online page for each session.</p>
+        <p>Plan a focused day of hands-on labs, architecture sessions, customer stories, and AI database demos.</p><p style="font-size: 0.8em !important; color: gold!important;"><strong>Note</strong>: session times and locations can be subject to last minute changes so use the built-in links to check the official online page for each session.</p>
         ${statStrip([
           { value: daySessions.length, label: 'sessions' },
           { value: first, label: 'first start' },
@@ -60,7 +91,7 @@
 
   function agendaRows(daySessions) {
     return `<div class="schedule" id="schedule">
-      ${daySessions.map((session) => `<a class="session-row" data-kind="${esc(session.kind.toLowerCase())}" data-search="${esc(`${session.title} ${session.kind} ${session.location} ${session.area}`.toLowerCase())}" href="${sessionHref(session.id)}">
+      ${daySessions.map((session) => `<a class="session-row" data-kind="${esc(normalize(session.kind))}" data-audience="${esc(normalize(session.audience))}" data-topics="${esc(topicsFor(session).map(normalize).join('|'))}" data-search="${esc(`${session.title} ${session.kind} ${session.location} ${session.area} ${session.audience} ${session.job}`.toLowerCase())}" href="${sessionHref(session.id)}">
         <div class="session-time">${esc(session.time)}</div>
         <div>
           <div class="session-title">${esc(session.title)}</div>
@@ -88,6 +119,11 @@
         <div class="agenda-tools">
           <label class="search-box"><span class="search-icon">⌕</span><input id="session-search" type="search" placeholder="Search titles, topics, or locations" aria-label="Search sessions"></label>
           <div class="filter-row" aria-label="Filter by session type"><button class="filter active" data-filter="all">All</button>${[...new Set(daySessions.map((s) => s.kind))].map((kind) => `<button class="filter" data-filter="${esc(kind.toLowerCase())}">${esc(kind)}</button>`).join('')}</div>
+          <div class="filter-selects" aria-label="Filter by audience and topic area">
+            <label class="select-filter"><span>Audience</span><select id="audience-filter"><option value="all">All audiences</option>${[...new Set(daySessions.map((session) => normalize(session.audience)))].sort().map((value) => `<option value="${esc(value)}">${esc(daySessions.find((session) => normalize(session.audience) === value)?.audience || value)}</option>`).join('')}</select></label>
+            <label class="select-filter"><span>Topic area</span><select id="topic-filter"><option value="all">All topic areas</option>${[...new Set(daySessions.flatMap(topicsFor).map(normalize))].sort().map((value) => `<option value="${esc(value)}">${esc(value.replace(/\b\w/g, (letter) => letter.toUpperCase()))}</option>`).join('')}</select></label>
+            <button class="filter-reset" id="filter-reset" type="button">Reset filters</button>
+          </div>
         </div>
         ${agendaRows(daySessions)}
       </section></main>${footer()}`;
@@ -95,14 +131,21 @@
     const rows = [...document.querySelectorAll('.session-row')];
     const empty = document.getElementById('empty-state');
     const search = document.getElementById('session-search');
+    const audienceSelect = document.getElementById('audience-filter');
+    const topicSelect = document.getElementById('topic-filter');
+    const reset = document.getElementById('filter-reset');
     let filter = 'all';
+    let audienceFilter = 'all';
+    let topicFilter = 'all';
     function applyFilters() {
       const query = search.value.trim().toLowerCase();
       let visible = 0;
       rows.forEach((row) => {
         const matchesFilter = filter === 'all' || row.dataset.kind === filter;
+        const matchesAudience = audienceFilter === 'all' || row.dataset.audience === audienceFilter;
+        const matchesTopic = topicFilter === 'all' || row.dataset.topics.split('|').includes(topicFilter);
         const matchesSearch = !query || row.dataset.search.includes(query);
-        const show = matchesFilter && matchesSearch;
+        const show = matchesFilter && matchesAudience && matchesTopic && matchesSearch;
         row.style.display = show ? 'grid' : 'none';
         if (show) visible += 1;
       });
@@ -114,6 +157,18 @@
       document.querySelectorAll('[data-filter]').forEach((item) => item.classList.toggle('active', item === button));
       applyFilters();
     }));
+    audienceSelect.addEventListener('change', () => { audienceFilter = audienceSelect.value; applyFilters(); });
+    topicSelect.addEventListener('change', () => { topicFilter = topicSelect.value; applyFilters(); });
+    reset.addEventListener('click', () => {
+      filter = 'all';
+      audienceFilter = 'all';
+      topicFilter = 'all';
+      search.value = '';
+      audienceSelect.value = 'all';
+      topicSelect.value = 'all';
+      document.querySelectorAll('[data-filter]').forEach((item) => item.classList.toggle('active', item.dataset.filter === 'all'));
+      applyFilters();
+    });
   }
 
   function dayCards() {
@@ -140,14 +195,21 @@
 
   function renderGlobalLeaders() {
     const event = data.globalLeaders;
+    const eventSession = sessionMap['oracle-global-leaders-ai-world-event'];
     document.title = `${event.title} · Oracle AI World 2026`;
     app.innerHTML = `${topbar('global-leaders')}
       <section class="hero compact hero-session"><div class="hero-inner"><div class="crumbs"><a href="${href('index.html')}">Overview</a><span>/</span><a href="${dayHref('wednesday')}">Wednesday agenda</a><span>/</span><span>Global Leaders event</span></div><span class="badge">Wednesday afternoon event</span><h1>${esc(event.title)}</h1><p>${esc(event.overview)}</p><div class="hero-meta"><span><b>◷</b>${esc(event.time)}</span><span><b>⌖</b>${esc(event.location)}</span></div><div class="hero-actions"></div></div></section>
-      <main class="section"><div class="detail-layout"><div class="detail-main"><article class="detail-card"><p class="micro-label">Event overview</p><h2>Close out the week with the people shaping the data foundation.</h2><p>${esc(event.overview)}</p></article><article class="detail-card"><p class="micro-label">Wednesday, October 28</p><h2>Agenda</h2><div class="event-agenda">${event.agenda.map((item) => `<div class="event-agenda-item"><div class="event-time">${esc(item.time)}</div><div><h3>${esc(item.title)}</h3>${item.detail ? `<p>${esc(item.detail)}</p>` : ''}</div></div>`).join('')}</div></article><article class="detail-card event-speakers-card"><p class="micro-label">Meet the speakers</p><h2>Speakers</h2><div class="event-speakers">${event.speakers.map((speaker) => `<div class="event-speaker"><img src="${esc(speaker.image)}" alt="${esc(speaker.name)}"><div><strong>${esc(speaker.name)}</strong><span>${esc(speaker.role)}</span></div></div>`).join('')}</div></article></div><aside class="detail-side"><div class="detail-card"><h3>Where and when</h3><dl class="meta-grid">${metaBlock('Date', event.date)}${metaBlock('Time', event.time)}${metaBlock('Location', event.location)}${metaBlock('Address', event.address)}</dl></div><div class="detail-card"><h3>Attend for</h3><ul>${event.attendFor.map((item) => `<li>${esc(item)}</li>`).join('')}</ul></div><div class="detail-card"><h3>Official event pages</h3><div class="external-links"><a class="source-link" href="${esc(event.overviewUrl)}" target="_blank" rel="noopener">Overview <span>↗</span></a><a class="source-link" href="${esc(event.agendaUrl)}" target="_blank" rel="noopener">Agenda <span>↗</span></a><a class="source-link" href="${esc(event.speakersUrl)}" target="_blank" rel="noopener">Speakers <span>↗</span></a></div></div></aside></div></main>${footer()}`;
+      <main class="section"><div class="detail-layout"><div class="detail-main"><article class="detail-card"><p class="micro-label">Event overview</p><h2>Close out the week with the people shaping the data foundation.</h2><p>${esc(event.overview)}</p></article><article class="detail-card"><p class="micro-label">Wednesday, October 28</p><h2>Agenda</h2><div class="event-agenda">${event.agenda.map((item) => `<div class="event-agenda-item"><div class="event-time">${esc(item.time)}</div><div><h4>${esc(item.title)}</h4>${item.detail ? `<p>${esc(item.detail)}</p>` : ''}</div></div>`).join('')}</div></article><article class="detail-card event-speakers-card"><p class="micro-label">Meet the speakers</p><h2>Speakers</h2><div class="event-speakers">${event.speakers.map((speaker) => `<div class="event-speaker"><img src="${esc(speaker.image)}" alt="${esc(speaker.name)}"><div><strong>${esc(speaker.name)}</strong><span>${esc(speaker.role)}</span></div></div>`).join('')}</div></article>${eventSession ? relatedSessionsCard(eventSession) : ''}</div><aside class="detail-side"><div class="detail-card"><h3>Where and when</h3><dl class="meta-grid">${metaBlock('Date', event.date)}${metaBlock('Time', event.time)}${metaBlock('Location', event.location)}${metaBlock('Address', event.address)}</dl></div><div class="detail-card"><h3>Attend for</h3><ul>${event.attendFor.map((item) => `<li>${esc(item)}</li>`).join('')}</ul></div><div class="detail-card"><h3>Official event pages</h3><div class="external-links"><a class="source-link" href="${esc(event.overviewUrl)}" target="_blank" rel="noopener">Overview <span>↗</span></a><a class="source-link" href="${esc(event.agendaUrl)}" target="_blank" rel="noopener">Agenda <span>↗</span></a><a class="source-link" href="${esc(event.speakersUrl)}" target="_blank" rel="noopener">Speakers <span>↗</span></a></div></div></aside></div></main>${footer()}`;
   }
 
   function metaBlock(label, value) {
     return `<div class="meta-block"><dt>${esc(label)}</dt><dd>${esc(value || 'Not listed in source')}</dd></div>`;
+  }
+
+  function relatedSessionsCard(session) {
+    const related = relatedSessionsFor(session);
+    if (!related.length) return '';
+    return `<article class="detail-card related-card"><div class="related-heading"><div><p class="micro-label">Keep exploring</p><p class="micro-label">Sessions you may also like</p></div><p>Recommended from the topics, audience, and roles connected to this session.</p></div><div class="related-grid">${related.map(({ session: item, reasons }) => `<article class="related-item"><div class="related-item-top"><span class="badge-soft">${esc(item.kind)}</span><span class="related-day">${esc(day(item.day).label)}</span></div><h4><a href="${sessionHref(item.id)}">${esc(item.title)}</a></h4><div class="related-meta"><span>${esc(item.time)}</span><span>${esc(item.location)}</span></div><div class="related-reasons">${reasons.map((reason) => `<span>${esc(reason)}</span>`).join('')}</div><a class="related-arrow" href="${sessionHref(item.id)}" aria-label="Open ${esc(item.title)}">Open session <span>↗</span></a></article>`).join('')}</div></article>`;
   }
 
   function renderSession(sessionId) {
@@ -157,7 +219,7 @@
     document.title = `${session.title} · Oracle AI World 2026`;
     app.innerHTML = `${topbar(session.day)}
       <section class="hero compact hero-session"><div class="hero-inner"><div class="crumbs"><a href="${href('index.html')}">Overview</a><span>/</span><a href="${dayHref(session.day)}">${esc(dayItem.label)} agenda</a><span>/</span><span>Session detail</span></div><span class="badge">${esc(session.kind)}</span><h1>${esc(session.title)}</h1><div class="hero-meta"><span><b>◷</b>${esc(session.time)}</span><span><b>⌖</b>${esc(session.location)}</span></div><p style="font-size: 0.8em !important; color: gold !important;">Note: session times and locations can be subject to last minute changes so use the built-in links to check the official online page for each session.</p></div></section>
-      <main class="section"><div class="detail-layout"><div class="detail-main"><article class="detail-card"><p class="micro-label">Session highlights</p><h2>What this session is about</h2><p>${esc(session.description)}</p></article>${session.learn.length ? `<article class="detail-card"><h3>What you will learn</h3><ul>${session.learn.map((item) => `<li>${esc(item)}</li>`).join('')}</ul></article>` : ''}${session.note ? `<article class="detail-card note-box"><h3>Good to know</h3><p>${esc(session.note)}</p></article>` : ''}</div><aside class="detail-side"><div class="detail-card"><h3>Speakers</h3><div class="speaker-list">${session.speakers.map((speaker) => `<div class="speaker"><div class="speaker-avatar">${esc(initials(speaker.name))}</div><div><strong>${esc(speaker.name)}</strong><span>${esc(speaker.role)}</span></div></div>`).join('')}</div></div><div class="detail-card"><h3>Session profile</h3><dl class="meta-grid">${metaBlock('Area of interest', session.area)}${metaBlock('Audience level', session.audience)}${metaBlock('Job role', session.job)}</dl></div><div class="detail-card"><h3>Continue to Oracle AI World</h3><a class="source-link" href="${esc(session.aiWorldUrl)}" target="_blank" rel="noopener">Open official session page <span>↗</span></a></div></aside></div></main>${footer()}`;
+      <main class="section"><div class="detail-layout"><div class="detail-main"><article class="detail-card"><p class="micro-label">Session highlights</p><h2>What this session is about</h2><p>${esc(session.description)}</p></article>${session.learn.length ? `<article class="detail-card"><h3>What you will learn</h3><ul>${session.learn.map((item) => `<li>${esc(item)}</li>`).join('')}</ul></article>` : ''}${session.note ? `<article class="detail-card note-box"><h3>Good to know</h3><p>${esc(session.note)}</p></article>` : ''}${relatedSessionsCard(session)}</div><aside class="detail-side"><div class="detail-card"><h3>Speakers</h3><div class="speaker-list">${session.speakers.map((speaker) => `<div class="speaker"><div class="speaker-avatar">${esc(initials(speaker.name))}</div><div><strong>${esc(speaker.name)}</strong><span>${esc(speaker.role)}</span></div></div>`).join('')}</div></div><div class="detail-card"><h3>Session profile</h3><dl class="meta-grid">${metaBlock('Area of interest', session.area)}${metaBlock('Audience level', session.audience)}${metaBlock('Job role', session.job)}</dl></div><div class="detail-card"><h3>Continue to Oracle AI World</h3><a class="source-link" href="${esc(session.aiWorldUrl)}" target="_blank" rel="noopener">Open official session page <span>↗</span></a></div></aside></div></main>${footer()}`;
   }
 
   const view = app.dataset.view;
