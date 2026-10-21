@@ -13,6 +13,6 @@ Open index.html in a browser, or serve this folder with any static web server. N
 
 ## Media
 
-Presentation graphics are rendered, local JPEGs in assets/slides/. Video clips extracted from the supplied PowerPoint decks are in assets/videos/; clips are loaded only when the visitor presses play. Ten unique embedded clips are included. The identical Data Science Agent clip found in both decks is stored once.
+Presentation graphics are rendered, local JPEGs in assets/slides/. Video players load the ten unique extracted clips from the Oracle Object Storage folder https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/AIW-2026/o/ when the visitor presses play. The identical Data Science Agent clip found in both decks is referenced once.
 
 Slides explicitly marked confidential and shared under NDA in the supplied decks were excluded from the public-facing app and slide images.

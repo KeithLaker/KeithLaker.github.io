@@ -24,7 +24,7 @@
   function categoryCount(id) { return items.filter(function (item) { return item.category === id; }).length; }
   function videoCount(id) { return items.filter(function (item) { return item.category === id; }).reduce(function (total, item) { return total + (item.videos || []).length; }, 0); }
   function slidePath(file) { return path("assets/slides/" + file); }
-  function videoPath(file) { return path("assets/videos/" + file); }
+  function videoPath(file) { return "https://objectstorage.uk-london-1.oraclecloud.com/n/adwc4pm/b/AIW-2026/o/" + encodeURIComponent(file); }
   function categoryNavMarkup() {
     return '<a class="nav-link nav-home" href="' + path("index.html") + '"' + (page === "home" ? ' aria-current="page"' : "") + '>Overview</a>' +
       Object.keys(categories).map(function (id) {
