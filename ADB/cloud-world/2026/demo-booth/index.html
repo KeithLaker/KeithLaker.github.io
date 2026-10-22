@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Staffing schedule for the Autonomous AI Database demo booth at AI World 2026.">
+  <meta name="theme-color" content="#053241">
+  <title>Booth 18 - Live Data for AI, Analytics, and Modern Apps Demo Booth Staffing · AI World 2026</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="AI World 2026 staffing schedule home">
+      <span class="brand-mark">AI</span><span class="brand-text"><strong>AI World 2026 Demo Hub</strong><small>Autonomous AI Database · Booth 18 - Live Data for AI, Analytics, and Modern Apps</small></span>
+    </a>
+    <a class="top-link" href="#schedule">Staffing schedule <span aria-hidden="true">↘</span></a>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Multicloud Demo Booth<br>#18 - Live Data for AI, Analytics, and Modern Apps<br>October 26–28, 2026</p>
+        <h1>People make<br>the demo.</h1>
+        <p class="intro">A clear view of who’s covering Autonomous AI Database booth in the multicloud area (Booth 18 - Live Data for AI, Analytics, and Modern Apps), shift by shift.</p>
+        <a class="hero-cta" href="#schedule">View the schedule <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-orbit" aria-hidden="true"><div class="orbit-core">18</div><span class="orbit-tag tag-one">DEMO BOOTH</span><span class="orbit-tag tag-two">MULTICLOUD</span><span class="orbit-dot"></span></div>
+      <div class="hero-caption"><span>ORACLE</span><span>AI WORLD · 2026</span></div>
+    </section>
+
+    <section class="section" id="schedule">
+      <div class="section-heading">
+        <div><p class="micro-label">The team on the floor</p><h2>Staffing schedule</h2></div>
+        <p class="section-note">Shifts are 30 minutes. Each shift aims for at least two people, with up to four.</p>
+      </div>
+      <div class="day-tabs" role="tablist" aria-label="Choose a schedule day" id="day-tabs"></div>
+      <div class="day-summary" id="day-summary" aria-live="polite"></div>
+      <div class="toolbar">
+        <div class="filter-group" role="group" aria-label="Filter shifts">
+          <button class="filter active" data-filter="all" type="button">All shifts</button>
+          <button class="filter" data-filter="short" type="button">Needs people</button>
+        </div>
+        <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a person or note" autocomplete="off"><kbd>⌘ K</kbd></label>
+      </div>
+      <div class="schedule-head"><span>TIME</span><span>ON THE BOOTH</span><span>STATUS</span></div>
+      <div class="schedule" id="schedule-list" aria-live="polite"></div>
+      <p class="empty" id="empty-state" hidden>No shifts match that search.</p>
+      <p class="source-note">Names and shift notes are shown as listed. Monday uses both “Micheal Mesrch” and “Michael Mersch”; its detail sheet has 18 shifts while Start Here says 15. This app counts all detail rows. Asterisks mark dedicated hours or Welcome Reception shifts.</p>
+    </section>
+  </main>
+  <footer><span class="footer-mark">AI</span><span>Autonomous AI Database · Demo Booth 7A</span><span>AI World 2026</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
